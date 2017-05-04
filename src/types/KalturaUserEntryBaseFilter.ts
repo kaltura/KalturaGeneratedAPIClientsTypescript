@@ -1,0 +1,78 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaUserEntryStatus } from './KalturaUserEntryStatus';
+import { KalturaUserEntryType } from './KalturaUserEntryType';
+import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelatedFilter';
+
+export interface KalturaUserEntryBaseFilterArgs  extends KalturaRelatedFilterArgs {
+    idEqual? : number;
+	idIn? : string;
+	idNotIn? : string;
+	entryIdEqual? : string;
+	entryIdIn? : string;
+	entryIdNotIn? : string;
+	userIdEqual? : string;
+	userIdIn? : string;
+	userIdNotIn? : string;
+	statusEqual? : KalturaUserEntryStatus;
+	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : number;
+	updatedAtLessThanOrEqual? : number;
+	updatedAtGreaterThanOrEqual? : number;
+	typeEqual? : KalturaUserEntryType;
+}
+
+
+export class KalturaUserEntryBaseFilter extends KalturaRelatedFilter {
+
+    idEqual : number;
+	idIn : string;
+	idNotIn : string;
+	entryIdEqual : string;
+	entryIdIn : string;
+	entryIdNotIn : string;
+	userIdEqual : string;
+	userIdIn : string;
+	userIdNotIn : string;
+	statusEqual : KalturaUserEntryStatus;
+	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : number;
+	updatedAtLessThanOrEqual : number;
+	updatedAtGreaterThanOrEqual : number;
+	typeEqual : KalturaUserEntryType;
+
+    constructor(data? : KalturaUserEntryBaseFilterArgs)
+    {
+        super(data);
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                objectType : { type : 'c' , default : 'KalturaUserEntryBaseFilter' },
+				idEqual : { type : 'n'  },
+				idIn : { type : 's'  },
+				idNotIn : { type : 's'  },
+				entryIdEqual : { type : 's'  },
+				entryIdIn : { type : 's'  },
+				entryIdNotIn : { type : 's'  },
+				userIdEqual : { type : 's'  },
+				userIdIn : { type : 's'  },
+				userIdNotIn : { type : 's'  },
+				statusEqual : { type : 'es'  , subType : 'KalturaUserEntryStatus'},
+				createdAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'n'  },
+				updatedAtLessThanOrEqual : { type : 'n'  },
+				updatedAtGreaterThanOrEqual : { type : 'n'  },
+				typeEqual : { type : 'es'  , subType : 'KalturaUserEntryType'}
+            }
+        );
+        return result;
+    }
+}
+
+KalturaTypesFactory.registerType('KalturaUserEntryBaseFilter',KalturaUserEntryBaseFilter);

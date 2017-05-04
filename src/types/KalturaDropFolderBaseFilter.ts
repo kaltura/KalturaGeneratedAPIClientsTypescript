@@ -1,0 +1,122 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaDropFolderType } from './KalturaDropFolderType';
+import { KalturaDropFolderStatus } from './KalturaDropFolderStatus';
+import { KalturaDropFolderFileHandlerType } from './KalturaDropFolderFileHandlerType';
+import { KalturaDropFolderErrorCode } from './KalturaDropFolderErrorCode';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
+
+export interface KalturaDropFolderBaseFilterArgs  extends KalturaFilterArgs {
+    idEqual? : number;
+	idIn? : string;
+	partnerIdEqual? : number;
+	partnerIdIn? : string;
+	nameLike? : string;
+	typeEqual? : KalturaDropFolderType;
+	typeIn? : string;
+	statusEqual? : KalturaDropFolderStatus;
+	statusIn? : string;
+	conversionProfileIdEqual? : number;
+	conversionProfileIdIn? : string;
+	dcEqual? : number;
+	dcIn? : string;
+	pathEqual? : string;
+	pathLike? : string;
+	fileHandlerTypeEqual? : KalturaDropFolderFileHandlerType;
+	fileHandlerTypeIn? : string;
+	fileNamePatternsLike? : string;
+	fileNamePatternsMultiLikeOr? : string;
+	fileNamePatternsMultiLikeAnd? : string;
+	tagsLike? : string;
+	tagsMultiLikeOr? : string;
+	tagsMultiLikeAnd? : string;
+	errorCodeEqual? : KalturaDropFolderErrorCode;
+	errorCodeIn? : string;
+	createdAtGreaterThanOrEqual? : number;
+	createdAtLessThanOrEqual? : number;
+	updatedAtGreaterThanOrEqual? : number;
+	updatedAtLessThanOrEqual? : number;
+}
+
+
+export class KalturaDropFolderBaseFilter extends KalturaFilter {
+
+    idEqual : number;
+	idIn : string;
+	partnerIdEqual : number;
+	partnerIdIn : string;
+	nameLike : string;
+	typeEqual : KalturaDropFolderType;
+	typeIn : string;
+	statusEqual : KalturaDropFolderStatus;
+	statusIn : string;
+	conversionProfileIdEqual : number;
+	conversionProfileIdIn : string;
+	dcEqual : number;
+	dcIn : string;
+	pathEqual : string;
+	pathLike : string;
+	fileHandlerTypeEqual : KalturaDropFolderFileHandlerType;
+	fileHandlerTypeIn : string;
+	fileNamePatternsLike : string;
+	fileNamePatternsMultiLikeOr : string;
+	fileNamePatternsMultiLikeAnd : string;
+	tagsLike : string;
+	tagsMultiLikeOr : string;
+	tagsMultiLikeAnd : string;
+	errorCodeEqual : KalturaDropFolderErrorCode;
+	errorCodeIn : string;
+	createdAtGreaterThanOrEqual : number;
+	createdAtLessThanOrEqual : number;
+	updatedAtGreaterThanOrEqual : number;
+	updatedAtLessThanOrEqual : number;
+
+    constructor(data? : KalturaDropFolderBaseFilterArgs)
+    {
+        super(data);
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                objectType : { type : 'c' , default : 'KalturaDropFolderBaseFilter' },
+				idEqual : { type : 'n'  },
+				idIn : { type : 's'  },
+				partnerIdEqual : { type : 'n'  },
+				partnerIdIn : { type : 's'  },
+				nameLike : { type : 's'  },
+				typeEqual : { type : 'es'  , subType : 'KalturaDropFolderType'},
+				typeIn : { type : 's'  },
+				statusEqual : { type : 'en'  , subType : 'KalturaDropFolderStatus'},
+				statusIn : { type : 's'  },
+				conversionProfileIdEqual : { type : 'n'  },
+				conversionProfileIdIn : { type : 's'  },
+				dcEqual : { type : 'n'  },
+				dcIn : { type : 's'  },
+				pathEqual : { type : 's'  },
+				pathLike : { type : 's'  },
+				fileHandlerTypeEqual : { type : 'es'  , subType : 'KalturaDropFolderFileHandlerType'},
+				fileHandlerTypeIn : { type : 's'  },
+				fileNamePatternsLike : { type : 's'  },
+				fileNamePatternsMultiLikeOr : { type : 's'  },
+				fileNamePatternsMultiLikeAnd : { type : 's'  },
+				tagsLike : { type : 's'  },
+				tagsMultiLikeOr : { type : 's'  },
+				tagsMultiLikeAnd : { type : 's'  },
+				errorCodeEqual : { type : 'es'  , subType : 'KalturaDropFolderErrorCode'},
+				errorCodeIn : { type : 's'  },
+				createdAtGreaterThanOrEqual : { type : 'n'  },
+				createdAtLessThanOrEqual : { type : 'n'  },
+				updatedAtGreaterThanOrEqual : { type : 'n'  },
+				updatedAtLessThanOrEqual : { type : 'n'  }
+            }
+        );
+        return result;
+    }
+}
+
+KalturaTypesFactory.registerType('KalturaDropFolderBaseFilter',KalturaDropFolderBaseFilter);

@@ -1,0 +1,38 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaThumbAsset } from './KalturaThumbAsset';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface ThumbAssetAddFromUrlActionArgs  extends KalturaRequestArgs {
+    entryId : string;
+	url : string;
+}
+
+
+export class ThumbAssetAddFromUrlAction extends KalturaRequest<KalturaThumbAsset> {
+
+    entryId : string;
+	url : string;
+
+    constructor(data : ThumbAssetAddFromUrlActionArgs)
+    {
+        super(data, 'o', 'KalturaThumbAsset');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'thumbasset' },
+				action : { type : 'c' , default : 'addFromUrl' },
+				entryId : { type : 's'  },
+				url : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

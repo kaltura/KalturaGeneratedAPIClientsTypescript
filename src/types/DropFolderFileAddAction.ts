@@ -1,0 +1,37 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaDropFolderFile } from './KalturaDropFolderFile';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface DropFolderFileAddActionArgs  extends KalturaRequestArgs {
+    dropFolderFile : KalturaDropFolderFile;
+}
+
+/** 
+* Allows you to add a new KalturaDropFolderFile object
+**/
+export class DropFolderFileAddAction extends KalturaRequest<KalturaDropFolderFile> {
+
+    dropFolderFile : KalturaDropFolderFile;
+
+    constructor(data : DropFolderFileAddActionArgs)
+    {
+        super(data, 'o', 'KalturaDropFolderFile');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'dropfolder_dropfolderfile' },
+				action : { type : 'c' , default : 'add' },
+				dropFolderFile : { type : 'o'  , subType : 'KalturaDropFolderFile'}
+            }
+        );
+        return result;
+    }
+}
+

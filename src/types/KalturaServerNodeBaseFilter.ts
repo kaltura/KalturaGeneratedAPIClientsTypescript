@@ -1,0 +1,111 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaServerNodeStatus } from './KalturaServerNodeStatus';
+import { KalturaServerNodeType } from './KalturaServerNodeType';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
+
+export interface KalturaServerNodeBaseFilterArgs  extends KalturaFilterArgs {
+    idEqual? : number;
+	idIn? : string;
+	createdAtGreaterThanOrEqual? : number;
+	createdAtLessThanOrEqual? : number;
+	updatedAtGreaterThanOrEqual? : number;
+	updatedAtLessThanOrEqual? : number;
+	heartbeatTimeGreaterThanOrEqual? : number;
+	heartbeatTimeLessThanOrEqual? : number;
+	nameEqual? : string;
+	nameIn? : string;
+	systemNameEqual? : string;
+	systemNameIn? : string;
+	hostNameLike? : string;
+	hostNameMultiLikeOr? : string;
+	hostNameMultiLikeAnd? : string;
+	statusEqual? : KalturaServerNodeStatus;
+	statusIn? : string;
+	typeEqual? : KalturaServerNodeType;
+	typeIn? : string;
+	tagsLike? : string;
+	tagsMultiLikeOr? : string;
+	tagsMultiLikeAnd? : string;
+	dcEqual? : number;
+	dcIn? : string;
+	parentIdEqual? : number;
+	parentIdIn? : string;
+}
+
+
+export class KalturaServerNodeBaseFilter extends KalturaFilter {
+
+    idEqual : number;
+	idIn : string;
+	createdAtGreaterThanOrEqual : number;
+	createdAtLessThanOrEqual : number;
+	updatedAtGreaterThanOrEqual : number;
+	updatedAtLessThanOrEqual : number;
+	heartbeatTimeGreaterThanOrEqual : number;
+	heartbeatTimeLessThanOrEqual : number;
+	nameEqual : string;
+	nameIn : string;
+	systemNameEqual : string;
+	systemNameIn : string;
+	hostNameLike : string;
+	hostNameMultiLikeOr : string;
+	hostNameMultiLikeAnd : string;
+	statusEqual : KalturaServerNodeStatus;
+	statusIn : string;
+	typeEqual : KalturaServerNodeType;
+	typeIn : string;
+	tagsLike : string;
+	tagsMultiLikeOr : string;
+	tagsMultiLikeAnd : string;
+	dcEqual : number;
+	dcIn : string;
+	parentIdEqual : number;
+	parentIdIn : string;
+
+    constructor(data? : KalturaServerNodeBaseFilterArgs)
+    {
+        super(data);
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                objectType : { type : 'c' , default : 'KalturaServerNodeBaseFilter' },
+				idEqual : { type : 'n'  },
+				idIn : { type : 's'  },
+				createdAtGreaterThanOrEqual : { type : 'n'  },
+				createdAtLessThanOrEqual : { type : 'n'  },
+				updatedAtGreaterThanOrEqual : { type : 'n'  },
+				updatedAtLessThanOrEqual : { type : 'n'  },
+				heartbeatTimeGreaterThanOrEqual : { type : 'n'  },
+				heartbeatTimeLessThanOrEqual : { type : 'n'  },
+				nameEqual : { type : 's'  },
+				nameIn : { type : 's'  },
+				systemNameEqual : { type : 's'  },
+				systemNameIn : { type : 's'  },
+				hostNameLike : { type : 's'  },
+				hostNameMultiLikeOr : { type : 's'  },
+				hostNameMultiLikeAnd : { type : 's'  },
+				statusEqual : { type : 'en'  , subType : 'KalturaServerNodeStatus'},
+				statusIn : { type : 's'  },
+				typeEqual : { type : 'es'  , subType : 'KalturaServerNodeType'},
+				typeIn : { type : 's'  },
+				tagsLike : { type : 's'  },
+				tagsMultiLikeOr : { type : 's'  },
+				tagsMultiLikeAnd : { type : 's'  },
+				dcEqual : { type : 'n'  },
+				dcIn : { type : 's'  },
+				parentIdEqual : { type : 'n'  },
+				parentIdIn : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+
+KalturaTypesFactory.registerType('KalturaServerNodeBaseFilter',KalturaServerNodeBaseFilter);

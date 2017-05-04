@@ -1,0 +1,103 @@
+import { KalturaHttpClientConfiguration } from "./kaltura-http-client-configuration";
+import { KalturaRequest } from '../kaltura-request';
+import { KalturaMultiRequest } from '../kaltura-multi-request';
+import { KalturaMultiResponse } from '../kaltura-multi-response';
+import { CancelableAction } from '../utils/cancelable-action';
+import { KalturaHttpClientBase } from './kaltura-http-client-base';
+import { KalturaAPIException } from '../kaltura-api-exception';
+
+export class KalturaBrowserHttpClient extends KalturaHttpClientBase {
+    constructor(adapterConfiguration: KalturaHttpClientConfiguration) {
+        super(adapterConfiguration);
+    }
+
+
+    protected _createCancelableAction(data : { endpoint : string, headers : any, body : {}, type : any} ) : CancelableAction
+    {
+
+        const result = new CancelableAction((resolve, reject) => {
+            const promise = new Promise((promiseResolve, promiseReject) => {
+                const xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        let resp;
+
+                        try {
+                            if (xhr.status == 200) {
+                                resp = JSON.parse(xhr.response);
+                            } else {
+                                resp = new Error(xhr.responseText);
+                            }
+                        } catch (e) {
+                            resp = new Error(xhr.responseText);
+                        }
+
+                        if (resp instanceof Error || resp instanceof KalturaAPIException) {
+                            promiseReject({error: resp});
+                        } else {
+                            promiseResolve(resp);
+                        }
+                    }
+                };
+
+                xhr.open('POST', data.endpoint);
+
+                if (data.headers)
+                {
+                    Object.keys(data.headers).forEach(headerKey =>
+                    {
+                        const headerValue = data.headers[headerKey];
+                        xhr.setRequestHeader(headerKey,headerValue);
+                    });
+                }
+
+                xhr.send(JSON.stringify(data.body));
+            }).then(resolve, reject);
+
+        });
+
+        return result;
+    }
+
+    public request<T>(request: KalturaRequest<T>): Promise<T> {
+        return new Promise((resolve, reject) => {
+            super._request(request).then(
+                value => {
+                    resolve(value);
+                },
+                reason => {
+                    reject(reason);
+                }
+            );
+
+        });
+    }
+
+    public multiRequest(request: KalturaMultiRequest): Promise<KalturaMultiResponse> {
+        throw new Error('not implemented');
+        // let transmitSubscription = this.transmit(request).then(
+        //     result => {
+        //         transmitSubscription = null;
+        //         const response: any = request.handleResponse(result);
+        //         observer.next(response);
+        //         observer.complete();
+        //     },
+        //     (error) => {
+        //         transmitSubscription = null;
+        //         observer.next(new KalturaResponse(null, error));
+        //         observer.complete();
+        //     }
+        // );
+        //
+        // return () => {
+        //     if (transmitSubscription) {
+        //         transmitSubscription.unsubscribe();
+        //         transmitSubscription = null;
+        //     }
+        //
+        // }
+        // });
+    }
+
+}

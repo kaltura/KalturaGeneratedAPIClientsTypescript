@@ -1,0 +1,45 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+
+
+import { KalturaConversionAttribute } from './KalturaConversionAttribute';
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface MediaConvertActionArgs  extends KalturaRequestArgs {
+    entryId : string;
+	conversionProfileId? : number;
+	dynamicConversionAttributes? : KalturaConversionAttribute[];
+}
+
+/** 
+* Convert entry
+**/
+export class MediaConvertAction extends KalturaRequest<number> {
+
+    entryId : string;
+	conversionProfileId : number;
+	dynamicConversionAttributes : KalturaConversionAttribute[];
+
+    constructor(data : MediaConvertActionArgs)
+    {
+        super(data, 'n', '');
+        if (typeof this.dynamicConversionAttributes === 'undefined') this.dynamicConversionAttributes = [];
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'media' },
+				action : { type : 'c' , default : 'convert' },
+				entryId : { type : 's'  },
+				conversionProfileId : { type : 'n'  },
+				dynamicConversionAttributes : { type : 'a'  , subType : 'KalturaConversionAttribute'}
+            }
+        );
+        return result;
+    }
+}
+

@@ -1,0 +1,37 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaBaseEntry } from './KalturaBaseEntry';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface BaseEntryGetByIdsActionArgs  extends KalturaRequestArgs {
+    entryIds : string;
+}
+
+/** 
+* Get an array of KalturaBaseEntry objects by a comma-separated list of ids.
+**/
+export class BaseEntryGetByIdsAction extends KalturaRequest<KalturaBaseEntry[]> {
+
+    entryIds : string;
+
+    constructor(data : BaseEntryGetByIdsActionArgs)
+    {
+        super(data, 'a', 'KalturaBaseEntry');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'baseentry' },
+				action : { type : 'c' , default : 'getByIds' },
+				entryIds : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

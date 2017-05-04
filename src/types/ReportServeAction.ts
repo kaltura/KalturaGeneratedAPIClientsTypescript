@@ -1,0 +1,37 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface ReportServeActionArgs  extends KalturaRequestArgs {
+    id : string;
+}
+
+/** 
+* Will serve a requested report
+**/
+export class ReportServeAction extends KalturaRequest<string> {
+
+    id : string;
+
+    constructor(data : ReportServeActionArgs)
+    {
+        super(data, 's', '');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'report' },
+				action : { type : 'c' , default : 'serve' },
+				id : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

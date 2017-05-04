@@ -1,0 +1,44 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface CategoryEntryIndexActionArgs  extends KalturaRequestArgs {
+    entryId : string;
+	categoryId : number;
+	shouldUpdate? : boolean;
+}
+
+/** 
+* Index CategoryEntry by Id
+**/
+export class CategoryEntryIndexAction extends KalturaRequest<number> {
+
+    entryId : string;
+	categoryId : number;
+	shouldUpdate : boolean;
+
+    constructor(data : CategoryEntryIndexActionArgs)
+    {
+        super(data, 'n', '');
+        if (typeof this.shouldUpdate === 'undefined') this.shouldUpdate = true;
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'categoryentry' },
+				action : { type : 'c' , default : 'index' },
+				entryId : { type : 's'  },
+				categoryId : { type : 'n'  },
+				shouldUpdate : { type : 'b'  }
+            }
+        );
+        return result;
+    }
+}
+

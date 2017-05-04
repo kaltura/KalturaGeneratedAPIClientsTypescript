@@ -1,0 +1,37 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaAppToken } from './KalturaAppToken';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface AppTokenGetActionArgs  extends KalturaRequestArgs {
+    id : string;
+}
+
+/** 
+* Get application authentication token by id
+**/
+export class AppTokenGetAction extends KalturaRequest<KalturaAppToken> {
+
+    id : string;
+
+    constructor(data : AppTokenGetActionArgs)
+    {
+        super(data, 'o', 'KalturaAppToken');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'apptoken' },
+				action : { type : 'c' , default : 'get' },
+				id : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

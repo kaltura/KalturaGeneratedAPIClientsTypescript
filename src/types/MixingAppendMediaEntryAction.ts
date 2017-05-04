@@ -1,0 +1,41 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaMixEntry } from './KalturaMixEntry';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface MixingAppendMediaEntryActionArgs  extends KalturaRequestArgs {
+    mixEntryId : string;
+	mediaEntryId : string;
+}
+
+/** 
+* Appends a media entry to a the end of the mix timeline, this will save the mix
+* timeline as a new version.
+**/
+export class MixingAppendMediaEntryAction extends KalturaRequest<KalturaMixEntry> {
+
+    mixEntryId : string;
+	mediaEntryId : string;
+
+    constructor(data : MixingAppendMediaEntryActionArgs)
+    {
+        super(data, 'o', 'KalturaMixEntry');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'mixing' },
+				action : { type : 'c' , default : 'appendMediaEntry' },
+				mixEntryId : { type : 's'  },
+				mediaEntryId : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

@@ -1,0 +1,64 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+
+
+import { KalturaReportType } from './KalturaReportType';
+import { KalturaReportInputFilter } from './KalturaReportInputFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface ReportGetUrlForReportAsCsvActionArgs  extends KalturaRequestArgs {
+    reportTitle : string;
+	reportText : string;
+	headers : string;
+	reportType : KalturaReportType;
+	reportInputFilter : KalturaReportInputFilter;
+	dimension? : string;
+	pager? : KalturaFilterPager;
+	order? : string;
+	objectIds? : string;
+}
+
+/** 
+* will create a Csv file for the given report and return the URL to access it
+**/
+export class ReportGetUrlForReportAsCsvAction extends KalturaRequest<string> {
+
+    reportTitle : string;
+	reportText : string;
+	headers : string;
+	reportType : KalturaReportType;
+	reportInputFilter : KalturaReportInputFilter;
+	dimension : string;
+	pager : KalturaFilterPager;
+	order : string;
+	objectIds : string;
+
+    constructor(data : ReportGetUrlForReportAsCsvActionArgs)
+    {
+        super(data, 's', '');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'report' },
+				action : { type : 'c' , default : 'getUrlForReportAsCsv' },
+				reportTitle : { type : 's'  },
+				reportText : { type : 's'  },
+				headers : { type : 's'  },
+				reportType : { type : 'es'  , subType : 'KalturaReportType'},
+				reportInputFilter : { type : 'o'  , subType : 'KalturaReportInputFilter'},
+				dimension : { type : 's'  },
+				pager : { type : 'o'  , subType : 'KalturaFilterPager'},
+				order : { type : 's'  },
+				objectIds : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

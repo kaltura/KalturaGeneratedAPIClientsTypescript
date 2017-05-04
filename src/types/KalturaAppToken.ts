@@ -1,0 +1,64 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaAppTokenStatus } from './KalturaAppTokenStatus';
+import { KalturaSessionType } from './KalturaSessionType';
+import { KalturaAppTokenHashType } from './KalturaAppTokenHashType';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+
+export interface KalturaAppTokenArgs  extends KalturaObjectBaseArgs {
+    expiry? : number;
+	sessionType? : KalturaSessionType;
+	sessionUserId? : string;
+	sessionDuration? : number;
+	sessionPrivileges? : string;
+	hashType? : KalturaAppTokenHashType;
+}
+
+
+export class KalturaAppToken extends KalturaObjectBase {
+
+    readonly id : string;
+	readonly token : string;
+	readonly partnerId : number;
+	readonly createdAt : number;
+	readonly updatedAt : number;
+	readonly status : KalturaAppTokenStatus;
+	expiry : number;
+	sessionType : KalturaSessionType;
+	sessionUserId : string;
+	sessionDuration : number;
+	sessionPrivileges : string;
+	hashType : KalturaAppTokenHashType;
+
+    constructor(data? : KalturaAppTokenArgs)
+    {
+        super(data);
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                objectType : { type : 'c' , default : 'KalturaAppToken' },
+				id : { type : 's'  , readOnly : true},
+				token : { type : 's'  , readOnly : true},
+				partnerId : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'n'  , readOnly : true},
+				updatedAt : { type : 'n'  , readOnly : true},
+				status : { type : 'en'  , readOnly : true, subType : 'KalturaAppTokenStatus'},
+				expiry : { type : 'n'  },
+				sessionType : { type : 'en'  , subType : 'KalturaSessionType'},
+				sessionUserId : { type : 's'  },
+				sessionDuration : { type : 'n'  },
+				sessionPrivileges : { type : 's'  },
+				hashType : { type : 'es'  , subType : 'KalturaAppTokenHashType'}
+            }
+        );
+        return result;
+    }
+}
+
+KalturaTypesFactory.registerType('KalturaAppToken',KalturaAppToken);

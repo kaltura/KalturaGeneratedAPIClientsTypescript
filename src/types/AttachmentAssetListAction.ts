@@ -1,0 +1,42 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaAttachmentAssetListResponse } from './KalturaAttachmentAssetListResponse';
+
+import { KalturaAssetFilter } from './KalturaAssetFilter';
+import { KalturaFilterPager } from './KalturaFilterPager';
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface AttachmentAssetListActionArgs  extends KalturaRequestArgs {
+    filter? : KalturaAssetFilter;
+	pager? : KalturaFilterPager;
+}
+
+/** 
+* List attachment Assets by filter and pager
+**/
+export class AttachmentAssetListAction extends KalturaRequest<KalturaAttachmentAssetListResponse> {
+
+    filter : KalturaAssetFilter;
+	pager : KalturaFilterPager;
+
+    constructor(data? : AttachmentAssetListActionArgs)
+    {
+        super(data, 'o', 'KalturaAttachmentAssetListResponse');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'attachment_attachmentasset' },
+				action : { type : 'c' , default : 'list' },
+				filter : { type : 'o'  , subType : 'KalturaAssetFilter'},
+				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+            }
+        );
+        return result;
+    }
+}
+

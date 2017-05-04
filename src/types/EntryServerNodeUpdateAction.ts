@@ -1,0 +1,38 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaEntryServerNode } from './KalturaEntryServerNode';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface EntryServerNodeUpdateActionArgs  extends KalturaRequestArgs {
+    id : number;
+	entryServerNode : KalturaEntryServerNode;
+}
+
+
+export class EntryServerNodeUpdateAction extends KalturaRequest<KalturaEntryServerNode> {
+
+    id : number;
+	entryServerNode : KalturaEntryServerNode;
+
+    constructor(data : EntryServerNodeUpdateActionArgs)
+    {
+        super(data, 'o', 'KalturaEntryServerNode');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'entryservernode' },
+				action : { type : 'c' , default : 'update' },
+				id : { type : 'n'  },
+				entryServerNode : { type : 'o'  , subType : 'KalturaEntryServerNode'}
+            }
+        );
+        return result;
+    }
+}
+

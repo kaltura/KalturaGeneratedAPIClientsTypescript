@@ -1,0 +1,37 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaCuePoint } from './KalturaCuePoint';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface CuePointGetActionArgs  extends KalturaRequestArgs {
+    id : string;
+}
+
+/** 
+* Retrieve an CuePoint object by id
+**/
+export class CuePointGetAction extends KalturaRequest<KalturaCuePoint> {
+
+    id : string;
+
+    constructor(data : CuePointGetActionArgs)
+    {
+        super(data, 'o', 'KalturaCuePoint');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'cuepoint_cuepoint' },
+				action : { type : 'c' , default : 'get' },
+				id : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

@@ -1,0 +1,46 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+import { KalturaMetadataProfile } from './KalturaMetadataProfile';
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface MetadataProfileUpdateActionArgs  extends KalturaRequestArgs {
+    id : number;
+	metadataProfile : KalturaMetadataProfile;
+	xsdData? : string;
+	viewsData? : string;
+}
+
+/** 
+* Update an existing metadata object
+**/
+export class MetadataProfileUpdateAction extends KalturaRequest<KalturaMetadataProfile> {
+
+    id : number;
+	metadataProfile : KalturaMetadataProfile;
+	xsdData : string;
+	viewsData : string;
+
+    constructor(data : MetadataProfileUpdateActionArgs)
+    {
+        super(data, 'o', 'KalturaMetadataProfile');
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c' , default : 'metadata_metadataprofile' },
+				action : { type : 'c' , default : 'update' },
+				id : { type : 'n'  },
+				metadataProfile : { type : 'o'  , subType : 'KalturaMetadataProfile'},
+				xsdData : { type : 's'  },
+				viewsData : { type : 's'  }
+            }
+        );
+        return result;
+    }
+}
+

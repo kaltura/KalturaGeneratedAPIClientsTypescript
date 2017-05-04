@@ -1,0 +1,17 @@
+# Node
+node_modules/*
+npm-debug.log
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+#IDE
+.idea
+
+# Mac
+.DS_Store
+**/.DS_Store
+
+/dist/*
+coverage/*
