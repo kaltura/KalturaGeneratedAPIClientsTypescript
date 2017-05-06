@@ -1,6 +1,5 @@
 import { KalturaRequest } from "../kaltura-request";
 import { KalturaMultiRequest } from "../kaltura-multi-request";
-import { KalturaMultiResponse } from "../kaltura-multi-response";
 import { KalturaRequestBase } from "../kaltura-request-base";
 import { KalturaAPIException } from '../kaltura-api-exception';
 import { KalturaUploadRequest } from '../kaltura-upload-request';
@@ -11,7 +10,15 @@ export abstract class KalturaClientBase {
     protected abstract _transmitFileUploadRequest(request): CancelableAction;
     protected abstract _transmitRequest(request): CancelableAction;
 
-    protected _multiRequest(request: KalturaMultiRequest): CancelableAction {
+    protected _multiRequest(arg: KalturaMultiRequest | KalturaRequest<any>[]): CancelableAction {
+
+        let request = arg instanceof KalturaMultiRequest ? arg : (arg instanceof Array ? new KalturaMultiRequest(...arg) : null);
+
+        if (!request)
+        {
+            throw new Error(`Missing or invalid argument`);
+        }
+
         let transmitAction = this.transmit(request);
 
         transmitAction.then(

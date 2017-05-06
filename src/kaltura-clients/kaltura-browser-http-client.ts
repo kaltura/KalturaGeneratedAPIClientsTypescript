@@ -74,30 +74,20 @@ export class KalturaBrowserHttpClient extends KalturaHttpClientBase {
         });
     }
 
-    public multiRequest(request: KalturaMultiRequest): Promise<KalturaMultiResponse> {
-        throw new Error('not implemented');
-        // let transmitSubscription = this.transmit(request).then(
-        //     result => {
-        //         transmitSubscription = null;
-        //         const response: any = request.handleResponse(result);
-        //         observer.next(response);
-        //         observer.complete();
-        //     },
-        //     (error) => {
-        //         transmitSubscription = null;
-        //         observer.next(new KalturaResponse(null, error));
-        //         observer.complete();
-        //     }
-        // );
-        //
-        // return () => {
-        //     if (transmitSubscription) {
-        //         transmitSubscription.unsubscribe();
-        //         transmitSubscription = null;
-        //     }
-        //
-        // }
-        // });
+    public multiRequest(requests : KalturaRequest<any>[]) : Promise<KalturaMultiResponse>;
+    public multiRequest(request : KalturaMultiRequest) : Promise<KalturaMultiResponse>;
+    public multiRequest(arg: KalturaMultiRequest | KalturaRequest<any>[]): Promise<KalturaMultiResponse> {
+        return new Promise((resolve, reject) => {
+            super._multiRequest(arg).then(
+                value => {
+                    resolve(value);
+                },
+                reason => {
+                    reject(reason);
+                }
+            );
+
+        });
     }
 
 }
