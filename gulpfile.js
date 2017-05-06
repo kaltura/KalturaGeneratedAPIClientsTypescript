@@ -36,7 +36,7 @@ function compileAppScripts() {
 	var tsProject = $.typescript.createProject(tsconfig);
 	var opt = {
 		tsProject: tsProject,
-		inPath: ["**/*.ts",
+		inPath: ["src/**/*.ts",
 			"!src/tests/**/*.ts",
 			"!**/*.spec.ts",
 			"!dist/**",
