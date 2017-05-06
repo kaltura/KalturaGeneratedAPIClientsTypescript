@@ -18,10 +18,10 @@ export interface KalturaUserRoleBaseFilterArgs  extends KalturaRelatedFilterArgs
 	partnerIdIn? : string;
 	tagsMultiLikeOr? : string;
 	tagsMultiLikeAnd? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 }
 
 
@@ -40,10 +40,10 @@ export class KalturaUserRoleBaseFilter extends KalturaRelatedFilter {
 	partnerIdIn : string;
 	tagsMultiLikeOr : string;
 	tagsMultiLikeAnd : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaUserRoleBaseFilterArgs)
     {
@@ -70,10 +70,10 @@ export class KalturaUserRoleBaseFilter extends KalturaRelatedFilter {
 				partnerIdIn : { type : 's'  },
 				tagsMultiLikeOr : { type : 's'  },
 				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

@@ -15,8 +15,8 @@ export interface KalturaEntryDistributionArgs  extends KalturaObjectBaseArgs {
 	thumbAssetIds? : string;
 	flavorAssetIds? : string;
 	assetIds? : string;
-	sunrise? : number;
-	sunset? : number;
+	sunrise? : Date;
+	sunset? : Date;
 	validationErrors? : KalturaDistributionValidationError[];
 }
 
@@ -24,9 +24,9 @@ export interface KalturaEntryDistributionArgs  extends KalturaObjectBaseArgs {
 export class KalturaEntryDistribution extends KalturaObjectBase {
 
     readonly id : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
-	readonly submittedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
+	readonly submittedAt : Date;
 	entryId : string;
 	readonly partnerId : number;
 	distributionProfileId : number;
@@ -36,8 +36,8 @@ export class KalturaEntryDistribution extends KalturaObjectBase {
 	thumbAssetIds : string;
 	flavorAssetIds : string;
 	assetIds : string;
-	sunrise : number;
-	sunset : number;
+	sunrise : Date;
+	sunset : Date;
 	readonly remoteId : string;
 	readonly plays : number;
 	readonly views : number;
@@ -66,9 +66,9 @@ export class KalturaEntryDistribution extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaEntryDistribution' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
-				submittedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
+				submittedAt : { type : 'd'  , readOnly : true},
 				entryId : { type : 's'  },
 				partnerId : { type : 'n'  , readOnly : true},
 				distributionProfileId : { type : 'n'  },
@@ -78,8 +78,8 @@ export class KalturaEntryDistribution extends KalturaObjectBase {
 				thumbAssetIds : { type : 's'  },
 				flavorAssetIds : { type : 's'  },
 				assetIds : { type : 's'  },
-				sunrise : { type : 'n'  },
-				sunset : { type : 'n'  },
+				sunrise : { type : 'd'  },
+				sunset : { type : 'd'  },
 				remoteId : { type : 's'  , readOnly : true},
 				plays : { type : 'n'  , readOnly : true},
 				views : { type : 'n'  , readOnly : true},

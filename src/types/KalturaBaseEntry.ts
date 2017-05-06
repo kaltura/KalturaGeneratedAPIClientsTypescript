@@ -24,8 +24,8 @@ export interface KalturaBaseEntryArgs  extends KalturaObjectBaseArgs {
 	partnerData? : string;
 	licenseType? : KalturaLicenseType;
 	accessControlId? : number;
-	startDate? : number;
-	endDate? : number;
+	startDate? : Date;
+	endDate? : Date;
 	referenceId? : string;
 	partnerSortValue? : number;
 	conversionProfileId? : number;
@@ -55,8 +55,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 	readonly moderationStatus : KalturaEntryModerationStatus;
 	readonly moderationCount : number;
 	type : KalturaEntryType;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly rank : number;
 	readonly totalRank : number;
 	readonly votes : number;
@@ -68,8 +68,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 	readonly version : number;
 	readonly thumbnailUrl : string;
 	accessControlId : number;
-	startDate : number;
-	endDate : number;
+	startDate : Date;
+	endDate : Date;
 	referenceId : string;
 	readonly replacingEntryId : string;
 	readonly replacedEntryId : string;
@@ -113,8 +113,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 				moderationStatus : { type : 'en'  , readOnly : true, subType : 'KalturaEntryModerationStatus'},
 				moderationCount : { type : 'n'  , readOnly : true},
 				type : { type : 'es'  , subType : 'KalturaEntryType'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				rank : { type : 'n'  , readOnly : true},
 				totalRank : { type : 'n'  , readOnly : true},
 				votes : { type : 'n'  , readOnly : true},
@@ -126,8 +126,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 				version : { type : 'n'  , readOnly : true},
 				thumbnailUrl : { type : 's'  , readOnly : true},
 				accessControlId : { type : 'n'  },
-				startDate : { type : 'n'  },
-				endDate : { type : 'n'  },
+				startDate : { type : 'd'  },
+				endDate : { type : 'd'  },
 				referenceId : { type : 's'  },
 				replacingEntryId : { type : 's'  , readOnly : true},
 				replacedEntryId : { type : 's'  , readOnly : true},

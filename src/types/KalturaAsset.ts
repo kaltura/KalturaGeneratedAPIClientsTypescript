@@ -21,9 +21,9 @@ export class KalturaAsset extends KalturaObjectBase {
 	readonly size : number;
 	tags : string;
 	fileExt : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
-	readonly deletedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
+	readonly deletedAt : Date;
 	readonly description : string;
 	partnerData : string;
 	partnerDescription : string;
@@ -48,9 +48,9 @@ export class KalturaAsset extends KalturaObjectBase {
 				size : { type : 'n'  , readOnly : true},
 				tags : { type : 's'  },
 				fileExt : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
-				deletedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
+				deletedAt : { type : 'd'  , readOnly : true},
 				description : { type : 's'  , readOnly : true},
 				partnerData : { type : 's'  },
 				partnerDescription : { type : 's'  },

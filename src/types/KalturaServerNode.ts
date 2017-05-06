@@ -19,9 +19,9 @@ export class KalturaServerNode extends KalturaObjectBase {
 
     readonly id : number;
 	readonly partnerId : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
-	readonly heartbeatTime : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
+	readonly heartbeatTime : Date;
 	name : string;
 	systemName : string;
 	description : string;
@@ -46,9 +46,9 @@ export class KalturaServerNode extends KalturaObjectBase {
                 objectType : { type : 'c' , default : 'KalturaServerNode' },
 				id : { type : 'n'  , readOnly : true},
 				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
-				heartbeatTime : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
+				heartbeatTime : { type : 'd'  , readOnly : true},
 				name : { type : 's'  },
 				systemName : { type : 's'  },
 				description : { type : 's'  },

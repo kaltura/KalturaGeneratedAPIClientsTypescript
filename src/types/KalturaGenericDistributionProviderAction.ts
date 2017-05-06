@@ -24,8 +24,8 @@ export interface KalturaGenericDistributionProviderActionArgs  extends KalturaOb
 export class KalturaGenericDistributionProviderAction extends KalturaObjectBase {
 
     readonly id : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	genericDistributionProviderId : number;
 	action : KalturaDistributionAction;
 	readonly status : KalturaGenericDistributionProviderStatus;
@@ -54,8 +54,8 @@ export class KalturaGenericDistributionProviderAction extends KalturaObjectBase 
             {
                 objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderAction' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				genericDistributionProviderId : { type : 'n'  },
 				action : { type : 'en'  , subType : 'KalturaDistributionAction'},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaGenericDistributionProviderStatus'},

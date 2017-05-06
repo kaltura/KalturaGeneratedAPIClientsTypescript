@@ -14,10 +14,10 @@ export interface KalturaScheduleEventBaseFilterArgs  extends KalturaRelatedFilte
 	parentIdNotIn? : string;
 	statusEqual? : KalturaScheduleEventStatus;
 	statusIn? : string;
-	startDateGreaterThanOrEqual? : number;
-	startDateLessThanOrEqual? : number;
-	endDateGreaterThanOrEqual? : number;
-	endDateLessThanOrEqual? : number;
+	startDateGreaterThanOrEqual? : Date;
+	startDateLessThanOrEqual? : Date;
+	endDateGreaterThanOrEqual? : Date;
+	endDateLessThanOrEqual? : Date;
 	referenceIdEqual? : string;
 	referenceIdIn? : string;
 	ownerIdEqual? : string;
@@ -31,10 +31,10 @@ export interface KalturaScheduleEventBaseFilterArgs  extends KalturaRelatedFilte
 	tagsLike? : string;
 	tagsMultiLikeOr? : string;
 	tagsMultiLikeAnd? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 }
 
 
@@ -48,10 +48,10 @@ export class KalturaScheduleEventBaseFilter extends KalturaRelatedFilter {
 	parentIdNotIn : string;
 	statusEqual : KalturaScheduleEventStatus;
 	statusIn : string;
-	startDateGreaterThanOrEqual : number;
-	startDateLessThanOrEqual : number;
-	endDateGreaterThanOrEqual : number;
-	endDateLessThanOrEqual : number;
+	startDateGreaterThanOrEqual : Date;
+	startDateLessThanOrEqual : Date;
+	endDateGreaterThanOrEqual : Date;
+	endDateLessThanOrEqual : Date;
 	referenceIdEqual : string;
 	referenceIdIn : string;
 	ownerIdEqual : string;
@@ -65,10 +65,10 @@ export class KalturaScheduleEventBaseFilter extends KalturaRelatedFilter {
 	tagsLike : string;
 	tagsMultiLikeOr : string;
 	tagsMultiLikeAnd : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaScheduleEventBaseFilterArgs)
     {
@@ -90,10 +90,10 @@ export class KalturaScheduleEventBaseFilter extends KalturaRelatedFilter {
 				parentIdNotIn : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaScheduleEventStatus'},
 				statusIn : { type : 's'  },
-				startDateGreaterThanOrEqual : { type : 'n'  },
-				startDateLessThanOrEqual : { type : 'n'  },
-				endDateGreaterThanOrEqual : { type : 'n'  },
-				endDateLessThanOrEqual : { type : 'n'  },
+				startDateGreaterThanOrEqual : { type : 'd'  },
+				startDateLessThanOrEqual : { type : 'd'  },
+				endDateGreaterThanOrEqual : { type : 'd'  },
+				endDateLessThanOrEqual : { type : 'd'  },
 				referenceIdEqual : { type : 's'  },
 				referenceIdIn : { type : 's'  },
 				ownerIdEqual : { type : 's'  },
@@ -107,10 +107,10 @@ export class KalturaScheduleEventBaseFilter extends KalturaRelatedFilter {
 				tagsLike : { type : 's'  },
 				tagsMultiLikeOr : { type : 's'  },
 				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

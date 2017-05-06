@@ -7,10 +7,10 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaDistributionProfileBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaDistributionProfileStatus;
 	statusIn? : string;
 }
@@ -20,10 +20,10 @@ export class KalturaDistributionProfileBaseFilter extends KalturaFilter {
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaDistributionProfileStatus;
 	statusIn : string;
 
@@ -41,10 +41,10 @@ export class KalturaDistributionProfileBaseFilter extends KalturaFilter {
                 objectType : { type : 'c' , default : 'KalturaDistributionProfileBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaDistributionProfileStatus'},
 				statusIn : { type : 's'  }
             }

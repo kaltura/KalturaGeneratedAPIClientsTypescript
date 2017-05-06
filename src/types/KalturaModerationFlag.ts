@@ -25,8 +25,8 @@ export class KalturaModerationFlag extends KalturaObjectBase {
 	readonly status : KalturaModerationFlagStatus;
 	comments : string;
 	flagType : KalturaModerationFlagType;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 
     constructor(data? : KalturaModerationFlagArgs)
     {
@@ -49,8 +49,8 @@ export class KalturaModerationFlag extends KalturaObjectBase {
 				status : { type : 'es'  , readOnly : true, subType : 'KalturaModerationFlagStatus'},
 				comments : { type : 's'  },
 				flagType : { type : 'en'  , subType : 'KalturaModerationFlagType'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true}
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true}
             }
         );
         return result;

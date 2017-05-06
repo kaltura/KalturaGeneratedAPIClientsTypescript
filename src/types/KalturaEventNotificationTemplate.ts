@@ -33,8 +33,8 @@ export class KalturaEventNotificationTemplate extends KalturaObjectBase {
 	description : string;
 	type : KalturaEventNotificationTemplateType;
 	readonly status : KalturaEventNotificationTemplateStatus;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	manualDispatchEnabled : boolean;
 	automaticDispatchEnabled : boolean;
 	eventType : KalturaEventNotificationEventType;
@@ -65,8 +65,8 @@ export class KalturaEventNotificationTemplate extends KalturaObjectBase {
 				description : { type : 's'  },
 				type : { type : 'es'  , subType : 'KalturaEventNotificationTemplateType'},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaEventNotificationTemplateStatus'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				manualDispatchEnabled : { type : 'b'  },
 				automaticDispatchEnabled : { type : 'b'  },
 				eventType : { type : 'es'  , subType : 'KalturaEventNotificationEventType'},

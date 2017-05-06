@@ -14,7 +14,7 @@ export class KalturaCategoryEntry extends KalturaObjectBase {
 
     categoryId : number;
 	entryId : string;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	readonly categoryFullIds : string;
 	readonly status : KalturaCategoryEntryStatus;
 	readonly creatorUserId : string;
@@ -33,7 +33,7 @@ export class KalturaCategoryEntry extends KalturaObjectBase {
                 objectType : { type : 'c' , default : 'KalturaCategoryEntry' },
 				categoryId : { type : 'n'  },
 				entryId : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				categoryFullIds : { type : 's'  , readOnly : true},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaCategoryEntryStatus'},
 				creatorUserId : { type : 's'  , readOnly : true}

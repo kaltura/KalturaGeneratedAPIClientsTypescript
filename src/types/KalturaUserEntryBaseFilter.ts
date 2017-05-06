@@ -16,10 +16,10 @@ export interface KalturaUserEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	userIdIn? : string;
 	userIdNotIn? : string;
 	statusEqual? : KalturaUserEntryStatus;
-	createdAtLessThanOrEqual? : number;
-	createdAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
+	createdAtLessThanOrEqual? : Date;
+	createdAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
 	typeEqual? : KalturaUserEntryType;
 }
 
@@ -36,10 +36,10 @@ export class KalturaUserEntryBaseFilter extends KalturaRelatedFilter {
 	userIdIn : string;
 	userIdNotIn : string;
 	statusEqual : KalturaUserEntryStatus;
-	createdAtLessThanOrEqual : number;
-	createdAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
+	createdAtLessThanOrEqual : Date;
+	createdAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
 	typeEqual : KalturaUserEntryType;
 
     constructor(data? : KalturaUserEntryBaseFilterArgs)
@@ -64,10 +64,10 @@ export class KalturaUserEntryBaseFilter extends KalturaRelatedFilter {
 				userIdIn : { type : 's'  },
 				userIdNotIn : { type : 's'  },
 				statusEqual : { type : 'es'  , subType : 'KalturaUserEntryStatus'},
-				createdAtLessThanOrEqual : { type : 'n'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
 				typeEqual : { type : 'es'  , subType : 'KalturaUserEntryType'}
             }
         );

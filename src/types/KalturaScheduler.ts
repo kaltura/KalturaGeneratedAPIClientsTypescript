@@ -22,7 +22,7 @@ export class KalturaScheduler extends KalturaObjectBase {
 	readonly statuses : KalturaSchedulerStatus[];
 	readonly configs : KalturaSchedulerConfig[];
 	readonly workers : KalturaSchedulerWorker[];
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	readonly lastStatus : number;
 	readonly lastStatusStr : string;
 
@@ -48,7 +48,7 @@ export class KalturaScheduler extends KalturaObjectBase {
 				statuses : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerStatus'},
 				configs : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerConfig'},
 				workers : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerWorker'},
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				lastStatus : { type : 'n'  , readOnly : true},
 				lastStatusStr : { type : 's'  , readOnly : true}
             }

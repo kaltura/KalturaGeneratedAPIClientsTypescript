@@ -15,10 +15,10 @@ export interface KalturaCategoryUserBaseFilterArgs  extends KalturaRelatedFilter
 	permissionLevelIn? : string;
 	statusEqual? : KalturaCategoryUserStatus;
 	statusIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	updateMethodEqual? : KalturaUpdateMethodType;
 	updateMethodIn? : string;
 	categoryFullIdsStartsWith? : string;
@@ -39,10 +39,10 @@ export class KalturaCategoryUserBaseFilter extends KalturaRelatedFilter {
 	permissionLevelIn : string;
 	statusEqual : KalturaCategoryUserStatus;
 	statusIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	updateMethodEqual : KalturaUpdateMethodType;
 	updateMethodIn : string;
 	categoryFullIdsStartsWith : string;
@@ -71,10 +71,10 @@ export class KalturaCategoryUserBaseFilter extends KalturaRelatedFilter {
 				permissionLevelIn : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaCategoryUserStatus'},
 				statusIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				updateMethodEqual : { type : 'en'  , subType : 'KalturaUpdateMethodType'},
 				updateMethodIn : { type : 's'  },
 				categoryFullIdsStartsWith : { type : 's'  },

@@ -39,7 +39,7 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 	tags : string;
 	description : string;
 	defaultEntryId : string;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	flavorParamsIds : string;
 	isDefault : KalturaNullableBoolean;
 	readonly isPartnerDefault : boolean;
@@ -72,7 +72,7 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 				tags : { type : 's'  },
 				description : { type : 's'  },
 				defaultEntryId : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				flavorParamsIds : { type : 's'  },
 				isDefault : { type : 'en'  , subType : 'KalturaNullableBoolean'},
 				isPartnerDefault : { type : 'b'  , readOnly : true},

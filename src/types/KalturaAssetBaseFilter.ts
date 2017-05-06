@@ -15,12 +15,12 @@ export interface KalturaAssetBaseFilterArgs  extends KalturaRelatedFilterArgs {
 	tagsLike? : string;
 	tagsMultiLikeOr? : string;
 	tagsMultiLikeAnd? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
-	deletedAtGreaterThanOrEqual? : number;
-	deletedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
+	deletedAtGreaterThanOrEqual? : Date;
+	deletedAtLessThanOrEqual? : Date;
 }
 
 
@@ -37,12 +37,12 @@ export class KalturaAssetBaseFilter extends KalturaRelatedFilter {
 	tagsLike : string;
 	tagsMultiLikeOr : string;
 	tagsMultiLikeAnd : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
-	deletedAtGreaterThanOrEqual : number;
-	deletedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
+	deletedAtGreaterThanOrEqual : Date;
+	deletedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaAssetBaseFilterArgs)
     {
@@ -67,12 +67,12 @@ export class KalturaAssetBaseFilter extends KalturaRelatedFilter {
 				tagsLike : { type : 's'  },
 				tagsMultiLikeOr : { type : 's'  },
 				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
-				deletedAtGreaterThanOrEqual : { type : 'n'  },
-				deletedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
+				deletedAtGreaterThanOrEqual : { type : 'd'  },
+				deletedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

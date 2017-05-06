@@ -12,10 +12,10 @@ export interface KalturaDeliveryProfileBaseFilterArgs  extends KalturaFilterArgs
 	partnerIdIn? : string;
 	systemNameEqual? : string;
 	systemNameIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	streamerTypeEqual? : KalturaPlaybackProtocol;
 	statusEqual? : KalturaDeliveryStatus;
 	statusIn? : string;
@@ -30,10 +30,10 @@ export class KalturaDeliveryProfileBaseFilter extends KalturaFilter {
 	partnerIdIn : string;
 	systemNameEqual : string;
 	systemNameIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	streamerTypeEqual : KalturaPlaybackProtocol;
 	statusEqual : KalturaDeliveryStatus;
 	statusIn : string;
@@ -56,10 +56,10 @@ export class KalturaDeliveryProfileBaseFilter extends KalturaFilter {
 				partnerIdIn : { type : 's'  },
 				systemNameEqual : { type : 's'  },
 				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				streamerTypeEqual : { type : 'es'  , subType : 'KalturaPlaybackProtocol'},
 				statusEqual : { type : 'en'  , subType : 'KalturaDeliveryStatus'},
 				statusIn : { type : 's'  }

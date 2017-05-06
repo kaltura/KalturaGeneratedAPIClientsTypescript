@@ -8,10 +8,10 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaVirusScanProfileBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	partnerIdEqual? : number;
 	partnerIdIn? : string;
 	nameEqual? : string;
@@ -27,10 +27,10 @@ export class KalturaVirusScanProfileBaseFilter extends KalturaFilter {
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	partnerIdEqual : number;
 	partnerIdIn : string;
 	nameEqual : string;
@@ -54,10 +54,10 @@ export class KalturaVirusScanProfileBaseFilter extends KalturaFilter {
                 objectType : { type : 'c' , default : 'KalturaVirusScanProfileBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				partnerIdEqual : { type : 'n'  },
 				partnerIdIn : { type : 's'  },
 				nameEqual : { type : 's'  },

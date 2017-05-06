@@ -25,7 +25,7 @@ export interface KalturaAuditTrailArgs  extends KalturaObjectBaseArgs {
 export class KalturaAuditTrail extends KalturaObjectBase {
 
     readonly id : number;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	readonly parsedAt : number;
 	readonly status : KalturaAuditTrailStatus;
 	auditObjectType : KalturaAuditTrailObjectType;
@@ -62,7 +62,7 @@ export class KalturaAuditTrail extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaAuditTrail' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				parsedAt : { type : 'n'  , readOnly : true},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaAuditTrailStatus'},
 				auditObjectType : { type : 'es'  , subType : 'KalturaAuditTrailObjectType'},

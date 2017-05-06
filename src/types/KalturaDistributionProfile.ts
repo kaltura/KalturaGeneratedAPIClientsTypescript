@@ -35,8 +35,8 @@ export interface KalturaDistributionProfileArgs  extends KalturaObjectBaseArgs {
 export class KalturaDistributionProfile extends KalturaObjectBase {
 
     readonly id : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly partnerId : number;
 	providerType : KalturaDistributionProviderType;
 	name : string;
@@ -76,8 +76,8 @@ export class KalturaDistributionProfile extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaDistributionProfile' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				partnerId : { type : 'n'  , readOnly : true},
 				providerType : { type : 'es'  , subType : 'KalturaDistributionProviderType'},
 				name : { type : 's'  },

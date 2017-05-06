@@ -59,8 +59,8 @@ export class KalturaDropFolder extends KalturaObjectBase {
 	errorCode : KalturaDropFolderErrorCode;
 	errorDescription : string;
 	ignoreFileNamePatterns : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	lastAccessedAt : number;
 	incremental : boolean;
 	lastFileTimestamp : number;
@@ -100,8 +100,8 @@ export class KalturaDropFolder extends KalturaObjectBase {
 				errorCode : { type : 'es'  , subType : 'KalturaDropFolderErrorCode'},
 				errorDescription : { type : 's'  },
 				ignoreFileNamePatterns : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				lastAccessedAt : { type : 'n'  },
 				incremental : { type : 'b'  },
 				lastFileTimestamp : { type : 'n'  },

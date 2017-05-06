@@ -33,10 +33,10 @@ export interface KalturaDropFolderBaseFilterArgs  extends KalturaFilterArgs {
 	tagsMultiLikeAnd? : string;
 	errorCodeEqual? : KalturaDropFolderErrorCode;
 	errorCodeIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 }
 
 
@@ -67,10 +67,10 @@ export class KalturaDropFolderBaseFilter extends KalturaFilter {
 	tagsMultiLikeAnd : string;
 	errorCodeEqual : KalturaDropFolderErrorCode;
 	errorCodeIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaDropFolderBaseFilterArgs)
     {
@@ -109,10 +109,10 @@ export class KalturaDropFolderBaseFilter extends KalturaFilter {
 				tagsMultiLikeAnd : { type : 's'  },
 				errorCodeEqual : { type : 'es'  , subType : 'KalturaDropFolderErrorCode'},
 				errorCodeIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

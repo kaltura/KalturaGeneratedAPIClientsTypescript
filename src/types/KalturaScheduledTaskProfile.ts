@@ -15,7 +15,7 @@ export interface KalturaScheduledTaskProfileArgs  extends KalturaObjectBaseArgs 
 	objectFilterEngineType? : KalturaObjectFilterEngineType;
 	objectFilter? : KalturaFilter;
 	objectTasks? : KalturaObjectTask[];
-	lastExecutionStartedAt? : number;
+	lastExecutionStartedAt? : Date;
 	maxTotalCountAllowed? : number;
 }
 
@@ -31,9 +31,9 @@ export class KalturaScheduledTaskProfile extends KalturaObjectBase {
 	objectFilterEngineType : KalturaObjectFilterEngineType;
 	objectFilter : KalturaFilter;
 	objectTasks : KalturaObjectTask[];
-	readonly createdAt : number;
-	readonly updatedAt : number;
-	lastExecutionStartedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
+	lastExecutionStartedAt : Date;
 	maxTotalCountAllowed : number;
 
     constructor(data? : KalturaScheduledTaskProfileArgs)
@@ -58,9 +58,9 @@ export class KalturaScheduledTaskProfile extends KalturaObjectBase {
 				objectFilterEngineType : { type : 'es'  , subType : 'KalturaObjectFilterEngineType'},
 				objectFilter : { type : 'o'  , subType : 'KalturaFilter'},
 				objectTasks : { type : 'a'  , subType : 'KalturaObjectTask'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
-				lastExecutionStartedAt : { type : 'n'  },
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
+				lastExecutionStartedAt : { type : 'd'  },
 				maxTotalCountAllowed : { type : 'n'  }
             }
         );

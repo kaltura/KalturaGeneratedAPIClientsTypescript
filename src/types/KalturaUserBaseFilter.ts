@@ -18,8 +18,8 @@ export interface KalturaUserBaseFilterArgs  extends KalturaRelatedFilterArgs {
 	tagsMultiLikeAnd? : string;
 	statusEqual? : KalturaUserStatus;
 	statusIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
 	firstNameStartsWith? : string;
 	lastNameStartsWith? : string;
 	isAdminEqual? : KalturaNullableBoolean;
@@ -39,8 +39,8 @@ export class KalturaUserBaseFilter extends KalturaRelatedFilter {
 	tagsMultiLikeAnd : string;
 	statusEqual : KalturaUserStatus;
 	statusIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
 	firstNameStartsWith : string;
 	lastNameStartsWith : string;
 	isAdminEqual : KalturaNullableBoolean;
@@ -68,8 +68,8 @@ export class KalturaUserBaseFilter extends KalturaRelatedFilter {
 				tagsMultiLikeAnd : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaUserStatus'},
 				statusIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
 				firstNameStartsWith : { type : 's'  },
 				lastNameStartsWith : { type : 's'  },
 				isAdminEqual : { type : 'en'  , subType : 'KalturaNullableBoolean'}

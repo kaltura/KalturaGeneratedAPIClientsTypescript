@@ -6,9 +6,9 @@ import { KalturaBulkUploadObjectType } from './KalturaBulkUploadObjectType';
 import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaBulkUploadBaseFilterArgs  extends KalturaFilterArgs {
-    uploadedOnGreaterThanOrEqual? : number;
-	uploadedOnLessThanOrEqual? : number;
-	uploadedOnEqual? : number;
+    uploadedOnGreaterThanOrEqual? : Date;
+	uploadedOnLessThanOrEqual? : Date;
+	uploadedOnEqual? : Date;
 	statusIn? : string;
 	statusEqual? : KalturaBatchJobStatus;
 	bulkUploadObjectTypeEqual? : KalturaBulkUploadObjectType;
@@ -18,9 +18,9 @@ export interface KalturaBulkUploadBaseFilterArgs  extends KalturaFilterArgs {
 
 export class KalturaBulkUploadBaseFilter extends KalturaFilter {
 
-    uploadedOnGreaterThanOrEqual : number;
-	uploadedOnLessThanOrEqual : number;
-	uploadedOnEqual : number;
+    uploadedOnGreaterThanOrEqual : Date;
+	uploadedOnLessThanOrEqual : Date;
+	uploadedOnEqual : Date;
 	statusIn : string;
 	statusEqual : KalturaBatchJobStatus;
 	bulkUploadObjectTypeEqual : KalturaBulkUploadObjectType;
@@ -38,9 +38,9 @@ export class KalturaBulkUploadBaseFilter extends KalturaFilter {
             result.properties,
             {
                 objectType : { type : 'c' , default : 'KalturaBulkUploadBaseFilter' },
-				uploadedOnGreaterThanOrEqual : { type : 'n'  },
-				uploadedOnLessThanOrEqual : { type : 'n'  },
-				uploadedOnEqual : { type : 'n'  },
+				uploadedOnGreaterThanOrEqual : { type : 'd'  },
+				uploadedOnLessThanOrEqual : { type : 'd'  },
+				uploadedOnEqual : { type : 'd'  },
 				statusIn : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaBatchJobStatus'},
 				bulkUploadObjectTypeEqual : { type : 'es'  , subType : 'KalturaBulkUploadObjectType'},

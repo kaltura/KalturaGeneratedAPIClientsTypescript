@@ -19,8 +19,8 @@ export interface KalturaVirusScanProfileArgs  extends KalturaObjectBaseArgs {
 export class KalturaVirusScanProfile extends KalturaObjectBase {
 
     readonly id : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly partnerId : number;
 	name : string;
 	status : KalturaVirusScanProfileStatus;
@@ -41,8 +41,8 @@ export class KalturaVirusScanProfile extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaVirusScanProfile' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				partnerId : { type : 'n'  , readOnly : true},
 				name : { type : 's'  },
 				status : { type : 'en'  , subType : 'KalturaVirusScanProfileStatus'},

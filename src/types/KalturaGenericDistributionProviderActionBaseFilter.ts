@@ -7,10 +7,10 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaGenericDistributionProviderActionBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	genericDistributionProviderIdEqual? : number;
 	genericDistributionProviderIdIn? : string;
 	actionEqual? : KalturaDistributionAction;
@@ -22,10 +22,10 @@ export class KalturaGenericDistributionProviderActionBaseFilter extends KalturaF
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	genericDistributionProviderIdEqual : number;
 	genericDistributionProviderIdIn : string;
 	actionEqual : KalturaDistributionAction;
@@ -45,10 +45,10 @@ export class KalturaGenericDistributionProviderActionBaseFilter extends KalturaF
                 objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderActionBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				genericDistributionProviderIdEqual : { type : 'n'  },
 				genericDistributionProviderIdIn : { type : 's'  },
 				actionEqual : { type : 'en'  , subType : 'KalturaDistributionAction'},

@@ -8,10 +8,10 @@ export interface KalturaScheduleEventResourceBaseFilterArgs  extends KalturaRela
 	eventIdIn? : string;
 	resourceIdEqual? : number;
 	resourceIdIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 }
 
 
@@ -21,10 +21,10 @@ export class KalturaScheduleEventResourceBaseFilter extends KalturaRelatedFilter
 	eventIdIn : string;
 	resourceIdEqual : number;
 	resourceIdIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaScheduleEventResourceBaseFilterArgs)
     {
@@ -42,10 +42,10 @@ export class KalturaScheduleEventResourceBaseFilter extends KalturaRelatedFilter
 				eventIdIn : { type : 's'  },
 				resourceIdEqual : { type : 'n'  },
 				resourceIdIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

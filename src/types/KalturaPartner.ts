@@ -50,7 +50,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	website : string;
 	notificationUrl : string;
 	appearInSearch : number;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	adminName : string;
 	adminEmail : string;
 	description : string;
@@ -119,7 +119,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				website : { type : 's'  },
 				notificationUrl : { type : 's'  },
 				appearInSearch : { type : 'n'  },
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				adminName : { type : 's'  },
 				adminEmail : { type : 's'  },
 				description : { type : 's'  },

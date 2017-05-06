@@ -9,8 +9,8 @@ import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelated
 
 export interface KalturaAuditTrailBaseFilterArgs  extends KalturaRelatedFilterArgs {
     idEqual? : number;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
 	parsedAtGreaterThanOrEqual? : number;
 	parsedAtLessThanOrEqual? : number;
 	statusEqual? : KalturaAuditTrailStatus;
@@ -51,8 +51,8 @@ export interface KalturaAuditTrailBaseFilterArgs  extends KalturaRelatedFilterAr
 export class KalturaAuditTrailBaseFilter extends KalturaRelatedFilter {
 
     idEqual : number;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
 	parsedAtGreaterThanOrEqual : number;
 	parsedAtLessThanOrEqual : number;
 	statusEqual : KalturaAuditTrailStatus;
@@ -101,8 +101,8 @@ export class KalturaAuditTrailBaseFilter extends KalturaRelatedFilter {
             {
                 objectType : { type : 'c' , default : 'KalturaAuditTrailBaseFilter' },
 				idEqual : { type : 'n'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
 				parsedAtGreaterThanOrEqual : { type : 'n'  },
 				parsedAtLessThanOrEqual : { type : 'n'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaAuditTrailStatus'},

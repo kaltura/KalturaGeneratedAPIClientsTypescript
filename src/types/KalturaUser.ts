@@ -57,8 +57,8 @@ export class KalturaUser extends KalturaObjectBase {
 	adminTags : string;
 	gender : KalturaGender;
 	status : KalturaUserStatus;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	partnerData : string;
 	indexedPartnerDataInt : number;
 	indexedPartnerDataString : string;
@@ -70,7 +70,7 @@ export class KalturaUser extends KalturaObjectBase {
 	language : KalturaLanguageCode;
 	readonly lastLoginTime : number;
 	readonly statusUpdatedAt : number;
-	readonly deletedAt : number;
+	readonly deletedAt : Date;
 	readonly loginEnabled : boolean;
 	roleIds : string;
 	readonly roleNames : string;
@@ -107,8 +107,8 @@ export class KalturaUser extends KalturaObjectBase {
 				adminTags : { type : 's'  },
 				gender : { type : 'en'  , subType : 'KalturaGender'},
 				status : { type : 'en'  , subType : 'KalturaUserStatus'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				partnerData : { type : 's'  },
 				indexedPartnerDataInt : { type : 'n'  },
 				indexedPartnerDataString : { type : 's'  },
@@ -120,7 +120,7 @@ export class KalturaUser extends KalturaObjectBase {
 				language : { type : 'es'  , subType : 'KalturaLanguageCode'},
 				lastLoginTime : { type : 'n'  , readOnly : true},
 				statusUpdatedAt : { type : 'n'  , readOnly : true},
-				deletedAt : { type : 'n'  , readOnly : true},
+				deletedAt : { type : 'd'  , readOnly : true},
 				loginEnabled : { type : 'b'  , readOnly : true},
 				roleIds : { type : 's'  },
 				roleNames : { type : 's'  , readOnly : true},

@@ -23,8 +23,8 @@ export class KalturaFileSync extends KalturaObjectBase {
 	readonly objectSubType : number;
 	readonly dc : string;
 	readonly original : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly readyAt : number;
 	readonly syncTime : number;
 	status : KalturaFileSyncStatus;
@@ -61,8 +61,8 @@ export class KalturaFileSync extends KalturaObjectBase {
 				objectSubType : { type : 'n'  , readOnly : true},
 				dc : { type : 's'  , readOnly : true},
 				original : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				readyAt : { type : 'n'  , readOnly : true},
 				syncTime : { type : 'n'  , readOnly : true},
 				status : { type : 'en'  , subType : 'KalturaFileSyncStatus'},

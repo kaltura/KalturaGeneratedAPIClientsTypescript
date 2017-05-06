@@ -7,8 +7,8 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaLiveReportInputFilterArgs  extends KalturaObjectBaseArgs {
     entryIds? : string;
-	fromTime? : number;
-	toTime? : number;
+	fromTime? : Date;
+	toTime? : Date;
 	live? : KalturaNullableBoolean;
 	orderBy? : KalturaLiveReportOrderBy;
 }
@@ -17,8 +17,8 @@ export interface KalturaLiveReportInputFilterArgs  extends KalturaObjectBaseArgs
 export class KalturaLiveReportInputFilter extends KalturaObjectBase {
 
     entryIds : string;
-	fromTime : number;
-	toTime : number;
+	fromTime : Date;
+	toTime : Date;
 	live : KalturaNullableBoolean;
 	orderBy : KalturaLiveReportOrderBy;
 
@@ -35,8 +35,8 @@ export class KalturaLiveReportInputFilter extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaLiveReportInputFilter' },
 				entryIds : { type : 's'  },
-				fromTime : { type : 'n'  },
-				toTime : { type : 'n'  },
+				fromTime : { type : 'd'  },
+				toTime : { type : 'd'  },
 				live : { type : 'en'  , subType : 'KalturaNullableBoolean'},
 				orderBy : { type : 'es'  , subType : 'KalturaLiveReportOrderBy'}
             }

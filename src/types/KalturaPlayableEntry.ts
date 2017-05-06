@@ -13,7 +13,7 @@ export class KalturaPlayableEntry extends KalturaBaseEntry {
 
     readonly plays : number;
 	readonly views : number;
-	readonly lastPlayedAt : number;
+	readonly lastPlayedAt : Date;
 	readonly width : number;
 	readonly height : number;
 	readonly duration : number;
@@ -34,7 +34,7 @@ export class KalturaPlayableEntry extends KalturaBaseEntry {
                 objectType : { type : 'c' , default : 'KalturaPlayableEntry' },
 				plays : { type : 'n'  , readOnly : true},
 				views : { type : 'n'  , readOnly : true},
-				lastPlayedAt : { type : 'n'  , readOnly : true},
+				lastPlayedAt : { type : 'd'  , readOnly : true},
 				width : { type : 'n'  , readOnly : true},
 				height : { type : 'n'  , readOnly : true},
 				duration : { type : 'n'  , readOnly : true},

@@ -19,8 +19,8 @@ export class KalturaMetadata extends KalturaObjectBase {
 	readonly metadataObjectType : KalturaMetadataObjectType;
 	readonly objectId : string;
 	readonly version : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly status : KalturaMetadataStatus;
 	readonly xml : string;
 
@@ -43,8 +43,8 @@ export class KalturaMetadata extends KalturaObjectBase {
 				metadataObjectType : { type : 'es'  , readOnly : true, subType : 'KalturaMetadataObjectType'},
 				objectId : { type : 's'  , readOnly : true},
 				version : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaMetadataStatus'},
 				xml : { type : 's'  , readOnly : true}
             }

@@ -11,7 +11,7 @@ export interface KalturaLiveStatsArgs  extends KalturaObjectBaseArgs {
 	plays? : number;
 	secondsViewed? : number;
 	startEvent? : number;
-	timestamp? : number;
+	timestamp? : Date;
 }
 
 
@@ -24,7 +24,7 @@ export class KalturaLiveStats extends KalturaObjectBase {
 	plays : number;
 	secondsViewed : number;
 	startEvent : number;
-	timestamp : number;
+	timestamp : Date;
 
     constructor(data? : KalturaLiveStatsArgs)
     {
@@ -45,7 +45,7 @@ export class KalturaLiveStats extends KalturaObjectBase {
 				plays : { type : 'n'  },
 				secondsViewed : { type : 'n'  },
 				startEvent : { type : 'n'  },
-				timestamp : { type : 'n'  }
+				timestamp : { type : 'd'  }
             }
         );
         return result;

@@ -46,8 +46,8 @@ export class KalturaUiConf extends KalturaObjectBase {
 	useCdn : boolean;
 	tags : string;
 	swfUrlVersion : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	creationMode : KalturaUiConfCreationMode;
 	html5Url : string;
 	readonly version : string;
@@ -83,8 +83,8 @@ export class KalturaUiConf extends KalturaObjectBase {
 				useCdn : { type : 'b'  },
 				tags : { type : 's'  },
 				swfUrlVersion : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				creationMode : { type : 'en'  , subType : 'KalturaUiConfCreationMode'},
 				html5Url : { type : 's'  },
 				version : { type : 's'  , readOnly : true},

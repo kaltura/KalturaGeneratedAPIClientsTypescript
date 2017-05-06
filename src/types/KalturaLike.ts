@@ -6,7 +6,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaLikeArgs  extends KalturaObjectBaseArgs {
     entryId? : string;
 	userId? : string;
-	createdAt? : number;
+	createdAt? : Date;
 }
 
 
@@ -14,7 +14,7 @@ export class KalturaLike extends KalturaObjectBase {
 
     entryId : string;
 	userId : string;
-	createdAt : number;
+	createdAt : Date;
 
     constructor(data? : KalturaLikeArgs)
     {
@@ -30,7 +30,7 @@ export class KalturaLike extends KalturaObjectBase {
                 objectType : { type : 'c' , default : 'KalturaLike' },
 				entryId : { type : 's'  },
 				userId : { type : 's'  },
-				createdAt : { type : 'n'  }
+				createdAt : { type : 'd'  }
             }
         );
         return result;

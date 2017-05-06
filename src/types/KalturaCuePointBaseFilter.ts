@@ -15,12 +15,12 @@ export interface KalturaCuePointBaseFilterArgs  extends KalturaRelatedFilterArgs
 	statusIn? : string;
 	entryIdEqual? : string;
 	entryIdIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
-	triggeredAtGreaterThanOrEqual? : number;
-	triggeredAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
+	triggeredAtGreaterThanOrEqual? : Date;
+	triggeredAtLessThanOrEqual? : Date;
 	tagsLike? : string;
 	tagsMultiLikeOr? : string;
 	tagsMultiLikeAnd? : string;
@@ -48,12 +48,12 @@ export class KalturaCuePointBaseFilter extends KalturaRelatedFilter {
 	statusIn : string;
 	entryIdEqual : string;
 	entryIdIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
-	triggeredAtGreaterThanOrEqual : number;
-	triggeredAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
+	triggeredAtGreaterThanOrEqual : Date;
+	triggeredAtLessThanOrEqual : Date;
 	tagsLike : string;
 	tagsMultiLikeOr : string;
 	tagsMultiLikeAnd : string;
@@ -89,12 +89,12 @@ export class KalturaCuePointBaseFilter extends KalturaRelatedFilter {
 				statusIn : { type : 's'  },
 				entryIdEqual : { type : 's'  },
 				entryIdIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
-				triggeredAtGreaterThanOrEqual : { type : 'n'  },
-				triggeredAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
+				triggeredAtGreaterThanOrEqual : { type : 'd'  },
+				triggeredAtLessThanOrEqual : { type : 'd'  },
 				tagsLike : { type : 's'  },
 				tagsMultiLikeOr : { type : 's'  },
 				tagsMultiLikeAnd : { type : 's'  },

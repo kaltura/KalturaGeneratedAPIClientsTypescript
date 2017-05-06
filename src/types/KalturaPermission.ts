@@ -29,8 +29,8 @@ export class KalturaPermission extends KalturaObjectBase {
 	dependsOnPermissionNames : string;
 	tags : string;
 	permissionItemsIds : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	partnerGroup : string;
 
     constructor(data? : KalturaPermissionArgs)
@@ -55,8 +55,8 @@ export class KalturaPermission extends KalturaObjectBase {
 				dependsOnPermissionNames : { type : 's'  },
 				tags : { type : 's'  },
 				permissionItemsIds : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				partnerGroup : { type : 's'  }
             }
         );

@@ -16,8 +16,8 @@ export class KalturaEntryServerNode extends KalturaObjectBase {
 	readonly entryId : string;
 	readonly serverNodeId : number;
 	readonly partnerId : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly status : KalturaEntryServerNodeStatus;
 	readonly serverType : KalturaEntryServerNodeType;
 
@@ -37,8 +37,8 @@ export class KalturaEntryServerNode extends KalturaObjectBase {
 				entryId : { type : 's'  , readOnly : true},
 				serverNodeId : { type : 'n'  , readOnly : true},
 				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaEntryServerNodeStatus'},
 				serverType : { type : 'es'  , readOnly : true, subType : 'KalturaEntryServerNodeType'}
             }

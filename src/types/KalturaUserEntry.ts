@@ -18,8 +18,8 @@ export class KalturaUserEntry extends KalturaObjectBase {
 	userId : string;
 	readonly partnerId : number;
 	readonly status : KalturaUserEntryStatus;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly type : KalturaUserEntryType;
 
     constructor(data? : KalturaUserEntryArgs)
@@ -39,8 +39,8 @@ export class KalturaUserEntry extends KalturaObjectBase {
 				userId : { type : 's'  },
 				partnerId : { type : 'n'  , readOnly : true},
 				status : { type : 'es'  , readOnly : true, subType : 'KalturaUserEntryStatus'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				type : { type : 'es'  , readOnly : true, subType : 'KalturaUserEntryType'}
             }
         );

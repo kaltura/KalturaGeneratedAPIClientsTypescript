@@ -9,7 +9,7 @@ export interface KalturaLiveToVodJobDataArgs  extends KalturaJobDataArgs {
 	totalVodDuration? : number;
 	lastSegmentDuration? : number;
 	amfArray? : string;
-	lastCuePointSyncTime? : number;
+	lastCuePointSyncTime? : Date;
 	lastSegmentDrift? : number;
 }
 
@@ -21,7 +21,7 @@ export class KalturaLiveToVodJobData extends KalturaJobData {
 	totalVodDuration : number;
 	lastSegmentDuration : number;
 	amfArray : string;
-	lastCuePointSyncTime : number;
+	lastCuePointSyncTime : Date;
 	lastSegmentDrift : number;
 
     constructor(data? : KalturaLiveToVodJobDataArgs)
@@ -41,7 +41,7 @@ export class KalturaLiveToVodJobData extends KalturaJobData {
 				totalVodDuration : { type : 'n'  },
 				lastSegmentDuration : { type : 'n'  },
 				amfArray : { type : 's'  },
-				lastCuePointSyncTime : { type : 'n'  },
+				lastCuePointSyncTime : { type : 'd'  },
 				lastSegmentDrift : { type : 'n'  }
             }
         );

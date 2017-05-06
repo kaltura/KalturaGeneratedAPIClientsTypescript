@@ -19,10 +19,10 @@ export interface KalturaDropFolderFileArgs  extends KalturaObjectBaseArgs {
 	errorCode? : KalturaDropFolderFileErrorCode;
 	errorDescription? : string;
 	lastModificationTime? : string;
-	uploadStartDetectedAt? : number;
-	uploadEndDetectedAt? : number;
-	importStartedAt? : number;
-	importEndedAt? : number;
+	uploadStartDetectedAt? : Date;
+	uploadEndDetectedAt? : Date;
+	importStartedAt? : Date;
+	importEndedAt? : Date;
 }
 
 
@@ -33,7 +33,7 @@ export class KalturaDropFolderFile extends KalturaObjectBase {
 	dropFolderId : number;
 	fileName : string;
 	fileSize : number;
-	readonly fileSizeLastSetAt : number;
+	readonly fileSizeLastSetAt : Date;
 	readonly status : KalturaDropFolderFileStatus;
 	readonly type : KalturaDropFolderType;
 	parsedSlug : string;
@@ -45,12 +45,12 @@ export class KalturaDropFolderFile extends KalturaObjectBase {
 	errorCode : KalturaDropFolderFileErrorCode;
 	errorDescription : string;
 	lastModificationTime : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
-	uploadStartDetectedAt : number;
-	uploadEndDetectedAt : number;
-	importStartedAt : number;
-	importEndedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
+	uploadStartDetectedAt : Date;
+	uploadEndDetectedAt : Date;
+	importStartedAt : Date;
+	importEndedAt : Date;
 	readonly batchJobId : number;
 
     constructor(data? : KalturaDropFolderFileArgs)
@@ -70,7 +70,7 @@ export class KalturaDropFolderFile extends KalturaObjectBase {
 				dropFolderId : { type : 'n'  },
 				fileName : { type : 's'  },
 				fileSize : { type : 'n'  },
-				fileSizeLastSetAt : { type : 'n'  , readOnly : true},
+				fileSizeLastSetAt : { type : 'd'  , readOnly : true},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaDropFolderFileStatus'},
 				type : { type : 'es'  , readOnly : true, subType : 'KalturaDropFolderType'},
 				parsedSlug : { type : 's'  },
@@ -82,12 +82,12 @@ export class KalturaDropFolderFile extends KalturaObjectBase {
 				errorCode : { type : 'es'  , subType : 'KalturaDropFolderFileErrorCode'},
 				errorDescription : { type : 's'  },
 				lastModificationTime : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
-				uploadStartDetectedAt : { type : 'n'  },
-				uploadEndDetectedAt : { type : 'n'  },
-				importStartedAt : { type : 'n'  },
-				importEndedAt : { type : 'n'  },
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
+				uploadStartDetectedAt : { type : 'd'  },
+				uploadEndDetectedAt : { type : 'd'  },
+				importStartedAt : { type : 'd'  },
+				importEndedAt : { type : 'd'  },
 				batchJobId : { type : 'n'  , readOnly : true}
             }
         );

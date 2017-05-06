@@ -8,8 +8,8 @@ export interface KalturaAccessControlBaseFilterArgs  extends KalturaRelatedFilte
 	idIn? : string;
 	systemNameEqual? : string;
 	systemNameIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
 }
 
 
@@ -19,8 +19,8 @@ export class KalturaAccessControlBaseFilter extends KalturaRelatedFilter {
 	idIn : string;
 	systemNameEqual : string;
 	systemNameIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaAccessControlBaseFilterArgs)
     {
@@ -38,8 +38,8 @@ export class KalturaAccessControlBaseFilter extends KalturaRelatedFilter {
 				idIn : { type : 's'  },
 				systemNameEqual : { type : 's'  },
 				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

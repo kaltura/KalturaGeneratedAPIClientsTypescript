@@ -8,12 +8,12 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaServerNodeBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
-	heartbeatTimeGreaterThanOrEqual? : number;
-	heartbeatTimeLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
+	heartbeatTimeGreaterThanOrEqual? : Date;
+	heartbeatTimeLessThanOrEqual? : Date;
 	nameEqual? : string;
 	nameIn? : string;
 	systemNameEqual? : string;
@@ -39,12 +39,12 @@ export class KalturaServerNodeBaseFilter extends KalturaFilter {
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
-	heartbeatTimeGreaterThanOrEqual : number;
-	heartbeatTimeLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
+	heartbeatTimeGreaterThanOrEqual : Date;
+	heartbeatTimeLessThanOrEqual : Date;
 	nameEqual : string;
 	nameIn : string;
 	systemNameEqual : string;
@@ -78,12 +78,12 @@ export class KalturaServerNodeBaseFilter extends KalturaFilter {
                 objectType : { type : 'c' , default : 'KalturaServerNodeBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
-				heartbeatTimeGreaterThanOrEqual : { type : 'n'  },
-				heartbeatTimeLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
+				heartbeatTimeGreaterThanOrEqual : { type : 'd'  },
+				heartbeatTimeLessThanOrEqual : { type : 'd'  },
 				nameEqual : { type : 's'  },
 				nameIn : { type : 's'  },
 				systemNameEqual : { type : 's'  },

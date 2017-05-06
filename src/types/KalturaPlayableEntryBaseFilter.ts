@@ -4,8 +4,8 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaBaseEntryFilter, KalturaBaseEntryFilterArgs } from './KalturaBaseEntryFilter';
 
 export interface KalturaPlayableEntryBaseFilterArgs  extends KalturaBaseEntryFilterArgs {
-    lastPlayedAtGreaterThanOrEqual? : number;
-	lastPlayedAtLessThanOrEqual? : number;
+    lastPlayedAtGreaterThanOrEqual? : Date;
+	lastPlayedAtLessThanOrEqual? : Date;
 	durationLessThan? : number;
 	durationGreaterThan? : number;
 	durationLessThanOrEqual? : number;
@@ -16,8 +16,8 @@ export interface KalturaPlayableEntryBaseFilterArgs  extends KalturaBaseEntryFil
 
 export class KalturaPlayableEntryBaseFilter extends KalturaBaseEntryFilter {
 
-    lastPlayedAtGreaterThanOrEqual : number;
-	lastPlayedAtLessThanOrEqual : number;
+    lastPlayedAtGreaterThanOrEqual : Date;
+	lastPlayedAtLessThanOrEqual : Date;
 	durationLessThan : number;
 	durationGreaterThan : number;
 	durationLessThanOrEqual : number;
@@ -36,8 +36,8 @@ export class KalturaPlayableEntryBaseFilter extends KalturaBaseEntryFilter {
             result.properties,
             {
                 objectType : { type : 'c' , default : 'KalturaPlayableEntryBaseFilter' },
-				lastPlayedAtGreaterThanOrEqual : { type : 'n'  },
-				lastPlayedAtLessThanOrEqual : { type : 'n'  },
+				lastPlayedAtGreaterThanOrEqual : { type : 'd'  },
+				lastPlayedAtLessThanOrEqual : { type : 'd'  },
 				durationLessThan : { type : 'n'  },
 				durationGreaterThan : { type : 'n'  },
 				durationLessThanOrEqual : { type : 'n'  },

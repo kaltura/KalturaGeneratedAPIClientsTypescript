@@ -12,10 +12,10 @@ export interface KalturaBatchJobBaseFilterArgs  extends KalturaFilterArgs {
 	partnerIdEqual? : number;
 	partnerIdIn? : string;
 	partnerIdNotIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	executionAttemptsGreaterThanOrEqual? : number;
 	executionAttemptsLessThanOrEqual? : number;
 	lockVersionGreaterThanOrEqual? : number;
@@ -62,10 +62,10 @@ export class KalturaBatchJobBaseFilter extends KalturaFilter {
 	partnerIdEqual : number;
 	partnerIdIn : string;
 	partnerIdNotIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	executionAttemptsGreaterThanOrEqual : number;
 	executionAttemptsLessThanOrEqual : number;
 	lockVersionGreaterThanOrEqual : number;
@@ -120,10 +120,10 @@ export class KalturaBatchJobBaseFilter extends KalturaFilter {
 				partnerIdEqual : { type : 'n'  },
 				partnerIdIn : { type : 's'  },
 				partnerIdNotIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				executionAttemptsGreaterThanOrEqual : { type : 'n'  },
 				executionAttemptsLessThanOrEqual : { type : 'n'  },
 				lockVersionGreaterThanOrEqual : { type : 'n'  },

@@ -19,10 +19,10 @@ export interface KalturaFileSyncBaseFilterArgs  extends KalturaFilterArgs {
 	dcEqual? : string;
 	dcIn? : string;
 	originalEqual? : number;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	readyAtGreaterThanOrEqual? : number;
 	readyAtLessThanOrEqual? : number;
 	syncTimeGreaterThanOrEqual? : number;
@@ -53,10 +53,10 @@ export class KalturaFileSyncBaseFilter extends KalturaFilter {
 	dcEqual : string;
 	dcIn : string;
 	originalEqual : number;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	readyAtGreaterThanOrEqual : number;
 	readyAtLessThanOrEqual : number;
 	syncTimeGreaterThanOrEqual : number;
@@ -95,10 +95,10 @@ export class KalturaFileSyncBaseFilter extends KalturaFilter {
 				dcEqual : { type : 's'  },
 				dcIn : { type : 's'  },
 				originalEqual : { type : 'n'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				readyAtGreaterThanOrEqual : { type : 'n'  },
 				readyAtLessThanOrEqual : { type : 'n'  },
 				syncTimeGreaterThanOrEqual : { type : 'n'  },

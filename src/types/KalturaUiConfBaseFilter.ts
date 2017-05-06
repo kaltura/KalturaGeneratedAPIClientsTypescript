@@ -15,10 +15,10 @@ export interface KalturaUiConfBaseFilterArgs  extends KalturaFilterArgs {
 	objTypeIn? : string;
 	tagsMultiLikeOr? : string;
 	tagsMultiLikeAnd? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	creationModeEqual? : KalturaUiConfCreationMode;
 	creationModeIn? : string;
 	versionEqual? : string;
@@ -40,10 +40,10 @@ export class KalturaUiConfBaseFilter extends KalturaFilter {
 	objTypeIn : string;
 	tagsMultiLikeOr : string;
 	tagsMultiLikeAnd : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	creationModeEqual : KalturaUiConfCreationMode;
 	creationModeIn : string;
 	versionEqual : string;
@@ -73,10 +73,10 @@ export class KalturaUiConfBaseFilter extends KalturaFilter {
 				objTypeIn : { type : 's'  },
 				tagsMultiLikeOr : { type : 's'  },
 				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				creationModeEqual : { type : 'en'  , subType : 'KalturaUiConfCreationMode'},
 				creationModeIn : { type : 's'  },
 				versionEqual : { type : 's'  },

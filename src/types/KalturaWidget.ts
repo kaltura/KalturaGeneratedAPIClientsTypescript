@@ -28,8 +28,8 @@ export class KalturaWidget extends KalturaObjectBase {
 	uiConfId : number;
 	securityType : KalturaWidgetSecurityType;
 	securityPolicy : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	partnerData : string;
 	readonly widgetHTML : string;
 	enforceEntitlement : boolean;
@@ -57,8 +57,8 @@ export class KalturaWidget extends KalturaObjectBase {
 				uiConfId : { type : 'n'  },
 				securityType : { type : 'en'  , subType : 'KalturaWidgetSecurityType'},
 				securityPolicy : { type : 'n'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				partnerData : { type : 's'  },
 				widgetHTML : { type : 's'  , readOnly : true},
 				enforceEntitlement : { type : 'b'  },

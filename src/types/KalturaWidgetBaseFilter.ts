@@ -11,10 +11,10 @@ export interface KalturaWidgetBaseFilterArgs  extends KalturaFilterArgs {
 	partnerIdEqual? : number;
 	entryIdEqual? : string;
 	uiConfIdEqual? : number;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	partnerDataLike? : string;
 }
 
@@ -28,10 +28,10 @@ export class KalturaWidgetBaseFilter extends KalturaFilter {
 	partnerIdEqual : number;
 	entryIdEqual : string;
 	uiConfIdEqual : number;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	partnerDataLike : string;
 
     constructor(data? : KalturaWidgetBaseFilterArgs)
@@ -53,10 +53,10 @@ export class KalturaWidgetBaseFilter extends KalturaFilter {
 				partnerIdEqual : { type : 'n'  },
 				entryIdEqual : { type : 's'  },
 				uiConfIdEqual : { type : 'n'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				partnerDataLike : { type : 's'  }
             }
         );

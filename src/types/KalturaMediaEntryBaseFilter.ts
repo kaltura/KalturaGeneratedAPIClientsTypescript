@@ -12,8 +12,8 @@ export interface KalturaMediaEntryBaseFilterArgs  extends KalturaPlayableEntryFi
 	sourceTypeNotEqual? : KalturaSourceType;
 	sourceTypeIn? : string;
 	sourceTypeNotIn? : string;
-	mediaDateGreaterThanOrEqual? : number;
-	mediaDateLessThanOrEqual? : number;
+	mediaDateGreaterThanOrEqual? : Date;
+	mediaDateLessThanOrEqual? : Date;
 	flavorParamsIdsMatchOr? : string;
 	flavorParamsIdsMatchAnd? : string;
 }
@@ -27,8 +27,8 @@ export class KalturaMediaEntryBaseFilter extends KalturaPlayableEntryFilter {
 	sourceTypeNotEqual : KalturaSourceType;
 	sourceTypeIn : string;
 	sourceTypeNotIn : string;
-	mediaDateGreaterThanOrEqual : number;
-	mediaDateLessThanOrEqual : number;
+	mediaDateGreaterThanOrEqual : Date;
+	mediaDateLessThanOrEqual : Date;
 	flavorParamsIdsMatchOr : string;
 	flavorParamsIdsMatchAnd : string;
 
@@ -50,8 +50,8 @@ export class KalturaMediaEntryBaseFilter extends KalturaPlayableEntryFilter {
 				sourceTypeNotEqual : { type : 'es'  , subType : 'KalturaSourceType'},
 				sourceTypeIn : { type : 's'  },
 				sourceTypeNotIn : { type : 's'  },
-				mediaDateGreaterThanOrEqual : { type : 'n'  },
-				mediaDateLessThanOrEqual : { type : 'n'  },
+				mediaDateGreaterThanOrEqual : { type : 'd'  },
+				mediaDateLessThanOrEqual : { type : 'd'  },
 				flavorParamsIdsMatchOr : { type : 's'  },
 				flavorParamsIdsMatchAnd : { type : 's'  }
             }

@@ -9,10 +9,10 @@ export interface KalturaBusinessProcessServerBaseFilterArgs  extends KalturaFilt
     idEqual? : number;
 	idIn? : string;
 	idNotIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	partnerIdEqual? : number;
 	partnerIdIn? : string;
 	statusEqual? : KalturaBusinessProcessServerStatus;
@@ -31,10 +31,10 @@ export class KalturaBusinessProcessServerBaseFilter extends KalturaFilter {
     idEqual : number;
 	idIn : string;
 	idNotIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	partnerIdEqual : number;
 	partnerIdIn : string;
 	statusEqual : KalturaBusinessProcessServerStatus;
@@ -61,10 +61,10 @@ export class KalturaBusinessProcessServerBaseFilter extends KalturaFilter {
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
 				idNotIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				partnerIdEqual : { type : 'n'  },
 				partnerIdIn : { type : 's'  },
 				statusEqual : { type : 'es'  , subType : 'KalturaBusinessProcessServerStatus'},

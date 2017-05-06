@@ -19,8 +19,8 @@ export interface KalturaTrackEntryArgs  extends KalturaObjectBaseArgs {
 	paramStr3? : string;
 	ks? : string;
 	description? : string;
-	createdAt? : number;
-	updatedAt? : number;
+	createdAt? : Date;
+	updatedAt? : Date;
 	userIp? : string;
 }
 
@@ -41,8 +41,8 @@ export class KalturaTrackEntry extends KalturaObjectBase {
 	paramStr3 : string;
 	ks : string;
 	description : string;
-	createdAt : number;
-	updatedAt : number;
+	createdAt : Date;
+	updatedAt : Date;
 	userIp : string;
 
     constructor(data? : KalturaTrackEntryArgs)
@@ -71,8 +71,8 @@ export class KalturaTrackEntry extends KalturaObjectBase {
 				paramStr3 : { type : 's'  },
 				ks : { type : 's'  },
 				description : { type : 's'  },
-				createdAt : { type : 'n'  },
-				updatedAt : { type : 'n'  },
+				createdAt : { type : 'd'  },
+				updatedAt : { type : 'd'  },
 				userIp : { type : 's'  }
             }
         );

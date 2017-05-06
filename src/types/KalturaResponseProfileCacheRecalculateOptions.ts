@@ -9,7 +9,7 @@ export interface KalturaResponseProfileCacheRecalculateOptionsArgs  extends Kalt
 	objectId? : string;
 	startObjectKey? : string;
 	endObjectKey? : string;
-	jobCreatedAt? : number;
+	jobCreatedAt? : Date;
 	isFirstLoop? : boolean;
 }
 
@@ -21,7 +21,7 @@ export class KalturaResponseProfileCacheRecalculateOptions extends KalturaObject
 	objectId : string;
 	startObjectKey : string;
 	endObjectKey : string;
-	jobCreatedAt : number;
+	jobCreatedAt : Date;
 	isFirstLoop : boolean;
 
     constructor(data? : KalturaResponseProfileCacheRecalculateOptionsArgs)
@@ -41,7 +41,7 @@ export class KalturaResponseProfileCacheRecalculateOptions extends KalturaObject
 				objectId : { type : 's'  },
 				startObjectKey : { type : 's'  },
 				endObjectKey : { type : 's'  },
-				jobCreatedAt : { type : 'n'  },
+				jobCreatedAt : { type : 'd'  },
 				isFirstLoop : { type : 'b'  }
             }
         );

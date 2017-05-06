@@ -7,8 +7,8 @@ export interface KalturaLikeBaseFilterArgs  extends KalturaRelatedFilterArgs {
     entryIdEqual? : string;
 	entryIdIn? : string;
 	userIdEqual? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
 }
 
 
@@ -17,8 +17,8 @@ export class KalturaLikeBaseFilter extends KalturaRelatedFilter {
     entryIdEqual : string;
 	entryIdIn : string;
 	userIdEqual : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaLikeBaseFilterArgs)
     {
@@ -35,8 +35,8 @@ export class KalturaLikeBaseFilter extends KalturaRelatedFilter {
 				entryIdEqual : { type : 's'  },
 				entryIdIn : { type : 's'  },
 				userIdEqual : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

@@ -17,8 +17,8 @@ export interface KalturaShortLinkArgs  extends KalturaObjectBaseArgs {
 export class KalturaShortLink extends KalturaObjectBase {
 
     readonly id : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	expiresAt : number;
 	readonly partnerId : number;
 	userId : string;
@@ -40,8 +40,8 @@ export class KalturaShortLink extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaShortLink' },
 				id : { type : 's'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				expiresAt : { type : 'n'  },
 				partnerId : { type : 'n'  , readOnly : true},
 				userId : { type : 's'  },

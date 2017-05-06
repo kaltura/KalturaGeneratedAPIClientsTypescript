@@ -11,10 +11,10 @@ export interface KalturaGroupUserBaseFilterArgs  extends KalturaRelatedFilterArg
 	groupIdIn? : string;
 	statusEqual? : KalturaGroupUserStatus;
 	statusIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 }
 
 
@@ -26,10 +26,10 @@ export class KalturaGroupUserBaseFilter extends KalturaRelatedFilter {
 	groupIdIn : string;
 	statusEqual : KalturaGroupUserStatus;
 	statusIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaGroupUserBaseFilterArgs)
     {
@@ -49,10 +49,10 @@ export class KalturaGroupUserBaseFilter extends KalturaRelatedFilter {
 				groupIdIn : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaGroupUserStatus'},
 				statusIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

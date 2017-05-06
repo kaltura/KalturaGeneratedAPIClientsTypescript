@@ -4,7 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaLiveReportExportJobDataArgs  extends KalturaJobDataArgs {
-    timeReference? : number;
+    timeReference? : Date;
 	timeZoneOffset? : number;
 	entryIds? : string;
 	outputPath? : string;
@@ -14,7 +14,7 @@ export interface KalturaLiveReportExportJobDataArgs  extends KalturaJobDataArgs 
 
 export class KalturaLiveReportExportJobData extends KalturaJobData {
 
-    timeReference : number;
+    timeReference : Date;
 	timeZoneOffset : number;
 	entryIds : string;
 	outputPath : string;
@@ -32,7 +32,7 @@ export class KalturaLiveReportExportJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c' , default : 'KalturaLiveReportExportJobData' },
-				timeReference : { type : 'n'  },
+				timeReference : { type : 'd'  },
 				timeZoneOffset : { type : 'n'  },
 				entryIds : { type : 's'  },
 				outputPath : { type : 's'  },

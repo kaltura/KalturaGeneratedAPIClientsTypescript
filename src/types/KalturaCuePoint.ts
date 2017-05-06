@@ -8,7 +8,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaCuePointArgs  extends KalturaObjectBaseArgs {
     entryId? : string;
-	triggeredAt? : number;
+	triggeredAt? : Date;
 	tags? : string;
 	startTime? : number;
 	partnerData? : string;
@@ -26,9 +26,9 @@ export class KalturaCuePoint extends KalturaObjectBase {
 	readonly status : KalturaCuePointStatus;
 	entryId : string;
 	readonly partnerId : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
-	triggeredAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
+	triggeredAt : Date;
 	tags : string;
 	startTime : number;
 	readonly userId : string;
@@ -55,9 +55,9 @@ export class KalturaCuePoint extends KalturaObjectBase {
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaCuePointStatus'},
 				entryId : { type : 's'  },
 				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
-				triggeredAt : { type : 'n'  },
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
+				triggeredAt : { type : 'd'  },
 				tags : { type : 's'  },
 				startTime : { type : 'n'  },
 				userId : { type : 's'  , readOnly : true},

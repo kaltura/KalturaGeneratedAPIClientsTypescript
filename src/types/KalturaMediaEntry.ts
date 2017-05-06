@@ -29,7 +29,7 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
 	searchProviderId : string;
 	creditUserName : string;
 	creditUrl : string;
-	readonly mediaDate : number;
+	readonly mediaDate : Date;
 	readonly dataUrl : string;
 	readonly flavorParamsIds : string;
 	readonly isTrimDisabled : KalturaNullableBoolean;
@@ -55,7 +55,7 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
 				searchProviderId : { type : 's'  },
 				creditUserName : { type : 's'  },
 				creditUrl : { type : 's'  },
-				mediaDate : { type : 'n'  , readOnly : true},
+				mediaDate : { type : 'd'  , readOnly : true},
 				dataUrl : { type : 's'  , readOnly : true},
 				flavorParamsIds : { type : 's'  , readOnly : true},
 				isTrimDisabled : { type : 'en'  , readOnly : true, subType : 'KalturaNullableBoolean'},

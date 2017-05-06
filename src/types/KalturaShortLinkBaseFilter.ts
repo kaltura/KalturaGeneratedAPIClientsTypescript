@@ -7,10 +7,10 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaShortLinkBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : string;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	expiresAtGreaterThanOrEqual? : number;
 	expiresAtLessThanOrEqual? : number;
 	partnerIdEqual? : number;
@@ -28,10 +28,10 @@ export class KalturaShortLinkBaseFilter extends KalturaFilter {
 
     idEqual : string;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	expiresAtGreaterThanOrEqual : number;
 	expiresAtLessThanOrEqual : number;
 	partnerIdEqual : number;
@@ -57,10 +57,10 @@ export class KalturaShortLinkBaseFilter extends KalturaFilter {
                 objectType : { type : 'c' , default : 'KalturaShortLinkBaseFilter' },
 				idEqual : { type : 's'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				expiresAtGreaterThanOrEqual : { type : 'n'  },
 				expiresAtLessThanOrEqual : { type : 'n'  },
 				partnerIdEqual : { type : 'n'  },

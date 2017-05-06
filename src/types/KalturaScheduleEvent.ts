@@ -10,8 +10,8 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaScheduleEventArgs  extends KalturaObjectBaseArgs {
     summary? : string;
 	description? : string;
-	startDate? : number;
-	endDate? : number;
+	startDate? : Date;
+	endDate? : Date;
 	referenceId? : string;
 	classificationType? : KalturaScheduleEventClassificationType;
 	geoLatitude? : number;
@@ -38,8 +38,8 @@ export class KalturaScheduleEvent extends KalturaObjectBase {
 	summary : string;
 	description : string;
 	readonly status : KalturaScheduleEventStatus;
-	startDate : number;
-	endDate : number;
+	startDate : Date;
+	endDate : Date;
 	referenceId : string;
 	classificationType : KalturaScheduleEventClassificationType;
 	geoLatitude : number;
@@ -54,8 +54,8 @@ export class KalturaScheduleEvent extends KalturaObjectBase {
 	contact : string;
 	comment : string;
 	tags : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	recurrence : KalturaScheduleEventRecurrence;
 
     constructor(data? : KalturaScheduleEventArgs)
@@ -76,8 +76,8 @@ export class KalturaScheduleEvent extends KalturaObjectBase {
 				summary : { type : 's'  },
 				description : { type : 's'  },
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaScheduleEventStatus'},
-				startDate : { type : 'n'  },
-				endDate : { type : 'n'  },
+				startDate : { type : 'd'  },
+				endDate : { type : 'd'  },
 				referenceId : { type : 's'  },
 				classificationType : { type : 'en'  , subType : 'KalturaScheduleEventClassificationType'},
 				geoLatitude : { type : 'n'  },
@@ -92,8 +92,8 @@ export class KalturaScheduleEvent extends KalturaObjectBase {
 				contact : { type : 's'  },
 				comment : { type : 's'  },
 				tags : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				recurrence : { type : 'o'  , subType : 'KalturaScheduleEventRecurrence'}
             }
         );

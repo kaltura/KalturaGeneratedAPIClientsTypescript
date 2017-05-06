@@ -19,8 +19,8 @@ export interface KalturaGenericDistributionProviderArgs  extends KalturaDistribu
 export class KalturaGenericDistributionProvider extends KalturaDistributionProvider {
 
     readonly id : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly partnerId : number;
 	isDefault : boolean;
 	readonly status : KalturaGenericDistributionProviderStatus;
@@ -46,8 +46,8 @@ export class KalturaGenericDistributionProvider extends KalturaDistributionProvi
             {
                 objectType : { type : 'c' , default : 'KalturaGenericDistributionProvider' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				partnerId : { type : 'n'  , readOnly : true},
 				isDefault : { type : 'b'  },
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaGenericDistributionProviderStatus'},

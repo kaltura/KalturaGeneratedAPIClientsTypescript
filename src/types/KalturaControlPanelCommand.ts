@@ -27,9 +27,9 @@ export interface KalturaControlPanelCommandArgs  extends KalturaObjectBaseArgs {
 export class KalturaControlPanelCommand extends KalturaObjectBase {
 
     readonly id : number;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	createdBy : string;
-	readonly updatedAt : number;
+	readonly updatedAt : Date;
 	updatedBy : string;
 	createdById : number;
 	schedulerId : number;
@@ -57,9 +57,9 @@ export class KalturaControlPanelCommand extends KalturaObjectBase {
             {
                 objectType : { type : 'c' , default : 'KalturaControlPanelCommand' },
 				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				createdBy : { type : 's'  },
-				updatedAt : { type : 'n'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				updatedBy : { type : 's'  },
 				createdById : { type : 'n'  },
 				schedulerId : { type : 'n'  },

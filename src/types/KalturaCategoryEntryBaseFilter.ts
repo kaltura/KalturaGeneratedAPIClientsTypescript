@@ -9,8 +9,8 @@ export interface KalturaCategoryEntryBaseFilterArgs  extends KalturaRelatedFilte
 	categoryIdIn? : string;
 	entryIdEqual? : string;
 	entryIdIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
 	categoryFullIdsStartsWith? : string;
 	statusEqual? : KalturaCategoryEntryStatus;
 	statusIn? : string;
@@ -25,8 +25,8 @@ export class KalturaCategoryEntryBaseFilter extends KalturaRelatedFilter {
 	categoryIdIn : string;
 	entryIdEqual : string;
 	entryIdIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
 	categoryFullIdsStartsWith : string;
 	statusEqual : KalturaCategoryEntryStatus;
 	statusIn : string;
@@ -49,8 +49,8 @@ export class KalturaCategoryEntryBaseFilter extends KalturaRelatedFilter {
 				categoryIdIn : { type : 's'  },
 				entryIdEqual : { type : 's'  },
 				entryIdIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
 				categoryFullIdsStartsWith : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaCategoryEntryStatus'},
 				statusIn : { type : 's'  },

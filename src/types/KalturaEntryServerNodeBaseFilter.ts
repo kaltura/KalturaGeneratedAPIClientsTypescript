@@ -9,10 +9,10 @@ export interface KalturaEntryServerNodeBaseFilterArgs  extends KalturaRelatedFil
     entryIdEqual? : string;
 	entryIdIn? : string;
 	serverNodeIdEqual? : number;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaEntryServerNodeStatus;
 	statusIn? : string;
 	serverTypeEqual? : KalturaEntryServerNodeType;
@@ -24,10 +24,10 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaRelatedFilter {
     entryIdEqual : string;
 	entryIdIn : string;
 	serverNodeIdEqual : number;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaEntryServerNodeStatus;
 	statusIn : string;
 	serverTypeEqual : KalturaEntryServerNodeType;
@@ -47,10 +47,10 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaRelatedFilter {
 				entryIdEqual : { type : 's'  },
 				entryIdIn : { type : 's'  },
 				serverNodeIdEqual : { type : 'n'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaEntryServerNodeStatus'},
 				statusIn : { type : 's'  },
 				serverTypeEqual : { type : 'es'  , subType : 'KalturaEntryServerNodeType'}

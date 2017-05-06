@@ -8,10 +8,10 @@ import { KalturaDistributionProviderFilter, KalturaDistributionProviderFilterArg
 export interface KalturaGenericDistributionProviderBaseFilterArgs  extends KalturaDistributionProviderFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	partnerIdEqual? : number;
 	partnerIdIn? : string;
 	isDefaultEqual? : KalturaNullableBoolean;
@@ -25,10 +25,10 @@ export class KalturaGenericDistributionProviderBaseFilter extends KalturaDistrib
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	partnerIdEqual : number;
 	partnerIdIn : string;
 	isDefaultEqual : KalturaNullableBoolean;
@@ -50,10 +50,10 @@ export class KalturaGenericDistributionProviderBaseFilter extends KalturaDistrib
                 objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				partnerIdEqual : { type : 'n'  },
 				partnerIdIn : { type : 's'  },
 				isDefaultEqual : { type : 'en'  , subType : 'KalturaNullableBoolean'},

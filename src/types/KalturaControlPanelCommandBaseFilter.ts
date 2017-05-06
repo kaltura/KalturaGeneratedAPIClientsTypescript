@@ -9,8 +9,8 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaControlPanelCommandBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
 	createdByIdEqual? : number;
 	typeEqual? : KalturaControlPanelCommandType;
 	typeIn? : string;
@@ -25,8 +25,8 @@ export class KalturaControlPanelCommandBaseFilter extends KalturaFilter {
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
 	createdByIdEqual : number;
 	typeEqual : KalturaControlPanelCommandType;
 	typeIn : string;
@@ -49,8 +49,8 @@ export class KalturaControlPanelCommandBaseFilter extends KalturaFilter {
                 objectType : { type : 'c' , default : 'KalturaControlPanelCommandBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
 				createdByIdEqual : { type : 'n'  },
 				typeEqual : { type : 'en'  , subType : 'KalturaControlPanelCommandType'},
 				typeIn : { type : 's'  },

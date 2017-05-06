@@ -16,8 +16,8 @@ export class KalturaTag extends KalturaObjectBase {
 	readonly taggedObjectType : KalturaTaggedObjectType;
 	readonly partnerId : number;
 	readonly instanceCount : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 
     constructor(data? : KalturaTagArgs)
     {
@@ -36,8 +36,8 @@ export class KalturaTag extends KalturaObjectBase {
 				taggedObjectType : { type : 'es'  , readOnly : true, subType : 'KalturaTaggedObjectType'},
 				partnerId : { type : 'n'  , readOnly : true},
 				instanceCount : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true}
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true}
             }
         );
         return result;

@@ -27,7 +27,7 @@ export class KalturaAssetParams extends KalturaObjectBase {
 	name : string;
 	systemName : string;
 	description : string;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	readonly isSystemDefault : KalturaNullableBoolean;
 	tags : string;
 	requiredPermissions : KalturaString[];
@@ -54,7 +54,7 @@ export class KalturaAssetParams extends KalturaObjectBase {
 				name : { type : 's'  },
 				systemName : { type : 's'  },
 				description : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				isSystemDefault : { type : 'en'  , readOnly : true, subType : 'KalturaNullableBoolean'},
 				tags : { type : 's'  },
 				requiredPermissions : { type : 'a'  , subType : 'KalturaString'},

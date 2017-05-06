@@ -22,8 +22,8 @@ export class KalturaCategoryUser extends KalturaObjectBase {
 	readonly partnerId : number;
 	permissionLevel : KalturaCategoryUserPermissionLevel;
 	readonly status : KalturaCategoryUserStatus;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	updateMethod : KalturaUpdateMethodType;
 	readonly categoryFullIds : string;
 	permissionNames : string;
@@ -45,8 +45,8 @@ export class KalturaCategoryUser extends KalturaObjectBase {
 				partnerId : { type : 'n'  , readOnly : true},
 				permissionLevel : { type : 'en'  , subType : 'KalturaCategoryUserPermissionLevel'},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaCategoryUserStatus'},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				updateMethod : { type : 'en'  , subType : 'KalturaUpdateMethodType'},
 				categoryFullIds : { type : 's'  , readOnly : true},
 				permissionNames : { type : 's'  }

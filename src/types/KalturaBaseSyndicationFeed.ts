@@ -36,7 +36,7 @@ export class KalturaBaseSyndicationFeed extends KalturaObjectBase {
 	readonly status : KalturaSyndicationFeedStatus;
 	type : KalturaSyndicationFeedType;
 	landingPage : string;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	allowEmbed : boolean;
 	playerUiconfId : number;
 	flavorParamId : number;
@@ -47,7 +47,7 @@ export class KalturaBaseSyndicationFeed extends KalturaObjectBase {
 	entriesOrderBy : KalturaSyndicationFeedEntriesOrderBy;
 	enforceEntitlement : boolean;
 	privacyContext : string;
-	readonly updatedAt : number;
+	readonly updatedAt : Date;
 	useCategoryEntries : boolean;
 	feedContentTypeHeader : string;
 
@@ -71,7 +71,7 @@ export class KalturaBaseSyndicationFeed extends KalturaObjectBase {
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaSyndicationFeedStatus'},
 				type : { type : 'en'  , subType : 'KalturaSyndicationFeedType'},
 				landingPage : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				allowEmbed : { type : 'b'  },
 				playerUiconfId : { type : 'n'  },
 				flavorParamId : { type : 'n'  },
@@ -82,7 +82,7 @@ export class KalturaBaseSyndicationFeed extends KalturaObjectBase {
 				entriesOrderBy : { type : 'es'  , subType : 'KalturaSyndicationFeedEntriesOrderBy'},
 				enforceEntitlement : { type : 'b'  },
 				privacyContext : { type : 's'  },
-				updatedAt : { type : 'n'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				useCategoryEntries : { type : 'b'  },
 				feedContentTypeHeader : { type : 's'  }
             }

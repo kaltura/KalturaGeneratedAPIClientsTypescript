@@ -22,10 +22,10 @@ export interface KalturaCategoryBaseFilterArgs  extends KalturaRelatedFilterArgs
 	fullIdsEqual? : string;
 	fullIdsStartsWith? : string;
 	fullIdsMatchOr? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	tagsLike? : string;
 	tagsMultiLikeOr? : string;
 	tagsMultiLikeAnd? : string;
@@ -67,10 +67,10 @@ export class KalturaCategoryBaseFilter extends KalturaRelatedFilter {
 	fullIdsEqual : string;
 	fullIdsStartsWith : string;
 	fullIdsMatchOr : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	tagsLike : string;
 	tagsMultiLikeOr : string;
 	tagsMultiLikeAnd : string;
@@ -120,10 +120,10 @@ export class KalturaCategoryBaseFilter extends KalturaRelatedFilter {
 				fullIdsEqual : { type : 's'  },
 				fullIdsStartsWith : { type : 's'  },
 				fullIdsMatchOr : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				tagsLike : { type : 's'  },
 				tagsMultiLikeOr : { type : 's'  },
 				tagsMultiLikeAnd : { type : 's'  },

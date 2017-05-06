@@ -21,7 +21,7 @@ export class KalturaAccessControl extends KalturaObjectBase {
 	name : string;
 	systemName : string;
 	description : string;
-	readonly createdAt : number;
+	readonly createdAt : Date;
 	isDefault : KalturaNullableBoolean;
 	restrictions : KalturaBaseRestriction[];
 	readonly containsUnsuportedRestrictions : boolean;
@@ -44,7 +44,7 @@ export class KalturaAccessControl extends KalturaObjectBase {
 				name : { type : 's'  },
 				systemName : { type : 's'  },
 				description : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
 				isDefault : { type : 'en'  , subType : 'KalturaNullableBoolean'},
 				restrictions : { type : 'a'  , subType : 'KalturaBaseRestriction'},
 				containsUnsuportedRestrictions : { type : 'b'  , readOnly : true}

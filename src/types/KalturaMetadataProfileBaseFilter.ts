@@ -15,10 +15,10 @@ export interface KalturaMetadataProfileBaseFilterArgs  extends KalturaFilterArgs
 	nameEqual? : string;
 	systemNameEqual? : string;
 	systemNameIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaMetadataProfileStatus;
 	statusIn? : string;
 	createModeEqual? : KalturaMetadataProfileCreateMode;
@@ -38,10 +38,10 @@ export class KalturaMetadataProfileBaseFilter extends KalturaFilter {
 	nameEqual : string;
 	systemNameEqual : string;
 	systemNameIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaMetadataProfileStatus;
 	statusIn : string;
 	createModeEqual : KalturaMetadataProfileCreateMode;
@@ -69,10 +69,10 @@ export class KalturaMetadataProfileBaseFilter extends KalturaFilter {
 				nameEqual : { type : 's'  },
 				systemNameEqual : { type : 's'  },
 				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaMetadataProfileStatus'},
 				statusIn : { type : 's'  },
 				createModeEqual : { type : 'en'  , subType : 'KalturaMetadataProfileCreateMode'},

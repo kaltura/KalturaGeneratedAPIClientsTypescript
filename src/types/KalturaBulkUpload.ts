@@ -12,7 +12,7 @@ export interface KalturaBulkUploadArgs  extends KalturaObjectBaseArgs {
     id? : number;
 	uploadedBy? : string;
 	uploadedByUserId? : string;
-	uploadedOn? : number;
+	uploadedOn? : Date;
 	numOfEntries? : number;
 	status? : KalturaBatchJobStatus;
 	logFileUrl? : string;
@@ -35,7 +35,7 @@ export class KalturaBulkUpload extends KalturaObjectBase {
     id : number;
 	uploadedBy : string;
 	uploadedByUserId : string;
-	uploadedOn : number;
+	uploadedOn : Date;
 	numOfEntries : number;
 	status : KalturaBatchJobStatus;
 	logFileUrl : string;
@@ -67,7 +67,7 @@ export class KalturaBulkUpload extends KalturaObjectBase {
 				id : { type : 'n'  },
 				uploadedBy : { type : 's'  },
 				uploadedByUserId : { type : 's'  },
-				uploadedOn : { type : 'n'  },
+				uploadedOn : { type : 'd'  },
 				numOfEntries : { type : 'n'  },
 				status : { type : 'en'  , subType : 'KalturaBatchJobStatus'},
 				logFileUrl : { type : 's'  },

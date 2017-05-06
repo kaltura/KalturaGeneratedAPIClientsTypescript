@@ -13,12 +13,12 @@ export interface KalturaScheduledTaskProfileBaseFilterArgs  extends KalturaFilte
 	systemNameIn? : string;
 	statusEqual? : KalturaScheduledTaskProfileStatus;
 	statusIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
-	lastExecutionStartedAtGreaterThanOrEqual? : number;
-	lastExecutionStartedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
+	lastExecutionStartedAtGreaterThanOrEqual? : Date;
+	lastExecutionStartedAtLessThanOrEqual? : Date;
 }
 
 
@@ -32,12 +32,12 @@ export class KalturaScheduledTaskProfileBaseFilter extends KalturaFilter {
 	systemNameIn : string;
 	statusEqual : KalturaScheduledTaskProfileStatus;
 	statusIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
-	lastExecutionStartedAtGreaterThanOrEqual : number;
-	lastExecutionStartedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
+	lastExecutionStartedAtGreaterThanOrEqual : Date;
+	lastExecutionStartedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaScheduledTaskProfileBaseFilterArgs)
     {
@@ -59,12 +59,12 @@ export class KalturaScheduledTaskProfileBaseFilter extends KalturaFilter {
 				systemNameIn : { type : 's'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaScheduledTaskProfileStatus'},
 				statusIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
-				lastExecutionStartedAtGreaterThanOrEqual : { type : 'n'  },
-				lastExecutionStartedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
+				lastExecutionStartedAtGreaterThanOrEqual : { type : 'd'  },
+				lastExecutionStartedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

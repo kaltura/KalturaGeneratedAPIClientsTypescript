@@ -7,10 +7,10 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaAppTokenBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : string;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaAppTokenStatus;
 	statusIn? : string;
 }
@@ -20,10 +20,10 @@ export class KalturaAppTokenBaseFilter extends KalturaFilter {
 
     idEqual : string;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaAppTokenStatus;
 	statusIn : string;
 
@@ -41,10 +41,10 @@ export class KalturaAppTokenBaseFilter extends KalturaFilter {
                 objectType : { type : 'c' , default : 'KalturaAppTokenBaseFilter' },
 				idEqual : { type : 's'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaAppTokenStatus'},
 				statusIn : { type : 's'  }
             }

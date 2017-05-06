@@ -35,8 +35,8 @@ export class KalturaDeliveryProfile extends KalturaObjectBase {
 	type : KalturaDeliveryProfileType;
 	systemName : string;
 	description : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	streamerType : KalturaPlaybackProtocol;
 	url : string;
 	readonly hostName : string;
@@ -68,8 +68,8 @@ export class KalturaDeliveryProfile extends KalturaObjectBase {
 				type : { type : 'es'  , subType : 'KalturaDeliveryProfileType'},
 				systemName : { type : 's'  },
 				description : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				streamerType : { type : 'es'  , subType : 'KalturaPlaybackProtocol'},
 				url : { type : 's'  },
 				hostName : { type : 's'  , readOnly : true},

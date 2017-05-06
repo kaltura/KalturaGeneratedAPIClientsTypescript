@@ -44,8 +44,8 @@ export class KalturaCategory extends KalturaObjectBase {
 	readonly fullName : string;
 	readonly fullIds : string;
 	readonly entriesCount : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	description : string;
 	tags : string;
 	appearInList : KalturaAppearInListType;
@@ -92,8 +92,8 @@ export class KalturaCategory extends KalturaObjectBase {
 				fullName : { type : 's'  , readOnly : true},
 				fullIds : { type : 's'  , readOnly : true},
 				entriesCount : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				description : { type : 's'  },
 				tags : { type : 's'  },
 				appearInList : { type : 'en'  , subType : 'KalturaAppearInListType'},

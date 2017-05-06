@@ -23,8 +23,8 @@ export class KalturaScheduleResource extends KalturaObjectBase {
 	description : string;
 	readonly status : KalturaScheduleResourceStatus;
 	tags : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 
     constructor(data? : KalturaScheduleResourceArgs)
     {
@@ -46,8 +46,8 @@ export class KalturaScheduleResource extends KalturaObjectBase {
 				description : { type : 's'  },
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaScheduleResourceStatus'},
 				tags : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true}
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true}
             }
         );
         return result;

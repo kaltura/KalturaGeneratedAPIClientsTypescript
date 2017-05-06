@@ -8,12 +8,12 @@ import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelated
 export interface KalturaEntryDistributionBaseFilterArgs  extends KalturaRelatedFilterArgs {
     idEqual? : number;
 	idIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
-	submittedAtGreaterThanOrEqual? : number;
-	submittedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
+	submittedAtGreaterThanOrEqual? : Date;
+	submittedAtLessThanOrEqual? : Date;
 	entryIdEqual? : string;
 	entryIdIn? : string;
 	distributionProfileIdEqual? : number;
@@ -22,10 +22,10 @@ export interface KalturaEntryDistributionBaseFilterArgs  extends KalturaRelatedF
 	statusIn? : string;
 	dirtyStatusEqual? : KalturaEntryDistributionFlag;
 	dirtyStatusIn? : string;
-	sunriseGreaterThanOrEqual? : number;
-	sunriseLessThanOrEqual? : number;
-	sunsetGreaterThanOrEqual? : number;
-	sunsetLessThanOrEqual? : number;
+	sunriseGreaterThanOrEqual? : Date;
+	sunriseLessThanOrEqual? : Date;
+	sunsetGreaterThanOrEqual? : Date;
+	sunsetLessThanOrEqual? : Date;
 }
 
 
@@ -33,12 +33,12 @@ export class KalturaEntryDistributionBaseFilter extends KalturaRelatedFilter {
 
     idEqual : number;
 	idIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
-	submittedAtGreaterThanOrEqual : number;
-	submittedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
+	submittedAtGreaterThanOrEqual : Date;
+	submittedAtLessThanOrEqual : Date;
 	entryIdEqual : string;
 	entryIdIn : string;
 	distributionProfileIdEqual : number;
@@ -47,10 +47,10 @@ export class KalturaEntryDistributionBaseFilter extends KalturaRelatedFilter {
 	statusIn : string;
 	dirtyStatusEqual : KalturaEntryDistributionFlag;
 	dirtyStatusIn : string;
-	sunriseGreaterThanOrEqual : number;
-	sunriseLessThanOrEqual : number;
-	sunsetGreaterThanOrEqual : number;
-	sunsetLessThanOrEqual : number;
+	sunriseGreaterThanOrEqual : Date;
+	sunriseLessThanOrEqual : Date;
+	sunsetGreaterThanOrEqual : Date;
+	sunsetLessThanOrEqual : Date;
 
     constructor(data? : KalturaEntryDistributionBaseFilterArgs)
     {
@@ -66,12 +66,12 @@ export class KalturaEntryDistributionBaseFilter extends KalturaRelatedFilter {
                 objectType : { type : 'c' , default : 'KalturaEntryDistributionBaseFilter' },
 				idEqual : { type : 'n'  },
 				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
-				submittedAtGreaterThanOrEqual : { type : 'n'  },
-				submittedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
+				submittedAtGreaterThanOrEqual : { type : 'd'  },
+				submittedAtLessThanOrEqual : { type : 'd'  },
 				entryIdEqual : { type : 's'  },
 				entryIdIn : { type : 's'  },
 				distributionProfileIdEqual : { type : 'n'  },
@@ -80,10 +80,10 @@ export class KalturaEntryDistributionBaseFilter extends KalturaRelatedFilter {
 				statusIn : { type : 's'  },
 				dirtyStatusEqual : { type : 'en'  , subType : 'KalturaEntryDistributionFlag'},
 				dirtyStatusIn : { type : 's'  },
-				sunriseGreaterThanOrEqual : { type : 'n'  },
-				sunriseLessThanOrEqual : { type : 'n'  },
-				sunsetGreaterThanOrEqual : { type : 'n'  },
-				sunsetLessThanOrEqual : { type : 'n'  }
+				sunriseGreaterThanOrEqual : { type : 'd'  },
+				sunriseLessThanOrEqual : { type : 'd'  },
+				sunsetGreaterThanOrEqual : { type : 'd'  },
+				sunsetLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;

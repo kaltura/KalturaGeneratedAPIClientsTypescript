@@ -18,10 +18,10 @@ export interface KalturaMetadataBaseFilterArgs  extends KalturaRelatedFilterArgs
 	versionEqual? : number;
 	versionGreaterThanOrEqual? : number;
 	versionLessThanOrEqual? : number;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaMetadataStatus;
 	statusIn? : string;
 }
@@ -41,10 +41,10 @@ export class KalturaMetadataBaseFilter extends KalturaRelatedFilter {
 	versionEqual : number;
 	versionGreaterThanOrEqual : number;
 	versionLessThanOrEqual : number;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaMetadataStatus;
 	statusIn : string;
 
@@ -72,10 +72,10 @@ export class KalturaMetadataBaseFilter extends KalturaRelatedFilter {
 				versionEqual : { type : 'n'  },
 				versionGreaterThanOrEqual : { type : 'n'  },
 				versionLessThanOrEqual : { type : 'n'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				statusEqual : { type : 'en'  , subType : 'KalturaMetadataStatus'},
 				statusIn : { type : 's'  }
             }

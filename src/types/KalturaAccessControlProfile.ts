@@ -21,8 +21,8 @@ export class KalturaAccessControlProfile extends KalturaObjectBase {
 	name : string;
 	systemName : string;
 	description : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	isDefault : KalturaNullableBoolean;
 	rules : KalturaRule[];
 
@@ -44,8 +44,8 @@ export class KalturaAccessControlProfile extends KalturaObjectBase {
 				name : { type : 's'  },
 				systemName : { type : 's'  },
 				description : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				isDefault : { type : 'en'  , subType : 'KalturaNullableBoolean'},
 				rules : { type : 'a'  , subType : 'KalturaRule'}
             }

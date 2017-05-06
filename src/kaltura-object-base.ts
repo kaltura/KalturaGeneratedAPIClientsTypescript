@@ -170,12 +170,14 @@ export abstract class KalturaObjectBase{
                                 result = parsedArray;
                             }
                         } else {
-                            throw new Error(`failed to parse property. Property '${propertyName} is defined as array`);
+                            throw new Error(`failed to parse property '${propertyName}. Expected type array, got type '${typeof sourceValue}`);
                         }
                         break;
                     case 'd': // date
                         if (this._isNumeric(sourceValue)) {
                             result = KalturaUtils.fromServerDate(sourceValue*1)
+                        }else {
+                            throw new Error(`failed to parse property '${propertyName}. Expected type date, got type '${typeof sourceValue}`);
                         }
                         break;
                     case "es":
@@ -286,6 +288,8 @@ export abstract class KalturaObjectBase{
                         case 'd': // date
                             if (value instanceof Date) {
                                 result = { status : 'exists', value : KalturaUtils.toServerDate(value)};
+                            }else {
+                                throw new Error(`failed to parse property. Expected '${propertyName} to be date`);
                             }
                             break;
                         case 'es': // enum of type string

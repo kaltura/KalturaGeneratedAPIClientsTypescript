@@ -6,7 +6,7 @@ import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 export interface KalturaScheduledTaskJobDataArgs  extends KalturaJobDataArgs {
     maxResults? : number;
 	resultsFilePath? : string;
-	referenceTime? : number;
+	referenceTime? : Date;
 }
 
 
@@ -14,7 +14,7 @@ export class KalturaScheduledTaskJobData extends KalturaJobData {
 
     maxResults : number;
 	resultsFilePath : string;
-	referenceTime : number;
+	referenceTime : Date;
 
     constructor(data? : KalturaScheduledTaskJobDataArgs)
     {
@@ -30,7 +30,7 @@ export class KalturaScheduledTaskJobData extends KalturaJobData {
                 objectType : { type : 'c' , default : 'KalturaScheduledTaskJobData' },
 				maxResults : { type : 'n'  },
 				resultsFilePath : { type : 's'  },
-				referenceTime : { type : 'n'  }
+				referenceTime : { type : 'd'  }
             }
         );
         return result;

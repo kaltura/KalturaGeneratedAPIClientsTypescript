@@ -24,8 +24,8 @@ export class KalturaUserRole extends KalturaObjectBase {
 	readonly partnerId : number;
 	permissionNames : string;
 	tags : string;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 
     constructor(data? : KalturaUserRoleArgs)
     {
@@ -47,8 +47,8 @@ export class KalturaUserRole extends KalturaObjectBase {
 				partnerId : { type : 'n'  , readOnly : true},
 				permissionNames : { type : 's'  },
 				tags : { type : 's'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true}
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true}
             }
         );
         return result;

@@ -21,8 +21,8 @@ export class KalturaAppToken extends KalturaObjectBase {
     readonly id : string;
 	readonly token : string;
 	readonly partnerId : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	readonly status : KalturaAppTokenStatus;
 	expiry : number;
 	sessionType : KalturaSessionType;
@@ -46,8 +46,8 @@ export class KalturaAppToken extends KalturaObjectBase {
 				id : { type : 's'  , readOnly : true},
 				token : { type : 's'  , readOnly : true},
 				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true},
+				createdAt : { type : 'd'  , readOnly : true},
+				updatedAt : { type : 'd'  , readOnly : true},
 				status : { type : 'en'  , readOnly : true, subType : 'KalturaAppTokenStatus'},
 				expiry : { type : 'n'  },
 				sessionType : { type : 'en'  , subType : 'KalturaSessionType'},

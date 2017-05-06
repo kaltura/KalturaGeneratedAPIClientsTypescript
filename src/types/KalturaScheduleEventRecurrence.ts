@@ -8,7 +8,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaScheduleEventRecurrenceArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	frequency? : KalturaScheduleEventRecurrenceFrequency;
-	until? : number;
+	until? : Date;
 	timeZone? : string;
 	count? : number;
 	interval? : number;
@@ -29,7 +29,7 @@ export class KalturaScheduleEventRecurrence extends KalturaObjectBase {
 
     name : string;
 	frequency : KalturaScheduleEventRecurrenceFrequency;
-	until : number;
+	until : Date;
 	timeZone : string;
 	count : number;
 	interval : number;
@@ -58,7 +58,7 @@ export class KalturaScheduleEventRecurrence extends KalturaObjectBase {
                 objectType : { type : 'c' , default : 'KalturaScheduleEventRecurrence' },
 				name : { type : 's'  },
 				frequency : { type : 'es'  , subType : 'KalturaScheduleEventRecurrenceFrequency'},
-				until : { type : 'n'  },
+				until : { type : 'd'  },
 				timeZone : { type : 's'  },
 				count : { type : 'n'  },
 				interval : { type : 'n'  },

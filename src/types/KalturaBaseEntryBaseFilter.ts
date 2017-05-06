@@ -45,10 +45,10 @@ export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	moderationStatusNotIn? : string;
 	typeEqual? : KalturaEntryType;
 	typeIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 	totalRankLessThanOrEqual? : number;
 	totalRankGreaterThanOrEqual? : number;
 	groupIdEqual? : number;
@@ -56,14 +56,14 @@ export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	searchTextMatchOr? : string;
 	accessControlIdEqual? : number;
 	accessControlIdIn? : string;
-	startDateGreaterThanOrEqual? : number;
-	startDateLessThanOrEqual? : number;
-	startDateGreaterThanOrEqualOrNull? : number;
-	startDateLessThanOrEqualOrNull? : number;
-	endDateGreaterThanOrEqual? : number;
-	endDateLessThanOrEqual? : number;
-	endDateGreaterThanOrEqualOrNull? : number;
-	endDateLessThanOrEqualOrNull? : number;
+	startDateGreaterThanOrEqual? : Date;
+	startDateLessThanOrEqual? : Date;
+	startDateGreaterThanOrEqualOrNull? : Date;
+	startDateLessThanOrEqualOrNull? : Date;
+	endDateGreaterThanOrEqual? : Date;
+	endDateLessThanOrEqual? : Date;
+	endDateGreaterThanOrEqualOrNull? : Date;
+	endDateLessThanOrEqualOrNull? : Date;
 	referenceIdEqual? : string;
 	referenceIdIn? : string;
 	replacingEntryIdEqual? : string;
@@ -128,10 +128,10 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 	moderationStatusNotIn : string;
 	typeEqual : KalturaEntryType;
 	typeIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 	totalRankLessThanOrEqual : number;
 	totalRankGreaterThanOrEqual : number;
 	groupIdEqual : number;
@@ -139,14 +139,14 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 	searchTextMatchOr : string;
 	accessControlIdEqual : number;
 	accessControlIdIn : string;
-	startDateGreaterThanOrEqual : number;
-	startDateLessThanOrEqual : number;
-	startDateGreaterThanOrEqualOrNull : number;
-	startDateLessThanOrEqualOrNull : number;
-	endDateGreaterThanOrEqual : number;
-	endDateLessThanOrEqual : number;
-	endDateGreaterThanOrEqualOrNull : number;
-	endDateLessThanOrEqualOrNull : number;
+	startDateGreaterThanOrEqual : Date;
+	startDateLessThanOrEqual : Date;
+	startDateGreaterThanOrEqualOrNull : Date;
+	startDateLessThanOrEqualOrNull : Date;
+	endDateGreaterThanOrEqual : Date;
+	endDateLessThanOrEqual : Date;
+	endDateGreaterThanOrEqualOrNull : Date;
+	endDateLessThanOrEqualOrNull : Date;
 	referenceIdEqual : string;
 	referenceIdIn : string;
 	replacingEntryIdEqual : string;
@@ -219,10 +219,10 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 				moderationStatusNotIn : { type : 's'  },
 				typeEqual : { type : 'es'  , subType : 'KalturaEntryType'},
 				typeIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  },
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  },
 				totalRankLessThanOrEqual : { type : 'n'  },
 				totalRankGreaterThanOrEqual : { type : 'n'  },
 				groupIdEqual : { type : 'n'  },
@@ -230,14 +230,14 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 				searchTextMatchOr : { type : 's'  },
 				accessControlIdEqual : { type : 'n'  },
 				accessControlIdIn : { type : 's'  },
-				startDateGreaterThanOrEqual : { type : 'n'  },
-				startDateLessThanOrEqual : { type : 'n'  },
-				startDateGreaterThanOrEqualOrNull : { type : 'n'  },
-				startDateLessThanOrEqualOrNull : { type : 'n'  },
-				endDateGreaterThanOrEqual : { type : 'n'  },
-				endDateLessThanOrEqual : { type : 'n'  },
-				endDateGreaterThanOrEqualOrNull : { type : 'n'  },
-				endDateLessThanOrEqualOrNull : { type : 'n'  },
+				startDateGreaterThanOrEqual : { type : 'd'  },
+				startDateLessThanOrEqual : { type : 'd'  },
+				startDateGreaterThanOrEqualOrNull : { type : 'd'  },
+				startDateLessThanOrEqualOrNull : { type : 'd'  },
+				endDateGreaterThanOrEqual : { type : 'd'  },
+				endDateLessThanOrEqual : { type : 'd'  },
+				endDateGreaterThanOrEqualOrNull : { type : 'd'  },
+				endDateLessThanOrEqualOrNull : { type : 'd'  },
 				referenceIdEqual : { type : 's'  },
 				referenceIdIn : { type : 's'  },
 				replacingEntryIdEqual : { type : 's'  },

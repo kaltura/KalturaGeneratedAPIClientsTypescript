@@ -8,10 +8,10 @@ export interface KalturaAccessControlProfileBaseFilterArgs  extends KalturaRelat
 	idIn? : string;
 	systemNameEqual? : string;
 	systemNameIn? : string;
-	createdAtGreaterThanOrEqual? : number;
-	createdAtLessThanOrEqual? : number;
-	updatedAtGreaterThanOrEqual? : number;
-	updatedAtLessThanOrEqual? : number;
+	createdAtGreaterThanOrEqual? : Date;
+	createdAtLessThanOrEqual? : Date;
+	updatedAtGreaterThanOrEqual? : Date;
+	updatedAtLessThanOrEqual? : Date;
 }
 
 
@@ -21,10 +21,10 @@ export class KalturaAccessControlProfileBaseFilter extends KalturaRelatedFilter 
 	idIn : string;
 	systemNameEqual : string;
 	systemNameIn : string;
-	createdAtGreaterThanOrEqual : number;
-	createdAtLessThanOrEqual : number;
-	updatedAtGreaterThanOrEqual : number;
-	updatedAtLessThanOrEqual : number;
+	createdAtGreaterThanOrEqual : Date;
+	createdAtLessThanOrEqual : Date;
+	updatedAtGreaterThanOrEqual : Date;
+	updatedAtLessThanOrEqual : Date;
 
     constructor(data? : KalturaAccessControlProfileBaseFilterArgs)
     {
@@ -42,10 +42,10 @@ export class KalturaAccessControlProfileBaseFilter extends KalturaRelatedFilter 
 				idIn : { type : 's'  },
 				systemNameEqual : { type : 's'  },
 				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'n'  },
-				createdAtLessThanOrEqual : { type : 'n'  },
-				updatedAtGreaterThanOrEqual : { type : 'n'  },
-				updatedAtLessThanOrEqual : { type : 'n'  }
+				createdAtGreaterThanOrEqual : { type : 'd'  },
+				createdAtLessThanOrEqual : { type : 'd'  },
+				updatedAtGreaterThanOrEqual : { type : 'd'  },
+				updatedAtLessThanOrEqual : { type : 'd'  }
             }
         );
         return result;
