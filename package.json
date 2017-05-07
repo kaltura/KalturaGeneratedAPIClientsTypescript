@@ -7,7 +7,17 @@
 	],
 	"license": "AGPL-3.0",
 	"homepage": "https://github.com/KalturaGeneratedAPIClientsTypescript",
-	"author": "https://github.com/KalturaGeneratedAPIClientsTypescript/graphs/contributors",
+	"author": "https://github.com/kaltura-ng/graphs/contributors",
+	"contributors": [
+		{
+			"name": "Eran Sakal",
+			"email": "eran@sakalim.com"
+		},
+		{
+			"name": "Amir Chervinsky",
+			"email": "amir.chr@gmail.com"
+		}
+	],
 	"scripts": {
 		"build": "gulp build",
 		"build:prod": "gulp build --production",
@@ -15,6 +25,7 @@
 		"test": "karma start",
 		"test:watch": "karma start --no-single-run --auto-watch",
 		"watch": "gulp watch",
+		"release": "standard-version",
 		"wml": "wml",
 		"wml:sync": "wml once",
 		"wml:watch": "wml start"
@@ -28,6 +39,7 @@
 	},
 	"main": "./index.js",
 	"dependencies": {
+		"tslib": "~1.5.0"
 	},
 	"devDependencies": {
 		"@types/core-js": "^0.9.37",
@@ -60,9 +72,9 @@
 		"phantomjs-prebuilt": "2.1.14",
 		"rimraf": "^2.5.1",
 		"run-sequence": "1.2.2",
+		"standard-version": "^4.0.0",
 		"tslint": "4.3.1",
 		"tslint-loader": "3.2.1",
-		"tslib": "~1.5.0",
 		"typescript": "2.2.0",
 		"webpack": "2.2.0",
 		"wml": "github:esakal/wml",

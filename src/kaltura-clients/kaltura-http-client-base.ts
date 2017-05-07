@@ -1,6 +1,7 @@
 import { KalturaHttpClientConfiguration } from './kaltura-http-client-configuration';
 import { CancelableAction } from '../utils/cancelable-action';
 import { KalturaClientBase } from './kaltura-client-base';
+import { KalturaAPIException } from '../kaltura-api-exception';
 
 export abstract class KalturaHttpClientBase extends KalturaClientBase {
     constructor(public adapterConfiguration : KalturaHttpClientConfiguration) {
@@ -9,64 +10,86 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
     protected _transmitFileUploadRequest(request): CancelableAction
     {
+        const result = new CancelableAction((resolve, reject) => {
+            let isComplete = false
+            const parameters: any = Object.assign(
+                {
+                    format: 1
+                },
+                request.toRequestObject()
+            );
+            this.adapterConfiguration.prepareRequestParameters(parameters);
 
-        throw new Error("not implemented");
-        // const parameters: any = Object.assign(
-        //     {
-        //         format: 1
-        //     },
-        //     request.toRequestObject()
-        // );
-        // this.adapterConfiguration.prepareRequestParameters(parameters);
-        //
-        // const data : any  = request.getFormData();
-        //
-        // const {service,action} = parameters;
-        // delete parameters.service;
-        // delete parameters.action;
-        //
-        // // build endpoint
-        // const querystring = this._buildQuerystring(parameters);
-        // const endpoint = `${this.adapterConfiguration.endpointUrl}/service/${service}/action/${action}?${querystring}`;
-        //
-        // const xhr = new XMLHttpRequest();
-        //
-        // xhr.onreadystatechange = function(){
-        //     if(xhr.readyState == 4){
-        //         let resp;
-        //
-        //         try {
-        //             if(xhr.status == 200) {
-        //                 resp = JSON.parse(xhr.response);
-        //             }else {
-        //                 resp = new Error(xhr.responseText);
-        //             }
-        //         } catch (e){
-        //             resp = new Error(xhr.responseText);
-        //         }
-        //
-        //         if (resp instanceof Error)
-        //         {
-        //             observer.error(resp);
-        //         }else {
-        //             observer.next(resp);
-        //         }
-        //     }
-        // };
-        //
-        // const progressCallback = request._getProgressCallback();
-        // if (progressCallback) {
-        //     xhr.upload.addEventListener('progress', function(e){
-        //         if (e.lengthComputable) {
-        //             progressCallback.apply(request, [e.loaded, e.total]);
-        //         } else {
-        //             // Unable to compute progress information since the total size is unknown
-        //         }
-        //     }, false);
-        // }
-        //
-        // xhr.open('POST', endpoint);
-        // xhr.send(data);
+            const data : any  = request.getFormData();
+
+            const {service,action} = parameters;
+            delete parameters.service;
+            delete parameters.action;
+
+            // build endpoint
+            const querystring = this._buildQuerystring(parameters);
+            const endpoint = `${this.adapterConfiguration.endpointUrl}/service/${service}/action/${action}?${querystring}`;
+
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4){
+                    let resp;
+
+                    try {
+                        if(xhr.status == 200) {
+                            resp = JSON.parse(xhr.response);
+                        }else {
+                            resp = new Error(xhr.responseText);
+                        }
+                    } catch (e){
+                        resp = new Error(xhr.responseText);
+                    }
+
+                    if (resp instanceof Error)
+                    {
+                        reject(resp);
+                    }else {
+                        resolve(resp);
+                    }
+                }
+            };
+
+            const progressCallback = request._getProgressCallback();
+            if (progressCallback) {
+                xhr.upload.addEventListener('progress', function(e){
+                    if (e.lengthComputable) {
+                        progressCallback.apply(request, [e.loaded, e.total]);
+                    } else {
+                        // Unable to compute progress information since the total size is unknown
+                    }
+                }, false);
+            }
+
+            xhr.open('POST', endpoint);
+
+            if (data.headers)
+            {
+                Object.keys(data.headers).forEach(headerKey =>
+                {
+                    const headerValue = data.headers[headerKey];
+                    xhr.setRequestHeader(headerKey,headerValue);
+                });
+            }
+
+            xhr.send(JSON.stringify(data.body));
+
+            return () =>
+            {
+                if (!isComplete) {
+                    xhr.abort();
+                    isComplete = true;
+                }
+            }
+        });
+
+        return result;
+
     }
 
     protected abstract _createCancelableAction(data : { endpoint : string, headers : any, body : {}} ) : CancelableAction;

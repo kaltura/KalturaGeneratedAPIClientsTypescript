@@ -75,7 +75,7 @@ export abstract class KalturaObjectBase{
             });
         }catch(err)
         {
-            // TODO [kmcng] should use logHandler
+            // TODO [kaltura] should use logHandler
             console.warn(err.message);
             throw err;
         }
@@ -99,7 +99,7 @@ export abstract class KalturaObjectBase{
             });
         }catch(err)
         {
-            // TODO [kmcng] should use logHandler
+            // TODO [kaltura] should use logHandler
             console.warn(err.message);
             throw err;
         }

@@ -1,6 +1,6 @@
-import { KalturaClientConfiguration } from "./kaltura-client-configuration";
+import { KalturaClientBaseConfiguration } from "./kaltura-client-base-configuration";
 
-export class KalturaHttpClientConfiguration extends KalturaClientConfiguration {
+export class KalturaHttpClientConfiguration extends KalturaClientBaseConfiguration {
 
     public endpointUrl: string;
 

@@ -1,7 +1,7 @@
 
 
 
-export abstract class KalturaClientConfiguration{
+export abstract class KalturaClientBaseConfiguration{
 
     ks : string;
     partnerId : number;

@@ -1,6 +1,6 @@
 import { KalturaObjectBase } from './kaltura-object-base';
 
-// TODO [kmcng] constructor type should be 'KalturaObjectBase' (currently any to support enum of type string)
+// TODO [kaltura] constructor type should be 'KalturaObjectBase' (currently any to support enum of type string)
 export type KalturaObjectClass = { new(...args) : any};
 const typesMapping : { [key : string] : KalturaObjectClass} = {};
 
