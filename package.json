@@ -39,7 +39,7 @@
 	},
 	"main": "./index.js",
 	"dependencies": {
-		"tslib": "~1.5.0"
+		"tslib": "^1.5.0"
 	},
 	"devDependencies": {
 		"@types/core-js": "^0.9.37",
