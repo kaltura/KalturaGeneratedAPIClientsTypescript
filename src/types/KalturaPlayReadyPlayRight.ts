@@ -49,16 +49,16 @@ export class KalturaPlayReadyPlayRight extends KalturaPlayReadyRight {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyPlayRight'  },
-				analogVideoOPL : { type : 'en'   , subType : 'KalturaPlayReadyAnalogVideoOPL'},
-				analogVideoOutputProtectionList : { type : 'a'   , fallbackConstructor :  KalturaPlayReadyAnalogVideoOPIdHolder, subType : 'KalturaPlayReadyAnalogVideoOPIdHolder'},
-				compressedDigitalAudioOPL : { type : 'en'   , subType : 'KalturaPlayReadyDigitalAudioOPL'},
-				compressedDigitalVideoOPL : { type : 'en'   , subType : 'KalturaPlayReadyCompressedDigitalVideoOPL'},
-				digitalAudioOutputProtectionList : { type : 'a'   , fallbackConstructor :  KalturaPlayReadyDigitalAudioOPIdHolder, subType : 'KalturaPlayReadyDigitalAudioOPIdHolder'},
-				uncompressedDigitalAudioOPL : { type : 'en'   , subType : 'KalturaPlayReadyDigitalAudioOPL'},
-				uncompressedDigitalVideoOPL : { type : 'en'   , subType : 'KalturaPlayReadyUncompressedDigitalVideoOPL'},
-				firstPlayExpiration : { type : 'n'   },
-				playEnablers : { type : 'a'   , fallbackConstructor :  KalturaPlayReadyPlayEnablerHolder, subType : 'KalturaPlayReadyPlayEnablerHolder'}
+                objectType : { type : 'c', default : 'KalturaPlayReadyPlayRight' },
+				analogVideoOPL : { type : 'en', subTypeConstructor : KalturaPlayReadyAnalogVideoOPL, subType : 'KalturaPlayReadyAnalogVideoOPL' },
+				analogVideoOutputProtectionList : { type : 'a', subTypeConstructor : KalturaPlayReadyAnalogVideoOPIdHolder, subType : 'KalturaPlayReadyAnalogVideoOPIdHolder' },
+				compressedDigitalAudioOPL : { type : 'en', subTypeConstructor : KalturaPlayReadyDigitalAudioOPL, subType : 'KalturaPlayReadyDigitalAudioOPL' },
+				compressedDigitalVideoOPL : { type : 'en', subTypeConstructor : KalturaPlayReadyCompressedDigitalVideoOPL, subType : 'KalturaPlayReadyCompressedDigitalVideoOPL' },
+				digitalAudioOutputProtectionList : { type : 'a', subTypeConstructor : KalturaPlayReadyDigitalAudioOPIdHolder, subType : 'KalturaPlayReadyDigitalAudioOPIdHolder' },
+				uncompressedDigitalAudioOPL : { type : 'en', subTypeConstructor : KalturaPlayReadyDigitalAudioOPL, subType : 'KalturaPlayReadyDigitalAudioOPL' },
+				uncompressedDigitalVideoOPL : { type : 'en', subTypeConstructor : KalturaPlayReadyUncompressedDigitalVideoOPL, subType : 'KalturaPlayReadyUncompressedDigitalVideoOPL' },
+				firstPlayExpiration : { type : 'n' },
+				playEnablers : { type : 'a', subTypeConstructor : KalturaPlayReadyPlayEnablerHolder, subType : 'KalturaPlayReadyPlayEnablerHolder' }
             }
         );
         return result;

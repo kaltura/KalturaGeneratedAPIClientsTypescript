@@ -24,8 +24,8 @@ export class KalturaDropFolderFilter extends KalturaDropFolderBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderFilter'  },
-				currentDc : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaDropFolderFilter' },
+				currentDc : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

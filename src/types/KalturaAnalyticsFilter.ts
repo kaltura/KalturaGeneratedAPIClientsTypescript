@@ -37,14 +37,14 @@ export class KalturaAnalyticsFilter extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnalyticsFilter'  },
-				from_time : { type : 's'   },
-				to_time : { type : 's'   },
-				metrics : { type : 's'   },
-				utcOffset : { type : 'n'   },
-				dimensions : { type : 's'   },
-				filters : { type : 'a'   , fallbackConstructor :  KalturaReportFilter, subType : 'KalturaReportFilter'},
-				orderBy : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAnalyticsFilter' },
+				from_time : { type : 's' },
+				to_time : { type : 's' },
+				metrics : { type : 's' },
+				utcOffset : { type : 'n' },
+				dimensions : { type : 's' },
+				filters : { type : 'a', subTypeConstructor : KalturaReportFilter, subType : 'KalturaReportFilter' },
+				orderBy : { type : 's' }
             }
         );
         return result;

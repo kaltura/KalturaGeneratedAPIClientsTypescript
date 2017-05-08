@@ -25,8 +25,8 @@ export class KalturaFtpDistributionJobProviderData extends KalturaConfigurableDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFtpDistributionJobProviderData'  },
-				filesForDistribution : { type : 'a'   , fallbackConstructor :  KalturaFtpDistributionFile, subType : 'KalturaFtpDistributionFile'}
+                objectType : { type : 'c', default : 'KalturaFtpDistributionJobProviderData' },
+				filesForDistribution : { type : 'a', subTypeConstructor : KalturaFtpDistributionFile, subType : 'KalturaFtpDistributionFile' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class UserNotifyBanAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user'  },
-				action : { type : 'c' , default : 'notifyBan'  },
-				userId : { type : 's'   }
+                service : { type : 'c', default : 'user' },
+				action : { type : 'c', default : 'notifyBan' },
+				userId : { type : 's' }
             }
         );
         return result;

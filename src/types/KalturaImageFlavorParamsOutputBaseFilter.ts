@@ -23,7 +23,7 @@ export class KalturaImageFlavorParamsOutputBaseFilter extends KalturaFlavorParam
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaImageFlavorParamsOutputBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaImageFlavorParamsOutputBaseFilter' }
             }
         );
         return result;

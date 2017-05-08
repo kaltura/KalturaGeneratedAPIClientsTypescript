@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileAkamaiHds extends KalturaDeliveryProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiHds'  },
-				supportClipping : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileAkamaiHds' },
+				supportClipping : { type : 'b' }
             }
         );
         return result;

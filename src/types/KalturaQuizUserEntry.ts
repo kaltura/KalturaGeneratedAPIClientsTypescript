@@ -23,8 +23,8 @@ export class KalturaQuizUserEntry extends KalturaUserEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuizUserEntry'  },
-				score : { type : 'n'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaQuizUserEntry' },
+				score : { type : 'n', readOnly : true }
             }
         );
         return result;

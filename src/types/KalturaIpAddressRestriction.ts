@@ -26,9 +26,9 @@ export class KalturaIpAddressRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIpAddressRestriction'  },
-				ipAddressRestrictionType : { type : 'en'   , subType : 'KalturaIpAddressRestrictionType'},
-				ipAddressList : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaIpAddressRestriction' },
+				ipAddressRestrictionType : { type : 'en', subTypeConstructor : KalturaIpAddressRestrictionType, subType : 'KalturaIpAddressRestrictionType' },
+				ipAddressList : { type : 's' }
             }
         );
         return result;

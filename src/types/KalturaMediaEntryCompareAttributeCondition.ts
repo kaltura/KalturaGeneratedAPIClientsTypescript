@@ -27,8 +27,8 @@ export class KalturaMediaEntryCompareAttributeCondition extends KalturaSearchCom
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaEntryCompareAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaMediaEntryCompareAttribute'}
+                objectType : { type : 'c', default : 'KalturaMediaEntryCompareAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaMediaEntryCompareAttribute, subType : 'KalturaMediaEntryCompareAttribute' }
             }
         );
         return result;

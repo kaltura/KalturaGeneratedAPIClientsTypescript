@@ -30,10 +30,10 @@ export class CaptionAssetListAction extends KalturaRequest<KalturaCaptionAssetLi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaAssetFilter, subType : 'KalturaAssetFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaAssetFilter, subType : 'KalturaAssetFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -26,10 +26,10 @@ export class AttUverseGetFeedAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attuversedistribution_attuverse'  },
-				action : { type : 'c' , default : 'getFeed'  },
-				distributionProfileId : { type : 'n'   },
-				hash : { type : 's'   }
+                service : { type : 'c', default : 'attuversedistribution_attuverse' },
+				action : { type : 'c', default : 'getFeed' },
+				distributionProfileId : { type : 'n' },
+				hash : { type : 's' }
             }
         );
         return result;

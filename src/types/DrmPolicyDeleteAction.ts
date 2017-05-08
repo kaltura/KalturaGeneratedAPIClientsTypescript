@@ -26,9 +26,9 @@ export class DrmPolicyDeleteAction extends KalturaRequest<KalturaDrmPolicy> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmpolicy'  },
-				action : { type : 'c' , default : 'delete'  },
-				drmPolicyId : { type : 'n'   }
+                service : { type : 'c', default : 'drm_drmpolicy' },
+				action : { type : 'c', default : 'delete' },
+				drmPolicyId : { type : 'n' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class FlavorAssetGetRemotePathsAction extends KalturaRequest<KalturaRemot
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'getRemotePaths'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'getRemotePaths' },
+				id : { type : 's' }
             }
         );
         return result;

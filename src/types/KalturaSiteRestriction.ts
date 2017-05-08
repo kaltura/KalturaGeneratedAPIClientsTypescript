@@ -26,9 +26,9 @@ export class KalturaSiteRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSiteRestriction'  },
-				siteRestrictionType : { type : 'en'   , subType : 'KalturaSiteRestrictionType'},
-				siteList : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaSiteRestriction' },
+				siteRestrictionType : { type : 'en', subTypeConstructor : KalturaSiteRestrictionType, subType : 'KalturaSiteRestrictionType' },
+				siteList : { type : 's' }
             }
         );
         return result;

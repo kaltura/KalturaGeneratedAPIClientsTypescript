@@ -28,10 +28,10 @@ export class ServerNodeListAction extends KalturaRequest<KalturaServerNodeListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaServerNodeFilter, subType : 'KalturaServerNodeFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'servernode' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaServerNodeFilter, subType : 'KalturaServerNodeFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -49,21 +49,21 @@ export class KalturaBulkUploadResultCategory extends KalturaBulkUploadResult {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResultCategory'  },
-				relativePath : { type : 's'   },
-				name : { type : 's'   },
-				referenceId : { type : 's'   },
-				description : { type : 's'   },
-				tags : { type : 's'   },
-				appearInList : { type : 'n'   },
-				privacy : { type : 'n'   },
-				inheritanceType : { type : 'n'   },
-				userJoinPolicy : { type : 'n'   },
-				defaultPermissionLevel : { type : 'n'   },
-				owner : { type : 's'   },
-				contributionPolicy : { type : 'n'   },
-				partnerSortValue : { type : 'n'   },
-				moderation : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaBulkUploadResultCategory' },
+				relativePath : { type : 's' },
+				name : { type : 's' },
+				referenceId : { type : 's' },
+				description : { type : 's' },
+				tags : { type : 's' },
+				appearInList : { type : 'n' },
+				privacy : { type : 'n' },
+				inheritanceType : { type : 'n' },
+				userJoinPolicy : { type : 'n' },
+				defaultPermissionLevel : { type : 'n' },
+				owner : { type : 's' },
+				contributionPolicy : { type : 'n' },
+				partnerSortValue : { type : 'n' },
+				moderation : { type : 'b' }
             }
         );
         return result;

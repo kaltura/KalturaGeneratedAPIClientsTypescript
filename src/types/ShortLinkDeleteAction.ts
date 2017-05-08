@@ -26,9 +26,9 @@ export class ShortLinkDeleteAction extends KalturaRequest<KalturaShortLink> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'shortlink_shortlink'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'shortlink_shortlink' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 's' }
             }
         );
         return result;

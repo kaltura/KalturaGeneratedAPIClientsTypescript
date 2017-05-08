@@ -25,8 +25,8 @@ export class KalturaMetadataListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaMetadata, subType : 'KalturaMetadata'}
+                objectType : { type : 'c', default : 'KalturaMetadataListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaMetadata, subType : 'KalturaMetadata' }
             }
         );
         return result;

@@ -30,9 +30,9 @@ export class KalturaEntryResource extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryResource'  },
-				entryId : { type : 's'   },
-				flavorParamsId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaEntryResource' },
+				entryId : { type : 's' },
+				flavorParamsId : { type : 'n' }
             }
         );
         return result;

@@ -47,17 +47,17 @@ export class KalturaDistributionJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionJobData'  },
-				distributionProfileId : { type : 'n'   },
-				distributionProfile : { type : 'o'   , fallbackConstructor :  KalturaDistributionProfile, subType : 'KalturaDistributionProfile'},
-				entryDistributionId : { type : 'n'   },
-				entryDistribution : { type : 'o'   , fallbackConstructor :  KalturaEntryDistribution, subType : 'KalturaEntryDistribution'},
-				remoteId : { type : 's'   },
-				providerType : { type : 'es'   , subType : 'KalturaDistributionProviderType'},
-				providerData : { type : 'o'   , fallbackConstructor :  KalturaDistributionJobProviderData, subType : 'KalturaDistributionJobProviderData'},
-				results : { type : 's'   },
-				sentData : { type : 's'   },
-				mediaFiles : { type : 'a'   , fallbackConstructor :  KalturaDistributionRemoteMediaFile, subType : 'KalturaDistributionRemoteMediaFile'}
+                objectType : { type : 'c', default : 'KalturaDistributionJobData' },
+				distributionProfileId : { type : 'n' },
+				distributionProfile : { type : 'o', subTypeConstructor : KalturaDistributionProfile, subType : 'KalturaDistributionProfile' },
+				entryDistributionId : { type : 'n' },
+				entryDistribution : { type : 'o', subTypeConstructor : KalturaEntryDistribution, subType : 'KalturaEntryDistribution' },
+				remoteId : { type : 's' },
+				providerType : { type : 'es', subTypeConstructor : KalturaDistributionProviderType, subType : 'KalturaDistributionProviderType' },
+				providerData : { type : 'o', subTypeConstructor : KalturaDistributionJobProviderData, subType : 'KalturaDistributionJobProviderData' },
+				results : { type : 's' },
+				sentData : { type : 's' },
+				mediaFiles : { type : 'a', subTypeConstructor : KalturaDistributionRemoteMediaFile, subType : 'KalturaDistributionRemoteMediaFile' }
             }
         );
         return result;

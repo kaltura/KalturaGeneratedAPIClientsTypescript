@@ -47,20 +47,20 @@ export class KalturaYouTubeDistributionJobProviderData extends KalturaConfigurab
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYouTubeDistributionJobProviderData'  },
-				videoAssetFilePath : { type : 's'   },
-				thumbAssetFilePath : { type : 's'   },
-				captionAssetIds : { type : 's'   },
-				sftpDirectory : { type : 's'   },
-				sftpMetadataFilename : { type : 's'   },
-				currentPlaylists : { type : 's'   },
-				newPlaylists : { type : 's'   },
-				submitXml : { type : 's'   },
-				updateXml : { type : 's'   },
-				deleteXml : { type : 's'   },
-				googleClientId : { type : 's'   },
-				googleClientSecret : { type : 's'   },
-				googleTokenData : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaYouTubeDistributionJobProviderData' },
+				videoAssetFilePath : { type : 's' },
+				thumbAssetFilePath : { type : 's' },
+				captionAssetIds : { type : 's' },
+				sftpDirectory : { type : 's' },
+				sftpMetadataFilename : { type : 's' },
+				currentPlaylists : { type : 's' },
+				newPlaylists : { type : 's' },
+				submitXml : { type : 's' },
+				updateXml : { type : 's' },
+				deleteXml : { type : 's' },
+				googleClientId : { type : 's' },
+				googleClientSecret : { type : 's' },
+				googleTokenData : { type : 's' }
             }
         );
         return result;

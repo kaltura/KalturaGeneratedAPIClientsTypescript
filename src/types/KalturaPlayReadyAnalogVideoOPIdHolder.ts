@@ -24,8 +24,8 @@ export class KalturaPlayReadyAnalogVideoOPIdHolder extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyAnalogVideoOPIdHolder'  },
-				type : { type : 'es'   , subType : 'KalturaPlayReadyAnalogVideoOPId'}
+                objectType : { type : 'c', default : 'KalturaPlayReadyAnalogVideoOPIdHolder' },
+				type : { type : 'es', subTypeConstructor : KalturaPlayReadyAnalogVideoOPId, subType : 'KalturaPlayReadyAnalogVideoOPId' }
             }
         );
         return result;

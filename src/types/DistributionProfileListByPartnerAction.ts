@@ -28,10 +28,10 @@ export class DistributionProfileListByPartnerAction extends KalturaRequest<Kaltu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
-				action : { type : 'c' , default : 'listByPartner'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'contentdistribution_distributionprofile' },
+				action : { type : 'c', default : 'listByPartner' },
+				filter : { type : 'o', subTypeConstructor : KalturaPartnerFilter, subType : 'KalturaPartnerFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

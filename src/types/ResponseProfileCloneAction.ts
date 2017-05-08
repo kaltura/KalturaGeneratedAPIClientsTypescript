@@ -28,10 +28,10 @@ export class ResponseProfileCloneAction extends KalturaRequest<KalturaResponsePr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'clone'  },
-				id : { type : 'n'   },
-				profile : { type : 'o'   , fallbackConstructor :  KalturaResponseProfile, subType : 'KalturaResponseProfile'}
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'clone' },
+				id : { type : 'n' },
+				profile : { type : 'o', subTypeConstructor : KalturaResponseProfile, subType : 'KalturaResponseProfile' }
             }
         );
         return result;

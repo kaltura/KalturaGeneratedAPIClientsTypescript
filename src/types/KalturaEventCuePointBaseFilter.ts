@@ -26,9 +26,9 @@ export class KalturaEventCuePointBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventCuePointBaseFilter'  },
-				eventTypeEqual : { type : 'es'   , subType : 'KalturaEventType'},
-				eventTypeIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaEventCuePointBaseFilter' },
+				eventTypeEqual : { type : 'es', subTypeConstructor : KalturaEventType, subType : 'KalturaEventType' },
+				eventTypeIn : { type : 's' }
             }
         );
         return result;

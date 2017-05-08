@@ -25,8 +25,8 @@ export class KalturaRemotePathListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRemotePathListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaRemotePath, subType : 'KalturaRemotePath'}
+                objectType : { type : 'c', default : 'KalturaRemotePathListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaRemotePath, subType : 'KalturaRemotePath' }
             }
         );
         return result;

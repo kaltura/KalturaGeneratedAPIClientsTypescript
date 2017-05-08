@@ -24,9 +24,9 @@ export class CaptionAssetGetAction extends KalturaRequest<KalturaCaptionAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'get'  },
-				captionAssetId : { type : 's'   }
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'get' },
+				captionAssetId : { type : 's' }
             }
         );
         return result;

@@ -26,8 +26,8 @@ export class KalturaWebcamTokenResource extends KalturaDataCenterContentResource
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWebcamTokenResource'  },
-				token : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaWebcamTokenResource' },
+				token : { type : 's' }
             }
         );
         return result;

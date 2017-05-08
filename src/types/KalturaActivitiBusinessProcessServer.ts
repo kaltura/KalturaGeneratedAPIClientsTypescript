@@ -32,12 +32,12 @@ export class KalturaActivitiBusinessProcessServer extends KalturaBusinessProcess
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaActivitiBusinessProcessServer'  },
-				host : { type : 's'   },
-				port : { type : 'n'   },
-				protocol : { type : 'es'   , subType : 'KalturaActivitiBusinessProcessServerProtocol'},
-				username : { type : 's'   },
-				password : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaActivitiBusinessProcessServer' },
+				host : { type : 's' },
+				port : { type : 'n' },
+				protocol : { type : 'es', subTypeConstructor : KalturaActivitiBusinessProcessServerProtocol, subType : 'KalturaActivitiBusinessProcessServerProtocol' },
+				username : { type : 's' },
+				password : { type : 's' }
             }
         );
         return result;

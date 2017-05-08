@@ -23,7 +23,7 @@ export class KalturaUiConfAdminFilter extends KalturaUiConfAdminBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUiConfAdminFilter'  }
+                objectType : { type : 'c', default : 'KalturaUiConfAdminFilter' }
             }
         );
         return result;

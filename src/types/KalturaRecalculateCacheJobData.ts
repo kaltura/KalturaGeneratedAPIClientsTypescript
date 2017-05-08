@@ -23,7 +23,7 @@ export class KalturaRecalculateCacheJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRecalculateCacheJobData'  }
+                objectType : { type : 'c', default : 'KalturaRecalculateCacheJobData' }
             }
         );
         return result;

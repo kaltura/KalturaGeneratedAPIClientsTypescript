@@ -30,11 +30,11 @@ export class KalturaCategoryEntryAdvancedFilter extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryEntryAdvancedFilter'  },
-				categoriesMatchOr : { type : 's'   },
-				categoryEntryStatusIn : { type : 's'   },
-				orderBy : { type : 'es'   , subType : 'KalturaCategoryEntryAdvancedOrderBy'},
-				categoryIdEqual : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaCategoryEntryAdvancedFilter' },
+				categoriesMatchOr : { type : 's' },
+				categoryEntryStatusIn : { type : 's' },
+				orderBy : { type : 'es', subTypeConstructor : KalturaCategoryEntryAdvancedOrderBy, subType : 'KalturaCategoryEntryAdvancedOrderBy' },
+				categoryIdEqual : { type : 'n' }
             }
         );
         return result;

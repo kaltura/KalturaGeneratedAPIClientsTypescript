@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddMrssValidateAction extends Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'addMrssValidate'  },
-				id : { type : 'n'   },
-				xsdData : { type : 's'   }
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'addMrssValidate' },
+				id : { type : 'n' },
+				xsdData : { type : 's' }
             }
         );
         return result;

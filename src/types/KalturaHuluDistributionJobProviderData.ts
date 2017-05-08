@@ -35,12 +35,12 @@ export class KalturaHuluDistributionJobProviderData extends KalturaConfigurableD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHuluDistributionJobProviderData'  },
-				videoAssetFilePath : { type : 's'   },
-				thumbAssetFilePath : { type : 's'   },
-				cuePoints : { type : 'a'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'},
-				fileBaseName : { type : 's'   },
-				captionLocalPaths : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'}
+                objectType : { type : 'c', default : 'KalturaHuluDistributionJobProviderData' },
+				videoAssetFilePath : { type : 's' },
+				thumbAssetFilePath : { type : 's' },
+				cuePoints : { type : 'a', subTypeConstructor : KalturaCuePoint, subType : 'KalturaCuePoint' },
+				fileBaseName : { type : 's' },
+				captionLocalPaths : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' }
             }
         );
         return result;

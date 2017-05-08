@@ -23,7 +23,7 @@ export class KalturaIdeticDistributionProfileFilter extends KalturaIdeticDistrib
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIdeticDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaIdeticDistributionProfileFilter' }
             }
         );
         return result;

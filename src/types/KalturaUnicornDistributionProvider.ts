@@ -23,7 +23,7 @@ export class KalturaUnicornDistributionProvider extends KalturaDistributionProvi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUnicornDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaUnicornDistributionProvider' }
             }
         );
         return result;

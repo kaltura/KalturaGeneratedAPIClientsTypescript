@@ -31,10 +31,10 @@ export class CaptionParamsListAction extends KalturaRequest<KalturaCaptionParams
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionparams'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaCaptionParamsFilter, subType : 'KalturaCaptionParamsFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'caption_captionparams' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaCaptionParamsFilter, subType : 'KalturaCaptionParamsFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

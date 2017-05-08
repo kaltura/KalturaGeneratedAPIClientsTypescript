@@ -25,8 +25,8 @@ export class KalturaEntryDistributionListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryDistributionListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaEntryDistribution, subType : 'KalturaEntryDistribution'}
+                objectType : { type : 'c', default : 'KalturaEntryDistributionListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaEntryDistribution, subType : 'KalturaEntryDistribution' }
             }
         );
         return result;

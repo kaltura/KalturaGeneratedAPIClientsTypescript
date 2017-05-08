@@ -27,9 +27,9 @@ export class MixingAddAction extends KalturaRequest<KalturaMixEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing'  },
-				action : { type : 'c' , default : 'add'  },
-				mixEntry : { type : 'o'   , fallbackConstructor :  KalturaMixEntry, subType : 'KalturaMixEntry'}
+                service : { type : 'c', default : 'mixing' },
+				action : { type : 'c', default : 'add' },
+				mixEntry : { type : 'o', subTypeConstructor : KalturaMixEntry, subType : 'KalturaMixEntry' }
             }
         );
         return result;

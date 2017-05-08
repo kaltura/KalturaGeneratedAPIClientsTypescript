@@ -26,9 +26,9 @@ export class KalturaEntryContext extends KalturaContext {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryContext'  },
-				entryId : { type : 's'   },
-				followEntryRedirect : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaEntryContext' },
+				entryId : { type : 's' },
+				followEntryRedirect : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

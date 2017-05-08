@@ -26,10 +26,10 @@ export class EntryServerNodeUpdateAction extends KalturaRequest<KalturaEntryServ
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'entryservernode'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				entryServerNode : { type : 'o'   , fallbackConstructor :  KalturaEntryServerNode, subType : 'KalturaEntryServerNode'}
+                service : { type : 'c', default : 'entryservernode' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				entryServerNode : { type : 'o', subTypeConstructor : KalturaEntryServerNode, subType : 'KalturaEntryServerNode' }
             }
         );
         return result;

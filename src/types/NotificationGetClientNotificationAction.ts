@@ -29,10 +29,10 @@ export class NotificationGetClientNotificationAction extends KalturaRequest<Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'notification'  },
-				action : { type : 'c' , default : 'getClientNotification'  },
-				entryId : { type : 's'   },
-				type : { type : 'en'   , subType : 'KalturaNotificationType'}
+                service : { type : 'c', default : 'notification' },
+				action : { type : 'c', default : 'getClientNotification' },
+				entryId : { type : 's' },
+				type : { type : 'en', subTypeConstructor : KalturaNotificationType, subType : 'KalturaNotificationType' }
             }
         );
         return result;

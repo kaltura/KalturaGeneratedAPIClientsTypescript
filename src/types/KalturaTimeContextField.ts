@@ -25,8 +25,8 @@ export class KalturaTimeContextField extends KalturaIntegerField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTimeContextField'  },
-				offset : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaTimeContextField' },
+				offset : { type : 'n' }
             }
         );
         return result;

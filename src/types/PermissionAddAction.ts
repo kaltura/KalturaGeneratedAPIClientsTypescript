@@ -26,9 +26,9 @@ export class PermissionAddAction extends KalturaRequest<KalturaPermission> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permission'  },
-				action : { type : 'c' , default : 'add'  },
-				permission : { type : 'o'   , fallbackConstructor :  KalturaPermission, subType : 'KalturaPermission'}
+                service : { type : 'c', default : 'permission' },
+				action : { type : 'c', default : 'add' },
+				permission : { type : 'o', subTypeConstructor : KalturaPermission, subType : 'KalturaPermission' }
             }
         );
         return result;

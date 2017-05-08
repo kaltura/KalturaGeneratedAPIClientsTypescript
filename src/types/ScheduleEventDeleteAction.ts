@@ -26,9 +26,9 @@ export class ScheduleEventDeleteAction extends KalturaRequest<KalturaScheduleEve
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent'  },
-				action : { type : 'c' , default : 'delete'  },
-				scheduleEventId : { type : 'n'   }
+                service : { type : 'c', default : 'schedule_scheduleevent' },
+				action : { type : 'c', default : 'delete' },
+				scheduleEventId : { type : 'n' }
             }
         );
         return result;

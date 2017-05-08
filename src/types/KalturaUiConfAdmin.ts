@@ -23,8 +23,8 @@ export class KalturaUiConfAdmin extends KalturaUiConf {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUiConfAdmin'  },
-				isPublic : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaUiConfAdmin' },
+				isPublic : { type : 'b' }
             }
         );
         return result;

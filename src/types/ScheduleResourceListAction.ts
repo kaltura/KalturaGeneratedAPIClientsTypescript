@@ -30,10 +30,10 @@ export class ScheduleResourceListAction extends KalturaRequest<KalturaScheduleRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleresource'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaScheduleResourceFilter, subType : 'KalturaScheduleResourceFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'schedule_scheduleresource' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaScheduleResourceFilter, subType : 'KalturaScheduleResourceFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

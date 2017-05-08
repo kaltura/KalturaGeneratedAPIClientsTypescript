@@ -28,10 +28,10 @@ export class LiveChannelSegmentUpdateAction extends KalturaRequest<KalturaLiveCh
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannelsegment'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				liveChannelSegment : { type : 'o'   , fallbackConstructor :  KalturaLiveChannelSegment, subType : 'KalturaLiveChannelSegment'}
+                service : { type : 'c', default : 'livechannelsegment' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				liveChannelSegment : { type : 'o', subTypeConstructor : KalturaLiveChannelSegment, subType : 'KalturaLiveChannelSegment' }
             }
         );
         return result;

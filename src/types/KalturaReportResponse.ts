@@ -27,9 +27,9 @@ export class KalturaReportResponse extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportResponse'  },
-				columns : { type : 's'   },
-				results : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'}
+                objectType : { type : 'c', default : 'KalturaReportResponse' },
+				columns : { type : 's' },
+				results : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' }
             }
         );
         return result;

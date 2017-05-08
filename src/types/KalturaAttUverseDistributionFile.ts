@@ -30,11 +30,11 @@ export class KalturaAttUverseDistributionFile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionFile'  },
-				remoteFilename : { type : 's'   },
-				localFilePath : { type : 's'   },
-				assetType : { type : 'es'   , subType : 'KalturaAssetType'},
-				assetId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAttUverseDistributionFile' },
+				remoteFilename : { type : 's' },
+				localFilePath : { type : 's' },
+				assetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
+				assetId : { type : 's' }
             }
         );
         return result;

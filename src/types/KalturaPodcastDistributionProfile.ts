@@ -26,10 +26,10 @@ export class KalturaPodcastDistributionProfile extends KalturaDistributionProfil
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPodcastDistributionProfile'  },
-				xsl : { type : 's'   },
-				feedId : { type : 's'  , readOnly : true },
-				metadataProfileId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaPodcastDistributionProfile' },
+				xsl : { type : 's' },
+				feedId : { type : 's', readOnly : true },
+				metadataProfileId : { type : 'n' }
             }
         );
         return result;

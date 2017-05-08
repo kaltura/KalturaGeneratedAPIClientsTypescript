@@ -32,11 +32,11 @@ export class MediaAddFromBulkAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addFromBulk'  },
-				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
-				url : { type : 's'   },
-				bulkUploadId : { type : 'n'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addFromBulk' },
+				mediaEntry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' },
+				url : { type : 's' },
+				bulkUploadId : { type : 'n' }
             }
         );
         return result;

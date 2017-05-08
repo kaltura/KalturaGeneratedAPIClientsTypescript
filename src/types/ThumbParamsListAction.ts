@@ -31,10 +31,10 @@ export class ThumbParamsListAction extends KalturaRequest<KalturaThumbParamsList
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaThumbParamsFilter, subType : 'KalturaThumbParamsFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'thumbparams' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaThumbParamsFilter, subType : 'KalturaThumbParamsFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

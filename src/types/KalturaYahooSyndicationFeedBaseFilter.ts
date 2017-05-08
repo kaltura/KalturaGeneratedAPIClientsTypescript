@@ -23,7 +23,7 @@ export class KalturaYahooSyndicationFeedBaseFilter extends KalturaBaseSyndicatio
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYahooSyndicationFeedBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaYahooSyndicationFeedBaseFilter' }
             }
         );
         return result;

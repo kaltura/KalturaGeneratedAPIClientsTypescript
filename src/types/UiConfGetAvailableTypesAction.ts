@@ -26,8 +26,8 @@ export class UiConfGetAvailableTypesAction extends KalturaRequest<KalturaUiConfT
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf'  },
-				action : { type : 'c' , default : 'getAvailableTypes'  }
+                service : { type : 'c', default : 'uiconf' },
+				action : { type : 'c', default : 'getAvailableTypes' }
             }
         );
         return result;

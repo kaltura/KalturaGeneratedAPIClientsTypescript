@@ -23,7 +23,7 @@ export class KalturaQuickPlayDistributionProfileBaseFilter extends KalturaConfig
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionProfileBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaQuickPlayDistributionProfileBaseFilter' }
             }
         );
         return result;

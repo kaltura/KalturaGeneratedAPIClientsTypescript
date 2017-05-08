@@ -29,10 +29,10 @@ export class FlavorAssetGetDownloadUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'getDownloadUrl'  },
-				id : { type : 's'   },
-				useCdn : { type : 'b'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'getDownloadUrl' },
+				id : { type : 's' },
+				useCdn : { type : 'b' }
             }
         );
         return result;

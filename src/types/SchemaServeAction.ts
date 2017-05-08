@@ -27,9 +27,9 @@ export class SchemaServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schema'  },
-				action : { type : 'c' , default : 'serve'  },
-				type : { type : 'es'   , subType : 'KalturaSchemaType'}
+                service : { type : 'c', default : 'schema' },
+				action : { type : 'c', default : 'serve' },
+				type : { type : 'es', subTypeConstructor : KalturaSchemaType, subType : 'KalturaSchemaType' }
             }
         );
         return result;

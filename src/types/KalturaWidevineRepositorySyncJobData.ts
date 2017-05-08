@@ -30,11 +30,11 @@ export class KalturaWidevineRepositorySyncJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineRepositorySyncJobData'  },
-				syncMode : { type : 'en'   , subType : 'KalturaWidevineRepositorySyncMode'},
-				wvAssetIds : { type : 's'   },
-				modifiedAttributes : { type : 's'   },
-				monitorSyncCompletion : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaWidevineRepositorySyncJobData' },
+				syncMode : { type : 'en', subTypeConstructor : KalturaWidevineRepositorySyncMode, subType : 'KalturaWidevineRepositorySyncMode' },
+				wvAssetIds : { type : 's' },
+				modifiedAttributes : { type : 's' },
+				monitorSyncCompletion : { type : 'n' }
             }
         );
         return result;

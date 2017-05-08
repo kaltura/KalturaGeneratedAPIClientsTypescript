@@ -26,9 +26,9 @@ export class AttachmentAssetServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset'  },
-				action : { type : 'c' , default : 'serve'  },
-				attachmentAssetId : { type : 's'   }
+                service : { type : 'c', default : 'attachment_attachmentasset' },
+				action : { type : 'c', default : 'serve' },
+				attachmentAssetId : { type : 's' }
             }
         );
         return result;

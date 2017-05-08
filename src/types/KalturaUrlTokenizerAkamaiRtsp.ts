@@ -25,9 +25,9 @@ export class KalturaUrlTokenizerAkamaiRtsp extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerAkamaiRtsp'  },
-				host : { type : 's'   },
-				cpcode : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizerAkamaiRtsp' },
+				host : { type : 's' },
+				cpcode : { type : 'n' }
             }
         );
         return result;

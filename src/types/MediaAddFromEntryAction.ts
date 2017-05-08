@@ -30,11 +30,11 @@ export class MediaAddFromEntryAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addFromEntry'  },
-				sourceEntryId : { type : 's'   },
-				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
-				sourceFlavorParamsId : { type : 'n'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addFromEntry' },
+				sourceEntryId : { type : 's' },
+				mediaEntry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' },
+				sourceFlavorParamsId : { type : 'n' }
             }
         );
         return result;

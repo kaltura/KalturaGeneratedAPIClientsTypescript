@@ -23,7 +23,7 @@ export class KalturaAnnotationFilter extends KalturaAnnotationBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnnotationFilter'  }
+                objectType : { type : 'c', default : 'KalturaAnnotationFilter' }
             }
         );
         return result;

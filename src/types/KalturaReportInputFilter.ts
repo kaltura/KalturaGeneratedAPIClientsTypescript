@@ -34,13 +34,13 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportInputFilter'  },
-				keywords : { type : 's'   },
-				searchInTags : { type : 'b'   },
-				searchInAdminTags : { type : 'b'   },
-				categories : { type : 's'   },
-				timeZoneOffset : { type : 'n'   },
-				interval : { type : 'es'   , subType : 'KalturaReportInterval'}
+                objectType : { type : 'c', default : 'KalturaReportInputFilter' },
+				keywords : { type : 's' },
+				searchInTags : { type : 'b' },
+				searchInAdminTags : { type : 'b' },
+				categories : { type : 's' },
+				timeZoneOffset : { type : 'n' },
+				interval : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' }
             }
         );
         return result;

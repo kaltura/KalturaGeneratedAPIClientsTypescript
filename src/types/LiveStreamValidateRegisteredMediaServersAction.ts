@@ -26,9 +26,9 @@ export class LiveStreamValidateRegisteredMediaServersAction extends KalturaReque
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'validateRegisteredMediaServers'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'validateRegisteredMediaServers' },
+				entryId : { type : 's' }
             }
         );
         return result;

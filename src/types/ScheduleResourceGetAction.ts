@@ -26,9 +26,9 @@ export class ScheduleResourceGetAction extends KalturaRequest<KalturaScheduleRes
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleresource'  },
-				action : { type : 'c' , default : 'get'  },
-				scheduleResourceId : { type : 'n'   }
+                service : { type : 'c', default : 'schedule_scheduleresource' },
+				action : { type : 'c', default : 'get' },
+				scheduleResourceId : { type : 'n' }
             }
         );
         return result;

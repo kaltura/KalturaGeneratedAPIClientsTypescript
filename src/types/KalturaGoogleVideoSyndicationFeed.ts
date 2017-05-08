@@ -24,8 +24,8 @@ export class KalturaGoogleVideoSyndicationFeed extends KalturaBaseSyndicationFee
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGoogleVideoSyndicationFeed'  },
-				adultContent : { type : 'es'   , subType : 'KalturaGoogleSyndicationFeedAdultValues'}
+                objectType : { type : 'c', default : 'KalturaGoogleVideoSyndicationFeed' },
+				adultContent : { type : 'es', subTypeConstructor : KalturaGoogleSyndicationFeedAdultValues, subType : 'KalturaGoogleSyndicationFeedAdultValues' }
             }
         );
         return result;

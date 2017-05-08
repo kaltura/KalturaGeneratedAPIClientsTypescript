@@ -25,8 +25,8 @@ export class KalturaScheduledTaskProfileListResponse extends KalturaListResponse
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduledTaskProfileListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile'}
+                objectType : { type : 'c', default : 'KalturaScheduledTaskProfileListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile' }
             }
         );
         return result;

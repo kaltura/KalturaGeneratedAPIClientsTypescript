@@ -39,16 +39,16 @@ export class KalturaBatchHistoryData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBatchHistoryData'  },
-				schedulerId : { type : 'n'   },
-				workerId : { type : 'n'   },
-				batchIndex : { type : 'n'   },
-				timeStamp : { type : 'n'   },
-				message : { type : 's'   },
-				errType : { type : 'n'   },
-				errNumber : { type : 'n'   },
-				hostName : { type : 's'   },
-				sessionId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBatchHistoryData' },
+				schedulerId : { type : 'n' },
+				workerId : { type : 'n' },
+				batchIndex : { type : 'n' },
+				timeStamp : { type : 'n' },
+				message : { type : 's' },
+				errType : { type : 'n' },
+				errNumber : { type : 'n' },
+				hostName : { type : 's' },
+				sessionId : { type : 's' }
             }
         );
         return result;

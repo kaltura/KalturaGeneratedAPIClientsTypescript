@@ -44,18 +44,18 @@ export class KalturaCategoryEntryBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryEntryBaseFilter'  },
-				categoryIdEqual : { type : 'n'   },
-				categoryIdIn : { type : 's'   },
-				entryIdEqual : { type : 's'   },
-				entryIdIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				categoryFullIdsStartsWith : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaCategoryEntryStatus'},
-				statusIn : { type : 's'   },
-				creatorUserIdEqual : { type : 's'   },
-				creatorUserIdIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaCategoryEntryBaseFilter' },
+				categoryIdEqual : { type : 'n' },
+				categoryIdIn : { type : 's' },
+				entryIdEqual : { type : 's' },
+				entryIdIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				categoryFullIdsStartsWith : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaCategoryEntryStatus, subType : 'KalturaCategoryEntryStatus' },
+				statusIn : { type : 's' },
+				creatorUserIdEqual : { type : 's' },
+				creatorUserIdIn : { type : 's' }
             }
         );
         return result;

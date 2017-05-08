@@ -28,13 +28,13 @@ export class KalturaPartnerStatistics extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPartnerStatistics'  },
-				packageBandwidthAndStorage : { type : 'n'  , readOnly : true },
-				hosting : { type : 'n'  , readOnly : true },
-				bandwidth : { type : 'n'  , readOnly : true },
-				usage : { type : 'n'  , readOnly : true },
-				usagePercent : { type : 'n'  , readOnly : true },
-				reachedLimitDate : { type : 'n'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaPartnerStatistics' },
+				packageBandwidthAndStorage : { type : 'n', readOnly : true },
+				hosting : { type : 'n', readOnly : true },
+				bandwidth : { type : 'n', readOnly : true },
+				usage : { type : 'n', readOnly : true },
+				usagePercent : { type : 'n', readOnly : true },
+				reachedLimitDate : { type : 'n', readOnly : true }
             }
         );
         return result;

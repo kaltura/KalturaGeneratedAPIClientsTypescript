@@ -23,7 +23,7 @@ export class KalturaApiActionPermissionItemFilter extends KalturaApiActionPermis
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaApiActionPermissionItemFilter'  }
+                objectType : { type : 'c', default : 'KalturaApiActionPermissionItemFilter' }
             }
         );
         return result;

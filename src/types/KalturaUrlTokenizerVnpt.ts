@@ -25,9 +25,9 @@ export class KalturaUrlTokenizerVnpt extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerVnpt'  },
-				tokenizationFormat : { type : 'n'   },
-				shouldIncludeClientIp : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizerVnpt' },
+				tokenizationFormat : { type : 'n' },
+				shouldIncludeClientIp : { type : 'b' }
             }
         );
         return result;

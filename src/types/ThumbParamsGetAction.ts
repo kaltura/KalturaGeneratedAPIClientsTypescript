@@ -26,9 +26,9 @@ export class ThumbParamsGetAction extends KalturaRequest<KalturaThumbParams> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'thumbparams' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

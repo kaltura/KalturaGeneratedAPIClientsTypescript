@@ -25,9 +25,9 @@ export class KalturaSystemPartnerFilter extends KalturaPartnerFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSystemPartnerFilter'  },
-				partnerParentIdEqual : { type : 'n'   },
-				partnerParentIdIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaSystemPartnerFilter' },
+				partnerParentIdEqual : { type : 'n' },
+				partnerParentIdIn : { type : 's' }
             }
         );
         return result;

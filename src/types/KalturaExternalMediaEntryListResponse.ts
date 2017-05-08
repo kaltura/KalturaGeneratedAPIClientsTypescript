@@ -25,8 +25,8 @@ export class KalturaExternalMediaEntryListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaExternalMediaEntry, subType : 'KalturaExternalMediaEntry'}
+                objectType : { type : 'c', default : 'KalturaExternalMediaEntryListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaExternalMediaEntry, subType : 'KalturaExternalMediaEntry' }
             }
         );
         return result;

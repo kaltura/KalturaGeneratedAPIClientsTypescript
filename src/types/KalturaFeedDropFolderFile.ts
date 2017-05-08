@@ -25,9 +25,9 @@ export class KalturaFeedDropFolderFile extends KalturaDropFolderFile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFeedDropFolderFile'  },
-				hash : { type : 's'   },
-				feedXmlPath : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFeedDropFolderFile' },
+				hash : { type : 's' },
+				feedXmlPath : { type : 's' }
             }
         );
         return result;

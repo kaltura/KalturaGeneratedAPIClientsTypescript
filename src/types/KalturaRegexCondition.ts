@@ -23,7 +23,7 @@ export class KalturaRegexCondition extends KalturaMatchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRegexCondition'  }
+                objectType : { type : 'c', default : 'KalturaRegexCondition' }
             }
         );
         return result;

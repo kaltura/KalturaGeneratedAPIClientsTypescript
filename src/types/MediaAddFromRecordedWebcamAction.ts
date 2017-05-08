@@ -28,10 +28,10 @@ export class MediaAddFromRecordedWebcamAction extends KalturaRequest<KalturaMedi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addFromRecordedWebcam'  },
-				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
-				webcamTokenId : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addFromRecordedWebcam' },
+				mediaEntry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' },
+				webcamTokenId : { type : 's' }
             }
         );
         return result;

@@ -38,16 +38,16 @@ export class KalturaAttUverseDistributionProfile extends KalturaConfigurableDist
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionProfile'  },
-				feedUrl : { type : 's'  , readOnly : true },
-				ftpHost : { type : 's'   },
-				ftpUsername : { type : 's'   },
-				ftpPassword : { type : 's'   },
-				ftpPath : { type : 's'   },
-				channelTitle : { type : 's'   },
-				flavorAssetFilenameXslt : { type : 's'   },
-				thumbnailAssetFilenameXslt : { type : 's'   },
-				assetFilenameXslt : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAttUverseDistributionProfile' },
+				feedUrl : { type : 's', readOnly : true },
+				ftpHost : { type : 's' },
+				ftpUsername : { type : 's' },
+				ftpPassword : { type : 's' },
+				ftpPath : { type : 's' },
+				channelTitle : { type : 's' },
+				flavorAssetFilenameXslt : { type : 's' },
+				thumbnailAssetFilenameXslt : { type : 's' },
+				assetFilenameXslt : { type : 's' }
             }
         );
         return result;

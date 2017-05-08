@@ -28,10 +28,10 @@ export class MediaAddFromFlavorAssetAction extends KalturaRequest<KalturaMediaEn
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addFromFlavorAsset'  },
-				sourceFlavorAssetId : { type : 's'   },
-				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addFromFlavorAsset' },
+				sourceFlavorAssetId : { type : 's' },
+				mediaEntry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' }
             }
         );
         return result;

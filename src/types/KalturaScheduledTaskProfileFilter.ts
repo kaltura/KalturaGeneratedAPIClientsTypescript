@@ -23,7 +23,7 @@ export class KalturaScheduledTaskProfileFilter extends KalturaScheduledTaskProfi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduledTaskProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaScheduledTaskProfileFilter' }
             }
         );
         return result;

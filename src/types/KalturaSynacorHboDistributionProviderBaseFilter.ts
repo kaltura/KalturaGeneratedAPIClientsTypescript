@@ -23,7 +23,7 @@ export class KalturaSynacorHboDistributionProviderBaseFilter extends KalturaDist
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSynacorHboDistributionProviderBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaSynacorHboDistributionProviderBaseFilter' }
             }
         );
         return result;

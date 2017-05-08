@@ -25,9 +25,9 @@ export class KalturaDeliveryProfileRtmp extends KalturaDeliveryProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileRtmp'  },
-				enforceRtmpe : { type : 'b'   },
-				prefix : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileRtmp' },
+				enforceRtmpe : { type : 'b' },
+				prefix : { type : 's' }
             }
         );
         return result;

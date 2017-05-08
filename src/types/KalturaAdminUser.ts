@@ -23,7 +23,7 @@ export class KalturaAdminUser extends KalturaUser {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAdminUser'  }
+                objectType : { type : 'c', default : 'KalturaAdminUser' }
             }
         );
         return result;

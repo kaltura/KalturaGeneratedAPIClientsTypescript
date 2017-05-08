@@ -29,10 +29,10 @@ export class CategoryIndexAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category'  },
-				action : { type : 'c' , default : 'index'  },
-				id : { type : 'n'   },
-				shouldUpdate : { type : 'b'   }
+                service : { type : 'c', default : 'category' },
+				action : { type : 'c', default : 'index' },
+				id : { type : 'n' },
+				shouldUpdate : { type : 'b' }
             }
         );
         return result;

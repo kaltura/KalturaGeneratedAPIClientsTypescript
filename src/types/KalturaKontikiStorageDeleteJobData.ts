@@ -25,9 +25,9 @@ export class KalturaKontikiStorageDeleteJobData extends KalturaStorageDeleteJobD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaKontikiStorageDeleteJobData'  },
-				contentMoid : { type : 's'   },
-				serviceToken : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaKontikiStorageDeleteJobData' },
+				contentMoid : { type : 's' },
+				serviceToken : { type : 's' }
             }
         );
         return result;

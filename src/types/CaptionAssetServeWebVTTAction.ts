@@ -34,12 +34,12 @@ export class CaptionAssetServeWebVTTAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'serveWebVTT'  },
-				captionAssetId : { type : 's'   },
-				segmentDuration : { type : 'n'   },
-				segmentIndex : { type : 'n'   },
-				localTimestamp : { type : 'n'   }
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'serveWebVTT' },
+				captionAssetId : { type : 's' },
+				segmentDuration : { type : 'n' },
+				segmentIndex : { type : 'n' },
+				localTimestamp : { type : 'n' }
             }
         );
         return result;

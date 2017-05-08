@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileGenericHdsBaseFilter extends KalturaDeliveryP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericHdsBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileGenericHdsBaseFilter' }
             }
         );
         return result;

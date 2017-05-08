@@ -25,9 +25,9 @@ export class KalturaResponseProfileHolder extends KalturaBaseResponseProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfileHolder'  },
-				id : { type : 'n'   },
-				systemName : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaResponseProfileHolder' },
+				id : { type : 'n' },
+				systemName : { type : 's' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaVerizonVcastDistributionProviderBaseFilter extends KalturaDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVerizonVcastDistributionProviderBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaVerizonVcastDistributionProviderBaseFilter' }
             }
         );
         return result;

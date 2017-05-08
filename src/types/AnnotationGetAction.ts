@@ -26,9 +26,9 @@ export class AnnotationGetAction extends KalturaRequest<KalturaCuePoint> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'annotation_annotation' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 's' }
             }
         );
         return result;

@@ -27,9 +27,9 @@ export class PermissionItemAddAction extends KalturaRequest<KalturaPermissionIte
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permissionitem'  },
-				action : { type : 'c' , default : 'add'  },
-				permissionItem : { type : 'o'   , fallbackConstructor :  KalturaPermissionItem, subType : 'KalturaPermissionItem'}
+                service : { type : 'c', default : 'permissionitem' },
+				action : { type : 'c', default : 'add' },
+				permissionItem : { type : 'o', subTypeConstructor : KalturaPermissionItem, subType : 'KalturaPermissionItem' }
             }
         );
         return result;

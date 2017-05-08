@@ -25,8 +25,8 @@ export class KalturaConversionProfileAssetParamsListResponse extends KalturaList
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionProfileAssetParamsListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaConversionProfileAssetParams, subType : 'KalturaConversionProfileAssetParams'}
+                objectType : { type : 'c', default : 'KalturaConversionProfileAssetParamsListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaConversionProfileAssetParams, subType : 'KalturaConversionProfileAssetParams' }
             }
         );
         return result;

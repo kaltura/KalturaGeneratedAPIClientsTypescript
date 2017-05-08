@@ -27,10 +27,10 @@ export class KalturaYahooDistributionJobProviderData extends KalturaConfigurable
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYahooDistributionJobProviderData'  },
-				smallThumbPath : { type : 's'   },
-				largeThumbPath : { type : 's'   },
-				videoAssetFilePath : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaYahooDistributionJobProviderData' },
+				smallThumbPath : { type : 's' },
+				largeThumbPath : { type : 's' },
+				videoAssetFilePath : { type : 's' }
             }
         );
         return result;

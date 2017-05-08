@@ -28,10 +28,10 @@ export class CategoryEntryAddFromBulkUploadAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry'  },
-				action : { type : 'c' , default : 'addFromBulkUpload'  },
-				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkServiceData, subType : 'KalturaBulkServiceData'},
-				bulkUploadCategoryEntryData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadCategoryEntryData, subType : 'KalturaBulkUploadCategoryEntryData'}
+                service : { type : 'c', default : 'categoryentry' },
+				action : { type : 'c', default : 'addFromBulkUpload' },
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkServiceData, subType : 'KalturaBulkServiceData' },
+				bulkUploadCategoryEntryData : { type : 'o', subTypeConstructor : KalturaBulkUploadCategoryEntryData, subType : 'KalturaBulkUploadCategoryEntryData' }
             }
         );
         return result;

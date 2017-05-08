@@ -24,9 +24,9 @@ export class KalturaRemotePath extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRemotePath'  },
-				storageProfileId : { type : 'n'  , readOnly : true },
-				uri : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaRemotePath' },
+				storageProfileId : { type : 'n', readOnly : true },
+				uri : { type : 's', readOnly : true }
             }
         );
         return result;

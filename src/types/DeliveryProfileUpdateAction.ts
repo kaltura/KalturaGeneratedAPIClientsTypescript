@@ -28,10 +28,10 @@ export class DeliveryProfileUpdateAction extends KalturaRequest<KalturaDeliveryP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				delivery : { type : 'o'   , fallbackConstructor :  KalturaDeliveryProfile, subType : 'KalturaDeliveryProfile'}
+                service : { type : 'c', default : 'deliveryprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				delivery : { type : 'o', subTypeConstructor : KalturaDeliveryProfile, subType : 'KalturaDeliveryProfile' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class VirusScanProfileGetAction extends KalturaRequest<KalturaVirusScanPr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				virusScanProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'virusscan_virusscanprofile' },
+				action : { type : 'c', default : 'get' },
+				virusScanProfileId : { type : 'n' }
             }
         );
         return result;

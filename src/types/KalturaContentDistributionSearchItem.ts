@@ -38,14 +38,14 @@ export class KalturaContentDistributionSearchItem extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaContentDistributionSearchItem'  },
-				noDistributionProfiles : { type : 'b'   },
-				distributionProfileId : { type : 'n'   },
-				distributionSunStatus : { type : 'en'   , subType : 'KalturaEntryDistributionSunStatus'},
-				entryDistributionFlag : { type : 'en'   , subType : 'KalturaEntryDistributionFlag'},
-				entryDistributionStatus : { type : 'en'   , subType : 'KalturaEntryDistributionStatus'},
-				hasEntryDistributionValidationErrors : { type : 'b'   },
-				entryDistributionValidationErrors : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaContentDistributionSearchItem' },
+				noDistributionProfiles : { type : 'b' },
+				distributionProfileId : { type : 'n' },
+				distributionSunStatus : { type : 'en', subTypeConstructor : KalturaEntryDistributionSunStatus, subType : 'KalturaEntryDistributionSunStatus' },
+				entryDistributionFlag : { type : 'en', subTypeConstructor : KalturaEntryDistributionFlag, subType : 'KalturaEntryDistributionFlag' },
+				entryDistributionStatus : { type : 'en', subTypeConstructor : KalturaEntryDistributionStatus, subType : 'KalturaEntryDistributionStatus' },
+				hasEntryDistributionValidationErrors : { type : 'b' },
+				entryDistributionValidationErrors : { type : 's' }
             }
         );
         return result;

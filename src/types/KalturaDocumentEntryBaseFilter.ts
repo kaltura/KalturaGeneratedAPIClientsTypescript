@@ -30,11 +30,11 @@ export class KalturaDocumentEntryBaseFilter extends KalturaBaseEntryFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDocumentEntryBaseFilter'  },
-				documentTypeEqual : { type : 'en'   , subType : 'KalturaDocumentType'},
-				documentTypeIn : { type : 's'   },
-				assetParamsIdsMatchOr : { type : 's'   },
-				assetParamsIdsMatchAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDocumentEntryBaseFilter' },
+				documentTypeEqual : { type : 'en', subTypeConstructor : KalturaDocumentType, subType : 'KalturaDocumentType' },
+				documentTypeIn : { type : 's' },
+				assetParamsIdsMatchOr : { type : 's' },
+				assetParamsIdsMatchAnd : { type : 's' }
             }
         );
         return result;

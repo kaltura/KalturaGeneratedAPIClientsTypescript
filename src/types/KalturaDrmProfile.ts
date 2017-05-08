@@ -42,18 +42,18 @@ export class KalturaDrmProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmProfile'  },
-				id : { type : 'n'  , readOnly : true },
-				partnerId : { type : 'n'   },
-				name : { type : 's'   },
-				description : { type : 's'   },
-				provider : { type : 'es'   , subType : 'KalturaDrmProviderType'},
-				status : { type : 'en'   , subType : 'KalturaDrmProfileStatus'},
-				licenseServerUrl : { type : 's'   },
-				defaultPolicy : { type : 's'   },
-				createdAt : { type : 'n'  , readOnly : true },
-				updatedAt : { type : 'n'  , readOnly : true },
-				signingKey : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDrmProfile' },
+				id : { type : 'n', readOnly : true },
+				partnerId : { type : 'n' },
+				name : { type : 's' },
+				description : { type : 's' },
+				provider : { type : 'es', subTypeConstructor : KalturaDrmProviderType, subType : 'KalturaDrmProviderType' },
+				status : { type : 'en', subTypeConstructor : KalturaDrmProfileStatus, subType : 'KalturaDrmProfileStatus' },
+				licenseServerUrl : { type : 's' },
+				defaultPolicy : { type : 's' },
+				createdAt : { type : 'n', readOnly : true },
+				updatedAt : { type : 'n', readOnly : true },
+				signingKey : { type : 's' }
             }
         );
         return result;

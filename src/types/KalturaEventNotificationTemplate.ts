@@ -57,23 +57,23 @@ export class KalturaEventNotificationTemplate extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationTemplate'  },
-				id : { type : 'n'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				name : { type : 's'   },
-				systemName : { type : 's'   },
-				description : { type : 's'   },
-				type : { type : 'es'   , subType : 'KalturaEventNotificationTemplateType'},
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaEventNotificationTemplateStatus'},
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				manualDispatchEnabled : { type : 'b'   },
-				automaticDispatchEnabled : { type : 'b'   },
-				eventType : { type : 'es'   , subType : 'KalturaEventNotificationEventType'},
-				eventObjectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
-				eventConditions : { type : 'a'   , fallbackConstructor :  KalturaCondition, subType : 'KalturaCondition'},
-				contentParameters : { type : 'a'   , fallbackConstructor :  KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter'},
-				userParameters : { type : 'a'   , fallbackConstructor :  KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter'}
+                objectType : { type : 'c', default : 'KalturaEventNotificationTemplate' },
+				id : { type : 'n', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				name : { type : 's' },
+				systemName : { type : 's' },
+				description : { type : 's' },
+				type : { type : 'es', subTypeConstructor : KalturaEventNotificationTemplateType, subType : 'KalturaEventNotificationTemplateType' },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaEventNotificationTemplateStatus, subType : 'KalturaEventNotificationTemplateStatus' },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				manualDispatchEnabled : { type : 'b' },
+				automaticDispatchEnabled : { type : 'b' },
+				eventType : { type : 'es', subTypeConstructor : KalturaEventNotificationEventType, subType : 'KalturaEventNotificationEventType' },
+				eventObjectType : { type : 'es', subTypeConstructor : KalturaEventNotificationEventObjectType, subType : 'KalturaEventNotificationEventObjectType' },
+				eventConditions : { type : 'a', subTypeConstructor : KalturaCondition, subType : 'KalturaCondition' },
+				contentParameters : { type : 'a', subTypeConstructor : KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter' },
+				userParameters : { type : 'a', subTypeConstructor : KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter' }
             }
         );
         return result;

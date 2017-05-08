@@ -31,10 +31,10 @@ export class KalturaSshUrlResource extends KalturaUrlResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSshUrlResource'  },
-				privateKey : { type : 's'   },
-				publicKey : { type : 's'   },
-				keyPassphrase : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaSshUrlResource' },
+				privateKey : { type : 's' },
+				publicKey : { type : 's' },
+				keyPassphrase : { type : 's' }
             }
         );
         return result;

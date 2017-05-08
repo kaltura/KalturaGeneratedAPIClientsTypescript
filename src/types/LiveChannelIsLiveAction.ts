@@ -26,9 +26,9 @@ export class LiveChannelIsLiveAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel'  },
-				action : { type : 'c' , default : 'isLive'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'livechannel' },
+				action : { type : 'c', default : 'isLive' },
+				id : { type : 's' }
             }
         );
         return result;

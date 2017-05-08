@@ -26,9 +26,9 @@ export class FlavorAssetGetAction extends KalturaRequest<KalturaFlavorAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 's' }
             }
         );
         return result;

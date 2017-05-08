@@ -28,11 +28,11 @@ export class TagIndexCategoryEntryTagsAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'tagsearch_tag'  },
-				action : { type : 'c' , default : 'indexCategoryEntryTags'  },
-				categoryId : { type : 'n'   },
-				pcToDecrement : { type : 's'   },
-				pcToIncrement : { type : 's'   }
+                service : { type : 'c', default : 'tagsearch_tag' },
+				action : { type : 'c', default : 'indexCategoryEntryTags' },
+				categoryId : { type : 'n' },
+				pcToDecrement : { type : 's' },
+				pcToIncrement : { type : 's' }
             }
         );
         return result;

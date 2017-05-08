@@ -31,11 +31,11 @@ export class CategoryUserIndexAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser'  },
-				action : { type : 'c' , default : 'index'  },
-				userId : { type : 's'   },
-				categoryId : { type : 'n'   },
-				shouldUpdate : { type : 'b'   }
+                service : { type : 'c', default : 'categoryuser' },
+				action : { type : 'c', default : 'index' },
+				userId : { type : 's' },
+				categoryId : { type : 'n' },
+				shouldUpdate : { type : 'b' }
             }
         );
         return result;

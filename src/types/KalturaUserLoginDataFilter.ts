@@ -23,7 +23,7 @@ export class KalturaUserLoginDataFilter extends KalturaUserLoginDataBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserLoginDataFilter'  }
+                objectType : { type : 'c', default : 'KalturaUserLoginDataFilter' }
             }
         );
         return result;

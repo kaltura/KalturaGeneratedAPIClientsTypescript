@@ -32,11 +32,11 @@ export class MediaConvertAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'convert'  },
-				entryId : { type : 's'   },
-				conversionProfileId : { type : 'n'   },
-				dynamicConversionAttributes : { type : 'a'   , fallbackConstructor :  KalturaConversionAttribute, subType : 'KalturaConversionAttribute'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'convert' },
+				entryId : { type : 's' },
+				conversionProfileId : { type : 'n' },
+				dynamicConversionAttributes : { type : 'a', subTypeConstructor : KalturaConversionAttribute, subType : 'KalturaConversionAttribute' }
             }
         );
         return result;

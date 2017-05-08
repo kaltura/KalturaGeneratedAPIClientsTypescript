@@ -24,9 +24,9 @@ export class UploadUploadAction extends KalturaUploadRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'upload'  },
-				action : { type : 'c' , default : 'upload'  },
-				fileData : { type : 'f'   }
+                service : { type : 'c', default : 'upload' },
+				action : { type : 'c', default : 'upload' },
+				fileData : { type : 'f' }
             }
         );
         return result;

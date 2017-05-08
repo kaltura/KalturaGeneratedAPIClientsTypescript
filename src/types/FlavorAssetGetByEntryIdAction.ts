@@ -26,9 +26,9 @@ export class FlavorAssetGetByEntryIdAction extends KalturaRequest<KalturaFlavorA
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'getByEntryId'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'getByEntryId' },
+				entryId : { type : 's' }
             }
         );
         return result;

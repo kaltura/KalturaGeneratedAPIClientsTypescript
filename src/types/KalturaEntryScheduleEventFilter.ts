@@ -27,10 +27,10 @@ export class KalturaEntryScheduleEventFilter extends KalturaEntryScheduleEventBa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryScheduleEventFilter'  },
-				parentCategoryIdsLike : { type : 's'   },
-				parentCategoryIdsMultiLikeOr : { type : 's'   },
-				parentCategoryIdsMultiLikeAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaEntryScheduleEventFilter' },
+				parentCategoryIdsLike : { type : 's' },
+				parentCategoryIdsMultiLikeOr : { type : 's' },
+				parentCategoryIdsMultiLikeAnd : { type : 's' }
             }
         );
         return result;

@@ -30,10 +30,10 @@ export class ResponseProfileListAction extends KalturaRequest<KalturaResponsePro
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaResponseProfileFilter, subType : 'KalturaResponseProfileFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaResponseProfileFilter, subType : 'KalturaResponseProfileFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaPlayReadyProfile extends KalturaDrmProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyProfile'  },
-				keySeed : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaPlayReadyProfile' },
+				keySeed : { type : 's' }
             }
         );
         return result;

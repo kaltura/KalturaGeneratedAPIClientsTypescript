@@ -28,10 +28,10 @@ export class LikeListAction extends KalturaRequest<KalturaLikeListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'like_like'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaLikeFilter, subType : 'KalturaLikeFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'like_like' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaLikeFilter, subType : 'KalturaLikeFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

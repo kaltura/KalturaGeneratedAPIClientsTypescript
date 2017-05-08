@@ -23,7 +23,7 @@ export class KalturaDoubleClickDistributionProfileFilter extends KalturaDoubleCl
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaDoubleClickDistributionProfileFilter' }
             }
         );
         return result;

@@ -27,10 +27,10 @@ export class KalturaQuestionCuePointBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuestionCuePointBaseFilter'  },
-				questionLike : { type : 's'   },
-				questionMultiLikeOr : { type : 's'   },
-				questionMultiLikeAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaQuestionCuePointBaseFilter' },
+				questionLike : { type : 's' },
+				questionMultiLikeOr : { type : 's' },
+				questionMultiLikeAnd : { type : 's' }
             }
         );
         return result;

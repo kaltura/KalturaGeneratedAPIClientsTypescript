@@ -31,10 +31,10 @@ export class AnalyticsQueryAction extends KalturaRequest<KalturaReportResponse> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'analytics'  },
-				action : { type : 'c' , default : 'query'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaAnalyticsFilter, subType : 'KalturaAnalyticsFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'analytics' },
+				action : { type : 'c', default : 'query' },
+				filter : { type : 'o', subTypeConstructor : KalturaAnalyticsFilter, subType : 'KalturaAnalyticsFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

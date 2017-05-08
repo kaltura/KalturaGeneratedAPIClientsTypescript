@@ -38,16 +38,16 @@ export class KalturaAccessControlProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlProfile'  },
-				id : { type : 'n'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				name : { type : 's'   },
-				systemName : { type : 's'   },
-				description : { type : 's'   },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				isDefault : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				rules : { type : 'a'   , fallbackConstructor :  KalturaRule, subType : 'KalturaRule'}
+                objectType : { type : 'c', default : 'KalturaAccessControlProfile' },
+				id : { type : 'n', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				name : { type : 's' },
+				systemName : { type : 's' },
+				description : { type : 's' },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				isDefault : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				rules : { type : 'a', subTypeConstructor : KalturaRule, subType : 'KalturaRule' }
             }
         );
         return result;

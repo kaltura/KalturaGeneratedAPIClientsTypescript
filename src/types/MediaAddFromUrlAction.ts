@@ -29,10 +29,10 @@ export class MediaAddFromUrlAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addFromUrl'  },
-				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
-				url : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addFromUrl' },
+				mediaEntry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' },
+				url : { type : 's' }
             }
         );
         return result;

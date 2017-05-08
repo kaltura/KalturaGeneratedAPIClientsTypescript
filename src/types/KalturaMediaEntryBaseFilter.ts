@@ -43,17 +43,17 @@ export class KalturaMediaEntryBaseFilter extends KalturaPlayableEntryFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaEntryBaseFilter'  },
-				mediaTypeEqual : { type : 'en'   , subType : 'KalturaMediaType'},
-				mediaTypeIn : { type : 's'   },
-				sourceTypeEqual : { type : 'es'   , subType : 'KalturaSourceType'},
-				sourceTypeNotEqual : { type : 'es'   , subType : 'KalturaSourceType'},
-				sourceTypeIn : { type : 's'   },
-				sourceTypeNotIn : { type : 's'   },
-				mediaDateGreaterThanOrEqual : { type : 'd'   },
-				mediaDateLessThanOrEqual : { type : 'd'   },
-				flavorParamsIdsMatchOr : { type : 's'   },
-				flavorParamsIdsMatchAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaMediaEntryBaseFilter' },
+				mediaTypeEqual : { type : 'en', subTypeConstructor : KalturaMediaType, subType : 'KalturaMediaType' },
+				mediaTypeIn : { type : 's' },
+				sourceTypeEqual : { type : 'es', subTypeConstructor : KalturaSourceType, subType : 'KalturaSourceType' },
+				sourceTypeNotEqual : { type : 'es', subTypeConstructor : KalturaSourceType, subType : 'KalturaSourceType' },
+				sourceTypeIn : { type : 's' },
+				sourceTypeNotIn : { type : 's' },
+				mediaDateGreaterThanOrEqual : { type : 'd' },
+				mediaDateLessThanOrEqual : { type : 'd' },
+				flavorParamsIdsMatchOr : { type : 's' },
+				flavorParamsIdsMatchAnd : { type : 's' }
             }
         );
         return result;

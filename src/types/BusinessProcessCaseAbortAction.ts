@@ -31,11 +31,11 @@ export class BusinessProcessCaseAbortAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase'  },
-				action : { type : 'c' , default : 'abort'  },
-				objectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
-				objectId : { type : 's'   },
-				businessProcessStartNotificationTemplateId : { type : 'n'   }
+                service : { type : 'c', default : 'businessprocessnotification_businessprocesscase' },
+				action : { type : 'c', default : 'abort' },
+				objectType : { type : 'es', subTypeConstructor : KalturaEventNotificationEventObjectType, subType : 'KalturaEventNotificationEventObjectType' },
+				objectId : { type : 's' },
+				businessProcessStartNotificationTemplateId : { type : 'n' }
             }
         );
         return result;

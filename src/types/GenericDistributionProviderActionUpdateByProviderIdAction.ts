@@ -31,11 +31,11 @@ export class GenericDistributionProviderActionUpdateByProviderIdAction extends K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'updateByProviderId'  },
-				genericDistributionProviderId : { type : 'n'   },
-				actionType : { type : 'en'   , subType : 'KalturaDistributionAction'},
-				genericDistributionProviderAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction'}
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'updateByProviderId' },
+				genericDistributionProviderId : { type : 'n' },
+				actionType : { type : 'en', subTypeConstructor : KalturaDistributionAction, subType : 'KalturaDistributionAction' },
+				genericDistributionProviderAction : { type : 'o', subTypeConstructor : KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction' }
             }
         );
         return result;

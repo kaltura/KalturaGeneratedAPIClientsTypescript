@@ -31,11 +31,11 @@ export class MediaUpdateThumbnailAction extends KalturaRequest<KalturaMediaEntry
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'updateThumbnail'  },
-				entryId : { type : 's'   },
-				timeOffset : { type : 'n'   },
-				flavorParamsId : { type : 'n'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'updateThumbnail' },
+				entryId : { type : 's' },
+				timeOffset : { type : 'n' },
+				flavorParamsId : { type : 'n' }
             }
         );
         return result;

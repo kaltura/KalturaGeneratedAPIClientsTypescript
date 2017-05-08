@@ -28,10 +28,10 @@ export class StorageProfileUpdateAction extends KalturaRequest<KalturaStoragePro
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				storageProfileId : { type : 'n'   },
-				storageProfile : { type : 'o'   , fallbackConstructor :  KalturaStorageProfile, subType : 'KalturaStorageProfile'}
+                service : { type : 'c', default : 'storageprofile' },
+				action : { type : 'c', default : 'update' },
+				storageProfileId : { type : 'n' },
+				storageProfile : { type : 'o', subTypeConstructor : KalturaStorageProfile, subType : 'KalturaStorageProfile' }
             }
         );
         return result;

@@ -24,8 +24,8 @@ export class KalturaTubeMogulSyndicationFeed extends KalturaBaseSyndicationFeed 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTubeMogulSyndicationFeed'  },
-				category : { type : 'es'  , readOnly : true , subType : 'KalturaTubeMogulSyndicationFeedCategories'}
+                objectType : { type : 'c', default : 'KalturaTubeMogulSyndicationFeed' },
+				category : { type : 'es', readOnly : true, subTypeConstructor : KalturaTubeMogulSyndicationFeedCategories, subType : 'KalturaTubeMogulSyndicationFeedCategories' }
             }
         );
         return result;

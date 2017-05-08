@@ -28,10 +28,10 @@ export class MetadataProfileUpdateDefinitionFromFileAction extends KalturaUpload
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'updateDefinitionFromFile'  },
-				id : { type : 'n'   },
-				xsdFile : { type : 'f'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'updateDefinitionFromFile' },
+				id : { type : 'n' },
+				xsdFile : { type : 'f' }
             }
         );
         return result;

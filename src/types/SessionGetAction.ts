@@ -26,9 +26,9 @@ export class SessionGetAction extends KalturaRequest<KalturaSessionInfo> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session'  },
-				action : { type : 'c' , default : 'get'  },
-				session : { type : 's'   }
+                service : { type : 'c', default : 'session' },
+				action : { type : 'c', default : 'get' },
+				session : { type : 's' }
             }
         );
         return result;

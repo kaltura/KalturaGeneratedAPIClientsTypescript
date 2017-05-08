@@ -27,10 +27,10 @@ export class KalturaParseMultiLanguageCaptionAssetJobData extends KalturaJobData
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaParseMultiLanguageCaptionAssetJobData'  },
-				multiLanaguageCaptionAssetId : { type : 's'   },
-				entryId : { type : 's'   },
-				fileLocation : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaParseMultiLanguageCaptionAssetJobData' },
+				multiLanaguageCaptionAssetId : { type : 's' },
+				entryId : { type : 's' },
+				fileLocation : { type : 's' }
             }
         );
         return result;

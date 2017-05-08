@@ -29,11 +29,11 @@ export class KalturaCategoryUserAdvancedFilter extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryUserAdvancedFilter'  },
-				memberIdEq : { type : 's'   },
-				memberIdIn : { type : 's'   },
-				memberPermissionsMatchOr : { type : 's'   },
-				memberPermissionsMatchAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaCategoryUserAdvancedFilter' },
+				memberIdEq : { type : 's' },
+				memberIdIn : { type : 's' },
+				memberPermissionsMatchOr : { type : 's' },
+				memberPermissionsMatchAnd : { type : 's' }
             }
         );
         return result;

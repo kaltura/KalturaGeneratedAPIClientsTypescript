@@ -29,10 +29,10 @@ export class EntryDistributionServeReturnedDataAction extends KalturaRequest<str
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'serveReturnedData'  },
-				id : { type : 'n'   },
-				actionType : { type : 'en'   , subType : 'KalturaDistributionAction'}
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'serveReturnedData' },
+				id : { type : 'n' },
+				actionType : { type : 'en', subTypeConstructor : KalturaDistributionAction, subType : 'KalturaDistributionAction' }
             }
         );
         return result;

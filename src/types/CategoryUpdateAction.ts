@@ -28,10 +28,10 @@ export class CategoryUpdateAction extends KalturaRequest<KalturaCategory> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				category : { type : 'o'   , fallbackConstructor :  KalturaCategory, subType : 'KalturaCategory'}
+                service : { type : 'c', default : 'category' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				category : { type : 'o', subTypeConstructor : KalturaCategory, subType : 'KalturaCategory' }
             }
         );
         return result;

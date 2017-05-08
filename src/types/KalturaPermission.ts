@@ -44,20 +44,20 @@ export class KalturaPermission extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPermission'  },
-				id : { type : 'n'  , readOnly : true },
-				type : { type : 'en'  , readOnly : true , subType : 'KalturaPermissionType'},
-				name : { type : 's'   },
-				friendlyName : { type : 's'   },
-				description : { type : 's'   },
-				status : { type : 'en'   , subType : 'KalturaPermissionStatus'},
-				partnerId : { type : 'n'  , readOnly : true },
-				dependsOnPermissionNames : { type : 's'   },
-				tags : { type : 's'   },
-				permissionItemsIds : { type : 's'   },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				partnerGroup : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaPermission' },
+				id : { type : 'n', readOnly : true },
+				type : { type : 'en', readOnly : true, subTypeConstructor : KalturaPermissionType, subType : 'KalturaPermissionType' },
+				name : { type : 's' },
+				friendlyName : { type : 's' },
+				description : { type : 's' },
+				status : { type : 'en', subTypeConstructor : KalturaPermissionStatus, subType : 'KalturaPermissionStatus' },
+				partnerId : { type : 'n', readOnly : true },
+				dependsOnPermissionNames : { type : 's' },
+				tags : { type : 's' },
+				permissionItemsIds : { type : 's' },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				partnerGroup : { type : 's' }
             }
         );
         return result;

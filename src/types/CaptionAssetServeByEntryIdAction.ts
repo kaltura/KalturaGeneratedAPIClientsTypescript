@@ -28,10 +28,10 @@ export class CaptionAssetServeByEntryIdAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'serveByEntryId'  },
-				entryId : { type : 's'   },
-				captionParamId : { type : 'n'   }
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'serveByEntryId' },
+				entryId : { type : 's' },
+				captionParamId : { type : 'n' }
             }
         );
         return result;

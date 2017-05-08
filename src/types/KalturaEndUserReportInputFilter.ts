@@ -29,11 +29,11 @@ export class KalturaEndUserReportInputFilter extends KalturaReportInputFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEndUserReportInputFilter'  },
-				application : { type : 's'   },
-				userIds : { type : 's'   },
-				playbackContext : { type : 's'   },
-				ancestorPlaybackContext : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaEndUserReportInputFilter' },
+				application : { type : 's' },
+				userIds : { type : 's' },
+				playbackContext : { type : 's' },
+				ancestorPlaybackContext : { type : 's' }
             }
         );
         return result;

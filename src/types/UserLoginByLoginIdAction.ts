@@ -38,14 +38,14 @@ export class UserLoginByLoginIdAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user'  },
-				action : { type : 'c' , default : 'loginByLoginId'  },
-				loginId : { type : 's'   },
-				password : { type : 's'   },
-				partnerId : { type : 'n'   },
-				expiry : { type : 'n'   },
-				privileges : { type : 's'   },
-				otp : { type : 's'   }
+                service : { type : 'c', default : 'user' },
+				action : { type : 'c', default : 'loginByLoginId' },
+				loginId : { type : 's' },
+				password : { type : 's' },
+				partnerId : { type : 'n' },
+				expiry : { type : 'n' },
+				privileges : { type : 's' },
+				otp : { type : 's' }
             }
         );
         return result;

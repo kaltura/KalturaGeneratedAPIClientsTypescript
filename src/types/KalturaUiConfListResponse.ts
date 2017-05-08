@@ -25,8 +25,8 @@ export class KalturaUiConfListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUiConfListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaUiConf, subType : 'KalturaUiConf'}
+                objectType : { type : 'c', default : 'KalturaUiConfListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaUiConf, subType : 'KalturaUiConf' }
             }
         );
         return result;

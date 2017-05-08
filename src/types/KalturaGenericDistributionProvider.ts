@@ -44,19 +44,19 @@ export class KalturaGenericDistributionProvider extends KalturaDistributionProvi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProvider'  },
-				id : { type : 'n'  , readOnly : true },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				isDefault : { type : 'b'   },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaGenericDistributionProviderStatus'},
-				optionalFlavorParamsIds : { type : 's'   },
-				requiredFlavorParamsIds : { type : 's'   },
-				optionalThumbDimensions : { type : 'a'   , fallbackConstructor :  KalturaDistributionThumbDimensions, subType : 'KalturaDistributionThumbDimensions'},
-				requiredThumbDimensions : { type : 'a'   , fallbackConstructor :  KalturaDistributionThumbDimensions, subType : 'KalturaDistributionThumbDimensions'},
-				editableFields : { type : 's'   },
-				mandatoryFields : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaGenericDistributionProvider' },
+				id : { type : 'n', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				isDefault : { type : 'b' },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaGenericDistributionProviderStatus, subType : 'KalturaGenericDistributionProviderStatus' },
+				optionalFlavorParamsIds : { type : 's' },
+				requiredFlavorParamsIds : { type : 's' },
+				optionalThumbDimensions : { type : 'a', subTypeConstructor : KalturaDistributionThumbDimensions, subType : 'KalturaDistributionThumbDimensions' },
+				requiredThumbDimensions : { type : 'a', subTypeConstructor : KalturaDistributionThumbDimensions, subType : 'KalturaDistributionThumbDimensions' },
+				editableFields : { type : 's' },
+				mandatoryFields : { type : 's' }
             }
         );
         return result;

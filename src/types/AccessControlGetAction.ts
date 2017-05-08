@@ -26,9 +26,9 @@ export class AccessControlGetAction extends KalturaRequest<KalturaAccessControl>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrol'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'accesscontrol' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

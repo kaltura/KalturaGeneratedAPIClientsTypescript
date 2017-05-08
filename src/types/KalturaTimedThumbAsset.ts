@@ -23,8 +23,8 @@ export class KalturaTimedThumbAsset extends KalturaThumbAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTimedThumbAsset'  },
-				cuePointId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaTimedThumbAsset' },
+				cuePointId : { type : 's' }
             }
         );
         return result;

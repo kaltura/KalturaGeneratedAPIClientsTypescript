@@ -23,7 +23,7 @@ export class KalturaMixEntryBaseFilter extends KalturaPlayableEntryFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMixEntryBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaMixEntryBaseFilter' }
             }
         );
         return result;

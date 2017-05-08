@@ -29,10 +29,10 @@ export class BaseEntryListFlagsAction extends KalturaRequest<KalturaModerationFl
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'listFlags'  },
-				entryId : { type : 's'   },
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'listFlags' },
+				entryId : { type : 's' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

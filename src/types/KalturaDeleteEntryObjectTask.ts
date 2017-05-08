@@ -23,7 +23,7 @@ export class KalturaDeleteEntryObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeleteEntryObjectTask'  }
+                objectType : { type : 'c', default : 'KalturaDeleteEntryObjectTask' }
             }
         );
         return result;

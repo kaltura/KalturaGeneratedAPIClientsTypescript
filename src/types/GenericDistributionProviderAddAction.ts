@@ -26,9 +26,9 @@ export class GenericDistributionProviderAddAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovider'  },
-				action : { type : 'c' , default : 'add'  },
-				genericDistributionProvider : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProvider, subType : 'KalturaGenericDistributionProvider'}
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovider' },
+				action : { type : 'c', default : 'add' },
+				genericDistributionProvider : { type : 'o', subTypeConstructor : KalturaGenericDistributionProvider, subType : 'KalturaGenericDistributionProvider' }
             }
         );
         return result;

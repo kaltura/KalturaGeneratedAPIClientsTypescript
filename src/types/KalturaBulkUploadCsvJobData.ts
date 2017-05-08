@@ -29,9 +29,9 @@ export class KalturaBulkUploadCsvJobData extends KalturaBulkUploadJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadCsvJobData'  },
-				csvVersion : { type : 'en'  , readOnly : true , subType : 'KalturaBulkUploadCsvVersion'},
-				columns : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'}
+                objectType : { type : 'c', default : 'KalturaBulkUploadCsvJobData' },
+				csvVersion : { type : 'en', readOnly : true, subTypeConstructor : KalturaBulkUploadCsvVersion, subType : 'KalturaBulkUploadCsvVersion' },
+				columns : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' }
             }
         );
         return result;

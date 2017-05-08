@@ -23,7 +23,7 @@ export class KalturaSyndicationDistributionProvider extends KalturaDistributionP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSyndicationDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaSyndicationDistributionProvider' }
             }
         );
         return result;

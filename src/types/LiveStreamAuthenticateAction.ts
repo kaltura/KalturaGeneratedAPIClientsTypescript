@@ -35,13 +35,13 @@ export class LiveStreamAuthenticateAction extends KalturaRequest<KalturaLiveStre
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'authenticate'  },
-				entryId : { type : 's'   },
-				token : { type : 's'   },
-				hostname : { type : 's'   },
-				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
-				applicationName : { type : 's'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'authenticate' },
+				entryId : { type : 's' },
+				token : { type : 's' },
+				hostname : { type : 's' },
+				mediaServerIndex : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' },
+				applicationName : { type : 's' }
             }
         );
         return result;

@@ -34,11 +34,11 @@ export class KalturaUiConfTypeInfo extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUiConfTypeInfo'  },
-				type : { type : 'en'   , subType : 'KalturaUiConfObjType'},
-				versions : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
-				directory : { type : 's'   },
-				filename : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUiConfTypeInfo' },
+				type : { type : 'en', subTypeConstructor : KalturaUiConfObjType, subType : 'KalturaUiConfObjType' },
+				versions : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				directory : { type : 's' },
+				filename : { type : 's' }
             }
         );
         return result;

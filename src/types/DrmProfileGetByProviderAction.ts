@@ -28,9 +28,9 @@ export class DrmProfileGetByProviderAction extends KalturaRequest<KalturaDrmProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmprofile'  },
-				action : { type : 'c' , default : 'getByProvider'  },
-				provider : { type : 'es'   , subType : 'KalturaDrmProviderType'}
+                service : { type : 'c', default : 'drm_drmprofile' },
+				action : { type : 'c', default : 'getByProvider' },
+				provider : { type : 'es', subTypeConstructor : KalturaDrmProviderType, subType : 'KalturaDrmProviderType' }
             }
         );
         return result;

@@ -28,10 +28,10 @@ export class DrmPolicyUpdateAction extends KalturaRequest<KalturaDrmPolicy> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmpolicy'  },
-				action : { type : 'c' , default : 'update'  },
-				drmPolicyId : { type : 'n'   },
-				drmPolicy : { type : 'o'   , fallbackConstructor :  KalturaDrmPolicy, subType : 'KalturaDrmPolicy'}
+                service : { type : 'c', default : 'drm_drmpolicy' },
+				action : { type : 'c', default : 'update' },
+				drmPolicyId : { type : 'n' },
+				drmPolicy : { type : 'o', subTypeConstructor : KalturaDrmPolicy, subType : 'KalturaDrmPolicy' }
             }
         );
         return result;

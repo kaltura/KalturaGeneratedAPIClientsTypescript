@@ -32,12 +32,12 @@ export class KalturaFlavorAssetBaseFilter extends KalturaAssetFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorAssetBaseFilter'  },
-				flavorParamsIdEqual : { type : 'n'   },
-				flavorParamsIdIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaFlavorAssetStatus'},
-				statusIn : { type : 's'   },
-				statusNotIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFlavorAssetBaseFilter' },
+				flavorParamsIdEqual : { type : 'n' },
+				flavorParamsIdIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaFlavorAssetStatus, subType : 'KalturaFlavorAssetStatus' },
+				statusIn : { type : 's' },
+				statusNotIn : { type : 's' }
             }
         );
         return result;

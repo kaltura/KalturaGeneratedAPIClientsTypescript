@@ -28,10 +28,10 @@ export class CuePointUpdateAction extends KalturaRequest<KalturaCuePoint> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				cuePoint : { type : 'o'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
+                service : { type : 'c', default : 'cuepoint_cuepoint' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				cuePoint : { type : 'o', subTypeConstructor : KalturaCuePoint, subType : 'KalturaCuePoint' }
             }
         );
         return result;

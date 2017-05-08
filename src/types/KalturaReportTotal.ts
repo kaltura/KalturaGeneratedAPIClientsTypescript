@@ -25,9 +25,9 @@ export class KalturaReportTotal extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportTotal'  },
-				header : { type : 's'   },
-				data : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaReportTotal' },
+				header : { type : 's' },
+				data : { type : 's' }
             }
         );
         return result;

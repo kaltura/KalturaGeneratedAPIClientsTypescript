@@ -29,10 +29,10 @@ export class MixingAppendMediaEntryAction extends KalturaRequest<KalturaMixEntry
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing'  },
-				action : { type : 'c' , default : 'appendMediaEntry'  },
-				mixEntryId : { type : 's'   },
-				mediaEntryId : { type : 's'   }
+                service : { type : 'c', default : 'mixing' },
+				action : { type : 'c', default : 'appendMediaEntry' },
+				mixEntryId : { type : 's' },
+				mediaEntryId : { type : 's' }
             }
         );
         return result;

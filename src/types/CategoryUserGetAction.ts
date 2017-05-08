@@ -28,10 +28,10 @@ export class CategoryUserGetAction extends KalturaRequest<KalturaCategoryUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser'  },
-				action : { type : 'c' , default : 'get'  },
-				categoryId : { type : 'n'   },
-				userId : { type : 's'   }
+                service : { type : 'c', default : 'categoryuser' },
+				action : { type : 'c', default : 'get' },
+				categoryId : { type : 'n' },
+				userId : { type : 's' }
             }
         );
         return result;

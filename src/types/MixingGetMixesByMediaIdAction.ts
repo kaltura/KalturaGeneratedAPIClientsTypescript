@@ -26,9 +26,9 @@ export class MixingGetMixesByMediaIdAction extends KalturaRequest<KalturaMixEntr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing'  },
-				action : { type : 'c' , default : 'getMixesByMediaId'  },
-				mediaEntryId : { type : 's'   }
+                service : { type : 'c', default : 'mixing' },
+				action : { type : 'c', default : 'getMixesByMediaId' },
+				mediaEntryId : { type : 's' }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class SessionStartWidgetSessionAction extends KalturaRequest<KalturaStart
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session'  },
-				action : { type : 'c' , default : 'startWidgetSession'  },
-				widgetId : { type : 's'   },
-				expiry : { type : 'n'   }
+                service : { type : 'c', default : 'session' },
+				action : { type : 'c', default : 'startWidgetSession' },
+				widgetId : { type : 's' },
+				expiry : { type : 'n' }
             }
         );
         return result;

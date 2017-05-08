@@ -23,7 +23,7 @@ export class KalturaCrossKalturaDistributionProfileFilter extends KalturaCrossKa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCrossKalturaDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaCrossKalturaDistributionProfileFilter' }
             }
         );
         return result;

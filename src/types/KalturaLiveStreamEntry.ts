@@ -51,23 +51,23 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamEntry'  },
-				streamRemoteId : { type : 's'  , readOnly : true },
-				streamRemoteBackupId : { type : 's'  , readOnly : true },
-				bitrates : { type : 'a'   , fallbackConstructor :  KalturaLiveStreamBitrate, subType : 'KalturaLiveStreamBitrate'},
-				primaryBroadcastingUrl : { type : 's'   },
-				secondaryBroadcastingUrl : { type : 's'   },
-				primaryRtspBroadcastingUrl : { type : 's'   },
-				secondaryRtspBroadcastingUrl : { type : 's'   },
-				streamName : { type : 's'   },
-				streamUrl : { type : 's'   },
-				hlsStreamUrl : { type : 's'   },
-				urlManager : { type : 's'   },
-				encodingIP1 : { type : 's'   },
-				encodingIP2 : { type : 's'   },
-				streamPassword : { type : 's'   },
-				streamUsername : { type : 's'  , readOnly : true },
-				primaryServerNodeId : { type : 'n'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaLiveStreamEntry' },
+				streamRemoteId : { type : 's', readOnly : true },
+				streamRemoteBackupId : { type : 's', readOnly : true },
+				bitrates : { type : 'a', subTypeConstructor : KalturaLiveStreamBitrate, subType : 'KalturaLiveStreamBitrate' },
+				primaryBroadcastingUrl : { type : 's' },
+				secondaryBroadcastingUrl : { type : 's' },
+				primaryRtspBroadcastingUrl : { type : 's' },
+				secondaryRtspBroadcastingUrl : { type : 's' },
+				streamName : { type : 's' },
+				streamUrl : { type : 's' },
+				hlsStreamUrl : { type : 's' },
+				urlManager : { type : 's' },
+				encodingIP1 : { type : 's' },
+				encodingIP2 : { type : 's' },
+				streamPassword : { type : 's' },
+				streamUsername : { type : 's', readOnly : true },
+				primaryServerNodeId : { type : 'n', readOnly : true }
             }
         );
         return result;

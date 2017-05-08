@@ -26,9 +26,9 @@ export class SyndicationFeedGetEntryCountAction extends KalturaRequest<KalturaSy
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'syndicationfeed'  },
-				action : { type : 'c' , default : 'getEntryCount'  },
-				feedId : { type : 's'   }
+                service : { type : 'c', default : 'syndicationfeed' },
+				action : { type : 'c', default : 'getEntryCount' },
+				feedId : { type : 's' }
             }
         );
         return result;

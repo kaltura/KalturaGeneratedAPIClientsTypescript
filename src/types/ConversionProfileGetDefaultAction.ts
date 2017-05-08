@@ -27,9 +27,9 @@ export class ConversionProfileGetDefaultAction extends KalturaRequest<KalturaCon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofile'  },
-				action : { type : 'c' , default : 'getDefault'  },
-				type : { type : 'es'   , subType : 'KalturaConversionProfileType'}
+                service : { type : 'c', default : 'conversionprofile' },
+				action : { type : 'c', default : 'getDefault' },
+				type : { type : 'es', subTypeConstructor : KalturaConversionProfileType, subType : 'KalturaConversionProfileType' }
             }
         );
         return result;

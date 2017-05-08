@@ -26,9 +26,9 @@ export class MetadataProfileListFieldsAction extends KalturaRequest<KalturaMetad
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'listFields'  },
-				metadataProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'listFields' },
+				metadataProfileId : { type : 'n' }
             }
         );
         return result;

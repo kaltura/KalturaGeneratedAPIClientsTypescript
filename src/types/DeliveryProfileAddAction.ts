@@ -26,9 +26,9 @@ export class DeliveryProfileAddAction extends KalturaRequest<KalturaDeliveryProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				delivery : { type : 'o'   , fallbackConstructor :  KalturaDeliveryProfile, subType : 'KalturaDeliveryProfile'}
+                service : { type : 'c', default : 'deliveryprofile' },
+				action : { type : 'c', default : 'add' },
+				delivery : { type : 'o', subTypeConstructor : KalturaDeliveryProfile, subType : 'KalturaDeliveryProfile' }
             }
         );
         return result;

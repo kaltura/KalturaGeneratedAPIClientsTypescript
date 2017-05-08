@@ -23,7 +23,7 @@ export class KalturaBulkUploadFilter extends KalturaBulkUploadBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadFilter'  }
+                objectType : { type : 'c', default : 'KalturaBulkUploadFilter' }
             }
         );
         return result;

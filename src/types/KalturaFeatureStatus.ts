@@ -26,9 +26,9 @@ export class KalturaFeatureStatus extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFeatureStatus'  },
-				type : { type : 'en'   , subType : 'KalturaFeatureStatusType'},
-				value : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaFeatureStatus' },
+				type : { type : 'en', subTypeConstructor : KalturaFeatureStatusType, subType : 'KalturaFeatureStatusType' },
+				value : { type : 'n' }
             }
         );
         return result;

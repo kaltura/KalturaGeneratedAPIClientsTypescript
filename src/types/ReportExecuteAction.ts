@@ -28,10 +28,10 @@ export class ReportExecuteAction extends KalturaRequest<KalturaReportResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report'  },
-				action : { type : 'c' , default : 'execute'  },
-				id : { type : 'n'   },
-				params : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
+                service : { type : 'c', default : 'report' },
+				action : { type : 'c', default : 'execute' },
+				id : { type : 'n' },
+				params : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
         );
         return result;

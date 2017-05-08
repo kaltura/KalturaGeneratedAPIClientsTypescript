@@ -23,7 +23,7 @@ export class KalturaControlPanelCommandFilter extends KalturaControlPanelCommand
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaControlPanelCommandFilter'  }
+                objectType : { type : 'c', default : 'KalturaControlPanelCommandFilter' }
             }
         );
         return result;

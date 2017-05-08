@@ -23,7 +23,7 @@ export class KalturaThumbParamsOutputFilter extends KalturaThumbParamsOutputBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbParamsOutputFilter'  }
+                objectType : { type : 'c', default : 'KalturaThumbParamsOutputFilter' }
             }
         );
         return result;

@@ -24,8 +24,8 @@ export class KalturaCategoryIdentifier extends KalturaObjectIdentifier {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryIdentifier'  },
-				identifier : { type : 'es'   , subType : 'KalturaCategoryIdentifierField'}
+                objectType : { type : 'c', default : 'KalturaCategoryIdentifier' },
+				identifier : { type : 'es', subTypeConstructor : KalturaCategoryIdentifierField, subType : 'KalturaCategoryIdentifierField' }
             }
         );
         return result;

@@ -30,11 +30,11 @@ export class DocumentsAddFromEntryAction extends KalturaRequest<KalturaDocumentE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents'  },
-				action : { type : 'c' , default : 'addFromEntry'  },
-				sourceEntryId : { type : 's'   },
-				documentEntry : { type : 'o'   , fallbackConstructor :  KalturaDocumentEntry, subType : 'KalturaDocumentEntry'},
-				sourceFlavorParamsId : { type : 'n'   }
+                service : { type : 'c', default : 'document_documents' },
+				action : { type : 'c', default : 'addFromEntry' },
+				sourceEntryId : { type : 's' },
+				documentEntry : { type : 'o', subTypeConstructor : KalturaDocumentEntry, subType : 'KalturaDocumentEntry' },
+				sourceFlavorParamsId : { type : 'n' }
             }
         );
         return result;

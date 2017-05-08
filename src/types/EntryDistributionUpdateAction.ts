@@ -28,10 +28,10 @@ export class EntryDistributionUpdateAction extends KalturaRequest<KalturaEntryDi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				entryDistribution : { type : 'o'   , fallbackConstructor :  KalturaEntryDistribution, subType : 'KalturaEntryDistribution'}
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				entryDistribution : { type : 'o', subTypeConstructor : KalturaEntryDistribution, subType : 'KalturaEntryDistribution' }
             }
         );
         return result;

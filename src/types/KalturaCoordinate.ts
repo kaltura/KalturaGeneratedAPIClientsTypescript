@@ -27,10 +27,10 @@ export class KalturaCoordinate extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCoordinate'  },
-				latitude : { type : 'n'   },
-				longitude : { type : 'n'   },
-				name : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaCoordinate' },
+				latitude : { type : 'n' },
+				longitude : { type : 'n' },
+				name : { type : 's' }
             }
         );
         return result;

@@ -27,9 +27,9 @@ export class ResponseProfileRecalculateAction extends KalturaRequest<KalturaResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'recalculate'  },
-				options : { type : 'o'   , fallbackConstructor :  KalturaResponseProfileCacheRecalculateOptions, subType : 'KalturaResponseProfileCacheRecalculateOptions'}
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'recalculate' },
+				options : { type : 'o', subTypeConstructor : KalturaResponseProfileCacheRecalculateOptions, subType : 'KalturaResponseProfileCacheRecalculateOptions' }
             }
         );
         return result;

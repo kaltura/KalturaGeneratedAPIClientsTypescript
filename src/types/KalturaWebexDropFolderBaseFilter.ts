@@ -23,7 +23,7 @@ export class KalturaWebexDropFolderBaseFilter extends KalturaDropFolderFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWebexDropFolderBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaWebexDropFolderBaseFilter' }
             }
         );
         return result;

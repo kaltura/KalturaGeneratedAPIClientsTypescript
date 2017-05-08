@@ -47,19 +47,19 @@ export class KalturaCategoryUserProviderFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryUserProviderFilter'  },
-				userIdEqual : { type : 's'   },
-				userIdIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaCategoryUserStatus'},
-				statusIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'n'   },
-				createdAtLessThanOrEqual : { type : 'n'   },
-				updatedAtGreaterThanOrEqual : { type : 'n'   },
-				updatedAtLessThanOrEqual : { type : 'n'   },
-				updateMethodEqual : { type : 'en'   , subType : 'KalturaUpdateMethodType'},
-				updateMethodIn : { type : 's'   },
-				permissionNamesMatchAnd : { type : 's'   },
-				permissionNamesMatchOr : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaCategoryUserProviderFilter' },
+				userIdEqual : { type : 's' },
+				userIdIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaCategoryUserStatus, subType : 'KalturaCategoryUserStatus' },
+				statusIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'n' },
+				createdAtLessThanOrEqual : { type : 'n' },
+				updatedAtGreaterThanOrEqual : { type : 'n' },
+				updatedAtLessThanOrEqual : { type : 'n' },
+				updateMethodEqual : { type : 'en', subTypeConstructor : KalturaUpdateMethodType, subType : 'KalturaUpdateMethodType' },
+				updateMethodIn : { type : 's' },
+				permissionNamesMatchAnd : { type : 's' },
+				permissionNamesMatchOr : { type : 's' }
             }
         );
         return result;

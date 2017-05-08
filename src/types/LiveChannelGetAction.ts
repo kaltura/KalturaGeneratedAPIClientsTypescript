@@ -26,9 +26,9 @@ export class LiveChannelGetAction extends KalturaRequest<KalturaLiveChannel> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'livechannel' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 's' }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaControlPanelCommandListResponse extends KalturaListResponse 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaControlPanelCommandListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaControlPanelCommand, subType : 'KalturaControlPanelCommand'}
+                objectType : { type : 'c', default : 'KalturaControlPanelCommandListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaControlPanelCommand, subType : 'KalturaControlPanelCommand' }
             }
         );
         return result;

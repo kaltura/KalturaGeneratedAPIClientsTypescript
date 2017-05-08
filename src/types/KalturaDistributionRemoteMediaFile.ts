@@ -27,10 +27,10 @@ export class KalturaDistributionRemoteMediaFile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionRemoteMediaFile'  },
-				version : { type : 's'   },
-				assetId : { type : 's'   },
-				remoteId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDistributionRemoteMediaFile' },
+				version : { type : 's' },
+				assetId : { type : 's' },
+				remoteId : { type : 's' }
             }
         );
         return result;

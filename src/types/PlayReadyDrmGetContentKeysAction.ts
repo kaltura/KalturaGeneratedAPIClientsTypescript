@@ -26,9 +26,9 @@ export class PlayReadyDrmGetContentKeysAction extends KalturaRequest<KalturaPlay
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playready_playreadydrm'  },
-				action : { type : 'c' , default : 'getContentKeys'  },
-				keyIds : { type : 's'   }
+                service : { type : 'c', default : 'playready_playreadydrm' },
+				action : { type : 'c', default : 'getContentKeys' },
+				keyIds : { type : 's' }
             }
         );
         return result;

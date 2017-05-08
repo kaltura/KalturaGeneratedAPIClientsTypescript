@@ -26,9 +26,9 @@ export class EntryDistributionValidateAction extends KalturaRequest<KalturaEntry
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'validate'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'validate' },
+				id : { type : 'n' }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class KalturaExtendingItemMrssParameter extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExtendingItemMrssParameter'  },
-				xpath : { type : 's'   },
-				identifier : { type : 'o'   , fallbackConstructor :  KalturaObjectIdentifier, subType : 'KalturaObjectIdentifier'},
-				extensionMode : { type : 'en'   , subType : 'KalturaMrssExtensionMode'}
+                objectType : { type : 'c', default : 'KalturaExtendingItemMrssParameter' },
+				xpath : { type : 's' },
+				identifier : { type : 'o', subTypeConstructor : KalturaObjectIdentifier, subType : 'KalturaObjectIdentifier' },
+				extensionMode : { type : 'en', subTypeConstructor : KalturaMrssExtensionMode, subType : 'KalturaMrssExtensionMode' }
             }
         );
         return result;

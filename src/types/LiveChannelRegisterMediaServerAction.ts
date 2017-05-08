@@ -37,13 +37,13 @@ export class LiveChannelRegisterMediaServerAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel'  },
-				action : { type : 'c' , default : 'registerMediaServer'  },
-				entryId : { type : 's'   },
-				hostname : { type : 's'   },
-				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
-				applicationName : { type : 's'   },
-				liveEntryStatus : { type : 'en'   , subType : 'KalturaEntryServerNodeStatus'}
+                service : { type : 'c', default : 'livechannel' },
+				action : { type : 'c', default : 'registerMediaServer' },
+				entryId : { type : 's' },
+				hostname : { type : 's' },
+				mediaServerIndex : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' },
+				applicationName : { type : 's' },
+				liveEntryStatus : { type : 'en', subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' }
             }
         );
         return result;

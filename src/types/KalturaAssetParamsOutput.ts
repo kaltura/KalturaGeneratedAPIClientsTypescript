@@ -34,13 +34,13 @@ export class KalturaAssetParamsOutput extends KalturaAssetParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetParamsOutput'  },
-				assetParamsId : { type : 'n'   },
-				assetParamsVersion : { type : 's'   },
-				assetId : { type : 's'   },
-				assetVersion : { type : 's'   },
-				readyBehavior : { type : 'n'   },
-				format : { type : 'es'   , subType : 'KalturaContainerFormat'}
+                objectType : { type : 'c', default : 'KalturaAssetParamsOutput' },
+				assetParamsId : { type : 'n' },
+				assetParamsVersion : { type : 's' },
+				assetId : { type : 's' },
+				assetVersion : { type : 's' },
+				readyBehavior : { type : 'n' },
+				format : { type : 'es', subTypeConstructor : KalturaContainerFormat, subType : 'KalturaContainerFormat' }
             }
         );
         return result;

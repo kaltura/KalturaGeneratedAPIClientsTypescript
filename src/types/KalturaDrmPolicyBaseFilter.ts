@@ -44,17 +44,17 @@ export class KalturaDrmPolicyBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmPolicyBaseFilter'  },
-				partnerIdEqual : { type : 'n'   },
-				partnerIdIn : { type : 's'   },
-				nameLike : { type : 's'   },
-				systemNameLike : { type : 's'   },
-				providerEqual : { type : 'es'   , subType : 'KalturaDrmProviderType'},
-				providerIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaDrmPolicyStatus'},
-				statusIn : { type : 's'   },
-				scenarioEqual : { type : 'es'   , subType : 'KalturaDrmLicenseScenario'},
-				scenarioIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDrmPolicyBaseFilter' },
+				partnerIdEqual : { type : 'n' },
+				partnerIdIn : { type : 's' },
+				nameLike : { type : 's' },
+				systemNameLike : { type : 's' },
+				providerEqual : { type : 'es', subTypeConstructor : KalturaDrmProviderType, subType : 'KalturaDrmProviderType' },
+				providerIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaDrmPolicyStatus, subType : 'KalturaDrmPolicyStatus' },
+				statusIn : { type : 's' },
+				scenarioEqual : { type : 'es', subTypeConstructor : KalturaDrmLicenseScenario, subType : 'KalturaDrmLicenseScenario' },
+				scenarioIn : { type : 's' }
             }
         );
         return result;

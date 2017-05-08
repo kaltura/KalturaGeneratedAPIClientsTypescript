@@ -34,13 +34,13 @@ export class KalturaAmazonS3StorageProfile extends KalturaStorageProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAmazonS3StorageProfile'  },
-				filesPermissionInS3 : { type : 'es'   , subType : 'KalturaAmazonS3StorageProfileFilesPermissionLevel'},
-				s3Region : { type : 's'   },
-				sseType : { type : 's'   },
-				sseKmsKeyId : { type : 's'   },
-				signatureType : { type : 's'   },
-				endPoint : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAmazonS3StorageProfile' },
+				filesPermissionInS3 : { type : 'es', subTypeConstructor : KalturaAmazonS3StorageProfileFilesPermissionLevel, subType : 'KalturaAmazonS3StorageProfileFilesPermissionLevel' },
+				s3Region : { type : 's' },
+				sseType : { type : 's' },
+				sseKmsKeyId : { type : 's' },
+				signatureType : { type : 's' },
+				endPoint : { type : 's' }
             }
         );
         return result;

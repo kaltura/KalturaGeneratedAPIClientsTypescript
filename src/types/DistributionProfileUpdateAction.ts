@@ -28,10 +28,10 @@ export class DistributionProfileUpdateAction extends KalturaRequest<KalturaDistr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				distributionProfile : { type : 'o'   , fallbackConstructor :  KalturaDistributionProfile, subType : 'KalturaDistributionProfile'}
+                service : { type : 'c', default : 'contentdistribution_distributionprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				distributionProfile : { type : 'o', subTypeConstructor : KalturaDistributionProfile, subType : 'KalturaDistributionProfile' }
             }
         );
         return result;

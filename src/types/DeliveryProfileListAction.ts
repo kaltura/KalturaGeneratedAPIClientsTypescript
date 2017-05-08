@@ -30,10 +30,10 @@ export class DeliveryProfileListAction extends KalturaRequest<KalturaDeliveryPro
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaDeliveryProfileFilter, subType : 'KalturaDeliveryProfileFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'deliveryprofile' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaDeliveryProfileFilter, subType : 'KalturaDeliveryProfileFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

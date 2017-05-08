@@ -32,11 +32,11 @@ export class KalturaLiveEntryRecordingOptions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntryRecordingOptions'  },
-				shouldCopyEntitlement : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				shouldCopyScheduling : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				shouldCopyThumbnail : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				shouldMakeHidden : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaLiveEntryRecordingOptions' },
+				shouldCopyEntitlement : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				shouldCopyScheduling : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				shouldCopyThumbnail : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				shouldMakeHidden : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

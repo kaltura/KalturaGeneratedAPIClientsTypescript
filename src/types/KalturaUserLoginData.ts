@@ -25,9 +25,9 @@ export class KalturaUserLoginData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserLoginData'  },
-				id : { type : 's'   },
-				loginEmail : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUserLoginData' },
+				id : { type : 's' },
+				loginEmail : { type : 's' }
             }
         );
         return result;

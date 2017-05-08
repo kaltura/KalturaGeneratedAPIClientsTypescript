@@ -23,7 +23,7 @@ export class KalturaScpDropFolderFilter extends KalturaScpDropFolderBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScpDropFolderFilter'  }
+                objectType : { type : 'c', default : 'KalturaScpDropFolderFilter' }
             }
         );
         return result;

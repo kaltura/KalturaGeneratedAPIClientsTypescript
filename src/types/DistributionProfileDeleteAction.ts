@@ -26,9 +26,9 @@ export class DistributionProfileDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'contentdistribution_distributionprofile' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 'n' }
             }
         );
         return result;

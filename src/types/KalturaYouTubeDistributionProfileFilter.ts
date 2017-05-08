@@ -23,7 +23,7 @@ export class KalturaYouTubeDistributionProfileFilter extends KalturaYouTubeDistr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYouTubeDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaYouTubeDistributionProfileFilter' }
             }
         );
         return result;

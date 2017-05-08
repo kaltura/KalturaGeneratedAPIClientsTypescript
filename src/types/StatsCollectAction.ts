@@ -35,9 +35,9 @@ export class StatsCollectAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats'  },
-				action : { type : 'c' , default : 'collect'  },
-				event : { type : 'o'   , fallbackConstructor :  KalturaStatsEvent, subType : 'KalturaStatsEvent'}
+                service : { type : 'c', default : 'stats' },
+				action : { type : 'c', default : 'collect' },
+				event : { type : 'o', subTypeConstructor : KalturaStatsEvent, subType : 'KalturaStatsEvent' }
             }
         );
         return result;

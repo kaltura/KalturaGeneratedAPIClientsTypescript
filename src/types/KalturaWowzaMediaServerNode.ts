@@ -33,13 +33,13 @@ export class KalturaWowzaMediaServerNode extends KalturaMediaServerNode {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWowzaMediaServerNode'  },
-				appPrefix : { type : 's'   },
-				transcoder : { type : 's'   },
-				GPUID : { type : 'n'   },
-				liveServicePort : { type : 'n'   },
-				liveServiceProtocol : { type : 's'   },
-				liveServiceInternalDomain : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaWowzaMediaServerNode' },
+				appPrefix : { type : 's' },
+				transcoder : { type : 's' },
+				GPUID : { type : 'n' },
+				liveServicePort : { type : 'n' },
+				liveServiceProtocol : { type : 's' },
+				liveServiceInternalDomain : { type : 's' }
             }
         );
         return result;

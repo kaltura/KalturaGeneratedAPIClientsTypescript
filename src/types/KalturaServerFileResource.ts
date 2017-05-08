@@ -25,8 +25,8 @@ export class KalturaServerFileResource extends KalturaDataCenterContentResource 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaServerFileResource'  },
-				localFilePath : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaServerFileResource' },
+				localFilePath : { type : 's' }
             }
         );
         return result;

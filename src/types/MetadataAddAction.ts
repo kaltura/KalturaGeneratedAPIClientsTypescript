@@ -34,12 +34,12 @@ export class MetadataAddAction extends KalturaRequest<KalturaMetadata> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'add'  },
-				metadataProfileId : { type : 'n'   },
-				objectType : { type : 'es'   , subType : 'KalturaMetadataObjectType'},
-				objectId : { type : 's'   },
-				xmlData : { type : 's'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'add' },
+				metadataProfileId : { type : 'n' },
+				objectType : { type : 'es', subTypeConstructor : KalturaMetadataObjectType, subType : 'KalturaMetadataObjectType' },
+				objectId : { type : 's' },
+				xmlData : { type : 's' }
             }
         );
         return result;

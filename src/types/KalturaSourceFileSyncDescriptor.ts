@@ -27,10 +27,10 @@ export class KalturaSourceFileSyncDescriptor extends KalturaFileSyncDescriptor {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSourceFileSyncDescriptor'  },
-				actualFileSyncLocalPath : { type : 's'   },
-				assetId : { type : 's'   },
-				assetParamsId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaSourceFileSyncDescriptor' },
+				actualFileSyncLocalPath : { type : 's' },
+				assetId : { type : 's' },
+				assetParamsId : { type : 'n' }
             }
         );
         return result;

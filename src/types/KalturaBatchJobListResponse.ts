@@ -25,8 +25,8 @@ export class KalturaBatchJobListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBatchJobListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaBatchJob, subType : 'KalturaBatchJob'}
+                objectType : { type : 'c', default : 'KalturaBatchJobListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaBatchJob, subType : 'KalturaBatchJob' }
             }
         );
         return result;

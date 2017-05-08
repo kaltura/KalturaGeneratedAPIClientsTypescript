@@ -37,17 +37,17 @@ export class KalturaScheduleResource extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleResource'  },
-				id : { type : 'n'  , readOnly : true },
-				parentId : { type : 'n'   },
-				partnerId : { type : 'n'  , readOnly : true },
-				name : { type : 's'   },
-				systemName : { type : 's'   },
-				description : { type : 's'   },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaScheduleResourceStatus'},
-				tags : { type : 's'   },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaScheduleResource' },
+				id : { type : 'n', readOnly : true },
+				parentId : { type : 'n' },
+				partnerId : { type : 'n', readOnly : true },
+				name : { type : 's' },
+				systemName : { type : 's' },
+				description : { type : 's' },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaScheduleResourceStatus, subType : 'KalturaScheduleResourceStatus' },
+				tags : { type : 's' },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true }
             }
         );
         return result;

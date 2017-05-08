@@ -23,8 +23,8 @@ export class KalturaForensicWatermarkAdvancedFilter extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaForensicWatermarkAdvancedFilter'  },
-				watermarkId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaForensicWatermarkAdvancedFilter' },
+				watermarkId : { type : 'n' }
             }
         );
         return result;

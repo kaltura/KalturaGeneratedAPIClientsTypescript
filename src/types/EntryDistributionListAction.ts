@@ -30,10 +30,10 @@ export class EntryDistributionListAction extends KalturaRequest<KalturaEntryDist
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaEntryDistributionFilter, subType : 'KalturaEntryDistributionFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaEntryDistributionFilter, subType : 'KalturaEntryDistributionFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

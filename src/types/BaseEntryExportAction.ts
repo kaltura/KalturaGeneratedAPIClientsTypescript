@@ -26,10 +26,10 @@ export class BaseEntryExportAction extends KalturaRequest<KalturaBaseEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'export'  },
-				entryId : { type : 's'   },
-				storageProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'export' },
+				entryId : { type : 's' },
+				storageProfileId : { type : 'n' }
             }
         );
         return result;

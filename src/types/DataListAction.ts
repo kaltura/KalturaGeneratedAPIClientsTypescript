@@ -30,10 +30,10 @@ export class DataListAction extends KalturaRequest<KalturaDataListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaDataEntryFilter, subType : 'KalturaDataEntryFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'data' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaDataEntryFilter, subType : 'KalturaDataEntryFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

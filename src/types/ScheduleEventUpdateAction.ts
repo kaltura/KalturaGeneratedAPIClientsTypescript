@@ -28,10 +28,10 @@ export class ScheduleEventUpdateAction extends KalturaRequest<KalturaScheduleEve
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent'  },
-				action : { type : 'c' , default : 'update'  },
-				scheduleEventId : { type : 'n'   },
-				scheduleEvent : { type : 'o'   , fallbackConstructor :  KalturaScheduleEvent, subType : 'KalturaScheduleEvent'}
+                service : { type : 'c', default : 'schedule_scheduleevent' },
+				action : { type : 'c', default : 'update' },
+				scheduleEventId : { type : 'n' },
+				scheduleEvent : { type : 'o', subTypeConstructor : KalturaScheduleEvent, subType : 'KalturaScheduleEvent' }
             }
         );
         return result;

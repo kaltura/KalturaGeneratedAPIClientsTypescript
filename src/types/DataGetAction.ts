@@ -29,10 +29,10 @@ export class DataGetAction extends KalturaRequest<KalturaDataEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data'  },
-				action : { type : 'c' , default : 'get'  },
-				entryId : { type : 's'   },
-				version : { type : 'n'   }
+                service : { type : 'c', default : 'data' },
+				action : { type : 'c', default : 'get' },
+				entryId : { type : 's' },
+				version : { type : 'n' }
             }
         );
         return result;

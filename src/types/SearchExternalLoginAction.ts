@@ -29,11 +29,11 @@ export class SearchExternalLoginAction extends KalturaRequest<KalturaSearchAuthD
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search'  },
-				action : { type : 'c' , default : 'externalLogin'  },
-				searchSource : { type : 'en'   , subType : 'KalturaSearchProviderType'},
-				userName : { type : 's'   },
-				password : { type : 's'   }
+                service : { type : 'c', default : 'search' },
+				action : { type : 'c', default : 'externalLogin' },
+				searchSource : { type : 'en', subTypeConstructor : KalturaSearchProviderType, subType : 'KalturaSearchProviderType' },
+				userName : { type : 's' },
+				password : { type : 's' }
             }
         );
         return result;

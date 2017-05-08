@@ -25,9 +25,9 @@ export class KalturaLiveAsset extends KalturaFlavorAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveAsset'  },
-				multicastIP : { type : 's'   },
-				multicastPort : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaLiveAsset' },
+				multicastIP : { type : 's' },
+				multicastPort : { type : 'n' }
             }
         );
         return result;

@@ -39,15 +39,15 @@ export class KalturaQuiz extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuiz'  },
-				version : { type : 'n'  , readOnly : true },
-				uiAttributes : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
-				showResultOnAnswer : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				showCorrectKeyOnAnswer : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				allowAnswerUpdate : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				showCorrectAfterSubmission : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				allowDownload : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				showGradeAfterSubmission : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaQuiz' },
+				version : { type : 'n', readOnly : true },
+				uiAttributes : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				showResultOnAnswer : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				showCorrectKeyOnAnswer : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				allowAnswerUpdate : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				showCorrectAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				allowDownload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				showGradeAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

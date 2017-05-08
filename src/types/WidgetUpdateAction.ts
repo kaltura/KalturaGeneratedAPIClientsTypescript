@@ -28,10 +28,10 @@ export class WidgetUpdateAction extends KalturaRequest<KalturaWidget> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'widget'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				widget : { type : 'o'   , fallbackConstructor :  KalturaWidget, subType : 'KalturaWidget'}
+                service : { type : 'c', default : 'widget' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				widget : { type : 'o', subTypeConstructor : KalturaWidget, subType : 'KalturaWidget' }
             }
         );
         return result;

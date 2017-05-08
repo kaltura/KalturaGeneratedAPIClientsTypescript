@@ -26,8 +26,8 @@ export class KalturaBulkUploadICalJobData extends KalturaBulkUploadJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadICalJobData'  },
-				eventsType : { type : 'en'   , subType : 'KalturaScheduleEventType'}
+                objectType : { type : 'c', default : 'KalturaBulkUploadICalJobData' },
+				eventsType : { type : 'en', subTypeConstructor : KalturaScheduleEventType, subType : 'KalturaScheduleEventType' }
             }
         );
         return result;

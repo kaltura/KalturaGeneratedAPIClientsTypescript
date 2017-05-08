@@ -25,8 +25,8 @@ export class KalturaAppTokenListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAppTokenListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaAppToken, subType : 'KalturaAppToken'}
+                objectType : { type : 'c', default : 'KalturaAppTokenListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaAppToken, subType : 'KalturaAppToken' }
             }
         );
         return result;

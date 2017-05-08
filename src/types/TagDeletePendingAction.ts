@@ -27,8 +27,8 @@ export class TagDeletePendingAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'tagsearch_tag'  },
-				action : { type : 'c' , default : 'deletePending'  }
+                service : { type : 'c', default : 'tagsearch_tag' },
+				action : { type : 'c', default : 'deletePending' }
             }
         );
         return result;

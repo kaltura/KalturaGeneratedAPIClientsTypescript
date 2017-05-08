@@ -31,11 +31,11 @@ export class KalturaDeliveryProfileForensicWatermark extends KalturaDeliveryProf
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileForensicWatermark'  },
-				internalUrl : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
-				encryptionKey : { type : 's'   },
-				encryptionIv : { type : 's'   },
-				encryptionRegex : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileForensicWatermark' },
+				internalUrl : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				encryptionKey : { type : 's' },
+				encryptionIv : { type : 's' },
+				encryptionRegex : { type : 's' }
             }
         );
         return result;

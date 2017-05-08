@@ -30,11 +30,11 @@ export class UserAddFromBulkUploadAction extends KalturaUploadRequest<KalturaBul
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user'  },
-				action : { type : 'c' , default : 'addFromBulkUpload'  },
-				fileData : { type : 'f'   },
-				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData'},
-				bulkUploadUserData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadUserData, subType : 'KalturaBulkUploadUserData'}
+                service : { type : 'c', default : 'user' },
+				action : { type : 'c', default : 'addFromBulkUpload' },
+				fileData : { type : 'f' },
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData' },
+				bulkUploadUserData : { type : 'o', subTypeConstructor : KalturaBulkUploadUserData, subType : 'KalturaBulkUploadUserData' }
             }
         );
         return result;

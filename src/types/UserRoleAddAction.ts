@@ -26,9 +26,9 @@ export class UserRoleAddAction extends KalturaRequest<KalturaUserRole> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole'  },
-				action : { type : 'c' , default : 'add'  },
-				userRole : { type : 'o'   , fallbackConstructor :  KalturaUserRole, subType : 'KalturaUserRole'}
+                service : { type : 'c', default : 'userrole' },
+				action : { type : 'c', default : 'add' },
+				userRole : { type : 'o', subTypeConstructor : KalturaUserRole, subType : 'KalturaUserRole' }
             }
         );
         return result;

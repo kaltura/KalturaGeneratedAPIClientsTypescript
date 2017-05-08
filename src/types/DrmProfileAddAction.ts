@@ -26,9 +26,9 @@ export class DrmProfileAddAction extends KalturaRequest<KalturaDrmProfile> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				drmProfile : { type : 'o'   , fallbackConstructor :  KalturaDrmProfile, subType : 'KalturaDrmProfile'}
+                service : { type : 'c', default : 'drm_drmprofile' },
+				action : { type : 'c', default : 'add' },
+				drmProfile : { type : 'o', subTypeConstructor : KalturaDrmProfile, subType : 'KalturaDrmProfile' }
             }
         );
         return result;

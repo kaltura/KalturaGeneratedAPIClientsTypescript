@@ -31,11 +31,11 @@ export class ThumbAssetGetUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'getUrl'  },
-				id : { type : 's'   },
-				storageId : { type : 'n'   },
-				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'}
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'getUrl' },
+				id : { type : 's' },
+				storageId : { type : 'n' },
+				thumbParams : { type : 'o', subTypeConstructor : KalturaThumbParams, subType : 'KalturaThumbParams' }
             }
         );
         return result;

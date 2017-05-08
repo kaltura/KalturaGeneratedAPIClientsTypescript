@@ -29,10 +29,10 @@ export class MediaListFlagsAction extends KalturaRequest<KalturaModerationFlagLi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'listFlags'  },
-				entryId : { type : 's'   },
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'listFlags' },
+				entryId : { type : 's' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class ThumbParamsAddAction extends KalturaRequest<KalturaThumbParams> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams'  },
-				action : { type : 'c' , default : 'add'  },
-				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'}
+                service : { type : 'c', default : 'thumbparams' },
+				action : { type : 'c', default : 'add' },
+				thumbParams : { type : 'o', subTypeConstructor : KalturaThumbParams, subType : 'KalturaThumbParams' }
             }
         );
         return result;

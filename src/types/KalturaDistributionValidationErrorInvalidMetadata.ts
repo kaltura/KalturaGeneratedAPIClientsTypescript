@@ -23,8 +23,8 @@ export class KalturaDistributionValidationErrorInvalidMetadata extends KalturaDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorInvalidMetadata'  },
-				metadataProfileId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaDistributionValidationErrorInvalidMetadata' },
+				metadataProfileId : { type : 'n' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class UserRoleCloneAction extends KalturaRequest<KalturaUserRole> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole'  },
-				action : { type : 'c' , default : 'clone'  },
-				userRoleId : { type : 'n'   }
+                service : { type : 'c', default : 'userrole' },
+				action : { type : 'c', default : 'clone' },
+				userRoleId : { type : 'n' }
             }
         );
         return result;

@@ -27,8 +27,8 @@ export class KalturaEmailNotificationStaticRecipientProvider extends KalturaEmai
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationStaticRecipientProvider'  },
-				emailRecipients : { type : 'a'   , fallbackConstructor :  KalturaEmailNotificationRecipient, subType : 'KalturaEmailNotificationRecipient'}
+                objectType : { type : 'c', default : 'KalturaEmailNotificationStaticRecipientProvider' },
+				emailRecipients : { type : 'a', subTypeConstructor : KalturaEmailNotificationRecipient, subType : 'KalturaEmailNotificationRecipient' }
             }
         );
         return result;

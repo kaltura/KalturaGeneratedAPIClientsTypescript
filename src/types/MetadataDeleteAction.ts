@@ -26,9 +26,9 @@ export class MetadataDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 'n' }
             }
         );
         return result;

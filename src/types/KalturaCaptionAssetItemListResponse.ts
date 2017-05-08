@@ -25,8 +25,8 @@ export class KalturaCaptionAssetItemListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionAssetItemListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaCaptionAssetItem, subType : 'KalturaCaptionAssetItem'}
+                objectType : { type : 'c', default : 'KalturaCaptionAssetItemListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaCaptionAssetItem, subType : 'KalturaCaptionAssetItem' }
             }
         );
         return result;

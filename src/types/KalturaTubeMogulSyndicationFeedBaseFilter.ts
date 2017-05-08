@@ -23,7 +23,7 @@ export class KalturaTubeMogulSyndicationFeedBaseFilter extends KalturaBaseSyndic
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTubeMogulSyndicationFeedBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaTubeMogulSyndicationFeedBaseFilter' }
             }
         );
         return result;

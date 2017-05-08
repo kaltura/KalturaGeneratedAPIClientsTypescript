@@ -28,10 +28,10 @@ export class KalturaGenericDistributionJobProviderData extends KalturaDistributi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionJobProviderData'  },
-				xml : { type : 's'   },
-				resultParseData : { type : 's'   },
-				resultParserType : { type : 'en'   , subType : 'KalturaGenericDistributionProviderParser'}
+                objectType : { type : 'c', default : 'KalturaGenericDistributionJobProviderData' },
+				xml : { type : 's' },
+				resultParseData : { type : 's' },
+				resultParserType : { type : 'en', subTypeConstructor : KalturaGenericDistributionProviderParser, subType : 'KalturaGenericDistributionProviderParser' }
             }
         );
         return result;

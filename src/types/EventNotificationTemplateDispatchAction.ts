@@ -29,10 +29,10 @@ export class EventNotificationTemplateDispatchAction extends KalturaRequest<numb
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
-				action : { type : 'c' , default : 'dispatch'  },
-				id : { type : 'n'   },
-				scope : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationScope, subType : 'KalturaEventNotificationScope'}
+                service : { type : 'c', default : 'eventnotification_eventnotificationtemplate' },
+				action : { type : 'c', default : 'dispatch' },
+				id : { type : 'n' },
+				scope : { type : 'o', subTypeConstructor : KalturaEventNotificationScope, subType : 'KalturaEventNotificationScope' }
             }
         );
         return result;

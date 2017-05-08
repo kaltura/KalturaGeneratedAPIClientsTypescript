@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileLiveAppleHttpFilter extends KalturaDeliveryPr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileLiveAppleHttpFilter'  }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileLiveAppleHttpFilter' }
             }
         );
         return result;

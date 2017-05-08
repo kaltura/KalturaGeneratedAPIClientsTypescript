@@ -26,9 +26,9 @@ export class DropFolderFileDeleteAction extends KalturaRequest<KalturaDropFolder
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolderfile'  },
-				action : { type : 'c' , default : 'delete'  },
-				dropFolderFileId : { type : 'n'   }
+                service : { type : 'c', default : 'dropfolder_dropfolderfile' },
+				action : { type : 'c', default : 'delete' },
+				dropFolderFileId : { type : 'n' }
             }
         );
         return result;

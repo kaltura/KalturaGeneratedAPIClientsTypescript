@@ -23,8 +23,8 @@ export class KalturaAccessControlDrmPolicyAction extends KalturaRuleAction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlDrmPolicyAction'  },
-				policyId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaAccessControlDrmPolicyAction' },
+				policyId : { type : 'n' }
             }
         );
         return result;

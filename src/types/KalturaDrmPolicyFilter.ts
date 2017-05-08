@@ -23,7 +23,7 @@ export class KalturaDrmPolicyFilter extends KalturaDrmPolicyBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmPolicyFilter'  }
+                objectType : { type : 'c', default : 'KalturaDrmPolicyFilter' }
             }
         );
         return result;

@@ -47,19 +47,19 @@ export class KalturaFileAssetBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFileAssetBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				partnerIdEqual : { type : 'n'   },
-				fileAssetObjectTypeEqual : { type : 'es'   , subType : 'KalturaFileAssetObjectType'},
-				objectIdEqual : { type : 's'   },
-				objectIdIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'n'   },
-				createdAtLessThanOrEqual : { type : 'n'   },
-				updatedAtGreaterThanOrEqual : { type : 'n'   },
-				updatedAtLessThanOrEqual : { type : 'n'   },
-				statusEqual : { type : 'es'   , subType : 'KalturaFileAssetStatus'},
-				statusIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFileAssetBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				partnerIdEqual : { type : 'n' },
+				fileAssetObjectTypeEqual : { type : 'es', subTypeConstructor : KalturaFileAssetObjectType, subType : 'KalturaFileAssetObjectType' },
+				objectIdEqual : { type : 's' },
+				objectIdIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'n' },
+				createdAtLessThanOrEqual : { type : 'n' },
+				updatedAtGreaterThanOrEqual : { type : 'n' },
+				updatedAtLessThanOrEqual : { type : 'n' },
+				statusEqual : { type : 'es', subTypeConstructor : KalturaFileAssetStatus, subType : 'KalturaFileAssetStatus' },
+				statusIn : { type : 's' }
             }
         );
         return result;

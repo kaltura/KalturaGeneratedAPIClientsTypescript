@@ -34,13 +34,13 @@ export class PlayReadyDrmGetLicenseDetailsAction extends KalturaRequest<KalturaP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playready_playreadydrm'  },
-				action : { type : 'c' , default : 'getLicenseDetails'  },
-				keyId : { type : 's'   },
-				deviceId : { type : 's'   },
-				deviceType : { type : 'n'   },
-				entryId : { type : 's'   },
-				referrer : { type : 's'   }
+                service : { type : 'c', default : 'playready_playreadydrm' },
+				action : { type : 'c', default : 'getLicenseDetails' },
+				keyId : { type : 's' },
+				deviceId : { type : 's' },
+				deviceType : { type : 'n' },
+				entryId : { type : 's' },
+				referrer : { type : 's' }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class VirusScanProfileUpdateAction extends KalturaRequest<KalturaVirusSca
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				virusScanProfileId : { type : 'n'   },
-				virusScanProfile : { type : 'o'   , fallbackConstructor :  KalturaVirusScanProfile, subType : 'KalturaVirusScanProfile'}
+                service : { type : 'c', default : 'virusscan_virusscanprofile' },
+				action : { type : 'c', default : 'update' },
+				virusScanProfileId : { type : 'n' },
+				virusScanProfile : { type : 'o', subTypeConstructor : KalturaVirusScanProfile, subType : 'KalturaVirusScanProfile' }
             }
         );
         return result;

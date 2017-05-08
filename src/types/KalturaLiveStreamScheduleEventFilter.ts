@@ -23,7 +23,7 @@ export class KalturaLiveStreamScheduleEventFilter extends KalturaLiveStreamSched
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamScheduleEventFilter'  }
+                objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEventFilter' }
             }
         );
         return result;

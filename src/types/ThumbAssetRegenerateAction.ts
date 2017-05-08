@@ -24,9 +24,9 @@ export class ThumbAssetRegenerateAction extends KalturaRequest<KalturaThumbAsset
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'regenerate'  },
-				thumbAssetId : { type : 's'   }
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'regenerate' },
+				thumbAssetId : { type : 's' }
             }
         );
         return result;

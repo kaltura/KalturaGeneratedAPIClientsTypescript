@@ -25,9 +25,9 @@ export class KalturaUrlRecognizer extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlRecognizer'  },
-				hosts : { type : 's'   },
-				uriPrefix : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUrlRecognizer' },
+				hosts : { type : 's' },
+				uriPrefix : { type : 's' }
             }
         );
         return result;

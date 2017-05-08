@@ -34,12 +34,12 @@ export class MetadataAddFromBulkAction extends KalturaRequest<KalturaMetadata> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'addFromBulk'  },
-				metadataProfileId : { type : 'n'   },
-				objectType : { type : 'es'   , subType : 'KalturaMetadataObjectType'},
-				objectId : { type : 's'   },
-				url : { type : 's'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'addFromBulk' },
+				metadataProfileId : { type : 'n' },
+				objectType : { type : 'es', subTypeConstructor : KalturaMetadataObjectType, subType : 'KalturaMetadataObjectType' },
+				objectId : { type : 's' },
+				url : { type : 's' }
             }
         );
         return result;

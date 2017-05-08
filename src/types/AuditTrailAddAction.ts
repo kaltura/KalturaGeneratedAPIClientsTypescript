@@ -27,9 +27,9 @@ export class AuditTrailAddAction extends KalturaRequest<KalturaAuditTrail> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'audit_audittrail'  },
-				action : { type : 'c' , default : 'add'  },
-				auditTrail : { type : 'o'   , fallbackConstructor :  KalturaAuditTrail, subType : 'KalturaAuditTrail'}
+                service : { type : 'c', default : 'audit_audittrail' },
+				action : { type : 'c', default : 'add' },
+				auditTrail : { type : 'o', subTypeConstructor : KalturaAuditTrail, subType : 'KalturaAuditTrail' }
             }
         );
         return result;

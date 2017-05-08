@@ -24,9 +24,9 @@ export class IntegrationNotifyAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'integration_integration'  },
-				action : { type : 'c' , default : 'notify'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'integration_integration' },
+				action : { type : 'c', default : 'notify' },
+				id : { type : 'n' }
             }
         );
         return result;

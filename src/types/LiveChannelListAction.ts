@@ -30,10 +30,10 @@ export class LiveChannelListAction extends KalturaRequest<KalturaLiveChannelList
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaLiveChannelFilter, subType : 'KalturaLiveChannelFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'livechannel' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaLiveChannelFilter, subType : 'KalturaLiveChannelFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaLiveAssetFilter extends KalturaLiveAssetBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveAssetFilter'  }
+                objectType : { type : 'c', default : 'KalturaLiveAssetFilter' }
             }
         );
         return result;

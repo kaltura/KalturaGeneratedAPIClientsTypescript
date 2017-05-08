@@ -23,7 +23,7 @@ export class KalturaAuditTrailInfo extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailInfo'  }
+                objectType : { type : 'c', default : 'KalturaAuditTrailInfo' }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class GenericDistributionProviderActionGetByProviderIdAction extends Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'getByProviderId'  },
-				genericDistributionProviderId : { type : 'n'   },
-				actionType : { type : 'en'   , subType : 'KalturaDistributionAction'}
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'getByProviderId' },
+				genericDistributionProviderId : { type : 'n' },
+				actionType : { type : 'en', subTypeConstructor : KalturaDistributionAction, subType : 'KalturaDistributionAction' }
             }
         );
         return result;

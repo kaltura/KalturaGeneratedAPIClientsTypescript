@@ -31,11 +31,11 @@ export class LiveStreamUnregisterMediaServerAction extends KalturaRequest<Kaltur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'unregisterMediaServer'  },
-				entryId : { type : 's'   },
-				hostname : { type : 's'   },
-				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'}
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'unregisterMediaServer' },
+				entryId : { type : 's' },
+				hostname : { type : 's' },
+				mediaServerIndex : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' }
             }
         );
         return result;

@@ -25,7 +25,7 @@ export class KalturaUserEmailContextField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserEmailContextField'  }
+                objectType : { type : 'c', default : 'KalturaUserEmailContextField' }
             }
         );
         return result;

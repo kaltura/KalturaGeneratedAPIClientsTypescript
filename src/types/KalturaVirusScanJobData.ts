@@ -31,11 +31,11 @@ export class KalturaVirusScanJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVirusScanJobData'  },
-				srcFilePath : { type : 's'   },
-				flavorAssetId : { type : 's'   },
-				scanResult : { type : 'en'   , subType : 'KalturaVirusScanJobResult'},
-				virusFoundAction : { type : 'en'   , subType : 'KalturaVirusFoundAction'}
+                objectType : { type : 'c', default : 'KalturaVirusScanJobData' },
+				srcFilePath : { type : 's' },
+				flavorAssetId : { type : 's' },
+				scanResult : { type : 'en', subTypeConstructor : KalturaVirusScanJobResult, subType : 'KalturaVirusScanJobResult' },
+				virusFoundAction : { type : 'en', subTypeConstructor : KalturaVirusFoundAction, subType : 'KalturaVirusFoundAction' }
             }
         );
         return result;

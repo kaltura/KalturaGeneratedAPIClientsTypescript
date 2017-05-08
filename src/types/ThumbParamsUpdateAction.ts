@@ -28,10 +28,10 @@ export class ThumbParamsUpdateAction extends KalturaRequest<KalturaThumbParams> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'}
+                service : { type : 'c', default : 'thumbparams' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				thumbParams : { type : 'o', subTypeConstructor : KalturaThumbParams, subType : 'KalturaThumbParams' }
             }
         );
         return result;

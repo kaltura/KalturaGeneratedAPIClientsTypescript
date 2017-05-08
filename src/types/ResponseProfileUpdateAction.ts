@@ -28,10 +28,10 @@ export class ResponseProfileUpdateAction extends KalturaRequest<KalturaResponseP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				updateResponseProfile : { type : 'o'   , fallbackConstructor :  KalturaResponseProfile, subType : 'KalturaResponseProfile'}
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				updateResponseProfile : { type : 'o', subTypeConstructor : KalturaResponseProfile, subType : 'KalturaResponseProfile' }
             }
         );
         return result;

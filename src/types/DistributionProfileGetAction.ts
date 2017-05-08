@@ -26,9 +26,9 @@ export class DistributionProfileGetAction extends KalturaRequest<KalturaDistribu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'contentdistribution_distributionprofile' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

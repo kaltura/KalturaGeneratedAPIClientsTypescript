@@ -35,14 +35,14 @@ export class KalturaPlayableEntryBaseFilter extends KalturaBaseEntryFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayableEntryBaseFilter'  },
-				lastPlayedAtGreaterThanOrEqual : { type : 'd'   },
-				lastPlayedAtLessThanOrEqual : { type : 'd'   },
-				durationLessThan : { type : 'n'   },
-				durationGreaterThan : { type : 'n'   },
-				durationLessThanOrEqual : { type : 'n'   },
-				durationGreaterThanOrEqual : { type : 'n'   },
-				durationTypeMatchOr : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaPlayableEntryBaseFilter' },
+				lastPlayedAtGreaterThanOrEqual : { type : 'd' },
+				lastPlayedAtLessThanOrEqual : { type : 'd' },
+				durationLessThan : { type : 'n' },
+				durationGreaterThan : { type : 'n' },
+				durationLessThanOrEqual : { type : 'n' },
+				durationGreaterThanOrEqual : { type : 'n' },
+				durationTypeMatchOr : { type : 's' }
             }
         );
         return result;

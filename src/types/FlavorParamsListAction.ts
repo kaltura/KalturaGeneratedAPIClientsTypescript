@@ -31,10 +31,10 @@ export class FlavorParamsListAction extends KalturaRequest<KalturaFlavorParamsLi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparams'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaFlavorParamsFilter, subType : 'KalturaFlavorParamsFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'flavorparams' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaFlavorParamsFilter, subType : 'KalturaFlavorParamsFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

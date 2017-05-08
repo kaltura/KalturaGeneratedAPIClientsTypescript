@@ -42,17 +42,17 @@ export class KalturaAnnotationBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnnotationBaseFilter'  },
-				parentIdEqual : { type : 's'   },
-				parentIdIn : { type : 's'   },
-				textLike : { type : 's'   },
-				textMultiLikeOr : { type : 's'   },
-				textMultiLikeAnd : { type : 's'   },
-				endTimeGreaterThanOrEqual : { type : 'n'   },
-				endTimeLessThanOrEqual : { type : 'n'   },
-				durationGreaterThanOrEqual : { type : 'n'   },
-				durationLessThanOrEqual : { type : 'n'   },
-				isPublicEqual : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaAnnotationBaseFilter' },
+				parentIdEqual : { type : 's' },
+				parentIdIn : { type : 's' },
+				textLike : { type : 's' },
+				textMultiLikeOr : { type : 's' },
+				textMultiLikeAnd : { type : 's' },
+				endTimeGreaterThanOrEqual : { type : 'n' },
+				endTimeLessThanOrEqual : { type : 'n' },
+				durationGreaterThanOrEqual : { type : 'n' },
+				durationLessThanOrEqual : { type : 'n' },
+				isPublicEqual : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

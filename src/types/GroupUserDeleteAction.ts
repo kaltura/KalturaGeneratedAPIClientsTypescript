@@ -28,10 +28,10 @@ export class GroupUserDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'groupuser'  },
-				action : { type : 'c' , default : 'delete'  },
-				userId : { type : 's'   },
-				groupId : { type : 's'   }
+                service : { type : 'c', default : 'groupuser' },
+				action : { type : 'c', default : 'delete' },
+				userId : { type : 's' },
+				groupId : { type : 's' }
             }
         );
         return result;

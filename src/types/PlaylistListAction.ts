@@ -30,10 +30,10 @@ export class PlaylistListAction extends KalturaRequest<KalturaPlaylistListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaPlaylistFilter, subType : 'KalturaPlaylistFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaPlaylistFilter, subType : 'KalturaPlaylistFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -26,8 +26,8 @@ export class PartnerListFeatureStatusAction extends KalturaRequest<KalturaFeatur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'listFeatureStatus'  }
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'listFeatureStatus' }
             }
         );
         return result;

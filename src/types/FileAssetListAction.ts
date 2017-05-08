@@ -30,10 +30,10 @@ export class FileAssetListAction extends KalturaRequest<KalturaFileAssetListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaFileAssetFilter, subType : 'KalturaFileAssetFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'fileasset' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaFileAssetFilter, subType : 'KalturaFileAssetFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

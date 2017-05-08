@@ -25,8 +25,8 @@ export class KalturaCuePointListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCuePointListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
+                objectType : { type : 'c', default : 'KalturaCuePointListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaCuePoint, subType : 'KalturaCuePoint' }
             }
         );
         return result;

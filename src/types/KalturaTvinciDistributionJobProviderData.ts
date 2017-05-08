@@ -23,8 +23,8 @@ export class KalturaTvinciDistributionJobProviderData extends KalturaConfigurabl
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTvinciDistributionJobProviderData'  },
-				xml : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaTvinciDistributionJobProviderData' },
+				xml : { type : 's' }
             }
         );
         return result;

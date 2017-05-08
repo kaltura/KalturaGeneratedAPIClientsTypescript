@@ -34,12 +34,12 @@ export class MediaUpdateThumbnailFromSourceEntryAction extends KalturaRequest<Ka
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'updateThumbnailFromSourceEntry'  },
-				entryId : { type : 's'   },
-				sourceEntryId : { type : 's'   },
-				timeOffset : { type : 'n'   },
-				flavorParamsId : { type : 'n'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'updateThumbnailFromSourceEntry' },
+				entryId : { type : 's' },
+				sourceEntryId : { type : 's' },
+				timeOffset : { type : 'n' },
+				flavorParamsId : { type : 'n' }
             }
         );
         return result;

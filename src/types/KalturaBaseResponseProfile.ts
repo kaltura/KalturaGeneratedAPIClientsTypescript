@@ -23,7 +23,7 @@ export class KalturaBaseResponseProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseResponseProfile'  }
+                objectType : { type : 'c', default : 'KalturaBaseResponseProfile' }
             }
         );
         return result;

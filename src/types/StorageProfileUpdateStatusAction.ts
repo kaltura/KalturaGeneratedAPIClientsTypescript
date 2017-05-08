@@ -27,10 +27,10 @@ export class StorageProfileUpdateStatusAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile'  },
-				action : { type : 'c' , default : 'updateStatus'  },
-				storageId : { type : 'n'   },
-				status : { type : 'en'   , subType : 'KalturaStorageProfileStatus'}
+                service : { type : 'c', default : 'storageprofile' },
+				action : { type : 'c', default : 'updateStatus' },
+				storageId : { type : 'n' },
+				status : { type : 'en', subTypeConstructor : KalturaStorageProfileStatus, subType : 'KalturaStorageProfileStatus' }
             }
         );
         return result;

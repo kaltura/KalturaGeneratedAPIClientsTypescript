@@ -28,10 +28,10 @@ export class UserEntryListAction extends KalturaRequest<KalturaUserEntryListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userentry'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaUserEntryFilter, subType : 'KalturaUserEntryFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'userentry' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaUserEntryFilter, subType : 'KalturaUserEntryFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

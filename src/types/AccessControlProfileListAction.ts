@@ -30,10 +30,10 @@ export class AccessControlProfileListAction extends KalturaRequest<KalturaAccess
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrolprofile'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaAccessControlProfileFilter, subType : 'KalturaAccessControlProfileFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'accesscontrolprofile' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaAccessControlProfileFilter, subType : 'KalturaAccessControlProfileFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

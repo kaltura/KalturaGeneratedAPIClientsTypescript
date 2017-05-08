@@ -24,8 +24,8 @@ export class KalturaDirectoryRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDirectoryRestriction'  },
-				directoryRestrictionType : { type : 'en'   , subType : 'KalturaDirectoryRestrictionType'}
+                objectType : { type : 'c', default : 'KalturaDirectoryRestriction' },
+				directoryRestrictionType : { type : 'en', subTypeConstructor : KalturaDirectoryRestrictionType, subType : 'KalturaDirectoryRestrictionType' }
             }
         );
         return result;

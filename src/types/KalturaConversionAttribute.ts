@@ -27,10 +27,10 @@ export class KalturaConversionAttribute extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionAttribute'  },
-				flavorParamsId : { type : 'n'   },
-				name : { type : 's'   },
-				value : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaConversionAttribute' },
+				flavorParamsId : { type : 'n' },
+				name : { type : 's' },
+				value : { type : 's' }
             }
         );
         return result;

@@ -28,10 +28,10 @@ export class ScheduleEventResourceGetAction extends KalturaRequest<KalturaSchedu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleeventresource'  },
-				action : { type : 'c' , default : 'get'  },
-				scheduleEventId : { type : 'n'   },
-				scheduleResourceId : { type : 'n'   }
+                service : { type : 'c', default : 'schedule_scheduleeventresource' },
+				action : { type : 'c', default : 'get' },
+				scheduleEventId : { type : 'n' },
+				scheduleResourceId : { type : 'n' }
             }
         );
         return result;

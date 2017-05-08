@@ -29,11 +29,11 @@ export class KalturaExtractMediaJobData extends KalturaConvartableJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExtractMediaJobData'  },
-				flavorAssetId : { type : 's'   },
-				calculateComplexity : { type : 'b'   },
-				extractId3Tags : { type : 'b'   },
-				destDataFilePath : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaExtractMediaJobData' },
+				flavorAssetId : { type : 's' },
+				calculateComplexity : { type : 'b' },
+				extractId3Tags : { type : 'b' },
+				destDataFilePath : { type : 's' }
             }
         );
         return result;

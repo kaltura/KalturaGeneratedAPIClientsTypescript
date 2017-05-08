@@ -24,8 +24,8 @@ export class KalturaContextTypeHolder extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaContextTypeHolder'  },
-				type : { type : 'es'   , subType : 'KalturaContextType'}
+                objectType : { type : 'c', default : 'KalturaContextTypeHolder' },
+				type : { type : 'es', subTypeConstructor : KalturaContextType, subType : 'KalturaContextType' }
             }
         );
         return result;

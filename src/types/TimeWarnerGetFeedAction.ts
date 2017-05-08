@@ -26,10 +26,10 @@ export class TimeWarnerGetFeedAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'timewarnerdistribution_timewarner'  },
-				action : { type : 'c' , default : 'getFeed'  },
-				distributionProfileId : { type : 'n'   },
-				hash : { type : 's'   }
+                service : { type : 'c', default : 'timewarnerdistribution_timewarner' },
+				action : { type : 'c', default : 'getFeed' },
+				distributionProfileId : { type : 'n' },
+				hash : { type : 's' }
             }
         );
         return result;

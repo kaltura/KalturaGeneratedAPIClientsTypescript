@@ -26,9 +26,9 @@ export class GenericDistributionProviderGetAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovider'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovider' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

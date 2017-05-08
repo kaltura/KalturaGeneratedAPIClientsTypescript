@@ -47,19 +47,19 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaEntry'  },
-				mediaType : { type : 'en'   , subType : 'KalturaMediaType'},
-				conversionQuality : { type : 's'   },
-				sourceType : { type : 'es'   , subType : 'KalturaSourceType'},
-				searchProviderType : { type : 'en'   , subType : 'KalturaSearchProviderType'},
-				searchProviderId : { type : 's'   },
-				creditUserName : { type : 's'   },
-				creditUrl : { type : 's'   },
-				mediaDate : { type : 'd'  , readOnly : true },
-				dataUrl : { type : 's'  , readOnly : true },
-				flavorParamsIds : { type : 's'  , readOnly : true },
-				isTrimDisabled : { type : 'en'  , readOnly : true , subType : 'KalturaNullableBoolean'},
-				streams : { type : 'a'   , fallbackConstructor :  KalturaStreamContainer, subType : 'KalturaStreamContainer'}
+                objectType : { type : 'c', default : 'KalturaMediaEntry' },
+				mediaType : { type : 'en', subTypeConstructor : KalturaMediaType, subType : 'KalturaMediaType' },
+				conversionQuality : { type : 's' },
+				sourceType : { type : 'es', subTypeConstructor : KalturaSourceType, subType : 'KalturaSourceType' },
+				searchProviderType : { type : 'en', subTypeConstructor : KalturaSearchProviderType, subType : 'KalturaSearchProviderType' },
+				searchProviderId : { type : 's' },
+				creditUserName : { type : 's' },
+				creditUrl : { type : 's' },
+				mediaDate : { type : 'd', readOnly : true },
+				dataUrl : { type : 's', readOnly : true },
+				flavorParamsIds : { type : 's', readOnly : true },
+				isTrimDisabled : { type : 'en', readOnly : true, subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				streams : { type : 'a', subTypeConstructor : KalturaStreamContainer, subType : 'KalturaStreamContainer' }
             }
         );
         return result;

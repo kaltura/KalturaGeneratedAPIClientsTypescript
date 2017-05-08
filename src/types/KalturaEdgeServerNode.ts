@@ -25,9 +25,9 @@ export class KalturaEdgeServerNode extends KalturaDeliveryServerNode {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEdgeServerNode'  },
-				playbackDomain : { type : 's'   },
-				config : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaEdgeServerNode' },
+				playbackDomain : { type : 's' },
+				config : { type : 's' }
             }
         );
         return result;

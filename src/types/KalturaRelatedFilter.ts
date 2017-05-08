@@ -23,7 +23,7 @@ export class KalturaRelatedFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRelatedFilter'  }
+                objectType : { type : 'c', default : 'KalturaRelatedFilter' }
             }
         );
         return result;

@@ -27,9 +27,9 @@ export class BaseEntryApproveAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'approve'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'approve' },
+				entryId : { type : 's' }
             }
         );
         return result;

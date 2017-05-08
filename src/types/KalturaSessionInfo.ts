@@ -29,13 +29,13 @@ export class KalturaSessionInfo extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSessionInfo'  },
-				ks : { type : 's'  , readOnly : true },
-				sessionType : { type : 'en'  , readOnly : true , subType : 'KalturaSessionType'},
-				partnerId : { type : 'n'  , readOnly : true },
-				userId : { type : 's'  , readOnly : true },
-				expiry : { type : 'n'  , readOnly : true },
-				privileges : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaSessionInfo' },
+				ks : { type : 's', readOnly : true },
+				sessionType : { type : 'en', readOnly : true, subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
+				partnerId : { type : 'n', readOnly : true },
+				userId : { type : 's', readOnly : true },
+				expiry : { type : 'n', readOnly : true },
+				privileges : { type : 's', readOnly : true }
             }
         );
         return result;

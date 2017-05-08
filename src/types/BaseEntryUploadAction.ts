@@ -26,9 +26,9 @@ export class BaseEntryUploadAction extends KalturaUploadRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'upload'  },
-				fileData : { type : 'f'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'upload' },
+				fileData : { type : 'f' }
             }
         );
         return result;

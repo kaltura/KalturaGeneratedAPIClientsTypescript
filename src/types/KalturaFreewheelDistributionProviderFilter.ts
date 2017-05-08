@@ -23,7 +23,7 @@ export class KalturaFreewheelDistributionProviderFilter extends KalturaFreewheel
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelDistributionProviderFilter'  }
+                objectType : { type : 'c', default : 'KalturaFreewheelDistributionProviderFilter' }
             }
         );
         return result;

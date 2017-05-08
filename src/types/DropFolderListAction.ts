@@ -30,10 +30,10 @@ export class DropFolderListAction extends KalturaRequest<KalturaDropFolderListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolder'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaDropFolderFilter, subType : 'KalturaDropFolderFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'dropfolder_dropfolder' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaDropFolderFilter, subType : 'KalturaDropFolderFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

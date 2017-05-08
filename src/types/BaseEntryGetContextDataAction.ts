@@ -30,10 +30,10 @@ export class BaseEntryGetContextDataAction extends KalturaRequest<KalturaEntryCo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'getContextData'  },
-				entryId : { type : 's'   },
-				contextDataParams : { type : 'o'   , fallbackConstructor :  KalturaEntryContextDataParams, subType : 'KalturaEntryContextDataParams'}
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'getContextData' },
+				entryId : { type : 's' },
+				contextDataParams : { type : 'o', subTypeConstructor : KalturaEntryContextDataParams, subType : 'KalturaEntryContextDataParams' }
             }
         );
         return result;

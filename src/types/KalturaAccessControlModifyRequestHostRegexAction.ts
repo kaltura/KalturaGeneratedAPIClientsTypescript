@@ -27,10 +27,10 @@ export class KalturaAccessControlModifyRequestHostRegexAction extends KalturaRul
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlModifyRequestHostRegexAction'  },
-				pattern : { type : 's'   },
-				replacement : { type : 's'   },
-				replacmenServerNodeId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaAccessControlModifyRequestHostRegexAction' },
+				pattern : { type : 's' },
+				replacement : { type : 's' },
+				replacmenServerNodeId : { type : 'n' }
             }
         );
         return result;

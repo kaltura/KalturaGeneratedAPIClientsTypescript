@@ -45,19 +45,19 @@ export class KalturaYoutubeApiDistributionProfile extends KalturaConfigurableDis
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYoutubeApiDistributionProfile'  },
-				username : { type : 's'   },
-				defaultCategory : { type : 'n'   },
-				allowComments : { type : 's'   },
-				allowEmbedding : { type : 's'   },
-				allowRatings : { type : 's'   },
-				allowResponses : { type : 's'   },
-				apiAuthorizeUrl : { type : 's'   },
-				googleClientId : { type : 's'   },
-				googleClientSecret : { type : 's'   },
-				googleTokenData : { type : 's'   },
-				assumeSuccess : { type : 'b'   },
-				privacyStatus : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaYoutubeApiDistributionProfile' },
+				username : { type : 's' },
+				defaultCategory : { type : 'n' },
+				allowComments : { type : 's' },
+				allowEmbedding : { type : 's' },
+				allowRatings : { type : 's' },
+				allowResponses : { type : 's' },
+				apiAuthorizeUrl : { type : 's' },
+				googleClientId : { type : 's' },
+				googleClientSecret : { type : 's' },
+				googleTokenData : { type : 's' },
+				assumeSuccess : { type : 'b' },
+				privacyStatus : { type : 's' }
             }
         );
         return result;

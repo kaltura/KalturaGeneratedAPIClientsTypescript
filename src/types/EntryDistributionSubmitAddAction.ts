@@ -29,10 +29,10 @@ export class EntryDistributionSubmitAddAction extends KalturaRequest<KalturaEntr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'submitAdd'  },
-				id : { type : 'n'   },
-				submitWhenReady : { type : 'b'   }
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'submitAdd' },
+				id : { type : 'n' },
+				submitWhenReady : { type : 'b' }
             }
         );
         return result;

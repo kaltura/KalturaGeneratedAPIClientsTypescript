@@ -24,9 +24,9 @@ export class UserEntryDeleteAction extends KalturaRequest<KalturaUserEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userentry'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'userentry' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 'n' }
             }
         );
         return result;

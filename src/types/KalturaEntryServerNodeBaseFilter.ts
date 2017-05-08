@@ -43,17 +43,17 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryServerNodeBaseFilter'  },
-				entryIdEqual : { type : 's'   },
-				entryIdIn : { type : 's'   },
-				serverNodeIdEqual : { type : 'n'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaEntryServerNodeStatus'},
-				statusIn : { type : 's'   },
-				serverTypeEqual : { type : 'es'   , subType : 'KalturaEntryServerNodeType'}
+                objectType : { type : 'c', default : 'KalturaEntryServerNodeBaseFilter' },
+				entryIdEqual : { type : 's' },
+				entryIdIn : { type : 's' },
+				serverNodeIdEqual : { type : 'n' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' },
+				statusIn : { type : 's' },
+				serverTypeEqual : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' }
             }
         );
         return result;

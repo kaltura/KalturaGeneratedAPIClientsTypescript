@@ -24,8 +24,8 @@ export class KalturaDistributionValidationErrorMissingThumbnail extends KalturaD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingThumbnail'  },
-				dimensions : { type : 'o'   , fallbackConstructor :  KalturaDistributionThumbDimensions, subType : 'KalturaDistributionThumbDimensions'}
+                objectType : { type : 'c', default : 'KalturaDistributionValidationErrorMissingThumbnail' },
+				dimensions : { type : 'o', subTypeConstructor : KalturaDistributionThumbDimensions, subType : 'KalturaDistributionThumbDimensions' }
             }
         );
         return result;

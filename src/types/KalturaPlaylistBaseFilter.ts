@@ -23,7 +23,7 @@ export class KalturaPlaylistBaseFilter extends KalturaBaseEntryFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlaylistBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaPlaylistBaseFilter' }
             }
         );
         return result;

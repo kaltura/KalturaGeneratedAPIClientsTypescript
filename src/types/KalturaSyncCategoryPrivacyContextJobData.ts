@@ -27,10 +27,10 @@ export class KalturaSyncCategoryPrivacyContextJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSyncCategoryPrivacyContextJobData'  },
-				categoryId : { type : 'n'   },
-				lastUpdatedCategoryEntryCreatedAt : { type : 'n'   },
-				lastUpdatedCategoryCreatedAt : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaSyncCategoryPrivacyContextJobData' },
+				categoryId : { type : 'n' },
+				lastUpdatedCategoryEntryCreatedAt : { type : 'n' },
+				lastUpdatedCategoryCreatedAt : { type : 'n' }
             }
         );
         return result;

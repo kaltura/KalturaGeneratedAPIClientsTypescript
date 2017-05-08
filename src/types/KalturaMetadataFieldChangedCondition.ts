@@ -31,12 +31,12 @@ export class KalturaMetadataFieldChangedCondition extends KalturaMatchCondition 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataFieldChangedCondition'  },
-				xPath : { type : 's'   },
-				profileId : { type : 'n'   },
-				profileSystemName : { type : 's'   },
-				versionA : { type : 's'   },
-				versionB : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaMetadataFieldChangedCondition' },
+				xPath : { type : 's' },
+				profileId : { type : 'n' },
+				profileSystemName : { type : 's' },
+				versionA : { type : 's' },
+				versionB : { type : 's' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaActivitiBusinessProcessServerFilter extends KalturaActivitiB
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaActivitiBusinessProcessServerFilter'  }
+                objectType : { type : 'c', default : 'KalturaActivitiBusinessProcessServerFilter' }
             }
         );
         return result;

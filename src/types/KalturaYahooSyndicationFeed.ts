@@ -30,11 +30,11 @@ export class KalturaYahooSyndicationFeed extends KalturaBaseSyndicationFeed {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYahooSyndicationFeed'  },
-				category : { type : 'es'  , readOnly : true , subType : 'KalturaYahooSyndicationFeedCategories'},
-				adultContent : { type : 'es'   , subType : 'KalturaYahooSyndicationFeedAdultValues'},
-				feedDescription : { type : 's'   },
-				feedLandingPage : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaYahooSyndicationFeed' },
+				category : { type : 'es', readOnly : true, subTypeConstructor : KalturaYahooSyndicationFeedCategories, subType : 'KalturaYahooSyndicationFeedCategories' },
+				adultContent : { type : 'es', subTypeConstructor : KalturaYahooSyndicationFeedAdultValues, subType : 'KalturaYahooSyndicationFeedAdultValues' },
+				feedDescription : { type : 's' },
+				feedLandingPage : { type : 's' }
             }
         );
         return result;

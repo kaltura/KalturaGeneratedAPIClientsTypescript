@@ -23,7 +23,7 @@ export class KalturaAdCuePointFilter extends KalturaAdCuePointBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAdCuePointFilter'  }
+                objectType : { type : 'c', default : 'KalturaAdCuePointFilter' }
             }
         );
         return result;

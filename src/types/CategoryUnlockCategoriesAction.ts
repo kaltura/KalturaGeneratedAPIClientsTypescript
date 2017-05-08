@@ -26,8 +26,8 @@ export class CategoryUnlockCategoriesAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category'  },
-				action : { type : 'c' , default : 'unlockCategories'  }
+                service : { type : 'c', default : 'category' },
+				action : { type : 'c', default : 'unlockCategories' }
             }
         );
         return result;

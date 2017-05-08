@@ -38,15 +38,15 @@ export class KalturaAppTokenBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAppTokenBaseFilter'  },
-				idEqual : { type : 's'   },
-				idIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaAppTokenStatus'},
-				statusIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAppTokenBaseFilter' },
+				idEqual : { type : 's' },
+				idIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaAppTokenStatus, subType : 'KalturaAppTokenStatus' },
+				statusIn : { type : 's' }
             }
         );
         return result;

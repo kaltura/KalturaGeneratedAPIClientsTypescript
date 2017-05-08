@@ -35,14 +35,14 @@ export class KalturaLiveToVodJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveToVodJobData'  },
-				vodEntryId : { type : 's'   },
-				liveEntryId : { type : 's'   },
-				totalVodDuration : { type : 'n'   },
-				lastSegmentDuration : { type : 'n'   },
-				amfArray : { type : 's'   },
-				lastCuePointSyncTime : { type : 'd'   },
-				lastSegmentDrift : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaLiveToVodJobData' },
+				vodEntryId : { type : 's' },
+				liveEntryId : { type : 's' },
+				totalVodDuration : { type : 'n' },
+				lastSegmentDuration : { type : 'n' },
+				amfArray : { type : 's' },
+				lastCuePointSyncTime : { type : 'd' },
+				lastSegmentDrift : { type : 'n' }
             }
         );
         return result;

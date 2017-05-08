@@ -27,9 +27,9 @@ export class KalturaPartnerUsageListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPartnerUsageListResponse'  },
-				total : { type : 'o'   , fallbackConstructor :  KalturaVarPartnerUsageItem, subType : 'KalturaVarPartnerUsageItem'},
-				objects : { type : 'a'   , fallbackConstructor :  KalturaVarPartnerUsageItem, subType : 'KalturaVarPartnerUsageItem'}
+                objectType : { type : 'c', default : 'KalturaPartnerUsageListResponse' },
+				total : { type : 'o', subTypeConstructor : KalturaVarPartnerUsageItem, subType : 'KalturaVarPartnerUsageItem' },
+				objects : { type : 'a', subTypeConstructor : KalturaVarPartnerUsageItem, subType : 'KalturaVarPartnerUsageItem' }
             }
         );
         return result;

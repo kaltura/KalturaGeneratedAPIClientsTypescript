@@ -23,8 +23,8 @@ export class KalturaDistributeObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributeObjectTask'  },
-				distributionProfileId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDistributeObjectTask' },
+				distributionProfileId : { type : 's' }
             }
         );
         return result;

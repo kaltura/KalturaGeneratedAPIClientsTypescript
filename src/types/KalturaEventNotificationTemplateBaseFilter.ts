@@ -51,21 +51,21 @@ export class KalturaEventNotificationTemplateBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationTemplateBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				partnerIdEqual : { type : 'n'   },
-				partnerIdIn : { type : 's'   },
-				systemNameEqual : { type : 's'   },
-				systemNameIn : { type : 's'   },
-				typeEqual : { type : 'es'   , subType : 'KalturaEventNotificationTemplateType'},
-				typeIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaEventNotificationTemplateStatus'},
-				statusIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   }
+                objectType : { type : 'c', default : 'KalturaEventNotificationTemplateBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				partnerIdEqual : { type : 'n' },
+				partnerIdIn : { type : 's' },
+				systemNameEqual : { type : 's' },
+				systemNameIn : { type : 's' },
+				typeEqual : { type : 'es', subTypeConstructor : KalturaEventNotificationTemplateType, subType : 'KalturaEventNotificationTemplateType' },
+				typeIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaEventNotificationTemplateStatus, subType : 'KalturaEventNotificationTemplateStatus' },
+				statusIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' }
             }
         );
         return result;

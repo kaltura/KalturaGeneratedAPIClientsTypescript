@@ -23,7 +23,7 @@ export class KalturaAccessControlContextTypeHolder extends KalturaContextTypeHol
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlContextTypeHolder'  }
+                objectType : { type : 'c', default : 'KalturaAccessControlContextTypeHolder' }
             }
         );
         return result;

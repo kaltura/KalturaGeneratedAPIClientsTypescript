@@ -27,9 +27,9 @@ export class AnnotationAddAction extends KalturaRequest<KalturaAnnotation> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation'  },
-				action : { type : 'c' , default : 'add'  },
-				annotation : { type : 'o'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
+                service : { type : 'c', default : 'annotation_annotation' },
+				action : { type : 'c', default : 'add' },
+				annotation : { type : 'o', subTypeConstructor : KalturaCuePoint, subType : 'KalturaCuePoint' }
             }
         );
         return result;

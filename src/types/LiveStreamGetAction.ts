@@ -29,10 +29,10 @@ export class LiveStreamGetAction extends KalturaRequest<KalturaLiveStreamEntry> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'get'  },
-				entryId : { type : 's'   },
-				version : { type : 'n'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'get' },
+				entryId : { type : 's' },
+				version : { type : 'n' }
             }
         );
         return result;

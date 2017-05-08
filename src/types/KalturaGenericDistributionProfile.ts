@@ -36,14 +36,14 @@ export class KalturaGenericDistributionProfile extends KalturaDistributionProfil
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProfile'  },
-				genericProviderId : { type : 'n'   },
-				submitAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction'},
-				updateAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction'},
-				deleteAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction'},
-				fetchReportAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction'},
-				updateRequiredEntryFields : { type : 's'   },
-				updateRequiredMetadataXPaths : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaGenericDistributionProfile' },
+				genericProviderId : { type : 'n' },
+				submitAction : { type : 'o', subTypeConstructor : KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction' },
+				updateAction : { type : 'o', subTypeConstructor : KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction' },
+				deleteAction : { type : 'o', subTypeConstructor : KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction' },
+				fetchReportAction : { type : 'o', subTypeConstructor : KalturaGenericDistributionProfileAction, subType : 'KalturaGenericDistributionProfileAction' },
+				updateRequiredEntryFields : { type : 's' },
+				updateRequiredMetadataXPaths : { type : 's' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaUserAgentCondition extends KalturaRegexCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserAgentCondition'  }
+                objectType : { type : 'c', default : 'KalturaUserAgentCondition' }
             }
         );
         return result;

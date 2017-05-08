@@ -28,10 +28,10 @@ export class DataUpdateAction extends KalturaRequest<KalturaDataEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data'  },
-				action : { type : 'c' , default : 'update'  },
-				entryId : { type : 's'   },
-				documentEntry : { type : 'o'   , fallbackConstructor :  KalturaDataEntry, subType : 'KalturaDataEntry'}
+                service : { type : 'c', default : 'data' },
+				action : { type : 'c', default : 'update' },
+				entryId : { type : 's' },
+				documentEntry : { type : 'o', subTypeConstructor : KalturaDataEntry, subType : 'KalturaDataEntry' }
             }
         );
         return result;

@@ -28,9 +28,9 @@ export class KalturaKeyValue extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaKeyValue'  },
-				key : { type : 's'   },
-				value : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaKeyValue' },
+				key : { type : 's' },
+				value : { type : 's' }
             }
         );
         return result;

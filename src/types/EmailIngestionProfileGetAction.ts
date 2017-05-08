@@ -26,9 +26,9 @@ export class EmailIngestionProfileGetAction extends KalturaRequest<KalturaEmailI
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'emailingestionprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'emailingestionprofile' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

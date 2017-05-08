@@ -23,7 +23,7 @@ export class KalturaVarPartnerUsageTotalItem extends KalturaVarPartnerUsageItem 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVarPartnerUsageTotalItem'  }
+                objectType : { type : 'c', default : 'KalturaVarPartnerUsageTotalItem' }
             }
         );
         return result;

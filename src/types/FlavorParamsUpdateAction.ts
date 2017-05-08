@@ -28,10 +28,10 @@ export class FlavorParamsUpdateAction extends KalturaRequest<KalturaFlavorParams
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparams'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				flavorParams : { type : 'o'   , fallbackConstructor :  KalturaFlavorParams, subType : 'KalturaFlavorParams'}
+                service : { type : 'c', default : 'flavorparams' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				flavorParams : { type : 'o', subTypeConstructor : KalturaFlavorParams, subType : 'KalturaFlavorParams' }
             }
         );
         return result;

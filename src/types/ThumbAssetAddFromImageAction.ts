@@ -26,10 +26,10 @@ export class ThumbAssetAddFromImageAction extends KalturaUploadRequest<KalturaTh
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'addFromImage'  },
-				entryId : { type : 's'   },
-				fileData : { type : 'f'   }
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'addFromImage' },
+				entryId : { type : 's' },
+				fileData : { type : 'f' }
             }
         );
         return result;

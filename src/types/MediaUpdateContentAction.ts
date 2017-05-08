@@ -34,12 +34,12 @@ export class MediaUpdateContentAction extends KalturaRequest<KalturaMediaEntry> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'updateContent'  },
-				entryId : { type : 's'   },
-				resource : { type : 'o'   , fallbackConstructor :  KalturaResource, subType : 'KalturaResource'},
-				conversionProfileId : { type : 'n'   },
-				advancedOptions : { type : 'o'   , fallbackConstructor :  KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'updateContent' },
+				entryId : { type : 's' },
+				resource : { type : 'o', subTypeConstructor : KalturaResource, subType : 'KalturaResource' },
+				conversionProfileId : { type : 'n' },
+				advancedOptions : { type : 'o', subTypeConstructor : KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions' }
             }
         );
         return result;

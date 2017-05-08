@@ -28,10 +28,10 @@ export class AccessControlProfileUpdateAction extends KalturaRequest<KalturaAcce
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrolprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				accessControlProfile : { type : 'o'   , fallbackConstructor :  KalturaAccessControlProfile, subType : 'KalturaAccessControlProfile'}
+                service : { type : 'c', default : 'accesscontrolprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				accessControlProfile : { type : 'o', subTypeConstructor : KalturaAccessControlProfile, subType : 'KalturaAccessControlProfile' }
             }
         );
         return result;

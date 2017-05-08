@@ -23,7 +23,7 @@ export class KalturaAvnDistributionProvider extends KalturaDistributionProvider 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAvnDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaAvnDistributionProvider' }
             }
         );
         return result;

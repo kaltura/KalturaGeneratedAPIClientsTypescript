@@ -30,10 +30,10 @@ export class DrmPolicyListAction extends KalturaRequest<KalturaDrmPolicyListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmpolicy'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaDrmPolicyFilter, subType : 'KalturaDrmPolicyFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'drm_drmpolicy' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaDrmPolicyFilter, subType : 'KalturaDrmPolicyFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

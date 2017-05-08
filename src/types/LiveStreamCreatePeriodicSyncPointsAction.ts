@@ -30,11 +30,11 @@ export class LiveStreamCreatePeriodicSyncPointsAction extends KalturaRequest<voi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'createPeriodicSyncPoints'  },
-				entryId : { type : 's'   },
-				interval : { type : 'n'   },
-				duration : { type : 'n'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'createPeriodicSyncPoints' },
+				entryId : { type : 's' },
+				interval : { type : 'n' },
+				duration : { type : 'n' }
             }
         );
         return result;

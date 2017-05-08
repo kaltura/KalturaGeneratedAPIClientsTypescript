@@ -25,9 +25,9 @@ export class KalturaDistributionFetchReportJobData extends KalturaDistributionJo
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionFetchReportJobData'  },
-				plays : { type : 'n'   },
-				views : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaDistributionFetchReportJobData' },
+				plays : { type : 'n' },
+				views : { type : 'n' }
             }
         );
         return result;

@@ -25,9 +25,9 @@ export class KalturaDocumentEntry extends KalturaBaseEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDocumentEntry'  },
-				documentType : { type : 'en'   , subType : 'KalturaDocumentType'},
-				assetParamsIds : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaDocumentEntry' },
+				documentType : { type : 'en', subTypeConstructor : KalturaDocumentType, subType : 'KalturaDocumentType' },
+				assetParamsIds : { type : 's', readOnly : true }
             }
         );
         return result;

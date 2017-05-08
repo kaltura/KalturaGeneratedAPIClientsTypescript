@@ -26,9 +26,9 @@ export class CuePointAddAction extends KalturaRequest<KalturaCuePoint> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
-				action : { type : 'c' , default : 'add'  },
-				cuePoint : { type : 'o'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
+                service : { type : 'c', default : 'cuepoint_cuepoint' },
+				action : { type : 'c', default : 'add' },
+				cuePoint : { type : 'o', subTypeConstructor : KalturaCuePoint, subType : 'KalturaCuePoint' }
             }
         );
         return result;

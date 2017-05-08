@@ -27,9 +27,9 @@ export class PartnerCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'count'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'}
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'count' },
+				filter : { type : 'o', subTypeConstructor : KalturaPartnerFilter, subType : 'KalturaPartnerFilter' }
             }
         );
         return result;

@@ -24,8 +24,8 @@ export class KalturaFileSyncFilter extends KalturaFileSyncBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFileSyncFilter'  },
-				currentDc : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaFileSyncFilter' },
+				currentDc : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaQuickPlayDistributionProvider extends KalturaDistributionPro
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaQuickPlayDistributionProvider' }
             }
         );
         return result;

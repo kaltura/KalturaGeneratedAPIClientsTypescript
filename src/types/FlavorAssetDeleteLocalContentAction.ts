@@ -26,9 +26,9 @@ export class FlavorAssetDeleteLocalContentAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'deleteLocalContent'  },
-				assetId : { type : 's'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'deleteLocalContent' },
+				assetId : { type : 's' }
             }
         );
         return result;

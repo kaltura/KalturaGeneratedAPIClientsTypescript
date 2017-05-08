@@ -33,13 +33,13 @@ export class KalturaFlavorParamsOutput extends KalturaFlavorParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorParamsOutput'  },
-				flavorParamsId : { type : 'n'   },
-				commandLinesStr : { type : 's'   },
-				flavorParamsVersion : { type : 's'   },
-				flavorAssetId : { type : 's'   },
-				flavorAssetVersion : { type : 's'   },
-				readyBehavior : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaFlavorParamsOutput' },
+				flavorParamsId : { type : 'n' },
+				commandLinesStr : { type : 's' },
+				flavorParamsVersion : { type : 's' },
+				flavorAssetId : { type : 's' },
+				flavorAssetVersion : { type : 's' },
+				readyBehavior : { type : 'n' }
             }
         );
         return result;

@@ -36,14 +36,14 @@ export class KalturaYahooDistributionProfile extends KalturaConfigurableDistribu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYahooDistributionProfile'  },
-				ftpPath : { type : 's'   },
-				ftpUsername : { type : 's'   },
-				ftpPassword : { type : 's'   },
-				ftpHost : { type : 's'   },
-				contactTelephone : { type : 's'   },
-				contactEmail : { type : 's'   },
-				processFeed : { type : 'en'   , subType : 'KalturaYahooDistributionProcessFeedActionStatus'}
+                objectType : { type : 'c', default : 'KalturaYahooDistributionProfile' },
+				ftpPath : { type : 's' },
+				ftpUsername : { type : 's' },
+				ftpPassword : { type : 's' },
+				ftpHost : { type : 's' },
+				contactTelephone : { type : 's' },
+				contactEmail : { type : 's' },
+				processFeed : { type : 'en', subTypeConstructor : KalturaYahooDistributionProcessFeedActionStatus, subType : 'KalturaYahooDistributionProcessFeedActionStatus' }
             }
         );
         return result;

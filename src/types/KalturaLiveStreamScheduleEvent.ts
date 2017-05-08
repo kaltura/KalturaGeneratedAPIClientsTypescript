@@ -23,7 +23,7 @@ export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamScheduleEvent'  }
+                objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEvent' }
             }
         );
         return result;

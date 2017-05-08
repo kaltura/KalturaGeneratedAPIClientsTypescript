@@ -26,9 +26,9 @@ export class ServerNodeDisableAction extends KalturaRequest<KalturaServerNode> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode'  },
-				action : { type : 'c' , default : 'disable'  },
-				serverNodeId : { type : 's'   }
+                service : { type : 'c', default : 'servernode' },
+				action : { type : 'c', default : 'disable' },
+				serverNodeId : { type : 's' }
             }
         );
         return result;

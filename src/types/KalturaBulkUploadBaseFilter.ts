@@ -37,14 +37,14 @@ export class KalturaBulkUploadBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadBaseFilter'  },
-				uploadedOnGreaterThanOrEqual : { type : 'd'   },
-				uploadedOnLessThanOrEqual : { type : 'd'   },
-				uploadedOnEqual : { type : 'd'   },
-				statusIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaBatchJobStatus'},
-				bulkUploadObjectTypeEqual : { type : 'es'   , subType : 'KalturaBulkUploadObjectType'},
-				bulkUploadObjectTypeIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBulkUploadBaseFilter' },
+				uploadedOnGreaterThanOrEqual : { type : 'd' },
+				uploadedOnLessThanOrEqual : { type : 'd' },
+				uploadedOnEqual : { type : 'd' },
+				statusIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaBatchJobStatus, subType : 'KalturaBatchJobStatus' },
+				bulkUploadObjectTypeEqual : { type : 'es', subTypeConstructor : KalturaBulkUploadObjectType, subType : 'KalturaBulkUploadObjectType' },
+				bulkUploadObjectTypeIn : { type : 's' }
             }
         );
         return result;

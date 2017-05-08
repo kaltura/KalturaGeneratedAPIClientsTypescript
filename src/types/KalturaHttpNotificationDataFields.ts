@@ -26,7 +26,7 @@ export class KalturaHttpNotificationDataFields extends KalturaHttpNotificationDa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHttpNotificationDataFields'  }
+                objectType : { type : 'c', default : 'KalturaHttpNotificationDataFields' }
             }
         );
         return result;

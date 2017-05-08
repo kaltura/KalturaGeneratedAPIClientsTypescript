@@ -23,7 +23,7 @@ export class KalturaComcastMrssDistributionProvider extends KalturaDistributionP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaComcastMrssDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaComcastMrssDistributionProvider' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaPlayReadyRight extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyRight'  }
+                objectType : { type : 'c', default : 'KalturaPlayReadyRight' }
             }
         );
         return result;

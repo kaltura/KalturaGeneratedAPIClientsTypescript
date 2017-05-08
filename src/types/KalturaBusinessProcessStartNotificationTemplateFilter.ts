@@ -23,7 +23,7 @@ export class KalturaBusinessProcessStartNotificationTemplateFilter extends Kaltu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessStartNotificationTemplateFilter'  }
+                objectType : { type : 'c', default : 'KalturaBusinessProcessStartNotificationTemplateFilter' }
             }
         );
         return result;

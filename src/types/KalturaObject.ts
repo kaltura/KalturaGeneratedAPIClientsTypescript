@@ -25,8 +25,8 @@ export class KalturaObject extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaObject'  },
-				relatedObjects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaListResponse, subType : 'KalturaListResponse'}
+                objectType : { type : 'c', default : 'KalturaObject' },
+				relatedObjects : { type : 'a', readOnly : true, subTypeConstructor : KalturaListResponse, subType : 'KalturaListResponse' }
             }
         );
         return result;

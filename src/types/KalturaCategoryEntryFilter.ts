@@ -23,7 +23,7 @@ export class KalturaCategoryEntryFilter extends KalturaCategoryEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryEntryFilter'  }
+                objectType : { type : 'c', default : 'KalturaCategoryEntryFilter' }
             }
         );
         return result;

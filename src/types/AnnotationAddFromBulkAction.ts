@@ -27,9 +27,9 @@ export class AnnotationAddFromBulkAction extends KalturaUploadRequest<KalturaCue
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation'  },
-				action : { type : 'c' , default : 'addFromBulk'  },
-				fileData : { type : 'f'   }
+                service : { type : 'c', default : 'annotation_annotation' },
+				action : { type : 'c', default : 'addFromBulk' },
+				fileData : { type : 'f' }
             }
         );
         return result;

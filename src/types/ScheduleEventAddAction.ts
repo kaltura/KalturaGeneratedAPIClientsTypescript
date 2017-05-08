@@ -26,9 +26,9 @@ export class ScheduleEventAddAction extends KalturaRequest<KalturaScheduleEvent>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent'  },
-				action : { type : 'c' , default : 'add'  },
-				scheduleEvent : { type : 'o'   , fallbackConstructor :  KalturaScheduleEvent, subType : 'KalturaScheduleEvent'}
+                service : { type : 'c', default : 'schedule_scheduleevent' },
+				action : { type : 'c', default : 'add' },
+				scheduleEvent : { type : 'o', subTypeConstructor : KalturaScheduleEvent, subType : 'KalturaScheduleEvent' }
             }
         );
         return result;

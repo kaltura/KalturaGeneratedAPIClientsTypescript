@@ -23,7 +23,7 @@ export class KalturaFlavorAssetFilter extends KalturaFlavorAssetBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorAssetFilter'  }
+                objectType : { type : 'c', default : 'KalturaFlavorAssetFilter' }
             }
         );
         return result;

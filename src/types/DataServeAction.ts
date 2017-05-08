@@ -32,11 +32,11 @@ export class DataServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data'  },
-				action : { type : 'c' , default : 'serve'  },
-				entryId : { type : 's'   },
-				version : { type : 'n'   },
-				forceProxy : { type : 'b'   }
+                service : { type : 'c', default : 'data' },
+				action : { type : 'c', default : 'serve' },
+				entryId : { type : 's' },
+				version : { type : 'n' },
+				forceProxy : { type : 'b' }
             }
         );
         return result;

@@ -27,10 +27,10 @@ export class KalturaBusinessProcessNotificationTemplate extends KalturaEventNoti
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessNotificationTemplate'  },
-				serverId : { type : 'n'   },
-				processId : { type : 's'   },
-				mainObjectCode : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBusinessProcessNotificationTemplate' },
+				serverId : { type : 'n' },
+				processId : { type : 's' },
+				mainObjectCode : { type : 's' }
             }
         );
         return result;

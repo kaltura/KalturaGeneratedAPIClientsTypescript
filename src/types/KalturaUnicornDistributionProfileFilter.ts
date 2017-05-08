@@ -23,7 +23,7 @@ export class KalturaUnicornDistributionProfileFilter extends KalturaUnicornDistr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUnicornDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaUnicornDistributionProfileFilter' }
             }
         );
         return result;

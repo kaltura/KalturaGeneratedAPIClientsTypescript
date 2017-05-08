@@ -23,8 +23,8 @@ export class KalturaVerizonVcastDistributionJobProviderData extends KalturaConfi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVerizonVcastDistributionJobProviderData'  },
-				xml : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaVerizonVcastDistributionJobProviderData' },
+				xml : { type : 's' }
             }
         );
         return result;

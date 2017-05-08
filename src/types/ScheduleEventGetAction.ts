@@ -26,9 +26,9 @@ export class ScheduleEventGetAction extends KalturaRequest<KalturaScheduleEvent>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent'  },
-				action : { type : 'c' , default : 'get'  },
-				scheduleEventId : { type : 'n'   }
+                service : { type : 'c', default : 'schedule_scheduleevent' },
+				action : { type : 'c', default : 'get' },
+				scheduleEventId : { type : 'n' }
             }
         );
         return result;

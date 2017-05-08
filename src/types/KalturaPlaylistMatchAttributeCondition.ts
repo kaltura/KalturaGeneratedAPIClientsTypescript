@@ -27,8 +27,8 @@ export class KalturaPlaylistMatchAttributeCondition extends KalturaSearchMatchAt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlaylistMatchAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaPlaylistMatchAttribute'}
+                objectType : { type : 'c', default : 'KalturaPlaylistMatchAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaPlaylistMatchAttribute, subType : 'KalturaPlaylistMatchAttribute' }
             }
         );
         return result;

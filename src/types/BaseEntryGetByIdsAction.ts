@@ -26,9 +26,9 @@ export class BaseEntryGetByIdsAction extends KalturaRequest<KalturaBaseEntry[]> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'getByIds'  },
-				entryIds : { type : 's'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'getByIds' },
+				entryIds : { type : 's' }
             }
         );
         return result;

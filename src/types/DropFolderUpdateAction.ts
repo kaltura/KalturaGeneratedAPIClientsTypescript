@@ -28,10 +28,10 @@ export class DropFolderUpdateAction extends KalturaRequest<KalturaDropFolder> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolder'  },
-				action : { type : 'c' , default : 'update'  },
-				dropFolderId : { type : 'n'   },
-				dropFolder : { type : 'o'   , fallbackConstructor :  KalturaDropFolder, subType : 'KalturaDropFolder'}
+                service : { type : 'c', default : 'dropfolder_dropfolder' },
+				action : { type : 'c', default : 'update' },
+				dropFolderId : { type : 'n' },
+				dropFolder : { type : 'o', subTypeConstructor : KalturaDropFolder, subType : 'KalturaDropFolder' }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class LiveStreamRemoveLiveStreamPushPublishConfigurationAction extends Ka
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'removeLiveStreamPushPublishConfiguration'  },
-				entryId : { type : 's'   },
-				protocol : { type : 'es'   , subType : 'KalturaPlaybackProtocol'}
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'removeLiveStreamPushPublishConfiguration' },
+				entryId : { type : 's' },
+				protocol : { type : 'es', subTypeConstructor : KalturaPlaybackProtocol, subType : 'KalturaPlaybackProtocol' }
             }
         );
         return result;

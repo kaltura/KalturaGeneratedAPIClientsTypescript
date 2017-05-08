@@ -27,9 +27,9 @@ export class CuePointCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
-				action : { type : 'c' , default : 'count'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaCuePointFilter, subType : 'KalturaCuePointFilter'}
+                service : { type : 'c', default : 'cuepoint_cuepoint' },
+				action : { type : 'c', default : 'count' },
+				filter : { type : 'o', subTypeConstructor : KalturaCuePointFilter, subType : 'KalturaCuePointFilter' }
             }
         );
         return result;

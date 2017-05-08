@@ -29,8 +29,8 @@ export class KalturaRemoteStorageResources extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRemoteStorageResources'  },
-				resources : { type : 'a'   , fallbackConstructor :  KalturaRemoteStorageResource, subType : 'KalturaRemoteStorageResource'}
+                objectType : { type : 'c', default : 'KalturaRemoteStorageResources' },
+				resources : { type : 'a', subTypeConstructor : KalturaRemoteStorageResource, subType : 'KalturaRemoteStorageResource' }
             }
         );
         return result;

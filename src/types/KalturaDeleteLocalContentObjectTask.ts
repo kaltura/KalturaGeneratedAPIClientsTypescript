@@ -23,7 +23,7 @@ export class KalturaDeleteLocalContentObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeleteLocalContentObjectTask'  }
+                objectType : { type : 'c', default : 'KalturaDeleteLocalContentObjectTask' }
             }
         );
         return result;

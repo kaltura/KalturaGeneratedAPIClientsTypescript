@@ -29,10 +29,10 @@ export class DocumentsGetAction extends KalturaRequest<KalturaDocumentEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents'  },
-				action : { type : 'c' , default : 'get'  },
-				entryId : { type : 's'   },
-				version : { type : 'n'   }
+                service : { type : 'c', default : 'document_documents' },
+				action : { type : 'c', default : 'get' },
+				entryId : { type : 's' },
+				version : { type : 'n' }
             }
         );
         return result;

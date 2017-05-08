@@ -30,10 +30,10 @@ export class KalturaRequestConfiguration extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRequestConfiguration'  },
-				partnerId : { type : 'n'   },
-				ks : { type : 's'   },
-				responseProfile : { type : 'o'   , fallbackConstructor :  KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile'}
+                objectType : { type : 'c', default : 'KalturaRequestConfiguration' },
+				partnerId : { type : 'n' },
+				ks : { type : 's' },
+				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
             }
         );
         return result;

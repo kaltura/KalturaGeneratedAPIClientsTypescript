@@ -26,9 +26,9 @@ export class ScheduledTaskProfileAddAction extends KalturaRequest<KalturaSchedul
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				scheduledTaskProfile : { type : 'o'   , fallbackConstructor :  KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile'}
+                service : { type : 'c', default : 'scheduledtask_scheduledtaskprofile' },
+				action : { type : 'c', default : 'add' },
+				scheduledTaskProfile : { type : 'o', subTypeConstructor : KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile' }
             }
         );
         return result;

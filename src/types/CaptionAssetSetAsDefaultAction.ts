@@ -27,9 +27,9 @@ export class CaptionAssetSetAsDefaultAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'setAsDefault'  },
-				captionAssetId : { type : 's'   }
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'setAsDefault' },
+				captionAssetId : { type : 's' }
             }
         );
         return result;

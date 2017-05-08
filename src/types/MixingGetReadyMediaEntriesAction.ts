@@ -29,10 +29,10 @@ export class MixingGetReadyMediaEntriesAction extends KalturaRequest<KalturaMedi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing'  },
-				action : { type : 'c' , default : 'getReadyMediaEntries'  },
-				mixId : { type : 's'   },
-				version : { type : 'n'   }
+                service : { type : 'c', default : 'mixing' },
+				action : { type : 'c', default : 'getReadyMediaEntries' },
+				mixId : { type : 's' },
+				version : { type : 'n' }
             }
         );
         return result;

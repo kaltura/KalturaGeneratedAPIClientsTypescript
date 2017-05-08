@@ -26,9 +26,9 @@ export class CategoryUserCopyFromCategoryAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser'  },
-				action : { type : 'c' , default : 'copyFromCategory'  },
-				categoryId : { type : 'n'   }
+                service : { type : 'c', default : 'categoryuser' },
+				action : { type : 'c', default : 'copyFromCategory' },
+				categoryId : { type : 'n' }
             }
         );
         return result;

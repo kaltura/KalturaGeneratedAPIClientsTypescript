@@ -26,10 +26,10 @@ export class ThumbAssetGenerateByEntryIdAction extends KalturaRequest<KalturaThu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'generateByEntryId'  },
-				entryId : { type : 's'   },
-				destThumbParamsId : { type : 'n'   }
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'generateByEntryId' },
+				entryId : { type : 's' },
+				destThumbParamsId : { type : 'n' }
             }
         );
         return result;

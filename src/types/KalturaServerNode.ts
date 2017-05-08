@@ -43,21 +43,21 @@ export class KalturaServerNode extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaServerNode'  },
-				id : { type : 'n'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				heartbeatTime : { type : 'd'  , readOnly : true },
-				name : { type : 's'   },
-				systemName : { type : 's'   },
-				description : { type : 's'   },
-				hostName : { type : 's'   },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaServerNodeStatus'},
-				type : { type : 'es'  , readOnly : true , subType : 'KalturaServerNodeType'},
-				tags : { type : 's'   },
-				dc : { type : 'n'  , readOnly : true },
-				parentId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaServerNode' },
+				id : { type : 'n', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				heartbeatTime : { type : 'd', readOnly : true },
+				name : { type : 's' },
+				systemName : { type : 's' },
+				description : { type : 's' },
+				hostName : { type : 's' },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaServerNodeStatus, subType : 'KalturaServerNodeStatus' },
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaServerNodeType, subType : 'KalturaServerNodeType' },
+				tags : { type : 's' },
+				dc : { type : 'n', readOnly : true },
+				parentId : { type : 'n' }
             }
         );
         return result;

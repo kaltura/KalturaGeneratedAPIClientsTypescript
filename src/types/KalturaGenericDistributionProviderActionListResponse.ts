@@ -25,8 +25,8 @@ export class KalturaGenericDistributionProviderActionListResponse extends Kaltur
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderActionListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction'}
+                objectType : { type : 'c', default : 'KalturaGenericDistributionProviderActionListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction' }
             }
         );
         return result;

@@ -33,11 +33,11 @@ export class VarConsoleGetPartnerUsageAction extends KalturaRequest<KalturaPartn
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'varconsole_varconsole'  },
-				action : { type : 'c' , default : 'getPartnerUsage'  },
-				partnerFilter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'},
-				usageFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'varconsole_varconsole' },
+				action : { type : 'c', default : 'getPartnerUsage' },
+				partnerFilter : { type : 'o', subTypeConstructor : KalturaPartnerFilter, subType : 'KalturaPartnerFilter' },
+				usageFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

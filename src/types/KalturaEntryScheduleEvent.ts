@@ -27,10 +27,10 @@ export class KalturaEntryScheduleEvent extends KalturaScheduleEvent {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryScheduleEvent'  },
-				templateEntryId : { type : 's'   },
-				entryIds : { type : 's'   },
-				categoryIds : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaEntryScheduleEvent' },
+				templateEntryId : { type : 's' },
+				entryIds : { type : 's' },
+				categoryIds : { type : 's' }
             }
         );
         return result;

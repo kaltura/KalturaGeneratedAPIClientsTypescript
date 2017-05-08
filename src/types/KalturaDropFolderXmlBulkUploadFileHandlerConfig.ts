@@ -23,7 +23,7 @@ export class KalturaDropFolderXmlBulkUploadFileHandlerConfig extends KalturaDrop
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderXmlBulkUploadFileHandlerConfig'  }
+                objectType : { type : 'c', default : 'KalturaDropFolderXmlBulkUploadFileHandlerConfig' }
             }
         );
         return result;

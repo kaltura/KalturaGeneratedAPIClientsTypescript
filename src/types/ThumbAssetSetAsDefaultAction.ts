@@ -28,9 +28,9 @@ export class ThumbAssetSetAsDefaultAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'setAsDefault'  },
-				thumbAssetId : { type : 's'   }
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'setAsDefault' },
+				thumbAssetId : { type : 's' }
             }
         );
         return result;

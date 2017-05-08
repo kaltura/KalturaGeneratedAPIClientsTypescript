@@ -28,10 +28,10 @@ export class MetadataInvalidateAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'invalidate'  },
-				id : { type : 'n'   },
-				version : { type : 'n'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'invalidate' },
+				id : { type : 'n' },
+				version : { type : 'n' }
             }
         );
         return result;

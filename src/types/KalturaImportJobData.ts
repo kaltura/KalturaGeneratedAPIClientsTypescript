@@ -29,11 +29,11 @@ export class KalturaImportJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaImportJobData'  },
-				srcFileUrl : { type : 's'   },
-				destFileLocalPath : { type : 's'   },
-				flavorAssetId : { type : 's'   },
-				fileSize : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaImportJobData' },
+				srcFileUrl : { type : 's' },
+				destFileLocalPath : { type : 's' },
+				flavorAssetId : { type : 's' },
+				fileSize : { type : 'n' }
             }
         );
         return result;

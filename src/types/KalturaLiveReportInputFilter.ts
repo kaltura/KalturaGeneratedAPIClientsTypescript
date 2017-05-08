@@ -33,12 +33,12 @@ export class KalturaLiveReportInputFilter extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveReportInputFilter'  },
-				entryIds : { type : 's'   },
-				fromTime : { type : 'd'   },
-				toTime : { type : 'd'   },
-				live : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				orderBy : { type : 'es'   , subType : 'KalturaLiveReportOrderBy'}
+                objectType : { type : 'c', default : 'KalturaLiveReportInputFilter' },
+				entryIds : { type : 's' },
+				fromTime : { type : 'd' },
+				toTime : { type : 'd' },
+				live : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				orderBy : { type : 'es', subTypeConstructor : KalturaLiveReportOrderBy, subType : 'KalturaLiveReportOrderBy' }
             }
         );
         return result;

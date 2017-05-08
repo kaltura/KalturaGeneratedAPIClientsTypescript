@@ -47,19 +47,19 @@ export class KalturaGenericDistributionProviderBaseFilter extends KalturaDistrib
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				partnerIdEqual : { type : 'n'   },
-				partnerIdIn : { type : 's'   },
-				isDefaultEqual : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				isDefaultIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaGenericDistributionProviderStatus'},
-				statusIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaGenericDistributionProviderBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				partnerIdEqual : { type : 'n' },
+				partnerIdIn : { type : 's' },
+				isDefaultEqual : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				isDefaultIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaGenericDistributionProviderStatus, subType : 'KalturaGenericDistributionProviderStatus' },
+				statusIn : { type : 's' }
             }
         );
         return result;

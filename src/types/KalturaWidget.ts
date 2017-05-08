@@ -48,23 +48,23 @@ export class KalturaWidget extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidget'  },
-				id : { type : 's'  , readOnly : true },
-				sourceWidgetId : { type : 's'   },
-				rootWidgetId : { type : 's'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				entryId : { type : 's'   },
-				uiConfId : { type : 'n'   },
-				securityType : { type : 'en'   , subType : 'KalturaWidgetSecurityType'},
-				securityPolicy : { type : 'n'   },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				partnerData : { type : 's'   },
-				widgetHTML : { type : 's'  , readOnly : true },
-				enforceEntitlement : { type : 'b'   },
-				privacyContext : { type : 's'   },
-				addEmbedHtml5Support : { type : 'b'   },
-				roles : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaWidget' },
+				id : { type : 's', readOnly : true },
+				sourceWidgetId : { type : 's' },
+				rootWidgetId : { type : 's', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				entryId : { type : 's' },
+				uiConfId : { type : 'n' },
+				securityType : { type : 'en', subTypeConstructor : KalturaWidgetSecurityType, subType : 'KalturaWidgetSecurityType' },
+				securityPolicy : { type : 'n' },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				partnerData : { type : 's' },
+				widgetHTML : { type : 's', readOnly : true },
+				enforceEntitlement : { type : 'b' },
+				privacyContext : { type : 's' },
+				addEmbedHtml5Support : { type : 'b' },
+				roles : { type : 's' }
             }
         );
         return result;

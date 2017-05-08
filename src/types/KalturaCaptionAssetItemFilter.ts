@@ -50,21 +50,21 @@ export class KalturaCaptionAssetItemFilter extends KalturaCaptionAssetFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionAssetItemFilter'  },
-				contentLike : { type : 's'   },
-				contentMultiLikeOr : { type : 's'   },
-				contentMultiLikeAnd : { type : 's'   },
-				partnerDescriptionLike : { type : 's'   },
-				partnerDescriptionMultiLikeOr : { type : 's'   },
-				partnerDescriptionMultiLikeAnd : { type : 's'   },
-				languageEqual : { type : 'es'   , subType : 'KalturaLanguage'},
-				languageIn : { type : 's'   },
-				labelEqual : { type : 's'   },
-				labelIn : { type : 's'   },
-				startTimeGreaterThanOrEqual : { type : 'n'   },
-				startTimeLessThanOrEqual : { type : 'n'   },
-				endTimeGreaterThanOrEqual : { type : 'n'   },
-				endTimeLessThanOrEqual : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaCaptionAssetItemFilter' },
+				contentLike : { type : 's' },
+				contentMultiLikeOr : { type : 's' },
+				contentMultiLikeAnd : { type : 's' },
+				partnerDescriptionLike : { type : 's' },
+				partnerDescriptionMultiLikeOr : { type : 's' },
+				partnerDescriptionMultiLikeAnd : { type : 's' },
+				languageEqual : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
+				languageIn : { type : 's' },
+				labelEqual : { type : 's' },
+				labelIn : { type : 's' },
+				startTimeGreaterThanOrEqual : { type : 'n' },
+				startTimeLessThanOrEqual : { type : 'n' },
+				endTimeGreaterThanOrEqual : { type : 'n' },
+				endTimeLessThanOrEqual : { type : 'n' }
             }
         );
         return result;

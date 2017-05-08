@@ -29,9 +29,9 @@ export class KalturaUrlResource extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlResource'  },
-				url : { type : 's'   },
-				forceAsyncDownload : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaUrlResource' },
+				url : { type : 's' },
+				forceAsyncDownload : { type : 'b' }
             }
         );
         return result;

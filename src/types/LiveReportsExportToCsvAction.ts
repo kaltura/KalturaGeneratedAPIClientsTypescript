@@ -28,10 +28,10 @@ export class LiveReportsExportToCsvAction extends KalturaRequest<KalturaLiveRepo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livereports'  },
-				action : { type : 'c' , default : 'exportToCsv'  },
-				reportType : { type : 'en'   , subType : 'KalturaLiveReportExportType'},
-				params : { type : 'o'   , fallbackConstructor :  KalturaLiveReportExportParams, subType : 'KalturaLiveReportExportParams'}
+                service : { type : 'c', default : 'livereports' },
+				action : { type : 'c', default : 'exportToCsv' },
+				reportType : { type : 'en', subTypeConstructor : KalturaLiveReportExportType, subType : 'KalturaLiveReportExportType' },
+				params : { type : 'o', subTypeConstructor : KalturaLiveReportExportParams, subType : 'KalturaLiveReportExportParams' }
             }
         );
         return result;

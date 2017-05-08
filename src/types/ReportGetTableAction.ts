@@ -37,13 +37,13 @@ export class ReportGetTableAction extends KalturaRequest<KalturaReportTable> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report'  },
-				action : { type : 'c' , default : 'getTable'  },
-				reportType : { type : 'es'   , subType : 'KalturaReportType'},
-				reportInputFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'},
-				order : { type : 's'   },
-				objectIds : { type : 's'   }
+                service : { type : 'c', default : 'report' },
+				action : { type : 'c', default : 'getTable' },
+				reportType : { type : 'es', subTypeConstructor : KalturaReportType, subType : 'KalturaReportType' },
+				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' },
+				order : { type : 's' },
+				objectIds : { type : 's' }
             }
         );
         return result;

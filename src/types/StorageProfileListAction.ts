@@ -28,10 +28,10 @@ export class StorageProfileListAction extends KalturaRequest<KalturaStorageProfi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaStorageProfileFilter, subType : 'KalturaStorageProfileFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'storageprofile' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaStorageProfileFilter, subType : 'KalturaStorageProfileFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -39,18 +39,18 @@ export class KalturaFileAsset extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFileAsset'  },
-				id : { type : 'n'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				fileAssetObjectType : { type : 'es'   , subType : 'KalturaFileAssetObjectType'},
-				objectId : { type : 's'   },
-				name : { type : 's'   },
-				systemName : { type : 's'   },
-				fileExt : { type : 's'   },
-				version : { type : 'n'  , readOnly : true },
-				createdAt : { type : 'n'  , readOnly : true },
-				updatedAt : { type : 'n'  , readOnly : true },
-				status : { type : 'es'  , readOnly : true , subType : 'KalturaFileAssetStatus'}
+                objectType : { type : 'c', default : 'KalturaFileAsset' },
+				id : { type : 'n', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				fileAssetObjectType : { type : 'es', subTypeConstructor : KalturaFileAssetObjectType, subType : 'KalturaFileAssetObjectType' },
+				objectId : { type : 's' },
+				name : { type : 's' },
+				systemName : { type : 's' },
+				fileExt : { type : 's' },
+				version : { type : 'n', readOnly : true },
+				createdAt : { type : 'n', readOnly : true },
+				updatedAt : { type : 'n', readOnly : true },
+				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaFileAssetStatus, subType : 'KalturaFileAssetStatus' }
             }
         );
         return result;

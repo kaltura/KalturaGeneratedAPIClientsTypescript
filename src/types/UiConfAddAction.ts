@@ -26,9 +26,9 @@ export class UiConfAddAction extends KalturaRequest<KalturaUiConf> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf'  },
-				action : { type : 'c' , default : 'add'  },
-				uiConf : { type : 'o'   , fallbackConstructor :  KalturaUiConf, subType : 'KalturaUiConf'}
+                service : { type : 'c', default : 'uiconf' },
+				action : { type : 'c', default : 'add' },
+				uiConf : { type : 'o', subTypeConstructor : KalturaUiConf, subType : 'KalturaUiConf' }
             }
         );
         return result;

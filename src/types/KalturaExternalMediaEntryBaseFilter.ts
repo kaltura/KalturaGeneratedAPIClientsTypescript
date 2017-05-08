@@ -30,11 +30,11 @@ export class KalturaExternalMediaEntryBaseFilter extends KalturaMediaEntryFilter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryBaseFilter'  },
-				externalSourceTypeEqual : { type : 'es'   , subType : 'KalturaExternalMediaSourceType'},
-				externalSourceTypeIn : { type : 's'   },
-				assetParamsIdsMatchOr : { type : 's'   },
-				assetParamsIdsMatchAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaExternalMediaEntryBaseFilter' },
+				externalSourceTypeEqual : { type : 'es', subTypeConstructor : KalturaExternalMediaSourceType, subType : 'KalturaExternalMediaSourceType' },
+				externalSourceTypeIn : { type : 's' },
+				assetParamsIdsMatchOr : { type : 's' },
+				assetParamsIdsMatchAnd : { type : 's' }
             }
         );
         return result;

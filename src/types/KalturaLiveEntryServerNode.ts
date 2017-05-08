@@ -25,8 +25,8 @@ export class KalturaLiveEntryServerNode extends KalturaEntryServerNode {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntryServerNode'  },
-				streams : { type : 'a'   , fallbackConstructor :  KalturaLiveStreamParams, subType : 'KalturaLiveStreamParams'}
+                objectType : { type : 'c', default : 'KalturaLiveEntryServerNode' },
+				streams : { type : 'a', subTypeConstructor : KalturaLiveStreamParams, subType : 'KalturaLiveStreamParams' }
             }
         );
         return result;

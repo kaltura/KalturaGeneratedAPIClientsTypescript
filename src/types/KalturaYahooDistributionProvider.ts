@@ -23,7 +23,7 @@ export class KalturaYahooDistributionProvider extends KalturaDistributionProvide
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYahooDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaYahooDistributionProvider' }
             }
         );
         return result;

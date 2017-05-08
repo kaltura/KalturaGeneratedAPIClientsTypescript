@@ -31,12 +31,12 @@ export class KalturaUnicornDistributionJobProviderData extends KalturaConfigurab
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUnicornDistributionJobProviderData'  },
-				catalogGuid : { type : 's'   },
-				title : { type : 's'   },
-				mediaChanged : { type : 'b'   },
-				flavorAssetVersion : { type : 's'   },
-				notificationBaseUrl : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUnicornDistributionJobProviderData' },
+				catalogGuid : { type : 's' },
+				title : { type : 's' },
+				mediaChanged : { type : 'b' },
+				flavorAssetVersion : { type : 's' },
+				notificationBaseUrl : { type : 's' }
             }
         );
         return result;

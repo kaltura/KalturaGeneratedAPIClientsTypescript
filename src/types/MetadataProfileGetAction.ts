@@ -26,9 +26,9 @@ export class MetadataProfileGetAction extends KalturaRequest<KalturaMetadataProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

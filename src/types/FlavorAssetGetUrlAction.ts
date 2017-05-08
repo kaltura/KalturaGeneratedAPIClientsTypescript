@@ -34,12 +34,12 @@ export class FlavorAssetGetUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'getUrl'  },
-				id : { type : 's'   },
-				storageId : { type : 'n'   },
-				forceProxy : { type : 'b'   },
-				options : { type : 'o'   , fallbackConstructor :  KalturaFlavorAssetUrlOptions, subType : 'KalturaFlavorAssetUrlOptions'}
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'getUrl' },
+				id : { type : 's' },
+				storageId : { type : 'n' },
+				forceProxy : { type : 'b' },
+				options : { type : 'o', subTypeConstructor : KalturaFlavorAssetUrlOptions, subType : 'KalturaFlavorAssetUrlOptions' }
             }
         );
         return result;

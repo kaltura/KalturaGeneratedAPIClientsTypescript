@@ -28,10 +28,10 @@ export class PermissionUpdateAction extends KalturaRequest<KalturaPermission> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permission'  },
-				action : { type : 'c' , default : 'update'  },
-				permissionName : { type : 's'   },
-				permission : { type : 'o'   , fallbackConstructor :  KalturaPermission, subType : 'KalturaPermission'}
+                service : { type : 'c', default : 'permission' },
+				action : { type : 'c', default : 'update' },
+				permissionName : { type : 's' },
+				permission : { type : 'o', subTypeConstructor : KalturaPermission, subType : 'KalturaPermission' }
             }
         );
         return result;

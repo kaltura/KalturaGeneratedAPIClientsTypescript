@@ -29,9 +29,9 @@ export class StatsKmcCollectAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats'  },
-				action : { type : 'c' , default : 'kmcCollect'  },
-				kmcEvent : { type : 'o'   , fallbackConstructor :  KalturaStatsKmcEvent, subType : 'KalturaStatsKmcEvent'}
+                service : { type : 'c', default : 'stats' },
+				action : { type : 'c', default : 'kmcCollect' },
+				kmcEvent : { type : 'o', subTypeConstructor : KalturaStatsKmcEvent, subType : 'KalturaStatsKmcEvent' }
             }
         );
         return result;

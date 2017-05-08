@@ -28,10 +28,10 @@ export class UiConfUpdateAction extends KalturaRequest<KalturaUiConf> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				uiConf : { type : 'o'   , fallbackConstructor :  KalturaUiConf, subType : 'KalturaUiConf'}
+                service : { type : 'c', default : 'uiconf' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				uiConf : { type : 'o', subTypeConstructor : KalturaUiConf, subType : 'KalturaUiConf' }
             }
         );
         return result;

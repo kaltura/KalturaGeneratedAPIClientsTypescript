@@ -26,10 +26,10 @@ export class NdnGetFeedAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'ndndistribution_ndn'  },
-				action : { type : 'c' , default : 'getFeed'  },
-				distributionProfileId : { type : 'n'   },
-				hash : { type : 's'   }
+                service : { type : 'c', default : 'ndndistribution_ndn' },
+				action : { type : 'c', default : 'getFeed' },
+				distributionProfileId : { type : 'n' },
+				hash : { type : 's' }
             }
         );
         return result;

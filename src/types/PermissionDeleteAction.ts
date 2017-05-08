@@ -26,9 +26,9 @@ export class PermissionDeleteAction extends KalturaRequest<KalturaPermission> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permission'  },
-				action : { type : 'c' , default : 'delete'  },
-				permissionName : { type : 's'   }
+                service : { type : 'c', default : 'permission' },
+				action : { type : 'c', default : 'delete' },
+				permissionName : { type : 's' }
             }
         );
         return result;

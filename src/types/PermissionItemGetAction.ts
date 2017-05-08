@@ -26,9 +26,9 @@ export class PermissionItemGetAction extends KalturaRequest<KalturaPermissionIte
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permissionitem'  },
-				action : { type : 'c' , default : 'get'  },
-				permissionItemId : { type : 'n'   }
+                service : { type : 'c', default : 'permissionitem' },
+				action : { type : 'c', default : 'get' },
+				permissionItemId : { type : 'n' }
             }
         );
         return result;

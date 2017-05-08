@@ -29,10 +29,10 @@ export class MediaRequestConversionAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'requestConversion'  },
-				entryId : { type : 's'   },
-				fileFormat : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'requestConversion' },
+				entryId : { type : 's' },
+				fileFormat : { type : 's' }
             }
         );
         return result;

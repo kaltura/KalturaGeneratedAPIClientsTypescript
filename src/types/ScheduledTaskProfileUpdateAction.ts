@@ -28,10 +28,10 @@ export class ScheduledTaskProfileUpdateAction extends KalturaRequest<KalturaSche
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				scheduledTaskProfile : { type : 'o'   , fallbackConstructor :  KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile'}
+                service : { type : 'c', default : 'scheduledtask_scheduledtaskprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				scheduledTaskProfile : { type : 'o', subTypeConstructor : KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile' }
             }
         );
         return result;

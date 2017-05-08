@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddMrssTransformFromFileAction ext
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'addMrssTransformFromFile'  },
-				id : { type : 'n'   },
-				xslFile : { type : 'f'   }
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'addMrssTransformFromFile' },
+				id : { type : 'n' },
+				xslFile : { type : 'f' }
             }
         );
         return result;

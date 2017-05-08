@@ -27,8 +27,8 @@ export class KalturaExternalMediaEntryMatchAttributeCondition extends KalturaSea
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryMatchAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaExternalMediaEntryMatchAttribute'}
+                objectType : { type : 'c', default : 'KalturaExternalMediaEntryMatchAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaExternalMediaEntryMatchAttribute, subType : 'KalturaExternalMediaEntryMatchAttribute' }
             }
         );
         return result;

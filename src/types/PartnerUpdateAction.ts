@@ -29,10 +29,10 @@ export class PartnerUpdateAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'update'  },
-				partner : { type : 'o'   , fallbackConstructor :  KalturaPartner, subType : 'KalturaPartner'},
-				allowEmpty : { type : 'b'   }
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'update' },
+				partner : { type : 'o', subTypeConstructor : KalturaPartner, subType : 'KalturaPartner' },
+				allowEmpty : { type : 'b' }
             }
         );
         return result;

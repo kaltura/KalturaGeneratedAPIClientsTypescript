@@ -29,9 +29,9 @@ export class KalturaEventNotificationArrayParameter extends KalturaEventNotifica
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationArrayParameter'  },
-				values : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
-				allowedValues : { type : 'a'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'}
+                objectType : { type : 'c', default : 'KalturaEventNotificationArrayParameter' },
+				values : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				allowedValues : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;

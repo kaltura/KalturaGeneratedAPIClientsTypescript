@@ -31,11 +31,11 @@ export class DocumentsServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents'  },
-				action : { type : 'c' , default : 'serve'  },
-				entryId : { type : 's'   },
-				flavorAssetId : { type : 's'   },
-				forceProxy : { type : 'b'   }
+                service : { type : 'c', default : 'document_documents' },
+				action : { type : 'c', default : 'serve' },
+				entryId : { type : 's' },
+				flavorAssetId : { type : 's' },
+				forceProxy : { type : 'b' }
             }
         );
         return result;

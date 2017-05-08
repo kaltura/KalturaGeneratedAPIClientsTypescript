@@ -28,10 +28,10 @@ export class AppTokenUpdateAction extends KalturaRequest<KalturaAppToken> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'apptoken'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				appToken : { type : 'o'   , fallbackConstructor :  KalturaAppToken, subType : 'KalturaAppToken'}
+                service : { type : 'c', default : 'apptoken' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				appToken : { type : 'o', subTypeConstructor : KalturaAppToken, subType : 'KalturaAppToken' }
             }
         );
         return result;

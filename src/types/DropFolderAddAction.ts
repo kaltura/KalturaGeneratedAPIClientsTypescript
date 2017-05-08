@@ -26,9 +26,9 @@ export class DropFolderAddAction extends KalturaRequest<KalturaDropFolder> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolder'  },
-				action : { type : 'c' , default : 'add'  },
-				dropFolder : { type : 'o'   , fallbackConstructor :  KalturaDropFolder, subType : 'KalturaDropFolder'}
+                service : { type : 'c', default : 'dropfolder_dropfolder' },
+				action : { type : 'c', default : 'add' },
+				dropFolder : { type : 'o', subTypeConstructor : KalturaDropFolder, subType : 'KalturaDropFolder' }
             }
         );
         return result;

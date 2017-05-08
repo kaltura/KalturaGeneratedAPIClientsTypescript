@@ -32,10 +32,10 @@ export class UserRoleListAction extends KalturaRequest<KalturaUserRoleListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaUserRoleFilter, subType : 'KalturaUserRoleFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'userrole' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaUserRoleFilter, subType : 'KalturaUserRoleFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

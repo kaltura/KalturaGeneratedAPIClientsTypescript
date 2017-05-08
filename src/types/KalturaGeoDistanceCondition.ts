@@ -24,8 +24,8 @@ export class KalturaGeoDistanceCondition extends KalturaMatchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGeoDistanceCondition'  },
-				geoCoderType : { type : 'es'   , subType : 'KalturaGeoCoderType'}
+                objectType : { type : 'c', default : 'KalturaGeoDistanceCondition' },
+				geoCoderType : { type : 'es', subTypeConstructor : KalturaGeoCoderType, subType : 'KalturaGeoCoderType' }
             }
         );
         return result;

@@ -31,12 +31,12 @@ export class KalturaLiveReportExportJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveReportExportJobData'  },
-				timeReference : { type : 'd'   },
-				timeZoneOffset : { type : 'n'   },
-				entryIds : { type : 's'   },
-				outputPath : { type : 's'   },
-				recipientEmail : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaLiveReportExportJobData' },
+				timeReference : { type : 'd' },
+				timeZoneOffset : { type : 'n' },
+				entryIds : { type : 's' },
+				outputPath : { type : 's' },
+				recipientEmail : { type : 's' }
             }
         );
         return result;

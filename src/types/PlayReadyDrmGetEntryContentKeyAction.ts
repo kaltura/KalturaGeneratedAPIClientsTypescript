@@ -29,10 +29,10 @@ export class PlayReadyDrmGetEntryContentKeyAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playready_playreadydrm'  },
-				action : { type : 'c' , default : 'getEntryContentKey'  },
-				entryId : { type : 's'   },
-				createIfMissing : { type : 'b'   }
+                service : { type : 'c', default : 'playready_playreadydrm' },
+				action : { type : 'c', default : 'getEntryContentKey' },
+				entryId : { type : 's' },
+				createIfMissing : { type : 'b' }
             }
         );
         return result;

@@ -30,13 +30,13 @@ export class KalturaCategoryEntry extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryEntry'  },
-				categoryId : { type : 'n'   },
-				entryId : { type : 's'   },
-				createdAt : { type : 'd'  , readOnly : true },
-				categoryFullIds : { type : 's'  , readOnly : true },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaCategoryEntryStatus'},
-				creatorUserId : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaCategoryEntry' },
+				categoryId : { type : 'n' },
+				entryId : { type : 's' },
+				createdAt : { type : 'd', readOnly : true },
+				categoryFullIds : { type : 's', readOnly : true },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaCategoryEntryStatus, subType : 'KalturaCategoryEntryStatus' },
+				creatorUserId : { type : 's', readOnly : true }
             }
         );
         return result;

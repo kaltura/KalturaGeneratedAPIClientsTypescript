@@ -25,8 +25,8 @@ export class KalturaCategoryListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaCategory, subType : 'KalturaCategory'}
+                objectType : { type : 'c', default : 'KalturaCategoryListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaCategory, subType : 'KalturaCategory' }
             }
         );
         return result;

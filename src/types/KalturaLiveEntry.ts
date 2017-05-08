@@ -55,21 +55,21 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntry'  },
-				offlineMessage : { type : 's'   },
-				recordStatus : { type : 'en'   , subType : 'KalturaRecordStatus'},
-				dvrStatus : { type : 'en'   , subType : 'KalturaDVRStatus'},
-				dvrWindow : { type : 'n'   },
-				lastElapsedRecordingTime : { type : 'n'   },
-				liveStreamConfigurations : { type : 'a'   , fallbackConstructor :  KalturaLiveStreamConfiguration, subType : 'KalturaLiveStreamConfiguration'},
-				recordedEntryId : { type : 's'   },
-				pushPublishEnabled : { type : 'en'   , subType : 'KalturaLivePublishStatus'},
-				publishConfigurations : { type : 'a'   , fallbackConstructor :  KalturaLiveStreamPushPublishConfiguration, subType : 'KalturaLiveStreamPushPublishConfiguration'},
-				firstBroadcast : { type : 'n'  , readOnly : true },
-				lastBroadcast : { type : 'n'  , readOnly : true },
-				currentBroadcastStartTime : { type : 'n'   },
-				recordingOptions : { type : 'o'   , fallbackConstructor :  KalturaLiveEntryRecordingOptions, subType : 'KalturaLiveEntryRecordingOptions'},
-				liveStatus : { type : 'en'  , readOnly : true , subType : 'KalturaEntryServerNodeStatus'}
+                objectType : { type : 'c', default : 'KalturaLiveEntry' },
+				offlineMessage : { type : 's' },
+				recordStatus : { type : 'en', subTypeConstructor : KalturaRecordStatus, subType : 'KalturaRecordStatus' },
+				dvrStatus : { type : 'en', subTypeConstructor : KalturaDVRStatus, subType : 'KalturaDVRStatus' },
+				dvrWindow : { type : 'n' },
+				lastElapsedRecordingTime : { type : 'n' },
+				liveStreamConfigurations : { type : 'a', subTypeConstructor : KalturaLiveStreamConfiguration, subType : 'KalturaLiveStreamConfiguration' },
+				recordedEntryId : { type : 's' },
+				pushPublishEnabled : { type : 'en', subTypeConstructor : KalturaLivePublishStatus, subType : 'KalturaLivePublishStatus' },
+				publishConfigurations : { type : 'a', subTypeConstructor : KalturaLiveStreamPushPublishConfiguration, subType : 'KalturaLiveStreamPushPublishConfiguration' },
+				firstBroadcast : { type : 'n', readOnly : true },
+				lastBroadcast : { type : 'n', readOnly : true },
+				currentBroadcastStartTime : { type : 'n' },
+				recordingOptions : { type : 'o', subTypeConstructor : KalturaLiveEntryRecordingOptions, subType : 'KalturaLiveEntryRecordingOptions' },
+				liveStatus : { type : 'en', readOnly : true, subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' }
             }
         );
         return result;

@@ -33,11 +33,11 @@ export class KalturaFileSyncResource extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFileSyncResource'  },
-				fileSyncObjectType : { type : 'n'   },
-				objectSubType : { type : 'n'   },
-				objectId : { type : 's'   },
-				version : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFileSyncResource' },
+				fileSyncObjectType : { type : 'n' },
+				objectSubType : { type : 'n' },
+				objectId : { type : 's' },
+				version : { type : 's' }
             }
         );
         return result;

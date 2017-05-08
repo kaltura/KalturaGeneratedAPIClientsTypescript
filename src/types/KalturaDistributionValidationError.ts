@@ -29,10 +29,10 @@ export class KalturaDistributionValidationError extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationError'  },
-				action : { type : 'en'   , subType : 'KalturaDistributionAction'},
-				errorType : { type : 'en'   , subType : 'KalturaDistributionErrorType'},
-				description : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDistributionValidationError' },
+				action : { type : 'en', subTypeConstructor : KalturaDistributionAction, subType : 'KalturaDistributionAction' },
+				errorType : { type : 'en', subTypeConstructor : KalturaDistributionErrorType, subType : 'KalturaDistributionErrorType' },
+				description : { type : 's' }
             }
         );
         return result;

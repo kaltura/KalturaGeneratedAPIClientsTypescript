@@ -28,10 +28,10 @@ export class LiveStreamUpdateOfflineThumbnailJpegAction extends KalturaUploadReq
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'updateOfflineThumbnailJpeg'  },
-				entryId : { type : 's'   },
-				fileData : { type : 'f'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'updateOfflineThumbnailJpeg' },
+				entryId : { type : 's' },
+				fileData : { type : 'f' }
             }
         );
         return result;

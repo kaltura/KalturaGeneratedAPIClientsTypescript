@@ -26,9 +26,9 @@ export class KalturaLiveChannel extends KalturaLiveEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannel'  },
-				playlistId : { type : 's'   },
-				repeat : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaLiveChannel' },
+				playlistId : { type : 's' },
+				repeat : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

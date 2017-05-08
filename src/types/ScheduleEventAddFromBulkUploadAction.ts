@@ -29,10 +29,10 @@ export class ScheduleEventAddFromBulkUploadAction extends KalturaUploadRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent'  },
-				action : { type : 'c' , default : 'addFromBulkUpload'  },
-				fileData : { type : 'f'   },
-				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadICalJobData, subType : 'KalturaBulkUploadICalJobData'}
+                service : { type : 'c', default : 'schedule_scheduleevent' },
+				action : { type : 'c', default : 'addFromBulkUpload' },
+				fileData : { type : 'f' },
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadICalJobData, subType : 'KalturaBulkUploadICalJobData' }
             }
         );
         return result;

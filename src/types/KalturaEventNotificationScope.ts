@@ -26,9 +26,9 @@ export class KalturaEventNotificationScope extends KalturaScope {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationScope'  },
-				objectId : { type : 's'   },
-				scopeObjectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'}
+                objectType : { type : 'c', default : 'KalturaEventNotificationScope' },
+				objectId : { type : 's' },
+				scopeObjectType : { type : 'es', subTypeConstructor : KalturaEventNotificationEventObjectType, subType : 'KalturaEventNotificationEventObjectType' }
             }
         );
         return result;

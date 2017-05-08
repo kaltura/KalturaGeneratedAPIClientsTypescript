@@ -43,18 +43,18 @@ export class KalturaFreewheelGenericDistributionProfile extends KalturaConfigura
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelGenericDistributionProfile'  },
-				apikey : { type : 's'   },
-				email : { type : 's'   },
-				sftpPass : { type : 's'   },
-				sftpLogin : { type : 's'   },
-				contentOwner : { type : 's'   },
-				upstreamVideoId : { type : 's'   },
-				upstreamNetworkName : { type : 's'   },
-				upstreamNetworkId : { type : 's'   },
-				categoryId : { type : 's'   },
-				replaceGroup : { type : 'b'   },
-				replaceAirDates : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaFreewheelGenericDistributionProfile' },
+				apikey : { type : 's' },
+				email : { type : 's' },
+				sftpPass : { type : 's' },
+				sftpLogin : { type : 's' },
+				contentOwner : { type : 's' },
+				upstreamVideoId : { type : 's' },
+				upstreamNetworkName : { type : 's' },
+				upstreamNetworkId : { type : 's' },
+				categoryId : { type : 's' },
+				replaceGroup : { type : 'b' },
+				replaceAirDates : { type : 'b' }
             }
         );
         return result;

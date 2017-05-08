@@ -29,10 +29,10 @@ export class VarConsoleUpdateStatusAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'varconsole_varconsole'  },
-				action : { type : 'c' , default : 'updateStatus'  },
-				id : { type : 'n'   },
-				status : { type : 'en'   , subType : 'KalturaPartnerStatus'}
+                service : { type : 'c', default : 'varconsole_varconsole' },
+				action : { type : 'c', default : 'updateStatus' },
+				id : { type : 'n' },
+				status : { type : 'en', subTypeConstructor : KalturaPartnerStatus, subType : 'KalturaPartnerStatus' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaVirusScanProfileFilter extends KalturaVirusScanProfileBaseFi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVirusScanProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaVirusScanProfileFilter' }
             }
         );
         return result;

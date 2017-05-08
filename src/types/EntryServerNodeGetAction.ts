@@ -24,9 +24,9 @@ export class EntryServerNodeGetAction extends KalturaRequest<KalturaEntryServerN
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'entryservernode'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'entryservernode' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 's' }
             }
         );
         return result;

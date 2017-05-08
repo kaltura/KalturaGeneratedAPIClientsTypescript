@@ -33,13 +33,13 @@ export class KalturaAkamaiProvisionJobData extends KalturaProvisionJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAkamaiProvisionJobData'  },
-				wsdlUsername : { type : 's'   },
-				wsdlPassword : { type : 's'   },
-				cpcode : { type : 's'   },
-				emailId : { type : 's'   },
-				primaryContact : { type : 's'   },
-				secondaryContact : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAkamaiProvisionJobData' },
+				wsdlUsername : { type : 's' },
+				wsdlPassword : { type : 's' },
+				cpcode : { type : 's' },
+				emailId : { type : 's' },
+				primaryContact : { type : 's' },
+				secondaryContact : { type : 's' }
             }
         );
         return result;

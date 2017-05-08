@@ -23,7 +23,7 @@ export class KalturaFreewheelGenericDistributionProvider extends KalturaDistribu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelGenericDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaFreewheelGenericDistributionProvider' }
             }
         );
         return result;

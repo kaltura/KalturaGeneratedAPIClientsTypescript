@@ -26,8 +26,8 @@ export class SessionEndAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session'  },
-				action : { type : 'c' , default : 'end'  }
+                service : { type : 'c', default : 'session' },
+				action : { type : 'c', default : 'end' }
             }
         );
         return result;

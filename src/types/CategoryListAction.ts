@@ -30,10 +30,10 @@ export class CategoryListAction extends KalturaRequest<KalturaCategoryListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaCategoryFilter, subType : 'KalturaCategoryFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'category' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaCategoryFilter, subType : 'KalturaCategoryFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

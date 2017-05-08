@@ -49,21 +49,21 @@ export class KalturaBulkUploadResultUser extends KalturaBulkUploadResult {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResultUser'  },
-				userId : { type : 's'   },
-				screenName : { type : 's'   },
-				email : { type : 's'   },
-				description : { type : 's'   },
-				tags : { type : 's'   },
-				dateOfBirth : { type : 'n'   },
-				country : { type : 's'   },
-				state : { type : 's'   },
-				city : { type : 's'   },
-				zip : { type : 's'   },
-				gender : { type : 'n'   },
-				firstName : { type : 's'   },
-				lastName : { type : 's'   },
-				group : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBulkUploadResultUser' },
+				userId : { type : 's' },
+				screenName : { type : 's' },
+				email : { type : 's' },
+				description : { type : 's' },
+				tags : { type : 's' },
+				dateOfBirth : { type : 'n' },
+				country : { type : 's' },
+				state : { type : 's' },
+				city : { type : 's' },
+				zip : { type : 's' },
+				gender : { type : 'n' },
+				firstName : { type : 's' },
+				lastName : { type : 's' },
+				group : { type : 's' }
             }
         );
         return result;

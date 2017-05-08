@@ -25,8 +25,8 @@ export class KalturaAuditTrailListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaAuditTrail, subType : 'KalturaAuditTrail'}
+                objectType : { type : 'c', default : 'KalturaAuditTrailListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaAuditTrail, subType : 'KalturaAuditTrail' }
             }
         );
         return result;

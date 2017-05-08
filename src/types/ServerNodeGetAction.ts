@@ -26,9 +26,9 @@ export class ServerNodeGetAction extends KalturaRequest<KalturaServerNode> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode'  },
-				action : { type : 'c' , default : 'get'  },
-				serverNodeId : { type : 'n'   }
+                service : { type : 'c', default : 'servernode' },
+				action : { type : 'c', default : 'get' },
+				serverNodeId : { type : 'n' }
             }
         );
         return result;

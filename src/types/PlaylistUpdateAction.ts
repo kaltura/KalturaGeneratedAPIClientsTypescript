@@ -32,11 +32,11 @@ export class PlaylistUpdateAction extends KalturaRequest<KalturaPlaylist> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				playlist : { type : 'o'   , fallbackConstructor :  KalturaPlaylist, subType : 'KalturaPlaylist'},
-				updateStats : { type : 'b'   }
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				playlist : { type : 'o', subTypeConstructor : KalturaPlaylist, subType : 'KalturaPlaylist' },
+				updateStats : { type : 'b' }
             }
         );
         return result;

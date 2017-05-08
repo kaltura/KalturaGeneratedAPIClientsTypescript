@@ -30,10 +30,10 @@ export class PartnerListPartnersForUserAction extends KalturaRequest<KalturaPart
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'listPartnersForUser'  },
-				partnerFilter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'listPartnersForUser' },
+				partnerFilter : { type : 'o', subTypeConstructor : KalturaPartnerFilter, subType : 'KalturaPartnerFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

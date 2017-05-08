@@ -28,10 +28,10 @@ export class AdminUserSetInitialPasswordAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'adminuser'  },
-				action : { type : 'c' , default : 'setInitialPassword'  },
-				hashKey : { type : 's'   },
-				newPassword : { type : 's'   }
+                service : { type : 'c', default : 'adminuser' },
+				action : { type : 'c', default : 'setInitialPassword' },
+				hashKey : { type : 's' },
+				newPassword : { type : 's' }
             }
         );
         return result;

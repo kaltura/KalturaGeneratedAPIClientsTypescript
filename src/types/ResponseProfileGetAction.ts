@@ -26,9 +26,9 @@ export class ResponseProfileGetAction extends KalturaRequest<KalturaResponseProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

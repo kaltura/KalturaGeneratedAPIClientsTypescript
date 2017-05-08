@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileAkamaiHdsFilter extends KalturaDeliveryProfil
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiHdsFilter'  }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileAkamaiHdsFilter' }
             }
         );
         return result;

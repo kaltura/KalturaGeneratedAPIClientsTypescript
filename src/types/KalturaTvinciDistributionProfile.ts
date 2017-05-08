@@ -33,12 +33,12 @@ export class KalturaTvinciDistributionProfile extends KalturaConfigurableDistrib
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTvinciDistributionProfile'  },
-				ingestUrl : { type : 's'   },
-				username : { type : 's'   },
-				password : { type : 's'   },
-				tags : { type : 'a'   , fallbackConstructor :  KalturaTvinciDistributionTag, subType : 'KalturaTvinciDistributionTag'},
-				xsltFile : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaTvinciDistributionProfile' },
+				ingestUrl : { type : 's' },
+				username : { type : 's' },
+				password : { type : 's' },
+				tags : { type : 'a', subTypeConstructor : KalturaTvinciDistributionTag, subType : 'KalturaTvinciDistributionTag' },
+				xsltFile : { type : 's' }
             }
         );
         return result;

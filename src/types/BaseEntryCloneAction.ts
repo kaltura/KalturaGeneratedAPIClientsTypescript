@@ -30,10 +30,10 @@ export class BaseEntryCloneAction extends KalturaRequest<KalturaBaseEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'clone'  },
-				entryId : { type : 's'   },
-				cloneOptions : { type : 'a'   , fallbackConstructor :  KalturaBaseEntryCloneOptionItem, subType : 'KalturaBaseEntryCloneOptionItem'}
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'clone' },
+				entryId : { type : 's' },
+				cloneOptions : { type : 'a', subTypeConstructor : KalturaBaseEntryCloneOptionItem, subType : 'KalturaBaseEntryCloneOptionItem' }
             }
         );
         return result;

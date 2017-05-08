@@ -29,10 +29,10 @@ export class BaseEntryAddAction extends KalturaRequest<KalturaBaseEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'add'  },
-				entry : { type : 'o'   , fallbackConstructor :  KalturaBaseEntry, subType : 'KalturaBaseEntry'},
-				type : { type : 'es'   , subType : 'KalturaEntryType'}
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'add' },
+				entry : { type : 'o', subTypeConstructor : KalturaBaseEntry, subType : 'KalturaBaseEntry' },
+				type : { type : 'es', subTypeConstructor : KalturaEntryType, subType : 'KalturaEntryType' }
             }
         );
         return result;

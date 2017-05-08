@@ -42,17 +42,17 @@ export class KalturaLiveChannelSegmentBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannelSegmentBaseFilter'  },
-				createdAtGreaterThanOrEqual : { type : 'n'   },
-				createdAtLessThanOrEqual : { type : 'n'   },
-				updatedAtGreaterThanOrEqual : { type : 'n'   },
-				updatedAtLessThanOrEqual : { type : 'n'   },
-				statusEqual : { type : 'es'   , subType : 'KalturaLiveChannelSegmentStatus'},
-				statusIn : { type : 's'   },
-				channelIdEqual : { type : 's'   },
-				channelIdIn : { type : 's'   },
-				startTimeGreaterThanOrEqual : { type : 'n'   },
-				startTimeLessThanOrEqual : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaLiveChannelSegmentBaseFilter' },
+				createdAtGreaterThanOrEqual : { type : 'n' },
+				createdAtLessThanOrEqual : { type : 'n' },
+				updatedAtGreaterThanOrEqual : { type : 'n' },
+				updatedAtLessThanOrEqual : { type : 'n' },
+				statusEqual : { type : 'es', subTypeConstructor : KalturaLiveChannelSegmentStatus, subType : 'KalturaLiveChannelSegmentStatus' },
+				statusIn : { type : 's' },
+				channelIdEqual : { type : 's' },
+				channelIdIn : { type : 's' },
+				startTimeGreaterThanOrEqual : { type : 'n' },
+				startTimeLessThanOrEqual : { type : 'n' }
             }
         );
         return result;

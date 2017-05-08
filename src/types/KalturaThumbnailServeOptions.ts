@@ -25,9 +25,9 @@ export class KalturaThumbnailServeOptions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbnailServeOptions'  },
-				download : { type : 'b'   },
-				referrer : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaThumbnailServeOptions' },
+				download : { type : 'b' },
+				referrer : { type : 's' }
             }
         );
         return result;

@@ -33,13 +33,13 @@ export class KalturaFtpDistributionFile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFtpDistributionFile'  },
-				assetId : { type : 's'   },
-				filename : { type : 's'   },
-				contents : { type : 's'   },
-				localFilePath : { type : 's'   },
-				version : { type : 's'   },
-				hash : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFtpDistributionFile' },
+				assetId : { type : 's' },
+				filename : { type : 's' },
+				contents : { type : 's' },
+				localFilePath : { type : 's' },
+				version : { type : 's' },
+				hash : { type : 's' }
             }
         );
         return result;

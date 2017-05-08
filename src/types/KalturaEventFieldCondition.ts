@@ -24,8 +24,8 @@ export class KalturaEventFieldCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventFieldCondition'  },
-				field : { type : 'o'   , fallbackConstructor :  KalturaBooleanField, subType : 'KalturaBooleanField'}
+                objectType : { type : 'c', default : 'KalturaEventFieldCondition' },
+				field : { type : 'o', subTypeConstructor : KalturaBooleanField, subType : 'KalturaBooleanField' }
             }
         );
         return result;

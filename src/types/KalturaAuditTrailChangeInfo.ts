@@ -25,8 +25,8 @@ export class KalturaAuditTrailChangeInfo extends KalturaAuditTrailInfo {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailChangeInfo'  },
-				changedItems : { type : 'a'   , fallbackConstructor :  KalturaAuditTrailChangeItem, subType : 'KalturaAuditTrailChangeItem'}
+                objectType : { type : 'c', default : 'KalturaAuditTrailChangeInfo' },
+				changedItems : { type : 'a', subTypeConstructor : KalturaAuditTrailChangeItem, subType : 'KalturaAuditTrailChangeItem' }
             }
         );
         return result;

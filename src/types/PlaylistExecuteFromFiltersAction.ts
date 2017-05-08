@@ -36,12 +36,12 @@ export class PlaylistExecuteFromFiltersAction extends KalturaRequest<KalturaBase
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'executeFromFilters'  },
-				filters : { type : 'a'   , fallbackConstructor :  KalturaMediaEntryFilterForPlaylist, subType : 'KalturaMediaEntryFilterForPlaylist'},
-				totalResults : { type : 'n'   },
-				detailed : { type : 's'   },
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'executeFromFilters' },
+				filters : { type : 'a', subTypeConstructor : KalturaMediaEntryFilterForPlaylist, subType : 'KalturaMediaEntryFilterForPlaylist' },
+				totalResults : { type : 'n' },
+				detailed : { type : 's' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

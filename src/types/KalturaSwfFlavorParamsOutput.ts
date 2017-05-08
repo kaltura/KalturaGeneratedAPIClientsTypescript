@@ -25,9 +25,9 @@ export class KalturaSwfFlavorParamsOutput extends KalturaFlavorParamsOutput {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSwfFlavorParamsOutput'  },
-				flashVersion : { type : 'n'   },
-				poly2Bitmap : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaSwfFlavorParamsOutput' },
+				flashVersion : { type : 'n' },
+				poly2Bitmap : { type : 'b' }
             }
         );
         return result;

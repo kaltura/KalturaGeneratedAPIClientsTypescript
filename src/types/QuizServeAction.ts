@@ -30,10 +30,10 @@ export class QuizServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz'  },
-				action : { type : 'c' , default : 'serve'  },
-				entryId : { type : 's'   },
-				quizOutputType : { type : 'en'   , subType : 'KalturaQuizOutputType'}
+                service : { type : 'c', default : 'quiz_quiz' },
+				action : { type : 'c', default : 'serve' },
+				entryId : { type : 's' },
+				quizOutputType : { type : 'en', subTypeConstructor : KalturaQuizOutputType, subType : 'KalturaQuizOutputType' }
             }
         );
         return result;

@@ -30,11 +30,11 @@ export class KalturaAttachmentAsset extends KalturaAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttachmentAsset'  },
-				filename : { type : 's'   },
-				title : { type : 's'   },
-				format : { type : 'es'   , subType : 'KalturaAttachmentType'},
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaAttachmentAssetStatus'}
+                objectType : { type : 'c', default : 'KalturaAttachmentAsset' },
+				filename : { type : 's' },
+				title : { type : 's' },
+				format : { type : 'es', subTypeConstructor : KalturaAttachmentType, subType : 'KalturaAttachmentType' },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaAttachmentAssetStatus, subType : 'KalturaAttachmentAssetStatus' }
             }
         );
         return result;

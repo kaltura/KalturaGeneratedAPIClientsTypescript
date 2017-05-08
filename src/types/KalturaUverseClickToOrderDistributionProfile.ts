@@ -26,10 +26,10 @@ export class KalturaUverseClickToOrderDistributionProfile extends KalturaConfigu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUverseClickToOrderDistributionProfile'  },
-				feedUrl : { type : 's'  , readOnly : true },
-				backgroundImageWide : { type : 's'   },
-				backgroundImageStandard : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUverseClickToOrderDistributionProfile' },
+				feedUrl : { type : 's', readOnly : true },
+				backgroundImageWide : { type : 's' },
+				backgroundImageStandard : { type : 's' }
             }
         );
         return result;

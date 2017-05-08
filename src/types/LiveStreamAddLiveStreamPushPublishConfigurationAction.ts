@@ -34,12 +34,12 @@ export class LiveStreamAddLiveStreamPushPublishConfigurationAction extends Kaltu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'addLiveStreamPushPublishConfiguration'  },
-				entryId : { type : 's'   },
-				protocol : { type : 'es'   , subType : 'KalturaPlaybackProtocol'},
-				url : { type : 's'   },
-				liveStreamConfiguration : { type : 'o'   , fallbackConstructor :  KalturaLiveStreamConfiguration, subType : 'KalturaLiveStreamConfiguration'}
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'addLiveStreamPushPublishConfiguration' },
+				entryId : { type : 's' },
+				protocol : { type : 'es', subTypeConstructor : KalturaPlaybackProtocol, subType : 'KalturaPlaybackProtocol' },
+				url : { type : 's' },
+				liveStreamConfiguration : { type : 'o', subTypeConstructor : KalturaLiveStreamConfiguration, subType : 'KalturaLiveStreamConfiguration' }
             }
         );
         return result;

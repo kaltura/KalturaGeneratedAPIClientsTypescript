@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionUpdateAction extends KalturaReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				genericDistributionProviderAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction'}
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				genericDistributionProviderAction : { type : 'o', subTypeConstructor : KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction' }
             }
         );
         return result;

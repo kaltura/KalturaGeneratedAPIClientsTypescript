@@ -41,17 +41,17 @@ export class KalturaMetroPcsDistributionProfile extends KalturaConfigurableDistr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetroPcsDistributionProfile'  },
-				ftpHost : { type : 's'   },
-				ftpLogin : { type : 's'   },
-				ftpPass : { type : 's'   },
-				ftpPath : { type : 's'   },
-				providerName : { type : 's'   },
-				providerId : { type : 's'   },
-				copyright : { type : 's'   },
-				entitlements : { type : 's'   },
-				rating : { type : 's'   },
-				itemType : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaMetroPcsDistributionProfile' },
+				ftpHost : { type : 's' },
+				ftpLogin : { type : 's' },
+				ftpPass : { type : 's' },
+				ftpPath : { type : 's' },
+				providerName : { type : 's' },
+				providerId : { type : 's' },
+				copyright : { type : 's' },
+				entitlements : { type : 's' },
+				rating : { type : 's' },
+				itemType : { type : 's' }
             }
         );
         return result;

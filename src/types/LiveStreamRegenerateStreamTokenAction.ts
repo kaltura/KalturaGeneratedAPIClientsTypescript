@@ -26,9 +26,9 @@ export class LiveStreamRegenerateStreamTokenAction extends KalturaRequest<void> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'regenerateStreamToken'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'regenerateStreamToken' },
+				entryId : { type : 's' }
             }
         );
         return result;

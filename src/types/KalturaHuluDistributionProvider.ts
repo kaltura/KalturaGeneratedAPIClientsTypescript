@@ -23,7 +23,7 @@ export class KalturaHuluDistributionProvider extends KalturaDistributionProvider
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHuluDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaHuluDistributionProvider' }
             }
         );
         return result;

@@ -30,10 +30,10 @@ export class GroupUserListAction extends KalturaRequest<KalturaGroupUserListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'groupuser'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaGroupUserFilter, subType : 'KalturaGroupUserFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'groupuser' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaGroupUserFilter, subType : 'KalturaGroupUserFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

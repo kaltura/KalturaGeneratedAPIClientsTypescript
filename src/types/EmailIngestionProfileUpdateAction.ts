@@ -28,10 +28,10 @@ export class EmailIngestionProfileUpdateAction extends KalturaRequest<KalturaEma
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'emailingestionprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				EmailIP : { type : 'o'   , fallbackConstructor :  KalturaEmailIngestionProfile, subType : 'KalturaEmailIngestionProfile'}
+                service : { type : 'c', default : 'emailingestionprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				EmailIP : { type : 'o', subTypeConstructor : KalturaEmailIngestionProfile, subType : 'KalturaEmailIngestionProfile' }
             }
         );
         return result;

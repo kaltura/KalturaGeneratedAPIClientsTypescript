@@ -25,8 +25,8 @@ export class KalturaQuizListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuizListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaQuiz, subType : 'KalturaQuiz'}
+                objectType : { type : 'c', default : 'KalturaQuizListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaQuiz, subType : 'KalturaQuiz' }
             }
         );
         return result;

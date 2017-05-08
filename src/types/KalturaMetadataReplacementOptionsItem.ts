@@ -25,8 +25,8 @@ export class KalturaMetadataReplacementOptionsItem extends KalturaPluginReplacem
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataReplacementOptionsItem'  },
-				shouldCopyMetadata : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaMetadataReplacementOptionsItem' },
+				shouldCopyMetadata : { type : 'b' }
             }
         );
         return result;

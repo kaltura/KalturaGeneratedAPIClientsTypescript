@@ -26,9 +26,9 @@ export class UploadTokenGetAction extends KalturaRequest<KalturaUploadToken> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uploadtoken'  },
-				action : { type : 'c' , default : 'get'  },
-				uploadTokenId : { type : 's'   }
+                service : { type : 'c', default : 'uploadtoken' },
+				action : { type : 'c', default : 'get' },
+				uploadTokenId : { type : 's' }
             }
         );
         return result;

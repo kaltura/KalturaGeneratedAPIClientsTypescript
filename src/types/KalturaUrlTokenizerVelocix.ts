@@ -27,10 +27,10 @@ export class KalturaUrlTokenizerVelocix extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerVelocix'  },
-				hdsPaths : { type : 's'   },
-				paramName : { type : 's'   },
-				authPrefix : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizerVelocix' },
+				hdsPaths : { type : 's' },
+				paramName : { type : 's' },
+				authPrefix : { type : 's' }
             }
         );
         return result;

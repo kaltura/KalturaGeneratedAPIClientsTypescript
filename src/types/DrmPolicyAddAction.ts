@@ -26,9 +26,9 @@ export class DrmPolicyAddAction extends KalturaRequest<KalturaDrmPolicy> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmpolicy'  },
-				action : { type : 'c' , default : 'add'  },
-				drmPolicy : { type : 'o'   , fallbackConstructor :  KalturaDrmPolicy, subType : 'KalturaDrmPolicy'}
+                service : { type : 'c', default : 'drm_drmpolicy' },
+				action : { type : 'c', default : 'add' },
+				drmPolicy : { type : 'o', subTypeConstructor : KalturaDrmPolicy, subType : 'KalturaDrmPolicy' }
             }
         );
         return result;

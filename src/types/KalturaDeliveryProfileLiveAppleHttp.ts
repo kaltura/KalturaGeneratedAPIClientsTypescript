@@ -25,9 +25,9 @@ export class KalturaDeliveryProfileLiveAppleHttp extends KalturaDeliveryProfile 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileLiveAppleHttp'  },
-				disableExtraAttributes : { type : 'b'   },
-				forceProxy : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileLiveAppleHttp' },
+				disableExtraAttributes : { type : 'b' },
+				forceProxy : { type : 'b' }
             }
         );
         return result;

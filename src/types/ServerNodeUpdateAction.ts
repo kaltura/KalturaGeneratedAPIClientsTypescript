@@ -28,10 +28,10 @@ export class ServerNodeUpdateAction extends KalturaRequest<KalturaServerNode> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode'  },
-				action : { type : 'c' , default : 'update'  },
-				serverNodeId : { type : 'n'   },
-				serverNode : { type : 'o'   , fallbackConstructor :  KalturaServerNode, subType : 'KalturaServerNode'}
+                service : { type : 'c', default : 'servernode' },
+				action : { type : 'c', default : 'update' },
+				serverNodeId : { type : 'n' },
+				serverNode : { type : 'o', subTypeConstructor : KalturaServerNode, subType : 'KalturaServerNode' }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaWidgetListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidgetListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaWidget, subType : 'KalturaWidget'}
+                objectType : { type : 'c', default : 'KalturaWidgetListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaWidget, subType : 'KalturaWidget' }
             }
         );
         return result;

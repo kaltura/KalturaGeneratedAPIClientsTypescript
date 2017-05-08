@@ -27,11 +27,11 @@ export class KalturaThumbAsset extends KalturaAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbAsset'  },
-				thumbParamsId : { type : 'n'   },
-				width : { type : 'n'  , readOnly : true },
-				height : { type : 'n'  , readOnly : true },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaThumbAssetStatus'}
+                objectType : { type : 'c', default : 'KalturaThumbAsset' },
+				thumbParamsId : { type : 'n' },
+				width : { type : 'n', readOnly : true },
+				height : { type : 'n', readOnly : true },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaThumbAssetStatus, subType : 'KalturaThumbAssetStatus' }
             }
         );
         return result;

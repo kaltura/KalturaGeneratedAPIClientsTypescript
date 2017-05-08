@@ -26,9 +26,9 @@ export class MediaDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'delete'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'delete' },
+				entryId : { type : 's' }
             }
         );
         return result;

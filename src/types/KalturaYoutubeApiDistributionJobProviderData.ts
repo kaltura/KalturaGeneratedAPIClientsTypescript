@@ -29,10 +29,10 @@ export class KalturaYoutubeApiDistributionJobProviderData extends KalturaConfigu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYoutubeApiDistributionJobProviderData'  },
-				videoAssetFilePath : { type : 's'   },
-				thumbAssetFilePath : { type : 's'   },
-				captionsInfo : { type : 'a'   , fallbackConstructor :  KalturaYouTubeApiCaptionDistributionInfo, subType : 'KalturaYouTubeApiCaptionDistributionInfo'}
+                objectType : { type : 'c', default : 'KalturaYoutubeApiDistributionJobProviderData' },
+				videoAssetFilePath : { type : 's' },
+				thumbAssetFilePath : { type : 's' },
+				captionsInfo : { type : 'a', subTypeConstructor : KalturaYouTubeApiCaptionDistributionInfo, subType : 'KalturaYouTubeApiCaptionDistributionInfo' }
             }
         );
         return result;

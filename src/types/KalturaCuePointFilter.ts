@@ -28,10 +28,10 @@ export class KalturaCuePointFilter extends KalturaCuePointBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCuePointFilter'  },
-				freeText : { type : 's'   },
-				userIdEqualCurrent : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				userIdCurrent : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c', default : 'KalturaCuePointFilter' },
+				freeText : { type : 's' },
+				userIdEqualCurrent : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				userIdCurrent : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

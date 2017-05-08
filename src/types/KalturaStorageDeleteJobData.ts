@@ -23,7 +23,7 @@ export class KalturaStorageDeleteJobData extends KalturaStorageJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageDeleteJobData'  }
+                objectType : { type : 'c', default : 'KalturaStorageDeleteJobData' }
             }
         );
         return result;

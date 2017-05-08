@@ -27,8 +27,8 @@ export class PartnerGetInfoAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'getInfo'  }
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'getInfo' }
             }
         );
         return result;

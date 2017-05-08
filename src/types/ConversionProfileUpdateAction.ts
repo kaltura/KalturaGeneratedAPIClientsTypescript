@@ -28,10 +28,10 @@ export class ConversionProfileUpdateAction extends KalturaRequest<KalturaConvers
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				conversionProfile : { type : 'o'   , fallbackConstructor :  KalturaConversionProfile, subType : 'KalturaConversionProfile'}
+                service : { type : 'c', default : 'conversionprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				conversionProfile : { type : 'o', subTypeConstructor : KalturaConversionProfile, subType : 'KalturaConversionProfile' }
             }
         );
         return result;

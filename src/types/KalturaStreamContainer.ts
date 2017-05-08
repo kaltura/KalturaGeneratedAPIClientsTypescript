@@ -33,13 +33,13 @@ export class KalturaStreamContainer extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStreamContainer'  },
-				type : { type : 's'   },
-				trackIndex : { type : 'n'   },
-				language : { type : 's'   },
-				channelIndex : { type : 'n'   },
-				label : { type : 's'   },
-				channelLayout : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaStreamContainer' },
+				type : { type : 's' },
+				trackIndex : { type : 'n' },
+				language : { type : 's' },
+				channelIndex : { type : 'n' },
+				label : { type : 's' },
+				channelLayout : { type : 's' }
             }
         );
         return result;

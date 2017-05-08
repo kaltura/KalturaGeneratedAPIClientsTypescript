@@ -25,8 +25,8 @@ export class KalturaEntryServerNodeListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryServerNodeListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaEntryServerNode, subType : 'KalturaEntryServerNode'}
+                objectType : { type : 'c', default : 'KalturaEntryServerNodeListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaEntryServerNode, subType : 'KalturaEntryServerNode' }
             }
         );
         return result;

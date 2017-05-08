@@ -23,7 +23,7 @@ export class KalturaAmazonS3StorageProfileFilter extends KalturaAmazonS3StorageP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAmazonS3StorageProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaAmazonS3StorageProfileFilter' }
             }
         );
         return result;

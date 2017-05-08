@@ -27,8 +27,8 @@ export class KalturaCoordinatesContextField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCoordinatesContextField'  },
-				geoCoderType : { type : 'es'   , subType : 'KalturaGeoCoderType'}
+                objectType : { type : 'c', default : 'KalturaCoordinatesContextField' },
+				geoCoderType : { type : 'es', subTypeConstructor : KalturaGeoCoderType, subType : 'KalturaGeoCoderType' }
             }
         );
         return result;

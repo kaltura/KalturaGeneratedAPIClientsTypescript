@@ -42,17 +42,17 @@ export class KalturaGroupUserBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGroupUserBaseFilter'  },
-				userIdEqual : { type : 's'   },
-				userIdIn : { type : 's'   },
-				groupIdEqual : { type : 's'   },
-				groupIdIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaGroupUserStatus'},
-				statusIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   }
+                objectType : { type : 'c', default : 'KalturaGroupUserBaseFilter' },
+				userIdEqual : { type : 's' },
+				userIdIn : { type : 's' },
+				groupIdEqual : { type : 's' },
+				groupIdIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaGroupUserStatus, subType : 'KalturaGroupUserStatus' },
+				statusIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class DocumentsCancelReplaceAction extends KalturaRequest<KalturaDocument
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents'  },
-				action : { type : 'c' , default : 'cancelReplace'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'document_documents' },
+				action : { type : 'c', default : 'cancelReplace' },
+				entryId : { type : 's' }
             }
         );
         return result;

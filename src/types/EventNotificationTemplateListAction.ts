@@ -30,10 +30,10 @@ export class EventNotificationTemplateListAction extends KalturaRequest<KalturaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationTemplateFilter, subType : 'KalturaEventNotificationTemplateFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'eventnotification_eventnotificationtemplate' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaEventNotificationTemplateFilter, subType : 'KalturaEventNotificationTemplateFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

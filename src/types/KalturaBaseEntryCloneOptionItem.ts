@@ -23,7 +23,7 @@ export class KalturaBaseEntryCloneOptionItem extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseEntryCloneOptionItem'  }
+                objectType : { type : 'c', default : 'KalturaBaseEntryCloneOptionItem' }
             }
         );
         return result;

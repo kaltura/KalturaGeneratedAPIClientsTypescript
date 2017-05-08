@@ -28,10 +28,10 @@ export class TagSearchAction extends KalturaRequest<KalturaTagListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'tagsearch_tag'  },
-				action : { type : 'c' , default : 'search'  },
-				tagFilter : { type : 'o'   , fallbackConstructor :  KalturaTagFilter, subType : 'KalturaTagFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'tagsearch_tag' },
+				action : { type : 'c', default : 'search' },
+				tagFilter : { type : 'o', subTypeConstructor : KalturaTagFilter, subType : 'KalturaTagFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

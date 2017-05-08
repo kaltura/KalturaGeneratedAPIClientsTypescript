@@ -29,10 +29,10 @@ export class CategoryMoveAction extends KalturaRequest<KalturaCategoryListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category'  },
-				action : { type : 'c' , default : 'move'  },
-				categoryIds : { type : 's'   },
-				targetCategoryParentId : { type : 'n'   }
+                service : { type : 'c', default : 'category' },
+				action : { type : 'c', default : 'move' },
+				categoryIds : { type : 's' },
+				targetCategoryParentId : { type : 'n' }
             }
         );
         return result;

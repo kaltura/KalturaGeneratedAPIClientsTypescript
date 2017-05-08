@@ -34,12 +34,12 @@ export class PlaylistExecuteFromContentAction extends KalturaRequest<KalturaBase
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'executeFromContent'  },
-				playlistType : { type : 'en'   , subType : 'KalturaPlaylistType'},
-				playlistContent : { type : 's'   },
-				detailed : { type : 's'   },
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'executeFromContent' },
+				playlistType : { type : 'en', subTypeConstructor : KalturaPlaylistType, subType : 'KalturaPlaylistType' },
+				playlistContent : { type : 's' },
+				detailed : { type : 's' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

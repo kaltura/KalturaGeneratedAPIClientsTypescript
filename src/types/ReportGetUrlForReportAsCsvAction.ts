@@ -45,17 +45,17 @@ export class ReportGetUrlForReportAsCsvAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report'  },
-				action : { type : 'c' , default : 'getUrlForReportAsCsv'  },
-				reportTitle : { type : 's'   },
-				reportText : { type : 's'   },
-				headers : { type : 's'   },
-				reportType : { type : 'es'   , subType : 'KalturaReportType'},
-				reportInputFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
-				dimension : { type : 's'   },
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'},
-				order : { type : 's'   },
-				objectIds : { type : 's'   }
+                service : { type : 'c', default : 'report' },
+				action : { type : 'c', default : 'getUrlForReportAsCsv' },
+				reportTitle : { type : 's' },
+				reportText : { type : 's' },
+				headers : { type : 's' },
+				reportType : { type : 'es', subTypeConstructor : KalturaReportType, subType : 'KalturaReportType' },
+				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
+				dimension : { type : 's' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' },
+				order : { type : 's' },
+				objectIds : { type : 's' }
             }
         );
         return result;

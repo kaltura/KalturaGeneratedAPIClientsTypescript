@@ -23,8 +23,8 @@ export class KalturaDynamicObjectSearchItem extends KalturaSearchOperator {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDynamicObjectSearchItem'  },
-				field : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDynamicObjectSearchItem' },
+				field : { type : 's' }
             }
         );
         return result;

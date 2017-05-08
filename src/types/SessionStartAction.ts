@@ -39,14 +39,14 @@ export class SessionStartAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session'  },
-				action : { type : 'c' , default : 'start'  },
-				secret : { type : 's'   },
-				userId : { type : 's'   },
-				type : { type : 'en'   , subType : 'KalturaSessionType'},
-				partnerId : { type : 'n'   },
-				expiry : { type : 'n'   },
-				privileges : { type : 's'   }
+                service : { type : 'c', default : 'session' },
+				action : { type : 'c', default : 'start' },
+				secret : { type : 's' },
+				userId : { type : 's' },
+				type : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
+				partnerId : { type : 'n' },
+				expiry : { type : 'n' },
+				privileges : { type : 's' }
             }
         );
         return result;

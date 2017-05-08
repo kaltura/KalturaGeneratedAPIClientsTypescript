@@ -23,7 +23,7 @@ export class KalturaPdfFlavorParamsFilter extends KalturaPdfFlavorParamsBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPdfFlavorParamsFilter'  }
+                objectType : { type : 'c', default : 'KalturaPdfFlavorParamsFilter' }
             }
         );
         return result;

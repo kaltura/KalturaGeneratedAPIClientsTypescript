@@ -26,9 +26,9 @@ export class BaseEntryGetRemotePathsAction extends KalturaRequest<KalturaRemoteP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'getRemotePaths'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'getRemotePaths' },
+				entryId : { type : 's' }
             }
         );
         return result;

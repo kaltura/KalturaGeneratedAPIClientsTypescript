@@ -23,7 +23,7 @@ export class KalturaLocationScheduleResourceBaseFilter extends KalturaScheduleRe
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLocationScheduleResourceBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaLocationScheduleResourceBaseFilter' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class KalturaFilter extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFilter'  },
-				orderBy : { type : 's'   },
-				advancedSearch : { type : 'o'   , fallbackConstructor :  KalturaSearchItem, subType : 'KalturaSearchItem'}
+                objectType : { type : 'c', default : 'KalturaFilter' },
+				orderBy : { type : 's' },
+				advancedSearch : { type : 'o', subTypeConstructor : KalturaSearchItem, subType : 'KalturaSearchItem' }
             }
         );
         return result;

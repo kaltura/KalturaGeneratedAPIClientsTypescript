@@ -26,8 +26,8 @@ export class SharepointExtensionListUiconfsAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'kalturasharepointextension_sharepointextension'  },
-				action : { type : 'c' , default : 'listUiconfs'  }
+                service : { type : 'c', default : 'kalturasharepointextension_sharepointextension' },
+				action : { type : 'c', default : 'listUiconfs' }
             }
         );
         return result;

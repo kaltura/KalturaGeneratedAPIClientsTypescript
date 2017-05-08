@@ -23,7 +23,7 @@ export class KalturaFtpDistributionProviderFilter extends KalturaFtpDistribution
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFtpDistributionProviderFilter'  }
+                objectType : { type : 'c', default : 'KalturaFtpDistributionProviderFilter' }
             }
         );
         return result;

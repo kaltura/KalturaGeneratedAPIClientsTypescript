@@ -23,7 +23,7 @@ export class KalturaAppTokenFilter extends KalturaAppTokenBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAppTokenFilter'  }
+                objectType : { type : 'c', default : 'KalturaAppTokenFilter' }
             }
         );
         return result;

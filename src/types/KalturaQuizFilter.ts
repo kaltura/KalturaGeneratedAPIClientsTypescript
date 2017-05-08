@@ -25,9 +25,9 @@ export class KalturaQuizFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuizFilter'  },
-				entryIdEqual : { type : 's'   },
-				entryIdIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaQuizFilter' },
+				entryIdEqual : { type : 's' },
+				entryIdIn : { type : 's' }
             }
         );
         return result;

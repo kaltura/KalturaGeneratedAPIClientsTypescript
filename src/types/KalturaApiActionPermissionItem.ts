@@ -25,9 +25,9 @@ export class KalturaApiActionPermissionItem extends KalturaPermissionItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaApiActionPermissionItem'  },
-				service : { type : 's'   },
-				action : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaApiActionPermissionItem' },
+				service : { type : 's' },
+				action : { type : 's' }
             }
         );
         return result;

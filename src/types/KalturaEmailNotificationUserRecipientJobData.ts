@@ -26,8 +26,8 @@ export class KalturaEmailNotificationUserRecipientJobData extends KalturaEmailNo
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationUserRecipientJobData'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaUserFilter, subType : 'KalturaUserFilter'}
+                objectType : { type : 'c', default : 'KalturaEmailNotificationUserRecipientJobData' },
+				filter : { type : 'o', subTypeConstructor : KalturaUserFilter, subType : 'KalturaUserFilter' }
             }
         );
         return result;

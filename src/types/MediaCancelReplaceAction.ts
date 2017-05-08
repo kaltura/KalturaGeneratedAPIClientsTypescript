@@ -26,9 +26,9 @@ export class MediaCancelReplaceAction extends KalturaRequest<KalturaMediaEntry> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'cancelReplace'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'cancelReplace' },
+				entryId : { type : 's' }
             }
         );
         return result;

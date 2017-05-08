@@ -26,9 +26,9 @@ export class StorageProfileGetAction extends KalturaRequest<KalturaStorageProfil
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				storageProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'storageprofile' },
+				action : { type : 'c', default : 'get' },
+				storageProfileId : { type : 'n' }
             }
         );
         return result;

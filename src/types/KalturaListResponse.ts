@@ -23,8 +23,8 @@ export class KalturaListResponse extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaListResponse'  },
-				totalCount : { type : 'n'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaListResponse' },
+				totalCount : { type : 'n', readOnly : true }
             }
         );
         return result;

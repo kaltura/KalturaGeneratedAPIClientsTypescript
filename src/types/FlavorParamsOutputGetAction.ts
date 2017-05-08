@@ -26,9 +26,9 @@ export class FlavorParamsOutputGetAction extends KalturaRequest<KalturaFlavorPar
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparamsoutput'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'flavorparamsoutput' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

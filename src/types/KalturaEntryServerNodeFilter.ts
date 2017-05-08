@@ -23,7 +23,7 @@ export class KalturaEntryServerNodeFilter extends KalturaEntryServerNodeBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryServerNodeFilter'  }
+                objectType : { type : 'c', default : 'KalturaEntryServerNodeFilter' }
             }
         );
         return result;

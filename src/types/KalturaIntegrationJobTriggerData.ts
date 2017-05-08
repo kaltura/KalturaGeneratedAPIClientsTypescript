@@ -23,7 +23,7 @@ export class KalturaIntegrationJobTriggerData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIntegrationJobTriggerData'  }
+                objectType : { type : 'c', default : 'KalturaIntegrationJobTriggerData' }
             }
         );
         return result;

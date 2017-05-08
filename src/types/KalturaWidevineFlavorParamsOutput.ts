@@ -25,9 +25,9 @@ export class KalturaWidevineFlavorParamsOutput extends KalturaFlavorParamsOutput
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineFlavorParamsOutput'  },
-				widevineDistributionStartDate : { type : 'n'   },
-				widevineDistributionEndDate : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaWidevineFlavorParamsOutput' },
+				widevineDistributionStartDate : { type : 'n' },
+				widevineDistributionEndDate : { type : 'n' }
             }
         );
         return result;

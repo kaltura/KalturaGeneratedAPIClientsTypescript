@@ -23,7 +23,7 @@ export class KalturaDrmProfileFilter extends KalturaDrmProfileBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaDrmProfileFilter' }
             }
         );
         return result;

@@ -30,10 +30,10 @@ export class WidgetListAction extends KalturaRequest<KalturaWidgetListResponse> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'widget'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaWidgetFilter, subType : 'KalturaWidgetFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'widget' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaWidgetFilter, subType : 'KalturaWidgetFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

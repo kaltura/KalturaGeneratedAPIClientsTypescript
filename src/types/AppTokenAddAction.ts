@@ -26,9 +26,9 @@ export class AppTokenAddAction extends KalturaRequest<KalturaAppToken> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'apptoken'  },
-				action : { type : 'c' , default : 'add'  },
-				appToken : { type : 'o'   , fallbackConstructor :  KalturaAppToken, subType : 'KalturaAppToken'}
+                service : { type : 'c', default : 'apptoken' },
+				action : { type : 'c', default : 'add' },
+				appToken : { type : 'o', subTypeConstructor : KalturaAppToken, subType : 'KalturaAppToken' }
             }
         );
         return result;

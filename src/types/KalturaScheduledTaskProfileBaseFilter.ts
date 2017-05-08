@@ -50,21 +50,21 @@ export class KalturaScheduledTaskProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduledTaskProfileBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				partnerIdEqual : { type : 'n'   },
-				partnerIdIn : { type : 's'   },
-				systemNameEqual : { type : 's'   },
-				systemNameIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaScheduledTaskProfileStatus'},
-				statusIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				lastExecutionStartedAtGreaterThanOrEqual : { type : 'd'   },
-				lastExecutionStartedAtLessThanOrEqual : { type : 'd'   }
+                objectType : { type : 'c', default : 'KalturaScheduledTaskProfileBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				partnerIdEqual : { type : 'n' },
+				partnerIdIn : { type : 's' },
+				systemNameEqual : { type : 's' },
+				systemNameIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaScheduledTaskProfileStatus, subType : 'KalturaScheduledTaskProfileStatus' },
+				statusIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				lastExecutionStartedAtGreaterThanOrEqual : { type : 'd' },
+				lastExecutionStartedAtLessThanOrEqual : { type : 'd' }
             }
         );
         return result;

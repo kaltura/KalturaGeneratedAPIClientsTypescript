@@ -35,13 +35,13 @@ export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'apptoken'  },
-				action : { type : 'c' , default : 'startSession'  },
-				id : { type : 's'   },
-				tokenHash : { type : 's'   },
-				userId : { type : 's'   },
-				type : { type : 'en'   , subType : 'KalturaSessionType'},
-				expiry : { type : 'n'   }
+                service : { type : 'c', default : 'apptoken' },
+				action : { type : 'c', default : 'startSession' },
+				id : { type : 's' },
+				tokenHash : { type : 's' },
+				userId : { type : 's' },
+				type : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
+				expiry : { type : 'n' }
             }
         );
         return result;

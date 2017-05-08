@@ -37,13 +37,13 @@ export class UserLoginAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user'  },
-				action : { type : 'c' , default : 'login'  },
-				partnerId : { type : 'n'   },
-				userId : { type : 's'   },
-				password : { type : 's'   },
-				expiry : { type : 'n'   },
-				privileges : { type : 's'   }
+                service : { type : 'c', default : 'user' },
+				action : { type : 'c', default : 'login' },
+				partnerId : { type : 'n' },
+				userId : { type : 's' },
+				password : { type : 's' },
+				expiry : { type : 'n' },
+				privileges : { type : 's' }
             }
         );
         return result;

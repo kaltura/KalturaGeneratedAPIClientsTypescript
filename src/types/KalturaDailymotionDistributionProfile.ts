@@ -28,10 +28,10 @@ export class KalturaDailymotionDistributionProfile extends KalturaConfigurableDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionProfile'  },
-				user : { type : 's'   },
-				password : { type : 's'   },
-				geoBlockingMapping : { type : 'en'   , subType : 'KalturaDailymotionGeoBlockingMapping'}
+                objectType : { type : 'c', default : 'KalturaDailymotionDistributionProfile' },
+				user : { type : 's' },
+				password : { type : 's' },
+				geoBlockingMapping : { type : 'en', subTypeConstructor : KalturaDailymotionGeoBlockingMapping, subType : 'KalturaDailymotionGeoBlockingMapping' }
             }
         );
         return result;

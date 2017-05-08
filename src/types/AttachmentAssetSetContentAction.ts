@@ -29,10 +29,10 @@ export class AttachmentAssetSetContentAction extends KalturaRequest<KalturaAttac
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset'  },
-				action : { type : 'c' , default : 'setContent'  },
-				id : { type : 's'   },
-				contentResource : { type : 'o'   , fallbackConstructor :  KalturaContentResource, subType : 'KalturaContentResource'}
+                service : { type : 'c', default : 'attachment_attachmentasset' },
+				action : { type : 'c', default : 'setContent' },
+				id : { type : 's' },
+				contentResource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' }
             }
         );
         return result;

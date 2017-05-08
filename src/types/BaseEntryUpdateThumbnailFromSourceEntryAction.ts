@@ -31,11 +31,11 @@ export class BaseEntryUpdateThumbnailFromSourceEntryAction extends KalturaReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'updateThumbnailFromSourceEntry'  },
-				entryId : { type : 's'   },
-				sourceEntryId : { type : 's'   },
-				timeOffset : { type : 'n'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'updateThumbnailFromSourceEntry' },
+				entryId : { type : 's' },
+				sourceEntryId : { type : 's' },
+				timeOffset : { type : 'n' }
             }
         );
         return result;

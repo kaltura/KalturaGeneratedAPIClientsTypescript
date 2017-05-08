@@ -27,8 +27,8 @@ export class KalturaLiveChannelMatchAttributeCondition extends KalturaSearchMatc
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannelMatchAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaLiveChannelMatchAttribute'}
+                objectType : { type : 'c', default : 'KalturaLiveChannelMatchAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaLiveChannelMatchAttribute, subType : 'KalturaLiveChannelMatchAttribute' }
             }
         );
         return result;

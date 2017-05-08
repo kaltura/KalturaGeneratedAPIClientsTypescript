@@ -25,8 +25,8 @@ export class KalturaBulkUploadListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaBulkUpload, subType : 'KalturaBulkUpload'}
+                objectType : { type : 'c', default : 'KalturaBulkUploadListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaBulkUpload, subType : 'KalturaBulkUpload' }
             }
         );
         return result;

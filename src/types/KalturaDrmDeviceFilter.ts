@@ -23,7 +23,7 @@ export class KalturaDrmDeviceFilter extends KalturaDrmDeviceBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmDeviceFilter'  }
+                objectType : { type : 'c', default : 'KalturaDrmDeviceFilter' }
             }
         );
         return result;

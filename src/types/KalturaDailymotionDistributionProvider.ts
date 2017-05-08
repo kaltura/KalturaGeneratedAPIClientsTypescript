@@ -23,7 +23,7 @@ export class KalturaDailymotionDistributionProvider extends KalturaDistributionP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaDailymotionDistributionProvider' }
             }
         );
         return result;

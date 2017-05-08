@@ -31,10 +31,10 @@ export class KalturaConfigurableDistributionProfile extends KalturaDistributionP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConfigurableDistributionProfile'  },
-				fieldConfigArray : { type : 'a'   , fallbackConstructor :  KalturaDistributionFieldConfig, subType : 'KalturaDistributionFieldConfig'},
-				itemXpathsToExtend : { type : 'a'   , fallbackConstructor :  KalturaExtendingItemMrssParameter, subType : 'KalturaExtendingItemMrssParameter'},
-				useCategoryEntries : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaConfigurableDistributionProfile' },
+				fieldConfigArray : { type : 'a', subTypeConstructor : KalturaDistributionFieldConfig, subType : 'KalturaDistributionFieldConfig' },
+				itemXpathsToExtend : { type : 'a', subTypeConstructor : KalturaExtendingItemMrssParameter, subType : 'KalturaExtendingItemMrssParameter' },
+				useCategoryEntries : { type : 'b' }
             }
         );
         return result;

@@ -27,10 +27,10 @@ export class KalturaUrlTokenizer extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizer'  },
-				window : { type : 'n'   },
-				key : { type : 's'   },
-				limitIpAddress : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizer' },
+				window : { type : 'n' },
+				key : { type : 's' },
+				limitIpAddress : { type : 'b' }
             }
         );
         return result;

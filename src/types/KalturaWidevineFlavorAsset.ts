@@ -27,10 +27,10 @@ export class KalturaWidevineFlavorAsset extends KalturaFlavorAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineFlavorAsset'  },
-				widevineDistributionStartDate : { type : 'n'   },
-				widevineDistributionEndDate : { type : 'n'   },
-				widevineAssetId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaWidevineFlavorAsset' },
+				widevineDistributionStartDate : { type : 'n' },
+				widevineDistributionEndDate : { type : 'n' },
+				widevineAssetId : { type : 'n' }
             }
         );
         return result;

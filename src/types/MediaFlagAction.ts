@@ -27,9 +27,9 @@ export class MediaFlagAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'flag'  },
-				moderationFlag : { type : 'o'   , fallbackConstructor :  KalturaModerationFlag, subType : 'KalturaModerationFlag'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'flag' },
+				moderationFlag : { type : 'o', subTypeConstructor : KalturaModerationFlag, subType : 'KalturaModerationFlag' }
             }
         );
         return result;

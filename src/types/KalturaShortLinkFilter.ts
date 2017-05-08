@@ -23,7 +23,7 @@ export class KalturaShortLinkFilter extends KalturaShortLinkBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaShortLinkFilter'  }
+                objectType : { type : 'c', default : 'KalturaShortLinkFilter' }
             }
         );
         return result;

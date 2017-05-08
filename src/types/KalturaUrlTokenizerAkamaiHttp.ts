@@ -25,9 +25,9 @@ export class KalturaUrlTokenizerAkamaiHttp extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerAkamaiHttp'  },
-				paramName : { type : 's'   },
-				rootDir : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizerAkamaiHttp' },
+				paramName : { type : 's' },
+				rootDir : { type : 's' }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileVodPackagerHls extends KalturaDeliveryProfile
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileVodPackagerHls'  },
-				allowFairplayOffline : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileVodPackagerHls' },
+				allowFairplayOffline : { type : 'b' }
             }
         );
         return result;

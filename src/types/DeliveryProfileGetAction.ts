@@ -26,9 +26,9 @@ export class DeliveryProfileGetAction extends KalturaRequest<KalturaDeliveryProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'deliveryprofile' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 's' }
             }
         );
         return result;

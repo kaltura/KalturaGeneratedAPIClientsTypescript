@@ -27,10 +27,10 @@ export class KalturaScheduledTaskJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduledTaskJobData'  },
-				maxResults : { type : 'n'   },
-				resultsFilePath : { type : 's'   },
-				referenceTime : { type : 'd'   }
+                objectType : { type : 'c', default : 'KalturaScheduledTaskJobData' },
+				maxResults : { type : 'n' },
+				resultsFilePath : { type : 's' },
+				referenceTime : { type : 'd' }
             }
         );
         return result;

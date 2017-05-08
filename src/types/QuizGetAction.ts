@@ -26,9 +26,9 @@ export class QuizGetAction extends KalturaRequest<KalturaQuiz> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz'  },
-				action : { type : 'c' , default : 'get'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'quiz_quiz' },
+				action : { type : 'c', default : 'get' },
+				entryId : { type : 's' }
             }
         );
         return result;

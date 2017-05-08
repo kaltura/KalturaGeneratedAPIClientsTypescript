@@ -28,10 +28,10 @@ export class CategoryEntryActivateAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry'  },
-				action : { type : 'c' , default : 'activate'  },
-				entryId : { type : 's'   },
-				categoryId : { type : 'n'   }
+                service : { type : 'c', default : 'categoryentry' },
+				action : { type : 'c', default : 'activate' },
+				entryId : { type : 's' },
+				categoryId : { type : 'n' }
             }
         );
         return result;

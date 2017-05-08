@@ -33,13 +33,13 @@ export class KalturaFreewheelDistributionProfile extends KalturaDistributionProf
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelDistributionProfile'  },
-				apikey : { type : 's'   },
-				email : { type : 's'   },
-				sftpPass : { type : 's'   },
-				sftpLogin : { type : 's'   },
-				accountId : { type : 's'   },
-				metadataProfileId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaFreewheelDistributionProfile' },
+				apikey : { type : 's' },
+				email : { type : 's' },
+				sftpPass : { type : 's' },
+				sftpLogin : { type : 's' },
+				accountId : { type : 's' },
+				metadataProfileId : { type : 'n' }
             }
         );
         return result;

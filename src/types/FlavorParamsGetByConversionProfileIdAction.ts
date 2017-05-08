@@ -26,9 +26,9 @@ export class FlavorParamsGetByConversionProfileIdAction extends KalturaRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparams'  },
-				action : { type : 'c' , default : 'getByConversionProfileId'  },
-				conversionProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'flavorparams' },
+				action : { type : 'c', default : 'getByConversionProfileId' },
+				conversionProfileId : { type : 'n' }
             }
         );
         return result;

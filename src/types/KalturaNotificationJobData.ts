@@ -42,16 +42,16 @@ export class KalturaNotificationJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaNotificationJobData'  },
-				userId : { type : 's'   },
-				type : { type : 'en'   , subType : 'KalturaNotificationType'},
-				typeAsString : { type : 's'   },
-				objectId : { type : 's'   },
-				status : { type : 'en'   , subType : 'KalturaNotificationStatus'},
-				data : { type : 's'   },
-				numberOfAttempts : { type : 'n'   },
-				notificationResult : { type : 's'   },
-				objType : { type : 'en'   , subType : 'KalturaNotificationObjectType'}
+                objectType : { type : 'c', default : 'KalturaNotificationJobData' },
+				userId : { type : 's' },
+				type : { type : 'en', subTypeConstructor : KalturaNotificationType, subType : 'KalturaNotificationType' },
+				typeAsString : { type : 's' },
+				objectId : { type : 's' },
+				status : { type : 'en', subTypeConstructor : KalturaNotificationStatus, subType : 'KalturaNotificationStatus' },
+				data : { type : 's' },
+				numberOfAttempts : { type : 'n' },
+				notificationResult : { type : 's' },
+				objType : { type : 'en', subTypeConstructor : KalturaNotificationObjectType, subType : 'KalturaNotificationObjectType' }
             }
         );
         return result;

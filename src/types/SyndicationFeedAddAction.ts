@@ -26,9 +26,9 @@ export class SyndicationFeedAddAction extends KalturaRequest<KalturaBaseSyndicat
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'syndicationfeed'  },
-				action : { type : 'c' , default : 'add'  },
-				syndicationFeed : { type : 'o'   , fallbackConstructor :  KalturaBaseSyndicationFeed, subType : 'KalturaBaseSyndicationFeed'}
+                service : { type : 'c', default : 'syndicationfeed' },
+				action : { type : 'c', default : 'add' },
+				syndicationFeed : { type : 'o', subTypeConstructor : KalturaBaseSyndicationFeed, subType : 'KalturaBaseSyndicationFeed' }
             }
         );
         return result;

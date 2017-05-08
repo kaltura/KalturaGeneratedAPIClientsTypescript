@@ -27,9 +27,9 @@ export class KalturaBaseEntryCloneOptionComponent extends KalturaBaseEntryCloneO
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseEntryCloneOptionComponent'  },
-				itemType : { type : 'es'   , subType : 'KalturaBaseEntryCloneOptions'},
-				rule : { type : 'es'   , subType : 'KalturaCloneComponentSelectorType'}
+                objectType : { type : 'c', default : 'KalturaBaseEntryCloneOptionComponent' },
+				itemType : { type : 'es', subTypeConstructor : KalturaBaseEntryCloneOptions, subType : 'KalturaBaseEntryCloneOptions' },
+				rule : { type : 'es', subTypeConstructor : KalturaCloneComponentSelectorType, subType : 'KalturaCloneComponentSelectorType' }
             }
         );
         return result;

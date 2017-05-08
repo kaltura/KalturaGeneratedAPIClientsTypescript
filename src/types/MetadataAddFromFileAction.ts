@@ -34,12 +34,12 @@ export class MetadataAddFromFileAction extends KalturaUploadRequest<KalturaMetad
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'addFromFile'  },
-				metadataProfileId : { type : 'n'   },
-				objectType : { type : 'es'   , subType : 'KalturaMetadataObjectType'},
-				objectId : { type : 's'   },
-				xmlFile : { type : 'f'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'addFromFile' },
+				metadataProfileId : { type : 'n' },
+				objectType : { type : 'es', subTypeConstructor : KalturaMetadataObjectType, subType : 'KalturaMetadataObjectType' },
+				objectId : { type : 's' },
+				xmlFile : { type : 'f' }
             }
         );
         return result;

@@ -27,10 +27,10 @@ export class KalturaDrmLicenseAccessDetails extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmLicenseAccessDetails'  },
-				policy : { type : 's'   },
-				duration : { type : 'n'   },
-				absolute_duration : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaDrmLicenseAccessDetails' },
+				policy : { type : 's' },
+				duration : { type : 'n' },
+				absolute_duration : { type : 'n' }
             }
         );
         return result;

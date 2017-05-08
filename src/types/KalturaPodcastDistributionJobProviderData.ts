@@ -27,10 +27,10 @@ export class KalturaPodcastDistributionJobProviderData extends KalturaDistributi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPodcastDistributionJobProviderData'  },
-				xml : { type : 's'   },
-				metadataProfileId : { type : 'n'   },
-				distributionProfileId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaPodcastDistributionJobProviderData' },
+				xml : { type : 's' },
+				metadataProfileId : { type : 'n' },
+				distributionProfileId : { type : 'n' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaYoutubeApiDistributionProfileFilter extends KalturaYoutubeAp
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYoutubeApiDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaYoutubeApiDistributionProfileFilter' }
             }
         );
         return result;

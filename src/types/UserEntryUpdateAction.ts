@@ -27,10 +27,10 @@ export class UserEntryUpdateAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userentry'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				userEntry : { type : 'o'   , fallbackConstructor :  KalturaUserEntry, subType : 'KalturaUserEntry'}
+                service : { type : 'c', default : 'userentry' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				userEntry : { type : 'o', subTypeConstructor : KalturaUserEntry, subType : 'KalturaUserEntry' }
             }
         );
         return result;

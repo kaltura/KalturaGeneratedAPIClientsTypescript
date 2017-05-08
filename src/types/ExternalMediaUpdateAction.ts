@@ -28,10 +28,10 @@ export class ExternalMediaUpdateAction extends KalturaRequest<KalturaExternalMed
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'externalmedia_externalmedia'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				entry : { type : 'o'   , fallbackConstructor :  KalturaExternalMediaEntry, subType : 'KalturaExternalMediaEntry'}
+                service : { type : 'c', default : 'externalmedia_externalmedia' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				entry : { type : 'o', subTypeConstructor : KalturaExternalMediaEntry, subType : 'KalturaExternalMediaEntry' }
             }
         );
         return result;

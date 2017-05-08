@@ -30,11 +30,11 @@ export class ScheduleEventResourceUpdateAction extends KalturaRequest<KalturaSch
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleeventresource'  },
-				action : { type : 'c' , default : 'update'  },
-				scheduleEventId : { type : 'n'   },
-				scheduleResourceId : { type : 'n'   },
-				scheduleEventResource : { type : 'o'   , fallbackConstructor :  KalturaScheduleEventResource, subType : 'KalturaScheduleEventResource'}
+                service : { type : 'c', default : 'schedule_scheduleeventresource' },
+				action : { type : 'c', default : 'update' },
+				scheduleEventId : { type : 'n' },
+				scheduleResourceId : { type : 'n' },
+				scheduleEventResource : { type : 'o', subTypeConstructor : KalturaScheduleEventResource, subType : 'KalturaScheduleEventResource' }
             }
         );
         return result;

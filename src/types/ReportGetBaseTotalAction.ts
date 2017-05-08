@@ -32,11 +32,11 @@ export class ReportGetBaseTotalAction extends KalturaRequest<KalturaReportBaseTo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report'  },
-				action : { type : 'c' , default : 'getBaseTotal'  },
-				reportType : { type : 'es'   , subType : 'KalturaReportType'},
-				reportInputFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
-				objectIds : { type : 's'   }
+                service : { type : 'c', default : 'report' },
+				action : { type : 'c', default : 'getBaseTotal' },
+				reportType : { type : 'es', subTypeConstructor : KalturaReportType, subType : 'KalturaReportType' },
+				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
+				objectIds : { type : 's' }
             }
         );
         return result;

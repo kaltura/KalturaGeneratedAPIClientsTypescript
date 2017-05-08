@@ -35,12 +35,12 @@ export class SessionImpersonateByKsAction extends KalturaRequest<KalturaSessionI
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session'  },
-				action : { type : 'c' , default : 'impersonateByKs'  },
-				session : { type : 's'   },
-				type : { type : 'en'   , subType : 'KalturaSessionType'},
-				expiry : { type : 'n'   },
-				privileges : { type : 's'   }
+                service : { type : 'c', default : 'session' },
+				action : { type : 'c', default : 'impersonateByKs' },
+				session : { type : 's' },
+				type : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
+				expiry : { type : 'n' },
+				privileges : { type : 's' }
             }
         );
         return result;

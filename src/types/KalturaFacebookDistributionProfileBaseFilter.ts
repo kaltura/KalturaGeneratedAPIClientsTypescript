@@ -23,7 +23,7 @@ export class KalturaFacebookDistributionProfileBaseFilter extends KalturaConfigu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProfileBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaFacebookDistributionProfileBaseFilter' }
             }
         );
         return result;

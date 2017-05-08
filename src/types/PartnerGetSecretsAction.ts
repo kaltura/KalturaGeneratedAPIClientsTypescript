@@ -30,11 +30,11 @@ export class PartnerGetSecretsAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'getSecrets'  },
-				partnerId : { type : 'n'   },
-				adminEmail : { type : 's'   },
-				cmsPassword : { type : 's'   }
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'getSecrets' },
+				partnerId : { type : 'n' },
+				adminEmail : { type : 's' },
+				cmsPassword : { type : 's' }
             }
         );
         return result;

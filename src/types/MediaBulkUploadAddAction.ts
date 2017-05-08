@@ -34,11 +34,11 @@ export class MediaBulkUploadAddAction extends KalturaUploadRequest<KalturaBulkUp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'bulkUploadAdd'  },
-				fileData : { type : 'f'   },
-				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData'},
-				bulkUploadEntryData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadEntryData, subType : 'KalturaBulkUploadEntryData'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'bulkUploadAdd' },
+				fileData : { type : 'f' },
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData' },
+				bulkUploadEntryData : { type : 'o', subTypeConstructor : KalturaBulkUploadEntryData, subType : 'KalturaBulkUploadEntryData' }
             }
         );
         return result;

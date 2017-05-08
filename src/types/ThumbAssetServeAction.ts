@@ -34,12 +34,12 @@ export class ThumbAssetServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'serve'  },
-				thumbAssetId : { type : 's'   },
-				version : { type : 'n'   },
-				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'},
-				options : { type : 'o'   , fallbackConstructor :  KalturaThumbnailServeOptions, subType : 'KalturaThumbnailServeOptions'}
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'serve' },
+				thumbAssetId : { type : 's' },
+				version : { type : 'n' },
+				thumbParams : { type : 'o', subTypeConstructor : KalturaThumbParams, subType : 'KalturaThumbParams' },
+				options : { type : 'o', subTypeConstructor : KalturaThumbnailServeOptions, subType : 'KalturaThumbnailServeOptions' }
             }
         );
         return result;

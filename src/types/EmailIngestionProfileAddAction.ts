@@ -27,9 +27,9 @@ export class EmailIngestionProfileAddAction extends KalturaRequest<KalturaEmailI
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'emailingestionprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				EmailIP : { type : 'o'   , fallbackConstructor :  KalturaEmailIngestionProfile, subType : 'KalturaEmailIngestionProfile'}
+                service : { type : 'c', default : 'emailingestionprofile' },
+				action : { type : 'c', default : 'add' },
+				EmailIP : { type : 'o', subTypeConstructor : KalturaEmailIngestionProfile, subType : 'KalturaEmailIngestionProfile' }
             }
         );
         return result;

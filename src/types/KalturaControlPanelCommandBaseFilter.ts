@@ -46,18 +46,18 @@ export class KalturaControlPanelCommandBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaControlPanelCommandBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				createdByIdEqual : { type : 'n'   },
-				typeEqual : { type : 'en'   , subType : 'KalturaControlPanelCommandType'},
-				typeIn : { type : 's'   },
-				targetTypeEqual : { type : 'en'   , subType : 'KalturaControlPanelCommandTargetType'},
-				targetTypeIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaControlPanelCommandStatus'},
-				statusIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaControlPanelCommandBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				createdByIdEqual : { type : 'n' },
+				typeEqual : { type : 'en', subTypeConstructor : KalturaControlPanelCommandType, subType : 'KalturaControlPanelCommandType' },
+				typeIn : { type : 's' },
+				targetTypeEqual : { type : 'en', subTypeConstructor : KalturaControlPanelCommandTargetType, subType : 'KalturaControlPanelCommandTargetType' },
+				targetTypeIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaControlPanelCommandStatus, subType : 'KalturaControlPanelCommandStatus' },
+				statusIn : { type : 's' }
             }
         );
         return result;

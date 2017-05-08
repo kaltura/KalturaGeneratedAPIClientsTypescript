@@ -28,10 +28,10 @@ export class KalturaExecuteMetadataXsltObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExecuteMetadataXsltObjectTask'  },
-				metadataProfileId : { type : 'n'   },
-				metadataObjectType : { type : 'es'   , subType : 'KalturaMetadataObjectType'},
-				xslt : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaExecuteMetadataXsltObjectTask' },
+				metadataProfileId : { type : 'n' },
+				metadataObjectType : { type : 'es', subTypeConstructor : KalturaMetadataObjectType, subType : 'KalturaMetadataObjectType' },
+				xslt : { type : 's' }
             }
         );
         return result;

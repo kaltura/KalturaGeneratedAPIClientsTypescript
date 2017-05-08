@@ -30,11 +30,11 @@ export class FlavorAssetServeAdStitchCmdAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'serveAdStitchCmd'  },
-				assetId : { type : 's'   },
-				ffprobeJson : { type : 's'   },
-				duration : { type : 's'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'serveAdStitchCmd' },
+				assetId : { type : 's' },
+				ffprobeJson : { type : 's' },
+				duration : { type : 's' }
             }
         );
         return result;

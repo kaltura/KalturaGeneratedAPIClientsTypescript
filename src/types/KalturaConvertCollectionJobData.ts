@@ -37,14 +37,14 @@ export class KalturaConvertCollectionJobData extends KalturaConvartableJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvertCollectionJobData'  },
-				destDirLocalPath : { type : 's'   },
-				destDirRemoteUrl : { type : 's'   },
-				destFileName : { type : 's'   },
-				inputXmlLocalPath : { type : 's'   },
-				inputXmlRemoteUrl : { type : 's'   },
-				commandLinesStr : { type : 's'   },
-				flavors : { type : 'a'   , fallbackConstructor :  KalturaConvertCollectionFlavorData, subType : 'KalturaConvertCollectionFlavorData'}
+                objectType : { type : 'c', default : 'KalturaConvertCollectionJobData' },
+				destDirLocalPath : { type : 's' },
+				destDirRemoteUrl : { type : 's' },
+				destFileName : { type : 's' },
+				inputXmlLocalPath : { type : 's' },
+				inputXmlRemoteUrl : { type : 's' },
+				commandLinesStr : { type : 's' },
+				flavors : { type : 'a', subTypeConstructor : KalturaConvertCollectionFlavorData, subType : 'KalturaConvertCollectionFlavorData' }
             }
         );
         return result;

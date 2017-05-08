@@ -25,9 +25,9 @@ export class KalturaIpAddressCondition extends KalturaMatchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIpAddressCondition'  },
-				acceptInternalIps : { type : 'b'   },
-				httpHeader : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaIpAddressCondition' },
+				acceptInternalIps : { type : 'b' },
+				httpHeader : { type : 's' }
             }
         );
         return result;

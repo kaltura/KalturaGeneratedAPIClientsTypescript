@@ -23,8 +23,8 @@ export class KalturaUserLoginDataBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserLoginDataBaseFilter'  },
-				loginEmailEqual : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUserLoginDataBaseFilter' },
+				loginEmailEqual : { type : 's' }
             }
         );
         return result;

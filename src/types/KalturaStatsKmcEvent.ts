@@ -46,18 +46,18 @@ export class KalturaStatsKmcEvent extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStatsKmcEvent'  },
-				clientVer : { type : 's'   },
-				kmcEventActionPath : { type : 's'   },
-				kmcEventType : { type : 'en'   , subType : 'KalturaStatsKmcEventType'},
-				eventTimestamp : { type : 'n'   },
-				sessionId : { type : 's'   },
-				partnerId : { type : 'n'   },
-				entryId : { type : 's'   },
-				widgetId : { type : 's'   },
-				uiconfId : { type : 'n'   },
-				userId : { type : 's'   },
-				userIp : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaStatsKmcEvent' },
+				clientVer : { type : 's' },
+				kmcEventActionPath : { type : 's' },
+				kmcEventType : { type : 'en', subTypeConstructor : KalturaStatsKmcEventType, subType : 'KalturaStatsKmcEventType' },
+				eventTimestamp : { type : 'n' },
+				sessionId : { type : 's' },
+				partnerId : { type : 'n' },
+				entryId : { type : 's' },
+				widgetId : { type : 's' },
+				uiconfId : { type : 'n' },
+				userId : { type : 's' },
+				userIp : { type : 's', readOnly : true }
             }
         );
         return result;

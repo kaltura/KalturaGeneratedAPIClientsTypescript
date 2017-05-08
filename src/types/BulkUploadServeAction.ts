@@ -26,9 +26,9 @@ export class BulkUploadServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload'  },
-				action : { type : 'c' , default : 'serve'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'bulkupload' },
+				action : { type : 'c', default : 'serve' },
+				id : { type : 'n' }
             }
         );
         return result;

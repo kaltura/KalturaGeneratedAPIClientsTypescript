@@ -26,9 +26,9 @@ export class UserRoleGetAction extends KalturaRequest<KalturaUserRole> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole'  },
-				action : { type : 'c' , default : 'get'  },
-				userRoleId : { type : 'n'   }
+                service : { type : 'c', default : 'userrole' },
+				action : { type : 'c', default : 'get' },
+				userRoleId : { type : 'n' }
             }
         );
         return result;

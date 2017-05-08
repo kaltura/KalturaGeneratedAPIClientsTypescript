@@ -25,9 +25,9 @@ export class KalturaDeliveryProfileGenericRtmp extends KalturaDeliveryProfileRtm
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericRtmp'  },
-				pattern : { type : 's'   },
-				rendererClass : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileGenericRtmp' },
+				pattern : { type : 's' },
+				rendererClass : { type : 's' }
             }
         );
         return result;

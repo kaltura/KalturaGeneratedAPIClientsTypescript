@@ -28,10 +28,10 @@ export class CuePointCloneAction extends KalturaRequest<KalturaCuePoint> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
-				action : { type : 'c' , default : 'clone'  },
-				id : { type : 's'   },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'cuepoint_cuepoint' },
+				action : { type : 'c', default : 'clone' },
+				id : { type : 's' },
+				entryId : { type : 's' }
             }
         );
         return result;

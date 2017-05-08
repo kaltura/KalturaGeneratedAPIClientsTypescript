@@ -23,7 +23,7 @@ export class KalturaLocationScheduleResource extends KalturaScheduleResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLocationScheduleResource'  }
+                objectType : { type : 'c', default : 'KalturaLocationScheduleResource' }
             }
         );
         return result;

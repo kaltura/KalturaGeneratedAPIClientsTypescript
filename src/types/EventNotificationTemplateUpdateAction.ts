@@ -28,10 +28,10 @@ export class EventNotificationTemplateUpdateAction extends KalturaRequest<Kaltur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				eventNotificationTemplate : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate'}
+                service : { type : 'c', default : 'eventnotification_eventnotificationtemplate' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				eventNotificationTemplate : { type : 'o', subTypeConstructor : KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate' }
             }
         );
         return result;

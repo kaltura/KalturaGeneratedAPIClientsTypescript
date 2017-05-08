@@ -24,8 +24,8 @@ export class KalturaPlayReadyPlayEnablerHolder extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyPlayEnablerHolder'  },
-				type : { type : 'es'   , subType : 'KalturaPlayReadyPlayEnablerType'}
+                objectType : { type : 'c', default : 'KalturaPlayReadyPlayEnablerHolder' },
+				type : { type : 'es', subTypeConstructor : KalturaPlayReadyPlayEnablerType, subType : 'KalturaPlayReadyPlayEnablerType' }
             }
         );
         return result;

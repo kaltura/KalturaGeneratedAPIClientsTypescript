@@ -33,12 +33,12 @@ export class KalturaAttachmentAssetBaseFilter extends KalturaAssetFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttachmentAssetBaseFilter'  },
-				formatEqual : { type : 'es'   , subType : 'KalturaAttachmentType'},
-				formatIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaAttachmentAssetStatus'},
-				statusIn : { type : 's'   },
-				statusNotIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAttachmentAssetBaseFilter' },
+				formatEqual : { type : 'es', subTypeConstructor : KalturaAttachmentType, subType : 'KalturaAttachmentType' },
+				formatIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaAttachmentAssetStatus, subType : 'KalturaAttachmentAssetStatus' },
+				statusIn : { type : 's' },
+				statusNotIn : { type : 's' }
             }
         );
         return result;

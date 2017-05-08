@@ -28,10 +28,10 @@ export class ThumbAssetAddAction extends KalturaRequest<KalturaThumbAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'add'  },
-				entryId : { type : 's'   },
-				thumbAsset : { type : 'o'   , fallbackConstructor :  KalturaThumbAsset, subType : 'KalturaThumbAsset'}
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'add' },
+				entryId : { type : 's' },
+				thumbAsset : { type : 'o', subTypeConstructor : KalturaThumbAsset, subType : 'KalturaThumbAsset' }
             }
         );
         return result;

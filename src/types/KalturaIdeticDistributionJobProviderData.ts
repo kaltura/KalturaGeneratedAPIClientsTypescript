@@ -25,9 +25,9 @@ export class KalturaIdeticDistributionJobProviderData extends KalturaConfigurabl
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIdeticDistributionJobProviderData'  },
-				thumbnailUrl : { type : 's'   },
-				flavorAssetUrl : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaIdeticDistributionJobProviderData' },
+				thumbnailUrl : { type : 's' },
+				flavorAssetUrl : { type : 's' }
             }
         );
         return result;

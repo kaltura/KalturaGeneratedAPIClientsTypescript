@@ -26,9 +26,9 @@ export class ResponseProfileAddAction extends KalturaRequest<KalturaResponseProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				addResponseProfile : { type : 'o'   , fallbackConstructor :  KalturaResponseProfile, subType : 'KalturaResponseProfile'}
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'add' },
+				addResponseProfile : { type : 'o', subTypeConstructor : KalturaResponseProfile, subType : 'KalturaResponseProfile' }
             }
         );
         return result;

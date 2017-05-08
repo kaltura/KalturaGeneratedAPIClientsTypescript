@@ -30,10 +30,10 @@ export class SearchSearchAction extends KalturaRequest<KalturaSearchResultRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search'  },
-				action : { type : 'c' , default : 'search'  },
-				search : { type : 'o'   , fallbackConstructor :  KalturaSearch, subType : 'KalturaSearch'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'search' },
+				action : { type : 'c', default : 'search' },
+				search : { type : 'o', subTypeConstructor : KalturaSearch, subType : 'KalturaSearch' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

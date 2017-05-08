@@ -23,7 +23,7 @@ export class KalturaComcastMrssDistributionProfileBaseFilter extends KalturaConf
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaComcastMrssDistributionProfileBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaComcastMrssDistributionProfileBaseFilter' }
             }
         );
         return result;

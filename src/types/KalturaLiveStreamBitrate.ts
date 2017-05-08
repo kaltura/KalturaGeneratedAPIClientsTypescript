@@ -29,11 +29,11 @@ export class KalturaLiveStreamBitrate extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamBitrate'  },
-				bitrate : { type : 'n'   },
-				width : { type : 'n'   },
-				height : { type : 'n'   },
-				tags : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaLiveStreamBitrate' },
+				bitrate : { type : 'n' },
+				width : { type : 'n' },
+				height : { type : 'n' },
+				tags : { type : 's' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class DropFolderFileGetAction extends KalturaRequest<KalturaDropFolderFil
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolderfile'  },
-				action : { type : 'c' , default : 'get'  },
-				dropFolderFileId : { type : 'n'   }
+                service : { type : 'c', default : 'dropfolder_dropfolderfile' },
+				action : { type : 'c', default : 'get' },
+				dropFolderFileId : { type : 'n' }
             }
         );
         return result;

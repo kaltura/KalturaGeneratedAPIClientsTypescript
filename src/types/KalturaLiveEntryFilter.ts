@@ -28,10 +28,10 @@ export class KalturaLiveEntryFilter extends KalturaLiveEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntryFilter'  },
-				isLive : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				isRecordedEntryIdEmpty : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				hasMediaServerHostname : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaLiveEntryFilter' },
+				isLive : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				isRecordedEntryIdEmpty : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				hasMediaServerHostname : { type : 's' }
             }
         );
         return result;

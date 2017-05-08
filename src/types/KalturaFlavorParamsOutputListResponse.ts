@@ -25,8 +25,8 @@ export class KalturaFlavorParamsOutputListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorParamsOutputListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaFlavorParamsOutput, subType : 'KalturaFlavorParamsOutput'}
+                objectType : { type : 'c', default : 'KalturaFlavorParamsOutputListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaFlavorParamsOutput, subType : 'KalturaFlavorParamsOutput' }
             }
         );
         return result;

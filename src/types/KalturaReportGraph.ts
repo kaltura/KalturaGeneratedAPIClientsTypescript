@@ -25,9 +25,9 @@ export class KalturaReportGraph extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportGraph'  },
-				id : { type : 's'   },
-				data : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaReportGraph' },
+				id : { type : 's' },
+				data : { type : 's' }
             }
         );
         return result;

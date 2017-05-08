@@ -26,8 +26,8 @@ export class KalturaUploadedFileTokenResource extends KalturaDataCenterContentRe
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUploadedFileTokenResource'  },
-				token : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUploadedFileTokenResource' },
+				token : { type : 's' }
             }
         );
         return result;

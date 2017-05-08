@@ -37,14 +37,14 @@ export class KalturaDailymotionDistributionCaptionInfo extends KalturaObjectBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionCaptionInfo'  },
-				language : { type : 's'   },
-				filePath : { type : 's'   },
-				remoteId : { type : 's'   },
-				action : { type : 'en'   , subType : 'KalturaDailymotionDistributionCaptionAction'},
-				version : { type : 's'   },
-				assetId : { type : 's'   },
-				format : { type : 'en'   , subType : 'KalturaDailymotionDistributionCaptionFormat'}
+                objectType : { type : 'c', default : 'KalturaDailymotionDistributionCaptionInfo' },
+				language : { type : 's' },
+				filePath : { type : 's' },
+				remoteId : { type : 's' },
+				action : { type : 'en', subTypeConstructor : KalturaDailymotionDistributionCaptionAction, subType : 'KalturaDailymotionDistributionCaptionAction' },
+				version : { type : 's' },
+				assetId : { type : 's' },
+				format : { type : 'en', subTypeConstructor : KalturaDailymotionDistributionCaptionFormat, subType : 'KalturaDailymotionDistributionCaptionFormat' }
             }
         );
         return result;

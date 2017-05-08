@@ -28,13 +28,13 @@ export class KalturaPartnerUsage extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPartnerUsage'  },
-				hostingGB : { type : 'n'  , readOnly : true },
-				Percent : { type : 'n'  , readOnly : true },
-				packageBW : { type : 'n'  , readOnly : true },
-				usageGB : { type : 'n'  , readOnly : true },
-				reachedLimitDate : { type : 'n'  , readOnly : true },
-				usageGraph : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaPartnerUsage' },
+				hostingGB : { type : 'n', readOnly : true },
+				Percent : { type : 'n', readOnly : true },
+				packageBW : { type : 'n', readOnly : true },
+				usageGB : { type : 'n', readOnly : true },
+				reachedLimitDate : { type : 'n', readOnly : true },
+				usageGraph : { type : 's', readOnly : true }
             }
         );
         return result;

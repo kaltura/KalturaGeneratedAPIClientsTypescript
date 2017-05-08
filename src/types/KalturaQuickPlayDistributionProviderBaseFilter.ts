@@ -23,7 +23,7 @@ export class KalturaQuickPlayDistributionProviderBaseFilter extends KalturaDistr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionProviderBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaQuickPlayDistributionProviderBaseFilter' }
             }
         );
         return result;

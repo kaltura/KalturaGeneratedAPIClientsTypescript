@@ -23,7 +23,7 @@ export class KalturaSiteCondition extends KalturaMatchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSiteCondition'  }
+                objectType : { type : 'c', default : 'KalturaSiteCondition' }
             }
         );
         return result;

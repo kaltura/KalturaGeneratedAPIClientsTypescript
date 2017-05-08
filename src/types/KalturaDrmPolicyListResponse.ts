@@ -25,8 +25,8 @@ export class KalturaDrmPolicyListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmPolicyListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaDrmPolicy, subType : 'KalturaDrmPolicy'}
+                objectType : { type : 'c', default : 'KalturaDrmPolicyListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaDrmPolicy, subType : 'KalturaDrmPolicy' }
             }
         );
         return result;

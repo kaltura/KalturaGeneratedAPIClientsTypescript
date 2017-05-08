@@ -26,9 +26,9 @@ export class AppTokenGetAction extends KalturaRequest<KalturaAppToken> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'apptoken'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'apptoken' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 's' }
             }
         );
         return result;

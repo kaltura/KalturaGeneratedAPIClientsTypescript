@@ -25,8 +25,8 @@ export class KalturaString extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaString'  },
-				value : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaString' },
+				value : { type : 's' }
             }
         );
         return result;

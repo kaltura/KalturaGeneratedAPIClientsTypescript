@@ -30,10 +30,10 @@ export class VirusScanProfileListAction extends KalturaRequest<KalturaVirusScanP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaVirusScanProfileFilter, subType : 'KalturaVirusScanProfileFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'virusscan_virusscanprofile' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaVirusScanProfileFilter, subType : 'KalturaVirusScanProfileFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

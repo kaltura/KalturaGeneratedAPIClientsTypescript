@@ -28,9 +28,9 @@ export class SearchGetMediaInfoAction extends KalturaRequest<KalturaSearchResult
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search'  },
-				action : { type : 'c' , default : 'getMediaInfo'  },
-				searchResult : { type : 'o'   , fallbackConstructor :  KalturaSearchResult, subType : 'KalturaSearchResult'}
+                service : { type : 'c', default : 'search' },
+				action : { type : 'c', default : 'getMediaInfo' },
+				searchResult : { type : 'o', subTypeConstructor : KalturaSearchResult, subType : 'KalturaSearchResult' }
             }
         );
         return result;

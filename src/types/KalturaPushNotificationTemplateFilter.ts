@@ -23,7 +23,7 @@ export class KalturaPushNotificationTemplateFilter extends KalturaPushNotificati
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPushNotificationTemplateFilter'  }
+                objectType : { type : 'c', default : 'KalturaPushNotificationTemplateFilter' }
             }
         );
         return result;

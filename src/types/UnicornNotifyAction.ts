@@ -24,9 +24,9 @@ export class UnicornNotifyAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'unicorndistribution_unicorn'  },
-				action : { type : 'c' , default : 'notify'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'unicorndistribution_unicorn' },
+				action : { type : 'c', default : 'notify' },
+				id : { type : 'n' }
             }
         );
         return result;

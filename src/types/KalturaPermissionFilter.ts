@@ -23,7 +23,7 @@ export class KalturaPermissionFilter extends KalturaPermissionBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPermissionFilter'  }
+                objectType : { type : 'c', default : 'KalturaPermissionFilter' }
             }
         );
         return result;

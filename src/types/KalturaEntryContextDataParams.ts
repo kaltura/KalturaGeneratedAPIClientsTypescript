@@ -31,11 +31,11 @@ export class KalturaEntryContextDataParams extends KalturaAccessControlScope {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryContextDataParams'  },
-				flavorAssetId : { type : 's'   },
-				flavorTags : { type : 's'   },
-				streamerType : { type : 's'   },
-				mediaProtocol : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaEntryContextDataParams' },
+				flavorAssetId : { type : 's' },
+				flavorTags : { type : 's' },
+				streamerType : { type : 's' },
+				mediaProtocol : { type : 's' }
             }
         );
         return result;

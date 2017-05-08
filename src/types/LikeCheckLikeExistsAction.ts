@@ -26,10 +26,10 @@ export class LikeCheckLikeExistsAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'like_like'  },
-				action : { type : 'c' , default : 'checkLikeExists'  },
-				entryId : { type : 's'   },
-				userId : { type : 's'   }
+                service : { type : 'c', default : 'like_like' },
+				action : { type : 'c', default : 'checkLikeExists' },
+				entryId : { type : 's' },
+				userId : { type : 's' }
             }
         );
         return result;

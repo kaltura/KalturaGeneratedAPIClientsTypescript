@@ -27,9 +27,9 @@ export class KalturaConversionProfileAssetParamsFilter extends KalturaConversion
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionProfileAssetParamsFilter'  },
-				conversionProfileIdFilter : { type : 'o'   , fallbackConstructor :  KalturaConversionProfileFilter, subType : 'KalturaConversionProfileFilter'},
-				assetParamsIdFilter : { type : 'o'   , fallbackConstructor :  KalturaAssetParamsFilter, subType : 'KalturaAssetParamsFilter'}
+                objectType : { type : 'c', default : 'KalturaConversionProfileAssetParamsFilter' },
+				conversionProfileIdFilter : { type : 'o', subTypeConstructor : KalturaConversionProfileFilter, subType : 'KalturaConversionProfileFilter' },
+				assetParamsIdFilter : { type : 'o', subTypeConstructor : KalturaAssetParamsFilter, subType : 'KalturaAssetParamsFilter' }
             }
         );
         return result;

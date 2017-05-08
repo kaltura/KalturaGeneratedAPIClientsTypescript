@@ -26,10 +26,10 @@ export class UverseGetFeedAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uversedistribution_uverse'  },
-				action : { type : 'c' , default : 'getFeed'  },
-				distributionProfileId : { type : 'n'   },
-				hash : { type : 's'   }
+                service : { type : 'c', default : 'uversedistribution_uverse' },
+				action : { type : 'c', default : 'getFeed' },
+				distributionProfileId : { type : 'n' },
+				hash : { type : 's' }
             }
         );
         return result;

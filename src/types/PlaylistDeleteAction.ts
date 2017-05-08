@@ -26,9 +26,9 @@ export class PlaylistDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 's'   }
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 's' }
             }
         );
         return result;

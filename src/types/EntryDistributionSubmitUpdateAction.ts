@@ -26,9 +26,9 @@ export class EntryDistributionSubmitUpdateAction extends KalturaRequest<KalturaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'submitUpdate'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'submitUpdate' },
+				id : { type : 'n' }
             }
         );
         return result;

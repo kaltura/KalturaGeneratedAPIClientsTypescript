@@ -26,9 +26,9 @@ export class ScheduledTaskProfileDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'scheduledtask_scheduledtaskprofile' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 'n' }
             }
         );
         return result;

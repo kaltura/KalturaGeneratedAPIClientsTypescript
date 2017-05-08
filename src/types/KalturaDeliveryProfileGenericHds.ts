@@ -25,9 +25,9 @@ export class KalturaDeliveryProfileGenericHds extends KalturaDeliveryProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericHds'  },
-				pattern : { type : 's'   },
-				rendererClass : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileGenericHds' },
+				pattern : { type : 's' },
+				rendererClass : { type : 's' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class BulkAbortAction extends KalturaRequest<KalturaBulkUpload> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload_bulk'  },
-				action : { type : 'c' , default : 'abort'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'bulkupload_bulk' },
+				action : { type : 'c', default : 'abort' },
+				id : { type : 'n' }
             }
         );
         return result;

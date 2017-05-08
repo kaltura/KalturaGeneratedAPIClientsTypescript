@@ -24,8 +24,8 @@ export class KalturaRuleAction extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRuleAction'  },
-				type : { type : 'es'  , readOnly : true , subType : 'KalturaRuleActionType'}
+                objectType : { type : 'c', default : 'KalturaRuleAction' },
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaRuleActionType, subType : 'KalturaRuleActionType' }
             }
         );
         return result;

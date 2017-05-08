@@ -31,10 +31,10 @@ export class EventNotificationTemplateRegisterAction extends KalturaRequest<Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
-				action : { type : 'c' , default : 'register'  },
-				notificationTemplateSystemName : { type : 's'   },
-				userParamsArray : { type : 'a'   , fallbackConstructor :  KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter'}
+                service : { type : 'c', default : 'eventnotification_eventnotificationtemplate' },
+				action : { type : 'c', default : 'register' },
+				notificationTemplateSystemName : { type : 's' },
+				userParamsArray : { type : 'a', subTypeConstructor : KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter' }
             }
         );
         return result;

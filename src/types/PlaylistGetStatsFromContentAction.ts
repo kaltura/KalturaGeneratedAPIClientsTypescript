@@ -29,10 +29,10 @@ export class PlaylistGetStatsFromContentAction extends KalturaRequest<KalturaPla
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'getStatsFromContent'  },
-				playlistType : { type : 'en'   , subType : 'KalturaPlaylistType'},
-				playlistContent : { type : 's'   }
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'getStatsFromContent' },
+				playlistType : { type : 'en', subTypeConstructor : KalturaPlaylistType, subType : 'KalturaPlaylistType' },
+				playlistContent : { type : 's' }
             }
         );
         return result;

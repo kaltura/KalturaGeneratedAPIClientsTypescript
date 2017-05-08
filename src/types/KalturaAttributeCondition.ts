@@ -23,8 +23,8 @@ export class KalturaAttributeCondition extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttributeCondition'  },
-				value : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAttributeCondition' },
+				value : { type : 's' }
             }
         );
         return result;

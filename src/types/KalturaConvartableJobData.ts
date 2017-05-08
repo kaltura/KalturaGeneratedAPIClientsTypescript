@@ -48,18 +48,18 @@ export class KalturaConvartableJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvartableJobData'  },
-				srcFileSyncLocalPath : { type : 's'   },
-				actualSrcFileSyncLocalPath : { type : 's'   },
-				srcFileSyncRemoteUrl : { type : 's'   },
-				srcFileSyncs : { type : 'a'   , fallbackConstructor :  KalturaSourceFileSyncDescriptor, subType : 'KalturaSourceFileSyncDescriptor'},
-				engineVersion : { type : 'n'   },
-				flavorParamsOutputId : { type : 'n'   },
-				flavorParamsOutput : { type : 'o'   , fallbackConstructor :  KalturaFlavorParamsOutput, subType : 'KalturaFlavorParamsOutput'},
-				mediaInfoId : { type : 'n'   },
-				currentOperationSet : { type : 'n'   },
-				currentOperationIndex : { type : 'n'   },
-				pluginData : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
+                objectType : { type : 'c', default : 'KalturaConvartableJobData' },
+				srcFileSyncLocalPath : { type : 's' },
+				actualSrcFileSyncLocalPath : { type : 's' },
+				srcFileSyncRemoteUrl : { type : 's' },
+				srcFileSyncs : { type : 'a', subTypeConstructor : KalturaSourceFileSyncDescriptor, subType : 'KalturaSourceFileSyncDescriptor' },
+				engineVersion : { type : 'n' },
+				flavorParamsOutputId : { type : 'n' },
+				flavorParamsOutput : { type : 'o', subTypeConstructor : KalturaFlavorParamsOutput, subType : 'KalturaFlavorParamsOutput' },
+				mediaInfoId : { type : 'n' },
+				currentOperationSet : { type : 'n' },
+				currentOperationIndex : { type : 'n' },
+				pluginData : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
         );
         return result;

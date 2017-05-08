@@ -28,10 +28,10 @@ export class ServerNodeReportStatusAction extends KalturaRequest<KalturaServerNo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode'  },
-				action : { type : 'c' , default : 'reportStatus'  },
-				hostName : { type : 's'   },
-				serverNode : { type : 'o'   , fallbackConstructor :  KalturaServerNode, subType : 'KalturaServerNode'}
+                service : { type : 'c', default : 'servernode' },
+				action : { type : 'c', default : 'reportStatus' },
+				hostName : { type : 's' },
+				serverNode : { type : 'o', subTypeConstructor : KalturaServerNode, subType : 'KalturaServerNode' }
             }
         );
         return result;

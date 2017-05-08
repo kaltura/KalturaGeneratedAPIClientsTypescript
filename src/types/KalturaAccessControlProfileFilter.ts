@@ -23,7 +23,7 @@ export class KalturaAccessControlProfileFilter extends KalturaAccessControlProfi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaAccessControlProfileFilter' }
             }
         );
         return result;

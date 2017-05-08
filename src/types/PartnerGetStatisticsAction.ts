@@ -27,8 +27,8 @@ export class PartnerGetStatisticsAction extends KalturaRequest<KalturaPartnerSta
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'getStatistics'  }
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'getStatistics' }
             }
         );
         return result;

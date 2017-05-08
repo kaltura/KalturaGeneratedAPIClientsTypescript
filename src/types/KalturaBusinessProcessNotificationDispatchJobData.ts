@@ -26,9 +26,9 @@ export class KalturaBusinessProcessNotificationDispatchJobData extends KalturaEv
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessNotificationDispatchJobData'  },
-				server : { type : 'o'   , fallbackConstructor :  KalturaBusinessProcessServer, subType : 'KalturaBusinessProcessServer'},
-				caseId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBusinessProcessNotificationDispatchJobData' },
+				server : { type : 'o', subTypeConstructor : KalturaBusinessProcessServer, subType : 'KalturaBusinessProcessServer' },
+				caseId : { type : 's' }
             }
         );
         return result;

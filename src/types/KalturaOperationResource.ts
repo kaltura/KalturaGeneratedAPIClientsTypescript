@@ -32,10 +32,10 @@ export class KalturaOperationResource extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaOperationResource'  },
-				resource : { type : 'o'   , fallbackConstructor :  KalturaContentResource, subType : 'KalturaContentResource'},
-				operationAttributes : { type : 'a'   , fallbackConstructor :  KalturaOperationAttributes, subType : 'KalturaOperationAttributes'},
-				assetParamsId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaOperationResource' },
+				resource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' },
+				operationAttributes : { type : 'a', subTypeConstructor : KalturaOperationAttributes, subType : 'KalturaOperationAttributes' },
+				assetParamsId : { type : 'n' }
             }
         );
         return result;

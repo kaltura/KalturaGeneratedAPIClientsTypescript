@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileAkamaiHttpBaseFilter extends KalturaDeliveryP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiHttpBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileAkamaiHttpBaseFilter' }
             }
         );
         return result;

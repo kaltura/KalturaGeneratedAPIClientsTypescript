@@ -41,14 +41,14 @@ export class KalturaDetachedResponseProfile extends KalturaBaseResponseProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDetachedResponseProfile'  },
-				name : { type : 's'   },
-				type : { type : 'en'   , subType : 'KalturaResponseProfileType'},
-				fields : { type : 's'   },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaRelatedFilter, subType : 'KalturaRelatedFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'},
-				relatedProfiles : { type : 'a'   , fallbackConstructor :  KalturaDetachedResponseProfile, subType : 'KalturaDetachedResponseProfile'},
-				mappings : { type : 'a'   , fallbackConstructor :  KalturaResponseProfileMapping, subType : 'KalturaResponseProfileMapping'}
+                objectType : { type : 'c', default : 'KalturaDetachedResponseProfile' },
+				name : { type : 's' },
+				type : { type : 'en', subTypeConstructor : KalturaResponseProfileType, subType : 'KalturaResponseProfileType' },
+				fields : { type : 's' },
+				filter : { type : 'o', subTypeConstructor : KalturaRelatedFilter, subType : 'KalturaRelatedFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' },
+				relatedProfiles : { type : 'a', subTypeConstructor : KalturaDetachedResponseProfile, subType : 'KalturaDetachedResponseProfile' },
+				mappings : { type : 'a', subTypeConstructor : KalturaResponseProfileMapping, subType : 'KalturaResponseProfileMapping' }
             }
         );
         return result;

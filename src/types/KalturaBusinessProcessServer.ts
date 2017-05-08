@@ -37,17 +37,17 @@ export class KalturaBusinessProcessServer extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessServer'  },
-				id : { type : 'n'  , readOnly : true },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				name : { type : 's'   },
-				systemName : { type : 's'   },
-				description : { type : 's'   },
-				status : { type : 'es'  , readOnly : true , subType : 'KalturaBusinessProcessServerStatus'},
-				type : { type : 'es'  , readOnly : true , subType : 'KalturaBusinessProcessProvider'},
-				dc : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaBusinessProcessServer' },
+				id : { type : 'n', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				name : { type : 's' },
+				systemName : { type : 's' },
+				description : { type : 's' },
+				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaBusinessProcessServerStatus, subType : 'KalturaBusinessProcessServerStatus' },
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaBusinessProcessProvider, subType : 'KalturaBusinessProcessProvider' },
+				dc : { type : 'n' }
             }
         );
         return result;

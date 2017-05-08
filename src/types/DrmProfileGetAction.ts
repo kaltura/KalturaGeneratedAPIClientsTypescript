@@ -26,9 +26,9 @@ export class DrmProfileGetAction extends KalturaRequest<KalturaDrmProfile> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				drmProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'drm_drmprofile' },
+				action : { type : 'c', default : 'get' },
+				drmProfileId : { type : 'n' }
             }
         );
         return result;

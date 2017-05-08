@@ -27,9 +27,9 @@ export class CuePointAddFromBulkAction extends KalturaUploadRequest<KalturaCuePo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
-				action : { type : 'c' , default : 'addFromBulk'  },
-				fileData : { type : 'f'   }
+                service : { type : 'c', default : 'cuepoint_cuepoint' },
+				action : { type : 'c', default : 'addFromBulk' },
+				fileData : { type : 'f' }
             }
         );
         return result;

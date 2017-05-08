@@ -27,9 +27,9 @@ export class SyndicationFeedRequestConversionAction extends KalturaRequest<strin
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'syndicationfeed'  },
-				action : { type : 'c' , default : 'requestConversion'  },
-				feedId : { type : 's'   }
+                service : { type : 'c', default : 'syndicationfeed' },
+				action : { type : 'c', default : 'requestConversion' },
+				feedId : { type : 's' }
             }
         );
         return result;

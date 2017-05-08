@@ -23,7 +23,7 @@ export class KalturaRecordScheduleEvent extends KalturaEntryScheduleEvent {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRecordScheduleEvent'  }
+                objectType : { type : 'c', default : 'KalturaRecordScheduleEvent' }
             }
         );
         return result;

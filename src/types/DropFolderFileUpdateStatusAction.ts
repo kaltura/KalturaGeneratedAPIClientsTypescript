@@ -29,10 +29,10 @@ export class DropFolderFileUpdateStatusAction extends KalturaRequest<KalturaDrop
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolderfile'  },
-				action : { type : 'c' , default : 'updateStatus'  },
-				dropFolderFileId : { type : 'n'   },
-				status : { type : 'en'   , subType : 'KalturaDropFolderFileStatus'}
+                service : { type : 'c', default : 'dropfolder_dropfolderfile' },
+				action : { type : 'c', default : 'updateStatus' },
+				dropFolderFileId : { type : 'n' },
+				status : { type : 'en', subTypeConstructor : KalturaDropFolderFileStatus, subType : 'KalturaDropFolderFileStatus' }
             }
         );
         return result;

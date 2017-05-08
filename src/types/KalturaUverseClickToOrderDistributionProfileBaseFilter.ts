@@ -23,7 +23,7 @@ export class KalturaUverseClickToOrderDistributionProfileBaseFilter extends Kalt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUverseClickToOrderDistributionProfileBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaUverseClickToOrderDistributionProfileBaseFilter' }
             }
         );
         return result;

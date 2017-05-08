@@ -28,10 +28,10 @@ export class ThumbAssetExportAction extends KalturaRequest<KalturaFlavorAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'export'  },
-				assetId : { type : 's'   },
-				storageProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'export' },
+				assetId : { type : 's' },
+				storageProfileId : { type : 'n' }
             }
         );
         return result;

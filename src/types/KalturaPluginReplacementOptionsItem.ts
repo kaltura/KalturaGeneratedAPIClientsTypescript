@@ -23,7 +23,7 @@ export class KalturaPluginReplacementOptionsItem extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPluginReplacementOptionsItem'  }
+                objectType : { type : 'c', default : 'KalturaPluginReplacementOptionsItem' }
             }
         );
         return result;

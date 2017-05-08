@@ -25,9 +25,9 @@ export class KalturaBulkUploadResultCategoryEntry extends KalturaBulkUploadResul
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResultCategoryEntry'  },
-				categoryId : { type : 'n'   },
-				entryId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBulkUploadResultCategoryEntry' },
+				categoryId : { type : 'n' },
+				entryId : { type : 's' }
             }
         );
         return result;

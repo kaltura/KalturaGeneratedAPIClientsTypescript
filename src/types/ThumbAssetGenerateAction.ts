@@ -29,11 +29,11 @@ export class ThumbAssetGenerateAction extends KalturaRequest<KalturaThumbAsset> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'generate'  },
-				entryId : { type : 's'   },
-				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'},
-				sourceAssetId : { type : 's'   }
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'generate' },
+				entryId : { type : 's' },
+				thumbParams : { type : 'o', subTypeConstructor : KalturaThumbParams, subType : 'KalturaThumbParams' },
+				sourceAssetId : { type : 's' }
             }
         );
         return result;

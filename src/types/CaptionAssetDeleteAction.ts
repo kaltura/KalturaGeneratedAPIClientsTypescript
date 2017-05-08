@@ -24,9 +24,9 @@ export class CaptionAssetDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'delete'  },
-				captionAssetId : { type : 's'   }
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'delete' },
+				captionAssetId : { type : 's' }
             }
         );
         return result;

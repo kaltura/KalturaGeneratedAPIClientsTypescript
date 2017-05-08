@@ -26,9 +26,9 @@ export class MediaAddAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'add'  },
-				entry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'add' },
+				entry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' }
             }
         );
         return result;

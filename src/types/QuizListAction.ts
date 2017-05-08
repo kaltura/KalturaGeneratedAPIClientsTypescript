@@ -30,10 +30,10 @@ export class QuizListAction extends KalturaRequest<KalturaQuizListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaQuizFilter, subType : 'KalturaQuizFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'quiz_quiz' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaQuizFilter, subType : 'KalturaQuizFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

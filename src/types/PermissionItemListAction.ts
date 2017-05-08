@@ -30,10 +30,10 @@ export class PermissionItemListAction extends KalturaRequest<KalturaPermissionIt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permissionitem'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaPermissionItemFilter, subType : 'KalturaPermissionItemFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'permissionitem' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaPermissionItemFilter, subType : 'KalturaPermissionItemFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

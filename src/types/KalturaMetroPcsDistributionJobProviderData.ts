@@ -25,9 +25,9 @@ export class KalturaMetroPcsDistributionJobProviderData extends KalturaConfigura
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetroPcsDistributionJobProviderData'  },
-				assetLocalPaths : { type : 's'   },
-				thumbUrls : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaMetroPcsDistributionJobProviderData' },
+				assetLocalPaths : { type : 's' },
+				thumbUrls : { type : 's' }
             }
         );
         return result;

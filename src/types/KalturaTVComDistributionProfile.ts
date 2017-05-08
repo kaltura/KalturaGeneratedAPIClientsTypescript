@@ -44,19 +44,19 @@ export class KalturaTVComDistributionProfile extends KalturaConfigurableDistribu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTVComDistributionProfile'  },
-				metadataProfileId : { type : 'n'   },
-				feedUrl : { type : 's'  , readOnly : true },
-				feedTitle : { type : 's'   },
-				feedLink : { type : 's'   },
-				feedDescription : { type : 's'   },
-				feedLanguage : { type : 's'   },
-				feedCopyright : { type : 's'   },
-				feedImageTitle : { type : 's'   },
-				feedImageUrl : { type : 's'   },
-				feedImageLink : { type : 's'   },
-				feedImageWidth : { type : 'n'   },
-				feedImageHeight : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaTVComDistributionProfile' },
+				metadataProfileId : { type : 'n' },
+				feedUrl : { type : 's', readOnly : true },
+				feedTitle : { type : 's' },
+				feedLink : { type : 's' },
+				feedDescription : { type : 's' },
+				feedLanguage : { type : 's' },
+				feedCopyright : { type : 's' },
+				feedImageTitle : { type : 's' },
+				feedImageUrl : { type : 's' },
+				feedImageLink : { type : 's' },
+				feedImageWidth : { type : 'n' },
+				feedImageHeight : { type : 'n' }
             }
         );
         return result;

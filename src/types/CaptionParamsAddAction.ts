@@ -26,9 +26,9 @@ export class CaptionParamsAddAction extends KalturaRequest<KalturaCaptionParams>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionparams'  },
-				action : { type : 'c' , default : 'add'  },
-				captionParams : { type : 'o'   , fallbackConstructor :  KalturaCaptionParams, subType : 'KalturaCaptionParams'}
+                service : { type : 'c', default : 'caption_captionparams' },
+				action : { type : 'c', default : 'add' },
+				captionParams : { type : 'o', subTypeConstructor : KalturaCaptionParams, subType : 'KalturaCaptionParams' }
             }
         );
         return result;

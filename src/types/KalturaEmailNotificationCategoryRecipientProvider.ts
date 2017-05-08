@@ -29,9 +29,9 @@ export class KalturaEmailNotificationCategoryRecipientProvider extends KalturaEm
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationCategoryRecipientProvider'  },
-				categoryId : { type : 'o'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'},
-				categoryUserFilter : { type : 'o'   , fallbackConstructor :  KalturaCategoryUserProviderFilter, subType : 'KalturaCategoryUserProviderFilter'}
+                objectType : { type : 'c', default : 'KalturaEmailNotificationCategoryRecipientProvider' },
+				categoryId : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				categoryUserFilter : { type : 'o', subTypeConstructor : KalturaCategoryUserProviderFilter, subType : 'KalturaCategoryUserProviderFilter' }
             }
         );
         return result;

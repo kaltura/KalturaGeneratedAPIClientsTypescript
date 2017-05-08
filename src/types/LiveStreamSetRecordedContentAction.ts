@@ -36,13 +36,13 @@ export class LiveStreamSetRecordedContentAction extends KalturaRequest<KalturaLi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'setRecordedContent'  },
-				entryId : { type : 's'   },
-				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
-				resource : { type : 'o'   , fallbackConstructor :  KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource'},
-				duration : { type : 'n'   },
-				recordedEntryId : { type : 's'   }
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'setRecordedContent' },
+				entryId : { type : 's' },
+				mediaServerIndex : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' },
+				resource : { type : 'o', subTypeConstructor : KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource' },
+				duration : { type : 'n' },
+				recordedEntryId : { type : 's' }
             }
         );
         return result;

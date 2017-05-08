@@ -27,10 +27,10 @@ export class KalturaDeliveryServerNodeBaseFilter extends KalturaServerNodeFilter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryServerNodeBaseFilter'  },
-				playbackDomainLike : { type : 's'   },
-				playbackDomainMultiLikeOr : { type : 's'   },
-				playbackDomainMultiLikeAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDeliveryServerNodeBaseFilter' },
+				playbackDomainLike : { type : 's' },
+				playbackDomainMultiLikeOr : { type : 's' },
+				playbackDomainMultiLikeAnd : { type : 's' }
             }
         );
         return result;

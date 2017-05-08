@@ -30,11 +30,11 @@ export class ConversionProfileAssetParamsUpdateAction extends KalturaRequest<Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofileassetparams'  },
-				action : { type : 'c' , default : 'update'  },
-				conversionProfileId : { type : 'n'   },
-				assetParamsId : { type : 'n'   },
-				conversionProfileAssetParams : { type : 'o'   , fallbackConstructor :  KalturaConversionProfileAssetParams, subType : 'KalturaConversionProfileAssetParams'}
+                service : { type : 'c', default : 'conversionprofileassetparams' },
+				action : { type : 'c', default : 'update' },
+				conversionProfileId : { type : 'n' },
+				assetParamsId : { type : 'n' },
+				conversionProfileAssetParams : { type : 'o', subTypeConstructor : KalturaConversionProfileAssetParams, subType : 'KalturaConversionProfileAssetParams' }
             }
         );
         return result;

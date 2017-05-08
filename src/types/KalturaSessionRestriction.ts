@@ -23,7 +23,7 @@ export class KalturaSessionRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSessionRestriction'  }
+                objectType : { type : 'c', default : 'KalturaSessionRestriction' }
             }
         );
         return result;

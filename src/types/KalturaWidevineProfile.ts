@@ -33,13 +33,13 @@ export class KalturaWidevineProfile extends KalturaDrmProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineProfile'  },
-				key : { type : 's'   },
-				iv : { type : 's'   },
-				owner : { type : 's'   },
-				portal : { type : 's'   },
-				maxGop : { type : 'n'   },
-				regServerHost : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaWidevineProfile' },
+				key : { type : 's' },
+				iv : { type : 's' },
+				owner : { type : 's' },
+				portal : { type : 's' },
+				maxGop : { type : 'n' },
+				regServerHost : { type : 's' }
             }
         );
         return result;

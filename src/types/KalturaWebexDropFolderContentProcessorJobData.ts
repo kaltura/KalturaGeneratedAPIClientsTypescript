@@ -25,9 +25,9 @@ export class KalturaWebexDropFolderContentProcessorJobData extends KalturaDropFo
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWebexDropFolderContentProcessorJobData'  },
-				description : { type : 's'   },
-				webexHostId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaWebexDropFolderContentProcessorJobData' },
+				description : { type : 's' },
+				webexHostId : { type : 's' }
             }
         );
         return result;

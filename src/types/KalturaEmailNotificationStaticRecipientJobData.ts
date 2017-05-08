@@ -27,8 +27,8 @@ export class KalturaEmailNotificationStaticRecipientJobData extends KalturaEmail
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationStaticRecipientJobData'  },
-				emailRecipients : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
+                objectType : { type : 'c', default : 'KalturaEmailNotificationStaticRecipientJobData' },
+				emailRecipients : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
         );
         return result;

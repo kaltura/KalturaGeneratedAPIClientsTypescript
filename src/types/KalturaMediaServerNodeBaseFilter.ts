@@ -23,7 +23,7 @@ export class KalturaMediaServerNodeBaseFilter extends KalturaDeliveryServerNodeF
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaServerNodeBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaMediaServerNodeBaseFilter' }
             }
         );
         return result;

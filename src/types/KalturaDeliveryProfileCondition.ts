@@ -25,8 +25,8 @@ export class KalturaDeliveryProfileCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileCondition'  },
-				deliveryProfileIds : { type : 'a'   , fallbackConstructor :  KalturaIntegerValue, subType : 'KalturaIntegerValue'}
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileCondition' },
+				deliveryProfileIds : { type : 'a', subTypeConstructor : KalturaIntegerValue, subType : 'KalturaIntegerValue' }
             }
         );
         return result;

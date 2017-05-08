@@ -26,9 +26,9 @@ export class ShortLinkAddAction extends KalturaRequest<KalturaShortLink> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'shortlink_shortlink'  },
-				action : { type : 'c' , default : 'add'  },
-				shortLink : { type : 'o'   , fallbackConstructor :  KalturaShortLink, subType : 'KalturaShortLink'}
+                service : { type : 'c', default : 'shortlink_shortlink' },
+				action : { type : 'c', default : 'add' },
+				shortLink : { type : 'o', subTypeConstructor : KalturaShortLink, subType : 'KalturaShortLink' }
             }
         );
         return result;

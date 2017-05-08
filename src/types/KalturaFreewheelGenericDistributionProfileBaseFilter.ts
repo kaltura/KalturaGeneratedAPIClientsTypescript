@@ -23,7 +23,7 @@ export class KalturaFreewheelGenericDistributionProfileBaseFilter extends Kaltur
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelGenericDistributionProfileBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaFreewheelGenericDistributionProfileBaseFilter' }
             }
         );
         return result;

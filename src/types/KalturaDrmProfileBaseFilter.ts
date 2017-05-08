@@ -41,16 +41,16 @@ export class KalturaDrmProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmProfileBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				partnerIdEqual : { type : 'n'   },
-				partnerIdIn : { type : 's'   },
-				nameLike : { type : 's'   },
-				providerEqual : { type : 'es'   , subType : 'KalturaDrmProviderType'},
-				providerIn : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaDrmProfileStatus'},
-				statusIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDrmProfileBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				partnerIdEqual : { type : 'n' },
+				partnerIdIn : { type : 's' },
+				nameLike : { type : 's' },
+				providerEqual : { type : 'es', subTypeConstructor : KalturaDrmProviderType, subType : 'KalturaDrmProviderType' },
+				providerIn : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaDrmProfileStatus, subType : 'KalturaDrmProfileStatus' },
+				statusIn : { type : 's' }
             }
         );
         return result;

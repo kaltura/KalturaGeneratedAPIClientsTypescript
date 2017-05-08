@@ -30,10 +30,10 @@ export class UiConfListTemplatesAction extends KalturaRequest<KalturaUiConfListR
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf'  },
-				action : { type : 'c' , default : 'listTemplates'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaUiConfFilter, subType : 'KalturaUiConfFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'uiconf' },
+				action : { type : 'c', default : 'listTemplates' },
+				filter : { type : 'o', subTypeConstructor : KalturaUiConfFilter, subType : 'KalturaUiConfFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

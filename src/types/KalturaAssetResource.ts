@@ -28,8 +28,8 @@ export class KalturaAssetResource extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetResource'  },
-				assetId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaAssetResource' },
+				assetId : { type : 's' }
             }
         );
         return result;

@@ -37,16 +37,16 @@ export class KalturaVoicebaseJobProviderData extends KalturaIntegrationJobProvid
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVoicebaseJobProviderData'  },
-				entryId : { type : 's'   },
-				flavorAssetId : { type : 's'   },
-				transcriptId : { type : 's'   },
-				captionAssetFormats : { type : 's'   },
-				apiKey : { type : 's'  , readOnly : true },
-				apiPassword : { type : 's'  , readOnly : true },
-				spokenLanguage : { type : 'es'   , subType : 'KalturaLanguage'},
-				fileLocation : { type : 's'  , readOnly : true },
-				replaceMediaContent : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaVoicebaseJobProviderData' },
+				entryId : { type : 's' },
+				flavorAssetId : { type : 's' },
+				transcriptId : { type : 's' },
+				captionAssetFormats : { type : 's' },
+				apiKey : { type : 's', readOnly : true },
+				apiPassword : { type : 's', readOnly : true },
+				spokenLanguage : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
+				fileLocation : { type : 's', readOnly : true },
+				replaceMediaContent : { type : 'b' }
             }
         );
         return result;

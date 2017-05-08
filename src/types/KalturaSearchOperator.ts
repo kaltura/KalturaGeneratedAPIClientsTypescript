@@ -27,9 +27,9 @@ export class KalturaSearchOperator extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchOperator'  },
-				type : { type : 'en'   , subType : 'KalturaSearchOperatorType'},
-				items : { type : 'a'   , fallbackConstructor :  KalturaSearchItem, subType : 'KalturaSearchItem'}
+                objectType : { type : 'c', default : 'KalturaSearchOperator' },
+				type : { type : 'en', subTypeConstructor : KalturaSearchOperatorType, subType : 'KalturaSearchOperatorType' },
+				items : { type : 'a', subTypeConstructor : KalturaSearchItem, subType : 'KalturaSearchItem' }
             }
         );
         return result;

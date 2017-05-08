@@ -23,7 +23,7 @@ export class KalturaUploadTokenFilter extends KalturaUploadTokenBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUploadTokenFilter'  }
+                objectType : { type : 'c', default : 'KalturaUploadTokenFilter' }
             }
         );
         return result;

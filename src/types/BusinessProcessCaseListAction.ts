@@ -29,10 +29,10 @@ export class BusinessProcessCaseListAction extends KalturaRequest<KalturaBusines
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase'  },
-				action : { type : 'c' , default : 'list'  },
-				objectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
-				objectId : { type : 's'   }
+                service : { type : 'c', default : 'businessprocessnotification_businessprocesscase' },
+				action : { type : 'c', default : 'list' },
+				objectType : { type : 'es', subTypeConstructor : KalturaEventNotificationEventObjectType, subType : 'KalturaEventNotificationEventObjectType' },
+				objectId : { type : 's' }
             }
         );
         return result;

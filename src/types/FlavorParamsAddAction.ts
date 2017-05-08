@@ -26,9 +26,9 @@ export class FlavorParamsAddAction extends KalturaRequest<KalturaFlavorParams> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparams'  },
-				action : { type : 'c' , default : 'add'  },
-				flavorParams : { type : 'o'   , fallbackConstructor :  KalturaFlavorParams, subType : 'KalturaFlavorParams'}
+                service : { type : 'c', default : 'flavorparams' },
+				action : { type : 'c', default : 'add' },
+				flavorParams : { type : 'o', subTypeConstructor : KalturaFlavorParams, subType : 'KalturaFlavorParams' }
             }
         );
         return result;

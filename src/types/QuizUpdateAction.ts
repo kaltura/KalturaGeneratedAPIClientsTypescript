@@ -28,10 +28,10 @@ export class QuizUpdateAction extends KalturaRequest<KalturaQuiz> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz'  },
-				action : { type : 'c' , default : 'update'  },
-				entryId : { type : 's'   },
-				quiz : { type : 'o'   , fallbackConstructor :  KalturaQuiz, subType : 'KalturaQuiz'}
+                service : { type : 'c', default : 'quiz_quiz' },
+				action : { type : 'c', default : 'update' },
+				entryId : { type : 's' },
+				quiz : { type : 'o', subTypeConstructor : KalturaQuiz, subType : 'KalturaQuiz' }
             }
         );
         return result;

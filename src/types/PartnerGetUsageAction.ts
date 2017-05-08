@@ -34,11 +34,11 @@ export class PartnerGetUsageAction extends KalturaRequest<KalturaPartnerUsage> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner'  },
-				action : { type : 'c' , default : 'getUsage'  },
-				year : { type : 'n'   },
-				month : { type : 'n'   },
-				resolution : { type : 'es'   , subType : 'KalturaReportInterval'}
+                service : { type : 'c', default : 'partner' },
+				action : { type : 'c', default : 'getUsage' },
+				year : { type : 'n' },
+				month : { type : 'n' },
+				resolution : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' }
             }
         );
         return result;

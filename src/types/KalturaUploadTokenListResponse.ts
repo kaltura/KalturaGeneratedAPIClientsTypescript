@@ -25,8 +25,8 @@ export class KalturaUploadTokenListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUploadTokenListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaUploadToken, subType : 'KalturaUploadToken'}
+                objectType : { type : 'c', default : 'KalturaUploadTokenListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaUploadToken, subType : 'KalturaUploadToken' }
             }
         );
         return result;

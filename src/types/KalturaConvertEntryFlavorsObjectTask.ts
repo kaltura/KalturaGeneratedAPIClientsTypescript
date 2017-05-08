@@ -25,9 +25,9 @@ export class KalturaConvertEntryFlavorsObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvertEntryFlavorsObjectTask'  },
-				flavorParamsIds : { type : 's'   },
-				reconvert : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaConvertEntryFlavorsObjectTask' },
+				flavorParamsIds : { type : 's' },
+				reconvert : { type : 'b' }
             }
         );
         return result;

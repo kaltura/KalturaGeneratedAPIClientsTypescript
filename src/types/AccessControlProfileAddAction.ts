@@ -26,9 +26,9 @@ export class AccessControlProfileAddAction extends KalturaRequest<KalturaAccessC
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrolprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				accessControlProfile : { type : 'o'   , fallbackConstructor :  KalturaAccessControlProfile, subType : 'KalturaAccessControlProfile'}
+                service : { type : 'c', default : 'accesscontrolprofile' },
+				action : { type : 'c', default : 'add' },
+				accessControlProfile : { type : 'o', subTypeConstructor : KalturaAccessControlProfile, subType : 'KalturaAccessControlProfile' }
             }
         );
         return result;

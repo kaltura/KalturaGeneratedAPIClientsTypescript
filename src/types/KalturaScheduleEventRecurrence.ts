@@ -55,23 +55,23 @@ export class KalturaScheduleEventRecurrence extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleEventRecurrence'  },
-				name : { type : 's'   },
-				frequency : { type : 'es'   , subType : 'KalturaScheduleEventRecurrenceFrequency'},
-				until : { type : 'd'   },
-				timeZone : { type : 's'   },
-				count : { type : 'n'   },
-				interval : { type : 'n'   },
-				bySecond : { type : 's'   },
-				byMinute : { type : 's'   },
-				byHour : { type : 's'   },
-				byDay : { type : 's'   },
-				byMonthDay : { type : 's'   },
-				byYearDay : { type : 's'   },
-				byWeekNumber : { type : 's'   },
-				byMonth : { type : 's'   },
-				byOffset : { type : 's'   },
-				weekStartDay : { type : 'es'   , subType : 'KalturaScheduleEventRecurrenceDay'}
+                objectType : { type : 'c', default : 'KalturaScheduleEventRecurrence' },
+				name : { type : 's' },
+				frequency : { type : 'es', subTypeConstructor : KalturaScheduleEventRecurrenceFrequency, subType : 'KalturaScheduleEventRecurrenceFrequency' },
+				until : { type : 'd' },
+				timeZone : { type : 's' },
+				count : { type : 'n' },
+				interval : { type : 'n' },
+				bySecond : { type : 's' },
+				byMinute : { type : 's' },
+				byHour : { type : 's' },
+				byDay : { type : 's' },
+				byMonthDay : { type : 's' },
+				byYearDay : { type : 's' },
+				byWeekNumber : { type : 's' },
+				byMonth : { type : 's' },
+				byOffset : { type : 's' },
+				weekStartDay : { type : 'es', subTypeConstructor : KalturaScheduleEventRecurrenceDay, subType : 'KalturaScheduleEventRecurrenceDay' }
             }
         );
         return result;

@@ -31,10 +31,10 @@ export class MediaAddContentAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addContent'  },
-				entryId : { type : 's'   },
-				resource : { type : 'o'   , fallbackConstructor :  KalturaResource, subType : 'KalturaResource'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addContent' },
+				entryId : { type : 's' },
+				resource : { type : 'o', subTypeConstructor : KalturaResource, subType : 'KalturaResource' }
             }
         );
         return result;

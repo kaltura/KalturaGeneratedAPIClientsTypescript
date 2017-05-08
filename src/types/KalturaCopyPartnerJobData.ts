@@ -25,9 +25,9 @@ export class KalturaCopyPartnerJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCopyPartnerJobData'  },
-				fromPartnerId : { type : 'n'   },
-				toPartnerId : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaCopyPartnerJobData' },
+				fromPartnerId : { type : 'n' },
+				toPartnerId : { type : 'n' }
             }
         );
         return result;

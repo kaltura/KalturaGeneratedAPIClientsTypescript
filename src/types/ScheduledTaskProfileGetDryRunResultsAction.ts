@@ -24,9 +24,9 @@ export class ScheduledTaskProfileGetDryRunResultsAction extends KalturaRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
-				action : { type : 'c' , default : 'getDryRunResults'  },
-				requestId : { type : 'n'   }
+                service : { type : 'c', default : 'scheduledtask_scheduledtaskprofile' },
+				action : { type : 'c', default : 'getDryRunResults' },
+				requestId : { type : 'n' }
             }
         );
         return result;

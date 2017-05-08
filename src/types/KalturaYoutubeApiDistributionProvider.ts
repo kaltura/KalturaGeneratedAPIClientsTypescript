@@ -23,7 +23,7 @@ export class KalturaYoutubeApiDistributionProvider extends KalturaDistributionPr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYoutubeApiDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaYoutubeApiDistributionProvider' }
             }
         );
         return result;

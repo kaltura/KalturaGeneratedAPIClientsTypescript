@@ -25,8 +25,8 @@ export class KalturaBaseSyndicationFeedListResponse extends KalturaListResponse 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseSyndicationFeedListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaBaseSyndicationFeed, subType : 'KalturaBaseSyndicationFeed'}
+                objectType : { type : 'c', default : 'KalturaBaseSyndicationFeedListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaBaseSyndicationFeed, subType : 'KalturaBaseSyndicationFeed' }
             }
         );
         return result;

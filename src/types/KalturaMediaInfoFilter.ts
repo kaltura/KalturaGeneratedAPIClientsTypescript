@@ -23,7 +23,7 @@ export class KalturaMediaInfoFilter extends KalturaMediaInfoBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaInfoFilter'  }
+                objectType : { type : 'c', default : 'KalturaMediaInfoFilter' }
             }
         );
         return result;

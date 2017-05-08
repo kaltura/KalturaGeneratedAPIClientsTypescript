@@ -28,10 +28,10 @@ export class FlavorAssetUpdateAction extends KalturaRequest<KalturaFlavorAsset> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				flavorAsset : { type : 'o'   , fallbackConstructor :  KalturaFlavorAsset, subType : 'KalturaFlavorAsset'}
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				flavorAsset : { type : 'o', subTypeConstructor : KalturaFlavorAsset, subType : 'KalturaFlavorAsset' }
             }
         );
         return result;

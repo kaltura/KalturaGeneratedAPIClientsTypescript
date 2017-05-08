@@ -28,10 +28,10 @@ export class MetadataProfileUpdateTransformationFromFileAction extends KalturaUp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'updateTransformationFromFile'  },
-				id : { type : 'n'   },
-				xsltFile : { type : 'f'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'updateTransformationFromFile' },
+				id : { type : 'n' },
+				xsltFile : { type : 'f' }
             }
         );
         return result;

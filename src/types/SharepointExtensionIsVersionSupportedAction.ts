@@ -31,11 +31,11 @@ export class SharepointExtensionIsVersionSupportedAction extends KalturaRequest<
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'kalturasharepointextension_sharepointextension'  },
-				action : { type : 'c' , default : 'isVersionSupported'  },
-				serverMajor : { type : 'n'   },
-				serverMinor : { type : 'n'   },
-				serverBuild : { type : 'n'   }
+                service : { type : 'c', default : 'kalturasharepointextension_sharepointextension' },
+				action : { type : 'c', default : 'isVersionSupported' },
+				serverMajor : { type : 'n' },
+				serverMinor : { type : 'n' },
+				serverBuild : { type : 'n' }
             }
         );
         return result;

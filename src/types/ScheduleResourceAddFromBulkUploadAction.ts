@@ -29,10 +29,10 @@ export class ScheduleResourceAddFromBulkUploadAction extends KalturaUploadReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleresource'  },
-				action : { type : 'c' , default : 'addFromBulkUpload'  },
-				fileData : { type : 'f'   },
-				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadCsvJobData, subType : 'KalturaBulkUploadCsvJobData'}
+                service : { type : 'c', default : 'schedule_scheduleresource' },
+				action : { type : 'c', default : 'addFromBulkUpload' },
+				fileData : { type : 'f' },
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadCsvJobData, subType : 'KalturaBulkUploadCsvJobData' }
             }
         );
         return result;

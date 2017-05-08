@@ -29,10 +29,10 @@ export class FileAssetSetContentAction extends KalturaRequest<KalturaFileAsset> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset'  },
-				action : { type : 'c' , default : 'setContent'  },
-				id : { type : 's'   },
-				contentResource : { type : 'o'   , fallbackConstructor :  KalturaContentResource, subType : 'KalturaContentResource'}
+                service : { type : 'c', default : 'fileasset' },
+				action : { type : 'c', default : 'setContent' },
+				id : { type : 's' },
+				contentResource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' }
             }
         );
         return result;

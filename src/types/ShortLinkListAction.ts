@@ -30,10 +30,10 @@ export class ShortLinkListAction extends KalturaRequest<KalturaShortLinkListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'shortlink_shortlink'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaShortLinkFilter, subType : 'KalturaShortLinkFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'shortlink_shortlink' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaShortLinkFilter, subType : 'KalturaShortLinkFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

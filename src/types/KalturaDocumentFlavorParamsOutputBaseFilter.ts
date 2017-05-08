@@ -23,7 +23,7 @@ export class KalturaDocumentFlavorParamsOutputBaseFilter extends KalturaFlavorPa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDocumentFlavorParamsOutputBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaDocumentFlavorParamsOutputBaseFilter' }
             }
         );
         return result;

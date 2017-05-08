@@ -23,7 +23,7 @@ export class KalturaUrlTokenizerLimeLight extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerLimeLight'  }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizerLimeLight' }
             }
         );
         return result;

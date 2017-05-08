@@ -23,7 +23,7 @@ export class KalturaLiveStreamAdminEntry extends KalturaLiveStreamEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamAdminEntry'  }
+                objectType : { type : 'c', default : 'KalturaLiveStreamAdminEntry' }
             }
         );
         return result;

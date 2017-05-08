@@ -26,9 +26,9 @@ export class CategoryEntryAddAction extends KalturaRequest<KalturaCategoryEntry>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry'  },
-				action : { type : 'c' , default : 'add'  },
-				categoryEntry : { type : 'o'   , fallbackConstructor :  KalturaCategoryEntry, subType : 'KalturaCategoryEntry'}
+                service : { type : 'c', default : 'categoryentry' },
+				action : { type : 'c', default : 'add' },
+				categoryEntry : { type : 'o', subTypeConstructor : KalturaCategoryEntry, subType : 'KalturaCategoryEntry' }
             }
         );
         return result;

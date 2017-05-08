@@ -28,10 +28,10 @@ export class MetadataIndexAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'index'  },
-				id : { type : 's'   },
-				shouldUpdate : { type : 'b'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'index' },
+				id : { type : 's' },
+				shouldUpdate : { type : 'b' }
             }
         );
         return result;

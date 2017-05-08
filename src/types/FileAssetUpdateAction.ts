@@ -28,10 +28,10 @@ export class FileAssetUpdateAction extends KalturaRequest<KalturaFileAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				fileAsset : { type : 'o'   , fallbackConstructor :  KalturaFileAsset, subType : 'KalturaFileAsset'}
+                service : { type : 'c', default : 'fileasset' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				fileAsset : { type : 'o', subTypeConstructor : KalturaFileAsset, subType : 'KalturaFileAsset' }
             }
         );
         return result;

@@ -28,10 +28,10 @@ export class KalturaApiParameterPermissionItem extends KalturaPermissionItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaApiParameterPermissionItem'  },
-				object : { type : 's'   },
-				parameter : { type : 's'   },
-				action : { type : 'es'   , subType : 'KalturaApiParameterPermissionItemAction'}
+                objectType : { type : 'c', default : 'KalturaApiParameterPermissionItem' },
+				object : { type : 's' },
+				parameter : { type : 's' },
+				action : { type : 'es', subTypeConstructor : KalturaApiParameterPermissionItemAction, subType : 'KalturaApiParameterPermissionItemAction' }
             }
         );
         return result;

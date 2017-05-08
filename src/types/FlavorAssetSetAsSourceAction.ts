@@ -26,9 +26,9 @@ export class FlavorAssetSetAsSourceAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset'  },
-				action : { type : 'c' , default : 'setAsSource'  },
-				assetId : { type : 's'   }
+                service : { type : 'c', default : 'flavorasset' },
+				action : { type : 'c', default : 'setAsSource' },
+				assetId : { type : 's' }
             }
         );
         return result;

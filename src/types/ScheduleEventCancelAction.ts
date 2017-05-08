@@ -26,9 +26,9 @@ export class ScheduleEventCancelAction extends KalturaRequest<KalturaScheduleEve
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent'  },
-				action : { type : 'c' , default : 'cancel'  },
-				scheduleEventId : { type : 'n'   }
+                service : { type : 'c', default : 'schedule_scheduleevent' },
+				action : { type : 'c', default : 'cancel' },
+				scheduleEventId : { type : 'n' }
             }
         );
         return result;

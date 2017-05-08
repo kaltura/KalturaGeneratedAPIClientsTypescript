@@ -23,7 +23,7 @@ export class KalturaTimeWarnerDistributionProviderBaseFilter extends KalturaDist
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProviderBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaTimeWarnerDistributionProviderBaseFilter' }
             }
         );
         return result;

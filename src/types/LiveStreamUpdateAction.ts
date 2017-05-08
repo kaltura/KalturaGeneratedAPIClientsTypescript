@@ -28,10 +28,10 @@ export class LiveStreamUpdateAction extends KalturaRequest<KalturaLiveStreamEntr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream'  },
-				action : { type : 'c' , default : 'update'  },
-				entryId : { type : 's'   },
-				liveStreamEntry : { type : 'o'   , fallbackConstructor :  KalturaLiveStreamEntry, subType : 'KalturaLiveStreamEntry'}
+                service : { type : 'c', default : 'livestream' },
+				action : { type : 'c', default : 'update' },
+				entryId : { type : 's' },
+				liveStreamEntry : { type : 'o', subTypeConstructor : KalturaLiveStreamEntry, subType : 'KalturaLiveStreamEntry' }
             }
         );
         return result;

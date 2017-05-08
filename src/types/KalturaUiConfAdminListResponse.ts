@@ -25,8 +25,8 @@ export class KalturaUiConfAdminListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUiConfAdminListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaUiConfAdmin, subType : 'KalturaUiConfAdmin'}
+                objectType : { type : 'c', default : 'KalturaUiConfAdminListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaUiConfAdmin, subType : 'KalturaUiConfAdmin' }
             }
         );
         return result;

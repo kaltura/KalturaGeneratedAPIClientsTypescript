@@ -23,8 +23,8 @@ export class KalturaKontikiStorageProfile extends KalturaStorageProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaKontikiStorageProfile'  },
-				serviceToken : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaKontikiStorageProfile' },
+				serviceToken : { type : 's' }
             }
         );
         return result;

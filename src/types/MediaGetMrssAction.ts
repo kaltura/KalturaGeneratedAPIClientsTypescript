@@ -32,11 +32,11 @@ export class MediaGetMrssAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'getMrss'  },
-				entryId : { type : 's'   },
-				extendingItemsArray : { type : 'a'   , fallbackConstructor :  KalturaExtendingItemMrssParameter, subType : 'KalturaExtendingItemMrssParameter'},
-				features : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'getMrss' },
+				entryId : { type : 's' },
+				extendingItemsArray : { type : 'a', subTypeConstructor : KalturaExtendingItemMrssParameter, subType : 'KalturaExtendingItemMrssParameter' },
+				features : { type : 's' }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class MixingGetAction extends KalturaRequest<KalturaMixEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing'  },
-				action : { type : 'c' , default : 'get'  },
-				entryId : { type : 's'   },
-				version : { type : 'n'   }
+                service : { type : 'c', default : 'mixing' },
+				action : { type : 'c', default : 'get' },
+				entryId : { type : 's' },
+				version : { type : 'n' }
             }
         );
         return result;

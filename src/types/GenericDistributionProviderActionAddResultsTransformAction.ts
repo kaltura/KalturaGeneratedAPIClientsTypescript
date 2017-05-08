@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddResultsTransformAction extends 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'addResultsTransform'  },
-				id : { type : 'n'   },
-				transformData : { type : 's'   }
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'addResultsTransform' },
+				id : { type : 'n' },
+				transformData : { type : 's' }
             }
         );
         return result;

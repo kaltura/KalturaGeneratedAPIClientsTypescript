@@ -28,10 +28,10 @@ export class LiveChannelUpdateAction extends KalturaRequest<KalturaLiveChannel> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 's'   },
-				liveChannel : { type : 'o'   , fallbackConstructor :  KalturaLiveChannel, subType : 'KalturaLiveChannel'}
+                service : { type : 'c', default : 'livechannel' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 's' },
+				liveChannel : { type : 'o', subTypeConstructor : KalturaLiveChannel, subType : 'KalturaLiveChannel' }
             }
         );
         return result;

@@ -51,21 +51,21 @@ export class KalturaVirusScanProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVirusScanProfileBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				partnerIdEqual : { type : 'n'   },
-				partnerIdIn : { type : 's'   },
-				nameEqual : { type : 's'   },
-				nameLike : { type : 's'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaVirusScanProfileStatus'},
-				statusIn : { type : 's'   },
-				engineTypeEqual : { type : 'es'   , subType : 'KalturaVirusScanEngineType'},
-				engineTypeIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaVirusScanProfileBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				partnerIdEqual : { type : 'n' },
+				partnerIdIn : { type : 's' },
+				nameEqual : { type : 's' },
+				nameLike : { type : 's' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaVirusScanProfileStatus, subType : 'KalturaVirusScanProfileStatus' },
+				statusIn : { type : 's' },
+				engineTypeEqual : { type : 'es', subTypeConstructor : KalturaVirusScanEngineType, subType : 'KalturaVirusScanEngineType' },
+				engineTypeIn : { type : 's' }
             }
         );
         return result;

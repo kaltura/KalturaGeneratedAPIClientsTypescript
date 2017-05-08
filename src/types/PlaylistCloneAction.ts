@@ -28,10 +28,10 @@ export class PlaylistCloneAction extends KalturaRequest<KalturaPlaylist> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist'  },
-				action : { type : 'c' , default : 'clone'  },
-				id : { type : 's'   },
-				newPlaylist : { type : 'o'   , fallbackConstructor :  KalturaPlaylist, subType : 'KalturaPlaylist'}
+                service : { type : 'c', default : 'playlist' },
+				action : { type : 'c', default : 'clone' },
+				id : { type : 's' },
+				newPlaylist : { type : 'o', subTypeConstructor : KalturaPlaylist, subType : 'KalturaPlaylist' }
             }
         );
         return result;

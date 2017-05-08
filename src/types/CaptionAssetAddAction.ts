@@ -28,10 +28,10 @@ export class CaptionAssetAddAction extends KalturaRequest<KalturaCaptionAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset'  },
-				action : { type : 'c' , default : 'add'  },
-				entryId : { type : 's'   },
-				captionAsset : { type : 'o'   , fallbackConstructor :  KalturaCaptionAsset, subType : 'KalturaCaptionAsset'}
+                service : { type : 'c', default : 'caption_captionasset' },
+				action : { type : 'c', default : 'add' },
+				entryId : { type : 's' },
+				captionAsset : { type : 'o', subTypeConstructor : KalturaCaptionAsset, subType : 'KalturaCaptionAsset' }
             }
         );
         return result;

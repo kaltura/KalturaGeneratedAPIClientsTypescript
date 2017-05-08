@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileGenericRtmpBaseFilter extends KalturaDelivery
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericRtmpBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileGenericRtmpBaseFilter' }
             }
         );
         return result;

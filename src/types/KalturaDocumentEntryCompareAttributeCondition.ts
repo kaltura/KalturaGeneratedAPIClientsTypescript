@@ -27,8 +27,8 @@ export class KalturaDocumentEntryCompareAttributeCondition extends KalturaSearch
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDocumentEntryCompareAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaDocumentEntryCompareAttribute'}
+                objectType : { type : 'c', default : 'KalturaDocumentEntryCompareAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaDocumentEntryCompareAttribute, subType : 'KalturaDocumentEntryCompareAttribute' }
             }
         );
         return result;

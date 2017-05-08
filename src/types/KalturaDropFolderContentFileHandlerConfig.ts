@@ -26,9 +26,9 @@ export class KalturaDropFolderContentFileHandlerConfig extends KalturaDropFolder
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderContentFileHandlerConfig'  },
-				contentMatchPolicy : { type : 'en'   , subType : 'KalturaDropFolderContentFileHandlerMatchPolicy'},
-				slugRegex : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDropFolderContentFileHandlerConfig' },
+				contentMatchPolicy : { type : 'en', subTypeConstructor : KalturaDropFolderContentFileHandlerMatchPolicy, subType : 'KalturaDropFolderContentFileHandlerMatchPolicy' },
+				slugRegex : { type : 's' }
             }
         );
         return result;

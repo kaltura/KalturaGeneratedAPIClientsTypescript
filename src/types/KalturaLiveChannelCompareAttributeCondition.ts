@@ -27,8 +27,8 @@ export class KalturaLiveChannelCompareAttributeCondition extends KalturaSearchCo
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannelCompareAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaLiveChannelCompareAttribute'}
+                objectType : { type : 'c', default : 'KalturaLiveChannelCompareAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaLiveChannelCompareAttribute, subType : 'KalturaLiveChannelCompareAttribute' }
             }
         );
         return result;

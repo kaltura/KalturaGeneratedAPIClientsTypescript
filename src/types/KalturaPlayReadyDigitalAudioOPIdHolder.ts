@@ -24,8 +24,8 @@ export class KalturaPlayReadyDigitalAudioOPIdHolder extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyDigitalAudioOPIdHolder'  },
-				type : { type : 'es'   , subType : 'KalturaPlayReadyDigitalAudioOPId'}
+                objectType : { type : 'c', default : 'KalturaPlayReadyDigitalAudioOPIdHolder' },
+				type : { type : 'es', subTypeConstructor : KalturaPlayReadyDigitalAudioOPId, subType : 'KalturaPlayReadyDigitalAudioOPId' }
             }
         );
         return result;

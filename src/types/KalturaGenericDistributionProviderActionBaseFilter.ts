@@ -42,17 +42,17 @@ export class KalturaGenericDistributionProviderActionBaseFilter extends KalturaF
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderActionBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				genericDistributionProviderIdEqual : { type : 'n'   },
-				genericDistributionProviderIdIn : { type : 's'   },
-				actionEqual : { type : 'en'   , subType : 'KalturaDistributionAction'},
-				actionIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaGenericDistributionProviderActionBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				genericDistributionProviderIdEqual : { type : 'n' },
+				genericDistributionProviderIdIn : { type : 's' },
+				actionEqual : { type : 'en', subTypeConstructor : KalturaDistributionAction, subType : 'KalturaDistributionAction' },
+				actionIn : { type : 's' }
             }
         );
         return result;

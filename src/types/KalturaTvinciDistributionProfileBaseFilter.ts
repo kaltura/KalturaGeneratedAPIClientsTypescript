@@ -23,7 +23,7 @@ export class KalturaTvinciDistributionProfileBaseFilter extends KalturaConfigura
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTvinciDistributionProfileBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaTvinciDistributionProfileBaseFilter' }
             }
         );
         return result;

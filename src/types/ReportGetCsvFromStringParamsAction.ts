@@ -29,10 +29,10 @@ export class ReportGetCsvFromStringParamsAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report'  },
-				action : { type : 'c' , default : 'getCsvFromStringParams'  },
-				id : { type : 'n'   },
-				params : { type : 's'   }
+                service : { type : 'c', default : 'report' },
+				action : { type : 'c', default : 'getCsvFromStringParams' },
+				id : { type : 'n' },
+				params : { type : 's' }
             }
         );
         return result;

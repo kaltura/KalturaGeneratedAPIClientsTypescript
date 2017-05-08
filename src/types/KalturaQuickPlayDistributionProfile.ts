@@ -55,24 +55,24 @@ export class KalturaQuickPlayDistributionProfile extends KalturaConfigurableDist
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionProfile'  },
-				sftpHost : { type : 's'   },
-				sftpLogin : { type : 's'   },
-				sftpPass : { type : 's'   },
-				sftpBasePath : { type : 's'   },
-				channelTitle : { type : 's'   },
-				channelLink : { type : 's'   },
-				channelDescription : { type : 's'   },
-				channelManagingEditor : { type : 's'   },
-				channelLanguage : { type : 's'   },
-				channelImageTitle : { type : 's'   },
-				channelImageWidth : { type : 's'   },
-				channelImageHeight : { type : 's'   },
-				channelImageLink : { type : 's'   },
-				channelImageUrl : { type : 's'   },
-				channelCopyright : { type : 's'   },
-				channelGenerator : { type : 's'   },
-				channelRating : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaQuickPlayDistributionProfile' },
+				sftpHost : { type : 's' },
+				sftpLogin : { type : 's' },
+				sftpPass : { type : 's' },
+				sftpBasePath : { type : 's' },
+				channelTitle : { type : 's' },
+				channelLink : { type : 's' },
+				channelDescription : { type : 's' },
+				channelManagingEditor : { type : 's' },
+				channelLanguage : { type : 's' },
+				channelImageTitle : { type : 's' },
+				channelImageWidth : { type : 's' },
+				channelImageHeight : { type : 's' },
+				channelImageLink : { type : 's' },
+				channelImageUrl : { type : 's' },
+				channelCopyright : { type : 's' },
+				channelGenerator : { type : 's' },
+				channelRating : { type : 's' }
             }
         );
         return result;

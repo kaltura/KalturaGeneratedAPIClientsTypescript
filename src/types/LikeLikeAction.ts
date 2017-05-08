@@ -24,9 +24,9 @@ export class LikeLikeAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'like_like'  },
-				action : { type : 'c' , default : 'like'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'like_like' },
+				action : { type : 'c', default : 'like' },
+				entryId : { type : 's' }
             }
         );
         return result;

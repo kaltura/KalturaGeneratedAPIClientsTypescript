@@ -31,10 +31,10 @@ export class SearchSearchUrlAction extends KalturaRequest<KalturaSearchResult> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search'  },
-				action : { type : 'c' , default : 'searchUrl'  },
-				mediaType : { type : 'en'   , subType : 'KalturaMediaType'},
-				url : { type : 's'   }
+                service : { type : 'c', default : 'search' },
+				action : { type : 'c', default : 'searchUrl' },
+				mediaType : { type : 'en', subTypeConstructor : KalturaMediaType, subType : 'KalturaMediaType' },
+				url : { type : 's' }
             }
         );
         return result;

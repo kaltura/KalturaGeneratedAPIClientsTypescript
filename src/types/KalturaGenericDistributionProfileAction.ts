@@ -38,15 +38,15 @@ export class KalturaGenericDistributionProfileAction extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProfileAction'  },
-				protocol : { type : 'en'   , subType : 'KalturaDistributionProtocol'},
-				serverUrl : { type : 's'   },
-				serverPath : { type : 's'   },
-				username : { type : 's'   },
-				password : { type : 's'   },
-				ftpPassiveMode : { type : 'b'   },
-				httpFieldName : { type : 's'   },
-				httpFileName : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaGenericDistributionProfileAction' },
+				protocol : { type : 'en', subTypeConstructor : KalturaDistributionProtocol, subType : 'KalturaDistributionProtocol' },
+				serverUrl : { type : 's' },
+				serverPath : { type : 's' },
+				username : { type : 's' },
+				password : { type : 's' },
+				ftpPassiveMode : { type : 'b' },
+				httpFieldName : { type : 's' },
+				httpFileName : { type : 's' }
             }
         );
         return result;

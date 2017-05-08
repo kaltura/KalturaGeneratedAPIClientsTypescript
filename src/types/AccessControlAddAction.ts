@@ -26,9 +26,9 @@ export class AccessControlAddAction extends KalturaRequest<KalturaAccessControl>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrol'  },
-				action : { type : 'c' , default : 'add'  },
-				accessControl : { type : 'o'   , fallbackConstructor :  KalturaAccessControl, subType : 'KalturaAccessControl'}
+                service : { type : 'c', default : 'accesscontrol' },
+				action : { type : 'c', default : 'add' },
+				accessControl : { type : 'o', subTypeConstructor : KalturaAccessControl, subType : 'KalturaAccessControl' }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaThumbParamsListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbParamsListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'}
+                objectType : { type : 'c', default : 'KalturaThumbParamsListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaThumbParams, subType : 'KalturaThumbParams' }
             }
         );
         return result;

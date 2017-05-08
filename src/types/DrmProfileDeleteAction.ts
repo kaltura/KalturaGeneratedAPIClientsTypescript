@@ -26,9 +26,9 @@ export class DrmProfileDeleteAction extends KalturaRequest<KalturaDrmProfile> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmprofile'  },
-				action : { type : 'c' , default : 'delete'  },
-				drmProfileId : { type : 'n'   }
+                service : { type : 'c', default : 'drm_drmprofile' },
+				action : { type : 'c', default : 'delete' },
+				drmProfileId : { type : 'n' }
             }
         );
         return result;

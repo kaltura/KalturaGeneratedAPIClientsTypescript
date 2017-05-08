@@ -28,10 +28,10 @@ export class AccessControlUpdateAction extends KalturaRequest<KalturaAccessContr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrol'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				accessControl : { type : 'o'   , fallbackConstructor :  KalturaAccessControl, subType : 'KalturaAccessControl'}
+                service : { type : 'c', default : 'accesscontrol' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				accessControl : { type : 'o', subTypeConstructor : KalturaAccessControl, subType : 'KalturaAccessControl' }
             }
         );
         return result;

@@ -27,8 +27,8 @@ export class KalturaMixEntryMatchAttributeCondition extends KalturaSearchMatchAt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMixEntryMatchAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaMixEntryMatchAttribute'}
+                objectType : { type : 'c', default : 'KalturaMixEntryMatchAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaMixEntryMatchAttribute, subType : 'KalturaMixEntryMatchAttribute' }
             }
         );
         return result;

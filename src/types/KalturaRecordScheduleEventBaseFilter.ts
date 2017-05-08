@@ -23,7 +23,7 @@ export class KalturaRecordScheduleEventBaseFilter extends KalturaEntryScheduleEv
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRecordScheduleEventBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaRecordScheduleEventBaseFilter' }
             }
         );
         return result;

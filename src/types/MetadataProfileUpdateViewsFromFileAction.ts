@@ -28,10 +28,10 @@ export class MetadataProfileUpdateViewsFromFileAction extends KalturaUploadReque
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'updateViewsFromFile'  },
-				id : { type : 'n'   },
-				viewsFile : { type : 'f'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'updateViewsFromFile' },
+				id : { type : 'n' },
+				viewsFile : { type : 'f' }
             }
         );
         return result;

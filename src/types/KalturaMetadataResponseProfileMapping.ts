@@ -23,7 +23,7 @@ export class KalturaMetadataResponseProfileMapping extends KalturaResponseProfil
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataResponseProfileMapping'  }
+                objectType : { type : 'c', default : 'KalturaMetadataResponseProfileMapping' }
             }
         );
         return result;

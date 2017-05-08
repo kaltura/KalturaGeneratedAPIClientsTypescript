@@ -27,9 +27,9 @@ export class KalturaPlayReadyCopyRight extends KalturaPlayReadyRight {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyCopyRight'  },
-				copyCount : { type : 'n'   },
-				copyEnablers : { type : 'a'   , fallbackConstructor :  KalturaPlayReadyCopyEnablerHolder, subType : 'KalturaPlayReadyCopyEnablerHolder'}
+                objectType : { type : 'c', default : 'KalturaPlayReadyCopyRight' },
+				copyCount : { type : 'n' },
+				copyEnablers : { type : 'a', subTypeConstructor : KalturaPlayReadyCopyEnablerHolder, subType : 'KalturaPlayReadyCopyEnablerHolder' }
             }
         );
         return result;

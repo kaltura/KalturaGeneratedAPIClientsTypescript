@@ -26,9 +26,9 @@ export class ConversionProfileAddAction extends KalturaRequest<KalturaConversion
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofile'  },
-				action : { type : 'c' , default : 'add'  },
-				conversionProfile : { type : 'o'   , fallbackConstructor :  KalturaConversionProfile, subType : 'KalturaConversionProfile'}
+                service : { type : 'c', default : 'conversionprofile' },
+				action : { type : 'c', default : 'add' },
+				conversionProfile : { type : 'o', subTypeConstructor : KalturaConversionProfile, subType : 'KalturaConversionProfile' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class GroupUserAddAction extends KalturaRequest<KalturaGroupUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'groupuser'  },
-				action : { type : 'c' , default : 'add'  },
-				groupUser : { type : 'o'   , fallbackConstructor :  KalturaGroupUser, subType : 'KalturaGroupUser'}
+                service : { type : 'c', default : 'groupuser' },
+				action : { type : 'c', default : 'add' },
+				groupUser : { type : 'o', subTypeConstructor : KalturaGroupUser, subType : 'KalturaGroupUser' }
             }
         );
         return result;

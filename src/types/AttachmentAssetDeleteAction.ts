@@ -24,9 +24,9 @@ export class AttachmentAssetDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset'  },
-				action : { type : 'c' , default : 'delete'  },
-				attachmentAssetId : { type : 's'   }
+                service : { type : 'c', default : 'attachment_attachmentasset' },
+				action : { type : 'c', default : 'delete' },
+				attachmentAssetId : { type : 's' }
             }
         );
         return result;

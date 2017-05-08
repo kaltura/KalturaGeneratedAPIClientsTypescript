@@ -42,17 +42,17 @@ export class KalturaUserFilter extends KalturaUserBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserFilter'  },
-				idOrScreenNameStartsWith : { type : 's'   },
-				idEqual : { type : 's'   },
-				idIn : { type : 's'   },
-				loginEnabledEqual : { type : 'en'   , subType : 'KalturaNullableBoolean'},
-				roleIdEqual : { type : 's'   },
-				roleIdsEqual : { type : 's'   },
-				roleIdsIn : { type : 's'   },
-				firstNameOrLastNameStartsWith : { type : 's'   },
-				permissionNamesMultiLikeOr : { type : 's'   },
-				permissionNamesMultiLikeAnd : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUserFilter' },
+				idOrScreenNameStartsWith : { type : 's' },
+				idEqual : { type : 's' },
+				idIn : { type : 's' },
+				loginEnabledEqual : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				roleIdEqual : { type : 's' },
+				roleIdsEqual : { type : 's' },
+				roleIdsIn : { type : 's' },
+				firstNameOrLastNameStartsWith : { type : 's' },
+				permissionNamesMultiLikeOr : { type : 's' },
+				permissionNamesMultiLikeAnd : { type : 's' }
             }
         );
         return result;

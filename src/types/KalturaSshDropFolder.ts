@@ -35,14 +35,14 @@ export class KalturaSshDropFolder extends KalturaRemoteDropFolder {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSshDropFolder'  },
-				host : { type : 's'   },
-				port : { type : 'n'   },
-				username : { type : 's'   },
-				password : { type : 's'   },
-				privateKey : { type : 's'   },
-				publicKey : { type : 's'   },
-				passPhrase : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaSshDropFolder' },
+				host : { type : 's' },
+				port : { type : 'n' },
+				username : { type : 's' },
+				password : { type : 's' },
+				privateKey : { type : 's' },
+				publicKey : { type : 's' },
+				passPhrase : { type : 's' }
             }
         );
         return result;

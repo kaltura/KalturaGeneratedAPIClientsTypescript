@@ -25,8 +25,8 @@ export class KalturaTranscriptAssetListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTranscriptAssetListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaTranscriptAsset, subType : 'KalturaTranscriptAsset'}
+                objectType : { type : 'c', default : 'KalturaTranscriptAssetListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaTranscriptAsset, subType : 'KalturaTranscriptAsset' }
             }
         );
         return result;

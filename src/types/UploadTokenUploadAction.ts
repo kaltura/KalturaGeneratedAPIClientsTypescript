@@ -48,13 +48,13 @@ export class UploadTokenUploadAction extends KalturaUploadRequest<KalturaUploadT
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uploadtoken'  },
-				action : { type : 'c' , default : 'upload'  },
-				uploadTokenId : { type : 's'   },
-				fileData : { type : 'f'   },
-				resume : { type : 'b'   },
-				finalChunk : { type : 'b'   },
-				resumeAt : { type : 'n'   }
+                service : { type : 'c', default : 'uploadtoken' },
+				action : { type : 'c', default : 'upload' },
+				uploadTokenId : { type : 's' },
+				fileData : { type : 'f' },
+				resume : { type : 'b' },
+				finalChunk : { type : 'b' },
+				resumeAt : { type : 'n' }
             }
         );
         return result;

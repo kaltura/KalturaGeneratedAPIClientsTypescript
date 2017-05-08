@@ -26,9 +26,9 @@ export class EntryDistributionRetrySubmitAction extends KalturaRequest<KalturaEn
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'retrySubmit'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'retrySubmit' },
+				id : { type : 'n' }
             }
         );
         return result;

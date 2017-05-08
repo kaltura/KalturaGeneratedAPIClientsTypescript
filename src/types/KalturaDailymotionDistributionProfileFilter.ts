@@ -23,7 +23,7 @@ export class KalturaDailymotionDistributionProfileFilter extends KalturaDailymot
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaDailymotionDistributionProfileFilter' }
             }
         );
         return result;

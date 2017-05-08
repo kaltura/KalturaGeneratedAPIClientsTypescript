@@ -26,9 +26,9 @@ export class DeliveryProfileCloneAction extends KalturaRequest<KalturaDeliveryPr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile'  },
-				action : { type : 'c' , default : 'clone'  },
-				deliveryId : { type : 'n'   }
+                service : { type : 'c', default : 'deliveryprofile' },
+				action : { type : 'c', default : 'clone' },
+				deliveryId : { type : 'n' }
             }
         );
         return result;

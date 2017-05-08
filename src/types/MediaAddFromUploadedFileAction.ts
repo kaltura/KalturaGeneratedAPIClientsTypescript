@@ -29,10 +29,10 @@ export class MediaAddFromUploadedFileAction extends KalturaRequest<KalturaMediaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'addFromUploadedFile'  },
-				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
-				uploadTokenId : { type : 's'   }
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'addFromUploadedFile' },
+				mediaEntry : { type : 'o', subTypeConstructor : KalturaMediaEntry, subType : 'KalturaMediaEntry' },
+				uploadTokenId : { type : 's' }
             }
         );
         return result;

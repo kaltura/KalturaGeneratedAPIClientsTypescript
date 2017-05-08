@@ -26,9 +26,9 @@ export class KalturaEmailNotificationRecipient extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationRecipient'  },
-				email : { type : 'o'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'},
-				name : { type : 'o'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'}
+                objectType : { type : 'c', default : 'KalturaEmailNotificationRecipient' },
+				email : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				name : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
             }
         );
         return result;

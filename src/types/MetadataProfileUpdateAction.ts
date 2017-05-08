@@ -32,12 +32,12 @@ export class MetadataProfileUpdateAction extends KalturaRequest<KalturaMetadataP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				metadataProfile : { type : 'o'   , fallbackConstructor :  KalturaMetadataProfile, subType : 'KalturaMetadataProfile'},
-				xsdData : { type : 's'   },
-				viewsData : { type : 's'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				metadataProfile : { type : 'o', subTypeConstructor : KalturaMetadataProfile, subType : 'KalturaMetadataProfile' },
+				xsdData : { type : 's' },
+				viewsData : { type : 's' }
             }
         );
         return result;

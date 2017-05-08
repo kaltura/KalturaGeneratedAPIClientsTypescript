@@ -27,8 +27,8 @@ export class KalturaPlayableEntryCompareAttributeCondition extends KalturaSearch
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayableEntryCompareAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaPlayableEntryCompareAttribute'}
+                objectType : { type : 'c', default : 'KalturaPlayableEntryCompareAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaPlayableEntryCompareAttribute, subType : 'KalturaPlayableEntryCompareAttribute' }
             }
         );
         return result;

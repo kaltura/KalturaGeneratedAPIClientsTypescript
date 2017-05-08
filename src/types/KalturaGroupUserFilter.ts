@@ -23,7 +23,7 @@ export class KalturaGroupUserFilter extends KalturaGroupUserBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGroupUserFilter'  }
+                objectType : { type : 'c', default : 'KalturaGroupUserFilter' }
             }
         );
         return result;

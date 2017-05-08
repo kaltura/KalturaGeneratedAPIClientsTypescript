@@ -29,10 +29,10 @@ export class GenericDistributionProviderActionDeleteByProviderIdAction extends K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'deleteByProviderId'  },
-				genericDistributionProviderId : { type : 'n'   },
-				actionType : { type : 'en'   , subType : 'KalturaDistributionAction'}
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'deleteByProviderId' },
+				genericDistributionProviderId : { type : 'n' },
+				actionType : { type : 'en', subTypeConstructor : KalturaDistributionAction, subType : 'KalturaDistributionAction' }
             }
         );
         return result;

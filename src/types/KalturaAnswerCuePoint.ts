@@ -33,13 +33,13 @@ export class KalturaAnswerCuePoint extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnswerCuePoint'  },
-				parentId : { type : 's'   },
-				quizUserEntryId : { type : 's'   },
-				answerKey : { type : 's'   },
-				isCorrect : { type : 'en'  , readOnly : true , subType : 'KalturaNullableBoolean'},
-				correctAnswerKeys : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
-				explanation : { type : 's'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaAnswerCuePoint' },
+				parentId : { type : 's' },
+				quizUserEntryId : { type : 's' },
+				answerKey : { type : 's' },
+				isCorrect : { type : 'en', readOnly : true, subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				correctAnswerKeys : { type : 'a', readOnly : true, subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				explanation : { type : 's', readOnly : true }
             }
         );
         return result;

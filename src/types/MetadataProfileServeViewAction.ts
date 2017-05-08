@@ -26,9 +26,9 @@ export class MetadataProfileServeViewAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile'  },
-				action : { type : 'c' , default : 'serveView'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'metadata_metadataprofile' },
+				action : { type : 'c', default : 'serveView' },
+				id : { type : 'n' }
             }
         );
         return result;

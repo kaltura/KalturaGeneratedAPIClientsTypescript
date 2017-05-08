@@ -27,9 +27,9 @@ export class KalturaFreewheelDistributionJobProviderData extends KalturaDistribu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelDistributionJobProviderData'  },
-				videoAssetFilePaths : { type : 'a'   , fallbackConstructor :  KalturaFreewheelDistributionAssetPath, subType : 'KalturaFreewheelDistributionAssetPath'},
-				thumbAssetFilePath : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFreewheelDistributionJobProviderData' },
+				videoAssetFilePaths : { type : 'a', subTypeConstructor : KalturaFreewheelDistributionAssetPath, subType : 'KalturaFreewheelDistributionAssetPath' },
+				thumbAssetFilePath : { type : 's' }
             }
         );
         return result;

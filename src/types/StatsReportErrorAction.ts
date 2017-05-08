@@ -28,10 +28,10 @@ export class StatsReportErrorAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats'  },
-				action : { type : 'c' , default : 'reportError'  },
-				errorCode : { type : 's'   },
-				errorMessage : { type : 's'   }
+                service : { type : 'c', default : 'stats' },
+				action : { type : 'c', default : 'reportError' },
+				errorCode : { type : 's' },
+				errorMessage : { type : 's' }
             }
         );
         return result;

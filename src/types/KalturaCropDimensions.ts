@@ -29,11 +29,11 @@ export class KalturaCropDimensions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCropDimensions'  },
-				left : { type : 'n'   },
-				top : { type : 'n'   },
-				width : { type : 'n'   },
-				height : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaCropDimensions' },
+				left : { type : 'n' },
+				top : { type : 'n' },
+				width : { type : 'n' },
+				height : { type : 'n' }
             }
         );
         return result;

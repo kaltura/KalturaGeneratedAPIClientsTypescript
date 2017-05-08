@@ -41,17 +41,17 @@ export class KalturaStorageJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageJobData'  },
-				serverUrl : { type : 's'   },
-				serverUsername : { type : 's'   },
-				serverPassword : { type : 's'   },
-				serverPrivateKey : { type : 's'   },
-				serverPublicKey : { type : 's'   },
-				serverPassPhrase : { type : 's'   },
-				ftpPassiveMode : { type : 'b'   },
-				srcFileSyncLocalPath : { type : 's'   },
-				srcFileSyncId : { type : 's'   },
-				destFileSyncStoredPath : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaStorageJobData' },
+				serverUrl : { type : 's' },
+				serverUsername : { type : 's' },
+				serverPassword : { type : 's' },
+				serverPrivateKey : { type : 's' },
+				serverPublicKey : { type : 's' },
+				serverPassPhrase : { type : 's' },
+				ftpPassiveMode : { type : 'b' },
+				srcFileSyncLocalPath : { type : 's' },
+				srcFileSyncId : { type : 's' },
+				destFileSyncStoredPath : { type : 's' }
             }
         );
         return result;

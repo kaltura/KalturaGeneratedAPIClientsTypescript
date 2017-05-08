@@ -26,9 +26,9 @@ export class EntryDistributionAddAction extends KalturaRequest<KalturaEntryDistr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
-				action : { type : 'c' , default : 'add'  },
-				entryDistribution : { type : 'o'   , fallbackConstructor :  KalturaEntryDistribution, subType : 'KalturaEntryDistribution'}
+                service : { type : 'c', default : 'contentdistribution_entrydistribution' },
+				action : { type : 'c', default : 'add' },
+				entryDistribution : { type : 'o', subTypeConstructor : KalturaEntryDistribution, subType : 'KalturaEntryDistribution' }
             }
         );
         return result;

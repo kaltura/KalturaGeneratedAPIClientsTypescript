@@ -28,8 +28,8 @@ export class KalturaLiveStreamAdminEntryCompareAttributeCondition extends Kaltur
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamAdminEntryCompareAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaLiveStreamAdminEntryCompareAttribute'}
+                objectType : { type : 'c', default : 'KalturaLiveStreamAdminEntryCompareAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaLiveStreamAdminEntryCompareAttribute, subType : 'KalturaLiveStreamAdminEntryCompareAttribute' }
             }
         );
         return result;

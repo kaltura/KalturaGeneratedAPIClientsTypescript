@@ -25,9 +25,9 @@ export class KalturaUrlTokenizerCloudFront extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerCloudFront'  },
-				keyPairId : { type : 's'   },
-				rootDir : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaUrlTokenizerCloudFront' },
+				keyPairId : { type : 's' },
+				rootDir : { type : 's' }
             }
         );
         return result;

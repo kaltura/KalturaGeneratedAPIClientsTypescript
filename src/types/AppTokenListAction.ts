@@ -30,10 +30,10 @@ export class AppTokenListAction extends KalturaRequest<KalturaAppTokenListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'apptoken'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaAppTokenFilter, subType : 'KalturaAppTokenFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'apptoken' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaAppTokenFilter, subType : 'KalturaAppTokenFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

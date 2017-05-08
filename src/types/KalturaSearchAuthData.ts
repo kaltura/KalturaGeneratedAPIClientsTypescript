@@ -27,10 +27,10 @@ export class KalturaSearchAuthData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchAuthData'  },
-				authData : { type : 's'   },
-				loginUrl : { type : 's'   },
-				message : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaSearchAuthData' },
+				authData : { type : 's' },
+				loginUrl : { type : 's' },
+				message : { type : 's' }
             }
         );
         return result;

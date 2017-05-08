@@ -28,9 +28,9 @@ export class KalturaFilterPager extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFilterPager'  },
-				pageSize : { type : 'n'   },
-				pageIndex : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaFilterPager' },
+				pageSize : { type : 'n' },
+				pageIndex : { type : 'n' }
             }
         );
         return result;

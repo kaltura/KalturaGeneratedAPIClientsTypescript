@@ -28,10 +28,10 @@ export class EntryServerNodeListAction extends KalturaRequest<KalturaEntryServer
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'entryservernode'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaEntryServerNodeFilter, subType : 'KalturaEntryServerNodeFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'entryservernode' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaEntryServerNodeFilter, subType : 'KalturaEntryServerNodeFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

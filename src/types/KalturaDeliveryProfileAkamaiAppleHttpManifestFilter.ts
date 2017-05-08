@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileAkamaiAppleHttpManifestFilter extends Kaltura
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiAppleHttpManifestFilter'  }
+                objectType : { type : 'c', default : 'KalturaDeliveryProfileAkamaiAppleHttpManifestFilter' }
             }
         );
         return result;

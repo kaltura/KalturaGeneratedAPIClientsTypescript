@@ -32,11 +32,11 @@ export class BaseEntryAddFromUploadedFileAction extends KalturaRequest<KalturaBa
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'addFromUploadedFile'  },
-				entry : { type : 'o'   , fallbackConstructor :  KalturaBaseEntry, subType : 'KalturaBaseEntry'},
-				uploadTokenId : { type : 's'   },
-				type : { type : 'es'   , subType : 'KalturaEntryType'}
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'addFromUploadedFile' },
+				entry : { type : 'o', subTypeConstructor : KalturaBaseEntry, subType : 'KalturaBaseEntry' },
+				uploadTokenId : { type : 's' },
+				type : { type : 'es', subTypeConstructor : KalturaEntryType, subType : 'KalturaEntryType' }
             }
         );
         return result;

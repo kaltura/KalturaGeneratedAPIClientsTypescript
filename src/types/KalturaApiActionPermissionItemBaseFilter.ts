@@ -23,7 +23,7 @@ export class KalturaApiActionPermissionItemBaseFilter extends KalturaPermissionI
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaApiActionPermissionItemBaseFilter'  }
+                objectType : { type : 'c', default : 'KalturaApiActionPermissionItemBaseFilter' }
             }
         );
         return result;

@@ -31,11 +31,11 @@ export class KalturaLiveStreamPushPublishRTMPConfiguration extends KalturaLiveSt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamPushPublishRTMPConfiguration'  },
-				userId : { type : 's'   },
-				password : { type : 's'   },
-				streamName : { type : 's'   },
-				applicationName : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaLiveStreamPushPublishRTMPConfiguration' },
+				userId : { type : 's' },
+				password : { type : 's' },
+				streamName : { type : 's' },
+				applicationName : { type : 's' }
             }
         );
         return result;

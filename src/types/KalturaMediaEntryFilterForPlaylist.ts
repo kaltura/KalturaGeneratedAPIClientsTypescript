@@ -23,8 +23,8 @@ export class KalturaMediaEntryFilterForPlaylist extends KalturaMediaEntryFilter 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaEntryFilterForPlaylist'  },
-				limit : { type : 'n'   }
+                objectType : { type : 'c', default : 'KalturaMediaEntryFilterForPlaylist' },
+				limit : { type : 'n' }
             }
         );
         return result;

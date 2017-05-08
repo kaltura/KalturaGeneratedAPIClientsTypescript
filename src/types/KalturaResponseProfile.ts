@@ -30,14 +30,14 @@ export class KalturaResponseProfile extends KalturaDetachedResponseProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfile'  },
-				id : { type : 'n'  , readOnly : true },
-				systemName : { type : 's'   },
-				partnerId : { type : 'n'  , readOnly : true },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaResponseProfileStatus'},
-				version : { type : 'n'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaResponseProfile' },
+				id : { type : 'n', readOnly : true },
+				systemName : { type : 's' },
+				partnerId : { type : 'n', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaResponseProfileStatus, subType : 'KalturaResponseProfileStatus' },
+				version : { type : 'n', readOnly : true }
             }
         );
         return result;

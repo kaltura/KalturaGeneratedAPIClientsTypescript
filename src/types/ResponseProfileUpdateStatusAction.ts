@@ -29,10 +29,10 @@ export class ResponseProfileUpdateStatusAction extends KalturaRequest<KalturaRes
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile'  },
-				action : { type : 'c' , default : 'updateStatus'  },
-				id : { type : 'n'   },
-				status : { type : 'en'   , subType : 'KalturaResponseProfileStatus'}
+                service : { type : 'c', default : 'responseprofile' },
+				action : { type : 'c', default : 'updateStatus' },
+				id : { type : 'n' },
+				status : { type : 'en', subTypeConstructor : KalturaResponseProfileStatus, subType : 'KalturaResponseProfileStatus' }
             }
         );
         return result;

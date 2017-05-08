@@ -26,8 +26,8 @@ export class KalturaConcatAttributes extends KalturaOperationAttributes {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConcatAttributes'  },
-				resource : { type : 'o'   , fallbackConstructor :  KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource'}
+                objectType : { type : 'c', default : 'KalturaConcatAttributes' },
+				resource : { type : 'o', subTypeConstructor : KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource' }
             }
         );
         return result;

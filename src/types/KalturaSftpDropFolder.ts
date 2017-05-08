@@ -23,7 +23,7 @@ export class KalturaSftpDropFolder extends KalturaSshDropFolder {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSftpDropFolder'  }
+                objectType : { type : 'c', default : 'KalturaSftpDropFolder' }
             }
         );
         return result;

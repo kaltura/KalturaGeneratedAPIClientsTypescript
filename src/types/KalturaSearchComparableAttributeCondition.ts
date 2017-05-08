@@ -24,8 +24,8 @@ export class KalturaSearchComparableAttributeCondition extends KalturaAttributeC
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchComparableAttributeCondition'  },
-				comparison : { type : 'es'   , subType : 'KalturaSearchConditionComparison'}
+                objectType : { type : 'c', default : 'KalturaSearchComparableAttributeCondition' },
+				comparison : { type : 'es', subTypeConstructor : KalturaSearchConditionComparison, subType : 'KalturaSearchConditionComparison' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class KalturaGeoTimeLiveStats extends KalturaEntryLiveStats {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGeoTimeLiveStats'  },
-				city : { type : 'o'   , fallbackConstructor :  KalturaCoordinate, subType : 'KalturaCoordinate'},
-				country : { type : 'o'   , fallbackConstructor :  KalturaCoordinate, subType : 'KalturaCoordinate'}
+                objectType : { type : 'c', default : 'KalturaGeoTimeLiveStats' },
+				city : { type : 'o', subTypeConstructor : KalturaCoordinate, subType : 'KalturaCoordinate' },
+				country : { type : 'o', subTypeConstructor : KalturaCoordinate, subType : 'KalturaCoordinate' }
             }
         );
         return result;

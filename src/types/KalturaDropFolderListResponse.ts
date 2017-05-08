@@ -25,8 +25,8 @@ export class KalturaDropFolderListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaDropFolder, subType : 'KalturaDropFolder'}
+                objectType : { type : 'c', default : 'KalturaDropFolderListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaDropFolder, subType : 'KalturaDropFolder' }
             }
         );
         return result;

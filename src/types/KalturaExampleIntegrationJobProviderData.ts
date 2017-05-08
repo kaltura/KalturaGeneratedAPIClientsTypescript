@@ -23,8 +23,8 @@ export class KalturaExampleIntegrationJobProviderData extends KalturaIntegration
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExampleIntegrationJobProviderData'  },
-				exampleUrl : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaExampleIntegrationJobProviderData' },
+				exampleUrl : { type : 's' }
             }
         );
         return result;

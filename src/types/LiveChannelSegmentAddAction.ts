@@ -26,9 +26,9 @@ export class LiveChannelSegmentAddAction extends KalturaRequest<KalturaLiveChann
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannelsegment'  },
-				action : { type : 'c' , default : 'add'  },
-				liveChannelSegment : { type : 'o'   , fallbackConstructor :  KalturaLiveChannelSegment, subType : 'KalturaLiveChannelSegment'}
+                service : { type : 'c', default : 'livechannelsegment' },
+				action : { type : 'c', default : 'add' },
+				liveChannelSegment : { type : 'o', subTypeConstructor : KalturaLiveChannelSegment, subType : 'KalturaLiveChannelSegment' }
             }
         );
         return result;

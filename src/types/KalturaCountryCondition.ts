@@ -24,8 +24,8 @@ export class KalturaCountryCondition extends KalturaMatchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCountryCondition'  },
-				geoCoderType : { type : 'es'   , subType : 'KalturaGeoCoderType'}
+                objectType : { type : 'c', default : 'KalturaCountryCondition' },
+				geoCoderType : { type : 'es', subTypeConstructor : KalturaGeoCoderType, subType : 'KalturaGeoCoderType' }
             }
         );
         return result;

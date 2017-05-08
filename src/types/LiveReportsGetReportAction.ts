@@ -31,11 +31,11 @@ export class LiveReportsGetReportAction extends KalturaRequest<KalturaLiveStatsL
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livereports'  },
-				action : { type : 'c' , default : 'getReport'  },
-				reportType : { type : 'es'   , subType : 'KalturaLiveReportType'},
-				filter : { type : 'o'   , fallbackConstructor :  KalturaLiveReportInputFilter, subType : 'KalturaLiveReportInputFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'livereports' },
+				action : { type : 'c', default : 'getReport' },
+				reportType : { type : 'es', subTypeConstructor : KalturaLiveReportType, subType : 'KalturaLiveReportType' },
+				filter : { type : 'o', subTypeConstructor : KalturaLiveReportInputFilter, subType : 'KalturaLiveReportInputFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -28,9 +28,9 @@ export class LiveStatsCollectAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestats'  },
-				action : { type : 'c' , default : 'collect'  },
-				event : { type : 'o'   , fallbackConstructor :  KalturaLiveStatsEvent, subType : 'KalturaLiveStatsEvent'}
+                service : { type : 'c', default : 'livestats' },
+				action : { type : 'c', default : 'collect' },
+				event : { type : 'o', subTypeConstructor : KalturaLiveStatsEvent, subType : 'KalturaLiveStatsEvent' }
             }
         );
         return result;

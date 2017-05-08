@@ -47,20 +47,20 @@ export class KalturaProvisionJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaProvisionJobData'  },
-				streamID : { type : 's'   },
-				backupStreamID : { type : 's'   },
-				rtmp : { type : 's'   },
-				encoderIP : { type : 's'   },
-				backupEncoderIP : { type : 's'   },
-				encoderPassword : { type : 's'   },
-				encoderUsername : { type : 's'   },
-				endDate : { type : 'n'   },
-				returnVal : { type : 's'   },
-				mediaType : { type : 'n'   },
-				primaryBroadcastingUrl : { type : 's'   },
-				secondaryBroadcastingUrl : { type : 's'   },
-				streamName : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaProvisionJobData' },
+				streamID : { type : 's' },
+				backupStreamID : { type : 's' },
+				rtmp : { type : 's' },
+				encoderIP : { type : 's' },
+				backupEncoderIP : { type : 's' },
+				encoderPassword : { type : 's' },
+				encoderUsername : { type : 's' },
+				endDate : { type : 'n' },
+				returnVal : { type : 's' },
+				mediaType : { type : 'n' },
+				primaryBroadcastingUrl : { type : 's' },
+				secondaryBroadcastingUrl : { type : 's' },
+				streamName : { type : 's' }
             }
         );
         return result;

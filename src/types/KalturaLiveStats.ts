@@ -37,15 +37,15 @@ export class KalturaLiveStats extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStats'  },
-				audience : { type : 'n'   },
-				dvrAudience : { type : 'n'   },
-				avgBitrate : { type : 'n'   },
-				bufferTime : { type : 'n'   },
-				plays : { type : 'n'   },
-				secondsViewed : { type : 'n'   },
-				startEvent : { type : 'n'   },
-				timestamp : { type : 'd'   }
+                objectType : { type : 'c', default : 'KalturaLiveStats' },
+				audience : { type : 'n' },
+				dvrAudience : { type : 'n' },
+				avgBitrate : { type : 'n' },
+				bufferTime : { type : 'n' },
+				plays : { type : 'n' },
+				secondsViewed : { type : 'n' },
+				startEvent : { type : 'n' },
+				timestamp : { type : 'd' }
             }
         );
         return result;

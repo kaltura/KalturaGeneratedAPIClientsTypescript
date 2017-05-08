@@ -32,15 +32,15 @@ export class KalturaEntryServerNode extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryServerNode'  },
-				id : { type : 'n'  , readOnly : true },
-				entryId : { type : 's'  , readOnly : true },
-				serverNodeId : { type : 'n'  , readOnly : true },
-				partnerId : { type : 'n'  , readOnly : true },
-				createdAt : { type : 'd'  , readOnly : true },
-				updatedAt : { type : 'd'  , readOnly : true },
-				status : { type : 'en'  , readOnly : true , subType : 'KalturaEntryServerNodeStatus'},
-				serverType : { type : 'es'  , readOnly : true , subType : 'KalturaEntryServerNodeType'}
+                objectType : { type : 'c', default : 'KalturaEntryServerNode' },
+				id : { type : 'n', readOnly : true },
+				entryId : { type : 's', readOnly : true },
+				serverNodeId : { type : 'n', readOnly : true },
+				partnerId : { type : 'n', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
+				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' },
+				serverType : { type : 'es', readOnly : true, subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' }
             }
         );
         return result;

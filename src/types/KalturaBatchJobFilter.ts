@@ -23,7 +23,7 @@ export class KalturaBatchJobFilter extends KalturaBatchJobBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBatchJobFilter'  }
+                objectType : { type : 'c', default : 'KalturaBatchJobFilter' }
             }
         );
         return result;

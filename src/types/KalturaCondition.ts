@@ -27,10 +27,10 @@ export class KalturaCondition extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCondition'  },
-				type : { type : 'es'  , readOnly : true , subType : 'KalturaConditionType'},
-				description : { type : 's'   },
-				not : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaCondition' },
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaConditionType, subType : 'KalturaConditionType' },
+				description : { type : 's' },
+				not : { type : 'b' }
             }
         );
         return result;

@@ -27,9 +27,9 @@ export class ExternalMediaCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'externalmedia_externalmedia'  },
-				action : { type : 'c' , default : 'count'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaExternalMediaEntryFilter, subType : 'KalturaExternalMediaEntryFilter'}
+                service : { type : 'c', default : 'externalmedia_externalmedia' },
+				action : { type : 'c', default : 'count' },
+				filter : { type : 'o', subTypeConstructor : KalturaExternalMediaEntryFilter, subType : 'KalturaExternalMediaEntryFilter' }
             }
         );
         return result;

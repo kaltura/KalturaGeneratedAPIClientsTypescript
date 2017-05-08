@@ -26,9 +26,9 @@ export class KalturaFeedDropFolder extends KalturaDropFolder {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFeedDropFolder'  },
-				itemHandlingLimit : { type : 'n'   },
-				feedItemInfo : { type : 'o'   , fallbackConstructor :  KalturaFeedItemInfo, subType : 'KalturaFeedItemInfo'}
+                objectType : { type : 'c', default : 'KalturaFeedDropFolder' },
+				itemHandlingLimit : { type : 'n' },
+				feedItemInfo : { type : 'o', subTypeConstructor : KalturaFeedItemInfo, subType : 'KalturaFeedItemInfo' }
             }
         );
         return result;

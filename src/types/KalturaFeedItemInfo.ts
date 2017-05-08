@@ -39,16 +39,16 @@ export class KalturaFeedItemInfo extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFeedItemInfo'  },
-				itemXPath : { type : 's'   },
-				itemPublishDateXPath : { type : 's'   },
-				itemUniqueIdentifierXPath : { type : 's'   },
-				itemContentFileSizeXPath : { type : 's'   },
-				itemContentUrlXPath : { type : 's'   },
-				itemContentBitrateXPath : { type : 's'   },
-				itemHashXPath : { type : 's'   },
-				itemContentXpath : { type : 's'   },
-				contentBitrateAttributeName : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFeedItemInfo' },
+				itemXPath : { type : 's' },
+				itemPublishDateXPath : { type : 's' },
+				itemUniqueIdentifierXPath : { type : 's' },
+				itemContentFileSizeXPath : { type : 's' },
+				itemContentUrlXPath : { type : 's' },
+				itemContentBitrateXPath : { type : 's' },
+				itemHashXPath : { type : 's' },
+				itemContentXpath : { type : 's' },
+				contentBitrateAttributeName : { type : 's' }
             }
         );
         return result;

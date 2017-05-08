@@ -25,9 +25,9 @@ export class KalturaAccessControlLimitFlavorsAction extends KalturaRuleAction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlLimitFlavorsAction'  },
-				flavorParamsIds : { type : 's'   },
-				isBlockedList : { type : 'b'   }
+                objectType : { type : 'c', default : 'KalturaAccessControlLimitFlavorsAction' },
+				flavorParamsIds : { type : 's' },
+				isBlockedList : { type : 'b' }
             }
         );
         return result;

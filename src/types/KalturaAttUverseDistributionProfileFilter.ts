@@ -23,7 +23,7 @@ export class KalturaAttUverseDistributionProfileFilter extends KalturaAttUverseD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaAttUverseDistributionProfileFilter' }
             }
         );
         return result;

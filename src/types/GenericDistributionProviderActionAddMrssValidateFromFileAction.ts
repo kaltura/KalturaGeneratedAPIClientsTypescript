@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddMrssValidateFromFileAction exte
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'addMrssValidateFromFile'  },
-				id : { type : 'n'   },
-				xsdFile : { type : 'f'   }
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'addMrssValidateFromFile' },
+				id : { type : 'n' },
+				xsdFile : { type : 'f' }
             }
         );
         return result;

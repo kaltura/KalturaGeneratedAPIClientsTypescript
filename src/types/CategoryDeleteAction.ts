@@ -30,10 +30,10 @@ export class CategoryDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category'  },
-				action : { type : 'c' , default : 'delete'  },
-				id : { type : 'n'   },
-				moveEntriesToParentCategory : { type : 'en'   , subType : 'KalturaNullableBoolean'}
+                service : { type : 'c', default : 'category' },
+				action : { type : 'c', default : 'delete' },
+				id : { type : 'n' },
+				moveEntriesToParentCategory : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

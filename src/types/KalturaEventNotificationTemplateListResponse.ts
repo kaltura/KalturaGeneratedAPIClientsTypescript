@@ -25,8 +25,8 @@ export class KalturaEventNotificationTemplateListResponse extends KalturaListRes
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationTemplateListResponse'  },
-				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate'}
+                objectType : { type : 'c', default : 'KalturaEventNotificationTemplateListResponse' },
+				objects : { type : 'a', readOnly : true, subTypeConstructor : KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate' }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaTvinciDistributionProfileFilter extends KalturaTvinciDistrib
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTvinciDistributionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaTvinciDistributionProfileFilter' }
             }
         );
         return result;

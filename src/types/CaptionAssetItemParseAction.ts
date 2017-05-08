@@ -26,9 +26,9 @@ export class CaptionAssetItemParseAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'captionsearch_captionassetitem'  },
-				action : { type : 'c' , default : 'parse'  },
-				captionAssetId : { type : 's'   }
+                service : { type : 'c', default : 'captionsearch_captionassetitem' },
+				action : { type : 'c', default : 'parse' },
+				captionAssetId : { type : 's' }
             }
         );
         return result;

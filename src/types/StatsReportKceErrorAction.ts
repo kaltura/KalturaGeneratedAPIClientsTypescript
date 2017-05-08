@@ -24,9 +24,9 @@ export class StatsReportKceErrorAction extends KalturaRequest<KalturaCEError> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats'  },
-				action : { type : 'c' , default : 'reportKceError'  },
-				kalturaCEError : { type : 'o'   , fallbackConstructor :  KalturaCEError, subType : 'KalturaCEError'}
+                service : { type : 'c', default : 'stats' },
+				action : { type : 'c', default : 'reportKceError' },
+				kalturaCEError : { type : 'o', subTypeConstructor : KalturaCEError, subType : 'KalturaCEError' }
             }
         );
         return result;

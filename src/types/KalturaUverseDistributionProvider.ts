@@ -23,7 +23,7 @@ export class KalturaUverseDistributionProvider extends KalturaDistributionProvid
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUverseDistributionProvider'  }
+                objectType : { type : 'c', default : 'KalturaUverseDistributionProvider' }
             }
         );
         return result;

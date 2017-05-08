@@ -27,9 +27,9 @@ export class UserEntrySubmitQuizAction extends KalturaRequest<KalturaQuizUserEnt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userentry'  },
-				action : { type : 'c' , default : 'submitQuiz'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'userentry' },
+				action : { type : 'c', default : 'submitQuiz' },
+				id : { type : 'n' }
             }
         );
         return result;

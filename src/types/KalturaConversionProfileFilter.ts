@@ -23,7 +23,7 @@ export class KalturaConversionProfileFilter extends KalturaConversionProfileBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionProfileFilter'  }
+                objectType : { type : 'c', default : 'KalturaConversionProfileFilter' }
             }
         );
         return result;

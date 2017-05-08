@@ -29,10 +29,10 @@ export class ThumbAssetSetContentAction extends KalturaRequest<KalturaThumbAsset
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset'  },
-				action : { type : 'c' , default : 'setContent'  },
-				id : { type : 's'   },
-				contentResource : { type : 'o'   , fallbackConstructor :  KalturaContentResource, subType : 'KalturaContentResource'}
+                service : { type : 'c', default : 'thumbasset' },
+				action : { type : 'c', default : 'setContent' },
+				id : { type : 's' },
+				contentResource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' }
             }
         );
         return result;

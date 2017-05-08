@@ -23,8 +23,8 @@ export class KalturaFreewheelDistributionAssetPath extends KalturaDistributionJo
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelDistributionAssetPath'  },
-				path : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaFreewheelDistributionAssetPath' },
+				path : { type : 's' }
             }
         );
         return result;

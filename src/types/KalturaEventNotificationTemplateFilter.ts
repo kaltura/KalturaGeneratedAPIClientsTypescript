@@ -23,7 +23,7 @@ export class KalturaEventNotificationTemplateFilter extends KalturaEventNotifica
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationTemplateFilter'  }
+                objectType : { type : 'c', default : 'KalturaEventNotificationTemplateFilter' }
             }
         );
         return result;

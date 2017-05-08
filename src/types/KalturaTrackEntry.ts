@@ -56,24 +56,24 @@ export class KalturaTrackEntry extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTrackEntry'  },
-				id : { type : 'n'   },
-				trackEventType : { type : 'en'   , subType : 'KalturaTrackEntryEventType'},
-				psVersion : { type : 's'   },
-				context : { type : 's'   },
-				partnerId : { type : 'n'   },
-				entryId : { type : 's'   },
-				hostName : { type : 's'   },
-				userId : { type : 's'   },
-				changedProperties : { type : 's'   },
-				paramStr1 : { type : 's'   },
-				paramStr2 : { type : 's'   },
-				paramStr3 : { type : 's'   },
-				ks : { type : 's'   },
-				description : { type : 's'   },
-				createdAt : { type : 'd'   },
-				updatedAt : { type : 'd'   },
-				userIp : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaTrackEntry' },
+				id : { type : 'n' },
+				trackEventType : { type : 'en', subTypeConstructor : KalturaTrackEntryEventType, subType : 'KalturaTrackEntryEventType' },
+				psVersion : { type : 's' },
+				context : { type : 's' },
+				partnerId : { type : 'n' },
+				entryId : { type : 's' },
+				hostName : { type : 's' },
+				userId : { type : 's' },
+				changedProperties : { type : 's' },
+				paramStr1 : { type : 's' },
+				paramStr2 : { type : 's' },
+				paramStr3 : { type : 's' },
+				ks : { type : 's' },
+				description : { type : 's' },
+				createdAt : { type : 'd' },
+				updatedAt : { type : 'd' },
+				userIp : { type : 's' }
             }
         );
         return result;

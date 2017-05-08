@@ -27,9 +27,9 @@ export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload'  },
-				action : { type : 'c' , default : 'list'  },
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'bulkupload' },
+				action : { type : 'c', default : 'list' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

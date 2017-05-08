@@ -33,11 +33,11 @@ export class CaptionAssetItemSearchEntriesAction extends KalturaRequest<KalturaB
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'captionsearch_captionassetitem'  },
-				action : { type : 'c' , default : 'searchEntries'  },
-				entryFilter : { type : 'o'   , fallbackConstructor :  KalturaBaseEntryFilter, subType : 'KalturaBaseEntryFilter'},
-				captionAssetItemFilter : { type : 'o'   , fallbackConstructor :  KalturaCaptionAssetItemFilter, subType : 'KalturaCaptionAssetItemFilter'},
-				captionAssetItemPager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'captionsearch_captionassetitem' },
+				action : { type : 'c', default : 'searchEntries' },
+				entryFilter : { type : 'o', subTypeConstructor : KalturaBaseEntryFilter, subType : 'KalturaBaseEntryFilter' },
+				captionAssetItemFilter : { type : 'o', subTypeConstructor : KalturaCaptionAssetItemFilter, subType : 'KalturaCaptionAssetItemFilter' },
+				captionAssetItemPager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

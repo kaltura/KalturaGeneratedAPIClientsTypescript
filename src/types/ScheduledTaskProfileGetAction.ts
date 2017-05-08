@@ -26,9 +26,9 @@ export class ScheduledTaskProfileGetAction extends KalturaRequest<KalturaSchedul
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
-				action : { type : 'c' , default : 'get'  },
-				id : { type : 'n'   }
+                service : { type : 'c', default : 'scheduledtask_scheduledtaskprofile' },
+				action : { type : 'c', default : 'get' },
+				id : { type : 'n' }
             }
         );
         return result;

@@ -30,10 +30,10 @@ export class BulkListAction extends KalturaRequest<KalturaBulkUploadListResponse
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload_bulk'  },
-				action : { type : 'c' , default : 'list'  },
-				bulkUploadFilter : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadFilter, subType : 'KalturaBulkUploadFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'bulkupload_bulk' },
+				action : { type : 'c', default : 'list' },
+				bulkUploadFilter : { type : 'o', subTypeConstructor : KalturaBulkUploadFilter, subType : 'KalturaBulkUploadFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

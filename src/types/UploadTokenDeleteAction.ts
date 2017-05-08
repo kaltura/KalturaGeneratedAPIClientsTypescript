@@ -26,9 +26,9 @@ export class UploadTokenDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uploadtoken'  },
-				action : { type : 'c' , default : 'delete'  },
-				uploadTokenId : { type : 's'   }
+                service : { type : 'c', default : 'uploadtoken' },
+				action : { type : 'c', default : 'delete' },
+				uploadTokenId : { type : 's' }
             }
         );
         return result;

@@ -26,9 +26,9 @@ export class KalturaDeleteEntryFlavorsObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeleteEntryFlavorsObjectTask'  },
-				deleteType : { type : 'en'   , subType : 'KalturaDeleteFlavorsLogicType'},
-				flavorParamsIds : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDeleteEntryFlavorsObjectTask' },
+				deleteType : { type : 'en', subTypeConstructor : KalturaDeleteFlavorsLogicType, subType : 'KalturaDeleteFlavorsLogicType' },
+				flavorParamsIds : { type : 's' }
             }
         );
         return result;

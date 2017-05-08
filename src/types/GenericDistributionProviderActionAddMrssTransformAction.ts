@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddMrssTransformAction extends Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
-				action : { type : 'c' , default : 'addMrssTransform'  },
-				id : { type : 'n'   },
-				xslData : { type : 's'   }
+                service : { type : 'c', default : 'contentdistribution_genericdistributionprovideraction' },
+				action : { type : 'c', default : 'addMrssTransform' },
+				id : { type : 'n' },
+				xslData : { type : 's' }
             }
         );
         return result;

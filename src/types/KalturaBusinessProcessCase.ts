@@ -31,12 +31,12 @@ export class KalturaBusinessProcessCase extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessCase'  },
-				id : { type : 's'   },
-				businessProcessId : { type : 's'   },
-				businessProcessStartNotificationTemplateId : { type : 'n'   },
-				suspended : { type : 'b'   },
-				activityId : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaBusinessProcessCase' },
+				id : { type : 's' },
+				businessProcessId : { type : 's' },
+				businessProcessStartNotificationTemplateId : { type : 'n' },
+				suspended : { type : 'b' },
+				activityId : { type : 's' }
             }
         );
         return result;

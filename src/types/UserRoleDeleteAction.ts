@@ -26,9 +26,9 @@ export class UserRoleDeleteAction extends KalturaRequest<KalturaUserRole> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole'  },
-				action : { type : 'c' , default : 'delete'  },
-				userRoleId : { type : 'n'   }
+                service : { type : 'c', default : 'userrole' },
+				action : { type : 'c', default : 'delete' },
+				userRoleId : { type : 'n' }
             }
         );
         return result;

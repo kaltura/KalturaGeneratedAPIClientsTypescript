@@ -27,10 +27,10 @@ export class KalturaIndexTagsByPrivacyContextJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIndexTagsByPrivacyContextJobData'  },
-				changedCategoryId : { type : 'n'   },
-				deletedPrivacyContexts : { type : 's'   },
-				addedPrivacyContexts : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaIndexTagsByPrivacyContextJobData' },
+				changedCategoryId : { type : 'n' },
+				deletedPrivacyContexts : { type : 's' },
+				addedPrivacyContexts : { type : 's' }
             }
         );
         return result;

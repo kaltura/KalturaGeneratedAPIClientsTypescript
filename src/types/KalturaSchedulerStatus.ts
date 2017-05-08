@@ -36,15 +36,15 @@ export class KalturaSchedulerStatus extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSchedulerStatus'  },
-				id : { type : 'n'  , readOnly : true },
-				schedulerConfiguredId : { type : 'n'   },
-				workerConfiguredId : { type : 'n'   },
-				workerType : { type : 'es'   , subType : 'KalturaBatchJobType'},
-				type : { type : 'en'   , subType : 'KalturaSchedulerStatusType'},
-				value : { type : 'n'   },
-				schedulerId : { type : 'n'  , readOnly : true },
-				workerId : { type : 'n'  , readOnly : true }
+                objectType : { type : 'c', default : 'KalturaSchedulerStatus' },
+				id : { type : 'n', readOnly : true },
+				schedulerConfiguredId : { type : 'n' },
+				workerConfiguredId : { type : 'n' },
+				workerType : { type : 'es', subTypeConstructor : KalturaBatchJobType, subType : 'KalturaBatchJobType' },
+				type : { type : 'en', subTypeConstructor : KalturaSchedulerStatusType, subType : 'KalturaSchedulerStatusType' },
+				value : { type : 'n' },
+				schedulerId : { type : 'n', readOnly : true },
+				workerId : { type : 'n', readOnly : true }
             }
         );
         return result;

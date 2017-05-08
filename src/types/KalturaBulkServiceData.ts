@@ -25,7 +25,7 @@ export class KalturaBulkServiceData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkServiceData'  }
+                objectType : { type : 'c', default : 'KalturaBulkServiceData' }
             }
         );
         return result;

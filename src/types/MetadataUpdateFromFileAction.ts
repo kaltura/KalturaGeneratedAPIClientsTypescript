@@ -28,10 +28,10 @@ export class MetadataUpdateFromFileAction extends KalturaUploadRequest<KalturaMe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata'  },
-				action : { type : 'c' , default : 'updateFromFile'  },
-				id : { type : 'n'   },
-				xmlFile : { type : 'f'   }
+                service : { type : 'c', default : 'metadata_metadata' },
+				action : { type : 'c', default : 'updateFromFile' },
+				id : { type : 'n' },
+				xmlFile : { type : 'f' }
             }
         );
         return result;

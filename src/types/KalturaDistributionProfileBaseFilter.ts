@@ -38,15 +38,15 @@ export class KalturaDistributionProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionProfileBaseFilter'  },
-				idEqual : { type : 'n'   },
-				idIn : { type : 's'   },
-				createdAtGreaterThanOrEqual : { type : 'd'   },
-				createdAtLessThanOrEqual : { type : 'd'   },
-				updatedAtGreaterThanOrEqual : { type : 'd'   },
-				updatedAtLessThanOrEqual : { type : 'd'   },
-				statusEqual : { type : 'en'   , subType : 'KalturaDistributionProfileStatus'},
-				statusIn : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDistributionProfileBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				createdAtLessThanOrEqual : { type : 'd' },
+				updatedAtGreaterThanOrEqual : { type : 'd' },
+				updatedAtLessThanOrEqual : { type : 'd' },
+				statusEqual : { type : 'en', subTypeConstructor : KalturaDistributionProfileStatus, subType : 'KalturaDistributionProfileStatus' },
+				statusIn : { type : 's' }
             }
         );
         return result;

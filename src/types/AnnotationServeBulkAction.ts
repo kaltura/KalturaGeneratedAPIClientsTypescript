@@ -30,10 +30,10 @@ export class AnnotationServeBulkAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation'  },
-				action : { type : 'c' , default : 'serveBulk'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaCuePointFilter, subType : 'KalturaCuePointFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'annotation_annotation' },
+				action : { type : 'c', default : 'serveBulk' },
+				filter : { type : 'o', subTypeConstructor : KalturaCuePointFilter, subType : 'KalturaCuePointFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

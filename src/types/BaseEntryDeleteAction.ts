@@ -26,9 +26,9 @@ export class BaseEntryDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'delete'  },
-				entryId : { type : 's'   }
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'delete' },
+				entryId : { type : 's' }
             }
         );
         return result;

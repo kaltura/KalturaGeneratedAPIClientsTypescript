@@ -27,9 +27,9 @@ export class MediaCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media'  },
-				action : { type : 'c' , default : 'count'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaMediaEntryFilter, subType : 'KalturaMediaEntryFilter'}
+                service : { type : 'c', default : 'media' },
+				action : { type : 'c', default : 'count' },
+				filter : { type : 'o', subTypeConstructor : KalturaMediaEntryFilter, subType : 'KalturaMediaEntryFilter' }
             }
         );
         return result;

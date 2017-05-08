@@ -28,10 +28,10 @@ export class CaptionParamsUpdateAction extends KalturaRequest<KalturaCaptionPara
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionparams'  },
-				action : { type : 'c' , default : 'update'  },
-				id : { type : 'n'   },
-				captionParams : { type : 'o'   , fallbackConstructor :  KalturaCaptionParams, subType : 'KalturaCaptionParams'}
+                service : { type : 'c', default : 'caption_captionparams' },
+				action : { type : 'c', default : 'update' },
+				id : { type : 'n' },
+				captionParams : { type : 'o', subTypeConstructor : KalturaCaptionParams, subType : 'KalturaCaptionParams' }
             }
         );
         return result;

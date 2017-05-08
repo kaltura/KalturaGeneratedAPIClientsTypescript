@@ -27,8 +27,8 @@ export class KalturaBaseEntryMatchAttributeCondition extends KalturaSearchMatchA
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseEntryMatchAttributeCondition'  },
-				attribute : { type : 'es'   , subType : 'KalturaBaseEntryMatchAttribute'}
+                objectType : { type : 'c', default : 'KalturaBaseEntryMatchAttributeCondition' },
+				attribute : { type : 'es', subTypeConstructor : KalturaBaseEntryMatchAttribute, subType : 'KalturaBaseEntryMatchAttribute' }
             }
         );
         return result;

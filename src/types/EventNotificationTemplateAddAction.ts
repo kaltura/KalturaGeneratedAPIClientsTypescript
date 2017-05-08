@@ -29,9 +29,9 @@ export class EventNotificationTemplateAddAction extends KalturaRequest<KalturaEv
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
-				action : { type : 'c' , default : 'add'  },
-				eventNotificationTemplate : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate'}
+                service : { type : 'c', default : 'eventnotification_eventnotificationtemplate' },
+				action : { type : 'c', default : 'add' },
+				eventNotificationTemplate : { type : 'o', subTypeConstructor : KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate' }
             }
         );
         return result;

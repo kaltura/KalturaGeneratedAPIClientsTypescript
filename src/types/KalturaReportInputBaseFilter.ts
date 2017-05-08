@@ -29,11 +29,11 @@ export class KalturaReportInputBaseFilter extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportInputBaseFilter'  },
-				fromDate : { type : 'n'   },
-				toDate : { type : 'n'   },
-				fromDay : { type : 's'   },
-				toDay : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaReportInputBaseFilter' },
+				fromDate : { type : 'n' },
+				toDate : { type : 'n' },
+				fromDay : { type : 's' },
+				toDay : { type : 's' }
             }
         );
         return result;

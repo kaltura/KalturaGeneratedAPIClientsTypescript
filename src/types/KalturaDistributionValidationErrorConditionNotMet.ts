@@ -23,8 +23,8 @@ export class KalturaDistributionValidationErrorConditionNotMet extends KalturaDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorConditionNotMet'  },
-				conditionName : { type : 's'   }
+                objectType : { type : 'c', default : 'KalturaDistributionValidationErrorConditionNotMet' },
+				conditionName : { type : 's' }
             }
         );
         return result;

@@ -30,10 +30,10 @@ export class AuditTrailListAction extends KalturaRequest<KalturaAuditTrailListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'audit_audittrail'  },
-				action : { type : 'c' , default : 'list'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaAuditTrailFilter, subType : 'KalturaAuditTrailFilter'},
-				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
+                service : { type : 'c', default : 'audit_audittrail' },
+				action : { type : 'c', default : 'list' },
+				filter : { type : 'o', subTypeConstructor : KalturaAuditTrailFilter, subType : 'KalturaAuditTrailFilter' },
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
             }
         );
         return result;

@@ -28,10 +28,10 @@ export class BaseEntryGetPlaybackContextAction extends KalturaRequest<KalturaPla
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry'  },
-				action : { type : 'c' , default : 'getPlaybackContext'  },
-				entryId : { type : 's'   },
-				contextDataParams : { type : 'o'   , fallbackConstructor :  KalturaPlaybackContextOptions, subType : 'KalturaPlaybackContextOptions'}
+                service : { type : 'c', default : 'baseentry' },
+				action : { type : 'c', default : 'getPlaybackContext' },
+				entryId : { type : 's' },
+				contextDataParams : { type : 'o', subTypeConstructor : KalturaPlaybackContextOptions, subType : 'KalturaPlaybackContextOptions' }
             }
         );
         return result;

@@ -27,9 +27,9 @@ export class UserCheckLoginDataExistsAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user'  },
-				action : { type : 'c' , default : 'checkLoginDataExists'  },
-				filter : { type : 'o'   , fallbackConstructor :  KalturaUserLoginDataFilter, subType : 'KalturaUserLoginDataFilter'}
+                service : { type : 'c', default : 'user' },
+				action : { type : 'c', default : 'checkLoginDataExists' },
+				filter : { type : 'o', subTypeConstructor : KalturaUserLoginDataFilter, subType : 'KalturaUserLoginDataFilter' }
             }
         );
         return result;
