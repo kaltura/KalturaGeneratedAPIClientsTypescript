@@ -23,7 +23,7 @@ export class KalturaKontikiStorageProfileFilter extends KalturaKontikiStoragePro
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaKontikiStorageProfileFilter' }
+                objectType : { type : 'c' , default : 'KalturaKontikiStorageProfileFilter'  }
             }
         );
         return result;

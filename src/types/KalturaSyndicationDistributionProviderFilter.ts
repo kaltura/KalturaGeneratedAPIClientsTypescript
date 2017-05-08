@@ -23,7 +23,7 @@ export class KalturaSyndicationDistributionProviderFilter extends KalturaSyndica
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSyndicationDistributionProviderFilter' }
+                objectType : { type : 'c' , default : 'KalturaSyndicationDistributionProviderFilter'  }
             }
         );
         return result;

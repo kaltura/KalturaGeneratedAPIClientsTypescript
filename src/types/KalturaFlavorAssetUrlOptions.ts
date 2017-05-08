@@ -25,9 +25,9 @@ export class KalturaFlavorAssetUrlOptions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorAssetUrlOptions' },
-				fileName : { type : 's'  },
-				referrer : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFlavorAssetUrlOptions'  },
+				fileName : { type : 's'   },
+				referrer : { type : 's'   }
             }
         );
         return result;

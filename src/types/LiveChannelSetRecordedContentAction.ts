@@ -27,7 +27,7 @@ export class LiveChannelSetRecordedContentAction extends KalturaRequest<KalturaL
 
     constructor(data : LiveChannelSetRecordedContentActionArgs)
     {
-        super(data, 'o', 'KalturaLiveEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveEntry', responseConstructor : KalturaLiveEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -36,13 +36,13 @@ export class LiveChannelSetRecordedContentAction extends KalturaRequest<KalturaL
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel' },
-				action : { type : 'c' , default : 'setRecordedContent' },
-				entryId : { type : 's'  },
-				mediaServerIndex : { type : 'es'  , subType : 'KalturaEntryServerNodeType'},
-				resource : { type : 'o'  , subType : 'KalturaDataCenterContentResource'},
-				duration : { type : 'n'  },
-				recordedEntryId : { type : 's'  }
+                service : { type : 'c' , default : 'livechannel'  },
+				action : { type : 'c' , default : 'setRecordedContent'  },
+				entryId : { type : 's'   },
+				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
+				resource : { type : 'o'   , fallbackConstructor :  KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource'},
+				duration : { type : 'n'   },
+				recordedEntryId : { type : 's'   }
             }
         );
         return result;

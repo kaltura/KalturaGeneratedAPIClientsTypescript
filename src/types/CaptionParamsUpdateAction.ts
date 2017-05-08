@@ -19,7 +19,7 @@ export class CaptionParamsUpdateAction extends KalturaRequest<KalturaCaptionPara
 
     constructor(data : CaptionParamsUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaCaptionParams');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCaptionParams', responseConstructor : KalturaCaptionParams  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class CaptionParamsUpdateAction extends KalturaRequest<KalturaCaptionPara
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionparams' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 'n'  },
-				captionParams : { type : 'o'  , subType : 'KalturaCaptionParams'}
+                service : { type : 'c' , default : 'caption_captionparams'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 'n'   },
+				captionParams : { type : 'o'   , fallbackConstructor :  KalturaCaptionParams, subType : 'KalturaCaptionParams'}
             }
         );
         return result;

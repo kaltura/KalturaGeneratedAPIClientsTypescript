@@ -19,7 +19,7 @@ export class BaseEntryIndexAction extends KalturaRequest<number> {
 
     constructor(data : BaseEntryIndexActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
         if (typeof this.shouldUpdate === 'undefined') this.shouldUpdate = true;
     }
 
@@ -29,10 +29,10 @@ export class BaseEntryIndexAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'index' },
-				id : { type : 's'  },
-				shouldUpdate : { type : 'b'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'index'  },
+				id : { type : 's'   },
+				shouldUpdate : { type : 'b'   }
             }
         );
         return result;

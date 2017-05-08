@@ -20,7 +20,7 @@ export class CategoryDeleteAction extends KalturaRequest<void> {
 
     constructor(data : CategoryDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
         if (typeof this.moveEntriesToParentCategory === 'undefined') this.moveEntriesToParentCategory = 1;
     }
 
@@ -30,10 +30,10 @@ export class CategoryDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 'n'  },
-				moveEntriesToParentCategory : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                service : { type : 'c' , default : 'category'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 'n'   },
+				moveEntriesToParentCategory : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

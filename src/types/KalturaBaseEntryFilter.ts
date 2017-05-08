@@ -32,12 +32,12 @@ export class KalturaBaseEntryFilter extends KalturaBaseEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseEntryFilter' },
-				freeText : { type : 's'  },
-				isRoot : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				categoriesFullNameIn : { type : 's'  },
-				categoryAncestorIdIn : { type : 's'  },
-				redirectFromEntryId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaBaseEntryFilter'  },
+				freeText : { type : 's'   },
+				isRoot : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				categoriesFullNameIn : { type : 's'   },
+				categoryAncestorIdIn : { type : 's'   },
+				redirectFromEntryId : { type : 's'   }
             }
         );
         return result;

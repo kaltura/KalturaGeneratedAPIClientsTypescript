@@ -23,8 +23,8 @@ export class KalturaBusinessProcessStartNotificationTemplate extends KalturaBusi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessStartNotificationTemplate' },
-				abortOnDeletion : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaBusinessProcessStartNotificationTemplate'  },
+				abortOnDeletion : { type : 'b'   }
             }
         );
         return result;

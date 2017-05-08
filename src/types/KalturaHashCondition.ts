@@ -25,9 +25,9 @@ export class KalturaHashCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHashCondition' },
-				hashName : { type : 's'  },
-				hashSecret : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaHashCondition'  },
+				hashName : { type : 's'   },
+				hashSecret : { type : 's'   }
             }
         );
         return result;

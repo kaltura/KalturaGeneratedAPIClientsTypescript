@@ -28,10 +28,10 @@ export class KalturaDistributionValidationErrorInvalidData extends KalturaDistri
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorInvalidData' },
-				fieldName : { type : 's'  },
-				validationErrorType : { type : 'en'  , subType : 'KalturaDistributionValidationErrorType'},
-				validationErrorParam : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorInvalidData'  },
+				fieldName : { type : 's'   },
+				validationErrorType : { type : 'en'   , subType : 'KalturaDistributionValidationErrorType'},
+				validationErrorParam : { type : 's'   }
             }
         );
         return result;

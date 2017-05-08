@@ -29,11 +29,11 @@ export class KalturaIdeticDistributionProfile extends KalturaConfigurableDistrib
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIdeticDistributionProfile' },
-				ftpPath : { type : 's'  },
-				username : { type : 's'  },
-				password : { type : 's'  },
-				domain : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaIdeticDistributionProfile'  },
+				ftpPath : { type : 's'   },
+				username : { type : 's'   },
+				password : { type : 's'   },
+				domain : { type : 's'   }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaBulkUploadEntryData extends KalturaBulkUploadObjectData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadEntryData' },
-				conversionProfileId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadEntryData'  },
+				conversionProfileId : { type : 'n'   }
             }
         );
         return result;

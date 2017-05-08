@@ -40,17 +40,17 @@ export class KalturaScheduler extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduler' },
-				id : { type : 'n'  , readOnly : true},
-				configuredId : { type : 'n'  },
-				name : { type : 's'  },
-				host : { type : 's'  },
-				statuses : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerStatus'},
-				configs : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerConfig'},
-				workers : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerWorker'},
-				createdAt : { type : 'd'  , readOnly : true},
-				lastStatus : { type : 'n'  , readOnly : true},
-				lastStatusStr : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaScheduler'  },
+				id : { type : 'n'  , readOnly : true },
+				configuredId : { type : 'n'   },
+				name : { type : 's'   },
+				host : { type : 's'   },
+				statuses : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaSchedulerStatus, subType : 'KalturaSchedulerStatus'},
+				configs : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaSchedulerConfig, subType : 'KalturaSchedulerConfig'},
+				workers : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaSchedulerWorker, subType : 'KalturaSchedulerWorker'},
+				createdAt : { type : 'd'  , readOnly : true },
+				lastStatus : { type : 'n'  , readOnly : true },
+				lastStatusStr : { type : 's'  , readOnly : true }
             }
         );
         return result;

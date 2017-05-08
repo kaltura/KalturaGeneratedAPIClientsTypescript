@@ -20,7 +20,7 @@ export class LiveStreamAddAction extends KalturaRequest<KalturaLiveStreamEntry> 
 
     constructor(data : LiveStreamAddActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStreamEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStreamEntry', responseConstructor : KalturaLiveStreamEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class LiveStreamAddAction extends KalturaRequest<KalturaLiveStreamEntry> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'add' },
-				liveStreamEntry : { type : 'o'  , subType : 'KalturaLiveStreamEntry'},
-				sourceType : { type : 'es'  , subType : 'KalturaSourceType'}
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'add'  },
+				liveStreamEntry : { type : 'o'   , fallbackConstructor :  KalturaLiveStreamEntry, subType : 'KalturaLiveStreamEntry'},
+				sourceType : { type : 'es'   , subType : 'KalturaSourceType'}
             }
         );
         return result;

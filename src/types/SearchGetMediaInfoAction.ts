@@ -19,7 +19,7 @@ export class SearchGetMediaInfoAction extends KalturaRequest<KalturaSearchResult
 
     constructor(data : SearchGetMediaInfoActionArgs)
     {
-        super(data, 'o', 'KalturaSearchResult');
+        super(data, {responseType : 'o', responseSubType : 'KalturaSearchResult', responseConstructor : KalturaSearchResult  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,9 +28,9 @@ export class SearchGetMediaInfoAction extends KalturaRequest<KalturaSearchResult
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search' },
-				action : { type : 'c' , default : 'getMediaInfo' },
-				searchResult : { type : 'o'  , subType : 'KalturaSearchResult'}
+                service : { type : 'c' , default : 'search'  },
+				action : { type : 'c' , default : 'getMediaInfo'  },
+				searchResult : { type : 'o'   , fallbackConstructor :  KalturaSearchResult, subType : 'KalturaSearchResult'}
             }
         );
         return result;

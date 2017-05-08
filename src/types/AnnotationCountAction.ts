@@ -18,7 +18,7 @@ export class AnnotationCountAction extends KalturaRequest<number> {
 
     constructor(data? : AnnotationCountActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class AnnotationCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation' },
-				action : { type : 'c' , default : 'count' },
-				filter : { type : 'o'  , subType : 'KalturaCuePointFilter'}
+                service : { type : 'c' , default : 'annotation_annotation'  },
+				action : { type : 'c' , default : 'count'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaCuePointFilter, subType : 'KalturaCuePointFilter'}
             }
         );
         return result;

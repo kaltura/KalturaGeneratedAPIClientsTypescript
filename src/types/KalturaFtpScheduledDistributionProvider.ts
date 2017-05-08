@@ -23,7 +23,7 @@ export class KalturaFtpScheduledDistributionProvider extends KalturaFtpDistribut
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFtpScheduledDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaFtpScheduledDistributionProvider'  }
             }
         );
         return result;

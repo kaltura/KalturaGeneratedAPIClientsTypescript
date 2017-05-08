@@ -23,7 +23,7 @@ export class KalturaWowzaMediaServerNodeFilter extends KalturaWowzaMediaServerNo
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWowzaMediaServerNodeFilter' }
+                objectType : { type : 'c' , default : 'KalturaWowzaMediaServerNodeFilter'  }
             }
         );
         return result;

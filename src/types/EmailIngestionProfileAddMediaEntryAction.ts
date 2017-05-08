@@ -25,7 +25,7 @@ export class EmailIngestionProfileAddMediaEntryAction extends KalturaRequest<Kal
 
     constructor(data : EmailIngestionProfileAddMediaEntryActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,13 +34,13 @@ export class EmailIngestionProfileAddMediaEntryAction extends KalturaRequest<Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'emailingestionprofile' },
-				action : { type : 'c' , default : 'addMediaEntry' },
-				mediaEntry : { type : 'o'  , subType : 'KalturaMediaEntry'},
-				uploadTokenId : { type : 's'  },
-				emailProfId : { type : 'n'  },
-				fromAddress : { type : 's'  },
-				emailMsgId : { type : 's'  }
+                service : { type : 'c' , default : 'emailingestionprofile'  },
+				action : { type : 'c' , default : 'addMediaEntry'  },
+				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
+				uploadTokenId : { type : 's'   },
+				emailProfId : { type : 'n'   },
+				fromAddress : { type : 's'   },
+				emailMsgId : { type : 's'   }
             }
         );
         return result;

@@ -1,6 +1,7 @@
 import { KalturaResponse } from "./kaltura-response";
 import { KalturaRequestBase, KalturaRequestBaseArgs } from "./kaltura-request-base";
 import { KalturaAPIException } from './kaltura-api-exception';
+import { KalturaObjectBase } from './kaltura-object-base';
 
 export interface KalturaRequestArgs extends KalturaRequestBaseArgs
 {
@@ -11,9 +12,15 @@ export interface KalturaRequestArgs extends KalturaRequestBaseArgs
 export abstract class KalturaRequest<T> extends KalturaRequestBase {
 
     protected callback: (response: KalturaResponse<T>) => void;
+    private responseType : string;
+    private responseSubType : string;
+    private _responseConstructor : { new() : KalturaObjectBase}; // NOTICE: this property is not used directly. It is here to force import of that type for bundling issues.
 
-    constructor(data : KalturaRequestBaseArgs, private responseType : string, private responseSubType? : string) {
+    constructor(data : KalturaRequestBaseArgs, {responseType, responseSubType, responseConstructor} : {responseType : string, responseSubType? : string, responseConstructor : { new() : KalturaObjectBase}  } ) {
         super(data);
+        this.responseSubType = responseSubType;
+        this.responseType = responseType;
+        this._responseConstructor = responseConstructor;
     }
 
     setCompletion(callback: (response: KalturaResponse<T>) => void): this {

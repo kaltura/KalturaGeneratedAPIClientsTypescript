@@ -21,7 +21,7 @@ export class CategoryUserListAction extends KalturaRequest<KalturaCategoryUserLi
 
     constructor(data? : CategoryUserListActionArgs)
     {
-        super(data, 'o', 'KalturaCategoryUserListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryUserListResponse', responseConstructor : KalturaCategoryUserListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class CategoryUserListAction extends KalturaRequest<KalturaCategoryUserLi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaCategoryUserFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'categoryuser'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaCategoryUserFilter, subType : 'KalturaCategoryUserFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

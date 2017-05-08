@@ -27,10 +27,10 @@ export class KalturaSystemPartnerUsageFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSystemPartnerUsageFilter' },
-				fromDate : { type : 'n'  },
-				toDate : { type : 'n'  },
-				timezoneOffset : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaSystemPartnerUsageFilter'  },
+				fromDate : { type : 'n'   },
+				toDate : { type : 'n'   },
+				timezoneOffset : { type : 'n'   }
             }
         );
         return result;

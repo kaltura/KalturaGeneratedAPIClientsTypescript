@@ -23,7 +23,7 @@ export class KalturaLiveChannelSegmentFilter extends KalturaLiveChannelSegmentBa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannelSegmentFilter' }
+                objectType : { type : 'c' , default : 'KalturaLiveChannelSegmentFilter'  }
             }
         );
         return result;

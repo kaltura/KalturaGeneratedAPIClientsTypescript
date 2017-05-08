@@ -23,7 +23,7 @@ export class KalturaAdminUserFilter extends KalturaAdminUserBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAdminUserFilter' }
+                objectType : { type : 'c' , default : 'KalturaAdminUserFilter'  }
             }
         );
         return result;

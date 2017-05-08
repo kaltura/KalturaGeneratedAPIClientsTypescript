@@ -23,7 +23,7 @@ export class KalturaAccessControlBlockAction extends KalturaRuleAction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlBlockAction' }
+                objectType : { type : 'c' , default : 'KalturaAccessControlBlockAction'  }
             }
         );
         return result;

@@ -43,17 +43,17 @@ export class KalturaConversionProfileAssetParamsBaseFilter extends KalturaRelate
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionProfileAssetParamsBaseFilter' },
-				conversionProfileIdEqual : { type : 'n'  },
-				conversionProfileIdIn : { type : 's'  },
-				assetParamsIdEqual : { type : 'n'  },
-				assetParamsIdIn : { type : 's'  },
-				readyBehaviorEqual : { type : 'en'  , subType : 'KalturaFlavorReadyBehaviorType'},
-				readyBehaviorIn : { type : 's'  },
-				originEqual : { type : 'en'  , subType : 'KalturaAssetParamsOrigin'},
-				originIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaConversionProfileAssetParamsBaseFilter'  },
+				conversionProfileIdEqual : { type : 'n'   },
+				conversionProfileIdIn : { type : 's'   },
+				assetParamsIdEqual : { type : 'n'   },
+				assetParamsIdIn : { type : 's'   },
+				readyBehaviorEqual : { type : 'en'   , subType : 'KalturaFlavorReadyBehaviorType'},
+				readyBehaviorIn : { type : 's'   },
+				originEqual : { type : 'en'   , subType : 'KalturaAssetParamsOrigin'},
+				originIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   }
             }
         );
         return result;

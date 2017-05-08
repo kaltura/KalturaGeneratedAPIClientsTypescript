@@ -23,7 +23,7 @@ export class KalturaWidevineFlavorParams extends KalturaFlavorParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineFlavorParams' }
+                objectType : { type : 'c' , default : 'KalturaWidevineFlavorParams'  }
             }
         );
         return result;

@@ -18,7 +18,7 @@ export class MediaCountAction extends KalturaRequest<number> {
 
     constructor(data? : MediaCountActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class MediaCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'count' },
-				filter : { type : 'o'  , subType : 'KalturaMediaEntryFilter'}
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'count'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaMediaEntryFilter, subType : 'KalturaMediaEntryFilter'}
             }
         );
         return result;

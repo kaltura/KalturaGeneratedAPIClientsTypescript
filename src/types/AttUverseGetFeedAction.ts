@@ -17,7 +17,7 @@ export class AttUverseGetFeedAction extends KalturaRequest<string> {
 
     constructor(data : AttUverseGetFeedActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,10 +26,10 @@ export class AttUverseGetFeedAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attuversedistribution_attuverse' },
-				action : { type : 'c' , default : 'getFeed' },
-				distributionProfileId : { type : 'n'  },
-				hash : { type : 's'  }
+                service : { type : 'c' , default : 'attuversedistribution_attuverse'  },
+				action : { type : 'c' , default : 'getFeed'  },
+				distributionProfileId : { type : 'n'   },
+				hash : { type : 's'   }
             }
         );
         return result;

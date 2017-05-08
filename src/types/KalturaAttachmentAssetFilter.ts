@@ -23,7 +23,7 @@ export class KalturaAttachmentAssetFilter extends KalturaAttachmentAssetBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttachmentAssetFilter' }
+                objectType : { type : 'c' , default : 'KalturaAttachmentAssetFilter'  }
             }
         );
         return result;

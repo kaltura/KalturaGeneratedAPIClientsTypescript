@@ -23,7 +23,7 @@ export class KalturaReportFilter extends KalturaReportBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportFilter' }
+                objectType : { type : 'c' , default : 'KalturaReportFilter'  }
             }
         );
         return result;

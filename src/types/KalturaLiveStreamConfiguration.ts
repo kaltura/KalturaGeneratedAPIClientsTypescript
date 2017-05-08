@@ -34,12 +34,12 @@ export class KalturaLiveStreamConfiguration extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamConfiguration' },
-				protocol : { type : 'es'  , subType : 'KalturaPlaybackProtocol'},
-				url : { type : 's'  },
-				publishUrl : { type : 's'  },
-				backupUrl : { type : 's'  },
-				streamName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLiveStreamConfiguration'  },
+				protocol : { type : 'es'   , subType : 'KalturaPlaybackProtocol'},
+				url : { type : 's'   },
+				publishUrl : { type : 's'   },
+				backupUrl : { type : 's'   },
+				streamName : { type : 's'   }
             }
         );
         return result;

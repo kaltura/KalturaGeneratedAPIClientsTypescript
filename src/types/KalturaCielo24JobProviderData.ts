@@ -41,17 +41,17 @@ export class KalturaCielo24JobProviderData extends KalturaIntegrationJobProvider
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCielo24JobProviderData' },
-				entryId : { type : 's'  },
-				flavorAssetId : { type : 's'  },
-				captionAssetFormats : { type : 's'  },
-				priority : { type : 'es'  , subType : 'KalturaCielo24Priority'},
-				fidelity : { type : 'es'  , subType : 'KalturaCielo24Fidelity'},
-				username : { type : 's'  , readOnly : true},
-				password : { type : 's'  , readOnly : true},
-				baseUrl : { type : 's'  , readOnly : true},
-				spokenLanguage : { type : 'es'  , subType : 'KalturaLanguage'},
-				replaceMediaContent : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaCielo24JobProviderData'  },
+				entryId : { type : 's'   },
+				flavorAssetId : { type : 's'   },
+				captionAssetFormats : { type : 's'   },
+				priority : { type : 'es'   , subType : 'KalturaCielo24Priority'},
+				fidelity : { type : 'es'   , subType : 'KalturaCielo24Fidelity'},
+				username : { type : 's'  , readOnly : true },
+				password : { type : 's'  , readOnly : true },
+				baseUrl : { type : 's'  , readOnly : true },
+				spokenLanguage : { type : 'es'   , subType : 'KalturaLanguage'},
+				replaceMediaContent : { type : 'b'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileGenericAppleHttpBaseFilter extends KalturaDel
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericAppleHttpBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericAppleHttpBaseFilter'  }
             }
         );
         return result;

@@ -29,10 +29,10 @@ export class KalturaRequestBase extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                apiVersion : { type : 's'  , readOnly : true},
-				partnerId : { type : 'n'  },
-				ks : { type : 's'  },
-				responseProfile : { type : 'o'  , subType : 'KalturaBaseResponseProfile'}
+                apiVersion : { type : 's'  , readOnly : true },
+				partnerId : { type : 'n'   },
+				ks : { type : 's'   },
+				responseProfile : { type : 'o'   , fallbackConstructor :  KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile'}
             }
         );
         return result;

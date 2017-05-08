@@ -25,10 +25,10 @@ export class KalturaStartWidgetSessionResponse extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStartWidgetSessionResponse' },
-				partnerId : { type : 'n'  , readOnly : true},
-				ks : { type : 's'  , readOnly : true},
-				userId : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaStartWidgetSessionResponse'  },
+				partnerId : { type : 'n'  , readOnly : true },
+				ks : { type : 's'  , readOnly : true },
+				userId : { type : 's'  , readOnly : true }
             }
         );
         return result;

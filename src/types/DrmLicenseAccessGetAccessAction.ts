@@ -21,7 +21,7 @@ export class DrmLicenseAccessGetAccessAction extends KalturaRequest<KalturaDrmLi
 
     constructor(data : DrmLicenseAccessGetAccessActionArgs)
     {
-        super(data, 'o', 'KalturaDrmLicenseAccessDetails');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDrmLicenseAccessDetails', responseConstructor : KalturaDrmLicenseAccessDetails  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class DrmLicenseAccessGetAccessAction extends KalturaRequest<KalturaDrmLi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmlicenseaccess' },
-				action : { type : 'c' , default : 'getAccess' },
-				entryId : { type : 's'  },
-				flavorIds : { type : 's'  },
-				referrer : { type : 's'  }
+                service : { type : 'c' , default : 'drm_drmlicenseaccess'  },
+				action : { type : 'c' , default : 'getAccess'  },
+				entryId : { type : 's'   },
+				flavorIds : { type : 's'   },
+				referrer : { type : 's'   }
             }
         );
         return result;

@@ -27,10 +27,10 @@ export class KalturaImportMetadataJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaImportMetadataJobData' },
-				srcFileUrl : { type : 's'  },
-				destFileLocalPath : { type : 's'  },
-				metadataId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaImportMetadataJobData'  },
+				srcFileUrl : { type : 's'   },
+				destFileLocalPath : { type : 's'   },
+				metadataId : { type : 'n'   }
             }
         );
         return result;

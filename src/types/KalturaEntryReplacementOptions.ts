@@ -29,9 +29,9 @@ export class KalturaEntryReplacementOptions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryReplacementOptions' },
-				keepManualThumbnails : { type : 'n'  },
-				pluginOptionItems : { type : 'a'  , subType : 'KalturaPluginReplacementOptionsItem'}
+                objectType : { type : 'c' , default : 'KalturaEntryReplacementOptions'  },
+				keepManualThumbnails : { type : 'n'   },
+				pluginOptionItems : { type : 'a'   , fallbackConstructor :  KalturaPluginReplacementOptionsItem, subType : 'KalturaPluginReplacementOptionsItem'}
             }
         );
         return result;

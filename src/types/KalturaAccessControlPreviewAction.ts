@@ -23,8 +23,8 @@ export class KalturaAccessControlPreviewAction extends KalturaRuleAction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlPreviewAction' },
-				limit : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaAccessControlPreviewAction'  },
+				limit : { type : 'n'   }
             }
         );
         return result;

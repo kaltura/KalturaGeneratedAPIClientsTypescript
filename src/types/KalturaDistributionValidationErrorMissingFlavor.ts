@@ -23,8 +23,8 @@ export class KalturaDistributionValidationErrorMissingFlavor extends KalturaDist
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingFlavor' },
-				flavorParamsId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingFlavor'  },
+				flavorParamsId : { type : 's'   }
             }
         );
         return result;

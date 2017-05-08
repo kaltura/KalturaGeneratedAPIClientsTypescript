@@ -36,16 +36,16 @@ export class KalturaAnnotation extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnnotation' },
-				parentId : { type : 's'  },
-				text : { type : 's'  },
-				endTime : { type : 'n'  },
-				duration : { type : 'n'  , readOnly : true},
-				depth : { type : 'n'  , readOnly : true},
-				childrenCount : { type : 'n'  , readOnly : true},
-				directChildrenCount : { type : 'n'  , readOnly : true},
-				isPublic : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				searchableOnEntry : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaAnnotation'  },
+				parentId : { type : 's'   },
+				text : { type : 's'   },
+				endTime : { type : 'n'   },
+				duration : { type : 'n'  , readOnly : true },
+				depth : { type : 'n'  , readOnly : true },
+				childrenCount : { type : 'n'  , readOnly : true },
+				directChildrenCount : { type : 'n'  , readOnly : true },
+				isPublic : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				searchableOnEntry : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

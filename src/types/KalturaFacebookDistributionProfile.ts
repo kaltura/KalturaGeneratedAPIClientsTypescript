@@ -35,14 +35,14 @@ export class KalturaFacebookDistributionProfile extends KalturaConfigurableDistr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProfile' },
-				apiAuthorizeUrl : { type : 's'  },
-				pageId : { type : 's'  },
-				pageAccessToken : { type : 's'  },
-				userAccessToken : { type : 's'  },
-				state : { type : 's'  },
-				permissions : { type : 's'  },
-				reRequestPermissions : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProfile'  },
+				apiAuthorizeUrl : { type : 's'   },
+				pageId : { type : 's'   },
+				pageAccessToken : { type : 's'   },
+				userAccessToken : { type : 's'   },
+				state : { type : 's'   },
+				permissions : { type : 's'   },
+				reRequestPermissions : { type : 'n'   }
             }
         );
         return result;

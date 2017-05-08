@@ -23,7 +23,7 @@ export class KalturaFtpScheduledDistributionProviderBaseFilter extends KalturaFt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFtpScheduledDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaFtpScheduledDistributionProviderBaseFilter'  }
             }
         );
         return result;

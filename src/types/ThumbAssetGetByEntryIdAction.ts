@@ -15,7 +15,7 @@ export class ThumbAssetGetByEntryIdAction extends KalturaRequest<KalturaThumbAss
 
     constructor(data : ThumbAssetGetByEntryIdActionArgs)
     {
-        super(data, 'a', 'KalturaThumbAsset');
+        super(data, {responseType : 'a', responseSubType : 'KalturaThumbAsset', responseConstructor : KalturaThumbAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class ThumbAssetGetByEntryIdAction extends KalturaRequest<KalturaThumbAss
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'getByEntryId' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'getByEntryId'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

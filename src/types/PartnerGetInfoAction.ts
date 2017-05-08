@@ -18,7 +18,7 @@ export class PartnerGetInfoAction extends KalturaRequest<KalturaPartner> {
 
     constructor(data? : PartnerGetInfoActionArgs)
     {
-        super(data, 'o', 'KalturaPartner');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartner', responseConstructor : KalturaPartner  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,8 +27,8 @@ export class PartnerGetInfoAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'getInfo' }
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'getInfo'  }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaLiveEntryScheduleResourceBaseFilter extends KalturaScheduleR
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntryScheduleResourceBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaLiveEntryScheduleResourceBaseFilter'  }
             }
         );
         return result;

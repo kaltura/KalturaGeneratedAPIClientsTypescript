@@ -19,7 +19,7 @@ export class StorageProfileListAction extends KalturaRequest<KalturaStorageProfi
 
     constructor(data? : StorageProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaStorageProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaStorageProfileListResponse', responseConstructor : KalturaStorageProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class StorageProfileListAction extends KalturaRequest<KalturaStorageProfi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaStorageProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'storageprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaStorageProfileFilter, subType : 'KalturaStorageProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

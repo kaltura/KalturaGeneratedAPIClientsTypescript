@@ -17,7 +17,7 @@ export class AccessControlDeleteAction extends KalturaRequest<void> {
 
     constructor(data : AccessControlDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class AccessControlDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrol' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'accesscontrol'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 'n'   }
             }
         );
         return result;

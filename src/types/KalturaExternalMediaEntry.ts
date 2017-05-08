@@ -25,9 +25,9 @@ export class KalturaExternalMediaEntry extends KalturaMediaEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExternalMediaEntry' },
-				externalSourceType : { type : 'es'  , subType : 'KalturaExternalMediaSourceType'},
-				assetParamsIds : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaExternalMediaEntry'  },
+				externalSourceType : { type : 'es'   , subType : 'KalturaExternalMediaSourceType'},
+				assetParamsIds : { type : 's'  , readOnly : true }
             }
         );
         return result;

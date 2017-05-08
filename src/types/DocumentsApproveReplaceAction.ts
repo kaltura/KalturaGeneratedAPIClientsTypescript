@@ -17,7 +17,7 @@ export class DocumentsApproveReplaceAction extends KalturaRequest<KalturaDocumen
 
     constructor(data : DocumentsApproveReplaceActionArgs)
     {
-        super(data, 'o', 'KalturaDocumentEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDocumentEntry', responseConstructor : KalturaDocumentEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DocumentsApproveReplaceAction extends KalturaRequest<KalturaDocumen
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'approveReplace' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'approveReplace'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

@@ -21,7 +21,7 @@ export class MediaListAction extends KalturaRequest<KalturaMediaListResponse> {
 
     constructor(data? : MediaListActionArgs)
     {
-        super(data, 'o', 'KalturaMediaListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaListResponse', responseConstructor : KalturaMediaListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class MediaListAction extends KalturaRequest<KalturaMediaListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaMediaEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaMediaEntryFilter, subType : 'KalturaMediaEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

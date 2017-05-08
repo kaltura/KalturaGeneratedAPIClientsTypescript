@@ -33,12 +33,12 @@ export class KalturaSearch extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearch' },
-				keyWords : { type : 's'  },
-				searchSource : { type : 'en'  , subType : 'KalturaSearchProviderType'},
-				mediaType : { type : 'en'  , subType : 'KalturaMediaType'},
-				extraData : { type : 's'  },
-				authData : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaSearch'  },
+				keyWords : { type : 's'   },
+				searchSource : { type : 'en'   , subType : 'KalturaSearchProviderType'},
+				mediaType : { type : 'en'   , subType : 'KalturaMediaType'},
+				extraData : { type : 's'   },
+				authData : { type : 's'   }
             }
         );
         return result;

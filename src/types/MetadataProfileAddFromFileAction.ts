@@ -22,7 +22,7 @@ export class MetadataProfileAddFromFileAction extends KalturaUploadRequest<Kaltu
 
     constructor(data : MetadataProfileAddFromFileActionArgs)
     {
-        super(data, 'o', 'KalturaMetadataProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadataProfile', responseConstructor : KalturaMetadataProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class MetadataProfileAddFromFileAction extends KalturaUploadRequest<Kaltu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile' },
-				action : { type : 'c' , default : 'addFromFile' },
-				metadataProfile : { type : 'o'  , subType : 'KalturaMetadataProfile'},
-				xsdFile : { type : 'f'  },
-				viewsFile : { type : 'f'  }
+                service : { type : 'c' , default : 'metadata_metadataprofile'  },
+				action : { type : 'c' , default : 'addFromFile'  },
+				metadataProfile : { type : 'o'   , fallbackConstructor :  KalturaMetadataProfile, subType : 'KalturaMetadataProfile'},
+				xsdFile : { type : 'f'   },
+				viewsFile : { type : 'f'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class BaseEntryAddFromUploadedFileAction extends KalturaRequest<KalturaBa
 
     constructor(data : BaseEntryAddFromUploadedFileActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,11 +32,11 @@ export class BaseEntryAddFromUploadedFileAction extends KalturaRequest<KalturaBa
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'addFromUploadedFile' },
-				entry : { type : 'o'  , subType : 'KalturaBaseEntry'},
-				uploadTokenId : { type : 's'  },
-				type : { type : 'es'  , subType : 'KalturaEntryType'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'addFromUploadedFile'  },
+				entry : { type : 'o'   , fallbackConstructor :  KalturaBaseEntry, subType : 'KalturaBaseEntry'},
+				uploadTokenId : { type : 's'   },
+				type : { type : 'es'   , subType : 'KalturaEntryType'}
             }
         );
         return result;

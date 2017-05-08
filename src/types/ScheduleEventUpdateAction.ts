@@ -19,7 +19,7 @@ export class ScheduleEventUpdateAction extends KalturaRequest<KalturaScheduleEve
 
     constructor(data : ScheduleEventUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleEvent');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEvent', responseConstructor : KalturaScheduleEvent  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class ScheduleEventUpdateAction extends KalturaRequest<KalturaScheduleEve
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent' },
-				action : { type : 'c' , default : 'update' },
-				scheduleEventId : { type : 'n'  },
-				scheduleEvent : { type : 'o'  , subType : 'KalturaScheduleEvent'}
+                service : { type : 'c' , default : 'schedule_scheduleevent'  },
+				action : { type : 'c' , default : 'update'  },
+				scheduleEventId : { type : 'n'   },
+				scheduleEvent : { type : 'o'   , fallbackConstructor :  KalturaScheduleEvent, subType : 'KalturaScheduleEvent'}
             }
         );
         return result;

@@ -21,7 +21,7 @@ export class EventNotificationTemplateListTemplatesAction extends KalturaRequest
 
     constructor(data? : EventNotificationTemplateListTemplatesActionArgs)
     {
-        super(data, 'o', 'KalturaEventNotificationTemplateListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEventNotificationTemplateListResponse', responseConstructor : KalturaEventNotificationTemplateListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class EventNotificationTemplateListTemplatesAction extends KalturaRequest
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'listTemplates' },
-				filter : { type : 'o'  , subType : 'KalturaEventNotificationTemplateFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'listTemplates'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationTemplateFilter, subType : 'KalturaEventNotificationTemplateFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

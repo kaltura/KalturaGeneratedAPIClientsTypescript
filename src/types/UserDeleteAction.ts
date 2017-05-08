@@ -17,7 +17,7 @@ export class UserDeleteAction extends KalturaRequest<KalturaUser> {
 
     constructor(data : UserDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUser', responseConstructor : KalturaUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UserDeleteAction extends KalturaRequest<KalturaUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'delete' },
-				userId : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'delete'  },
+				userId : { type : 's'   }
             }
         );
         return result;

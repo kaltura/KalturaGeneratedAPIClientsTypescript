@@ -22,7 +22,7 @@ export class AdminUserLoginAction extends KalturaRequest<string> {
 
     constructor(data : AdminUserLoginActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class AdminUserLoginAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'adminuser' },
-				action : { type : 'c' , default : 'login' },
-				email : { type : 's'  },
-				password : { type : 's'  },
-				partnerId : { type : 'n'  }
+                service : { type : 'c' , default : 'adminuser'  },
+				action : { type : 'c' , default : 'login'  },
+				email : { type : 's'   },
+				password : { type : 's'   },
+				partnerId : { type : 'n'   }
             }
         );
         return result;

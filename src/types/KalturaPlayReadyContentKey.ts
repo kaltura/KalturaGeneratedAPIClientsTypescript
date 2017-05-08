@@ -25,9 +25,9 @@ export class KalturaPlayReadyContentKey extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyContentKey' },
-				keyId : { type : 's'  },
-				contentKey : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaPlayReadyContentKey'  },
+				keyId : { type : 's'   },
+				contentKey : { type : 's'   }
             }
         );
         return result;

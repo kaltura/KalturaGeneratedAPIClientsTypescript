@@ -19,7 +19,7 @@ export class MetadataProfileRevertAction extends KalturaRequest<KalturaMetadataP
 
     constructor(data : MetadataProfileRevertActionArgs)
     {
-        super(data, 'o', 'KalturaMetadataProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadataProfile', responseConstructor : KalturaMetadataProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MetadataProfileRevertAction extends KalturaRequest<KalturaMetadataP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile' },
-				action : { type : 'c' , default : 'revert' },
-				id : { type : 'n'  },
-				toVersion : { type : 'n'  }
+                service : { type : 'c' , default : 'metadata_metadataprofile'  },
+				action : { type : 'c' , default : 'revert'  },
+				id : { type : 'n'   },
+				toVersion : { type : 'n'   }
             }
         );
         return result;

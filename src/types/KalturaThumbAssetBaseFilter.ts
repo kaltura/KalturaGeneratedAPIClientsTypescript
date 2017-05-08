@@ -32,12 +32,12 @@ export class KalturaThumbAssetBaseFilter extends KalturaAssetFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbAssetBaseFilter' },
-				thumbParamsIdEqual : { type : 'n'  },
-				thumbParamsIdIn : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaThumbAssetStatus'},
-				statusIn : { type : 's'  },
-				statusNotIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaThumbAssetBaseFilter'  },
+				thumbParamsIdEqual : { type : 'n'   },
+				thumbParamsIdIn : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaThumbAssetStatus'},
+				statusIn : { type : 's'   },
+				statusNotIn : { type : 's'   }
             }
         );
         return result;

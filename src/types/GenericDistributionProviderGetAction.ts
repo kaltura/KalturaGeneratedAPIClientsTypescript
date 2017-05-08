@@ -17,7 +17,7 @@ export class GenericDistributionProviderGetAction extends KalturaRequest<Kaltura
 
     constructor(data : GenericDistributionProviderGetActionArgs)
     {
-        super(data, 'o', 'KalturaGenericDistributionProvider');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenericDistributionProvider', responseConstructor : KalturaGenericDistributionProvider  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class GenericDistributionProviderGetAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovider' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovider'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

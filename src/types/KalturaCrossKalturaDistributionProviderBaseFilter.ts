@@ -23,7 +23,7 @@ export class KalturaCrossKalturaDistributionProviderBaseFilter extends KalturaDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCrossKalturaDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaCrossKalturaDistributionProviderBaseFilter'  }
             }
         );
         return result;

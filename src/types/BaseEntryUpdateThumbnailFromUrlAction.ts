@@ -19,7 +19,7 @@ export class BaseEntryUpdateThumbnailFromUrlAction extends KalturaRequest<Kaltur
 
     constructor(data : BaseEntryUpdateThumbnailFromUrlActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class BaseEntryUpdateThumbnailFromUrlAction extends KalturaRequest<Kaltur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'updateThumbnailFromUrl' },
-				entryId : { type : 's'  },
-				url : { type : 's'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'updateThumbnailFromUrl'  },
+				entryId : { type : 's'   },
+				url : { type : 's'   }
             }
         );
         return result;

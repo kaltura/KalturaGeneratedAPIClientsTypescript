@@ -24,8 +24,8 @@ export class KalturaEventCuePoint extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventCuePoint' },
-				eventType : { type : 'es'  , subType : 'KalturaEventType'}
+                objectType : { type : 'c' , default : 'KalturaEventCuePoint'  },
+				eventType : { type : 'es'   , subType : 'KalturaEventType'}
             }
         );
         return result;

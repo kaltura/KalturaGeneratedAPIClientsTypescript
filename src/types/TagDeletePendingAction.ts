@@ -18,7 +18,7 @@ export class TagDeletePendingAction extends KalturaRequest<number> {
 
     constructor(data? : TagDeletePendingActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,8 +27,8 @@ export class TagDeletePendingAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'tagsearch_tag' },
-				action : { type : 'c' , default : 'deletePending' }
+                service : { type : 'c' , default : 'tagsearch_tag'  },
+				action : { type : 'c' , default : 'deletePending'  }
             }
         );
         return result;

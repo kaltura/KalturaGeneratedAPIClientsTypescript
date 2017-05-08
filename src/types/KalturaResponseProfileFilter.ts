@@ -23,7 +23,7 @@ export class KalturaResponseProfileFilter extends KalturaResponseProfileBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfileFilter' }
+                objectType : { type : 'c' , default : 'KalturaResponseProfileFilter'  }
             }
         );
         return result;

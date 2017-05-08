@@ -19,7 +19,7 @@ export class UserSetInitialPasswordAction extends KalturaRequest<void> {
 
     constructor(data : UserSetInitialPasswordActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class UserSetInitialPasswordAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'setInitialPassword' },
-				hashKey : { type : 's'  },
-				newPassword : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'setInitialPassword'  },
+				hashKey : { type : 's'   },
+				newPassword : { type : 's'   }
             }
         );
         return result;

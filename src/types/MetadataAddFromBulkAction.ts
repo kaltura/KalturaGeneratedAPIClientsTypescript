@@ -25,7 +25,7 @@ export class MetadataAddFromBulkAction extends KalturaRequest<KalturaMetadata> {
 
     constructor(data : MetadataAddFromBulkActionArgs)
     {
-        super(data, 'o', 'KalturaMetadata');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadata', responseConstructor : KalturaMetadata  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class MetadataAddFromBulkAction extends KalturaRequest<KalturaMetadata> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata' },
-				action : { type : 'c' , default : 'addFromBulk' },
-				metadataProfileId : { type : 'n'  },
-				objectType : { type : 'es'  , subType : 'KalturaMetadataObjectType'},
-				objectId : { type : 's'  },
-				url : { type : 's'  }
+                service : { type : 'c' , default : 'metadata_metadata'  },
+				action : { type : 'c' , default : 'addFromBulk'  },
+				metadataProfileId : { type : 'n'   },
+				objectType : { type : 'es'   , subType : 'KalturaMetadataObjectType'},
+				objectId : { type : 's'   },
+				url : { type : 's'   }
             }
         );
         return result;

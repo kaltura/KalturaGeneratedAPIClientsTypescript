@@ -23,8 +23,8 @@ export class KalturaDispatchEventNotificationObjectTask extends KalturaObjectTas
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDispatchEventNotificationObjectTask' },
-				eventNotificationTemplateId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaDispatchEventNotificationObjectTask'  },
+				eventNotificationTemplateId : { type : 'n'   }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaModerationFlagListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaModerationFlagListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaModerationFlag'}
+                objectType : { type : 'c' , default : 'KalturaModerationFlagListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaModerationFlag, subType : 'KalturaModerationFlag'}
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaValue extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaValue' },
-				description : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaValue'  },
+				description : { type : 's'   }
             }
         );
         return result;

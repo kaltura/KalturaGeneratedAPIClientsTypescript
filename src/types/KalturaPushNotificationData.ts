@@ -24,9 +24,9 @@ export class KalturaPushNotificationData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPushNotificationData' },
-				key : { type : 's'  , readOnly : true},
-				url : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaPushNotificationData'  },
+				key : { type : 's'  , readOnly : true },
+				url : { type : 's'  , readOnly : true }
             }
         );
         return result;

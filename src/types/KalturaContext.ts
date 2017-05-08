@@ -23,7 +23,7 @@ export class KalturaContext extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaContext' }
+                objectType : { type : 'c' , default : 'KalturaContext'  }
             }
         );
         return result;

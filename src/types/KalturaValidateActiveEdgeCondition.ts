@@ -23,8 +23,8 @@ export class KalturaValidateActiveEdgeCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaValidateActiveEdgeCondition' },
-				edgeServerIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaValidateActiveEdgeCondition'  },
+				edgeServerIds : { type : 's'   }
             }
         );
         return result;

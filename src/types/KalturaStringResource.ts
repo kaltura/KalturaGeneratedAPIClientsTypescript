@@ -25,8 +25,8 @@ export class KalturaStringResource extends KalturaContentResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStringResource' },
-				content : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaStringResource'  },
+				content : { type : 's'   }
             }
         );
         return result;

@@ -24,7 +24,7 @@ export class PartnerGetUsageAction extends KalturaRequest<KalturaPartnerUsage> {
 
     constructor(data? : PartnerGetUsageActionArgs)
     {
-        super(data, 'o', 'KalturaPartnerUsage');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartnerUsage', responseConstructor : KalturaPartnerUsage  });
         if (typeof this.month === 'undefined') this.month = 1;
     }
 
@@ -34,11 +34,11 @@ export class PartnerGetUsageAction extends KalturaRequest<KalturaPartnerUsage> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'getUsage' },
-				year : { type : 'n'  },
-				month : { type : 'n'  },
-				resolution : { type : 'es'  , subType : 'KalturaReportInterval'}
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'getUsage'  },
+				year : { type : 'n'   },
+				month : { type : 'n'   },
+				resolution : { type : 'es'   , subType : 'KalturaReportInterval'}
             }
         );
         return result;

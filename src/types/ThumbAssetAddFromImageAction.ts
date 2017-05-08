@@ -17,7 +17,7 @@ export class ThumbAssetAddFromImageAction extends KalturaUploadRequest<KalturaTh
 
     constructor(data : ThumbAssetAddFromImageActionArgs)
     {
-        super(data, 'o', 'KalturaThumbAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaThumbAsset', responseConstructor : KalturaThumbAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,10 +26,10 @@ export class ThumbAssetAddFromImageAction extends KalturaUploadRequest<KalturaTh
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'addFromImage' },
-				entryId : { type : 's'  },
-				fileData : { type : 'f'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'addFromImage'  },
+				entryId : { type : 's'   },
+				fileData : { type : 'f'   }
             }
         );
         return result;

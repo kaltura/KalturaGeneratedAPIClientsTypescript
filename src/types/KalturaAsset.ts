@@ -40,21 +40,21 @@ export class KalturaAsset extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAsset' },
-				id : { type : 's'  , readOnly : true},
-				entryId : { type : 's'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				version : { type : 'n'  , readOnly : true},
-				size : { type : 'n'  , readOnly : true},
-				tags : { type : 's'  },
-				fileExt : { type : 's'  },
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				deletedAt : { type : 'd'  , readOnly : true},
-				description : { type : 's'  , readOnly : true},
-				partnerData : { type : 's'  },
-				partnerDescription : { type : 's'  },
-				actualSourceAssetParamsIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAsset'  },
+				id : { type : 's'  , readOnly : true },
+				entryId : { type : 's'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				version : { type : 'n'  , readOnly : true },
+				size : { type : 'n'  , readOnly : true },
+				tags : { type : 's'   },
+				fileExt : { type : 's'   },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				deletedAt : { type : 'd'  , readOnly : true },
+				description : { type : 's'  , readOnly : true },
+				partnerData : { type : 's'   },
+				partnerDescription : { type : 's'   },
+				actualSourceAssetParamsIds : { type : 's'   }
             }
         );
         return result;

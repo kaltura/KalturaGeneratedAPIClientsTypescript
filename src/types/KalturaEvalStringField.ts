@@ -25,8 +25,8 @@ export class KalturaEvalStringField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEvalStringField' },
-				code : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaEvalStringField'  },
+				code : { type : 's'   }
             }
         );
         return result;

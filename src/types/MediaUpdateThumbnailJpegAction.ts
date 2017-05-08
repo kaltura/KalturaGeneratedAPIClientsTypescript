@@ -19,7 +19,7 @@ export class MediaUpdateThumbnailJpegAction extends KalturaUploadRequest<Kaltura
 
     constructor(data : MediaUpdateThumbnailJpegActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MediaUpdateThumbnailJpegAction extends KalturaUploadRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'updateThumbnailJpeg' },
-				entryId : { type : 's'  },
-				fileData : { type : 'f'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'updateThumbnailJpeg'  },
+				entryId : { type : 's'   },
+				fileData : { type : 'f'   }
             }
         );
         return result;

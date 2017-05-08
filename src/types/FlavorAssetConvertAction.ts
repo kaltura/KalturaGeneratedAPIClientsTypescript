@@ -21,7 +21,7 @@ export class FlavorAssetConvertAction extends KalturaRequest<void> {
 
     constructor(data : FlavorAssetConvertActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class FlavorAssetConvertAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'convert' },
-				entryId : { type : 's'  },
-				flavorParamsId : { type : 'n'  },
-				priority : { type : 'n'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'convert'  },
+				entryId : { type : 's'   },
+				flavorParamsId : { type : 'n'   },
+				priority : { type : 'n'   }
             }
         );
         return result;

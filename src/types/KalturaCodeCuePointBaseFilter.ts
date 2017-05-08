@@ -45,19 +45,19 @@ export class KalturaCodeCuePointBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCodeCuePointBaseFilter' },
-				codeLike : { type : 's'  },
-				codeMultiLikeOr : { type : 's'  },
-				codeMultiLikeAnd : { type : 's'  },
-				codeEqual : { type : 's'  },
-				codeIn : { type : 's'  },
-				descriptionLike : { type : 's'  },
-				descriptionMultiLikeOr : { type : 's'  },
-				descriptionMultiLikeAnd : { type : 's'  },
-				endTimeGreaterThanOrEqual : { type : 'n'  },
-				endTimeLessThanOrEqual : { type : 'n'  },
-				durationGreaterThanOrEqual : { type : 'n'  },
-				durationLessThanOrEqual : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaCodeCuePointBaseFilter'  },
+				codeLike : { type : 's'   },
+				codeMultiLikeOr : { type : 's'   },
+				codeMultiLikeAnd : { type : 's'   },
+				codeEqual : { type : 's'   },
+				codeIn : { type : 's'   },
+				descriptionLike : { type : 's'   },
+				descriptionMultiLikeOr : { type : 's'   },
+				descriptionMultiLikeAnd : { type : 's'   },
+				endTimeGreaterThanOrEqual : { type : 'n'   },
+				endTimeLessThanOrEqual : { type : 'n'   },
+				durationGreaterThanOrEqual : { type : 'n'   },
+				durationLessThanOrEqual : { type : 'n'   }
             }
         );
         return result;

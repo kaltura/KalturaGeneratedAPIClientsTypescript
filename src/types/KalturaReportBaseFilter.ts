@@ -33,13 +33,13 @@ export class KalturaReportBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaReportBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   }
             }
         );
         return result;

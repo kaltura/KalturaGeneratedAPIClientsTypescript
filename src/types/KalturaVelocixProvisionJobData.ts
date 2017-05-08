@@ -29,10 +29,10 @@ export class KalturaVelocixProvisionJobData extends KalturaProvisionJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVelocixProvisionJobData' },
-				provisioningParams : { type : 'a'  , subType : 'KalturaKeyValue'},
-				userName : { type : 's'  },
-				password : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaVelocixProvisionJobData'  },
+				provisioningParams : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				userName : { type : 's'   },
+				password : { type : 's'   }
             }
         );
         return result;

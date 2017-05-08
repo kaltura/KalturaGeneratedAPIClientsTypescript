@@ -19,7 +19,7 @@ export class ShortLinkUpdateAction extends KalturaRequest<KalturaShortLink> {
 
     constructor(data : ShortLinkUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaShortLink');
+        super(data, {responseType : 'o', responseSubType : 'KalturaShortLink', responseConstructor : KalturaShortLink  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class ShortLinkUpdateAction extends KalturaRequest<KalturaShortLink> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'shortlink_shortlink' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				shortLink : { type : 'o'  , subType : 'KalturaShortLink'}
+                service : { type : 'c' , default : 'shortlink_shortlink'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				shortLink : { type : 'o'   , fallbackConstructor :  KalturaShortLink, subType : 'KalturaShortLink'}
             }
         );
         return result;

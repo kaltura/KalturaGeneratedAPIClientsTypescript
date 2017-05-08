@@ -21,7 +21,7 @@ export class DataListAction extends KalturaRequest<KalturaDataListResponse> {
 
     constructor(data? : DataListActionArgs)
     {
-        super(data, 'o', 'KalturaDataListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDataListResponse', responseConstructor : KalturaDataListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class DataListAction extends KalturaRequest<KalturaDataListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaDataEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'data'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaDataEntryFilter, subType : 'KalturaDataEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

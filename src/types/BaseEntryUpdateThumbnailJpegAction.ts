@@ -19,7 +19,7 @@ export class BaseEntryUpdateThumbnailJpegAction extends KalturaUploadRequest<Kal
 
     constructor(data : BaseEntryUpdateThumbnailJpegActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class BaseEntryUpdateThumbnailJpegAction extends KalturaUploadRequest<Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'updateThumbnailJpeg' },
-				entryId : { type : 's'  },
-				fileData : { type : 'f'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'updateThumbnailJpeg'  },
+				entryId : { type : 's'   },
+				fileData : { type : 'f'   }
             }
         );
         return result;

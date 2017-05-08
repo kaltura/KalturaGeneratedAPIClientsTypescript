@@ -22,7 +22,7 @@ export class BaseEntryUpdateThumbnailFromSourceEntryAction extends KalturaReques
 
     constructor(data : BaseEntryUpdateThumbnailFromSourceEntryActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class BaseEntryUpdateThumbnailFromSourceEntryAction extends KalturaReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'updateThumbnailFromSourceEntry' },
-				entryId : { type : 's'  },
-				sourceEntryId : { type : 's'  },
-				timeOffset : { type : 'n'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'updateThumbnailFromSourceEntry'  },
+				entryId : { type : 's'   },
+				sourceEntryId : { type : 's'   },
+				timeOffset : { type : 'n'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaCaptionAssetFilter extends KalturaCaptionAssetBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionAssetFilter' }
+                objectType : { type : 'c' , default : 'KalturaCaptionAssetFilter'  }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class UiConfAddAction extends KalturaRequest<KalturaUiConf> {
 
     constructor(data : UiConfAddActionArgs)
     {
-        super(data, 'o', 'KalturaUiConf');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUiConf', responseConstructor : KalturaUiConf  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UiConfAddAction extends KalturaRequest<KalturaUiConf> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf' },
-				action : { type : 'c' , default : 'add' },
-				uiConf : { type : 'o'  , subType : 'KalturaUiConf'}
+                service : { type : 'c' , default : 'uiconf'  },
+				action : { type : 'c' , default : 'add'  },
+				uiConf : { type : 'o'   , fallbackConstructor :  KalturaUiConf, subType : 'KalturaUiConf'}
             }
         );
         return result;

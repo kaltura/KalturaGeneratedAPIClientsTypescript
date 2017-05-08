@@ -17,7 +17,7 @@ export class MediaApproveReplaceAction extends KalturaRequest<KalturaMediaEntry>
 
     constructor(data : MediaApproveReplaceActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class MediaApproveReplaceAction extends KalturaRequest<KalturaMediaEntry>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'approveReplace' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'approveReplace'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

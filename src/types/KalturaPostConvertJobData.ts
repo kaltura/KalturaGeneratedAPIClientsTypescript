@@ -35,14 +35,14 @@ export class KalturaPostConvertJobData extends KalturaConvartableJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPostConvertJobData' },
-				flavorAssetId : { type : 's'  },
-				createThumb : { type : 'b'  },
-				thumbPath : { type : 's'  },
-				thumbOffset : { type : 'n'  },
-				thumbHeight : { type : 'n'  },
-				thumbBitrate : { type : 'n'  },
-				customData : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaPostConvertJobData'  },
+				flavorAssetId : { type : 's'   },
+				createThumb : { type : 'b'   },
+				thumbPath : { type : 's'   },
+				thumbOffset : { type : 'n'   },
+				thumbHeight : { type : 'n'   },
+				thumbBitrate : { type : 'n'   },
+				customData : { type : 's'   }
             }
         );
         return result;

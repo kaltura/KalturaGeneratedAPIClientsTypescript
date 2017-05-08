@@ -27,7 +27,7 @@ export class UserUpdateLoginDataAction extends KalturaRequest<void> {
 
     constructor(data : UserUpdateLoginDataActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -36,14 +36,14 @@ export class UserUpdateLoginDataAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'updateLoginData' },
-				oldLoginId : { type : 's'  },
-				password : { type : 's'  },
-				newLoginId : { type : 's'  },
-				newPassword : { type : 's'  },
-				newFirstName : { type : 's'  },
-				newLastName : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'updateLoginData'  },
+				oldLoginId : { type : 's'   },
+				password : { type : 's'   },
+				newLoginId : { type : 's'   },
+				newPassword : { type : 's'   },
+				newFirstName : { type : 's'   },
+				newLastName : { type : 's'   }
             }
         );
         return result;

@@ -39,16 +39,16 @@ export class KalturaVirusScanProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVirusScanProfile' },
-				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				name : { type : 's'  },
-				status : { type : 'en'  , subType : 'KalturaVirusScanProfileStatus'},
-				engineType : { type : 'es'  , subType : 'KalturaVirusScanEngineType'},
-				entryFilter : { type : 'o'  , subType : 'KalturaBaseEntryFilter'},
-				actionIfInfected : { type : 'en'  , subType : 'KalturaVirusFoundAction'}
+                objectType : { type : 'c' , default : 'KalturaVirusScanProfile'  },
+				id : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				name : { type : 's'   },
+				status : { type : 'en'   , subType : 'KalturaVirusScanProfileStatus'},
+				engineType : { type : 'es'   , subType : 'KalturaVirusScanEngineType'},
+				entryFilter : { type : 'o'   , fallbackConstructor :  KalturaBaseEntryFilter, subType : 'KalturaBaseEntryFilter'},
+				actionIfInfected : { type : 'en'   , subType : 'KalturaVirusFoundAction'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaAccessControlLimitThumbnailCaptureAction extends KalturaRule
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlLimitThumbnailCaptureAction' }
+                objectType : { type : 'c' , default : 'KalturaAccessControlLimitThumbnailCaptureAction'  }
             }
         );
         return result;

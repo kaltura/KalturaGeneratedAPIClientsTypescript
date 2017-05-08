@@ -19,7 +19,7 @@ export class MetadataUpdateFromXSLAction extends KalturaUploadRequest<KalturaMet
 
     constructor(data : MetadataUpdateFromXSLActionArgs)
     {
-        super(data, 'o', 'KalturaMetadata');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadata', responseConstructor : KalturaMetadata  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MetadataUpdateFromXSLAction extends KalturaUploadRequest<KalturaMet
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata' },
-				action : { type : 'c' , default : 'updateFromXSL' },
-				id : { type : 'n'  },
-				xslFile : { type : 'f'  }
+                service : { type : 'c' , default : 'metadata_metadata'  },
+				action : { type : 'c' , default : 'updateFromXSL'  },
+				id : { type : 'n'   },
+				xslFile : { type : 'f'   }
             }
         );
         return result;

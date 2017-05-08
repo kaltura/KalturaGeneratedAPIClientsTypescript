@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileVodPackagerPlayServer extends KalturaDelivery
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileVodPackagerPlayServer' },
-				adStitchingEnabled : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileVodPackagerPlayServer'  },
+				adStitchingEnabled : { type : 'b'   }
             }
         );
         return result;

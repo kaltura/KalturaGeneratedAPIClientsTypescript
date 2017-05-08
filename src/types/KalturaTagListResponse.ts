@@ -25,8 +25,8 @@ export class KalturaTagListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTagListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaTag'}
+                objectType : { type : 'c' , default : 'KalturaTagListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaTag, subType : 'KalturaTag'}
             }
         );
         return result;

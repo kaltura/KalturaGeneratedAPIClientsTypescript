@@ -37,15 +37,15 @@ export class KalturaAccessControlProfileBaseFilter extends KalturaRelatedFilter 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlProfileBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaAccessControlProfileBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

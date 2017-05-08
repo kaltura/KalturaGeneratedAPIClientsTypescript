@@ -20,7 +20,7 @@ export class EventNotificationTemplateAddAction extends KalturaRequest<KalturaEv
 
     constructor(data : EventNotificationTemplateAddActionArgs)
     {
-        super(data, 'o', 'KalturaEventNotificationTemplate');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEventNotificationTemplate', responseConstructor : KalturaEventNotificationTemplate  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,9 +29,9 @@ export class EventNotificationTemplateAddAction extends KalturaRequest<KalturaEv
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'add' },
-				eventNotificationTemplate : { type : 'o'  , subType : 'KalturaEventNotificationTemplate'}
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'add'  },
+				eventNotificationTemplate : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate'}
             }
         );
         return result;

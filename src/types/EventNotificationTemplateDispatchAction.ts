@@ -20,7 +20,7 @@ export class EventNotificationTemplateDispatchAction extends KalturaRequest<numb
 
     constructor(data : EventNotificationTemplateDispatchActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class EventNotificationTemplateDispatchAction extends KalturaRequest<numb
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'dispatch' },
-				id : { type : 'n'  },
-				scope : { type : 'o'  , subType : 'KalturaEventNotificationScope'}
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'dispatch'  },
+				id : { type : 'n'   },
+				scope : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationScope, subType : 'KalturaEventNotificationScope'}
             }
         );
         return result;

@@ -45,22 +45,22 @@ export class KalturaMetadataProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataProfile' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				metadataObjectType : { type : 'es'  , subType : 'KalturaMetadataObjectType'},
-				version : { type : 'n'  , readOnly : true},
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaMetadataProfileStatus'},
-				xsd : { type : 's'  , readOnly : true},
-				views : { type : 's'  , readOnly : true},
-				xslt : { type : 's'  , readOnly : true},
-				createMode : { type : 'en'  , subType : 'KalturaMetadataProfileCreateMode'},
-				disableReIndexing : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaMetadataProfile'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				metadataObjectType : { type : 'es'   , subType : 'KalturaMetadataObjectType'},
+				version : { type : 'n'  , readOnly : true },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaMetadataProfileStatus'},
+				xsd : { type : 's'  , readOnly : true },
+				views : { type : 's'  , readOnly : true },
+				xslt : { type : 's'  , readOnly : true },
+				createMode : { type : 'en'   , subType : 'KalturaMetadataProfileCreateMode'},
+				disableReIndexing : { type : 'b'   }
             }
         );
         return result;

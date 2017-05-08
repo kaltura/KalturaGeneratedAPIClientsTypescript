@@ -19,7 +19,7 @@ export class MediaAddFromRecordedWebcamAction extends KalturaRequest<KalturaMedi
 
     constructor(data : MediaAddFromRecordedWebcamActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MediaAddFromRecordedWebcamAction extends KalturaRequest<KalturaMedi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'addFromRecordedWebcam' },
-				mediaEntry : { type : 'o'  , subType : 'KalturaMediaEntry'},
-				webcamTokenId : { type : 's'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'addFromRecordedWebcam'  },
+				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
+				webcamTokenId : { type : 's'   }
             }
         );
         return result;

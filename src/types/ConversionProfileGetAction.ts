@@ -17,7 +17,7 @@ export class ConversionProfileGetAction extends KalturaRequest<KalturaConversion
 
     constructor(data : ConversionProfileGetActionArgs)
     {
-        super(data, 'o', 'KalturaConversionProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaConversionProfile', responseConstructor : KalturaConversionProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ConversionProfileGetAction extends KalturaRequest<KalturaConversion
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofile' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'conversionprofile'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

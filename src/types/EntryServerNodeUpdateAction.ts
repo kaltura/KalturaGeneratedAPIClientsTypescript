@@ -17,7 +17,7 @@ export class EntryServerNodeUpdateAction extends KalturaRequest<KalturaEntryServ
 
     constructor(data : EntryServerNodeUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaEntryServerNode');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEntryServerNode', responseConstructor : KalturaEntryServerNode  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,10 +26,10 @@ export class EntryServerNodeUpdateAction extends KalturaRequest<KalturaEntryServ
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'entryservernode' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 'n'  },
-				entryServerNode : { type : 'o'  , subType : 'KalturaEntryServerNode'}
+                service : { type : 'c' , default : 'entryservernode'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 'n'   },
+				entryServerNode : { type : 'o'   , fallbackConstructor :  KalturaEntryServerNode, subType : 'KalturaEntryServerNode'}
             }
         );
         return result;

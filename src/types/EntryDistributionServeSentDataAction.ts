@@ -20,7 +20,7 @@ export class EntryDistributionServeSentDataAction extends KalturaRequest<string>
 
     constructor(data : EntryDistributionServeSentDataActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class EntryDistributionServeSentDataAction extends KalturaRequest<string>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution' },
-				action : { type : 'c' , default : 'serveSentData' },
-				id : { type : 'n'  },
-				actionType : { type : 'en'  , subType : 'KalturaDistributionAction'}
+                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
+				action : { type : 'c' , default : 'serveSentData'  },
+				id : { type : 'n'   },
+				actionType : { type : 'en'   , subType : 'KalturaDistributionAction'}
             }
         );
         return result;

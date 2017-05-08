@@ -21,7 +21,7 @@ export class DocumentsServeAction extends KalturaRequest<string> {
 
     constructor(data : DocumentsServeActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
         if (typeof this.forceProxy === 'undefined') this.forceProxy = false;
     }
 
@@ -31,11 +31,11 @@ export class DocumentsServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'serve' },
-				entryId : { type : 's'  },
-				flavorAssetId : { type : 's'  },
-				forceProxy : { type : 'b'  }
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'serve'  },
+				entryId : { type : 's'   },
+				flavorAssetId : { type : 's'   },
+				forceProxy : { type : 'b'   }
             }
         );
         return result;

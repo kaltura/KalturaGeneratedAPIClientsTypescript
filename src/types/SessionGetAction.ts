@@ -17,7 +17,7 @@ export class SessionGetAction extends KalturaRequest<KalturaSessionInfo> {
 
     constructor(data? : SessionGetActionArgs)
     {
-        super(data, 'o', 'KalturaSessionInfo');
+        super(data, {responseType : 'o', responseSubType : 'KalturaSessionInfo', responseConstructor : KalturaSessionInfo  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class SessionGetAction extends KalturaRequest<KalturaSessionInfo> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session' },
-				action : { type : 'c' , default : 'get' },
-				session : { type : 's'  }
+                service : { type : 'c' , default : 'session'  },
+				action : { type : 'c' , default : 'get'  },
+				session : { type : 's'   }
             }
         );
         return result;

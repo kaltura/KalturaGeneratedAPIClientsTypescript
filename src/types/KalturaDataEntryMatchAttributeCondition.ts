@@ -27,8 +27,8 @@ export class KalturaDataEntryMatchAttributeCondition extends KalturaSearchMatchA
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDataEntryMatchAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaDataEntryMatchAttribute'}
+                objectType : { type : 'c' , default : 'KalturaDataEntryMatchAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaDataEntryMatchAttribute'}
             }
         );
         return result;

@@ -30,10 +30,10 @@ export class KalturaQuickPlayDistributionJobProviderData extends KalturaConfigur
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionJobProviderData' },
-				xml : { type : 's'  },
-				videoFilePaths : { type : 'a'  , subType : 'KalturaString'},
-				thumbnailFilePaths : { type : 'a'  , subType : 'KalturaString'}
+                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionJobProviderData'  },
+				xml : { type : 's'   },
+				videoFilePaths : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				thumbnailFilePaths : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'}
             }
         );
         return result;

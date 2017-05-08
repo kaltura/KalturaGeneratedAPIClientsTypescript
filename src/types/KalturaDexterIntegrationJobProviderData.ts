@@ -31,12 +31,12 @@ export class KalturaDexterIntegrationJobProviderData extends KalturaIntegrationJ
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDexterIntegrationJobProviderData' },
-				metadataProfileId : { type : 'n'  },
-				transcriptAssetId : { type : 's'  },
-				entryId : { type : 's'  },
-				voicebaseApiKey : { type : 's'  },
-				voicebaseApiPassword : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDexterIntegrationJobProviderData'  },
+				metadataProfileId : { type : 'n'   },
+				transcriptAssetId : { type : 's'   },
+				entryId : { type : 's'   },
+				voicebaseApiKey : { type : 's'   },
+				voicebaseApiPassword : { type : 's'   }
             }
         );
         return result;

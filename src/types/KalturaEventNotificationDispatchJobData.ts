@@ -27,9 +27,9 @@ export class KalturaEventNotificationDispatchJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationDispatchJobData' },
-				templateId : { type : 'n'  },
-				contentParameters : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaEventNotificationDispatchJobData'  },
+				templateId : { type : 'n'   },
+				contentParameters : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

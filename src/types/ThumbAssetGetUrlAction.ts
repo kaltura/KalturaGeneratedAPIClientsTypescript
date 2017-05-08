@@ -22,7 +22,7 @@ export class ThumbAssetGetUrlAction extends KalturaRequest<string> {
 
     constructor(data : ThumbAssetGetUrlActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class ThumbAssetGetUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'getUrl' },
-				id : { type : 's'  },
-				storageId : { type : 'n'  },
-				thumbParams : { type : 'o'  , subType : 'KalturaThumbParams'}
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'getUrl'  },
+				id : { type : 's'   },
+				storageId : { type : 'n'   },
+				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'}
             }
         );
         return result;

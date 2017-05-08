@@ -27,8 +27,8 @@ export class KalturaPlayableEntryMatchAttributeCondition extends KalturaSearchMa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayableEntryMatchAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaPlayableEntryMatchAttribute'}
+                objectType : { type : 'c' , default : 'KalturaPlayableEntryMatchAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaPlayableEntryMatchAttribute'}
             }
         );
         return result;

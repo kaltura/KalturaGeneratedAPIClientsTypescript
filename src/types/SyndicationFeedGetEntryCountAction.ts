@@ -17,7 +17,7 @@ export class SyndicationFeedGetEntryCountAction extends KalturaRequest<KalturaSy
 
     constructor(data : SyndicationFeedGetEntryCountActionArgs)
     {
-        super(data, 'o', 'KalturaSyndicationFeedEntryCount');
+        super(data, {responseType : 'o', responseSubType : 'KalturaSyndicationFeedEntryCount', responseConstructor : KalturaSyndicationFeedEntryCount  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class SyndicationFeedGetEntryCountAction extends KalturaRequest<KalturaSy
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'syndicationfeed' },
-				action : { type : 'c' , default : 'getEntryCount' },
-				feedId : { type : 's'  }
+                service : { type : 'c' , default : 'syndicationfeed'  },
+				action : { type : 'c' , default : 'getEntryCount'  },
+				feedId : { type : 's'   }
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class BaseEntryGetAction extends KalturaRequest<KalturaBaseEntry> {
 
     constructor(data : BaseEntryGetActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
         if (typeof this.version === 'undefined') this.version = -1;
     }
 
@@ -29,10 +29,10 @@ export class BaseEntryGetAction extends KalturaRequest<KalturaBaseEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'get' },
-				entryId : { type : 's'  },
-				version : { type : 'n'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'get'  },
+				entryId : { type : 's'   },
+				version : { type : 'n'   }
             }
         );
         return result;

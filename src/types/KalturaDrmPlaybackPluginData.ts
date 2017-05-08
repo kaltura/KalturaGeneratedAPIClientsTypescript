@@ -25,9 +25,9 @@ export class KalturaDrmPlaybackPluginData extends KalturaPluginData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmPlaybackPluginData' },
-				scheme : { type : 's'  },
-				licenseURL : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDrmPlaybackPluginData'  },
+				scheme : { type : 's'   },
+				licenseURL : { type : 's'   }
             }
         );
         return result;

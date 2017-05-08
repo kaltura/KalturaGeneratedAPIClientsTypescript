@@ -23,7 +23,7 @@ export class KalturaBaseRestriction extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseRestriction' }
+                objectType : { type : 'c' , default : 'KalturaBaseRestriction'  }
             }
         );
         return result;

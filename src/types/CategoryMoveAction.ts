@@ -20,7 +20,7 @@ export class CategoryMoveAction extends KalturaRequest<KalturaCategoryListRespon
 
     constructor(data : CategoryMoveActionArgs)
     {
-        super(data, 'o', 'KalturaCategoryListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryListResponse', responseConstructor : KalturaCategoryListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class CategoryMoveAction extends KalturaRequest<KalturaCategoryListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category' },
-				action : { type : 'c' , default : 'move' },
-				categoryIds : { type : 's'  },
-				targetCategoryParentId : { type : 'n'  }
+                service : { type : 'c' , default : 'category'  },
+				action : { type : 'c' , default : 'move'  },
+				categoryIds : { type : 's'   },
+				targetCategoryParentId : { type : 'n'   }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class WidgetAddAction extends KalturaRequest<KalturaWidget> {
 
     constructor(data : WidgetAddActionArgs)
     {
-        super(data, 'o', 'KalturaWidget');
+        super(data, {responseType : 'o', responseSubType : 'KalturaWidget', responseConstructor : KalturaWidget  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class WidgetAddAction extends KalturaRequest<KalturaWidget> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'widget' },
-				action : { type : 'c' , default : 'add' },
-				widget : { type : 'o'  , subType : 'KalturaWidget'}
+                service : { type : 'c' , default : 'widget'  },
+				action : { type : 'c' , default : 'add'  },
+				widget : { type : 'o'   , fallbackConstructor :  KalturaWidget, subType : 'KalturaWidget'}
             }
         );
         return result;

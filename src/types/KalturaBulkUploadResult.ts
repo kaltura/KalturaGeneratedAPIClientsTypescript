@@ -57,23 +57,23 @@ export class KalturaBulkUploadResult extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResult' },
-				id : { type : 'n'  , readOnly : true},
-				bulkUploadJobId : { type : 'n'  },
-				lineIndex : { type : 'n'  },
-				partnerId : { type : 'n'  },
-				status : { type : 'es'  , subType : 'KalturaBulkUploadResultStatus'},
-				action : { type : 'es'  , subType : 'KalturaBulkUploadAction'},
-				objectId : { type : 's'  },
-				objectStatus : { type : 'n'  },
-				bulkUploadResultObjectType : { type : 'es'  , subType : 'KalturaBulkUploadObjectType'},
-				rowData : { type : 's'  },
-				partnerData : { type : 's'  },
-				objectErrorDescription : { type : 's'  },
-				pluginsData : { type : 'a'  , subType : 'KalturaBulkUploadPluginData'},
-				errorDescription : { type : 's'  },
-				errorCode : { type : 's'  },
-				errorType : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadResult'  },
+				id : { type : 'n'  , readOnly : true },
+				bulkUploadJobId : { type : 'n'   },
+				lineIndex : { type : 'n'   },
+				partnerId : { type : 'n'   },
+				status : { type : 'es'   , subType : 'KalturaBulkUploadResultStatus'},
+				action : { type : 'es'   , subType : 'KalturaBulkUploadAction'},
+				objectId : { type : 's'   },
+				objectStatus : { type : 'n'   },
+				bulkUploadResultObjectType : { type : 'es'   , subType : 'KalturaBulkUploadObjectType'},
+				rowData : { type : 's'   },
+				partnerData : { type : 's'   },
+				objectErrorDescription : { type : 's'   },
+				pluginsData : { type : 'a'   , fallbackConstructor :  KalturaBulkUploadPluginData, subType : 'KalturaBulkUploadPluginData'},
+				errorDescription : { type : 's'   },
+				errorCode : { type : 's'   },
+				errorType : { type : 'n'   }
             }
         );
         return result;

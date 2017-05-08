@@ -18,7 +18,7 @@ export class SchemaServeAction extends KalturaRequest<string> {
 
     constructor(data : SchemaServeActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class SchemaServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schema' },
-				action : { type : 'c' , default : 'serve' },
-				type : { type : 'es'  , subType : 'KalturaSchemaType'}
+                service : { type : 'c' , default : 'schema'  },
+				action : { type : 'c' , default : 'serve'  },
+				type : { type : 'es'   , subType : 'KalturaSchemaType'}
             }
         );
         return result;

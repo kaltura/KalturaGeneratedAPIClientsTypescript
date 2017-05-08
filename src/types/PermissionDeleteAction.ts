@@ -17,7 +17,7 @@ export class PermissionDeleteAction extends KalturaRequest<KalturaPermission> {
 
     constructor(data : PermissionDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaPermission');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPermission', responseConstructor : KalturaPermission  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class PermissionDeleteAction extends KalturaRequest<KalturaPermission> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permission' },
-				action : { type : 'c' , default : 'delete' },
-				permissionName : { type : 's'  }
+                service : { type : 'c' , default : 'permission'  },
+				action : { type : 'c' , default : 'delete'  },
+				permissionName : { type : 's'   }
             }
         );
         return result;

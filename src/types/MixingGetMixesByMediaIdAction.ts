@@ -17,7 +17,7 @@ export class MixingGetMixesByMediaIdAction extends KalturaRequest<KalturaMixEntr
 
     constructor(data : MixingGetMixesByMediaIdActionArgs)
     {
-        super(data, 'a', 'KalturaMixEntry');
+        super(data, {responseType : 'a', responseSubType : 'KalturaMixEntry', responseConstructor : KalturaMixEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class MixingGetMixesByMediaIdAction extends KalturaRequest<KalturaMixEntr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing' },
-				action : { type : 'c' , default : 'getMixesByMediaId' },
-				mediaEntryId : { type : 's'  }
+                service : { type : 'c' , default : 'mixing'  },
+				action : { type : 'c' , default : 'getMixesByMediaId'  },
+				mediaEntryId : { type : 's'   }
             }
         );
         return result;

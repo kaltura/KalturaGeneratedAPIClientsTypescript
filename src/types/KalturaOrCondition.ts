@@ -24,8 +24,8 @@ export class KalturaOrCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaOrCondition' },
-				conditions : { type : 'a'  , subType : 'KalturaCondition'}
+                objectType : { type : 'c' , default : 'KalturaOrCondition'  },
+				conditions : { type : 'a'   , fallbackConstructor :  KalturaCondition, subType : 'KalturaCondition'}
             }
         );
         return result;

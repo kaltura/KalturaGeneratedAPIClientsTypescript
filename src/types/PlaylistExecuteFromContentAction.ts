@@ -25,7 +25,7 @@ export class PlaylistExecuteFromContentAction extends KalturaRequest<KalturaBase
 
     constructor(data : PlaylistExecuteFromContentActionArgs)
     {
-        super(data, 'a', 'KalturaBaseEntry');
+        super(data, {responseType : 'a', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class PlaylistExecuteFromContentAction extends KalturaRequest<KalturaBase
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist' },
-				action : { type : 'c' , default : 'executeFromContent' },
-				playlistType : { type : 'en'  , subType : 'KalturaPlaylistType'},
-				playlistContent : { type : 's'  },
-				detailed : { type : 's'  },
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'playlist'  },
+				action : { type : 'c' , default : 'executeFromContent'  },
+				playlistType : { type : 'en'   , subType : 'KalturaPlaylistType'},
+				playlistContent : { type : 's'   },
+				detailed : { type : 's'   },
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

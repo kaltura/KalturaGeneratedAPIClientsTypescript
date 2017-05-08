@@ -15,7 +15,7 @@ export class SystemPingAction extends KalturaRequest<boolean> {
 
     constructor(data? : SystemPingActionArgs)
     {
-        super(data, 'b', '');
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,8 +24,8 @@ export class SystemPingAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'system' },
-				action : { type : 'c' , default : 'ping' }
+                service : { type : 'c' , default : 'system'  },
+				action : { type : 'c' , default : 'ping'  }
             }
         );
         return result;

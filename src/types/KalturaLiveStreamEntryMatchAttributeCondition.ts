@@ -27,8 +27,8 @@ export class KalturaLiveStreamEntryMatchAttributeCondition extends KalturaSearch
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamEntryMatchAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaLiveStreamEntryMatchAttribute'}
+                objectType : { type : 'c' , default : 'KalturaLiveStreamEntryMatchAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaLiveStreamEntryMatchAttribute'}
             }
         );
         return result;

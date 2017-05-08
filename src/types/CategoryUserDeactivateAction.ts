@@ -19,7 +19,7 @@ export class CategoryUserDeactivateAction extends KalturaRequest<KalturaCategory
 
     constructor(data : CategoryUserDeactivateActionArgs)
     {
-        super(data, 'o', 'KalturaCategoryUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryUser', responseConstructor : KalturaCategoryUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class CategoryUserDeactivateAction extends KalturaRequest<KalturaCategory
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser' },
-				action : { type : 'c' , default : 'deactivate' },
-				categoryId : { type : 'n'  },
-				userId : { type : 's'  }
+                service : { type : 'c' , default : 'categoryuser'  },
+				action : { type : 'c' , default : 'deactivate'  },
+				categoryId : { type : 'n'   },
+				userId : { type : 's'   }
             }
         );
         return result;

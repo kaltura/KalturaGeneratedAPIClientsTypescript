@@ -21,7 +21,7 @@ export class CategoryUserAddFromBulkUploadAction extends KalturaUploadRequest<Ka
 
     constructor(data : CategoryUserAddFromBulkUploadActionArgs)
     {
-        super(data, 'o', 'KalturaBulkUpload');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBulkUpload', responseConstructor : KalturaBulkUpload  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class CategoryUserAddFromBulkUploadAction extends KalturaUploadRequest<Ka
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser' },
-				action : { type : 'c' , default : 'addFromBulkUpload' },
-				fileData : { type : 'f'  },
-				bulkUploadData : { type : 'o'  , subType : 'KalturaBulkUploadJobData'},
-				bulkUploadCategoryUserData : { type : 'o'  , subType : 'KalturaBulkUploadCategoryUserData'}
+                service : { type : 'c' , default : 'categoryuser'  },
+				action : { type : 'c' , default : 'addFromBulkUpload'  },
+				fileData : { type : 'f'   },
+				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadJobData, subType : 'KalturaBulkUploadJobData'},
+				bulkUploadCategoryUserData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadCategoryUserData, subType : 'KalturaBulkUploadCategoryUserData'}
             }
         );
         return result;

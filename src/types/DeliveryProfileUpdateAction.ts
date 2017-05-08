@@ -19,7 +19,7 @@ export class DeliveryProfileUpdateAction extends KalturaRequest<KalturaDeliveryP
 
     constructor(data : DeliveryProfileUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaDeliveryProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDeliveryProfile', responseConstructor : KalturaDeliveryProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class DeliveryProfileUpdateAction extends KalturaRequest<KalturaDeliveryP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				delivery : { type : 'o'  , subType : 'KalturaDeliveryProfile'}
+                service : { type : 'c' , default : 'deliveryprofile'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				delivery : { type : 'o'   , fallbackConstructor :  KalturaDeliveryProfile, subType : 'KalturaDeliveryProfile'}
             }
         );
         return result;

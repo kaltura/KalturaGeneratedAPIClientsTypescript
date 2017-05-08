@@ -25,8 +25,8 @@ export class KalturaVirusScanProfileListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVirusScanProfileListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaVirusScanProfile'}
+                objectType : { type : 'c' , default : 'KalturaVirusScanProfileListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaVirusScanProfile, subType : 'KalturaVirusScanProfile'}
             }
         );
         return result;

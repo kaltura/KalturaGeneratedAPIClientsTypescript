@@ -23,8 +23,8 @@ export class KalturaLiveEntryScheduleResource extends KalturaScheduleResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntryScheduleResource' },
-				entryId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLiveEntryScheduleResource'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

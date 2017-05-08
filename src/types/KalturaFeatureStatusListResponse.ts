@@ -25,8 +25,8 @@ export class KalturaFeatureStatusListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFeatureStatusListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaFeatureStatus'}
+                objectType : { type : 'c' , default : 'KalturaFeatureStatusListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaFeatureStatus, subType : 'KalturaFeatureStatus'}
             }
         );
         return result;

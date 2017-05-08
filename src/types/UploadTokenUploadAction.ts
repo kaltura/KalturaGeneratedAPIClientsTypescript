@@ -36,7 +36,7 @@ export class UploadTokenUploadAction extends KalturaUploadRequest<KalturaUploadT
 
     constructor(data : UploadTokenUploadActionArgs)
     {
-        super(data, 'o', 'KalturaUploadToken');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUploadToken', responseConstructor : KalturaUploadToken  });
         if (typeof this.resume === 'undefined') this.resume = false;
 		if (typeof this.finalChunk === 'undefined') this.finalChunk = true;
 		if (typeof this.resumeAt === 'undefined') this.resumeAt = -1;
@@ -48,13 +48,13 @@ export class UploadTokenUploadAction extends KalturaUploadRequest<KalturaUploadT
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uploadtoken' },
-				action : { type : 'c' , default : 'upload' },
-				uploadTokenId : { type : 's'  },
-				fileData : { type : 'f'  },
-				resume : { type : 'b'  },
-				finalChunk : { type : 'b'  },
-				resumeAt : { type : 'n'  }
+                service : { type : 'c' , default : 'uploadtoken'  },
+				action : { type : 'c' , default : 'upload'  },
+				uploadTokenId : { type : 's'   },
+				fileData : { type : 'f'   },
+				resume : { type : 'b'   },
+				finalChunk : { type : 'b'   },
+				resumeAt : { type : 'n'   }
             }
         );
         return result;

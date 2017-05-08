@@ -26,9 +26,9 @@ export class KalturaLimitFlavorsRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLimitFlavorsRestriction' },
-				limitFlavorsRestrictionType : { type : 'en'  , subType : 'KalturaLimitFlavorsRestrictionType'},
-				flavorParamsIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLimitFlavorsRestriction'  },
+				limitFlavorsRestrictionType : { type : 'en'   , subType : 'KalturaLimitFlavorsRestrictionType'},
+				flavorParamsIds : { type : 's'   }
             }
         );
         return result;

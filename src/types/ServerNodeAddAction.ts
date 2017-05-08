@@ -17,7 +17,7 @@ export class ServerNodeAddAction extends KalturaRequest<KalturaServerNode> {
 
     constructor(data : ServerNodeAddActionArgs)
     {
-        super(data, 'o', 'KalturaServerNode');
+        super(data, {responseType : 'o', responseSubType : 'KalturaServerNode', responseConstructor : KalturaServerNode  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ServerNodeAddAction extends KalturaRequest<KalturaServerNode> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode' },
-				action : { type : 'c' , default : 'add' },
-				serverNode : { type : 'o'  , subType : 'KalturaServerNode'}
+                service : { type : 'c' , default : 'servernode'  },
+				action : { type : 'c' , default : 'add'  },
+				serverNode : { type : 'o'   , fallbackConstructor :  KalturaServerNode, subType : 'KalturaServerNode'}
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaDropFolderFileResource extends KalturaDataCenterContentResou
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderFileResource' },
-				dropFolderFileId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaDropFolderFileResource'  },
+				dropFolderFileId : { type : 'n'   }
             }
         );
         return result;

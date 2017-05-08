@@ -46,19 +46,19 @@ export class KalturaPermissionItemBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPermissionItemBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				typeEqual : { type : 'es'  , subType : 'KalturaPermissionItemType'},
-				typeIn : { type : 's'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				tagsMultiLikeOr : { type : 's'  },
-				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaPermissionItemBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				typeEqual : { type : 'es'   , subType : 'KalturaPermissionItemType'},
+				typeIn : { type : 's'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				tagsMultiLikeOr : { type : 's'   },
+				tagsMultiLikeAnd : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

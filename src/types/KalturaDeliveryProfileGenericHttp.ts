@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileGenericHttp extends KalturaDeliveryProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericHttp' },
-				pattern : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericHttp'  },
+				pattern : { type : 's'   }
             }
         );
         return result;

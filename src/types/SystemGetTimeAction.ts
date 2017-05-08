@@ -15,7 +15,7 @@ export class SystemGetTimeAction extends KalturaRequest<number> {
 
     constructor(data? : SystemGetTimeActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,8 +24,8 @@ export class SystemGetTimeAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'system' },
-				action : { type : 'c' , default : 'getTime' }
+                service : { type : 'c' , default : 'system'  },
+				action : { type : 'c' , default : 'getTime'  }
             }
         );
         return result;

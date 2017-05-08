@@ -19,7 +19,7 @@ export class GenericDistributionProviderActionAddMrssValidateAction extends Kalt
 
     constructor(data : GenericDistributionProviderActionAddMrssValidateActionArgs)
     {
-        super(data, 'o', 'KalturaGenericDistributionProviderAction');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenericDistributionProviderAction', responseConstructor : KalturaGenericDistributionProviderAction  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddMrssValidateAction extends Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction' },
-				action : { type : 'c' , default : 'addMrssValidate' },
-				id : { type : 'n'  },
-				xsdData : { type : 's'  }
+                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
+				action : { type : 'c' , default : 'addMrssValidate'  },
+				id : { type : 'n'   },
+				xsdData : { type : 's'   }
             }
         );
         return result;

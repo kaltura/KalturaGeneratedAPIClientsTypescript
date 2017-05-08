@@ -18,7 +18,7 @@ export class ReportGetCsvAction extends KalturaRequest<string> {
 
     constructor(data : ReportGetCsvActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
         if (typeof this.params === 'undefined') this.params = [];
     }
 
@@ -28,10 +28,10 @@ export class ReportGetCsvAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report' },
-				action : { type : 'c' , default : 'getCsv' },
-				id : { type : 'n'  },
-				params : { type : 'a'  , subType : 'KalturaKeyValue'}
+                service : { type : 'c' , default : 'report'  },
+				action : { type : 'c' , default : 'getCsv'  },
+				id : { type : 'n'   },
+				params : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

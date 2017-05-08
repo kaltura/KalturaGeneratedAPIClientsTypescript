@@ -35,14 +35,14 @@ export class KalturaEntryScheduleEventBaseFilter extends KalturaScheduleEventFil
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryScheduleEventBaseFilter' },
-				templateEntryIdEqual : { type : 's'  },
-				entryIdsLike : { type : 's'  },
-				entryIdsMultiLikeOr : { type : 's'  },
-				entryIdsMultiLikeAnd : { type : 's'  },
-				categoryIdsLike : { type : 's'  },
-				categoryIdsMultiLikeOr : { type : 's'  },
-				categoryIdsMultiLikeAnd : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaEntryScheduleEventBaseFilter'  },
+				templateEntryIdEqual : { type : 's'   },
+				entryIdsLike : { type : 's'   },
+				entryIdsMultiLikeOr : { type : 's'   },
+				entryIdsMultiLikeAnd : { type : 's'   },
+				categoryIdsLike : { type : 's'   },
+				categoryIdsMultiLikeOr : { type : 's'   },
+				categoryIdsMultiLikeAnd : { type : 's'   }
             }
         );
         return result;

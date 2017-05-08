@@ -23,7 +23,7 @@ export class KalturaThumbCuePointFilter extends KalturaThumbCuePointBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbCuePointFilter' }
+                objectType : { type : 'c' , default : 'KalturaThumbCuePointFilter'  }
             }
         );
         return result;

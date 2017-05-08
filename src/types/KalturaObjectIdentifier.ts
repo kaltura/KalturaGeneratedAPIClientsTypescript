@@ -25,8 +25,8 @@ export class KalturaObjectIdentifier extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaObjectIdentifier' },
-				extendedFeatures : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaObjectIdentifier'  },
+				extendedFeatures : { type : 's'   }
             }
         );
         return result;

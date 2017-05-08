@@ -37,15 +37,15 @@ export class KalturaScheduleEventResourceBaseFilter extends KalturaRelatedFilter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleEventResourceBaseFilter' },
-				eventIdEqual : { type : 'n'  },
-				eventIdIn : { type : 's'  },
-				resourceIdEqual : { type : 'n'  },
-				resourceIdIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaScheduleEventResourceBaseFilter'  },
+				eventIdEqual : { type : 'n'   },
+				eventIdIn : { type : 's'   },
+				resourceIdEqual : { type : 'n'   },
+				resourceIdIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

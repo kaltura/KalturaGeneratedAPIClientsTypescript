@@ -17,7 +17,7 @@ export class FlavorAssetDeleteAction extends KalturaRequest<void> {
 
     constructor(data : FlavorAssetDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FlavorAssetDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 's'   }
             }
         );
         return result;

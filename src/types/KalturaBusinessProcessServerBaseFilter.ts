@@ -57,24 +57,24 @@ export class KalturaBusinessProcessServerBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessServerBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				idNotIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				statusEqual : { type : 'es'  , subType : 'KalturaBusinessProcessServerStatus'},
-				statusNotEqual : { type : 'es'  , subType : 'KalturaBusinessProcessServerStatus'},
-				statusIn : { type : 's'  },
-				statusNotIn : { type : 's'  },
-				typeEqual : { type : 'es'  , subType : 'KalturaBusinessProcessProvider'},
-				typeIn : { type : 's'  },
-				dcEqual : { type : 'n'  },
-				dcEqOrNull : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaBusinessProcessServerBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				idNotIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				statusEqual : { type : 'es'   , subType : 'KalturaBusinessProcessServerStatus'},
+				statusNotEqual : { type : 'es'   , subType : 'KalturaBusinessProcessServerStatus'},
+				statusIn : { type : 's'   },
+				statusNotIn : { type : 's'   },
+				typeEqual : { type : 'es'   , subType : 'KalturaBusinessProcessProvider'},
+				typeIn : { type : 's'   },
+				dcEqual : { type : 'n'   },
+				dcEqOrNull : { type : 'n'   }
             }
         );
         return result;

@@ -40,17 +40,17 @@ export class KalturaNdnDistributionProfile extends KalturaConfigurableDistributi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaNdnDistributionProfile' },
-				feedUrl : { type : 's'  , readOnly : true},
-				channelTitle : { type : 's'  },
-				channelLink : { type : 's'  },
-				channelDescription : { type : 's'  },
-				channelLanguage : { type : 's'  },
-				channelCopyright : { type : 's'  },
-				channelImageTitle : { type : 's'  },
-				channelImageUrl : { type : 's'  },
-				channelImageLink : { type : 's'  },
-				itemMediaRating : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaNdnDistributionProfile'  },
+				feedUrl : { type : 's'  , readOnly : true },
+				channelTitle : { type : 's'   },
+				channelLink : { type : 's'   },
+				channelDescription : { type : 's'   },
+				channelLanguage : { type : 's'   },
+				channelCopyright : { type : 's'   },
+				channelImageTitle : { type : 's'   },
+				channelImageUrl : { type : 's'   },
+				channelImageLink : { type : 's'   },
+				itemMediaRating : { type : 's'   }
             }
         );
         return result;

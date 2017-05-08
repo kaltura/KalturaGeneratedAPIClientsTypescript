@@ -33,13 +33,13 @@ export class KalturaFacebookCaptionDistributionInfo extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFacebookCaptionDistributionInfo' },
-				language : { type : 's'  },
-				label : { type : 's'  },
-				filePath : { type : 's'  },
-				remoteId : { type : 's'  },
-				version : { type : 's'  },
-				assetId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFacebookCaptionDistributionInfo'  },
+				language : { type : 's'   },
+				label : { type : 's'   },
+				filePath : { type : 's'   },
+				remoteId : { type : 's'   },
+				version : { type : 's'   },
+				assetId : { type : 's'   }
             }
         );
         return result;

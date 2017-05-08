@@ -49,23 +49,23 @@ export class KalturaCuePoint extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCuePoint' },
-				id : { type : 's'  , readOnly : true},
-				cuePointType : { type : 'es'  , readOnly : true, subType : 'KalturaCuePointType'},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaCuePointStatus'},
-				entryId : { type : 's'  },
-				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				triggeredAt : { type : 'd'  },
-				tags : { type : 's'  },
-				startTime : { type : 'n'  },
-				userId : { type : 's'  , readOnly : true},
-				partnerData : { type : 's'  },
-				partnerSortValue : { type : 'n'  },
-				forceStop : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				thumbOffset : { type : 'n'  },
-				systemName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCuePoint'  },
+				id : { type : 's'  , readOnly : true },
+				cuePointType : { type : 'es'  , readOnly : true , subType : 'KalturaCuePointType'},
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaCuePointStatus'},
+				entryId : { type : 's'   },
+				partnerId : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				triggeredAt : { type : 'd'   },
+				tags : { type : 's'   },
+				startTime : { type : 'n'   },
+				userId : { type : 's'  , readOnly : true },
+				partnerData : { type : 's'   },
+				partnerSortValue : { type : 'n'   },
+				forceStop : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				thumbOffset : { type : 'n'   },
+				systemName : { type : 's'   }
             }
         );
         return result;

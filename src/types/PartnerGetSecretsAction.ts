@@ -21,7 +21,7 @@ export class PartnerGetSecretsAction extends KalturaRequest<KalturaPartner> {
 
     constructor(data : PartnerGetSecretsActionArgs)
     {
-        super(data, 'o', 'KalturaPartner');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartner', responseConstructor : KalturaPartner  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class PartnerGetSecretsAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'getSecrets' },
-				partnerId : { type : 'n'  },
-				adminEmail : { type : 's'  },
-				cmsPassword : { type : 's'  }
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'getSecrets'  },
+				partnerId : { type : 'n'   },
+				adminEmail : { type : 's'   },
+				cmsPassword : { type : 's'   }
             }
         );
         return result;

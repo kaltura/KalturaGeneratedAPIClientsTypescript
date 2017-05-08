@@ -39,16 +39,16 @@ export class KalturaUnicornDistributionProfile extends KalturaConfigurableDistri
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUnicornDistributionProfile' },
-				username : { type : 's'  },
-				password : { type : 's'  },
-				domainName : { type : 's'  },
-				channelGuid : { type : 's'  },
-				apiHostUrl : { type : 's'  },
-				domainGuid : { type : 's'  },
-				adFreeApplicationGuid : { type : 's'  },
-				remoteAssetParamsId : { type : 'n'  },
-				storageProfileId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUnicornDistributionProfile'  },
+				username : { type : 's'   },
+				password : { type : 's'   },
+				domainName : { type : 's'   },
+				channelGuid : { type : 's'   },
+				apiHostUrl : { type : 's'   },
+				domainGuid : { type : 's'   },
+				adFreeApplicationGuid : { type : 's'   },
+				remoteAssetParamsId : { type : 'n'   },
+				storageProfileId : { type : 's'   }
             }
         );
         return result;

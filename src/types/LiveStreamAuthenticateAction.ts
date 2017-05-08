@@ -26,7 +26,7 @@ export class LiveStreamAuthenticateAction extends KalturaRequest<KalturaLiveStre
 
     constructor(data : LiveStreamAuthenticateActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStreamEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStreamEntry', responseConstructor : KalturaLiveStreamEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,13 +35,13 @@ export class LiveStreamAuthenticateAction extends KalturaRequest<KalturaLiveStre
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'authenticate' },
-				entryId : { type : 's'  },
-				token : { type : 's'  },
-				hostname : { type : 's'  },
-				mediaServerIndex : { type : 'es'  , subType : 'KalturaEntryServerNodeType'},
-				applicationName : { type : 's'  }
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'authenticate'  },
+				entryId : { type : 's'   },
+				token : { type : 's'   },
+				hostname : { type : 's'   },
+				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
+				applicationName : { type : 's'   }
             }
         );
         return result;

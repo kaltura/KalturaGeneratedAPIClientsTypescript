@@ -23,8 +23,8 @@ export class KalturaSearchMatchCondition extends KalturaSearchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchMatchCondition' },
-				not : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaSearchMatchCondition'  },
+				not : { type : 'b'   }
             }
         );
         return result;

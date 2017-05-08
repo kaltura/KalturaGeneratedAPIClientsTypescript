@@ -17,7 +17,7 @@ export class LiveReportsServeReportAction extends KalturaRequest<string> {
 
     constructor(data : LiveReportsServeReportActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class LiveReportsServeReportAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livereports' },
-				action : { type : 'c' , default : 'serveReport' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'livereports'  },
+				action : { type : 'c' , default : 'serveReport'  },
+				id : { type : 's'   }
             }
         );
         return result;

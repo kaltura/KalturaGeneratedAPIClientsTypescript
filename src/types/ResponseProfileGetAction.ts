@@ -17,7 +17,7 @@ export class ResponseProfileGetAction extends KalturaRequest<KalturaResponseProf
 
     constructor(data : ResponseProfileGetActionArgs)
     {
-        super(data, 'o', 'KalturaResponseProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaResponseProfile', responseConstructor : KalturaResponseProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ResponseProfileGetAction extends KalturaRequest<KalturaResponseProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'responseprofile'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

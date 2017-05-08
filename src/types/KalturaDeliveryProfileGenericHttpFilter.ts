@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileGenericHttpFilter extends KalturaDeliveryProf
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericHttpFilter' }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericHttpFilter'  }
             }
         );
         return result;

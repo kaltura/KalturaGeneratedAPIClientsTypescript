@@ -35,14 +35,14 @@ export class KalturaMoveCategoryEntriesJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMoveCategoryEntriesJobData' },
-				srcCategoryId : { type : 'n'  },
-				destCategoryId : { type : 'n'  },
-				lastMovedCategoryId : { type : 'n'  },
-				lastMovedCategoryPageIndex : { type : 'n'  },
-				lastMovedCategoryEntryPageIndex : { type : 'n'  },
-				moveFromChildren : { type : 'b'  },
-				destCategoryFullIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMoveCategoryEntriesJobData'  },
+				srcCategoryId : { type : 'n'   },
+				destCategoryId : { type : 'n'   },
+				lastMovedCategoryId : { type : 'n'   },
+				lastMovedCategoryPageIndex : { type : 'n'   },
+				lastMovedCategoryEntryPageIndex : { type : 'n'   },
+				moveFromChildren : { type : 'b'   },
+				destCategoryFullIds : { type : 's'   }
             }
         );
         return result;

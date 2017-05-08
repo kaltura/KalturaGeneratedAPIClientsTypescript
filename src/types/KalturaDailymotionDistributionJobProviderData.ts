@@ -31,11 +31,11 @@ export class KalturaDailymotionDistributionJobProviderData extends KalturaConfig
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionJobProviderData' },
-				videoAssetFilePath : { type : 's'  },
-				accessControlGeoBlockingOperation : { type : 's'  },
-				accessControlGeoBlockingCountryList : { type : 's'  },
-				captionsInfo : { type : 'a'  , subType : 'KalturaDailymotionDistributionCaptionInfo'}
+                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionJobProviderData'  },
+				videoAssetFilePath : { type : 's'   },
+				accessControlGeoBlockingOperation : { type : 's'   },
+				accessControlGeoBlockingCountryList : { type : 's'   },
+				captionsInfo : { type : 'a'   , fallbackConstructor :  KalturaDailymotionDistributionCaptionInfo, subType : 'KalturaDailymotionDistributionCaptionInfo'}
             }
         );
         return result;

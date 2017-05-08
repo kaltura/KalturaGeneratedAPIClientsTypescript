@@ -23,7 +23,7 @@ export class KalturaMetroPcsDistributionProviderBaseFilter extends KalturaDistri
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetroPcsDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaMetroPcsDistributionProviderBaseFilter'  }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaUrlTokenizerBitGravity extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerBitGravity' },
-				hashPatternRegex : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUrlTokenizerBitGravity'  },
+				hashPatternRegex : { type : 's'   }
             }
         );
         return result;

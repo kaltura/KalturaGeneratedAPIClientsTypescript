@@ -55,21 +55,21 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveEntry' },
-				offlineMessage : { type : 's'  },
-				recordStatus : { type : 'en'  , subType : 'KalturaRecordStatus'},
-				dvrStatus : { type : 'en'  , subType : 'KalturaDVRStatus'},
-				dvrWindow : { type : 'n'  },
-				lastElapsedRecordingTime : { type : 'n'  },
-				liveStreamConfigurations : { type : 'a'  , subType : 'KalturaLiveStreamConfiguration'},
-				recordedEntryId : { type : 's'  },
-				pushPublishEnabled : { type : 'en'  , subType : 'KalturaLivePublishStatus'},
-				publishConfigurations : { type : 'a'  , subType : 'KalturaLiveStreamPushPublishConfiguration'},
-				firstBroadcast : { type : 'n'  , readOnly : true},
-				lastBroadcast : { type : 'n'  , readOnly : true},
-				currentBroadcastStartTime : { type : 'n'  },
-				recordingOptions : { type : 'o'  , subType : 'KalturaLiveEntryRecordingOptions'},
-				liveStatus : { type : 'en'  , readOnly : true, subType : 'KalturaEntryServerNodeStatus'}
+                objectType : { type : 'c' , default : 'KalturaLiveEntry'  },
+				offlineMessage : { type : 's'   },
+				recordStatus : { type : 'en'   , subType : 'KalturaRecordStatus'},
+				dvrStatus : { type : 'en'   , subType : 'KalturaDVRStatus'},
+				dvrWindow : { type : 'n'   },
+				lastElapsedRecordingTime : { type : 'n'   },
+				liveStreamConfigurations : { type : 'a'   , fallbackConstructor :  KalturaLiveStreamConfiguration, subType : 'KalturaLiveStreamConfiguration'},
+				recordedEntryId : { type : 's'   },
+				pushPublishEnabled : { type : 'en'   , subType : 'KalturaLivePublishStatus'},
+				publishConfigurations : { type : 'a'   , fallbackConstructor :  KalturaLiveStreamPushPublishConfiguration, subType : 'KalturaLiveStreamPushPublishConfiguration'},
+				firstBroadcast : { type : 'n'  , readOnly : true },
+				lastBroadcast : { type : 'n'  , readOnly : true },
+				currentBroadcastStartTime : { type : 'n'   },
+				recordingOptions : { type : 'o'   , fallbackConstructor :  KalturaLiveEntryRecordingOptions, subType : 'KalturaLiveEntryRecordingOptions'},
+				liveStatus : { type : 'en'  , readOnly : true , subType : 'KalturaEntryServerNodeStatus'}
             }
         );
         return result;

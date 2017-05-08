@@ -15,7 +15,7 @@ export class UploadUploadAction extends KalturaUploadRequest<string> {
 
     constructor(data : UploadUploadActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class UploadUploadAction extends KalturaUploadRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'upload' },
-				action : { type : 'c' , default : 'upload' },
-				fileData : { type : 'f'  }
+                service : { type : 'c' , default : 'upload'  },
+				action : { type : 'c' , default : 'upload'  },
+				fileData : { type : 'f'   }
             }
         );
         return result;

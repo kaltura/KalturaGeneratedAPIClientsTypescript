@@ -27,10 +27,10 @@ export class KalturaBulkDownloadJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkDownloadJobData' },
-				entryIds : { type : 's'  },
-				flavorParamsId : { type : 'n'  },
-				puserId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaBulkDownloadJobData'  },
+				entryIds : { type : 's'   },
+				flavorParamsId : { type : 'n'   },
+				puserId : { type : 's'   }
             }
         );
         return result;

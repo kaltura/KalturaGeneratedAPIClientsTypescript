@@ -25,8 +25,8 @@ export class KalturaShortLinkListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaShortLinkListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaShortLink'}
+                objectType : { type : 'c' , default : 'KalturaShortLinkListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaShortLink, subType : 'KalturaShortLink'}
             }
         );
         return result;

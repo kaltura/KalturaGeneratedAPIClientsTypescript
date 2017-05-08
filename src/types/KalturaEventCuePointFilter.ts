@@ -23,7 +23,7 @@ export class KalturaEventCuePointFilter extends KalturaEventCuePointBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventCuePointFilter' }
+                objectType : { type : 'c' , default : 'KalturaEventCuePointFilter'  }
             }
         );
         return result;

@@ -15,7 +15,7 @@ export class LikeUnlikeAction extends KalturaRequest<boolean> {
 
     constructor(data : LikeUnlikeActionArgs)
     {
-        super(data, 'b', '');
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class LikeUnlikeAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'like_like' },
-				action : { type : 'c' , default : 'unlike' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'like_like'  },
+				action : { type : 'c' , default : 'unlike'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

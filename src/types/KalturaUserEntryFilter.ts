@@ -26,9 +26,9 @@ export class KalturaUserEntryFilter extends KalturaUserEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserEntryFilter' },
-				userIdEqualCurrent : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				isAnonymous : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaUserEntryFilter'  },
+				userIdEqualCurrent : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				isAnonymous : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

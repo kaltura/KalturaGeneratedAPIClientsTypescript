@@ -26,9 +26,9 @@ export class KalturaCaptionParamsBaseFilter extends KalturaAssetParamsFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionParamsBaseFilter' },
-				formatEqual : { type : 'es'  , subType : 'KalturaCaptionType'},
-				formatIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCaptionParamsBaseFilter'  },
+				formatEqual : { type : 'es'   , subType : 'KalturaCaptionType'},
+				formatIn : { type : 's'   }
             }
         );
         return result;

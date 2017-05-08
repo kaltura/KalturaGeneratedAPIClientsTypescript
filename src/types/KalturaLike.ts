@@ -27,10 +27,10 @@ export class KalturaLike extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLike' },
-				entryId : { type : 's'  },
-				userId : { type : 's'  },
-				createdAt : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaLike'  },
+				entryId : { type : 's'   },
+				userId : { type : 's'   },
+				createdAt : { type : 'd'   }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaMixListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMixListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaMixEntry'}
+                objectType : { type : 'c' , default : 'KalturaMixListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaMixEntry, subType : 'KalturaMixEntry'}
             }
         );
         return result;

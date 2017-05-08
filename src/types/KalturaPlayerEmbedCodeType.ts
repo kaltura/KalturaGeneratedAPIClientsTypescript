@@ -29,11 +29,11 @@ export class KalturaPlayerEmbedCodeType extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayerEmbedCodeType' },
-				id : { type : 's'  },
-				label : { type : 's'  },
-				entryOnly : { type : 'b'  },
-				minVersion : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaPlayerEmbedCodeType'  },
+				id : { type : 's'   },
+				label : { type : 's'   },
+				entryOnly : { type : 'b'   },
+				minVersion : { type : 's'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaWidevineFlavorParamsBaseFilter extends KalturaFlavorParamsFi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineFlavorParamsBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaWidevineFlavorParamsBaseFilter'  }
             }
         );
         return result;

@@ -26,8 +26,8 @@ export class KalturaEmailNotificationCategoryRecipientJobData extends KalturaEma
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationCategoryRecipientJobData' },
-				categoryUserFilter : { type : 'o'  , subType : 'KalturaCategoryUserFilter'}
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationCategoryRecipientJobData'  },
+				categoryUserFilter : { type : 'o'   , fallbackConstructor :  KalturaCategoryUserFilter, subType : 'KalturaCategoryUserFilter'}
             }
         );
         return result;

@@ -33,12 +33,12 @@ export class KalturaPlayerDeliveryType extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayerDeliveryType' },
-				id : { type : 's'  },
-				label : { type : 's'  },
-				flashvars : { type : 'a'  , subType : 'KalturaKeyValue'},
-				minVersion : { type : 's'  },
-				enabledByDefault : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaPlayerDeliveryType'  },
+				id : { type : 's'   },
+				label : { type : 's'   },
+				flashvars : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				minVersion : { type : 's'   },
+				enabledByDefault : { type : 'b'   }
             }
         );
         return result;

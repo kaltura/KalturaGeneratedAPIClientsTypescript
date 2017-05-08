@@ -24,7 +24,7 @@ export class FlavorAssetGetUrlAction extends KalturaRequest<string> {
 
     constructor(data : FlavorAssetGetUrlActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.forceProxy === 'undefined') this.forceProxy = false;
     }
 
@@ -34,12 +34,12 @@ export class FlavorAssetGetUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'getUrl' },
-				id : { type : 's'  },
-				storageId : { type : 'n'  },
-				forceProxy : { type : 'b'  },
-				options : { type : 'o'  , subType : 'KalturaFlavorAssetUrlOptions'}
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'getUrl'  },
+				id : { type : 's'   },
+				storageId : { type : 'n'   },
+				forceProxy : { type : 'b'   },
+				options : { type : 'o'   , fallbackConstructor :  KalturaFlavorAssetUrlOptions, subType : 'KalturaFlavorAssetUrlOptions'}
             }
         );
         return result;

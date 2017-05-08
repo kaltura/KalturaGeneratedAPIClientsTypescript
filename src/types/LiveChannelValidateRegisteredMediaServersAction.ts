@@ -17,7 +17,7 @@ export class LiveChannelValidateRegisteredMediaServersAction extends KalturaRequ
 
     constructor(data : LiveChannelValidateRegisteredMediaServersActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class LiveChannelValidateRegisteredMediaServersAction extends KalturaRequ
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel' },
-				action : { type : 'c' , default : 'validateRegisteredMediaServers' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'livechannel'  },
+				action : { type : 'c' , default : 'validateRegisteredMediaServers'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

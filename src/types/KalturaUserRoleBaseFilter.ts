@@ -56,24 +56,24 @@ export class KalturaUserRoleBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserRoleBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				nameEqual : { type : 's'  },
-				nameIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				descriptionLike : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaUserRoleStatus'},
-				statusIn : { type : 's'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				tagsMultiLikeOr : { type : 's'  },
-				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaUserRoleBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				nameEqual : { type : 's'   },
+				nameIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				descriptionLike : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaUserRoleStatus'},
+				statusIn : { type : 's'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				tagsMultiLikeOr : { type : 's'   },
+				tagsMultiLikeAnd : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

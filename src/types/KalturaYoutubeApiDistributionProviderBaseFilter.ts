@@ -23,7 +23,7 @@ export class KalturaYoutubeApiDistributionProviderBaseFilter extends KalturaDist
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYoutubeApiDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaYoutubeApiDistributionProviderBaseFilter'  }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class ScheduleResourceDeleteAction extends KalturaRequest<KalturaSchedule
 
     constructor(data : ScheduleResourceDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleResource');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleResource', responseConstructor : KalturaScheduleResource  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ScheduleResourceDeleteAction extends KalturaRequest<KalturaSchedule
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleresource' },
-				action : { type : 'c' , default : 'delete' },
-				scheduleResourceId : { type : 'n'  }
+                service : { type : 'c' , default : 'schedule_scheduleresource'  },
+				action : { type : 'c' , default : 'delete'  },
+				scheduleResourceId : { type : 'n'   }
             }
         );
         return result;

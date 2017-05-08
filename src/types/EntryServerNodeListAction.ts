@@ -19,7 +19,7 @@ export class EntryServerNodeListAction extends KalturaRequest<KalturaEntryServer
 
     constructor(data? : EntryServerNodeListActionArgs)
     {
-        super(data, 'o', 'KalturaEntryServerNodeListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEntryServerNodeListResponse', responseConstructor : KalturaEntryServerNodeListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class EntryServerNodeListAction extends KalturaRequest<KalturaEntryServer
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'entryservernode' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaEntryServerNodeFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'entryservernode'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaEntryServerNodeFilter, subType : 'KalturaEntryServerNodeFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

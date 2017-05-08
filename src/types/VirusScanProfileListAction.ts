@@ -21,7 +21,7 @@ export class VirusScanProfileListAction extends KalturaRequest<KalturaVirusScanP
 
     constructor(data? : VirusScanProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaVirusScanProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaVirusScanProfileListResponse', responseConstructor : KalturaVirusScanProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class VirusScanProfileListAction extends KalturaRequest<KalturaVirusScanP
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaVirusScanProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaVirusScanProfileFilter, subType : 'KalturaVirusScanProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

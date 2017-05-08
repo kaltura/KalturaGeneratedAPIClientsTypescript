@@ -32,12 +32,12 @@ export class KalturaDrmDeviceBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmDeviceBaseFilter' },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				deviceIdLike : { type : 's'  },
-				providerEqual : { type : 'es'  , subType : 'KalturaDrmProviderType'},
-				providerIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDrmDeviceBaseFilter'  },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				deviceIdLike : { type : 's'   },
+				providerEqual : { type : 'es'   , subType : 'KalturaDrmProviderType'},
+				providerIn : { type : 's'   }
             }
         );
         return result;

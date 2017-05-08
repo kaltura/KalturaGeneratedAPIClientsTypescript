@@ -24,8 +24,8 @@ export class KalturaLiveStatsListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStatsListResponse' },
-				objects : { type : 'o'  , subType : 'KalturaLiveStats'}
+                objectType : { type : 'c' , default : 'KalturaLiveStatsListResponse'  },
+				objects : { type : 'o'   , fallbackConstructor :  KalturaLiveStats, subType : 'KalturaLiveStats'}
             }
         );
         return result;

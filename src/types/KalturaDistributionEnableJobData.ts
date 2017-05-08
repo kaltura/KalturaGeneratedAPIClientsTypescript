@@ -23,7 +23,7 @@ export class KalturaDistributionEnableJobData extends KalturaDistributionUpdateJ
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionEnableJobData' }
+                objectType : { type : 'c' , default : 'KalturaDistributionEnableJobData'  }
             }
         );
         return result;

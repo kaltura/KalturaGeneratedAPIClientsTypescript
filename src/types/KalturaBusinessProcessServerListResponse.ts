@@ -25,8 +25,8 @@ export class KalturaBusinessProcessServerListResponse extends KalturaListRespons
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessServerListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaBusinessProcessServer'}
+                objectType : { type : 'c' , default : 'KalturaBusinessProcessServerListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaBusinessProcessServer, subType : 'KalturaBusinessProcessServer'}
             }
         );
         return result;

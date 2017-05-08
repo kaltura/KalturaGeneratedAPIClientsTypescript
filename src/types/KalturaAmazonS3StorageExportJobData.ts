@@ -34,13 +34,13 @@ export class KalturaAmazonS3StorageExportJobData extends KalturaStorageExportJob
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAmazonS3StorageExportJobData' },
-				filesPermissionInS3 : { type : 'es'  , subType : 'KalturaAmazonS3StorageProfileFilesPermissionLevel'},
-				s3Region : { type : 's'  },
-				sseType : { type : 's'  },
-				sseKmsKeyId : { type : 's'  },
-				signatureType : { type : 's'  },
-				endPoint : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAmazonS3StorageExportJobData'  },
+				filesPermissionInS3 : { type : 'es'   , subType : 'KalturaAmazonS3StorageProfileFilesPermissionLevel'},
+				s3Region : { type : 's'   },
+				sseType : { type : 's'   },
+				sseKmsKeyId : { type : 's'   },
+				signatureType : { type : 's'   },
+				endPoint : { type : 's'   }
             }
         );
         return result;

@@ -21,7 +21,7 @@ export class MetadataProfileListAction extends KalturaRequest<KalturaMetadataPro
 
     constructor(data? : MetadataProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaMetadataProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadataProfileListResponse', responseConstructor : KalturaMetadataProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class MetadataProfileListAction extends KalturaRequest<KalturaMetadataPro
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaMetadataProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'metadata_metadataprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaMetadataProfileFilter, subType : 'KalturaMetadataProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

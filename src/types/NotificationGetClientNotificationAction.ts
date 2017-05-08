@@ -20,7 +20,7 @@ export class NotificationGetClientNotificationAction extends KalturaRequest<Kalt
 
     constructor(data : NotificationGetClientNotificationActionArgs)
     {
-        super(data, 'o', 'KalturaClientNotification');
+        super(data, {responseType : 'o', responseSubType : 'KalturaClientNotification', responseConstructor : KalturaClientNotification  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class NotificationGetClientNotificationAction extends KalturaRequest<Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'notification' },
-				action : { type : 'c' , default : 'getClientNotification' },
-				entryId : { type : 's'  },
-				type : { type : 'en'  , subType : 'KalturaNotificationType'}
+                service : { type : 'c' , default : 'notification'  },
+				action : { type : 'c' , default : 'getClientNotification'  },
+				entryId : { type : 's'   },
+				type : { type : 'en'   , subType : 'KalturaNotificationType'}
             }
         );
         return result;

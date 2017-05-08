@@ -27,8 +27,8 @@ export class KalturaLiveStreamAdminEntryMatchAttributeCondition extends KalturaS
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamAdminEntryMatchAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaLiveStreamAdminEntryMatchAttribute'}
+                objectType : { type : 'c' , default : 'KalturaLiveStreamAdminEntryMatchAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaLiveStreamAdminEntryMatchAttribute'}
             }
         );
         return result;

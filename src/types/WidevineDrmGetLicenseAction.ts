@@ -19,7 +19,7 @@ export class WidevineDrmGetLicenseAction extends KalturaRequest<string> {
 
     constructor(data : WidevineDrmGetLicenseActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class WidevineDrmGetLicenseAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'widevine_widevinedrm' },
-				action : { type : 'c' , default : 'getLicense' },
-				flavorAssetId : { type : 's'  },
-				referrer : { type : 's'  }
+                service : { type : 'c' , default : 'widevine_widevinedrm'  },
+				action : { type : 'c' , default : 'getLicense'  },
+				flavorAssetId : { type : 's'   },
+				referrer : { type : 's'   }
             }
         );
         return result;

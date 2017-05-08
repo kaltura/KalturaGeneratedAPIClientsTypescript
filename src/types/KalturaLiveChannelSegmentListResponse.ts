@@ -25,8 +25,8 @@ export class KalturaLiveChannelSegmentListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannelSegmentListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaLiveChannelSegment'}
+                objectType : { type : 'c' , default : 'KalturaLiveChannelSegmentListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaLiveChannelSegment, subType : 'KalturaLiveChannelSegment'}
             }
         );
         return result;

@@ -37,15 +37,15 @@ export class KalturaBulkUploadResultScheduleResource extends KalturaBulkUploadRe
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResultScheduleResource' },
-				resourceId : { type : 's'  },
-				name : { type : 's'  },
-				type : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				tags : { type : 's'  },
-				parentType : { type : 's'  },
-				parentSystemName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadResultScheduleResource'  },
+				resourceId : { type : 's'   },
+				name : { type : 's'   },
+				type : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				tags : { type : 's'   },
+				parentType : { type : 's'   },
+				parentSystemName : { type : 's'   }
             }
         );
         return result;

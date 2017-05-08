@@ -21,7 +21,7 @@ export class ExternalMediaListAction extends KalturaRequest<KalturaExternalMedia
 
     constructor(data? : ExternalMediaListActionArgs)
     {
-        super(data, 'o', 'KalturaExternalMediaEntryListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaExternalMediaEntryListResponse', responseConstructor : KalturaExternalMediaEntryListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class ExternalMediaListAction extends KalturaRequest<KalturaExternalMedia
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'externalmedia_externalmedia' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaExternalMediaEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'externalmedia_externalmedia'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaExternalMediaEntryFilter, subType : 'KalturaExternalMediaEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

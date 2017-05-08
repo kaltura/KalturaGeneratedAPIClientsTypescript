@@ -23,7 +23,7 @@ export class KalturaThumbAssetFilter extends KalturaThumbAssetBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbAssetFilter' }
+                objectType : { type : 'c' , default : 'KalturaThumbAssetFilter'  }
             }
         );
         return result;

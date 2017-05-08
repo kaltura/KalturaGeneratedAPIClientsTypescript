@@ -23,7 +23,7 @@ export class KalturaTimeWarnerDistributionProviderFilter extends KalturaTimeWarn
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProviderFilter' }
+                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProviderFilter'  }
             }
         );
         return result;

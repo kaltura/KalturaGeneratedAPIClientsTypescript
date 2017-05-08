@@ -30,11 +30,11 @@ export class KalturaUploadResponse extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUploadResponse' },
-				uploadTokenId : { type : 's'  },
-				fileSize : { type : 'n'  },
-				errorCode : { type : 'en'  , subType : 'KalturaUploadErrorCode'},
-				errorDescription : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUploadResponse'  },
+				uploadTokenId : { type : 's'   },
+				fileSize : { type : 'n'   },
+				errorCode : { type : 'en'   , subType : 'KalturaUploadErrorCode'},
+				errorDescription : { type : 's'   }
             }
         );
         return result;

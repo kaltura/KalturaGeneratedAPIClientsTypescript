@@ -23,7 +23,7 @@ export class CategoryUserUpdateAction extends KalturaRequest<KalturaCategoryUser
 
     constructor(data : CategoryUserUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaCategoryUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryUser', responseConstructor : KalturaCategoryUser  });
         if (typeof this.override === 'undefined') this.override = false;
     }
 
@@ -33,12 +33,12 @@ export class CategoryUserUpdateAction extends KalturaRequest<KalturaCategoryUser
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser' },
-				action : { type : 'c' , default : 'update' },
-				categoryId : { type : 'n'  },
-				userId : { type : 's'  },
-				categoryUser : { type : 'o'  , subType : 'KalturaCategoryUser'},
-				override : { type : 'b'  }
+                service : { type : 'c' , default : 'categoryuser'  },
+				action : { type : 'c' , default : 'update'  },
+				categoryId : { type : 'n'   },
+				userId : { type : 's'   },
+				categoryUser : { type : 'o'   , fallbackConstructor :  KalturaCategoryUser, subType : 'KalturaCategoryUser'},
+				override : { type : 'b'   }
             }
         );
         return result;

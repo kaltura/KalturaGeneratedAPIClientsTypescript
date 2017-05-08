@@ -54,23 +54,23 @@ export class KalturaShortLinkBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaShortLinkBaseFilter' },
-				idEqual : { type : 's'  },
-				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  },
-				expiresAtGreaterThanOrEqual : { type : 'n'  },
-				expiresAtLessThanOrEqual : { type : 'n'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				userIdEqual : { type : 's'  },
-				userIdIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaShortLinkStatus'},
-				statusIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaShortLinkBaseFilter'  },
+				idEqual : { type : 's'   },
+				idIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   },
+				expiresAtGreaterThanOrEqual : { type : 'n'   },
+				expiresAtLessThanOrEqual : { type : 'n'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				userIdEqual : { type : 's'   },
+				userIdIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaShortLinkStatus'},
+				statusIn : { type : 's'   }
             }
         );
         return result;

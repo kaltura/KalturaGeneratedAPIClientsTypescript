@@ -20,7 +20,7 @@ export class SearchExternalLoginAction extends KalturaRequest<KalturaSearchAuthD
 
     constructor(data : SearchExternalLoginActionArgs)
     {
-        super(data, 'o', 'KalturaSearchAuthData');
+        super(data, {responseType : 'o', responseSubType : 'KalturaSearchAuthData', responseConstructor : KalturaSearchAuthData  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,11 +29,11 @@ export class SearchExternalLoginAction extends KalturaRequest<KalturaSearchAuthD
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search' },
-				action : { type : 'c' , default : 'externalLogin' },
-				searchSource : { type : 'en'  , subType : 'KalturaSearchProviderType'},
-				userName : { type : 's'  },
-				password : { type : 's'  }
+                service : { type : 'c' , default : 'search'  },
+				action : { type : 'c' , default : 'externalLogin'  },
+				searchSource : { type : 'en'   , subType : 'KalturaSearchProviderType'},
+				userName : { type : 's'   },
+				password : { type : 's'   }
             }
         );
         return result;

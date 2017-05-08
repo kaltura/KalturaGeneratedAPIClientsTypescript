@@ -22,7 +22,7 @@ export class MixingListAction extends KalturaRequest<KalturaMixListResponse> {
 
     constructor(data? : MixingListActionArgs)
     {
-        super(data, 'o', 'KalturaMixListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMixListResponse', responseConstructor : KalturaMixListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,10 +31,10 @@ export class MixingListAction extends KalturaRequest<KalturaMixListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaMixEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'mixing'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaMixEntryFilter, subType : 'KalturaMixEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class BaseEntryExportAction extends KalturaRequest<KalturaBaseEntry> {
 
     constructor(data : BaseEntryExportActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,10 +26,10 @@ export class BaseEntryExportAction extends KalturaRequest<KalturaBaseEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'export' },
-				entryId : { type : 's'  },
-				storageProfileId : { type : 'n'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'export'  },
+				entryId : { type : 's'   },
+				storageProfileId : { type : 'n'   }
             }
         );
         return result;

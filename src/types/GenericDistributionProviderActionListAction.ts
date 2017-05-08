@@ -21,7 +21,7 @@ export class GenericDistributionProviderActionListAction extends KalturaRequest<
 
     constructor(data? : GenericDistributionProviderActionListActionArgs)
     {
-        super(data, 'o', 'KalturaGenericDistributionProviderActionListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenericDistributionProviderActionListResponse', responseConstructor : KalturaGenericDistributionProviderActionListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class GenericDistributionProviderActionListAction extends KalturaRequest<
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaGenericDistributionProviderActionFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProviderActionFilter, subType : 'KalturaGenericDistributionProviderActionFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

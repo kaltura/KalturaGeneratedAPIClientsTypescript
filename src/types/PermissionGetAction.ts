@@ -17,7 +17,7 @@ export class PermissionGetAction extends KalturaRequest<KalturaPermission> {
 
     constructor(data : PermissionGetActionArgs)
     {
-        super(data, 'o', 'KalturaPermission');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPermission', responseConstructor : KalturaPermission  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class PermissionGetAction extends KalturaRequest<KalturaPermission> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permission' },
-				action : { type : 'c' , default : 'get' },
-				permissionName : { type : 's'  }
+                service : { type : 'c' , default : 'permission'  },
+				action : { type : 'c' , default : 'get'  },
+				permissionName : { type : 's'   }
             }
         );
         return result;

@@ -22,7 +22,7 @@ export class UserEnableLoginAction extends KalturaRequest<KalturaUser> {
 
     constructor(data : UserEnableLoginActionArgs)
     {
-        super(data, 'o', 'KalturaUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUser', responseConstructor : KalturaUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class UserEnableLoginAction extends KalturaRequest<KalturaUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'enableLogin' },
-				userId : { type : 's'  },
-				loginId : { type : 's'  },
-				password : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'enableLogin'  },
+				userId : { type : 's'   },
+				loginId : { type : 's'   },
+				password : { type : 's'   }
             }
         );
         return result;

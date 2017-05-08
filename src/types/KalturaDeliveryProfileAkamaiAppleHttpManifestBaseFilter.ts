@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileAkamaiAppleHttpManifestBaseFilter extends Kal
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiAppleHttpManifestBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiAppleHttpManifestBaseFilter'  }
             }
         );
         return result;

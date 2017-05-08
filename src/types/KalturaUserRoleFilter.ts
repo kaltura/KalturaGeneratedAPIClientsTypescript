@@ -23,7 +23,7 @@ export class KalturaUserRoleFilter extends KalturaUserRoleBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserRoleFilter' }
+                objectType : { type : 'c' , default : 'KalturaUserRoleFilter'  }
             }
         );
         return result;

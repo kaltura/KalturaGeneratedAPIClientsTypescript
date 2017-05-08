@@ -15,7 +15,7 @@ export class ThumbAssetRegenerateAction extends KalturaRequest<KalturaThumbAsset
 
     constructor(data : ThumbAssetRegenerateActionArgs)
     {
-        super(data, 'o', 'KalturaThumbAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaThumbAsset', responseConstructor : KalturaThumbAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class ThumbAssetRegenerateAction extends KalturaRequest<KalturaThumbAsset
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'regenerate' },
-				thumbAssetId : { type : 's'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'regenerate'  },
+				thumbAssetId : { type : 's'   }
             }
         );
         return result;

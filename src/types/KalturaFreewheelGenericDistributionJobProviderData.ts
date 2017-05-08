@@ -31,10 +31,10 @@ export class KalturaFreewheelGenericDistributionJobProviderData extends KalturaC
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFreewheelGenericDistributionJobProviderData' },
-				videoAssetFilePaths : { type : 'a'  , subType : 'KalturaString'},
-				thumbAssetFilePath : { type : 's'  },
-				cuePoints : { type : 'a'  , subType : 'KalturaCuePoint'}
+                objectType : { type : 'c' , default : 'KalturaFreewheelGenericDistributionJobProviderData'  },
+				videoAssetFilePaths : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				thumbAssetFilePath : { type : 's'   },
+				cuePoints : { type : 'a'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
             }
         );
         return result;

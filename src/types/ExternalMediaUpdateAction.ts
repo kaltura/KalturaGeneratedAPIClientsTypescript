@@ -19,7 +19,7 @@ export class ExternalMediaUpdateAction extends KalturaRequest<KalturaExternalMed
 
     constructor(data : ExternalMediaUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaExternalMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaExternalMediaEntry', responseConstructor : KalturaExternalMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class ExternalMediaUpdateAction extends KalturaRequest<KalturaExternalMed
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'externalmedia_externalmedia' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				entry : { type : 'o'  , subType : 'KalturaExternalMediaEntry'}
+                service : { type : 'c' , default : 'externalmedia_externalmedia'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				entry : { type : 'o'   , fallbackConstructor :  KalturaExternalMediaEntry, subType : 'KalturaExternalMediaEntry'}
             }
         );
         return result;

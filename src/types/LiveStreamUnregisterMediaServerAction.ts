@@ -22,7 +22,7 @@ export class LiveStreamUnregisterMediaServerAction extends KalturaRequest<Kaltur
 
     constructor(data : LiveStreamUnregisterMediaServerActionArgs)
     {
-        super(data, 'o', 'KalturaLiveEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveEntry', responseConstructor : KalturaLiveEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class LiveStreamUnregisterMediaServerAction extends KalturaRequest<Kaltur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'unregisterMediaServer' },
-				entryId : { type : 's'  },
-				hostname : { type : 's'  },
-				mediaServerIndex : { type : 'es'  , subType : 'KalturaEntryServerNodeType'}
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'unregisterMediaServer'  },
+				entryId : { type : 's'   },
+				hostname : { type : 's'   },
+				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'}
             }
         );
         return result;

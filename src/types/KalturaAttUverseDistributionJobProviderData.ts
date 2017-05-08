@@ -31,11 +31,11 @@ export class KalturaAttUverseDistributionJobProviderData extends KalturaConfigur
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionJobProviderData' },
-				filesForDistribution : { type : 'a'  , subType : 'KalturaAttUverseDistributionFile'},
-				remoteAssetFileUrls : { type : 's'  },
-				remoteThumbnailFileUrls : { type : 's'  },
-				remoteCaptionFileUrls : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionJobProviderData'  },
+				filesForDistribution : { type : 'a'   , fallbackConstructor :  KalturaAttUverseDistributionFile, subType : 'KalturaAttUverseDistributionFile'},
+				remoteAssetFileUrls : { type : 's'   },
+				remoteThumbnailFileUrls : { type : 's'   },
+				remoteCaptionFileUrls : { type : 's'   }
             }
         );
         return result;

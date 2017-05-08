@@ -18,7 +18,7 @@ export class CaptionAssetSetAsDefaultAction extends KalturaRequest<void> {
 
     constructor(data : CaptionAssetSetAsDefaultActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class CaptionAssetSetAsDefaultAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset' },
-				action : { type : 'c' , default : 'setAsDefault' },
-				captionAssetId : { type : 's'  }
+                service : { type : 'c' , default : 'caption_captionasset'  },
+				action : { type : 'c' , default : 'setAsDefault'  },
+				captionAssetId : { type : 's'   }
             }
         );
         return result;

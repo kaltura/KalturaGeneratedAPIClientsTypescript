@@ -25,9 +25,9 @@ export class KalturaLiveReportExportResponse extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveReportExportResponse' },
-				referenceJobId : { type : 'n'  },
-				reportEmail : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLiveReportExportResponse'  },
+				referenceJobId : { type : 'n'   },
+				reportEmail : { type : 's'   }
             }
         );
         return result;

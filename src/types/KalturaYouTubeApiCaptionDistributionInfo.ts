@@ -36,14 +36,14 @@ export class KalturaYouTubeApiCaptionDistributionInfo extends KalturaObjectBase 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYouTubeApiCaptionDistributionInfo' },
-				language : { type : 's'  },
-				label : { type : 's'  },
-				filePath : { type : 's'  },
-				remoteId : { type : 's'  },
-				action : { type : 'en'  , subType : 'KalturaYouTubeApiDistributionCaptionAction'},
-				version : { type : 's'  },
-				assetId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaYouTubeApiCaptionDistributionInfo'  },
+				language : { type : 's'   },
+				label : { type : 's'   },
+				filePath : { type : 's'   },
+				remoteId : { type : 's'   },
+				action : { type : 'en'   , subType : 'KalturaYouTubeApiDistributionCaptionAction'},
+				version : { type : 's'   },
+				assetId : { type : 's'   }
             }
         );
         return result;

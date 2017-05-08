@@ -23,7 +23,7 @@ export class KalturaDropFolderFileFilter extends KalturaDropFolderFileBaseFilter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderFileFilter' }
+                objectType : { type : 'c' , default : 'KalturaDropFolderFileFilter'  }
             }
         );
         return result;

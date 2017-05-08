@@ -29,13 +29,13 @@ export class KalturaPermissionItem extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPermissionItem' },
-				id : { type : 'n'  , readOnly : true},
-				type : { type : 'es'  , readOnly : true, subType : 'KalturaPermissionItemType'},
-				partnerId : { type : 'n'  , readOnly : true},
-				tags : { type : 's'  },
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaPermissionItem'  },
+				id : { type : 'n'  , readOnly : true },
+				type : { type : 'es'  , readOnly : true , subType : 'KalturaPermissionItemType'},
+				partnerId : { type : 'n'  , readOnly : true },
+				tags : { type : 's'   },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true }
             }
         );
         return result;

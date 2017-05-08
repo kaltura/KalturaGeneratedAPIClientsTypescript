@@ -23,8 +23,8 @@ export class KalturaEntryReferrerLiveStats extends KalturaEntryLiveStats {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryReferrerLiveStats' },
-				referrer : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaEntryReferrerLiveStats'  },
+				referrer : { type : 's'   }
             }
         );
         return result;

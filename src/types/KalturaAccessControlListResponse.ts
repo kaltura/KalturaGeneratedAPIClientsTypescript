@@ -25,8 +25,8 @@ export class KalturaAccessControlListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaAccessControl'}
+                objectType : { type : 'c' , default : 'KalturaAccessControlListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaAccessControl, subType : 'KalturaAccessControl'}
             }
         );
         return result;

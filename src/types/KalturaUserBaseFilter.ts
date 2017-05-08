@@ -56,23 +56,23 @@ export class KalturaUserBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserBaseFilter' },
-				partnerIdEqual : { type : 'n'  },
-				typeEqual : { type : 'en'  , subType : 'KalturaUserType'},
-				typeIn : { type : 's'  },
-				screenNameLike : { type : 's'  },
-				screenNameStartsWith : { type : 's'  },
-				emailLike : { type : 's'  },
-				emailStartsWith : { type : 's'  },
-				tagsMultiLikeOr : { type : 's'  },
-				tagsMultiLikeAnd : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaUserStatus'},
-				statusIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				firstNameStartsWith : { type : 's'  },
-				lastNameStartsWith : { type : 's'  },
-				isAdminEqual : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaUserBaseFilter'  },
+				partnerIdEqual : { type : 'n'   },
+				typeEqual : { type : 'en'   , subType : 'KalturaUserType'},
+				typeIn : { type : 's'   },
+				screenNameLike : { type : 's'   },
+				screenNameStartsWith : { type : 's'   },
+				emailLike : { type : 's'   },
+				emailStartsWith : { type : 's'   },
+				tagsMultiLikeOr : { type : 's'   },
+				tagsMultiLikeAnd : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaUserStatus'},
+				statusIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				firstNameStartsWith : { type : 's'   },
+				lastNameStartsWith : { type : 's'   },
+				isAdminEqual : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

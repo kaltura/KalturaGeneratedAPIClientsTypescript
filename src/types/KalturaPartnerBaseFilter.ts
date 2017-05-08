@@ -53,22 +53,22 @@ export class KalturaPartnerBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPartnerBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				idNotIn : { type : 's'  },
-				nameLike : { type : 's'  },
-				nameMultiLikeOr : { type : 's'  },
-				nameMultiLikeAnd : { type : 's'  },
-				nameEqual : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaPartnerStatus'},
-				statusIn : { type : 's'  },
-				partnerPackageEqual : { type : 'n'  },
-				partnerPackageGreaterThanOrEqual : { type : 'n'  },
-				partnerPackageLessThanOrEqual : { type : 'n'  },
-				partnerPackageIn : { type : 's'  },
-				partnerGroupTypeEqual : { type : 'en'  , subType : 'KalturaPartnerGroupType'},
-				partnerNameDescriptionWebsiteAdminNameAdminEmailLike : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaPartnerBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				idNotIn : { type : 's'   },
+				nameLike : { type : 's'   },
+				nameMultiLikeOr : { type : 's'   },
+				nameMultiLikeAnd : { type : 's'   },
+				nameEqual : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaPartnerStatus'},
+				statusIn : { type : 's'   },
+				partnerPackageEqual : { type : 'n'   },
+				partnerPackageGreaterThanOrEqual : { type : 'n'   },
+				partnerPackageLessThanOrEqual : { type : 'n'   },
+				partnerPackageIn : { type : 's'   },
+				partnerGroupTypeEqual : { type : 'en'   , subType : 'KalturaPartnerGroupType'},
+				partnerNameDescriptionWebsiteAdminNameAdminEmailLike : { type : 's'   }
             }
         );
         return result;

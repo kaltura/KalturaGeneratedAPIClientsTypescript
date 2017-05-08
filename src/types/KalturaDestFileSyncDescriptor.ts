@@ -23,7 +23,7 @@ export class KalturaDestFileSyncDescriptor extends KalturaFileSyncDescriptor {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDestFileSyncDescriptor' }
+                objectType : { type : 'c' , default : 'KalturaDestFileSyncDescriptor'  }
             }
         );
         return result;

@@ -43,17 +43,17 @@ export class KalturaConversionProfileAssetParams extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionProfileAssetParams' },
-				conversionProfileId : { type : 'n'  , readOnly : true},
-				assetParamsId : { type : 'n'  , readOnly : true},
-				readyBehavior : { type : 'en'  , subType : 'KalturaFlavorReadyBehaviorType'},
-				origin : { type : 'en'  , subType : 'KalturaAssetParamsOrigin'},
-				systemName : { type : 's'  },
-				forceNoneComplied : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				deletePolicy : { type : 'en'  , subType : 'KalturaAssetParamsDeletePolicy'},
-				isEncrypted : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				contentAwareness : { type : 'n'  },
-				twoPass : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaConversionProfileAssetParams'  },
+				conversionProfileId : { type : 'n'  , readOnly : true },
+				assetParamsId : { type : 'n'  , readOnly : true },
+				readyBehavior : { type : 'en'   , subType : 'KalturaFlavorReadyBehaviorType'},
+				origin : { type : 'en'   , subType : 'KalturaAssetParamsOrigin'},
+				systemName : { type : 's'   },
+				forceNoneComplied : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				deletePolicy : { type : 'en'   , subType : 'KalturaAssetParamsDeletePolicy'},
+				isEncrypted : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				contentAwareness : { type : 'n'   },
+				twoPass : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

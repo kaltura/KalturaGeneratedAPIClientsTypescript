@@ -19,7 +19,7 @@ export class StatsReportErrorAction extends KalturaRequest<void> {
 
     constructor(data : StatsReportErrorActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class StatsReportErrorAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats' },
-				action : { type : 'c' , default : 'reportError' },
-				errorCode : { type : 's'  },
-				errorMessage : { type : 's'  }
+                service : { type : 'c' , default : 'stats'  },
+				action : { type : 'c' , default : 'reportError'  },
+				errorCode : { type : 's'   },
+				errorMessage : { type : 's'   }
             }
         );
         return result;

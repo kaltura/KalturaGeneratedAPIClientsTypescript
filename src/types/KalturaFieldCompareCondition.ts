@@ -24,8 +24,8 @@ export class KalturaFieldCompareCondition extends KalturaCompareCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFieldCompareCondition' },
-				field : { type : 'o'  , subType : 'KalturaIntegerField'}
+                objectType : { type : 'c' , default : 'KalturaFieldCompareCondition'  },
+				field : { type : 'o'   , fallbackConstructor :  KalturaIntegerField, subType : 'KalturaIntegerField'}
             }
         );
         return result;

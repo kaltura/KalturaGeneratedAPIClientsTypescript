@@ -31,7 +31,7 @@ export class SessionImpersonateAction extends KalturaRequest<string> {
 
     constructor(data : SessionImpersonateActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.expiry === 'undefined') this.expiry = 86400;
     }
 
@@ -41,15 +41,15 @@ export class SessionImpersonateAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session' },
-				action : { type : 'c' , default : 'impersonate' },
-				secret : { type : 's'  },
-				impersonatedPartnerId : { type : 'n'  },
-				userId : { type : 's'  },
-				type : { type : 'en'  , subType : 'KalturaSessionType'},
-				partnerId : { type : 'n'  },
-				expiry : { type : 'n'  },
-				privileges : { type : 's'  }
+                service : { type : 'c' , default : 'session'  },
+				action : { type : 'c' , default : 'impersonate'  },
+				secret : { type : 's'   },
+				impersonatedPartnerId : { type : 'n'   },
+				userId : { type : 's'   },
+				type : { type : 'en'   , subType : 'KalturaSessionType'},
+				partnerId : { type : 'n'   },
+				expiry : { type : 'n'   },
+				privileges : { type : 's'   }
             }
         );
         return result;

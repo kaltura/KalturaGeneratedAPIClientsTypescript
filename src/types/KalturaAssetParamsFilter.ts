@@ -23,7 +23,7 @@ export class KalturaAssetParamsFilter extends KalturaAssetParamsBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetParamsFilter' }
+                objectType : { type : 'c' , default : 'KalturaAssetParamsFilter'  }
             }
         );
         return result;

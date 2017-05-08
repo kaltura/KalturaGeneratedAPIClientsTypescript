@@ -25,7 +25,7 @@ export class KalturaBooleanField extends KalturaBooleanValue {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBooleanField' }
+                objectType : { type : 'c' , default : 'KalturaBooleanField'  }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaDrmEntryContextPluginData extends KalturaPluginData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmEntryContextPluginData' },
-				flavorData : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDrmEntryContextPluginData'  },
+				flavorData : { type : 's'   }
             }
         );
         return result;

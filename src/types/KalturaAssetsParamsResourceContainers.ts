@@ -25,8 +25,8 @@ export class KalturaAssetsParamsResourceContainers extends KalturaResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetsParamsResourceContainers' },
-				resources : { type : 'a'  , subType : 'KalturaAssetParamsResourceContainer'}
+                objectType : { type : 'c' , default : 'KalturaAssetsParamsResourceContainers'  },
+				resources : { type : 'a'   , fallbackConstructor :  KalturaAssetParamsResourceContainer, subType : 'KalturaAssetParamsResourceContainer'}
             }
         );
         return result;

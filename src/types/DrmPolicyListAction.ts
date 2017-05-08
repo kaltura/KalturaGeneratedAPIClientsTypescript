@@ -21,7 +21,7 @@ export class DrmPolicyListAction extends KalturaRequest<KalturaDrmPolicyListResp
 
     constructor(data? : DrmPolicyListActionArgs)
     {
-        super(data, 'o', 'KalturaDrmPolicyListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDrmPolicyListResponse', responseConstructor : KalturaDrmPolicyListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class DrmPolicyListAction extends KalturaRequest<KalturaDrmPolicyListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmpolicy' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaDrmPolicyFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'drm_drmpolicy'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaDrmPolicyFilter, subType : 'KalturaDrmPolicyFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

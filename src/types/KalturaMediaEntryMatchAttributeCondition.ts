@@ -27,8 +27,8 @@ export class KalturaMediaEntryMatchAttributeCondition extends KalturaSearchMatch
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaEntryMatchAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaMediaEntryMatchAttribute'}
+                objectType : { type : 'c' , default : 'KalturaMediaEntryMatchAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaMediaEntryMatchAttribute'}
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class ThumbParamsAddAction extends KalturaRequest<KalturaThumbParams> {
 
     constructor(data : ThumbParamsAddActionArgs)
     {
-        super(data, 'o', 'KalturaThumbParams');
+        super(data, {responseType : 'o', responseSubType : 'KalturaThumbParams', responseConstructor : KalturaThumbParams  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ThumbParamsAddAction extends KalturaRequest<KalturaThumbParams> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams' },
-				action : { type : 'c' , default : 'add' },
-				thumbParams : { type : 'o'  , subType : 'KalturaThumbParams'}
+                service : { type : 'c' , default : 'thumbparams'  },
+				action : { type : 'c' , default : 'add'  },
+				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaApiParameterPermissionItemFilter extends KalturaApiParameter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaApiParameterPermissionItemFilter' }
+                objectType : { type : 'c' , default : 'KalturaApiParameterPermissionItemFilter'  }
             }
         );
         return result;

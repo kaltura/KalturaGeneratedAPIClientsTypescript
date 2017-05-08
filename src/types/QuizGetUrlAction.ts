@@ -20,7 +20,7 @@ export class QuizGetUrlAction extends KalturaRequest<string> {
 
     constructor(data : QuizGetUrlActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class QuizGetUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz' },
-				action : { type : 'c' , default : 'getUrl' },
-				entryId : { type : 's'  },
-				quizOutputType : { type : 'en'  , subType : 'KalturaQuizOutputType'}
+                service : { type : 'c' , default : 'quiz_quiz'  },
+				action : { type : 'c' , default : 'getUrl'  },
+				entryId : { type : 's'   },
+				quizOutputType : { type : 'en'   , subType : 'KalturaQuizOutputType'}
             }
         );
         return result;

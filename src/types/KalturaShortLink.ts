@@ -38,17 +38,17 @@ export class KalturaShortLink extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaShortLink' },
-				id : { type : 's'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				expiresAt : { type : 'n'  },
-				partnerId : { type : 'n'  , readOnly : true},
-				userId : { type : 's'  },
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				fullUrl : { type : 's'  },
-				status : { type : 'en'  , subType : 'KalturaShortLinkStatus'}
+                objectType : { type : 'c' , default : 'KalturaShortLink'  },
+				id : { type : 's'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				expiresAt : { type : 'n'   },
+				partnerId : { type : 'n'  , readOnly : true },
+				userId : { type : 's'   },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				fullUrl : { type : 's'   },
+				status : { type : 'en'   , subType : 'KalturaShortLinkStatus'}
             }
         );
         return result;

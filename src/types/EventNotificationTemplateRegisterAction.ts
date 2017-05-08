@@ -21,7 +21,7 @@ export class EventNotificationTemplateRegisterAction extends KalturaRequest<Kalt
 
     constructor(data : EventNotificationTemplateRegisterActionArgs)
     {
-        super(data, 'o', 'KalturaPushNotificationData');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPushNotificationData', responseConstructor : KalturaPushNotificationData  });
         if (typeof this.userParamsArray === 'undefined') this.userParamsArray = [];
     }
 
@@ -31,10 +31,10 @@ export class EventNotificationTemplateRegisterAction extends KalturaRequest<Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'register' },
-				notificationTemplateSystemName : { type : 's'  },
-				userParamsArray : { type : 'a'  , subType : 'KalturaEventNotificationParameter'}
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'register'  },
+				notificationTemplateSystemName : { type : 's'   },
+				userParamsArray : { type : 'a'   , fallbackConstructor :  KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter'}
             }
         );
         return result;

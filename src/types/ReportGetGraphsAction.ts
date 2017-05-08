@@ -25,7 +25,7 @@ export class ReportGetGraphsAction extends KalturaRequest<KalturaReportGraph[]> 
 
     constructor(data : ReportGetGraphsActionArgs)
     {
-        super(data, 'a', 'KalturaReportGraph');
+        super(data, {responseType : 'a', responseSubType : 'KalturaReportGraph', responseConstructor : KalturaReportGraph  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class ReportGetGraphsAction extends KalturaRequest<KalturaReportGraph[]> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report' },
-				action : { type : 'c' , default : 'getGraphs' },
-				reportType : { type : 'es'  , subType : 'KalturaReportType'},
-				reportInputFilter : { type : 'o'  , subType : 'KalturaReportInputFilter'},
-				dimension : { type : 's'  },
-				objectIds : { type : 's'  }
+                service : { type : 'c' , default : 'report'  },
+				action : { type : 'c' , default : 'getGraphs'  },
+				reportType : { type : 'es'   , subType : 'KalturaReportType'},
+				reportInputFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
+				dimension : { type : 's'   },
+				objectIds : { type : 's'   }
             }
         );
         return result;

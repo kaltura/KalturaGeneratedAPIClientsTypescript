@@ -17,7 +17,7 @@ export class EntryDistributionSubmitFetchReportAction extends KalturaRequest<Kal
 
     constructor(data : EntryDistributionSubmitFetchReportActionArgs)
     {
-        super(data, 'o', 'KalturaEntryDistribution');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEntryDistribution', responseConstructor : KalturaEntryDistribution  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class EntryDistributionSubmitFetchReportAction extends KalturaRequest<Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution' },
-				action : { type : 'c' , default : 'submitFetchReport' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
+				action : { type : 'c' , default : 'submitFetchReport'  },
+				id : { type : 'n'   }
             }
         );
         return result;

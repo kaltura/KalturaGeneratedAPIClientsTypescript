@@ -25,7 +25,7 @@ export class MediaUpdateContentAction extends KalturaRequest<KalturaMediaEntry> 
 
     constructor(data : MediaUpdateContentActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class MediaUpdateContentAction extends KalturaRequest<KalturaMediaEntry> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'updateContent' },
-				entryId : { type : 's'  },
-				resource : { type : 'o'  , subType : 'KalturaResource'},
-				conversionProfileId : { type : 'n'  },
-				advancedOptions : { type : 'o'  , subType : 'KalturaEntryReplacementOptions'}
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'updateContent'  },
+				entryId : { type : 's'   },
+				resource : { type : 'o'   , fallbackConstructor :  KalturaResource, subType : 'KalturaResource'},
+				conversionProfileId : { type : 'n'   },
+				advancedOptions : { type : 'o'   , fallbackConstructor :  KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions'}
             }
         );
         return result;

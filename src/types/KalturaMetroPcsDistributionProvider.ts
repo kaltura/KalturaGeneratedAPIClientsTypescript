@@ -23,7 +23,7 @@ export class KalturaMetroPcsDistributionProvider extends KalturaDistributionProv
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetroPcsDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaMetroPcsDistributionProvider'  }
             }
         );
         return result;

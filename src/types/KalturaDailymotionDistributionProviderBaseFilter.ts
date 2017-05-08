@@ -23,7 +23,7 @@ export class KalturaDailymotionDistributionProviderBaseFilter extends KalturaDis
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaDailymotionDistributionProviderBaseFilter'  }
             }
         );
         return result;

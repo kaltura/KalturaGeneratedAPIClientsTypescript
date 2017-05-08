@@ -21,7 +21,7 @@ export class FlavorParamsOutputListAction extends KalturaRequest<KalturaFlavorPa
 
     constructor(data? : FlavorParamsOutputListActionArgs)
     {
-        super(data, 'o', 'KalturaFlavorParamsOutputListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaFlavorParamsOutputListResponse', responseConstructor : KalturaFlavorParamsOutputListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class FlavorParamsOutputListAction extends KalturaRequest<KalturaFlavorPa
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparamsoutput' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaFlavorParamsOutputFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'flavorparamsoutput'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaFlavorParamsOutputFilter, subType : 'KalturaFlavorParamsOutputFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

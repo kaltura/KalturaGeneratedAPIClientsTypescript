@@ -23,8 +23,8 @@ export class KalturaFairplayEntryContextPluginData extends KalturaPluginData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFairplayEntryContextPluginData' },
-				publicCertificate : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFairplayEntryContextPluginData'  },
+				publicCertificate : { type : 's'   }
             }
         );
         return result;

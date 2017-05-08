@@ -15,7 +15,7 @@ export class UploadGetUploadedFileTokenByFileNameAction extends KalturaRequest<K
 
     constructor(data : UploadGetUploadedFileTokenByFileNameActionArgs)
     {
-        super(data, 'o', 'KalturaUploadResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUploadResponse', responseConstructor : KalturaUploadResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class UploadGetUploadedFileTokenByFileNameAction extends KalturaRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'upload' },
-				action : { type : 'c' , default : 'getUploadedFileTokenByFileName' },
-				fileName : { type : 's'  }
+                service : { type : 'c' , default : 'upload'  },
+				action : { type : 'c' , default : 'getUploadedFileTokenByFileName'  },
+				fileName : { type : 's'   }
             }
         );
         return result;

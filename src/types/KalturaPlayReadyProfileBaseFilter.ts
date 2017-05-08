@@ -23,7 +23,7 @@ export class KalturaPlayReadyProfileBaseFilter extends KalturaDrmProfileFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyProfileBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaPlayReadyProfileBaseFilter'  }
             }
         );
         return result;

@@ -35,14 +35,14 @@ export class KalturaResponseProfileCacheRecalculateOptions extends KalturaObject
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfileCacheRecalculateOptions' },
-				limit : { type : 'n'  },
-				cachedObjectType : { type : 's'  },
-				objectId : { type : 's'  },
-				startObjectKey : { type : 's'  },
-				endObjectKey : { type : 's'  },
-				jobCreatedAt : { type : 'd'  },
-				isFirstLoop : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaResponseProfileCacheRecalculateOptions'  },
+				limit : { type : 'n'   },
+				cachedObjectType : { type : 's'   },
+				objectId : { type : 's'   },
+				startObjectKey : { type : 's'   },
+				endObjectKey : { type : 's'   },
+				jobCreatedAt : { type : 'd'   },
+				isFirstLoop : { type : 'b'   }
             }
         );
         return result;

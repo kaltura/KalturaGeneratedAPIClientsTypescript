@@ -18,7 +18,7 @@ export class UserCheckLoginDataExistsAction extends KalturaRequest<boolean> {
 
     constructor(data : UserCheckLoginDataExistsActionArgs)
     {
-        super(data, 'b', '');
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class UserCheckLoginDataExistsAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'checkLoginDataExists' },
-				filter : { type : 'o'  , subType : 'KalturaUserLoginDataFilter'}
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'checkLoginDataExists'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaUserLoginDataFilter, subType : 'KalturaUserLoginDataFilter'}
             }
         );
         return result;

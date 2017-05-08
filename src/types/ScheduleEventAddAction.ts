@@ -17,7 +17,7 @@ export class ScheduleEventAddAction extends KalturaRequest<KalturaScheduleEvent>
 
     constructor(data : ScheduleEventAddActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleEvent');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEvent', responseConstructor : KalturaScheduleEvent  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ScheduleEventAddAction extends KalturaRequest<KalturaScheduleEvent>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent' },
-				action : { type : 'c' , default : 'add' },
-				scheduleEvent : { type : 'o'  , subType : 'KalturaScheduleEvent'}
+                service : { type : 'c' , default : 'schedule_scheduleevent'  },
+				action : { type : 'c' , default : 'add'  },
+				scheduleEvent : { type : 'o'   , fallbackConstructor :  KalturaScheduleEvent, subType : 'KalturaScheduleEvent'}
             }
         );
         return result;

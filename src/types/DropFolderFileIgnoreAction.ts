@@ -18,7 +18,7 @@ export class DropFolderFileIgnoreAction extends KalturaRequest<KalturaDropFolder
 
     constructor(data : DropFolderFileIgnoreActionArgs)
     {
-        super(data, 'o', 'KalturaDropFolderFile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDropFolderFile', responseConstructor : KalturaDropFolderFile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class DropFolderFileIgnoreAction extends KalturaRequest<KalturaDropFolder
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolderfile' },
-				action : { type : 'c' , default : 'ignore' },
-				dropFolderFileId : { type : 'n'  }
+                service : { type : 'c' , default : 'dropfolder_dropfolderfile'  },
+				action : { type : 'c' , default : 'ignore'  },
+				dropFolderFileId : { type : 'n'   }
             }
         );
         return result;

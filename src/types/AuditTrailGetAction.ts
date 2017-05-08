@@ -17,7 +17,7 @@ export class AuditTrailGetAction extends KalturaRequest<KalturaAuditTrail> {
 
     constructor(data : AuditTrailGetActionArgs)
     {
-        super(data, 'o', 'KalturaAuditTrail');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAuditTrail', responseConstructor : KalturaAuditTrail  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class AuditTrailGetAction extends KalturaRequest<KalturaAuditTrail> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'audit_audittrail' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'audit_audittrail'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

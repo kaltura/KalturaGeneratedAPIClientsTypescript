@@ -19,7 +19,7 @@ export class DrmProfileGetByProviderAction extends KalturaRequest<KalturaDrmProf
 
     constructor(data : DrmProfileGetByProviderActionArgs)
     {
-        super(data, 'o', 'KalturaDrmProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDrmProfile', responseConstructor : KalturaDrmProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,9 +28,9 @@ export class DrmProfileGetByProviderAction extends KalturaRequest<KalturaDrmProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmprofile' },
-				action : { type : 'c' , default : 'getByProvider' },
-				provider : { type : 'es'  , subType : 'KalturaDrmProviderType'}
+                service : { type : 'c' , default : 'drm_drmprofile'  },
+				action : { type : 'c' , default : 'getByProvider'  },
+				provider : { type : 'es'   , subType : 'KalturaDrmProviderType'}
             }
         );
         return result;

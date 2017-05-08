@@ -29,11 +29,11 @@ export class KalturaLiveReportExportParams extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveReportExportParams' },
-				entryIds : { type : 's'  },
-				recpientEmail : { type : 's'  },
-				timeZoneOffset : { type : 'n'  },
-				applicationUrlTemplate : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLiveReportExportParams'  },
+				entryIds : { type : 's'   },
+				recpientEmail : { type : 's'   },
+				timeZoneOffset : { type : 'n'   },
+				applicationUrlTemplate : { type : 's'   }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class PartnerListFeatureStatusAction extends KalturaRequest<KalturaFeatur
 
     constructor(data? : PartnerListFeatureStatusActionArgs)
     {
-        super(data, 'o', 'KalturaFeatureStatusListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaFeatureStatusListResponse', responseConstructor : KalturaFeatureStatusListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,8 +26,8 @@ export class PartnerListFeatureStatusAction extends KalturaRequest<KalturaFeatur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'listFeatureStatus' }
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'listFeatureStatus'  }
             }
         );
         return result;

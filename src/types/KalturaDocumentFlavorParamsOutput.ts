@@ -23,7 +23,7 @@ export class KalturaDocumentFlavorParamsOutput extends KalturaFlavorParamsOutput
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDocumentFlavorParamsOutput' }
+                objectType : { type : 'c' , default : 'KalturaDocumentFlavorParamsOutput'  }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaAnswerCuePointFilter extends KalturaAnswerCuePointBaseFilter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnswerCuePointFilter' }
+                objectType : { type : 'c' , default : 'KalturaAnswerCuePointFilter'  }
             }
         );
         return result;

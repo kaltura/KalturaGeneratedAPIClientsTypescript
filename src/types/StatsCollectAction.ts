@@ -26,7 +26,7 @@ export class StatsCollectAction extends KalturaRequest<boolean> {
 
     constructor(data : StatsCollectActionArgs)
     {
-        super(data, 'b', '');
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,9 +35,9 @@ export class StatsCollectAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats' },
-				action : { type : 'c' , default : 'collect' },
-				event : { type : 'o'  , subType : 'KalturaStatsEvent'}
+                service : { type : 'c' , default : 'stats'  },
+				action : { type : 'c' , default : 'collect'  },
+				event : { type : 'o'   , fallbackConstructor :  KalturaStatsEvent, subType : 'KalturaStatsEvent'}
             }
         );
         return result;

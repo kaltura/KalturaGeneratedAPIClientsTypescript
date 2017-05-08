@@ -17,7 +17,7 @@ export class CuePointDeleteAction extends KalturaRequest<void> {
 
     constructor(data : CuePointDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class CuePointDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 's'   }
             }
         );
         return result;

@@ -21,7 +21,7 @@ export class CategoryEntryIndexAction extends KalturaRequest<number> {
 
     constructor(data : CategoryEntryIndexActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
         if (typeof this.shouldUpdate === 'undefined') this.shouldUpdate = true;
     }
 
@@ -31,11 +31,11 @@ export class CategoryEntryIndexAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry' },
-				action : { type : 'c' , default : 'index' },
-				entryId : { type : 's'  },
-				categoryId : { type : 'n'  },
-				shouldUpdate : { type : 'b'  }
+                service : { type : 'c' , default : 'categoryentry'  },
+				action : { type : 'c' , default : 'index'  },
+				entryId : { type : 's'   },
+				categoryId : { type : 'n'   },
+				shouldUpdate : { type : 'b'   }
             }
         );
         return result;

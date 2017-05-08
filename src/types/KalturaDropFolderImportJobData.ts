@@ -23,8 +23,8 @@ export class KalturaDropFolderImportJobData extends KalturaSshImportJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderImportJobData' },
-				dropFolderFileId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaDropFolderImportJobData'  },
+				dropFolderFileId : { type : 'n'   }
             }
         );
         return result;

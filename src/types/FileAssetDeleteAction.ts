@@ -17,7 +17,7 @@ export class FileAssetDeleteAction extends KalturaRequest<void> {
 
     constructor(data : FileAssetDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FileAssetDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'fileasset'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 'n'   }
             }
         );
         return result;

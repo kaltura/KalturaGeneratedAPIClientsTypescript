@@ -35,13 +35,13 @@ export class KalturaAdCuePoint extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAdCuePoint' },
-				protocolType : { type : 'es'  , subType : 'KalturaAdProtocolType'},
-				sourceUrl : { type : 's'  },
-				adType : { type : 'es'  , subType : 'KalturaAdType'},
-				title : { type : 's'  },
-				endTime : { type : 'n'  },
-				duration : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaAdCuePoint'  },
+				protocolType : { type : 'es'   , subType : 'KalturaAdProtocolType'},
+				sourceUrl : { type : 's'   },
+				adType : { type : 'es'   , subType : 'KalturaAdType'},
+				title : { type : 's'   },
+				endTime : { type : 'n'   },
+				duration : { type : 'n'   }
             }
         );
         return result;

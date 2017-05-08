@@ -21,7 +21,7 @@ export class AnnotationListAction extends KalturaRequest<KalturaAnnotationListRe
 
     constructor(data? : AnnotationListActionArgs)
     {
-        super(data, 'o', 'KalturaAnnotationListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAnnotationListResponse', responseConstructor : KalturaAnnotationListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class AnnotationListAction extends KalturaRequest<KalturaAnnotationListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaCuePointFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'annotation_annotation'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaCuePointFilter, subType : 'KalturaCuePointFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

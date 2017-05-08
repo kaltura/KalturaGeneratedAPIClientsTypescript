@@ -24,8 +24,8 @@ export class KalturaEntryIdentifier extends KalturaObjectIdentifier {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryIdentifier' },
-				identifier : { type : 'es'  , subType : 'KalturaEntryIdentifierField'}
+                objectType : { type : 'c' , default : 'KalturaEntryIdentifier'  },
+				identifier : { type : 'es'   , subType : 'KalturaEntryIdentifierField'}
             }
         );
         return result;

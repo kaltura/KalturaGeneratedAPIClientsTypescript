@@ -22,7 +22,7 @@ export class CaptionParamsListAction extends KalturaRequest<KalturaCaptionParams
 
     constructor(data? : CaptionParamsListActionArgs)
     {
-        super(data, 'o', 'KalturaCaptionParamsListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCaptionParamsListResponse', responseConstructor : KalturaCaptionParamsListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,10 +31,10 @@ export class CaptionParamsListAction extends KalturaRequest<KalturaCaptionParams
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionparams' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaCaptionParamsFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'caption_captionparams'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaCaptionParamsFilter, subType : 'KalturaCaptionParamsFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -18,7 +18,7 @@ export class PermissionItemAddAction extends KalturaRequest<KalturaPermissionIte
 
     constructor(data : PermissionItemAddActionArgs)
     {
-        super(data, 'o', 'KalturaPermissionItem');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPermissionItem', responseConstructor : KalturaPermissionItem  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class PermissionItemAddAction extends KalturaRequest<KalturaPermissionIte
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permissionitem' },
-				action : { type : 'c' , default : 'add' },
-				permissionItem : { type : 'o'  , subType : 'KalturaPermissionItem'}
+                service : { type : 'c' , default : 'permissionitem'  },
+				action : { type : 'c' , default : 'add'  },
+				permissionItem : { type : 'o'   , fallbackConstructor :  KalturaPermissionItem, subType : 'KalturaPermissionItem'}
             }
         );
         return result;

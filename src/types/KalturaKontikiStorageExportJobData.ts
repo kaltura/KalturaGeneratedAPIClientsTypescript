@@ -27,10 +27,10 @@ export class KalturaKontikiStorageExportJobData extends KalturaStorageExportJobD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaKontikiStorageExportJobData' },
-				flavorAssetId : { type : 's'  },
-				contentMoid : { type : 's'  },
-				serviceToken : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaKontikiStorageExportJobData'  },
+				flavorAssetId : { type : 's'   },
+				contentMoid : { type : 's'   },
+				serviceToken : { type : 's'   }
             }
         );
         return result;

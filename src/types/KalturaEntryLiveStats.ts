@@ -27,10 +27,10 @@ export class KalturaEntryLiveStats extends KalturaLiveStats {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryLiveStats' },
-				entryId : { type : 's'  },
-				peakAudience : { type : 'n'  },
-				peakDvrAudience : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaEntryLiveStats'  },
+				entryId : { type : 's'   },
+				peakAudience : { type : 'n'   },
+				peakDvrAudience : { type : 'n'   }
             }
         );
         return result;

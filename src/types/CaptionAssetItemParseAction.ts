@@ -17,7 +17,7 @@ export class CaptionAssetItemParseAction extends KalturaRequest<void> {
 
     constructor(data : CaptionAssetItemParseActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class CaptionAssetItemParseAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'captionsearch_captionassetitem' },
-				action : { type : 'c' , default : 'parse' },
-				captionAssetId : { type : 's'  }
+                service : { type : 'c' , default : 'captionsearch_captionassetitem'  },
+				action : { type : 'c' , default : 'parse'  },
+				captionAssetId : { type : 's'   }
             }
         );
         return result;

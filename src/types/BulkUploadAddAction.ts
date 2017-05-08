@@ -28,7 +28,7 @@ export class BulkUploadAddAction extends KalturaUploadRequest<KalturaBulkUpload>
 
     constructor(data : BulkUploadAddActionArgs)
     {
-        super(data, 'o', 'KalturaBulkUpload');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBulkUpload', responseConstructor : KalturaBulkUpload  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -37,13 +37,13 @@ export class BulkUploadAddAction extends KalturaUploadRequest<KalturaBulkUpload>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload' },
-				action : { type : 'c' , default : 'add' },
-				conversionProfileId : { type : 'n'  },
-				csvFileData : { type : 'f'  },
-				bulkUploadType : { type : 'es'  , subType : 'KalturaBulkUploadType'},
-				uploadedBy : { type : 's'  },
-				fileName : { type : 's'  }
+                service : { type : 'c' , default : 'bulkupload'  },
+				action : { type : 'c' , default : 'add'  },
+				conversionProfileId : { type : 'n'   },
+				csvFileData : { type : 'f'   },
+				bulkUploadType : { type : 'es'   , subType : 'KalturaBulkUploadType'},
+				uploadedBy : { type : 's'   },
+				fileName : { type : 's'   }
             }
         );
         return result;

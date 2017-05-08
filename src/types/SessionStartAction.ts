@@ -29,7 +29,7 @@ export class SessionStartAction extends KalturaRequest<string> {
 
     constructor(data : SessionStartActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.expiry === 'undefined') this.expiry = 86400;
     }
 
@@ -39,14 +39,14 @@ export class SessionStartAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session' },
-				action : { type : 'c' , default : 'start' },
-				secret : { type : 's'  },
-				userId : { type : 's'  },
-				type : { type : 'en'  , subType : 'KalturaSessionType'},
-				partnerId : { type : 'n'  },
-				expiry : { type : 'n'  },
-				privileges : { type : 's'  }
+                service : { type : 'c' , default : 'session'  },
+				action : { type : 'c' , default : 'start'  },
+				secret : { type : 's'   },
+				userId : { type : 's'   },
+				type : { type : 'en'   , subType : 'KalturaSessionType'},
+				partnerId : { type : 'n'   },
+				expiry : { type : 'n'   },
+				privileges : { type : 's'   }
             }
         );
         return result;

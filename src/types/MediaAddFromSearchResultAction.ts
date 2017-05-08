@@ -21,7 +21,7 @@ export class MediaAddFromSearchResultAction extends KalturaRequest<KalturaMediaE
 
     constructor(data? : MediaAddFromSearchResultActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class MediaAddFromSearchResultAction extends KalturaRequest<KalturaMediaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'addFromSearchResult' },
-				mediaEntry : { type : 'o'  , subType : 'KalturaMediaEntry'},
-				searchResult : { type : 'o'  , subType : 'KalturaSearchResult'}
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'addFromSearchResult'  },
+				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
+				searchResult : { type : 'o'   , fallbackConstructor :  KalturaSearchResult, subType : 'KalturaSearchResult'}
             }
         );
         return result;

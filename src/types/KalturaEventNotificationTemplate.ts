@@ -57,23 +57,23 @@ export class KalturaEventNotificationTemplate extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationTemplate' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				type : { type : 'es'  , subType : 'KalturaEventNotificationTemplateType'},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaEventNotificationTemplateStatus'},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				manualDispatchEnabled : { type : 'b'  },
-				automaticDispatchEnabled : { type : 'b'  },
-				eventType : { type : 'es'  , subType : 'KalturaEventNotificationEventType'},
-				eventObjectType : { type : 'es'  , subType : 'KalturaEventNotificationEventObjectType'},
-				eventConditions : { type : 'a'  , subType : 'KalturaCondition'},
-				contentParameters : { type : 'a'  , subType : 'KalturaEventNotificationParameter'},
-				userParameters : { type : 'a'  , subType : 'KalturaEventNotificationParameter'}
+                objectType : { type : 'c' , default : 'KalturaEventNotificationTemplate'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				type : { type : 'es'   , subType : 'KalturaEventNotificationTemplateType'},
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaEventNotificationTemplateStatus'},
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				manualDispatchEnabled : { type : 'b'   },
+				automaticDispatchEnabled : { type : 'b'   },
+				eventType : { type : 'es'   , subType : 'KalturaEventNotificationEventType'},
+				eventObjectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
+				eventConditions : { type : 'a'   , fallbackConstructor :  KalturaCondition, subType : 'KalturaCondition'},
+				contentParameters : { type : 'a'   , fallbackConstructor :  KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter'},
+				userParameters : { type : 'a'   , fallbackConstructor :  KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter'}
             }
         );
         return result;

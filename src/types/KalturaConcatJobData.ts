@@ -35,13 +35,13 @@ export class KalturaConcatJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConcatJobData' },
-				srcFiles : { type : 'a'  , subType : 'KalturaString'},
-				destFilePath : { type : 's'  },
-				flavorAssetId : { type : 's'  },
-				offset : { type : 'n'  },
-				duration : { type : 'n'  },
-				concatenatedDuration : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaConcatJobData'  },
+				srcFiles : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				destFilePath : { type : 's'   },
+				flavorAssetId : { type : 's'   },
+				offset : { type : 'n'   },
+				duration : { type : 'n'   },
+				concatenatedDuration : { type : 'n'   }
             }
         );
         return result;

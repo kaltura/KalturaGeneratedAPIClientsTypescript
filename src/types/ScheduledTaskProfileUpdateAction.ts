@@ -19,7 +19,7 @@ export class ScheduledTaskProfileUpdateAction extends KalturaRequest<KalturaSche
 
     constructor(data : ScheduledTaskProfileUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaScheduledTaskProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduledTaskProfile', responseConstructor : KalturaScheduledTaskProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class ScheduledTaskProfileUpdateAction extends KalturaRequest<KalturaSche
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 'n'  },
-				scheduledTaskProfile : { type : 'o'  , subType : 'KalturaScheduledTaskProfile'}
+                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 'n'   },
+				scheduledTaskProfile : { type : 'o'   , fallbackConstructor :  KalturaScheduledTaskProfile, subType : 'KalturaScheduledTaskProfile'}
             }
         );
         return result;

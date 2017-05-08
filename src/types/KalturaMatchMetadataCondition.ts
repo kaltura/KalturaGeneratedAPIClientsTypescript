@@ -27,10 +27,10 @@ export class KalturaMatchMetadataCondition extends KalturaMatchCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMatchMetadataCondition' },
-				xPath : { type : 's'  },
-				profileId : { type : 'n'  },
-				profileSystemName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMatchMetadataCondition'  },
+				xPath : { type : 's'   },
+				profileId : { type : 'n'   },
+				profileSystemName : { type : 's'   }
             }
         );
         return result;

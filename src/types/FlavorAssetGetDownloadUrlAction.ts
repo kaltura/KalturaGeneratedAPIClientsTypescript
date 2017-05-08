@@ -19,7 +19,7 @@ export class FlavorAssetGetDownloadUrlAction extends KalturaRequest<string> {
 
     constructor(data : FlavorAssetGetDownloadUrlActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.useCdn === 'undefined') this.useCdn = false;
     }
 
@@ -29,10 +29,10 @@ export class FlavorAssetGetDownloadUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'getDownloadUrl' },
-				id : { type : 's'  },
-				useCdn : { type : 'b'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'getDownloadUrl'  },
+				id : { type : 's'   },
+				useCdn : { type : 'b'   }
             }
         );
         return result;

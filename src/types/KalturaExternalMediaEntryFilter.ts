@@ -23,7 +23,7 @@ export class KalturaExternalMediaEntryFilter extends KalturaExternalMediaEntryBa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryFilter' }
+                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryFilter'  }
             }
         );
         return result;

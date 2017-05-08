@@ -24,8 +24,8 @@ export class KalturaHttpNotificationDataText extends KalturaHttpNotificationData
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHttpNotificationDataText' },
-				content : { type : 'o'  , subType : 'KalturaStringValue'}
+                objectType : { type : 'c' , default : 'KalturaHttpNotificationDataText'  },
+				content : { type : 'o'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'}
             }
         );
         return result;

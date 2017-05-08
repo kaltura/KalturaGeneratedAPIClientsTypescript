@@ -25,8 +25,8 @@ export class KalturaPermissionItemListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPermissionItemListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaPermissionItem'}
+                objectType : { type : 'c' , default : 'KalturaPermissionItemListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaPermissionItem, subType : 'KalturaPermissionItem'}
             }
         );
         return result;

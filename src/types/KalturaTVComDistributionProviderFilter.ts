@@ -23,7 +23,7 @@ export class KalturaTVComDistributionProviderFilter extends KalturaTVComDistribu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTVComDistributionProviderFilter' }
+                objectType : { type : 'c' , default : 'KalturaTVComDistributionProviderFilter'  }
             }
         );
         return result;

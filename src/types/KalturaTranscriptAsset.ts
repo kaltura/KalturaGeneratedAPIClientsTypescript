@@ -29,10 +29,10 @@ export class KalturaTranscriptAsset extends KalturaAttachmentAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTranscriptAsset' },
-				accuracy : { type : 'n'  },
-				humanVerified : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				language : { type : 'es'  , subType : 'KalturaLanguage'}
+                objectType : { type : 'c' , default : 'KalturaTranscriptAsset'  },
+				accuracy : { type : 'n'   },
+				humanVerified : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				language : { type : 'es'   , subType : 'KalturaLanguage'}
             }
         );
         return result;

@@ -24,7 +24,7 @@ export class VarConsoleGetPartnerUsageAction extends KalturaRequest<KalturaPartn
 
     constructor(data? : VarConsoleGetPartnerUsageActionArgs)
     {
-        super(data, 'o', 'KalturaPartnerUsageListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartnerUsageListResponse', responseConstructor : KalturaPartnerUsageListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -33,11 +33,11 @@ export class VarConsoleGetPartnerUsageAction extends KalturaRequest<KalturaPartn
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'varconsole_varconsole' },
-				action : { type : 'c' , default : 'getPartnerUsage' },
-				partnerFilter : { type : 'o'  , subType : 'KalturaPartnerFilter'},
-				usageFilter : { type : 'o'  , subType : 'KalturaReportInputFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'varconsole_varconsole'  },
+				action : { type : 'c' , default : 'getPartnerUsage'  },
+				partnerFilter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'},
+				usageFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

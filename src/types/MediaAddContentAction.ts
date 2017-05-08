@@ -22,7 +22,7 @@ export class MediaAddContentAction extends KalturaRequest<KalturaMediaEntry> {
 
     constructor(data : MediaAddContentActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,10 +31,10 @@ export class MediaAddContentAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'addContent' },
-				entryId : { type : 's'  },
-				resource : { type : 'o'  , subType : 'KalturaResource'}
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'addContent'  },
+				entryId : { type : 's'   },
+				resource : { type : 'o'   , fallbackConstructor :  KalturaResource, subType : 'KalturaResource'}
             }
         );
         return result;

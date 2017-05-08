@@ -23,7 +23,7 @@ export class KalturaPartnerFilter extends KalturaPartnerBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPartnerFilter' }
+                objectType : { type : 'c' , default : 'KalturaPartnerFilter'  }
             }
         );
         return result;

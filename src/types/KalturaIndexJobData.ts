@@ -30,11 +30,11 @@ export class KalturaIndexJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIndexJobData' },
-				filter : { type : 'o'  , subType : 'KalturaFilter'},
-				lastIndexId : { type : 'n'  },
-				lastIndexDepth : { type : 'n'  },
-				shouldUpdate : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaIndexJobData'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaFilter, subType : 'KalturaFilter'},
+				lastIndexId : { type : 'n'   },
+				lastIndexDepth : { type : 'n'   },
+				shouldUpdate : { type : 'b'   }
             }
         );
         return result;

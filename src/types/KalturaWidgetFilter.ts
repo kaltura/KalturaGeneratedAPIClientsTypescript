@@ -23,7 +23,7 @@ export class KalturaWidgetFilter extends KalturaWidgetBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidgetFilter' }
+                objectType : { type : 'c' , default : 'KalturaWidgetFilter'  }
             }
         );
         return result;

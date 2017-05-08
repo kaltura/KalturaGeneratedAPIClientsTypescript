@@ -23,7 +23,7 @@ export class MediaAddFromBulkAction extends KalturaRequest<KalturaMediaEntry> {
 
     constructor(data : MediaAddFromBulkActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,11 +32,11 @@ export class MediaAddFromBulkAction extends KalturaRequest<KalturaMediaEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'addFromBulk' },
-				mediaEntry : { type : 'o'  , subType : 'KalturaMediaEntry'},
-				url : { type : 's'  },
-				bulkUploadId : { type : 'n'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'addFromBulk'  },
+				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
+				url : { type : 's'   },
+				bulkUploadId : { type : 'n'   }
             }
         );
         return result;

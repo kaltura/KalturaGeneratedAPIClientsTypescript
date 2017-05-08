@@ -19,7 +19,7 @@ export class QuizAddAction extends KalturaRequest<KalturaQuiz> {
 
     constructor(data : QuizAddActionArgs)
     {
-        super(data, 'o', 'KalturaQuiz');
+        super(data, {responseType : 'o', responseSubType : 'KalturaQuiz', responseConstructor : KalturaQuiz  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class QuizAddAction extends KalturaRequest<KalturaQuiz> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz' },
-				action : { type : 'c' , default : 'add' },
-				entryId : { type : 's'  },
-				quiz : { type : 'o'  , subType : 'KalturaQuiz'}
+                service : { type : 'c' , default : 'quiz_quiz'  },
+				action : { type : 'c' , default : 'add'  },
+				entryId : { type : 's'   },
+				quiz : { type : 'o'   , fallbackConstructor :  KalturaQuiz, subType : 'KalturaQuiz'}
             }
         );
         return result;

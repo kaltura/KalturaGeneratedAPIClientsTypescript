@@ -18,7 +18,7 @@ export class ReportExecuteAction extends KalturaRequest<KalturaReportResponse> {
 
     constructor(data : ReportExecuteActionArgs)
     {
-        super(data, 'o', 'KalturaReportResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaReportResponse', responseConstructor : KalturaReportResponse  });
         if (typeof this.params === 'undefined') this.params = [];
     }
 
@@ -28,10 +28,10 @@ export class ReportExecuteAction extends KalturaRequest<KalturaReportResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report' },
-				action : { type : 'c' , default : 'execute' },
-				id : { type : 'n'  },
-				params : { type : 'a'  , subType : 'KalturaKeyValue'}
+                service : { type : 'c' , default : 'report'  },
+				action : { type : 'c' , default : 'execute'  },
+				id : { type : 'n'   },
+				params : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

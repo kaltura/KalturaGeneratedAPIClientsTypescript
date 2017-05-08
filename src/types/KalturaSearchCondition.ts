@@ -25,9 +25,9 @@ export class KalturaSearchCondition extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchCondition' },
-				field : { type : 's'  },
-				value : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaSearchCondition'  },
+				field : { type : 's'   },
+				value : { type : 's'   }
             }
         );
         return result;

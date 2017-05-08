@@ -25,7 +25,7 @@ export class KalturaAssetDistributionCondition extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetDistributionCondition' }
+                objectType : { type : 'c' , default : 'KalturaAssetDistributionCondition'  }
             }
         );
         return result;

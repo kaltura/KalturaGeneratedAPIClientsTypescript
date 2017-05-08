@@ -24,8 +24,8 @@ export class KalturaDropFolderICalBulkUploadFileHandlerConfig extends KalturaDro
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderICalBulkUploadFileHandlerConfig' },
-				eventsType : { type : 'en'  , subType : 'KalturaScheduleEventType'}
+                objectType : { type : 'c' , default : 'KalturaDropFolderICalBulkUploadFileHandlerConfig'  },
+				eventsType : { type : 'en'   , subType : 'KalturaScheduleEventType'}
             }
         );
         return result;

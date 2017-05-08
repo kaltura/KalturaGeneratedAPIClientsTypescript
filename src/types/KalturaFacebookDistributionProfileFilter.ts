@@ -23,7 +23,7 @@ export class KalturaFacebookDistributionProfileFilter extends KalturaFacebookDis
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProfileFilter' }
+                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProfileFilter'  }
             }
         );
         return result;

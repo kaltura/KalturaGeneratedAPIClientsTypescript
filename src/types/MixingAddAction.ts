@@ -18,7 +18,7 @@ export class MixingAddAction extends KalturaRequest<KalturaMixEntry> {
 
     constructor(data : MixingAddActionArgs)
     {
-        super(data, 'o', 'KalturaMixEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMixEntry', responseConstructor : KalturaMixEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class MixingAddAction extends KalturaRequest<KalturaMixEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing' },
-				action : { type : 'c' , default : 'add' },
-				mixEntry : { type : 'o'  , subType : 'KalturaMixEntry'}
+                service : { type : 'c' , default : 'mixing'  },
+				action : { type : 'c' , default : 'add'  },
+				mixEntry : { type : 'o'   , fallbackConstructor :  KalturaMixEntry, subType : 'KalturaMixEntry'}
             }
         );
         return result;

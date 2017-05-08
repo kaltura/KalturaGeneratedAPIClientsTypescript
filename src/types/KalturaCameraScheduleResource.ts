@@ -23,8 +23,8 @@ export class KalturaCameraScheduleResource extends KalturaScheduleResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCameraScheduleResource' },
-				streamUrl : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCameraScheduleResource'  },
+				streamUrl : { type : 's'   }
             }
         );
         return result;

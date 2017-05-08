@@ -20,7 +20,7 @@ export class BaseEntryAddAction extends KalturaRequest<KalturaBaseEntry> {
 
     constructor(data : BaseEntryAddActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class BaseEntryAddAction extends KalturaRequest<KalturaBaseEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'add' },
-				entry : { type : 'o'  , subType : 'KalturaBaseEntry'},
-				type : { type : 'es'  , subType : 'KalturaEntryType'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'add'  },
+				entry : { type : 'o'   , fallbackConstructor :  KalturaBaseEntry, subType : 'KalturaBaseEntry'},
+				type : { type : 'es'   , subType : 'KalturaEntryType'}
             }
         );
         return result;

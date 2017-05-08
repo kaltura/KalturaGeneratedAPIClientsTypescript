@@ -23,7 +23,7 @@ export class KalturaMediaFlavorParamsFilter extends KalturaMediaFlavorParamsBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaFlavorParamsFilter' }
+                objectType : { type : 'c' , default : 'KalturaMediaFlavorParamsFilter'  }
             }
         );
         return result;

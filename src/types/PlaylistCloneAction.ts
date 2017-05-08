@@ -19,7 +19,7 @@ export class PlaylistCloneAction extends KalturaRequest<KalturaPlaylist> {
 
     constructor(data : PlaylistCloneActionArgs)
     {
-        super(data, 'o', 'KalturaPlaylist');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlaylist', responseConstructor : KalturaPlaylist  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class PlaylistCloneAction extends KalturaRequest<KalturaPlaylist> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist' },
-				action : { type : 'c' , default : 'clone' },
-				id : { type : 's'  },
-				newPlaylist : { type : 'o'  , subType : 'KalturaPlaylist'}
+                service : { type : 'c' , default : 'playlist'  },
+				action : { type : 'c' , default : 'clone'  },
+				id : { type : 's'   },
+				newPlaylist : { type : 'o'   , fallbackConstructor :  KalturaPlaylist, subType : 'KalturaPlaylist'}
             }
         );
         return result;

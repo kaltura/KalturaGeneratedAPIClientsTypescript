@@ -48,18 +48,18 @@ export class KalturaLiveStatsEvent extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStatsEvent' },
-				partnerId : { type : 'n'  },
-				entryId : { type : 's'  },
-				eventType : { type : 'en'  , subType : 'KalturaLiveStatsEventType'},
-				sessionId : { type : 's'  },
-				eventIndex : { type : 'n'  },
-				bufferTime : { type : 'n'  },
-				bitrate : { type : 'n'  },
-				referrer : { type : 's'  },
-				isLive : { type : 'b'  },
-				startTime : { type : 's'  },
-				deliveryType : { type : 'es'  , subType : 'KalturaPlaybackProtocol'}
+                objectType : { type : 'c' , default : 'KalturaLiveStatsEvent'  },
+				partnerId : { type : 'n'   },
+				entryId : { type : 's'   },
+				eventType : { type : 'en'   , subType : 'KalturaLiveStatsEventType'},
+				sessionId : { type : 's'   },
+				eventIndex : { type : 'n'   },
+				bufferTime : { type : 'n'   },
+				bitrate : { type : 'n'   },
+				referrer : { type : 's'   },
+				isLive : { type : 'b'   },
+				startTime : { type : 's'   },
+				deliveryType : { type : 'es'   , subType : 'KalturaPlaybackProtocol'}
             }
         );
         return result;

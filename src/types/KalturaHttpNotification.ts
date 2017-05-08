@@ -39,14 +39,14 @@ export class KalturaHttpNotification extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHttpNotification' },
-				object : { type : 'o'  , subType : 'KalturaObjectBase'},
-				eventObjectType : { type : 'es'  , subType : 'KalturaEventNotificationEventObjectType'},
-				eventNotificationJobId : { type : 'n'  },
-				templateId : { type : 'n'  },
-				templateName : { type : 's'  },
-				templateSystemName : { type : 's'  },
-				eventType : { type : 'es'  , subType : 'KalturaEventNotificationEventType'}
+                objectType : { type : 'c' , default : 'KalturaHttpNotification'  },
+				object : { type : 'o'   , fallbackConstructor :  KalturaObjectBase, subType : 'KalturaObjectBase'},
+				eventObjectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
+				eventNotificationJobId : { type : 'n'   },
+				templateId : { type : 'n'   },
+				templateName : { type : 's'   },
+				templateSystemName : { type : 's'   },
+				eventType : { type : 'es'   , subType : 'KalturaEventNotificationEventType'}
             }
         );
         return result;

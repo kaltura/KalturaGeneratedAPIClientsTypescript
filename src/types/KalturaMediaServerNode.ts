@@ -30,10 +30,10 @@ export class KalturaMediaServerNode extends KalturaDeliveryServerNode {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaServerNode' },
-				applicationName : { type : 's'  },
-				mediaServerPortConfig : { type : 'a'  , subType : 'KalturaKeyValue'},
-				mediaServerPlaybackDomainConfig : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaMediaServerNode'  },
+				applicationName : { type : 's'   },
+				mediaServerPortConfig : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				mediaServerPlaybackDomainConfig : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaMediaEntryFilter extends KalturaMediaEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaEntryFilter' }
+                objectType : { type : 'c' , default : 'KalturaMediaEntryFilter'  }
             }
         );
         return result;

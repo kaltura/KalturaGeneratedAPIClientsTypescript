@@ -19,7 +19,7 @@ export class DistributionProfileListByPartnerAction extends KalturaRequest<Kaltu
 
     constructor(data? : DistributionProfileListByPartnerActionArgs)
     {
-        super(data, 'o', 'KalturaDistributionProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDistributionProfileListResponse', responseConstructor : KalturaDistributionProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class DistributionProfileListByPartnerAction extends KalturaRequest<Kaltu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile' },
-				action : { type : 'c' , default : 'listByPartner' },
-				filter : { type : 'o'  , subType : 'KalturaPartnerFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
+				action : { type : 'c' , default : 'listByPartner'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

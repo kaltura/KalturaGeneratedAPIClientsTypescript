@@ -19,7 +19,7 @@ export class LikeListAction extends KalturaRequest<KalturaLikeListResponse> {
 
     constructor(data? : LikeListActionArgs)
     {
-        super(data, 'o', 'KalturaLikeListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLikeListResponse', responseConstructor : KalturaLikeListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class LikeListAction extends KalturaRequest<KalturaLikeListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'like_like' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaLikeFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'like_like'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaLikeFilter, subType : 'KalturaLikeFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class LiveChannelUpdateAction extends KalturaRequest<KalturaLiveChannel> 
 
     constructor(data : LiveChannelUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaLiveChannel');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveChannel', responseConstructor : KalturaLiveChannel  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class LiveChannelUpdateAction extends KalturaRequest<KalturaLiveChannel> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				liveChannel : { type : 'o'  , subType : 'KalturaLiveChannel'}
+                service : { type : 'c' , default : 'livechannel'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				liveChannel : { type : 'o'   , fallbackConstructor :  KalturaLiveChannel, subType : 'KalturaLiveChannel'}
             }
         );
         return result;

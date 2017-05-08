@@ -20,7 +20,7 @@ export class ResponseProfileUpdateStatusAction extends KalturaRequest<KalturaRes
 
     constructor(data : ResponseProfileUpdateStatusActionArgs)
     {
-        super(data, 'o', 'KalturaResponseProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaResponseProfile', responseConstructor : KalturaResponseProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class ResponseProfileUpdateStatusAction extends KalturaRequest<KalturaRes
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile' },
-				action : { type : 'c' , default : 'updateStatus' },
-				id : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaResponseProfileStatus'}
+                service : { type : 'c' , default : 'responseprofile'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				id : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaResponseProfileStatus'}
             }
         );
         return result;

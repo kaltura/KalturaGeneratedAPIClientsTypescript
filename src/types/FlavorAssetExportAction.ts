@@ -19,7 +19,7 @@ export class FlavorAssetExportAction extends KalturaRequest<KalturaFlavorAsset> 
 
     constructor(data : FlavorAssetExportActionArgs)
     {
-        super(data, 'o', 'KalturaFlavorAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaFlavorAsset', responseConstructor : KalturaFlavorAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class FlavorAssetExportAction extends KalturaRequest<KalturaFlavorAsset> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'export' },
-				assetId : { type : 's'  },
-				storageProfileId : { type : 'n'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'export'  },
+				assetId : { type : 's'   },
+				storageProfileId : { type : 'n'   }
             }
         );
         return result;

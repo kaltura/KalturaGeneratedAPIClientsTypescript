@@ -20,7 +20,7 @@ export class UserUpdateAction extends KalturaRequest<KalturaUser> {
 
     constructor(data : UserUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUser', responseConstructor : KalturaUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class UserUpdateAction extends KalturaRequest<KalturaUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'update' },
-				userId : { type : 's'  },
-				user : { type : 'o'  , subType : 'KalturaUser'}
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'update'  },
+				userId : { type : 's'   },
+				user : { type : 'o'   , fallbackConstructor :  KalturaUser, subType : 'KalturaUser'}
             }
         );
         return result;

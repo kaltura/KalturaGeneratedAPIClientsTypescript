@@ -21,7 +21,7 @@ export class AuditTrailListAction extends KalturaRequest<KalturaAuditTrailListRe
 
     constructor(data? : AuditTrailListActionArgs)
     {
-        super(data, 'o', 'KalturaAuditTrailListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAuditTrailListResponse', responseConstructor : KalturaAuditTrailListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class AuditTrailListAction extends KalturaRequest<KalturaAuditTrailListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'audit_audittrail' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaAuditTrailFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'audit_audittrail'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaAuditTrailFilter, subType : 'KalturaAuditTrailFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

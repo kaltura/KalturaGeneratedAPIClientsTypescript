@@ -18,7 +18,7 @@ export class FlavorAssetGetFlavorAssetsWithParamsAction extends KalturaRequest<K
 
     constructor(data : FlavorAssetGetFlavorAssetsWithParamsActionArgs)
     {
-        super(data, 'a', 'KalturaFlavorAssetWithParams');
+        super(data, {responseType : 'a', responseSubType : 'KalturaFlavorAssetWithParams', responseConstructor : KalturaFlavorAssetWithParams  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class FlavorAssetGetFlavorAssetsWithParamsAction extends KalturaRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'getFlavorAssetsWithParams' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'getFlavorAssetsWithParams'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

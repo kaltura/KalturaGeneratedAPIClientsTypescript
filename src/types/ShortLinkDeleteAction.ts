@@ -17,7 +17,7 @@ export class ShortLinkDeleteAction extends KalturaRequest<KalturaShortLink> {
 
     constructor(data : ShortLinkDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaShortLink');
+        super(data, {responseType : 'o', responseSubType : 'KalturaShortLink', responseConstructor : KalturaShortLink  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ShortLinkDeleteAction extends KalturaRequest<KalturaShortLink> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'shortlink_shortlink' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'shortlink_shortlink'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 's'   }
             }
         );
         return result;

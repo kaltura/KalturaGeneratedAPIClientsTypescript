@@ -23,7 +23,7 @@ export class KalturaJobData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaJobData' }
+                objectType : { type : 'c' , default : 'KalturaJobData'  }
             }
         );
         return result;

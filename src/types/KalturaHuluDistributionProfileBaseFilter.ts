@@ -23,7 +23,7 @@ export class KalturaHuluDistributionProfileBaseFilter extends KalturaConfigurabl
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHuluDistributionProfileBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaHuluDistributionProfileBaseFilter'  }
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class MediaUpdateThumbnailFromUrlAction extends KalturaRequest<KalturaBas
 
     constructor(data : MediaUpdateThumbnailFromUrlActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MediaUpdateThumbnailFromUrlAction extends KalturaRequest<KalturaBas
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'updateThumbnailFromUrl' },
-				entryId : { type : 's'  },
-				url : { type : 's'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'updateThumbnailFromUrl'  },
+				entryId : { type : 's'   },
+				url : { type : 's'   }
             }
         );
         return result;

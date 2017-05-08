@@ -25,8 +25,8 @@ export class KalturaMatchCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMatchCondition' },
-				values : { type : 'a'  , subType : 'KalturaStringValue'}
+                objectType : { type : 'c' , default : 'KalturaMatchCondition'  },
+				values : { type : 'a'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'}
             }
         );
         return result;

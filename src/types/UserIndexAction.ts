@@ -19,7 +19,7 @@ export class UserIndexAction extends KalturaRequest<string> {
 
     constructor(data : UserIndexActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.shouldUpdate === 'undefined') this.shouldUpdate = true;
     }
 
@@ -29,10 +29,10 @@ export class UserIndexAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'index' },
-				id : { type : 's'  },
-				shouldUpdate : { type : 'b'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'index'  },
+				id : { type : 's'   },
+				shouldUpdate : { type : 'b'   }
             }
         );
         return result;

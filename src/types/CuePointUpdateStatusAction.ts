@@ -20,7 +20,7 @@ export class CuePointUpdateStatusAction extends KalturaRequest<void> {
 
     constructor(data : CuePointUpdateStatusActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class CuePointUpdateStatusAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint' },
-				action : { type : 'c' , default : 'updateStatus' },
-				id : { type : 's'  },
-				status : { type : 'en'  , subType : 'KalturaCuePointStatus'}
+                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				id : { type : 's'   },
+				status : { type : 'en'   , subType : 'KalturaCuePointStatus'}
             }
         );
         return result;

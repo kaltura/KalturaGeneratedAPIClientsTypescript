@@ -25,8 +25,8 @@ export class KalturaAssetPropertiesCompareCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetPropertiesCompareCondition' },
-				properties : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaAssetPropertiesCompareCondition'  },
+				properties : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

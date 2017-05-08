@@ -23,7 +23,7 @@ export class UserRoleListAction extends KalturaRequest<KalturaUserRoleListRespon
 
     constructor(data? : UserRoleListActionArgs)
     {
-        super(data, 'o', 'KalturaUserRoleListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUserRoleListResponse', responseConstructor : KalturaUserRoleListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,10 +32,10 @@ export class UserRoleListAction extends KalturaRequest<KalturaUserRoleListRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaUserRoleFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'userrole'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaUserRoleFilter, subType : 'KalturaUserRoleFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

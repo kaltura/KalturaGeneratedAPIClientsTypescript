@@ -32,11 +32,11 @@ export class KalturaOptionalAnswer extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaOptionalAnswer' },
-				key : { type : 's'  },
-				text : { type : 's'  },
-				weight : { type : 'n'  },
-				isCorrect : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaOptionalAnswer'  },
+				key : { type : 's'   },
+				text : { type : 's'   },
+				weight : { type : 'n'   },
+				isCorrect : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

@@ -34,14 +34,14 @@ export class KalturaDoubleClickDistributionProfile extends KalturaConfigurableDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionProfile' },
-				channelTitle : { type : 's'  },
-				channelLink : { type : 's'  },
-				channelDescription : { type : 's'  },
-				feedUrl : { type : 's'  , readOnly : true},
-				cuePointsProvider : { type : 's'  },
-				itemsPerPage : { type : 's'  },
-				ignoreSchedulingInFeed : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionProfile'  },
+				channelTitle : { type : 's'   },
+				channelLink : { type : 's'   },
+				channelDescription : { type : 's'   },
+				feedUrl : { type : 's'  , readOnly : true },
+				cuePointsProvider : { type : 's'   },
+				itemsPerPage : { type : 's'   },
+				ignoreSchedulingInFeed : { type : 'b'   }
             }
         );
         return result;

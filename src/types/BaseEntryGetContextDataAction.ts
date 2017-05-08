@@ -21,7 +21,7 @@ export class BaseEntryGetContextDataAction extends KalturaRequest<KalturaEntryCo
 
     constructor(data : BaseEntryGetContextDataActionArgs)
     {
-        super(data, 'o', 'KalturaEntryContextDataResult');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEntryContextDataResult', responseConstructor : KalturaEntryContextDataResult  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class BaseEntryGetContextDataAction extends KalturaRequest<KalturaEntryCo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'getContextData' },
-				entryId : { type : 's'  },
-				contextDataParams : { type : 'o'  , subType : 'KalturaEntryContextDataParams'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'getContextData'  },
+				entryId : { type : 's'   },
+				contextDataParams : { type : 'o'   , fallbackConstructor :  KalturaEntryContextDataParams, subType : 'KalturaEntryContextDataParams'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class AdminUserUpdatePasswordAction extends KalturaRequest<KalturaAdminUs
 
     constructor(data : AdminUserUpdatePasswordActionArgs)
     {
-        super(data, 'o', 'KalturaAdminUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAdminUser', responseConstructor : KalturaAdminUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,12 +32,12 @@ export class AdminUserUpdatePasswordAction extends KalturaRequest<KalturaAdminUs
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'adminuser' },
-				action : { type : 'c' , default : 'updatePassword' },
-				email : { type : 's'  },
-				password : { type : 's'  },
-				newEmail : { type : 's'  },
-				newPassword : { type : 's'  }
+                service : { type : 'c' , default : 'adminuser'  },
+				action : { type : 'c' , default : 'updatePassword'  },
+				email : { type : 's'   },
+				password : { type : 's'   },
+				newEmail : { type : 's'   },
+				newPassword : { type : 's'   }
             }
         );
         return result;

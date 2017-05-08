@@ -25,7 +25,7 @@ export class KalturaObjectIdField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaObjectIdField' }
+                objectType : { type : 'c' , default : 'KalturaObjectIdField'  }
             }
         );
         return result;

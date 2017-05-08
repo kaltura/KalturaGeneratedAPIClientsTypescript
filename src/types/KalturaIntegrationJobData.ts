@@ -34,12 +34,12 @@ export class KalturaIntegrationJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIntegrationJobData' },
-				callbackNotificationUrl : { type : 's'  , readOnly : true},
-				providerType : { type : 'es'  , subType : 'KalturaIntegrationProviderType'},
-				providerData : { type : 'o'  , subType : 'KalturaIntegrationJobProviderData'},
-				triggerType : { type : 'es'  , subType : 'KalturaIntegrationTriggerType'},
-				triggerData : { type : 'o'  , subType : 'KalturaIntegrationJobTriggerData'}
+                objectType : { type : 'c' , default : 'KalturaIntegrationJobData'  },
+				callbackNotificationUrl : { type : 's'  , readOnly : true },
+				providerType : { type : 'es'   , subType : 'KalturaIntegrationProviderType'},
+				providerData : { type : 'o'   , fallbackConstructor :  KalturaIntegrationJobProviderData, subType : 'KalturaIntegrationJobProviderData'},
+				triggerType : { type : 'es'   , subType : 'KalturaIntegrationTriggerType'},
+				triggerData : { type : 'o'   , fallbackConstructor :  KalturaIntegrationJobTriggerData, subType : 'KalturaIntegrationJobTriggerData'}
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class AttachmentAssetGetUrlAction extends KalturaRequest<string> {
 
     constructor(data : AttachmentAssetGetUrlActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class AttachmentAssetGetUrlAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset' },
-				action : { type : 'c' , default : 'getUrl' },
-				id : { type : 's'  },
-				storageId : { type : 'n'  }
+                service : { type : 'c' , default : 'attachment_attachmentasset'  },
+				action : { type : 'c' , default : 'getUrl'  },
+				id : { type : 's'   },
+				storageId : { type : 'n'   }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class AttachmentAssetGetRemotePathsAction extends KalturaRequest<KalturaR
 
     constructor(data : AttachmentAssetGetRemotePathsActionArgs)
     {
-        super(data, 'o', 'KalturaRemotePathListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaRemotePathListResponse', responseConstructor : KalturaRemotePathListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class AttachmentAssetGetRemotePathsAction extends KalturaRequest<KalturaR
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset' },
-				action : { type : 'c' , default : 'getRemotePaths' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'attachment_attachmentasset'  },
+				action : { type : 'c' , default : 'getRemotePaths'  },
+				id : { type : 's'   }
             }
         );
         return result;

@@ -27,10 +27,10 @@ export class KalturaBpmEventNotificationIntegrationJobTriggerData extends Kaltur
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBpmEventNotificationIntegrationJobTriggerData' },
-				templateId : { type : 'n'  },
-				businessProcessId : { type : 's'  },
-				caseId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaBpmEventNotificationIntegrationJobTriggerData'  },
+				templateId : { type : 'n'   },
+				businessProcessId : { type : 's'   },
+				caseId : { type : 's'   }
             }
         );
         return result;

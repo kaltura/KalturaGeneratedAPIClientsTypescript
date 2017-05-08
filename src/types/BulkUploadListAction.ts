@@ -18,7 +18,7 @@ export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListRe
 
     constructor(data? : BulkUploadListActionArgs)
     {
-        super(data, 'o', 'KalturaBulkUploadListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBulkUploadListResponse', responseConstructor : KalturaBulkUploadListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload' },
-				action : { type : 'c' , default : 'list' },
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'bulkupload'  },
+				action : { type : 'c' , default : 'list'  },
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

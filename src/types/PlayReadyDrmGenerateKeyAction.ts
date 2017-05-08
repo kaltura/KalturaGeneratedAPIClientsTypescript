@@ -17,7 +17,7 @@ export class PlayReadyDrmGenerateKeyAction extends KalturaRequest<KalturaPlayRea
 
     constructor(data? : PlayReadyDrmGenerateKeyActionArgs)
     {
-        super(data, 'o', 'KalturaPlayReadyContentKey');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlayReadyContentKey', responseConstructor : KalturaPlayReadyContentKey  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,8 +26,8 @@ export class PlayReadyDrmGenerateKeyAction extends KalturaRequest<KalturaPlayRea
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playready_playreadydrm' },
-				action : { type : 'c' , default : 'generateKey' }
+                service : { type : 'c' , default : 'playready_playreadydrm'  },
+				action : { type : 'c' , default : 'generateKey'  }
             }
         );
         return result;

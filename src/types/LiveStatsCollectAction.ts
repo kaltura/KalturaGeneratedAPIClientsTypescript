@@ -19,7 +19,7 @@ export class LiveStatsCollectAction extends KalturaRequest<boolean> {
 
     constructor(data : LiveStatsCollectActionArgs)
     {
-        super(data, 'b', '');
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,9 +28,9 @@ export class LiveStatsCollectAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestats' },
-				action : { type : 'c' , default : 'collect' },
-				event : { type : 'o'  , subType : 'KalturaLiveStatsEvent'}
+                service : { type : 'c' , default : 'livestats'  },
+				action : { type : 'c' , default : 'collect'  },
+				event : { type : 'o'   , fallbackConstructor :  KalturaLiveStatsEvent, subType : 'KalturaLiveStatsEvent'}
             }
         );
         return result;

@@ -43,17 +43,17 @@ export class KalturaITunesSyndicationFeed extends KalturaBaseSyndicationFeed {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaITunesSyndicationFeed' },
-				feedDescription : { type : 's'  },
-				language : { type : 's'  },
-				feedLandingPage : { type : 's'  },
-				ownerName : { type : 's'  },
-				ownerEmail : { type : 's'  },
-				feedImageUrl : { type : 's'  },
-				category : { type : 'es'  , readOnly : true, subType : 'KalturaITunesSyndicationFeedCategories'},
-				adultContent : { type : 'es'  , subType : 'KalturaITunesSyndicationFeedAdultValues'},
-				feedAuthor : { type : 's'  },
-				enforceOrder : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaITunesSyndicationFeed'  },
+				feedDescription : { type : 's'   },
+				language : { type : 's'   },
+				feedLandingPage : { type : 's'   },
+				ownerName : { type : 's'   },
+				ownerEmail : { type : 's'   },
+				feedImageUrl : { type : 's'   },
+				category : { type : 'es'  , readOnly : true , subType : 'KalturaITunesSyndicationFeedCategories'},
+				adultContent : { type : 'es'   , subType : 'KalturaITunesSyndicationFeedAdultValues'},
+				feedAuthor : { type : 's'   },
+				enforceOrder : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

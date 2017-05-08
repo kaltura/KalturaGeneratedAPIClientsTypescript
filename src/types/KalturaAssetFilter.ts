@@ -23,8 +23,8 @@ export class KalturaAssetFilter extends KalturaAssetBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetFilter' },
-				typeIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAssetFilter'  },
+				typeIn : { type : 's'   }
             }
         );
         return result;

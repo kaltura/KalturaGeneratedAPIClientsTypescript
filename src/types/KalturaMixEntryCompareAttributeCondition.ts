@@ -27,8 +27,8 @@ export class KalturaMixEntryCompareAttributeCondition extends KalturaSearchCompa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMixEntryCompareAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaMixEntryCompareAttribute'}
+                objectType : { type : 'c' , default : 'KalturaMixEntryCompareAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaMixEntryCompareAttribute'}
             }
         );
         return result;

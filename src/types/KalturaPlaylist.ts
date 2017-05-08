@@ -36,15 +36,15 @@ export class KalturaPlaylist extends KalturaBaseEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlaylist' },
-				playlistContent : { type : 's'  },
-				filters : { type : 'a'  , subType : 'KalturaMediaEntryFilterForPlaylist'},
-				totalResults : { type : 'n'  },
-				playlistType : { type : 'en'  , subType : 'KalturaPlaylistType'},
-				plays : { type : 'n'  , readOnly : true},
-				views : { type : 'n'  , readOnly : true},
-				duration : { type : 'n'  , readOnly : true},
-				executeUrl : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaPlaylist'  },
+				playlistContent : { type : 's'   },
+				filters : { type : 'a'   , fallbackConstructor :  KalturaMediaEntryFilterForPlaylist, subType : 'KalturaMediaEntryFilterForPlaylist'},
+				totalResults : { type : 'n'   },
+				playlistType : { type : 'en'   , subType : 'KalturaPlaylistType'},
+				plays : { type : 'n'  , readOnly : true },
+				views : { type : 'n'  , readOnly : true },
+				duration : { type : 'n'  , readOnly : true },
+				executeUrl : { type : 's'  , readOnly : true }
             }
         );
         return result;

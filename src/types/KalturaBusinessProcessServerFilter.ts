@@ -26,9 +26,9 @@ export class KalturaBusinessProcessServerFilter extends KalturaBusinessProcessSe
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessServerFilter' },
-				currentDcOrExternal : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				currentDc : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaBusinessProcessServerFilter'  },
+				currentDcOrExternal : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				currentDc : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

@@ -48,20 +48,20 @@ export class KalturaScheduledTaskProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduledTaskProfile' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				status : { type : 'en'  , subType : 'KalturaScheduledTaskProfileStatus'},
-				objectFilterEngineType : { type : 'es'  , subType : 'KalturaObjectFilterEngineType'},
-				objectFilter : { type : 'o'  , subType : 'KalturaFilter'},
-				objectTasks : { type : 'a'  , subType : 'KalturaObjectTask'},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				lastExecutionStartedAt : { type : 'd'  },
-				maxTotalCountAllowed : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaScheduledTaskProfile'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				status : { type : 'en'   , subType : 'KalturaScheduledTaskProfileStatus'},
+				objectFilterEngineType : { type : 'es'   , subType : 'KalturaObjectFilterEngineType'},
+				objectFilter : { type : 'o'   , fallbackConstructor :  KalturaFilter, subType : 'KalturaFilter'},
+				objectTasks : { type : 'a'   , fallbackConstructor :  KalturaObjectTask, subType : 'KalturaObjectTask'},
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				lastExecutionStartedAt : { type : 'd'   },
+				maxTotalCountAllowed : { type : 'n'   }
             }
         );
         return result;

@@ -35,18 +35,18 @@ export class KalturaMetadata extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadata' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				metadataProfileId : { type : 'n'  , readOnly : true},
-				metadataProfileVersion : { type : 'n'  , readOnly : true},
-				metadataObjectType : { type : 'es'  , readOnly : true, subType : 'KalturaMetadataObjectType'},
-				objectId : { type : 's'  , readOnly : true},
-				version : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaMetadataStatus'},
-				xml : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaMetadata'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				metadataProfileId : { type : 'n'  , readOnly : true },
+				metadataProfileVersion : { type : 'n'  , readOnly : true },
+				metadataObjectType : { type : 'es'  , readOnly : true , subType : 'KalturaMetadataObjectType'},
+				objectId : { type : 's'  , readOnly : true },
+				version : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaMetadataStatus'},
+				xml : { type : 's'  , readOnly : true }
             }
         );
         return result;

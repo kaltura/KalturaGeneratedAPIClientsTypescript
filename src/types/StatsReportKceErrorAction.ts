@@ -15,7 +15,7 @@ export class StatsReportKceErrorAction extends KalturaRequest<KalturaCEError> {
 
     constructor(data : StatsReportKceErrorActionArgs)
     {
-        super(data, 'o', 'KalturaCEError');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCEError', responseConstructor : KalturaCEError  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class StatsReportKceErrorAction extends KalturaRequest<KalturaCEError> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats' },
-				action : { type : 'c' , default : 'reportKceError' },
-				kalturaCEError : { type : 'o'  , subType : 'KalturaCEError'}
+                service : { type : 'c' , default : 'stats'  },
+				action : { type : 'c' , default : 'reportKceError'  },
+				kalturaCEError : { type : 'o'   , fallbackConstructor :  KalturaCEError, subType : 'KalturaCEError'}
             }
         );
         return result;

@@ -28,10 +28,10 @@ export class KalturaEventNotificationParameter extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventNotificationParameter' },
-				key : { type : 's'  },
-				description : { type : 's'  },
-				value : { type : 'o'  , subType : 'KalturaStringValue'}
+                objectType : { type : 'c' , default : 'KalturaEventNotificationParameter'  },
+				key : { type : 's'   },
+				description : { type : 's'   },
+				value : { type : 'o'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'}
             }
         );
         return result;

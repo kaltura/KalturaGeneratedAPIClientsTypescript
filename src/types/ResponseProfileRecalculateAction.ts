@@ -18,7 +18,7 @@ export class ResponseProfileRecalculateAction extends KalturaRequest<KalturaResp
 
     constructor(data : ResponseProfileRecalculateActionArgs)
     {
-        super(data, 'o', 'KalturaResponseProfileCacheRecalculateResults');
+        super(data, {responseType : 'o', responseSubType : 'KalturaResponseProfileCacheRecalculateResults', responseConstructor : KalturaResponseProfileCacheRecalculateResults  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class ResponseProfileRecalculateAction extends KalturaRequest<KalturaResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile' },
-				action : { type : 'c' , default : 'recalculate' },
-				options : { type : 'o'  , subType : 'KalturaResponseProfileCacheRecalculateOptions'}
+                service : { type : 'c' , default : 'responseprofile'  },
+				action : { type : 'c' , default : 'recalculate'  },
+				options : { type : 'o'   , fallbackConstructor :  KalturaResponseProfileCacheRecalculateOptions, subType : 'KalturaResponseProfileCacheRecalculateOptions'}
             }
         );
         return result;

@@ -31,12 +31,12 @@ export class KalturaWebexDropFolderFile extends KalturaDropFolderFile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWebexDropFolderFile' },
-				recordingId : { type : 'n'  },
-				webexHostId : { type : 's'  },
-				description : { type : 's'  },
-				confId : { type : 's'  },
-				contentUrl : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaWebexDropFolderFile'  },
+				recordingId : { type : 'n'   },
+				webexHostId : { type : 's'   },
+				description : { type : 's'   },
+				confId : { type : 's'   },
+				contentUrl : { type : 's'   }
             }
         );
         return result;

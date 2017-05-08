@@ -23,7 +23,7 @@ export class KalturaSshDropFolderFilter extends KalturaSshDropFolderBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSshDropFolderFilter' }
+                objectType : { type : 'c' , default : 'KalturaSshDropFolderFilter'  }
             }
         );
         return result;

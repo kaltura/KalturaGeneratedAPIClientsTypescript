@@ -27,10 +27,10 @@ export class KalturaMixEntry extends KalturaPlayableEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMixEntry' },
-				hasRealThumbnail : { type : 'b'  , readOnly : true},
-				editorType : { type : 'en'  , subType : 'KalturaEditorType'},
-				dataContent : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMixEntry'  },
+				hasRealThumbnail : { type : 'b'  , readOnly : true },
+				editorType : { type : 'en'   , subType : 'KalturaEditorType'},
+				dataContent : { type : 's'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaAttUverseDistributionProfileBaseFilter extends KalturaConfig
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionProfileBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaAttUverseDistributionProfileBaseFilter'  }
             }
         );
         return result;

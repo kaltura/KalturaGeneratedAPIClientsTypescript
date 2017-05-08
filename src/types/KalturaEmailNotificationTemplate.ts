@@ -54,21 +54,21 @@ export class KalturaEmailNotificationTemplate extends KalturaEventNotificationTe
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationTemplate' },
-				format : { type : 'es'  , subType : 'KalturaEmailNotificationFormat'},
-				subject : { type : 's'  },
-				body : { type : 's'  },
-				fromEmail : { type : 's'  },
-				fromName : { type : 's'  },
-				to : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientProvider'},
-				cc : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientProvider'},
-				bcc : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientProvider'},
-				replyTo : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientProvider'},
-				priority : { type : 'en'  , subType : 'KalturaEmailNotificationTemplatePriority'},
-				confirmReadingTo : { type : 's'  },
-				hostname : { type : 's'  },
-				messageID : { type : 's'  },
-				customHeaders : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationTemplate'  },
+				format : { type : 'es'   , subType : 'KalturaEmailNotificationFormat'},
+				subject : { type : 's'   },
+				body : { type : 's'   },
+				fromEmail : { type : 's'   },
+				fromName : { type : 's'   },
+				to : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientProvider, subType : 'KalturaEmailNotificationRecipientProvider'},
+				cc : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientProvider, subType : 'KalturaEmailNotificationRecipientProvider'},
+				bcc : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientProvider, subType : 'KalturaEmailNotificationRecipientProvider'},
+				replyTo : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientProvider, subType : 'KalturaEmailNotificationRecipientProvider'},
+				priority : { type : 'en'   , subType : 'KalturaEmailNotificationTemplatePriority'},
+				confirmReadingTo : { type : 's'   },
+				hostname : { type : 's'   },
+				messageID : { type : 's'   },
+				customHeaders : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

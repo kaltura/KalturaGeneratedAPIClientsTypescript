@@ -23,8 +23,8 @@ export class KalturaUrlTokenizerUplynk extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerUplynk' },
-				accountId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUrlTokenizerUplynk'  },
+				accountId : { type : 's'   }
             }
         );
         return result;

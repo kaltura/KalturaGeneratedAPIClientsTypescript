@@ -23,7 +23,7 @@ export class KalturaDoubleClickDistributionProvider extends KalturaDistributionP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionProvider'  }
             }
         );
         return result;

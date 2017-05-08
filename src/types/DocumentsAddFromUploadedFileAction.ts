@@ -20,7 +20,7 @@ export class DocumentsAddFromUploadedFileAction extends KalturaRequest<KalturaDo
 
     constructor(data : DocumentsAddFromUploadedFileActionArgs)
     {
-        super(data, 'o', 'KalturaDocumentEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDocumentEntry', responseConstructor : KalturaDocumentEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class DocumentsAddFromUploadedFileAction extends KalturaRequest<KalturaDo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'addFromUploadedFile' },
-				documentEntry : { type : 'o'  , subType : 'KalturaDocumentEntry'},
-				uploadTokenId : { type : 's'  }
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'addFromUploadedFile'  },
+				documentEntry : { type : 'o'   , fallbackConstructor :  KalturaDocumentEntry, subType : 'KalturaDocumentEntry'},
+				uploadTokenId : { type : 's'   }
             }
         );
         return result;

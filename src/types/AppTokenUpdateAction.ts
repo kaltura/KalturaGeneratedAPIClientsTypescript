@@ -19,7 +19,7 @@ export class AppTokenUpdateAction extends KalturaRequest<KalturaAppToken> {
 
     constructor(data : AppTokenUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaAppToken');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAppToken', responseConstructor : KalturaAppToken  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class AppTokenUpdateAction extends KalturaRequest<KalturaAppToken> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'apptoken' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				appToken : { type : 'o'  , subType : 'KalturaAppToken'}
+                service : { type : 'c' , default : 'apptoken'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				appToken : { type : 'o'   , fallbackConstructor :  KalturaAppToken, subType : 'KalturaAppToken'}
             }
         );
         return result;

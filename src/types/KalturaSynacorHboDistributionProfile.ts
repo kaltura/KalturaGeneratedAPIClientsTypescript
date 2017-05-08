@@ -30,12 +30,12 @@ export class KalturaSynacorHboDistributionProfile extends KalturaConfigurableDis
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSynacorHboDistributionProfile' },
-				feedUrl : { type : 's'  , readOnly : true},
-				feedTitle : { type : 's'  },
-				feedSubtitle : { type : 's'  },
-				feedLink : { type : 's'  },
-				feedAuthorName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaSynacorHboDistributionProfile'  },
+				feedUrl : { type : 's'  , readOnly : true },
+				feedTitle : { type : 's'   },
+				feedSubtitle : { type : 's'   },
+				feedLink : { type : 's'   },
+				feedAuthorName : { type : 's'   }
             }
         );
         return result;

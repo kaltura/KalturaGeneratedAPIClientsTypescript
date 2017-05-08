@@ -33,13 +33,13 @@ export class KalturaBulkUploadResultCategoryUser extends KalturaBulkUploadResult
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResultCategoryUser' },
-				categoryId : { type : 'n'  },
-				categoryReferenceId : { type : 's'  },
-				userId : { type : 's'  },
-				permissionLevel : { type : 'n'  },
-				updateMethod : { type : 'n'  },
-				requiredObjectStatus : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadResultCategoryUser'  },
+				categoryId : { type : 'n'   },
+				categoryReferenceId : { type : 's'   },
+				userId : { type : 's'   },
+				permissionLevel : { type : 'n'   },
+				updateMethod : { type : 'n'   },
+				requiredObjectStatus : { type : 'n'   }
             }
         );
         return result;

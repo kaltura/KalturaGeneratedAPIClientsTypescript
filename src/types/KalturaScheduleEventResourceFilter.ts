@@ -23,8 +23,8 @@ export class KalturaScheduleEventResourceFilter extends KalturaScheduleEventReso
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleEventResourceFilter' },
-				eventIdOrItsParentIdEqual : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaScheduleEventResourceFilter'  },
+				eventIdOrItsParentIdEqual : { type : 'n'   }
             }
         );
         return result;

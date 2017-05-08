@@ -46,16 +46,16 @@ export class KalturaRule extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRule' },
-				description : { type : 's'  },
-				ruleData : { type : 's'  },
-				message : { type : 's'  },
-				code : { type : 's'  },
-				actions : { type : 'a'  , subType : 'KalturaRuleAction'},
-				conditions : { type : 'a'  , subType : 'KalturaCondition'},
-				contexts : { type : 'a'  , subType : 'KalturaContextTypeHolder'},
-				stopProcessing : { type : 'b'  },
-				forceAdminValidation : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaRule'  },
+				description : { type : 's'   },
+				ruleData : { type : 's'   },
+				message : { type : 's'   },
+				code : { type : 's'   },
+				actions : { type : 'a'   , fallbackConstructor :  KalturaRuleAction, subType : 'KalturaRuleAction'},
+				conditions : { type : 'a'   , fallbackConstructor :  KalturaCondition, subType : 'KalturaCondition'},
+				contexts : { type : 'a'   , fallbackConstructor :  KalturaContextTypeHolder, subType : 'KalturaContextTypeHolder'},
+				stopProcessing : { type : 'b'   },
+				forceAdminValidation : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

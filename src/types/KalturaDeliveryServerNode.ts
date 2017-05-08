@@ -25,8 +25,8 @@ export class KalturaDeliveryServerNode extends KalturaServerNode {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryServerNode' },
-				deliveryProfileIds : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaDeliveryServerNode'  },
+				deliveryProfileIds : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

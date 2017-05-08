@@ -17,7 +17,7 @@ export class DataAddAction extends KalturaRequest<KalturaDataEntry> {
 
     constructor(data : DataAddActionArgs)
     {
-        super(data, 'o', 'KalturaDataEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDataEntry', responseConstructor : KalturaDataEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DataAddAction extends KalturaRequest<KalturaDataEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data' },
-				action : { type : 'c' , default : 'add' },
-				dataEntry : { type : 'o'  , subType : 'KalturaDataEntry'}
+                service : { type : 'c' , default : 'data'  },
+				action : { type : 'c' , default : 'add'  },
+				dataEntry : { type : 'o'   , fallbackConstructor :  KalturaDataEntry, subType : 'KalturaDataEntry'}
             }
         );
         return result;

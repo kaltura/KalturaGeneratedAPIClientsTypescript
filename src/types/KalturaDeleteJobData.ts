@@ -24,8 +24,8 @@ export class KalturaDeleteJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeleteJobData' },
-				filter : { type : 'o'  , subType : 'KalturaFilter'}
+                objectType : { type : 'c' , default : 'KalturaDeleteJobData'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaFilter, subType : 'KalturaFilter'}
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaFlavorAssetListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorAssetListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaFlavorAsset'}
+                objectType : { type : 'c' , default : 'KalturaFlavorAssetListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaFlavorAsset, subType : 'KalturaFlavorAsset'}
             }
         );
         return result;

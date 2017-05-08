@@ -26,9 +26,9 @@ export class KalturaCountryRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCountryRestriction' },
-				countryRestrictionType : { type : 'en'  , subType : 'KalturaCountryRestrictionType'},
-				countryList : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCountryRestriction'  },
+				countryRestrictionType : { type : 'en'   , subType : 'KalturaCountryRestrictionType'},
+				countryList : { type : 's'   }
             }
         );
         return result;

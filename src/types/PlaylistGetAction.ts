@@ -19,7 +19,7 @@ export class PlaylistGetAction extends KalturaRequest<KalturaPlaylist> {
 
     constructor(data : PlaylistGetActionArgs)
     {
-        super(data, 'o', 'KalturaPlaylist');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlaylist', responseConstructor : KalturaPlaylist  });
         if (typeof this.version === 'undefined') this.version = -1;
     }
 
@@ -29,10 +29,10 @@ export class PlaylistGetAction extends KalturaRequest<KalturaPlaylist> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 's'  },
-				version : { type : 'n'  }
+                service : { type : 'c' , default : 'playlist'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 's'   },
+				version : { type : 'n'   }
             }
         );
         return result;

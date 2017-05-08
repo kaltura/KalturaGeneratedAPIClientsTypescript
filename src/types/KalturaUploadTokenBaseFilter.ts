@@ -36,14 +36,14 @@ export class KalturaUploadTokenBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUploadTokenBaseFilter' },
-				idEqual : { type : 's'  },
-				idIn : { type : 's'  },
-				userIdEqual : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaUploadTokenStatus'},
-				statusIn : { type : 's'  },
-				fileNameEqual : { type : 's'  },
-				fileSizeEqual : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaUploadTokenBaseFilter'  },
+				idEqual : { type : 's'   },
+				idIn : { type : 's'   },
+				userIdEqual : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaUploadTokenStatus'},
+				statusIn : { type : 's'   },
+				fileNameEqual : { type : 's'   },
+				fileSizeEqual : { type : 'n'   }
             }
         );
         return result;

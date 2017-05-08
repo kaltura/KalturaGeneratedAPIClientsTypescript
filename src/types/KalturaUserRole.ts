@@ -38,17 +38,17 @@ export class KalturaUserRole extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserRole' },
-				id : { type : 'n'  , readOnly : true},
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				status : { type : 'en'  , subType : 'KalturaUserRoleStatus'},
-				partnerId : { type : 'n'  , readOnly : true},
-				permissionNames : { type : 's'  },
-				tags : { type : 's'  },
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaUserRole'  },
+				id : { type : 'n'  , readOnly : true },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				status : { type : 'en'   , subType : 'KalturaUserRoleStatus'},
+				partnerId : { type : 'n'  , readOnly : true },
+				permissionNames : { type : 's'   },
+				tags : { type : 's'   },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true }
             }
         );
         return result;

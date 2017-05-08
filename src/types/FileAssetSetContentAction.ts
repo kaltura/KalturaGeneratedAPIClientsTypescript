@@ -20,7 +20,7 @@ export class FileAssetSetContentAction extends KalturaRequest<KalturaFileAsset> 
 
     constructor(data : FileAssetSetContentActionArgs)
     {
-        super(data, 'o', 'KalturaFileAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaFileAsset', responseConstructor : KalturaFileAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class FileAssetSetContentAction extends KalturaRequest<KalturaFileAsset> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset' },
-				action : { type : 'c' , default : 'setContent' },
-				id : { type : 's'  },
-				contentResource : { type : 'o'  , subType : 'KalturaContentResource'}
+                service : { type : 'c' , default : 'fileasset'  },
+				action : { type : 'c' , default : 'setContent'  },
+				id : { type : 's'   },
+				contentResource : { type : 'o'   , fallbackConstructor :  KalturaContentResource, subType : 'KalturaContentResource'}
             }
         );
         return result;

@@ -41,16 +41,16 @@ export class KalturaConvertJobData extends KalturaConvartableJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvertJobData' },
-				destFileSyncLocalPath : { type : 's'  },
-				destFileSyncRemoteUrl : { type : 's'  },
-				logFileSyncLocalPath : { type : 's'  },
-				logFileSyncRemoteUrl : { type : 's'  },
-				flavorAssetId : { type : 's'  },
-				remoteMediaId : { type : 's'  },
-				customData : { type : 's'  },
-				extraDestFileSyncs : { type : 'a'  , subType : 'KalturaDestFileSyncDescriptor'},
-				engineMessage : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaConvertJobData'  },
+				destFileSyncLocalPath : { type : 's'   },
+				destFileSyncRemoteUrl : { type : 's'   },
+				logFileSyncLocalPath : { type : 's'   },
+				logFileSyncRemoteUrl : { type : 's'   },
+				flavorAssetId : { type : 's'   },
+				remoteMediaId : { type : 's'   },
+				customData : { type : 's'   },
+				extraDestFileSyncs : { type : 'a'   , fallbackConstructor :  KalturaDestFileSyncDescriptor, subType : 'KalturaDestFileSyncDescriptor'},
+				engineMessage : { type : 's'   }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class GroupUserAddAction extends KalturaRequest<KalturaGroupUser> {
 
     constructor(data : GroupUserAddActionArgs)
     {
-        super(data, 'o', 'KalturaGroupUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGroupUser', responseConstructor : KalturaGroupUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class GroupUserAddAction extends KalturaRequest<KalturaGroupUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'groupuser' },
-				action : { type : 'c' , default : 'add' },
-				groupUser : { type : 'o'  , subType : 'KalturaGroupUser'}
+                service : { type : 'c' , default : 'groupuser'  },
+				action : { type : 'c' , default : 'add'  },
+				groupUser : { type : 'o'   , fallbackConstructor :  KalturaGroupUser, subType : 'KalturaGroupUser'}
             }
         );
         return result;

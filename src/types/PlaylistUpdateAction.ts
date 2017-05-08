@@ -22,7 +22,7 @@ export class PlaylistUpdateAction extends KalturaRequest<KalturaPlaylist> {
 
     constructor(data : PlaylistUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaPlaylist');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlaylist', responseConstructor : KalturaPlaylist  });
         if (typeof this.updateStats === 'undefined') this.updateStats = false;
     }
 
@@ -32,11 +32,11 @@ export class PlaylistUpdateAction extends KalturaRequest<KalturaPlaylist> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				playlist : { type : 'o'  , subType : 'KalturaPlaylist'},
-				updateStats : { type : 'b'  }
+                service : { type : 'c' , default : 'playlist'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				playlist : { type : 'o'   , fallbackConstructor :  KalturaPlaylist, subType : 'KalturaPlaylist'},
+				updateStats : { type : 'b'   }
             }
         );
         return result;

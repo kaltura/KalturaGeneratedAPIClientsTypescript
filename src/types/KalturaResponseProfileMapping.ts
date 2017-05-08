@@ -27,10 +27,10 @@ export class KalturaResponseProfileMapping extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfileMapping' },
-				parentProperty : { type : 's'  },
-				filterProperty : { type : 's'  },
-				allowNull : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaResponseProfileMapping'  },
+				parentProperty : { type : 's'   },
+				filterProperty : { type : 's'   },
+				allowNull : { type : 'b'   }
             }
         );
         return result;

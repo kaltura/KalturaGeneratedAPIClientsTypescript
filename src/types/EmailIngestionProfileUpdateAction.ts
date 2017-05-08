@@ -19,7 +19,7 @@ export class EmailIngestionProfileUpdateAction extends KalturaRequest<KalturaEma
 
     constructor(data : EmailIngestionProfileUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaEmailIngestionProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEmailIngestionProfile', responseConstructor : KalturaEmailIngestionProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class EmailIngestionProfileUpdateAction extends KalturaRequest<KalturaEma
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'emailingestionprofile' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 'n'  },
-				EmailIP : { type : 'o'  , subType : 'KalturaEmailIngestionProfile'}
+                service : { type : 'c' , default : 'emailingestionprofile'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 'n'   },
+				EmailIP : { type : 'o'   , fallbackConstructor :  KalturaEmailIngestionProfile, subType : 'KalturaEmailIngestionProfile'}
             }
         );
         return result;

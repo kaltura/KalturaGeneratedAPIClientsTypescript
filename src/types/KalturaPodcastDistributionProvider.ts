@@ -23,7 +23,7 @@ export class KalturaPodcastDistributionProvider extends KalturaDistributionProvi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPodcastDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaPodcastDistributionProvider'  }
             }
         );
         return result;

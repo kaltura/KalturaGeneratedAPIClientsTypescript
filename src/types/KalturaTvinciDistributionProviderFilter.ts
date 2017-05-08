@@ -23,7 +23,7 @@ export class KalturaTvinciDistributionProviderFilter extends KalturaTvinciDistri
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTvinciDistributionProviderFilter' }
+                objectType : { type : 'c' , default : 'KalturaTvinciDistributionProviderFilter'  }
             }
         );
         return result;

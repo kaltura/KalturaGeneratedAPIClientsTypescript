@@ -17,7 +17,7 @@ export class ScheduledTaskProfileGetAction extends KalturaRequest<KalturaSchedul
 
     constructor(data : ScheduledTaskProfileGetActionArgs)
     {
-        super(data, 'o', 'KalturaScheduledTaskProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduledTaskProfile', responseConstructor : KalturaScheduledTaskProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ScheduledTaskProfileGetAction extends KalturaRequest<KalturaSchedul
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

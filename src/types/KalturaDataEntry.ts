@@ -25,9 +25,9 @@ export class KalturaDataEntry extends KalturaBaseEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDataEntry' },
-				dataContent : { type : 's'  },
-				retrieveDataContentByGet : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDataEntry'  },
+				dataContent : { type : 's'   },
+				retrieveDataContentByGet : { type : 'b'   }
             }
         );
         return result;

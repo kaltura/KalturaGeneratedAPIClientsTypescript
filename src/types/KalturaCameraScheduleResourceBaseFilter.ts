@@ -23,7 +23,7 @@ export class KalturaCameraScheduleResourceBaseFilter extends KalturaScheduleReso
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCameraScheduleResourceBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaCameraScheduleResourceBaseFilter'  }
             }
         );
         return result;

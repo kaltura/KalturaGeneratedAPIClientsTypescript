@@ -25,9 +25,9 @@ export class KalturaStorageExportJobData extends KalturaStorageJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageExportJobData' },
-				force : { type : 'b'  },
-				createLink : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaStorageExportJobData'  },
+				force : { type : 'b'   },
+				createLink : { type : 'b'   }
             }
         );
         return result;

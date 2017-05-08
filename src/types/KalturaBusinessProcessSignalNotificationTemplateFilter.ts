@@ -23,7 +23,7 @@ export class KalturaBusinessProcessSignalNotificationTemplateFilter extends Kalt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessSignalNotificationTemplateFilter' }
+                objectType : { type : 'c' , default : 'KalturaBusinessProcessSignalNotificationTemplateFilter'  }
             }
         );
         return result;

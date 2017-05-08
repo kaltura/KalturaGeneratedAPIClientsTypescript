@@ -25,9 +25,9 @@ export class KalturaAccessControlLimitDeliveryProfilesAction extends KalturaRule
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlLimitDeliveryProfilesAction' },
-				deliveryProfileIds : { type : 's'  },
-				isBlockedList : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaAccessControlLimitDeliveryProfilesAction'  },
+				deliveryProfileIds : { type : 's'   },
+				isBlockedList : { type : 'b'   }
             }
         );
         return result;

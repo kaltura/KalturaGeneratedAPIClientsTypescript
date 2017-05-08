@@ -25,7 +25,7 @@ export class KalturaIpAddressContextField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIpAddressContextField' }
+                objectType : { type : 'c' , default : 'KalturaIpAddressContextField'  }
             }
         );
         return result;

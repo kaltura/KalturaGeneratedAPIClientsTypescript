@@ -14,6 +14,7 @@ export interface KalturaObjectPropertyMetadata
     type : string;
     subType? : string;
     default? : string;
+    fallbackConstructor? : { new() : KalturaObjectBase };
 };
 
 export interface KalturaObjectBaseArgs

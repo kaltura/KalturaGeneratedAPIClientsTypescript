@@ -34,13 +34,13 @@ export class KalturaDropFolderContentProcessorJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderContentProcessorJobData' },
-				dropFolderId : { type : 'n'  },
-				dropFolderFileIds : { type : 's'  },
-				parsedSlug : { type : 's'  },
-				contentMatchPolicy : { type : 'en'  , subType : 'KalturaDropFolderContentFileHandlerMatchPolicy'},
-				conversionProfileId : { type : 'n'  },
-				parsedUserId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDropFolderContentProcessorJobData'  },
+				dropFolderId : { type : 'n'   },
+				dropFolderFileIds : { type : 's'   },
+				parsedSlug : { type : 's'   },
+				contentMatchPolicy : { type : 'en'   , subType : 'KalturaDropFolderContentFileHandlerMatchPolicy'},
+				conversionProfileId : { type : 'n'   },
+				parsedUserId : { type : 's'   }
             }
         );
         return result;

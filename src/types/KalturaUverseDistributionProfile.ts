@@ -44,19 +44,19 @@ export class KalturaUverseDistributionProfile extends KalturaConfigurableDistrib
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUverseDistributionProfile' },
-				feedUrl : { type : 's'  , readOnly : true},
-				channelTitle : { type : 's'  },
-				channelLink : { type : 's'  },
-				channelDescription : { type : 's'  },
-				channelLanguage : { type : 's'  },
-				channelCopyright : { type : 's'  },
-				channelImageTitle : { type : 's'  },
-				channelImageUrl : { type : 's'  },
-				channelImageLink : { type : 's'  },
-				ftpHost : { type : 's'  },
-				ftpLogin : { type : 's'  },
-				ftpPassword : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUverseDistributionProfile'  },
+				feedUrl : { type : 's'  , readOnly : true },
+				channelTitle : { type : 's'   },
+				channelLink : { type : 's'   },
+				channelDescription : { type : 's'   },
+				channelLanguage : { type : 's'   },
+				channelCopyright : { type : 's'   },
+				channelImageTitle : { type : 's'   },
+				channelImageUrl : { type : 's'   },
+				channelImageLink : { type : 's'   },
+				ftpHost : { type : 's'   },
+				ftpLogin : { type : 's'   },
+				ftpPassword : { type : 's'   }
             }
         );
         return result;

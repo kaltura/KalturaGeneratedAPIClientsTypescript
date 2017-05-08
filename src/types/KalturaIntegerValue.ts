@@ -25,8 +25,8 @@ export class KalturaIntegerValue extends KalturaValue {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIntegerValue' },
-				value : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaIntegerValue'  },
+				value : { type : 'n'   }
             }
         );
         return result;

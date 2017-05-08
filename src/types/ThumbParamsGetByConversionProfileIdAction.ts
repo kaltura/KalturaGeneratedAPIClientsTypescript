@@ -17,7 +17,7 @@ export class ThumbParamsGetByConversionProfileIdAction extends KalturaRequest<Ka
 
     constructor(data : ThumbParamsGetByConversionProfileIdActionArgs)
     {
-        super(data, 'a', 'KalturaThumbParams');
+        super(data, {responseType : 'a', responseSubType : 'KalturaThumbParams', responseConstructor : KalturaThumbParams  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ThumbParamsGetByConversionProfileIdAction extends KalturaRequest<Ka
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams' },
-				action : { type : 'c' , default : 'getByConversionProfileId' },
-				conversionProfileId : { type : 'n'  }
+                service : { type : 'c' , default : 'thumbparams'  },
+				action : { type : 'c' , default : 'getByConversionProfileId'  },
+				conversionProfileId : { type : 'n'   }
             }
         );
         return result;

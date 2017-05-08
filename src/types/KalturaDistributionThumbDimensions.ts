@@ -25,9 +25,9 @@ export class KalturaDistributionThumbDimensions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionThumbDimensions' },
-				width : { type : 'n'  },
-				height : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionThumbDimensions'  },
+				width : { type : 'n'   },
+				height : { type : 'n'   }
             }
         );
         return result;

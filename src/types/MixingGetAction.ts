@@ -19,7 +19,7 @@ export class MixingGetAction extends KalturaRequest<KalturaMixEntry> {
 
     constructor(data : MixingGetActionArgs)
     {
-        super(data, 'o', 'KalturaMixEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMixEntry', responseConstructor : KalturaMixEntry  });
         if (typeof this.version === 'undefined') this.version = -1;
     }
 
@@ -29,10 +29,10 @@ export class MixingGetAction extends KalturaRequest<KalturaMixEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'mixing' },
-				action : { type : 'c' , default : 'get' },
-				entryId : { type : 's'  },
-				version : { type : 'n'  }
+                service : { type : 'c' , default : 'mixing'  },
+				action : { type : 'c' , default : 'get'  },
+				entryId : { type : 's'   },
+				version : { type : 'n'   }
             }
         );
         return result;

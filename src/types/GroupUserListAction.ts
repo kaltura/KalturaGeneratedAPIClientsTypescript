@@ -21,7 +21,7 @@ export class GroupUserListAction extends KalturaRequest<KalturaGroupUserListResp
 
     constructor(data? : GroupUserListActionArgs)
     {
-        super(data, 'o', 'KalturaGroupUserListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGroupUserListResponse', responseConstructor : KalturaGroupUserListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class GroupUserListAction extends KalturaRequest<KalturaGroupUserListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'groupuser' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaGroupUserFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'groupuser'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaGroupUserFilter, subType : 'KalturaGroupUserFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

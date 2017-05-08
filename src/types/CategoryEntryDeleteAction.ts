@@ -19,7 +19,7 @@ export class CategoryEntryDeleteAction extends KalturaRequest<void> {
 
     constructor(data : CategoryEntryDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class CategoryEntryDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry' },
-				action : { type : 'c' , default : 'delete' },
-				entryId : { type : 's'  },
-				categoryId : { type : 'n'  }
+                service : { type : 'c' , default : 'categoryentry'  },
+				action : { type : 'c' , default : 'delete'  },
+				entryId : { type : 's'   },
+				categoryId : { type : 'n'   }
             }
         );
         return result;

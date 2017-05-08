@@ -23,7 +23,7 @@ export class KalturaGoogleVideoSyndicationFeedBaseFilter extends KalturaBaseSynd
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGoogleVideoSyndicationFeedBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaGoogleVideoSyndicationFeedBaseFilter'  }
             }
         );
         return result;

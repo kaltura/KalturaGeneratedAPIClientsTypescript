@@ -27,8 +27,8 @@ export class KalturaExternalMediaEntryCompareAttributeCondition extends KalturaS
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryCompareAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaExternalMediaEntryCompareAttribute'}
+                objectType : { type : 'c' , default : 'KalturaExternalMediaEntryCompareAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaExternalMediaEntryCompareAttribute'}
             }
         );
         return result;

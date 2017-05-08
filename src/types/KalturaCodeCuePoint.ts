@@ -28,11 +28,11 @@ export class KalturaCodeCuePoint extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCodeCuePoint' },
-				code : { type : 's'  },
-				description : { type : 's'  },
-				endTime : { type : 'n'  },
-				duration : { type : 'n'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaCodeCuePoint'  },
+				code : { type : 's'   },
+				description : { type : 's'   },
+				endTime : { type : 'n'   },
+				duration : { type : 'n'  , readOnly : true }
             }
         );
         return result;

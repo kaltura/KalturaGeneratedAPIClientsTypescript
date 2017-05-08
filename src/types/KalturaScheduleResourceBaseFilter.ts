@@ -54,23 +54,23 @@ export class KalturaScheduleResourceBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleResourceBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				idNotIn : { type : 's'  },
-				parentIdEqual : { type : 'n'  },
-				parentIdIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaScheduleResourceStatus'},
-				statusIn : { type : 's'  },
-				tagsLike : { type : 's'  },
-				tagsMultiLikeOr : { type : 's'  },
-				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaScheduleResourceBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				idNotIn : { type : 's'   },
+				parentIdEqual : { type : 'n'   },
+				parentIdIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaScheduleResourceStatus'},
+				statusIn : { type : 's'   },
+				tagsLike : { type : 's'   },
+				tagsMultiLikeOr : { type : 's'   },
+				tagsMultiLikeAnd : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

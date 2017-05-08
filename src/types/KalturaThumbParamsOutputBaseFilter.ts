@@ -29,11 +29,11 @@ export class KalturaThumbParamsOutputBaseFilter extends KalturaThumbParamsFilter
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbParamsOutputBaseFilter' },
-				thumbParamsIdEqual : { type : 'n'  },
-				thumbParamsVersionEqual : { type : 's'  },
-				thumbAssetIdEqual : { type : 's'  },
-				thumbAssetVersionEqual : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaThumbParamsOutputBaseFilter'  },
+				thumbParamsIdEqual : { type : 'n'   },
+				thumbParamsVersionEqual : { type : 's'   },
+				thumbAssetIdEqual : { type : 's'   },
+				thumbAssetVersionEqual : { type : 's'   }
             }
         );
         return result;

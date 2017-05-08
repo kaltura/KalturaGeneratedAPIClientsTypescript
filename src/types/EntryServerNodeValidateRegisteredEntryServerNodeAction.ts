@@ -17,7 +17,7 @@ export class EntryServerNodeValidateRegisteredEntryServerNodeAction extends Kalt
 
     constructor(data : EntryServerNodeValidateRegisteredEntryServerNodeActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class EntryServerNodeValidateRegisteredEntryServerNodeAction extends Kalt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'entryservernode' },
-				action : { type : 'c' , default : 'validateRegisteredEntryServerNode' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'entryservernode'  },
+				action : { type : 'c' , default : 'validateRegisteredEntryServerNode'  },
+				id : { type : 'n'   }
             }
         );
         return result;

@@ -15,7 +15,7 @@ export class SystemGetVersionAction extends KalturaRequest<string> {
 
     constructor(data? : SystemGetVersionActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,8 +24,8 @@ export class SystemGetVersionAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'system' },
-				action : { type : 'c' , default : 'getVersion' }
+                service : { type : 'c' , default : 'system'  },
+				action : { type : 'c' , default : 'getVersion'  }
             }
         );
         return result;

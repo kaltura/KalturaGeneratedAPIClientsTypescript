@@ -15,7 +15,7 @@ export class CaptionAssetGetAction extends KalturaRequest<KalturaCaptionAsset> {
 
     constructor(data : CaptionAssetGetActionArgs)
     {
-        super(data, 'o', 'KalturaCaptionAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCaptionAsset', responseConstructor : KalturaCaptionAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class CaptionAssetGetAction extends KalturaRequest<KalturaCaptionAsset> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset' },
-				action : { type : 'c' , default : 'get' },
-				captionAssetId : { type : 's'  }
+                service : { type : 'c' , default : 'caption_captionasset'  },
+				action : { type : 'c' , default : 'get'  },
+				captionAssetId : { type : 's'   }
             }
         );
         return result;

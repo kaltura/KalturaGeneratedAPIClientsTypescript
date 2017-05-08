@@ -22,7 +22,7 @@ export class ThumbParamsListAction extends KalturaRequest<KalturaThumbParamsList
 
     constructor(data? : ThumbParamsListActionArgs)
     {
-        super(data, 'o', 'KalturaThumbParamsListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaThumbParamsListResponse', responseConstructor : KalturaThumbParamsListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,10 +31,10 @@ export class ThumbParamsListAction extends KalturaRequest<KalturaThumbParamsList
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbparams' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaThumbParamsFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'thumbparams'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaThumbParamsFilter, subType : 'KalturaThumbParamsFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

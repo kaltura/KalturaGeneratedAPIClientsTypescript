@@ -23,7 +23,7 @@ export class KalturaABCScreenersWatermarkCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaABCScreenersWatermarkCondition' }
+                objectType : { type : 'c' , default : 'KalturaABCScreenersWatermarkCondition'  }
             }
         );
         return result;

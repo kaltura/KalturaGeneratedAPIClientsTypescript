@@ -33,13 +33,13 @@ export class KalturaTvinciDistributionTag extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTvinciDistributionTag' },
-				tagname : { type : 's'  },
-				extension : { type : 's'  },
-				protocol : { type : 's'  },
-				format : { type : 's'  },
-				filename : { type : 's'  },
-				ppvmodule : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaTvinciDistributionTag'  },
+				tagname : { type : 's'   },
+				extension : { type : 's'   },
+				protocol : { type : 's'   },
+				format : { type : 's'   },
+				filename : { type : 's'   },
+				ppvmodule : { type : 's'   }
             }
         );
         return result;

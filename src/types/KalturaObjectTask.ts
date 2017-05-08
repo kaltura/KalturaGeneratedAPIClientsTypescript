@@ -25,9 +25,9 @@ export class KalturaObjectTask extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaObjectTask' },
-				type : { type : 'es'  , readOnly : true, subType : 'KalturaObjectTaskType'},
-				stopProcessingOnError : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaObjectTask'  },
+				type : { type : 'es'  , readOnly : true , subType : 'KalturaObjectTaskType'},
+				stopProcessingOnError : { type : 'b'   }
             }
         );
         return result;

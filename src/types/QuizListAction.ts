@@ -21,7 +21,7 @@ export class QuizListAction extends KalturaRequest<KalturaQuizListResponse> {
 
     constructor(data? : QuizListActionArgs)
     {
-        super(data, 'o', 'KalturaQuizListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaQuizListResponse', responseConstructor : KalturaQuizListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class QuizListAction extends KalturaRequest<KalturaQuizListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'quiz_quiz' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaQuizFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'quiz_quiz'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaQuizFilter, subType : 'KalturaQuizFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

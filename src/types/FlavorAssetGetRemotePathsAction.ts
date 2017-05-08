@@ -17,7 +17,7 @@ export class FlavorAssetGetRemotePathsAction extends KalturaRequest<KalturaRemot
 
     constructor(data : FlavorAssetGetRemotePathsActionArgs)
     {
-        super(data, 'o', 'KalturaRemotePathListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaRemotePathListResponse', responseConstructor : KalturaRemotePathListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FlavorAssetGetRemotePathsAction extends KalturaRequest<KalturaRemot
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'getRemotePaths' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'getRemotePaths'  },
+				id : { type : 's'   }
             }
         );
         return result;

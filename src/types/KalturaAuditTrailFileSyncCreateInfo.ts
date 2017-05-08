@@ -32,12 +32,12 @@ export class KalturaAuditTrailFileSyncCreateInfo extends KalturaAuditTrailInfo {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailFileSyncCreateInfo' },
-				version : { type : 's'  },
-				objectSubType : { type : 'n'  },
-				dc : { type : 'n'  },
-				original : { type : 'b'  },
-				fileType : { type : 'en'  , subType : 'KalturaAuditTrailFileSyncType'}
+                objectType : { type : 'c' , default : 'KalturaAuditTrailFileSyncCreateInfo'  },
+				version : { type : 's'   },
+				objectSubType : { type : 'n'   },
+				dc : { type : 'n'   },
+				original : { type : 'b'   },
+				fileType : { type : 'en'   , subType : 'KalturaAuditTrailFileSyncType'}
             }
         );
         return result;

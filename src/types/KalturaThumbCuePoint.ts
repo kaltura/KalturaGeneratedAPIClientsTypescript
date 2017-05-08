@@ -30,11 +30,11 @@ export class KalturaThumbCuePoint extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbCuePoint' },
-				assetId : { type : 's'  },
-				description : { type : 's'  },
-				title : { type : 's'  },
-				subType : { type : 'en'  , subType : 'KalturaThumbCuePointSubType'}
+                objectType : { type : 'c' , default : 'KalturaThumbCuePoint'  },
+				assetId : { type : 's'   },
+				description : { type : 's'   },
+				title : { type : 's'   },
+				subType : { type : 'en'   , subType : 'KalturaThumbCuePointSubType'}
             }
         );
         return result;

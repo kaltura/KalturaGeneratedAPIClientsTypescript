@@ -31,11 +31,11 @@ export class KalturaQuestionCuePoint extends KalturaCuePoint {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuestionCuePoint' },
-				optionalAnswers : { type : 'a'  , subType : 'KalturaOptionalAnswer'},
-				hint : { type : 's'  },
-				question : { type : 's'  },
-				explanation : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaQuestionCuePoint'  },
+				optionalAnswers : { type : 'a'   , fallbackConstructor :  KalturaOptionalAnswer, subType : 'KalturaOptionalAnswer'},
+				hint : { type : 's'   },
+				question : { type : 's'   },
+				explanation : { type : 's'   }
             }
         );
         return result;

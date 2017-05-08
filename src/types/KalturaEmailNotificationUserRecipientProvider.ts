@@ -27,8 +27,8 @@ export class KalturaEmailNotificationUserRecipientProvider extends KalturaEmailN
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationUserRecipientProvider' },
-				filter : { type : 'o'  , subType : 'KalturaUserFilter'}
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationUserRecipientProvider'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaUserFilter, subType : 'KalturaUserFilter'}
             }
         );
         return result;

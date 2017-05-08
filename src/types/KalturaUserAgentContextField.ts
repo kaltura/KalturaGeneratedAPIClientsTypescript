@@ -25,7 +25,7 @@ export class KalturaUserAgentContextField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserAgentContextField' }
+                objectType : { type : 'c' , default : 'KalturaUserAgentContextField'  }
             }
         );
         return result;

@@ -21,7 +21,7 @@ export class ResponseProfileListAction extends KalturaRequest<KalturaResponsePro
 
     constructor(data? : ResponseProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaResponseProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaResponseProfileListResponse', responseConstructor : KalturaResponseProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class ResponseProfileListAction extends KalturaRequest<KalturaResponsePro
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaResponseProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'responseprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaResponseProfileFilter, subType : 'KalturaResponseProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaMediaInfoListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaInfoListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaMediaInfo'}
+                objectType : { type : 'c' , default : 'KalturaMediaInfoListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaMediaInfo, subType : 'KalturaMediaInfo'}
             }
         );
         return result;

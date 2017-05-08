@@ -17,7 +17,7 @@ export class ThumbAssetGetRemotePathsAction extends KalturaRequest<KalturaRemote
 
     constructor(data : ThumbAssetGetRemotePathsActionArgs)
     {
-        super(data, 'o', 'KalturaRemotePathListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaRemotePathListResponse', responseConstructor : KalturaRemotePathListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ThumbAssetGetRemotePathsAction extends KalturaRequest<KalturaRemote
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'getRemotePaths' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'getRemotePaths'  },
+				id : { type : 's'   }
             }
         );
         return result;

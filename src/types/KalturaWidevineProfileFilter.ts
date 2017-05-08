@@ -23,7 +23,7 @@ export class KalturaWidevineProfileFilter extends KalturaWidevineProfileBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWidevineProfileFilter' }
+                objectType : { type : 'c' , default : 'KalturaWidevineProfileFilter'  }
             }
         );
         return result;

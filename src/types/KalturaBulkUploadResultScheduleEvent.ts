@@ -23,8 +23,8 @@ export class KalturaBulkUploadResultScheduleEvent extends KalturaBulkUploadResul
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadResultScheduleEvent' },
-				referenceId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadResultScheduleEvent'  },
+				referenceId : { type : 's'   }
             }
         );
         return result;

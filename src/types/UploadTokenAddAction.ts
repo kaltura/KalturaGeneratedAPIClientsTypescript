@@ -17,7 +17,7 @@ export class UploadTokenAddAction extends KalturaRequest<KalturaUploadToken> {
 
     constructor(data? : UploadTokenAddActionArgs)
     {
-        super(data, 'o', 'KalturaUploadToken');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUploadToken', responseConstructor : KalturaUploadToken  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UploadTokenAddAction extends KalturaRequest<KalturaUploadToken> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uploadtoken' },
-				action : { type : 'c' , default : 'add' },
-				uploadToken : { type : 'o'  , subType : 'KalturaUploadToken'}
+                service : { type : 'c' , default : 'uploadtoken'  },
+				action : { type : 'c' , default : 'add'  },
+				uploadToken : { type : 'o'   , fallbackConstructor :  KalturaUploadToken, subType : 'KalturaUploadToken'}
             }
         );
         return result;

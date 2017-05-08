@@ -21,7 +21,7 @@ export class DocumentsAddFromEntryAction extends KalturaRequest<KalturaDocumentE
 
     constructor(data : DocumentsAddFromEntryActionArgs)
     {
-        super(data, 'o', 'KalturaDocumentEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDocumentEntry', responseConstructor : KalturaDocumentEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class DocumentsAddFromEntryAction extends KalturaRequest<KalturaDocumentE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'addFromEntry' },
-				sourceEntryId : { type : 's'  },
-				documentEntry : { type : 'o'  , subType : 'KalturaDocumentEntry'},
-				sourceFlavorParamsId : { type : 'n'  }
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'addFromEntry'  },
+				sourceEntryId : { type : 's'   },
+				documentEntry : { type : 'o'   , fallbackConstructor :  KalturaDocumentEntry, subType : 'KalturaDocumentEntry'},
+				sourceFlavorParamsId : { type : 'n'   }
             }
         );
         return result;

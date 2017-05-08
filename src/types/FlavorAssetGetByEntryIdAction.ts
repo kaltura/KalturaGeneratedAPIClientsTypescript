@@ -17,7 +17,7 @@ export class FlavorAssetGetByEntryIdAction extends KalturaRequest<KalturaFlavorA
 
     constructor(data : FlavorAssetGetByEntryIdActionArgs)
     {
-        super(data, 'a', 'KalturaFlavorAsset');
+        super(data, {responseType : 'a', responseSubType : 'KalturaFlavorAsset', responseConstructor : KalturaFlavorAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FlavorAssetGetByEntryIdAction extends KalturaRequest<KalturaFlavorA
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'getByEntryId' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'getByEntryId'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

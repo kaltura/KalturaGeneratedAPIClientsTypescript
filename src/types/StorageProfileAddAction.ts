@@ -17,7 +17,7 @@ export class StorageProfileAddAction extends KalturaRequest<KalturaStorageProfil
 
     constructor(data : StorageProfileAddActionArgs)
     {
-        super(data, 'o', 'KalturaStorageProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaStorageProfile', responseConstructor : KalturaStorageProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class StorageProfileAddAction extends KalturaRequest<KalturaStorageProfil
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile' },
-				action : { type : 'c' , default : 'add' },
-				storageProfile : { type : 'o'  , subType : 'KalturaStorageProfile'}
+                service : { type : 'c' , default : 'storageprofile'  },
+				action : { type : 'c' , default : 'add'  },
+				storageProfile : { type : 'o'   , fallbackConstructor :  KalturaStorageProfile, subType : 'KalturaStorageProfile'}
             }
         );
         return result;

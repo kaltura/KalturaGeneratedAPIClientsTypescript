@@ -21,7 +21,7 @@ export class UiConfListTemplatesAction extends KalturaRequest<KalturaUiConfListR
 
     constructor(data? : UiConfListTemplatesActionArgs)
     {
-        super(data, 'o', 'KalturaUiConfListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUiConfListResponse', responseConstructor : KalturaUiConfListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class UiConfListTemplatesAction extends KalturaRequest<KalturaUiConfListR
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf' },
-				action : { type : 'c' , default : 'listTemplates' },
-				filter : { type : 'o'  , subType : 'KalturaUiConfFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'uiconf'  },
+				action : { type : 'c' , default : 'listTemplates'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaUiConfFilter, subType : 'KalturaUiConfFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

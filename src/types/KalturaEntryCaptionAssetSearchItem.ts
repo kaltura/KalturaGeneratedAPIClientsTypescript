@@ -27,10 +27,10 @@ export class KalturaEntryCaptionAssetSearchItem extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryCaptionAssetSearchItem' },
-				contentLike : { type : 's'  },
-				contentMultiLikeOr : { type : 's'  },
-				contentMultiLikeAnd : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaEntryCaptionAssetSearchItem'  },
+				contentLike : { type : 's'   },
+				contentMultiLikeOr : { type : 's'   },
+				contentMultiLikeAnd : { type : 's'   }
             }
         );
         return result;

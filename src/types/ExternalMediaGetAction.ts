@@ -17,7 +17,7 @@ export class ExternalMediaGetAction extends KalturaRequest<KalturaExternalMediaE
 
     constructor(data : ExternalMediaGetActionArgs)
     {
-        super(data, 'o', 'KalturaExternalMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaExternalMediaEntry', responseConstructor : KalturaExternalMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ExternalMediaGetAction extends KalturaRequest<KalturaExternalMediaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'externalmedia_externalmedia' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'externalmedia_externalmedia'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 's'   }
             }
         );
         return result;

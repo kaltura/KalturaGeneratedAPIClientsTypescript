@@ -35,14 +35,14 @@ export class KalturaLiveStreamParams extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamParams' },
-				bitrate : { type : 'n'  },
-				flavorId : { type : 's'  },
-				width : { type : 'n'  },
-				height : { type : 'n'  },
-				codec : { type : 's'  },
-				frameRate : { type : 'n'  },
-				keyFrameInterval : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaLiveStreamParams'  },
+				bitrate : { type : 'n'   },
+				flavorId : { type : 's'   },
+				width : { type : 'n'   },
+				height : { type : 'n'   },
+				codec : { type : 's'   },
+				frameRate : { type : 'n'   },
+				keyFrameInterval : { type : 'n'   }
             }
         );
         return result;

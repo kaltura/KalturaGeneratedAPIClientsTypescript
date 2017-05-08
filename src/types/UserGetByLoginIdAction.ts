@@ -18,7 +18,7 @@ export class UserGetByLoginIdAction extends KalturaRequest<KalturaUser> {
 
     constructor(data : UserGetByLoginIdActionArgs)
     {
-        super(data, 'o', 'KalturaUser');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUser', responseConstructor : KalturaUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class UserGetByLoginIdAction extends KalturaRequest<KalturaUser> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'getByLoginId' },
-				loginId : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'getByLoginId'  },
+				loginId : { type : 's'   }
             }
         );
         return result;

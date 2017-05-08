@@ -19,7 +19,7 @@ export class LiveReportsExportToCsvAction extends KalturaRequest<KalturaLiveRepo
 
     constructor(data : LiveReportsExportToCsvActionArgs)
     {
-        super(data, 'o', 'KalturaLiveReportExportResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveReportExportResponse', responseConstructor : KalturaLiveReportExportResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class LiveReportsExportToCsvAction extends KalturaRequest<KalturaLiveRepo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livereports' },
-				action : { type : 'c' , default : 'exportToCsv' },
-				reportType : { type : 'en'  , subType : 'KalturaLiveReportExportType'},
-				params : { type : 'o'  , subType : 'KalturaLiveReportExportParams'}
+                service : { type : 'c' , default : 'livereports'  },
+				action : { type : 'c' , default : 'exportToCsv'  },
+				reportType : { type : 'en'   , subType : 'KalturaLiveReportExportType'},
+				params : { type : 'o'   , fallbackConstructor :  KalturaLiveReportExportParams, subType : 'KalturaLiveReportExportParams'}
             }
         );
         return result;

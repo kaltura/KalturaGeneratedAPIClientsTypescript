@@ -21,7 +21,7 @@ export class AttachmentAssetListAction extends KalturaRequest<KalturaAttachmentA
 
     constructor(data? : AttachmentAssetListActionArgs)
     {
-        super(data, 'o', 'KalturaAttachmentAssetListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAttachmentAssetListResponse', responseConstructor : KalturaAttachmentAssetListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class AttachmentAssetListAction extends KalturaRequest<KalturaAttachmentA
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaAssetFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'attachment_attachmentasset'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaAssetFilter, subType : 'KalturaAssetFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

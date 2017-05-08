@@ -17,7 +17,7 @@ export class UserNotifyBanAction extends KalturaRequest<void> {
 
     constructor(data : UserNotifyBanActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UserNotifyBanAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'notifyBan' },
-				userId : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'notifyBan'  },
+				userId : { type : 's'   }
             }
         );
         return result;

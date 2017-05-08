@@ -21,7 +21,7 @@ export class FileAssetListAction extends KalturaRequest<KalturaFileAssetListResp
 
     constructor(data : FileAssetListActionArgs)
     {
-        super(data, 'o', 'KalturaFileAssetListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaFileAssetListResponse', responseConstructor : KalturaFileAssetListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class FileAssetListAction extends KalturaRequest<KalturaFileAssetListResp
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaFileAssetFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'fileasset'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaFileAssetFilter, subType : 'KalturaFileAssetFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

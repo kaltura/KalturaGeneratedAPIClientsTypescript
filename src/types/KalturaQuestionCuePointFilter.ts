@@ -23,7 +23,7 @@ export class KalturaQuestionCuePointFilter extends KalturaQuestionCuePointBaseFi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuestionCuePointFilter' }
+                objectType : { type : 'c' , default : 'KalturaQuestionCuePointFilter'  }
             }
         );
         return result;

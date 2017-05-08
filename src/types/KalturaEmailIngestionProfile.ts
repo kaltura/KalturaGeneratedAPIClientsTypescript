@@ -51,23 +51,23 @@ export class KalturaEmailIngestionProfile extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailIngestionProfile' },
-				id : { type : 'n'  , readOnly : true},
-				name : { type : 's'  },
-				description : { type : 's'  },
-				emailAddress : { type : 's'  },
-				mailboxId : { type : 's'  },
-				partnerId : { type : 'n'  , readOnly : true},
-				conversionProfile2Id : { type : 'n'  },
-				moderationStatus : { type : 'en'  , subType : 'KalturaEntryModerationStatus'},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaEmailIngestionProfileStatus'},
-				createdAt : { type : 's'  , readOnly : true},
-				defaultCategory : { type : 's'  },
-				defaultUserId : { type : 's'  },
-				defaultTags : { type : 's'  },
-				defaultAdminTags : { type : 's'  },
-				maxAttachmentSizeKbytes : { type : 'n'  },
-				maxAttachmentsPerMail : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaEmailIngestionProfile'  },
+				id : { type : 'n'  , readOnly : true },
+				name : { type : 's'   },
+				description : { type : 's'   },
+				emailAddress : { type : 's'   },
+				mailboxId : { type : 's'   },
+				partnerId : { type : 'n'  , readOnly : true },
+				conversionProfile2Id : { type : 'n'   },
+				moderationStatus : { type : 'en'   , subType : 'KalturaEntryModerationStatus'},
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaEmailIngestionProfileStatus'},
+				createdAt : { type : 's'  , readOnly : true },
+				defaultCategory : { type : 's'   },
+				defaultUserId : { type : 's'   },
+				defaultTags : { type : 's'   },
+				defaultAdminTags : { type : 's'   },
+				maxAttachmentSizeKbytes : { type : 'n'   },
+				maxAttachmentsPerMail : { type : 'n'   }
             }
         );
         return result;

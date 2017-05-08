@@ -25,7 +25,7 @@ export class KalturaBulkUploadXmlJobData extends KalturaBulkUploadJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadXmlJobData' }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadXmlJobData'  }
             }
         );
         return result;

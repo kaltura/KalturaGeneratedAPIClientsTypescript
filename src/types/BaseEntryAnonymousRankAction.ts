@@ -19,7 +19,7 @@ export class BaseEntryAnonymousRankAction extends KalturaRequest<void> {
 
     constructor(data : BaseEntryAnonymousRankActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class BaseEntryAnonymousRankAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'anonymousRank' },
-				entryId : { type : 's'  },
-				rank : { type : 'n'  }
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'anonymousRank'  },
+				entryId : { type : 's'   },
+				rank : { type : 'n'   }
             }
         );
         return result;

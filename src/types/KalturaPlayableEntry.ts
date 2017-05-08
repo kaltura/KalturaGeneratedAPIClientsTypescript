@@ -31,15 +31,15 @@ export class KalturaPlayableEntry extends KalturaBaseEntry {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayableEntry' },
-				plays : { type : 'n'  , readOnly : true},
-				views : { type : 'n'  , readOnly : true},
-				lastPlayedAt : { type : 'd'  , readOnly : true},
-				width : { type : 'n'  , readOnly : true},
-				height : { type : 'n'  , readOnly : true},
-				duration : { type : 'n'  , readOnly : true},
-				msDuration : { type : 'n'  },
-				durationType : { type : 'es'  , readOnly : true, subType : 'KalturaDurationType'}
+                objectType : { type : 'c' , default : 'KalturaPlayableEntry'  },
+				plays : { type : 'n'  , readOnly : true },
+				views : { type : 'n'  , readOnly : true },
+				lastPlayedAt : { type : 'd'  , readOnly : true },
+				width : { type : 'n'  , readOnly : true },
+				height : { type : 'n'  , readOnly : true },
+				duration : { type : 'n'  , readOnly : true },
+				msDuration : { type : 'n'   },
+				durationType : { type : 'es'  , readOnly : true , subType : 'KalturaDurationType'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaMsnDistributionProviderBaseFilter extends KalturaDistributio
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMsnDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaMsnDistributionProviderBaseFilter'  }
             }
         );
         return result;

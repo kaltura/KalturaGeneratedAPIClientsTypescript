@@ -34,12 +34,12 @@ export class KalturaCaptionParams extends KalturaAssetParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionParams' },
-				language : { type : 'es'  , subType : 'KalturaLanguage'},
-				isDefault : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				label : { type : 's'  },
-				format : { type : 'es'  , subType : 'KalturaCaptionType'},
-				sourceParamsId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaCaptionParams'  },
+				language : { type : 'es'   , subType : 'KalturaLanguage'},
+				isDefault : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				label : { type : 's'   },
+				format : { type : 'es'   , subType : 'KalturaCaptionType'},
+				sourceParamsId : { type : 'n'   }
             }
         );
         return result;

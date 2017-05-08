@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileAkamaiAppleHttpManifest extends KalturaDelive
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiAppleHttpManifest' },
-				supportClipping : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiAppleHttpManifest'  },
+				supportClipping : { type : 'b'   }
             }
         );
         return result;

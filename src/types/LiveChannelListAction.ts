@@ -21,7 +21,7 @@ export class LiveChannelListAction extends KalturaRequest<KalturaLiveChannelList
 
     constructor(data? : LiveChannelListActionArgs)
     {
-        super(data, 'o', 'KalturaLiveChannelListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveChannelListResponse', responseConstructor : KalturaLiveChannelListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class LiveChannelListAction extends KalturaRequest<KalturaLiveChannelList
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannel' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaLiveChannelFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'livechannel'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaLiveChannelFilter, subType : 'KalturaLiveChannelFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

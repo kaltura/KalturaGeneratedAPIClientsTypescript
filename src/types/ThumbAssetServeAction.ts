@@ -25,7 +25,7 @@ export class ThumbAssetServeAction extends KalturaRequest<string> {
 
     constructor(data : ThumbAssetServeActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class ThumbAssetServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'serve' },
-				thumbAssetId : { type : 's'  },
-				version : { type : 'n'  },
-				thumbParams : { type : 'o'  , subType : 'KalturaThumbParams'},
-				options : { type : 'o'  , subType : 'KalturaThumbnailServeOptions'}
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'serve'  },
+				thumbAssetId : { type : 's'   },
+				version : { type : 'n'   },
+				thumbParams : { type : 'o'   , fallbackConstructor :  KalturaThumbParams, subType : 'KalturaThumbParams'},
+				options : { type : 'o'   , fallbackConstructor :  KalturaThumbnailServeOptions, subType : 'KalturaThumbnailServeOptions'}
             }
         );
         return result;

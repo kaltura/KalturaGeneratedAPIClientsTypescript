@@ -25,7 +25,7 @@ export class KalturaBulkUploadCategoryData extends KalturaBulkUploadObjectData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadCategoryData' }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadCategoryData'  }
             }
         );
         return result;

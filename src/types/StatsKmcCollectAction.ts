@@ -20,7 +20,7 @@ export class StatsKmcCollectAction extends KalturaRequest<void> {
 
     constructor(data : StatsKmcCollectActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,9 +29,9 @@ export class StatsKmcCollectAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'stats' },
-				action : { type : 'c' , default : 'kmcCollect' },
-				kmcEvent : { type : 'o'  , subType : 'KalturaStatsKmcEvent'}
+                service : { type : 'c' , default : 'stats'  },
+				action : { type : 'c' , default : 'kmcCollect'  },
+				kmcEvent : { type : 'o'   , fallbackConstructor :  KalturaStatsKmcEvent, subType : 'KalturaStatsKmcEvent'}
             }
         );
         return result;

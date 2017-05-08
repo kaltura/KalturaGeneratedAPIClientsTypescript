@@ -23,8 +23,8 @@ export class KalturaStorageExportObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageExportObjectTask' },
-				storageId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaStorageExportObjectTask'  },
+				storageId : { type : 's'   }
             }
         );
         return result;

@@ -28,10 +28,10 @@ export class KalturaPushNotificationTemplate extends KalturaEventNotificationTem
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPushNotificationTemplate' },
-				apiObjectType : { type : 's'  },
-				objectFormat : { type : 'en'  , subType : 'KalturaResponseType'},
-				responseProfileId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaPushNotificationTemplate'  },
+				apiObjectType : { type : 's'   },
+				objectFormat : { type : 'en'   , subType : 'KalturaResponseType'},
+				responseProfileId : { type : 'n'   }
             }
         );
         return result;

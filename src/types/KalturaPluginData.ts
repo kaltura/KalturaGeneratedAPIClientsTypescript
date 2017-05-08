@@ -23,7 +23,7 @@ export class KalturaPluginData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPluginData' }
+                objectType : { type : 'c' , default : 'KalturaPluginData'  }
             }
         );
         return result;

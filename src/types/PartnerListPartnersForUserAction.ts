@@ -21,7 +21,7 @@ export class PartnerListPartnersForUserAction extends KalturaRequest<KalturaPart
 
     constructor(data? : PartnerListPartnersForUserActionArgs)
     {
-        super(data, 'o', 'KalturaPartnerListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartnerListResponse', responseConstructor : KalturaPartnerListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class PartnerListPartnersForUserAction extends KalturaRequest<KalturaPart
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'listPartnersForUser' },
-				partnerFilter : { type : 'o'  , subType : 'KalturaPartnerFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'listPartnersForUser'  },
+				partnerFilter : { type : 'o'   , fallbackConstructor :  KalturaPartnerFilter, subType : 'KalturaPartnerFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

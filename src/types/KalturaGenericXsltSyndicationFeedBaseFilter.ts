@@ -23,7 +23,7 @@ export class KalturaGenericXsltSyndicationFeedBaseFilter extends KalturaGenericS
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericXsltSyndicationFeedBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaGenericXsltSyndicationFeedBaseFilter'  }
             }
         );
         return result;

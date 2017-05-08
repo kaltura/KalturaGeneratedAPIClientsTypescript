@@ -21,7 +21,7 @@ export class LiveStreamListAction extends KalturaRequest<KalturaLiveStreamListRe
 
     constructor(data? : LiveStreamListActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStreamListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStreamListResponse', responseConstructor : KalturaLiveStreamListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class LiveStreamListAction extends KalturaRequest<KalturaLiveStreamListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaLiveStreamEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaLiveStreamEntryFilter, subType : 'KalturaLiveStreamEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

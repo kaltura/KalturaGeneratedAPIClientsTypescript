@@ -23,8 +23,8 @@ export class KalturaPreviewRestriction extends KalturaSessionRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPreviewRestriction' },
-				previewLength : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaPreviewRestriction'  },
+				previewLength : { type : 'n'   }
             }
         );
         return result;

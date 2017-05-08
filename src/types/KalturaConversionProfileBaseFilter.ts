@@ -49,20 +49,20 @@ export class KalturaConversionProfileBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConversionProfileBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				statusEqual : { type : 'es'  , subType : 'KalturaConversionProfileStatus'},
-				statusIn : { type : 's'  },
-				typeEqual : { type : 'es'  , subType : 'KalturaConversionProfileType'},
-				typeIn : { type : 's'  },
-				nameEqual : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				tagsMultiLikeOr : { type : 's'  },
-				tagsMultiLikeAnd : { type : 's'  },
-				defaultEntryIdEqual : { type : 's'  },
-				defaultEntryIdIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaConversionProfileBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				statusEqual : { type : 'es'   , subType : 'KalturaConversionProfileStatus'},
+				statusIn : { type : 's'   },
+				typeEqual : { type : 'es'   , subType : 'KalturaConversionProfileType'},
+				typeIn : { type : 's'   },
+				nameEqual : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				tagsMultiLikeOr : { type : 's'   },
+				tagsMultiLikeAnd : { type : 's'   },
+				defaultEntryIdEqual : { type : 's'   },
+				defaultEntryIdIn : { type : 's'   }
             }
         );
         return result;

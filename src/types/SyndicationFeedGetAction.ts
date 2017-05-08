@@ -17,7 +17,7 @@ export class SyndicationFeedGetAction extends KalturaRequest<KalturaBaseSyndicat
 
     constructor(data : SyndicationFeedGetActionArgs)
     {
-        super(data, 'o', 'KalturaBaseSyndicationFeed');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseSyndicationFeed', responseConstructor : KalturaBaseSyndicationFeed  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class SyndicationFeedGetAction extends KalturaRequest<KalturaBaseSyndicat
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'syndicationfeed' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'syndicationfeed'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 's'   }
             }
         );
         return result;

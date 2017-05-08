@@ -17,7 +17,7 @@ export class VirusScanProfileDeleteAction extends KalturaRequest<KalturaVirusSca
 
     constructor(data : VirusScanProfileDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaVirusScanProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaVirusScanProfile', responseConstructor : KalturaVirusScanProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class VirusScanProfileDeleteAction extends KalturaRequest<KalturaVirusSca
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile' },
-				action : { type : 'c' , default : 'delete' },
-				virusScanProfileId : { type : 'n'  }
+                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
+				action : { type : 'c' , default : 'delete'  },
+				virusScanProfileId : { type : 'n'   }
             }
         );
         return result;

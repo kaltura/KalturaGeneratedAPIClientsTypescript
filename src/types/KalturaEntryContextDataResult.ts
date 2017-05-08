@@ -61,23 +61,23 @@ export class KalturaEntryContextDataResult extends KalturaContextDataResult {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryContextDataResult' },
-				isSiteRestricted : { type : 'b'  },
-				isCountryRestricted : { type : 'b'  },
-				isSessionRestricted : { type : 'b'  },
-				isIpAddressRestricted : { type : 'b'  },
-				isUserAgentRestricted : { type : 'b'  },
-				previewLength : { type : 'n'  },
-				isScheduledNow : { type : 'b'  },
-				isAdmin : { type : 'b'  },
-				streamerType : { type : 's'  },
-				mediaProtocol : { type : 's'  },
-				storageProfilesXML : { type : 's'  },
-				accessControlMessages : { type : 'a'  , subType : 'KalturaString'},
-				accessControlActions : { type : 'a'  , subType : 'KalturaRuleAction'},
-				flavorAssets : { type : 'a'  , subType : 'KalturaFlavorAsset'},
-				msDuration : { type : 'n'  },
-				pluginData : { type : 'a'  , subType : 'KalturaPluginData'}
+                objectType : { type : 'c' , default : 'KalturaEntryContextDataResult'  },
+				isSiteRestricted : { type : 'b'   },
+				isCountryRestricted : { type : 'b'   },
+				isSessionRestricted : { type : 'b'   },
+				isIpAddressRestricted : { type : 'b'   },
+				isUserAgentRestricted : { type : 'b'   },
+				previewLength : { type : 'n'   },
+				isScheduledNow : { type : 'b'   },
+				isAdmin : { type : 'b'   },
+				streamerType : { type : 's'   },
+				mediaProtocol : { type : 's'   },
+				storageProfilesXML : { type : 's'   },
+				accessControlMessages : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				accessControlActions : { type : 'a'   , fallbackConstructor :  KalturaRuleAction, subType : 'KalturaRuleAction'},
+				flavorAssets : { type : 'a'   , fallbackConstructor :  KalturaFlavorAsset, subType : 'KalturaFlavorAsset'},
+				msDuration : { type : 'n'   },
+				pluginData : { type : 'a'   , fallbackConstructor :  KalturaPluginData, subType : 'KalturaPluginData'}
             }
         );
         return result;

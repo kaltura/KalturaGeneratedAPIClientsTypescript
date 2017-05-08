@@ -43,18 +43,18 @@ export class KalturaVerizonVcastDistributionProfile extends KalturaConfigurableD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVerizonVcastDistributionProfile' },
-				ftpHost : { type : 's'  },
-				ftpLogin : { type : 's'  },
-				ftpPass : { type : 's'  },
-				providerName : { type : 's'  },
-				providerId : { type : 's'  },
-				entitlement : { type : 's'  },
-				priority : { type : 's'  },
-				allowStreaming : { type : 's'  },
-				streamingPriceCode : { type : 's'  },
-				allowDownload : { type : 's'  },
-				downloadPriceCode : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaVerizonVcastDistributionProfile'  },
+				ftpHost : { type : 's'   },
+				ftpLogin : { type : 's'   },
+				ftpPass : { type : 's'   },
+				providerName : { type : 's'   },
+				providerId : { type : 's'   },
+				entitlement : { type : 's'   },
+				priority : { type : 's'   },
+				allowStreaming : { type : 's'   },
+				streamingPriceCode : { type : 's'   },
+				allowDownload : { type : 's'   },
+				downloadPriceCode : { type : 's'   }
             }
         );
         return result;

@@ -34,15 +34,15 @@ export class KalturaReport extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReport' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  },
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				query : { type : 's'  },
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaReport'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'   },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				query : { type : 's'   },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true }
             }
         );
         return result;

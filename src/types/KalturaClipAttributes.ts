@@ -27,9 +27,9 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaClipAttributes' },
-				offset : { type : 'n'  },
-				duration : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaClipAttributes'  },
+				offset : { type : 'n'   },
+				duration : { type : 'n'   }
             }
         );
         return result;

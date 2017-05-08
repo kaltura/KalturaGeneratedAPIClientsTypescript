@@ -40,17 +40,17 @@ export class KalturaCEError extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCEError' },
-				id : { type : 's'  , readOnly : true},
-				partnerId : { type : 'n'  },
-				browser : { type : 's'  },
-				serverIp : { type : 's'  },
-				serverOs : { type : 's'  },
-				phpVersion : { type : 's'  },
-				ceAdminEmail : { type : 's'  },
-				type : { type : 's'  },
-				description : { type : 's'  },
-				data : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCEError'  },
+				id : { type : 's'  , readOnly : true },
+				partnerId : { type : 'n'   },
+				browser : { type : 's'   },
+				serverIp : { type : 's'   },
+				serverOs : { type : 's'   },
+				phpVersion : { type : 's'   },
+				ceAdminEmail : { type : 's'   },
+				type : { type : 's'   },
+				description : { type : 's'   },
+				data : { type : 's'   }
             }
         );
         return result;

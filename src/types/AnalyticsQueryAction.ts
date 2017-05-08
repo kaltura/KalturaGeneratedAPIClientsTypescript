@@ -22,7 +22,7 @@ export class AnalyticsQueryAction extends KalturaRequest<KalturaReportResponse> 
 
     constructor(data : AnalyticsQueryActionArgs)
     {
-        super(data, 'o', 'KalturaReportResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaReportResponse', responseConstructor : KalturaReportResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,10 +31,10 @@ export class AnalyticsQueryAction extends KalturaRequest<KalturaReportResponse> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'analytics' },
-				action : { type : 'c' , default : 'query' },
-				filter : { type : 'o'  , subType : 'KalturaAnalyticsFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'analytics'  },
+				action : { type : 'c' , default : 'query'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaAnalyticsFilter, subType : 'KalturaAnalyticsFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

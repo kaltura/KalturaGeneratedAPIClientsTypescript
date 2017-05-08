@@ -38,15 +38,15 @@ export class KalturaConvertLiveSegmentJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvertLiveSegmentJobData' },
-				entryId : { type : 's'  },
-				assetId : { type : 's'  },
-				mediaServerIndex : { type : 'es'  , subType : 'KalturaEntryServerNodeType'},
-				fileIndex : { type : 'n'  },
-				srcFilePath : { type : 's'  },
-				destFilePath : { type : 's'  },
-				endTime : { type : 'n'  },
-				destDataFilePath : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaConvertLiveSegmentJobData'  },
+				entryId : { type : 's'   },
+				assetId : { type : 's'   },
+				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
+				fileIndex : { type : 'n'   },
+				srcFilePath : { type : 's'   },
+				destFilePath : { type : 's'   },
+				endTime : { type : 'n'   },
+				destDataFilePath : { type : 's'   }
             }
         );
         return result;

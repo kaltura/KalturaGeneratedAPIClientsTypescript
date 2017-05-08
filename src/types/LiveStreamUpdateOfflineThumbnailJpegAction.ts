@@ -19,7 +19,7 @@ export class LiveStreamUpdateOfflineThumbnailJpegAction extends KalturaUploadReq
 
     constructor(data : LiveStreamUpdateOfflineThumbnailJpegActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStreamEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStreamEntry', responseConstructor : KalturaLiveStreamEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class LiveStreamUpdateOfflineThumbnailJpegAction extends KalturaUploadReq
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'updateOfflineThumbnailJpeg' },
-				entryId : { type : 's'  },
-				fileData : { type : 'f'  }
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'updateOfflineThumbnailJpeg'  },
+				entryId : { type : 's'   },
+				fileData : { type : 'f'   }
             }
         );
         return result;

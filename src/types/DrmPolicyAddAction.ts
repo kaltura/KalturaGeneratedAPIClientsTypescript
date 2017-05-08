@@ -17,7 +17,7 @@ export class DrmPolicyAddAction extends KalturaRequest<KalturaDrmPolicy> {
 
     constructor(data : DrmPolicyAddActionArgs)
     {
-        super(data, 'o', 'KalturaDrmPolicy');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDrmPolicy', responseConstructor : KalturaDrmPolicy  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DrmPolicyAddAction extends KalturaRequest<KalturaDrmPolicy> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmpolicy' },
-				action : { type : 'c' , default : 'add' },
-				drmPolicy : { type : 'o'  , subType : 'KalturaDrmPolicy'}
+                service : { type : 'c' , default : 'drm_drmpolicy'  },
+				action : { type : 'c' , default : 'add'  },
+				drmPolicy : { type : 'o'   , fallbackConstructor :  KalturaDrmPolicy, subType : 'KalturaDrmPolicy'}
             }
         );
         return result;

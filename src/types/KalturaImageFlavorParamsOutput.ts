@@ -31,12 +31,12 @@ export class KalturaImageFlavorParamsOutput extends KalturaFlavorParamsOutput {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaImageFlavorParamsOutput' },
-				densityWidth : { type : 'n'  },
-				densityHeight : { type : 'n'  },
-				sizeWidth : { type : 'n'  },
-				sizeHeight : { type : 'n'  },
-				depth : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaImageFlavorParamsOutput'  },
+				densityWidth : { type : 'n'   },
+				densityHeight : { type : 'n'   },
+				sizeWidth : { type : 'n'   },
+				sizeHeight : { type : 'n'   },
+				depth : { type : 'n'   }
             }
         );
         return result;

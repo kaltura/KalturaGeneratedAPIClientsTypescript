@@ -17,7 +17,7 @@ export class EntryDistributionSubmitDeleteAction extends KalturaRequest<KalturaE
 
     constructor(data : EntryDistributionSubmitDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaEntryDistribution');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEntryDistribution', responseConstructor : KalturaEntryDistribution  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class EntryDistributionSubmitDeleteAction extends KalturaRequest<KalturaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution' },
-				action : { type : 'c' , default : 'submitDelete' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
+				action : { type : 'c' , default : 'submitDelete'  },
+				id : { type : 'n'   }
             }
         );
         return result;

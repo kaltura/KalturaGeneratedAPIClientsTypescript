@@ -23,7 +23,7 @@ export class KalturaUrlTokenizerCht extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerCht' }
+                objectType : { type : 'c' , default : 'KalturaUrlTokenizerCht'  }
             }
         );
         return result;

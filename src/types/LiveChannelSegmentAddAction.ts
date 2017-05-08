@@ -17,7 +17,7 @@ export class LiveChannelSegmentAddAction extends KalturaRequest<KalturaLiveChann
 
     constructor(data : LiveChannelSegmentAddActionArgs)
     {
-        super(data, 'o', 'KalturaLiveChannelSegment');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveChannelSegment', responseConstructor : KalturaLiveChannelSegment  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class LiveChannelSegmentAddAction extends KalturaRequest<KalturaLiveChann
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livechannelsegment' },
-				action : { type : 'c' , default : 'add' },
-				liveChannelSegment : { type : 'o'  , subType : 'KalturaLiveChannelSegment'}
+                service : { type : 'c' , default : 'livechannelsegment'  },
+				action : { type : 'c' , default : 'add'  },
+				liveChannelSegment : { type : 'o'   , fallbackConstructor :  KalturaLiveChannelSegment, subType : 'KalturaLiveChannelSegment'}
             }
         );
         return result;

@@ -21,7 +21,7 @@ export class PermissionItemListAction extends KalturaRequest<KalturaPermissionIt
 
     constructor(data? : PermissionItemListActionArgs)
     {
-        super(data, 'o', 'KalturaPermissionItemListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPermissionItemListResponse', responseConstructor : KalturaPermissionItemListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class PermissionItemListAction extends KalturaRequest<KalturaPermissionIt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permissionitem' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaPermissionItemFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'permissionitem'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaPermissionItemFilter, subType : 'KalturaPermissionItemFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaParseCaptionAssetJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaParseCaptionAssetJobData' },
-				captionAssetId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaParseCaptionAssetJobData'  },
+				captionAssetId : { type : 's'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaYahooDistributionProviderBaseFilter extends KalturaDistribut
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaYahooDistributionProviderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaYahooDistributionProviderBaseFilter'  }
             }
         );
         return result;

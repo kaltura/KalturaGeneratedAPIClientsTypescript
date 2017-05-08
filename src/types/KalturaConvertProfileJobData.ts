@@ -27,10 +27,10 @@ export class KalturaConvertProfileJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvertProfileJobData' },
-				inputFileSyncLocalPath : { type : 's'  },
-				thumbHeight : { type : 'n'  },
-				thumbBitrate : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaConvertProfileJobData'  },
+				inputFileSyncLocalPath : { type : 's'   },
+				thumbHeight : { type : 'n'   },
+				thumbBitrate : { type : 'n'   }
             }
         );
         return result;

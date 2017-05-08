@@ -29,10 +29,10 @@ export class KalturaLiveStreamPushPublishConfiguration extends KalturaObjectBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamPushPublishConfiguration' },
-				publishUrl : { type : 's'  },
-				backupPublishUrl : { type : 's'  },
-				port : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLiveStreamPushPublishConfiguration'  },
+				publishUrl : { type : 's'   },
+				backupPublishUrl : { type : 's'   },
+				port : { type : 's'   }
             }
         );
         return result;

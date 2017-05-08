@@ -23,8 +23,8 @@ export class KalturaPdfFlavorParamsOutput extends KalturaFlavorParamsOutput {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPdfFlavorParamsOutput' },
-				readonly : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaPdfFlavorParamsOutput'  },
+				readonly : { type : 'b'   }
             }
         );
         return result;

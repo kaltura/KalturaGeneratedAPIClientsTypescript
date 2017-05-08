@@ -23,7 +23,7 @@ export class KalturaSynacorHboDistributionProvider extends KalturaDistributionPr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSynacorHboDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaSynacorHboDistributionProvider'  }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaQuizUserEntryFilter extends KalturaQuizUserEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuizUserEntryFilter' }
+                objectType : { type : 'c' , default : 'KalturaQuizUserEntryFilter'  }
             }
         );
         return result;

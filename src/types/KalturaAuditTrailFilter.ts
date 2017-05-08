@@ -23,7 +23,7 @@ export class KalturaAuditTrailFilter extends KalturaAuditTrailBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailFilter' }
+                objectType : { type : 'c' , default : 'KalturaAuditTrailFilter'  }
             }
         );
         return result;

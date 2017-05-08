@@ -23,7 +23,7 @@ export class ReportGetTotalAction extends KalturaRequest<KalturaReportTotal> {
 
     constructor(data : ReportGetTotalActionArgs)
     {
-        super(data, 'o', 'KalturaReportTotal');
+        super(data, {responseType : 'o', responseSubType : 'KalturaReportTotal', responseConstructor : KalturaReportTotal  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,11 +32,11 @@ export class ReportGetTotalAction extends KalturaRequest<KalturaReportTotal> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report' },
-				action : { type : 'c' , default : 'getTotal' },
-				reportType : { type : 'es'  , subType : 'KalturaReportType'},
-				reportInputFilter : { type : 'o'  , subType : 'KalturaReportInputFilter'},
-				objectIds : { type : 's'  }
+                service : { type : 'c' , default : 'report'  },
+				action : { type : 'c' , default : 'getTotal'  },
+				reportType : { type : 'es'   , subType : 'KalturaReportType'},
+				reportInputFilter : { type : 'o'   , fallbackConstructor :  KalturaReportInputFilter, subType : 'KalturaReportInputFilter'},
+				objectIds : { type : 's'   }
             }
         );
         return result;

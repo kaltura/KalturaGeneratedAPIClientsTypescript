@@ -19,7 +19,7 @@ export class PartnerUpdateAction extends KalturaRequest<KalturaPartner> {
 
     constructor(data : PartnerUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaPartner');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartner', responseConstructor : KalturaPartner  });
         if (typeof this.allowEmpty === 'undefined') this.allowEmpty = false;
     }
 
@@ -29,10 +29,10 @@ export class PartnerUpdateAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'update' },
-				partner : { type : 'o'  , subType : 'KalturaPartner'},
-				allowEmpty : { type : 'b'  }
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'update'  },
+				partner : { type : 'o'   , fallbackConstructor :  KalturaPartner, subType : 'KalturaPartner'},
+				allowEmpty : { type : 'b'   }
             }
         );
         return result;

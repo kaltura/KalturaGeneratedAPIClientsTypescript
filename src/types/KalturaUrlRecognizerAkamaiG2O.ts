@@ -29,11 +29,11 @@ export class KalturaUrlRecognizerAkamaiG2O extends KalturaUrlRecognizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlRecognizerAkamaiG2O' },
-				headerData : { type : 's'  },
-				headerSign : { type : 's'  },
-				timeout : { type : 'n'  },
-				salt : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUrlRecognizerAkamaiG2O'  },
+				headerData : { type : 's'   },
+				headerSign : { type : 's'   },
+				timeout : { type : 'n'   },
+				salt : { type : 's'   }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaAccessControlServeRemoteEdgeServerAction extends KalturaRule
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlServeRemoteEdgeServerAction' },
-				edgeServerIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAccessControlServeRemoteEdgeServerAction'  },
+				edgeServerIds : { type : 's'   }
             }
         );
         return result;

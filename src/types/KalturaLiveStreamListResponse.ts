@@ -25,8 +25,8 @@ export class KalturaLiveStreamListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaLiveStreamEntry'}
+                objectType : { type : 'c' , default : 'KalturaLiveStreamListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaLiveStreamEntry, subType : 'KalturaLiveStreamEntry'}
             }
         );
         return result;

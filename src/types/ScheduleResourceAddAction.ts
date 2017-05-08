@@ -17,7 +17,7 @@ export class ScheduleResourceAddAction extends KalturaRequest<KalturaScheduleRes
 
     constructor(data : ScheduleResourceAddActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleResource');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleResource', responseConstructor : KalturaScheduleResource  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ScheduleResourceAddAction extends KalturaRequest<KalturaScheduleRes
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleresource' },
-				action : { type : 'c' , default : 'add' },
-				scheduleResource : { type : 'o'  , subType : 'KalturaScheduleResource'}
+                service : { type : 'c' , default : 'schedule_scheduleresource'  },
+				action : { type : 'c' , default : 'add'  },
+				scheduleResource : { type : 'o'   , fallbackConstructor :  KalturaScheduleResource, subType : 'KalturaScheduleResource'}
             }
         );
         return result;

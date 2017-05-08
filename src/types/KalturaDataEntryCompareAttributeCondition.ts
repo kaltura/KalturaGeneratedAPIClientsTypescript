@@ -27,8 +27,8 @@ export class KalturaDataEntryCompareAttributeCondition extends KalturaSearchComp
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDataEntryCompareAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaDataEntryCompareAttribute'}
+                objectType : { type : 'c' , default : 'KalturaDataEntryCompareAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaDataEntryCompareAttribute'}
             }
         );
         return result;

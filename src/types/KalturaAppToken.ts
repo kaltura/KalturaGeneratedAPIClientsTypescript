@@ -42,19 +42,19 @@ export class KalturaAppToken extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAppToken' },
-				id : { type : 's'  , readOnly : true},
-				token : { type : 's'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaAppTokenStatus'},
-				expiry : { type : 'n'  },
-				sessionType : { type : 'en'  , subType : 'KalturaSessionType'},
-				sessionUserId : { type : 's'  },
-				sessionDuration : { type : 'n'  },
-				sessionPrivileges : { type : 's'  },
-				hashType : { type : 'es'  , subType : 'KalturaAppTokenHashType'}
+                objectType : { type : 'c' , default : 'KalturaAppToken'  },
+				id : { type : 's'  , readOnly : true },
+				token : { type : 's'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaAppTokenStatus'},
+				expiry : { type : 'n'   },
+				sessionType : { type : 'en'   , subType : 'KalturaSessionType'},
+				sessionUserId : { type : 's'   },
+				sessionDuration : { type : 'n'   },
+				sessionPrivileges : { type : 's'   },
+				hashType : { type : 'es'   , subType : 'KalturaAppTokenHashType'}
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class ShortLinkGotoAction extends KalturaRequest<string> {
 
     constructor(data : ShortLinkGotoActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
         if (typeof this.proxy === 'undefined') this.proxy = false;
     }
 
@@ -29,10 +29,10 @@ export class ShortLinkGotoAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'shortlink_shortlink' },
-				action : { type : 'c' , default : 'goto' },
-				id : { type : 's'  },
-				proxy : { type : 'b'  }
+                service : { type : 'c' , default : 'shortlink_shortlink'  },
+				action : { type : 'c' , default : 'goto'  },
+				id : { type : 's'   },
+				proxy : { type : 'b'   }
             }
         );
         return result;

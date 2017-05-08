@@ -56,23 +56,23 @@ export class KalturaMailJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMailJobData' },
-				mailType : { type : 'es'  , subType : 'KalturaMailType'},
-				mailPriority : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaMailJobStatus'},
-				recipientName : { type : 's'  },
-				recipientEmail : { type : 's'  },
-				recipientId : { type : 'n'  },
-				fromName : { type : 's'  },
-				fromEmail : { type : 's'  },
-				bodyParams : { type : 's'  },
-				subjectParams : { type : 's'  },
-				templatePath : { type : 's'  },
-				language : { type : 'es'  , subType : 'KalturaLanguageCode'},
-				campaignId : { type : 'n'  },
-				minSendDate : { type : 'n'  },
-				isHtml : { type : 'b'  },
-				separator : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMailJobData'  },
+				mailType : { type : 'es'   , subType : 'KalturaMailType'},
+				mailPriority : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaMailJobStatus'},
+				recipientName : { type : 's'   },
+				recipientEmail : { type : 's'   },
+				recipientId : { type : 'n'   },
+				fromName : { type : 's'   },
+				fromEmail : { type : 's'   },
+				bodyParams : { type : 's'   },
+				subjectParams : { type : 's'   },
+				templatePath : { type : 's'   },
+				language : { type : 'es'   , subType : 'KalturaLanguageCode'},
+				campaignId : { type : 'n'   },
+				minSendDate : { type : 'n'   },
+				isHtml : { type : 'b'   },
+				separator : { type : 's'   }
             }
         );
         return result;

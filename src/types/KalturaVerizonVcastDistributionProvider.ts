@@ -23,7 +23,7 @@ export class KalturaVerizonVcastDistributionProvider extends KalturaDistribution
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaVerizonVcastDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaVerizonVcastDistributionProvider'  }
             }
         );
         return result;

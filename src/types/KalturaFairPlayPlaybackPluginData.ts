@@ -23,8 +23,8 @@ export class KalturaFairPlayPlaybackPluginData extends KalturaDrmPlaybackPluginD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFairPlayPlaybackPluginData' },
-				certificate : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFairPlayPlaybackPluginData'  },
+				certificate : { type : 's'   }
             }
         );
         return result;

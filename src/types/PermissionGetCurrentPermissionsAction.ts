@@ -17,7 +17,7 @@ export class PermissionGetCurrentPermissionsAction extends KalturaRequest<string
 
     constructor(data? : PermissionGetCurrentPermissionsActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,8 +26,8 @@ export class PermissionGetCurrentPermissionsAction extends KalturaRequest<string
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'permission' },
-				action : { type : 'c' , default : 'getCurrentPermissions' }
+                service : { type : 'c' , default : 'permission'  },
+				action : { type : 'c' , default : 'getCurrentPermissions'  }
             }
         );
         return result;

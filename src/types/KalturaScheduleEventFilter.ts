@@ -45,19 +45,19 @@ export class KalturaScheduleEventFilter extends KalturaScheduleEventBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleEventFilter' },
-				resourceIdsLike : { type : 's'  },
-				resourceIdsMultiLikeOr : { type : 's'  },
-				resourceIdsMultiLikeAnd : { type : 's'  },
-				parentResourceIdsLike : { type : 's'  },
-				parentResourceIdsMultiLikeOr : { type : 's'  },
-				parentResourceIdsMultiLikeAnd : { type : 's'  },
-				templateEntryCategoriesIdsMultiLikeAnd : { type : 's'  },
-				templateEntryCategoriesIdsMultiLikeOr : { type : 's'  },
-				resourceSystemNamesMultiLikeOr : { type : 's'  },
-				templateEntryCategoriesIdsLike : { type : 's'  },
-				resourceSystemNamesMultiLikeAnd : { type : 's'  },
-				resourceSystemNamesLike : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaScheduleEventFilter'  },
+				resourceIdsLike : { type : 's'   },
+				resourceIdsMultiLikeOr : { type : 's'   },
+				resourceIdsMultiLikeAnd : { type : 's'   },
+				parentResourceIdsLike : { type : 's'   },
+				parentResourceIdsMultiLikeOr : { type : 's'   },
+				parentResourceIdsMultiLikeAnd : { type : 's'   },
+				templateEntryCategoriesIdsMultiLikeAnd : { type : 's'   },
+				templateEntryCategoriesIdsMultiLikeOr : { type : 's'   },
+				resourceSystemNamesMultiLikeOr : { type : 's'   },
+				templateEntryCategoriesIdsLike : { type : 's'   },
+				resourceSystemNamesMultiLikeAnd : { type : 's'   },
+				resourceSystemNamesLike : { type : 's'   }
             }
         );
         return result;

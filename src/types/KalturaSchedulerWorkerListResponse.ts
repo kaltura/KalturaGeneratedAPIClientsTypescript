@@ -25,8 +25,8 @@ export class KalturaSchedulerWorkerListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSchedulerWorkerListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaSchedulerWorker'}
+                objectType : { type : 'c' , default : 'KalturaSchedulerWorkerListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaSchedulerWorker, subType : 'KalturaSchedulerWorker'}
             }
         );
         return result;

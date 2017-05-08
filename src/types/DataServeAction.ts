@@ -21,7 +21,7 @@ export class DataServeAction extends KalturaRequest<string> {
 
     constructor(data : DataServeActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
         if (typeof this.version === 'undefined') this.version = -1;
 		if (typeof this.forceProxy === 'undefined') this.forceProxy = false;
     }
@@ -32,11 +32,11 @@ export class DataServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data' },
-				action : { type : 'c' , default : 'serve' },
-				entryId : { type : 's'  },
-				version : { type : 'n'  },
-				forceProxy : { type : 'b'  }
+                service : { type : 'c' , default : 'data'  },
+				action : { type : 'c' , default : 'serve'  },
+				entryId : { type : 's'   },
+				version : { type : 'n'   },
+				forceProxy : { type : 'b'   }
             }
         );
         return result;

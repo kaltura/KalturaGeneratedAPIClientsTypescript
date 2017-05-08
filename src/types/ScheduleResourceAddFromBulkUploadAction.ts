@@ -20,7 +20,7 @@ export class ScheduleResourceAddFromBulkUploadAction extends KalturaUploadReques
 
     constructor(data : ScheduleResourceAddFromBulkUploadActionArgs)
     {
-        super(data, 'o', 'KalturaBulkUpload');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBulkUpload', responseConstructor : KalturaBulkUpload  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class ScheduleResourceAddFromBulkUploadAction extends KalturaUploadReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleresource' },
-				action : { type : 'c' , default : 'addFromBulkUpload' },
-				fileData : { type : 'f'  },
-				bulkUploadData : { type : 'o'  , subType : 'KalturaBulkUploadCsvJobData'}
+                service : { type : 'c' , default : 'schedule_scheduleresource'  },
+				action : { type : 'c' , default : 'addFromBulkUpload'  },
+				fileData : { type : 'f'   },
+				bulkUploadData : { type : 'o'   , fallbackConstructor :  KalturaBulkUploadCsvJobData, subType : 'KalturaBulkUploadCsvJobData'}
             }
         );
         return result;

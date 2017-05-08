@@ -27,10 +27,10 @@ export class KalturaMetadataField extends KalturaStringField {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataField' },
-				xPath : { type : 's'  },
-				profileId : { type : 'n'  },
-				profileSystemName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMetadataField'  },
+				xPath : { type : 's'   },
+				profileId : { type : 'n'   },
+				profileSystemName : { type : 's'   }
             }
         );
         return result;

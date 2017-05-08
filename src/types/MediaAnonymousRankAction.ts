@@ -19,7 +19,7 @@ export class MediaAnonymousRankAction extends KalturaRequest<void> {
 
     constructor(data : MediaAnonymousRankActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MediaAnonymousRankAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'anonymousRank' },
-				entryId : { type : 's'  },
-				rank : { type : 'n'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'anonymousRank'  },
+				entryId : { type : 's'   },
+				rank : { type : 'n'   }
             }
         );
         return result;

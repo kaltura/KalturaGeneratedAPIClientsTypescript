@@ -25,9 +25,9 @@ export class KalturaGenericSyndicationFeed extends KalturaBaseSyndicationFeed {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericSyndicationFeed' },
-				feedDescription : { type : 's'  },
-				feedLandingPage : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaGenericSyndicationFeed'  },
+				feedDescription : { type : 's'   },
+				feedLandingPage : { type : 's'   }
             }
         );
         return result;

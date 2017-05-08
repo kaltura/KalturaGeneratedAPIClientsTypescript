@@ -17,7 +17,7 @@ export class FlavorAssetGetWebPlayableByEntryIdAction extends KalturaRequest<Kal
 
     constructor(data : FlavorAssetGetWebPlayableByEntryIdActionArgs)
     {
-        super(data, 'a', 'KalturaFlavorAsset');
+        super(data, {responseType : 'a', responseSubType : 'KalturaFlavorAsset', responseConstructor : KalturaFlavorAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FlavorAssetGetWebPlayableByEntryIdAction extends KalturaRequest<Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorasset' },
-				action : { type : 'c' , default : 'getWebPlayableByEntryId' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'flavorasset'  },
+				action : { type : 'c' , default : 'getWebPlayableByEntryId'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

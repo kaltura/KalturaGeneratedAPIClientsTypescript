@@ -20,7 +20,7 @@ export class MediaAddFromUploadedFileAction extends KalturaRequest<KalturaMediaE
 
     constructor(data : MediaAddFromUploadedFileActionArgs)
     {
-        super(data, 'o', 'KalturaMediaEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMediaEntry', responseConstructor : KalturaMediaEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class MediaAddFromUploadedFileAction extends KalturaRequest<KalturaMediaE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'addFromUploadedFile' },
-				mediaEntry : { type : 'o'  , subType : 'KalturaMediaEntry'},
-				uploadTokenId : { type : 's'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'addFromUploadedFile'  },
+				mediaEntry : { type : 'o'   , fallbackConstructor :  KalturaMediaEntry, subType : 'KalturaMediaEntry'},
+				uploadTokenId : { type : 's'   }
             }
         );
         return result;

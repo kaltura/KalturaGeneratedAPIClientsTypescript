@@ -25,8 +25,8 @@ export class KalturaPartnerListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPartnerListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaPartner'}
+                objectType : { type : 'c' , default : 'KalturaPartnerListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaPartner, subType : 'KalturaPartner'}
             }
         );
         return result;

@@ -31,12 +31,12 @@ export class KalturaCrossKalturaDistributionJobProviderData extends KalturaConfi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCrossKalturaDistributionJobProviderData' },
-				distributedFlavorAssets : { type : 's'  },
-				distributedThumbAssets : { type : 's'  },
-				distributedMetadata : { type : 's'  },
-				distributedCaptionAssets : { type : 's'  },
-				distributedCuePoints : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCrossKalturaDistributionJobProviderData'  },
+				distributedFlavorAssets : { type : 's'   },
+				distributedThumbAssets : { type : 's'   },
+				distributedMetadata : { type : 's'   },
+				distributedCaptionAssets : { type : 's'   },
+				distributedCuePoints : { type : 's'   }
             }
         );
         return result;

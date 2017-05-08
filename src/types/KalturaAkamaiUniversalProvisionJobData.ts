@@ -43,17 +43,17 @@ export class KalturaAkamaiUniversalProvisionJobData extends KalturaProvisionJobD
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAkamaiUniversalProvisionJobData' },
-				streamId : { type : 'n'  },
-				systemUserName : { type : 's'  },
-				systemPassword : { type : 's'  },
-				domainName : { type : 's'  },
-				dvrEnabled : { type : 'en'  , subType : 'KalturaDVRStatus'},
-				dvrWindow : { type : 'n'  },
-				primaryContact : { type : 's'  },
-				secondaryContact : { type : 's'  },
-				streamType : { type : 'es'  , subType : 'KalturaAkamaiUniversalStreamType'},
-				notificationEmail : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAkamaiUniversalProvisionJobData'  },
+				streamId : { type : 'n'   },
+				systemUserName : { type : 's'   },
+				systemPassword : { type : 's'   },
+				domainName : { type : 's'   },
+				dvrEnabled : { type : 'en'   , subType : 'KalturaDVRStatus'},
+				dvrWindow : { type : 'n'   },
+				primaryContact : { type : 's'   },
+				secondaryContact : { type : 's'   },
+				streamType : { type : 'es'   , subType : 'KalturaAkamaiUniversalStreamType'},
+				notificationEmail : { type : 's'   }
             }
         );
         return result;

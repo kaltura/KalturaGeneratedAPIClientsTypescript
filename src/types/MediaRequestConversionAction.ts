@@ -20,7 +20,7 @@ export class MediaRequestConversionAction extends KalturaRequest<number> {
 
     constructor(data : MediaRequestConversionActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class MediaRequestConversionAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'requestConversion' },
-				entryId : { type : 's'  },
-				fileFormat : { type : 's'  }
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'requestConversion'  },
+				entryId : { type : 's'   },
+				fileFormat : { type : 's'   }
             }
         );
         return result;

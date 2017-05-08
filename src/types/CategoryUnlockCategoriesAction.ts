@@ -17,7 +17,7 @@ export class CategoryUnlockCategoriesAction extends KalturaRequest<void> {
 
     constructor(data? : CategoryUnlockCategoriesActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,8 +26,8 @@ export class CategoryUnlockCategoriesAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'category' },
-				action : { type : 'c' , default : 'unlockCategories' }
+                service : { type : 'c' , default : 'category'  },
+				action : { type : 'c' , default : 'unlockCategories'  }
             }
         );
         return result;

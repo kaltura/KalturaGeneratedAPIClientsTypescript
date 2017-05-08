@@ -51,21 +51,21 @@ export class KalturaStorageProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageProfileBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaStorageProfileStatus'},
-				statusIn : { type : 's'  },
-				protocolEqual : { type : 'es'  , subType : 'KalturaStorageProfileProtocol'},
-				protocolIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaStorageProfileBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaStorageProfileStatus'},
+				statusIn : { type : 's'   },
+				protocolEqual : { type : 'es'   , subType : 'KalturaStorageProfileProtocol'},
+				protocolIn : { type : 's'   }
             }
         );
         return result;

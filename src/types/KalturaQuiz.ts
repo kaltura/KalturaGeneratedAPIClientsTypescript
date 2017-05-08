@@ -39,15 +39,15 @@ export class KalturaQuiz extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuiz' },
-				version : { type : 'n'  , readOnly : true},
-				uiAttributes : { type : 'a'  , subType : 'KalturaKeyValue'},
-				showResultOnAnswer : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				showCorrectKeyOnAnswer : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				allowAnswerUpdate : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				showCorrectAfterSubmission : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				allowDownload : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				showGradeAfterSubmission : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaQuiz'  },
+				version : { type : 'n'  , readOnly : true },
+				uiAttributes : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				showResultOnAnswer : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				showCorrectKeyOnAnswer : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				allowAnswerUpdate : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				showCorrectAfterSubmission : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				allowDownload : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				showGradeAfterSubmission : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

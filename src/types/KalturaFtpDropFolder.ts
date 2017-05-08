@@ -29,11 +29,11 @@ export class KalturaFtpDropFolder extends KalturaRemoteDropFolder {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFtpDropFolder' },
-				host : { type : 's'  },
-				port : { type : 'n'  },
-				username : { type : 's'  },
-				password : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFtpDropFolder'  },
+				host : { type : 's'   },
+				port : { type : 'n'   },
+				username : { type : 's'   },
+				password : { type : 's'   }
             }
         );
         return result;

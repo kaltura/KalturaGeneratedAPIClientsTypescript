@@ -24,7 +24,7 @@ export class CaptionAssetItemSearchAction extends KalturaRequest<KalturaCaptionA
 
     constructor(data? : CaptionAssetItemSearchActionArgs)
     {
-        super(data, 'o', 'KalturaCaptionAssetItemListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCaptionAssetItemListResponse', responseConstructor : KalturaCaptionAssetItemListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -33,11 +33,11 @@ export class CaptionAssetItemSearchAction extends KalturaRequest<KalturaCaptionA
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'captionsearch_captionassetitem' },
-				action : { type : 'c' , default : 'search' },
-				entryFilter : { type : 'o'  , subType : 'KalturaBaseEntryFilter'},
-				captionAssetItemFilter : { type : 'o'  , subType : 'KalturaCaptionAssetItemFilter'},
-				captionAssetItemPager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'captionsearch_captionassetitem'  },
+				action : { type : 'c' , default : 'search'  },
+				entryFilter : { type : 'o'   , fallbackConstructor :  KalturaBaseEntryFilter, subType : 'KalturaBaseEntryFilter'},
+				captionAssetItemFilter : { type : 'o'   , fallbackConstructor :  KalturaCaptionAssetItemFilter, subType : 'KalturaCaptionAssetItemFilter'},
+				captionAssetItemPager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

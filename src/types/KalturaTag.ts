@@ -30,14 +30,14 @@ export class KalturaTag extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTag' },
-				id : { type : 'n'  , readOnly : true},
-				tag : { type : 's'  , readOnly : true},
-				taggedObjectType : { type : 'es'  , readOnly : true, subType : 'KalturaTaggedObjectType'},
-				partnerId : { type : 'n'  , readOnly : true},
-				instanceCount : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaTag'  },
+				id : { type : 'n'  , readOnly : true },
+				tag : { type : 's'  , readOnly : true },
+				taggedObjectType : { type : 'es'  , readOnly : true , subType : 'KalturaTaggedObjectType'},
+				partnerId : { type : 'n'  , readOnly : true },
+				instanceCount : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true }
             }
         );
         return result;

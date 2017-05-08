@@ -23,7 +23,7 @@ export class KalturaAvnDistributionProfileBaseFilter extends KalturaConfigurable
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAvnDistributionProfileBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaAvnDistributionProfileBaseFilter'  }
             }
         );
         return result;

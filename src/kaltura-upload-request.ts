@@ -1,5 +1,5 @@
 import { KalturaRequest, KalturaRequestArgs } from './kaltura-request';
-import { KalturaObjectPropertyMetadata } from './kaltura-object-base';
+import { KalturaObjectBase } from './kaltura-object-base';
 
 export type ProgressCallback = (loaded : number, total : number) => void;
 
@@ -12,8 +12,8 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T>
 {
     private _progressCallback : ProgressCallback;
 
-    constructor(data : KalturaUploadRequestArgs, responseType : string, responseSubType? : string) {
-        super(data, responseType, responseSubType);
+    constructor(data : KalturaUploadRequestArgs, {responseType, responseSubType, responseConstructor} : {responseType : string, responseSubType? : string, responseConstructor : { new() : KalturaObjectBase}  }) {
+        super(data, {responseType, responseSubType,responseConstructor});
     }
 
     setProgress(callback : ProgressCallback) : this

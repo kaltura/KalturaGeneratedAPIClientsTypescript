@@ -23,7 +23,7 @@ export class KalturaHttpNotificationData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHttpNotificationData' }
+                objectType : { type : 'c' , default : 'KalturaHttpNotificationData'  }
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class BaseEntryGetPlaybackContextAction extends KalturaRequest<KalturaPla
 
     constructor(data : BaseEntryGetPlaybackContextActionArgs)
     {
-        super(data, 'o', 'KalturaPlaybackContextOptions');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlaybackContextOptions', responseConstructor : KalturaPlaybackContextOptions  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class BaseEntryGetPlaybackContextAction extends KalturaRequest<KalturaPla
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'getPlaybackContext' },
-				entryId : { type : 's'  },
-				contextDataParams : { type : 'o'  , subType : 'KalturaPlaybackContextOptions'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'getPlaybackContext'  },
+				entryId : { type : 's'   },
+				contextDataParams : { type : 'o'   , fallbackConstructor :  KalturaPlaybackContextOptions, subType : 'KalturaPlaybackContextOptions'}
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class MetadataInvalidateAction extends KalturaRequest<void> {
 
     constructor(data : MetadataInvalidateActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class MetadataInvalidateAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata' },
-				action : { type : 'c' , default : 'invalidate' },
-				id : { type : 'n'  },
-				version : { type : 'n'  }
+                service : { type : 'c' , default : 'metadata_metadata'  },
+				action : { type : 'c' , default : 'invalidate'  },
+				id : { type : 'n'   },
+				version : { type : 'n'   }
             }
         );
         return result;

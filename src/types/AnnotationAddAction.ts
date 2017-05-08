@@ -18,7 +18,7 @@ export class AnnotationAddAction extends KalturaRequest<KalturaAnnotation> {
 
     constructor(data : AnnotationAddActionArgs)
     {
-        super(data, 'o', 'KalturaAnnotation');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAnnotation', responseConstructor : KalturaAnnotation  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class AnnotationAddAction extends KalturaRequest<KalturaAnnotation> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'annotation_annotation' },
-				action : { type : 'c' , default : 'add' },
-				annotation : { type : 'o'  , subType : 'KalturaCuePoint'}
+                service : { type : 'c' , default : 'annotation_annotation'  },
+				action : { type : 'c' , default : 'add'  },
+				annotation : { type : 'o'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
             }
         );
         return result;

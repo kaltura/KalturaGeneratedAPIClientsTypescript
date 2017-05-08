@@ -17,7 +17,7 @@ export class BulkUploadServeLogAction extends KalturaRequest<string> {
 
     constructor(data : BulkUploadServeLogActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class BulkUploadServeLogAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload' },
-				action : { type : 'c' , default : 'serveLog' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'bulkupload'  },
+				action : { type : 'c' , default : 'serveLog'  },
+				id : { type : 'n'   }
             }
         );
         return result;

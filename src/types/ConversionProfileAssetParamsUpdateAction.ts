@@ -21,7 +21,7 @@ export class ConversionProfileAssetParamsUpdateAction extends KalturaRequest<Kal
 
     constructor(data : ConversionProfileAssetParamsUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaConversionProfileAssetParams');
+        super(data, {responseType : 'o', responseSubType : 'KalturaConversionProfileAssetParams', responseConstructor : KalturaConversionProfileAssetParams  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class ConversionProfileAssetParamsUpdateAction extends KalturaRequest<Kal
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofileassetparams' },
-				action : { type : 'c' , default : 'update' },
-				conversionProfileId : { type : 'n'  },
-				assetParamsId : { type : 'n'  },
-				conversionProfileAssetParams : { type : 'o'  , subType : 'KalturaConversionProfileAssetParams'}
+                service : { type : 'c' , default : 'conversionprofileassetparams'  },
+				action : { type : 'c' , default : 'update'  },
+				conversionProfileId : { type : 'n'   },
+				assetParamsId : { type : 'n'   },
+				conversionProfileAssetParams : { type : 'o'   , fallbackConstructor :  KalturaConversionProfileAssetParams, subType : 'KalturaConversionProfileAssetParams'}
             }
         );
         return result;

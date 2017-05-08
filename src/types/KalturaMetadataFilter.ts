@@ -23,7 +23,7 @@ export class KalturaMetadataFilter extends KalturaMetadataBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataFilter' }
+                objectType : { type : 'c' , default : 'KalturaMetadataFilter'  }
             }
         );
         return result;

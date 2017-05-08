@@ -23,8 +23,8 @@ export class KalturaDistributionValidationErrorMissingAsset extends KalturaDistr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingAsset' },
-				data : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingAsset'  },
+				data : { type : 's'   }
             }
         );
         return result;

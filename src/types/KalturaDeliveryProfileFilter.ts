@@ -24,8 +24,8 @@ export class KalturaDeliveryProfileFilter extends KalturaDeliveryProfileBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileFilter' },
-				isLive : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileFilter'  },
+				isLive : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

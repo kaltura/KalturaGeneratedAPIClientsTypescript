@@ -29,11 +29,11 @@ export class KalturaAnswerCuePointBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAnswerCuePointBaseFilter' },
-				parentIdEqual : { type : 's'  },
-				parentIdIn : { type : 's'  },
-				quizUserEntryIdEqual : { type : 's'  },
-				quizUserEntryIdIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAnswerCuePointBaseFilter'  },
+				parentIdEqual : { type : 's'   },
+				parentIdIn : { type : 's'   },
+				quizUserEntryIdEqual : { type : 's'   },
+				quizUserEntryIdIn : { type : 's'   }
             }
         );
         return result;

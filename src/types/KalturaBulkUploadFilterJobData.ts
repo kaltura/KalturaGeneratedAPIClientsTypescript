@@ -29,9 +29,9 @@ export class KalturaBulkUploadFilterJobData extends KalturaBulkUploadJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadFilterJobData' },
-				filter : { type : 'o'  , subType : 'KalturaFilter'},
-				templateObject : { type : 'o'  , subType : 'KalturaObjectBase'}
+                objectType : { type : 'c' , default : 'KalturaBulkUploadFilterJobData'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaFilter, subType : 'KalturaFilter'},
+				templateObject : { type : 'o'   , fallbackConstructor :  KalturaObjectBase, subType : 'KalturaObjectBase'}
             }
         );
         return result;

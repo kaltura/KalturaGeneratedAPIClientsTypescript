@@ -20,7 +20,7 @@ export class BusinessProcessCaseListAction extends KalturaRequest<KalturaBusines
 
     constructor(data : BusinessProcessCaseListActionArgs)
     {
-        super(data, 'a', 'KalturaBusinessProcessCase');
+        super(data, {responseType : 'a', responseSubType : 'KalturaBusinessProcessCase', responseConstructor : KalturaBusinessProcessCase  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class BusinessProcessCaseListAction extends KalturaRequest<KalturaBusines
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase' },
-				action : { type : 'c' , default : 'list' },
-				objectType : { type : 'es'  , subType : 'KalturaEventNotificationEventObjectType'},
-				objectId : { type : 's'  }
+                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase'  },
+				action : { type : 'c' , default : 'list'  },
+				objectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
+				objectId : { type : 's'   }
             }
         );
         return result;

@@ -26,7 +26,7 @@ export class KalturaEmailNotificationRecipientProvider extends KalturaObjectBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationRecipientProvider' }
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationRecipientProvider'  }
             }
         );
         return result;

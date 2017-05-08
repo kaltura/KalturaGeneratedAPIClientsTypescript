@@ -22,7 +22,7 @@ export class BusinessProcessCaseAbortAction extends KalturaRequest<void> {
 
     constructor(data : BusinessProcessCaseAbortActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class BusinessProcessCaseAbortAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase' },
-				action : { type : 'c' , default : 'abort' },
-				objectType : { type : 'es'  , subType : 'KalturaEventNotificationEventObjectType'},
-				objectId : { type : 's'  },
-				businessProcessStartNotificationTemplateId : { type : 'n'  }
+                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase'  },
+				action : { type : 'c' , default : 'abort'  },
+				objectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
+				objectId : { type : 's'   },
+				businessProcessStartNotificationTemplateId : { type : 'n'   }
             }
         );
         return result;

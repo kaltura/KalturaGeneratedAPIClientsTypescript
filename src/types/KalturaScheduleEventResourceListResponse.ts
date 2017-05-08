@@ -25,8 +25,8 @@ export class KalturaScheduleEventResourceListResponse extends KalturaListRespons
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScheduleEventResourceListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaScheduleEventResource'}
+                objectType : { type : 'c' , default : 'KalturaScheduleEventResourceListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaScheduleEventResource, subType : 'KalturaScheduleEventResource'}
             }
         );
         return result;

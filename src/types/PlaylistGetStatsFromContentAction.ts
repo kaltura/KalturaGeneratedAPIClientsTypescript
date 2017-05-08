@@ -20,7 +20,7 @@ export class PlaylistGetStatsFromContentAction extends KalturaRequest<KalturaPla
 
     constructor(data : PlaylistGetStatsFromContentActionArgs)
     {
-        super(data, 'o', 'KalturaPlaylist');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlaylist', responseConstructor : KalturaPlaylist  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class PlaylistGetStatsFromContentAction extends KalturaRequest<KalturaPla
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist' },
-				action : { type : 'c' , default : 'getStatsFromContent' },
-				playlistType : { type : 'en'  , subType : 'KalturaPlaylistType'},
-				playlistContent : { type : 's'  }
+                service : { type : 'c' , default : 'playlist'  },
+				action : { type : 'c' , default : 'getStatsFromContent'  },
+				playlistType : { type : 'en'   , subType : 'KalturaPlaylistType'},
+				playlistContent : { type : 's'   }
             }
         );
         return result;

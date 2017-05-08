@@ -15,7 +15,7 @@ export class ThumbAssetDeleteAction extends KalturaRequest<void> {
 
     constructor(data : ThumbAssetDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class ThumbAssetDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'delete' },
-				thumbAssetId : { type : 's'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'delete'  },
+				thumbAssetId : { type : 's'   }
             }
         );
         return result;

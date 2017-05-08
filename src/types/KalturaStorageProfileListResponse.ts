@@ -25,8 +25,8 @@ export class KalturaStorageProfileListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageProfileListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaStorageProfile'}
+                objectType : { type : 'c' , default : 'KalturaStorageProfileListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaStorageProfile, subType : 'KalturaStorageProfile'}
             }
         );
         return result;

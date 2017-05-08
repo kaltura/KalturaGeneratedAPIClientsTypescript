@@ -24,9 +24,9 @@ export class KalturaAvnDistributionProfile extends KalturaConfigurableDistributi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAvnDistributionProfile' },
-				feedUrl : { type : 's'  , readOnly : true},
-				feedTitle : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAvnDistributionProfile'  },
+				feedUrl : { type : 's'  , readOnly : true },
+				feedTitle : { type : 's'   }
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class AttachmentAssetUpdateAction extends KalturaRequest<KalturaAttachmen
 
     constructor(data : AttachmentAssetUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaAttachmentAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAttachmentAsset', responseConstructor : KalturaAttachmentAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class AttachmentAssetUpdateAction extends KalturaRequest<KalturaAttachmen
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 's'  },
-				attachmentAsset : { type : 'o'  , subType : 'KalturaAttachmentAsset'}
+                service : { type : 'c' , default : 'attachment_attachmentasset'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 's'   },
+				attachmentAsset : { type : 'o'   , fallbackConstructor :  KalturaAttachmentAsset, subType : 'KalturaAttachmentAsset'}
             }
         );
         return result;

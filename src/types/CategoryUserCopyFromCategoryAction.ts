@@ -17,7 +17,7 @@ export class CategoryUserCopyFromCategoryAction extends KalturaRequest<void> {
 
     constructor(data : CategoryUserCopyFromCategoryActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class CategoryUserCopyFromCategoryAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryuser' },
-				action : { type : 'c' , default : 'copyFromCategory' },
-				categoryId : { type : 'n'  }
+                service : { type : 'c' , default : 'categoryuser'  },
+				action : { type : 'c' , default : 'copyFromCategory'  },
+				categoryId : { type : 'n'   }
             }
         );
         return result;

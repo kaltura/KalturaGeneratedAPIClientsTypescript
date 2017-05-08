@@ -37,19 +37,19 @@ export class KalturaFlavorAsset extends KalturaAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorAsset' },
-				flavorParamsId : { type : 'n'  },
-				width : { type : 'n'  , readOnly : true},
-				height : { type : 'n'  , readOnly : true},
-				bitrate : { type : 'n'  , readOnly : true},
-				frameRate : { type : 'n'  , readOnly : true},
-				isOriginal : { type : 'b'  , readOnly : true},
-				isWeb : { type : 'b'  , readOnly : true},
-				containerFormat : { type : 's'  , readOnly : true},
-				videoCodecId : { type : 's'  , readOnly : true},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaFlavorAssetStatus'},
-				language : { type : 'es'  , subType : 'KalturaLanguage'},
-				label : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaFlavorAsset'  },
+				flavorParamsId : { type : 'n'   },
+				width : { type : 'n'  , readOnly : true },
+				height : { type : 'n'  , readOnly : true },
+				bitrate : { type : 'n'  , readOnly : true },
+				frameRate : { type : 'n'  , readOnly : true },
+				isOriginal : { type : 'b'  , readOnly : true },
+				isWeb : { type : 'b'  , readOnly : true },
+				containerFormat : { type : 's'  , readOnly : true },
+				videoCodecId : { type : 's'  , readOnly : true },
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaFlavorAssetStatus'},
+				language : { type : 'es'   , subType : 'KalturaLanguage'},
+				label : { type : 's'  , readOnly : true }
             }
         );
         return result;

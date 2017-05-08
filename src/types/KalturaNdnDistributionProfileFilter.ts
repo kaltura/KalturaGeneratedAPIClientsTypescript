@@ -23,7 +23,7 @@ export class KalturaNdnDistributionProfileFilter extends KalturaNdnDistributionP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaNdnDistributionProfileFilter' }
+                objectType : { type : 'c' , default : 'KalturaNdnDistributionProfileFilter'  }
             }
         );
         return result;

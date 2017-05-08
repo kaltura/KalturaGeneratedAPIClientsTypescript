@@ -39,14 +39,14 @@ export class KalturaAccessControlScope extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlScope' },
-				referrer : { type : 's'  },
-				ip : { type : 's'  },
-				ks : { type : 's'  },
-				userAgent : { type : 's'  },
-				time : { type : 'n'  },
-				contexts : { type : 'a'  , subType : 'KalturaAccessControlContextTypeHolder'},
-				hashes : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaAccessControlScope'  },
+				referrer : { type : 's'   },
+				ip : { type : 's'   },
+				ks : { type : 's'   },
+				userAgent : { type : 's'   },
+				time : { type : 'n'   },
+				contexts : { type : 'a'   , fallbackConstructor :  KalturaAccessControlContextTypeHolder, subType : 'KalturaAccessControlContextTypeHolder'},
+				hashes : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

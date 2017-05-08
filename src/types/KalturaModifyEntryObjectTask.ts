@@ -38,14 +38,14 @@ export class KalturaModifyEntryObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaModifyEntryObjectTask' },
-				inputMetadataProfileId : { type : 'n'  },
-				inputMetadata : { type : 'a'  , subType : 'KalturaKeyValue'},
-				outputMetadataProfileId : { type : 'n'  },
-				outputMetadata : { type : 'a'  , subType : 'KalturaKeyValue'},
-				inputUserId : { type : 's'  },
-				inputEntitledUsersEdit : { type : 's'  },
-				inputEntitledUsersPublish : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaModifyEntryObjectTask'  },
+				inputMetadataProfileId : { type : 'n'   },
+				inputMetadata : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				outputMetadataProfileId : { type : 'n'   },
+				outputMetadata : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				inputUserId : { type : 's'   },
+				inputEntitledUsersEdit : { type : 's'   },
+				inputEntitledUsersPublish : { type : 's'   }
             }
         );
         return result;

@@ -18,7 +18,7 @@ export class UserEntrySubmitQuizAction extends KalturaRequest<KalturaQuizUserEnt
 
     constructor(data : UserEntrySubmitQuizActionArgs)
     {
-        super(data, 'o', 'KalturaQuizUserEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaQuizUserEntry', responseConstructor : KalturaQuizUserEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class UserEntrySubmitQuizAction extends KalturaRequest<KalturaQuizUserEnt
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userentry' },
-				action : { type : 'c' , default : 'submitQuiz' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'userentry'  },
+				action : { type : 'c' , default : 'submitQuiz'  },
+				id : { type : 'n'   }
             }
         );
         return result;

@@ -24,8 +24,8 @@ export class KalturaThumbParamsBaseFilter extends KalturaAssetParamsFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbParamsBaseFilter' },
-				formatEqual : { type : 'es'  , subType : 'KalturaContainerFormat'}
+                objectType : { type : 'c' , default : 'KalturaThumbParamsBaseFilter'  },
+				formatEqual : { type : 'es'   , subType : 'KalturaContainerFormat'}
             }
         );
         return result;

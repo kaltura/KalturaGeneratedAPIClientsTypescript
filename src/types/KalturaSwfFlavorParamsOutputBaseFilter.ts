@@ -23,7 +23,7 @@ export class KalturaSwfFlavorParamsOutputBaseFilter extends KalturaFlavorParamsO
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSwfFlavorParamsOutputBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaSwfFlavorParamsOutputBaseFilter'  }
             }
         );
         return result;

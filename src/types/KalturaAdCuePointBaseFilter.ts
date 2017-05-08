@@ -40,16 +40,16 @@ export class KalturaAdCuePointBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAdCuePointBaseFilter' },
-				protocolTypeEqual : { type : 'es'  , subType : 'KalturaAdProtocolType'},
-				protocolTypeIn : { type : 's'  },
-				titleLike : { type : 's'  },
-				titleMultiLikeOr : { type : 's'  },
-				titleMultiLikeAnd : { type : 's'  },
-				endTimeGreaterThanOrEqual : { type : 'n'  },
-				endTimeLessThanOrEqual : { type : 'n'  },
-				durationGreaterThanOrEqual : { type : 'n'  },
-				durationLessThanOrEqual : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaAdCuePointBaseFilter'  },
+				protocolTypeEqual : { type : 'es'   , subType : 'KalturaAdProtocolType'},
+				protocolTypeIn : { type : 's'   },
+				titleLike : { type : 's'   },
+				titleMultiLikeOr : { type : 's'   },
+				titleMultiLikeAnd : { type : 's'   },
+				endTimeGreaterThanOrEqual : { type : 'n'   },
+				endTimeLessThanOrEqual : { type : 'n'   },
+				durationGreaterThanOrEqual : { type : 'n'   },
+				durationLessThanOrEqual : { type : 'n'   }
             }
         );
         return result;

@@ -25,9 +25,9 @@ export class KalturaIndexAdvancedFilter extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIndexAdvancedFilter' },
-				indexIdGreaterThan : { type : 'n'  },
-				depthGreaterThanEqual : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaIndexAdvancedFilter'  },
+				indexIdGreaterThan : { type : 'n'   },
+				depthGreaterThanEqual : { type : 'n'   }
             }
         );
         return result;

@@ -55,24 +55,24 @@ export class KalturaAssetBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetBaseFilter' },
-				idEqual : { type : 's'  },
-				idIn : { type : 's'  },
-				entryIdEqual : { type : 's'  },
-				entryIdIn : { type : 's'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				sizeGreaterThanOrEqual : { type : 'n'  },
-				sizeLessThanOrEqual : { type : 'n'  },
-				tagsLike : { type : 's'  },
-				tagsMultiLikeOr : { type : 's'  },
-				tagsMultiLikeAnd : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  },
-				deletedAtGreaterThanOrEqual : { type : 'd'  },
-				deletedAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaAssetBaseFilter'  },
+				idEqual : { type : 's'   },
+				idIn : { type : 's'   },
+				entryIdEqual : { type : 's'   },
+				entryIdIn : { type : 's'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				sizeGreaterThanOrEqual : { type : 'n'   },
+				sizeLessThanOrEqual : { type : 'n'   },
+				tagsLike : { type : 's'   },
+				tagsMultiLikeOr : { type : 's'   },
+				tagsMultiLikeAnd : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   },
+				deletedAtGreaterThanOrEqual : { type : 'd'   },
+				deletedAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

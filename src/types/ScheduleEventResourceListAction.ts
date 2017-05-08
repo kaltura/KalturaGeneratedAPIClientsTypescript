@@ -21,7 +21,7 @@ export class ScheduleEventResourceListAction extends KalturaRequest<KalturaSched
 
     constructor(data? : ScheduleEventResourceListActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleEventResourceListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEventResourceListResponse', responseConstructor : KalturaScheduleEventResourceListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class ScheduleEventResourceListAction extends KalturaRequest<KalturaSched
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleeventresource' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaScheduleEventResourceFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'schedule_scheduleeventresource'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaScheduleEventResourceFilter, subType : 'KalturaScheduleEventResourceFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

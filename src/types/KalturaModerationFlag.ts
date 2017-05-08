@@ -39,18 +39,18 @@ export class KalturaModerationFlag extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaModerationFlag' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  , readOnly : true},
-				userId : { type : 's'  , readOnly : true},
-				moderationObjectType : { type : 'es'  , readOnly : true, subType : 'KalturaModerationObjectType'},
-				flaggedEntryId : { type : 's'  },
-				flaggedUserId : { type : 's'  },
-				status : { type : 'es'  , readOnly : true, subType : 'KalturaModerationFlagStatus'},
-				comments : { type : 's'  },
-				flagType : { type : 'en'  , subType : 'KalturaModerationFlagType'},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaModerationFlag'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'  , readOnly : true },
+				userId : { type : 's'  , readOnly : true },
+				moderationObjectType : { type : 'es'  , readOnly : true , subType : 'KalturaModerationObjectType'},
+				flaggedEntryId : { type : 's'   },
+				flaggedUserId : { type : 's'   },
+				status : { type : 'es'  , readOnly : true , subType : 'KalturaModerationFlagStatus'},
+				comments : { type : 's'   },
+				flagType : { type : 'en'   , subType : 'KalturaModerationFlagType'},
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true }
             }
         );
         return result;

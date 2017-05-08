@@ -20,7 +20,7 @@ export class EventNotificationTemplateUpdateStatusAction extends KalturaRequest<
 
     constructor(data : EventNotificationTemplateUpdateStatusActionArgs)
     {
-        super(data, 'o', 'KalturaEventNotificationTemplate');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEventNotificationTemplate', responseConstructor : KalturaEventNotificationTemplate  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class EventNotificationTemplateUpdateStatusAction extends KalturaRequest<
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'updateStatus' },
-				id : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaEventNotificationTemplateStatus'}
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				id : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaEventNotificationTemplateStatus'}
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class VirusScanProfileScanAction extends KalturaRequest<number> {
 
     constructor(data : VirusScanProfileScanActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class VirusScanProfileScanAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile' },
-				action : { type : 'c' , default : 'scan' },
-				flavorAssetId : { type : 's'  },
-				virusScanProfileId : { type : 'n'  }
+                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
+				action : { type : 'c' , default : 'scan'  },
+				flavorAssetId : { type : 's'   },
+				virusScanProfileId : { type : 'n'   }
             }
         );
         return result;

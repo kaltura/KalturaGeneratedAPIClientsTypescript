@@ -49,20 +49,20 @@ export class KalturaDrmPolicy extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDrmPolicy' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  },
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				provider : { type : 'es'  , subType : 'KalturaDrmProviderType'},
-				status : { type : 'en'  , subType : 'KalturaDrmPolicyStatus'},
-				scenario : { type : 'es'  , subType : 'KalturaDrmLicenseScenario'},
-				licenseType : { type : 'es'  , subType : 'KalturaDrmLicenseType'},
-				licenseExpirationPolicy : { type : 'en'  , subType : 'KalturaDrmLicenseExpirationPolicy'},
-				duration : { type : 'n'  },
-				createdAt : { type : 'n'  , readOnly : true},
-				updatedAt : { type : 'n'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaDrmPolicy'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'   },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				provider : { type : 'es'   , subType : 'KalturaDrmProviderType'},
+				status : { type : 'en'   , subType : 'KalturaDrmPolicyStatus'},
+				scenario : { type : 'es'   , subType : 'KalturaDrmLicenseScenario'},
+				licenseType : { type : 'es'   , subType : 'KalturaDrmLicenseType'},
+				licenseExpirationPolicy : { type : 'en'   , subType : 'KalturaDrmLicenseExpirationPolicy'},
+				duration : { type : 'n'   },
+				createdAt : { type : 'n'  , readOnly : true },
+				updatedAt : { type : 'n'  , readOnly : true }
             }
         );
         return result;

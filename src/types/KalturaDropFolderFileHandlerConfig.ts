@@ -24,8 +24,8 @@ export class KalturaDropFolderFileHandlerConfig extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDropFolderFileHandlerConfig' },
-				handlerType : { type : 'es'  , readOnly : true, subType : 'KalturaDropFolderFileHandlerType'}
+                objectType : { type : 'c' , default : 'KalturaDropFolderFileHandlerConfig'  },
+				handlerType : { type : 'es'  , readOnly : true , subType : 'KalturaDropFolderFileHandlerType'}
             }
         );
         return result;

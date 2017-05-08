@@ -21,7 +21,7 @@ export class CuePointServeBulkAction extends KalturaRequest<string> {
 
     constructor(data? : CuePointServeBulkActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class CuePointServeBulkAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint' },
-				action : { type : 'c' , default : 'serveBulk' },
-				filter : { type : 'o'  , subType : 'KalturaCuePointFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
+				action : { type : 'c' , default : 'serveBulk'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaCuePointFilter, subType : 'KalturaCuePointFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

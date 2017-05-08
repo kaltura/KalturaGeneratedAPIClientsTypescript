@@ -27,10 +27,10 @@ export class KalturaCategoryUserFilter extends KalturaCategoryUserBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryUserFilter' },
-				categoryDirectMembers : { type : 'b'  },
-				freeText : { type : 's'  },
-				relatedGroupsByUserId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCategoryUserFilter'  },
+				categoryDirectMembers : { type : 'b'   },
+				freeText : { type : 's'   },
+				relatedGroupsByUserId : { type : 's'   }
             }
         );
         return result;

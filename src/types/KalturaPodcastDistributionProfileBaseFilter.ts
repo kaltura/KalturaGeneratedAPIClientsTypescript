@@ -23,7 +23,7 @@ export class KalturaPodcastDistributionProfileBaseFilter extends KalturaDistribu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPodcastDistributionProfileBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaPodcastDistributionProfileBaseFilter'  }
             }
         );
         return result;

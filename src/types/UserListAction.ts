@@ -23,7 +23,7 @@ export class UserListAction extends KalturaRequest<KalturaUserListResponse> {
 
     constructor(data? : UserListActionArgs)
     {
-        super(data, 'o', 'KalturaUserListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUserListResponse', responseConstructor : KalturaUserListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,10 +32,10 @@ export class UserListAction extends KalturaRequest<KalturaUserListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaUserFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaUserFilter, subType : 'KalturaUserFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

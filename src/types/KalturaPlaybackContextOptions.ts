@@ -25,7 +25,7 @@ export class KalturaPlaybackContextOptions extends KalturaEntryContextDataParams
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlaybackContextOptions' }
+                objectType : { type : 'c' , default : 'KalturaPlaybackContextOptions'  }
             }
         );
         return result;

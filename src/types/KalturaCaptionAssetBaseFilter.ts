@@ -37,14 +37,14 @@ export class KalturaCaptionAssetBaseFilter extends KalturaAssetFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionAssetBaseFilter' },
-				captionParamsIdEqual : { type : 'n'  },
-				captionParamsIdIn : { type : 's'  },
-				formatEqual : { type : 'es'  , subType : 'KalturaCaptionType'},
-				formatIn : { type : 's'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaCaptionAssetStatus'},
-				statusIn : { type : 's'  },
-				statusNotIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCaptionAssetBaseFilter'  },
+				captionParamsIdEqual : { type : 'n'   },
+				captionParamsIdIn : { type : 's'   },
+				formatEqual : { type : 'es'   , subType : 'KalturaCaptionType'},
+				formatIn : { type : 's'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaCaptionAssetStatus'},
+				statusIn : { type : 's'   },
+				statusNotIn : { type : 's'   }
             }
         );
         return result;

@@ -35,12 +35,12 @@ export class KalturaPlayReadyPolicy extends KalturaDrmPolicy {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyPolicy' },
-				gracePeriod : { type : 'n'  },
-				licenseRemovalPolicy : { type : 'en'  , subType : 'KalturaPlayReadyLicenseRemovalPolicy'},
-				licenseRemovalDuration : { type : 'n'  },
-				minSecurityLevel : { type : 'en'  , subType : 'KalturaPlayReadyMinimumLicenseSecurityLevel'},
-				rights : { type : 'a'  , subType : 'KalturaPlayReadyRight'}
+                objectType : { type : 'c' , default : 'KalturaPlayReadyPolicy'  },
+				gracePeriod : { type : 'n'   },
+				licenseRemovalPolicy : { type : 'en'   , subType : 'KalturaPlayReadyLicenseRemovalPolicy'},
+				licenseRemovalDuration : { type : 'n'   },
+				minSecurityLevel : { type : 'en'   , subType : 'KalturaPlayReadyMinimumLicenseSecurityLevel'},
+				rights : { type : 'a'   , fallbackConstructor :  KalturaPlayReadyRight, subType : 'KalturaPlayReadyRight'}
             }
         );
         return result;

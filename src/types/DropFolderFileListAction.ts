@@ -21,7 +21,7 @@ export class DropFolderFileListAction extends KalturaRequest<KalturaDropFolderFi
 
     constructor(data? : DropFolderFileListActionArgs)
     {
-        super(data, 'o', 'KalturaDropFolderFileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDropFolderFileListResponse', responseConstructor : KalturaDropFolderFileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class DropFolderFileListAction extends KalturaRequest<KalturaDropFolderFi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolderfile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaDropFolderFileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'dropfolder_dropfolderfile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaDropFolderFileFilter, subType : 'KalturaDropFolderFileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

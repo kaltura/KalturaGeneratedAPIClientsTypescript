@@ -17,7 +17,7 @@ export class ServerNodeDeleteAction extends KalturaRequest<void> {
 
     constructor(data : ServerNodeDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ServerNodeDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'servernode' },
-				action : { type : 'c' , default : 'delete' },
-				serverNodeId : { type : 's'  }
+                service : { type : 'c' , default : 'servernode'  },
+				action : { type : 'c' , default : 'delete'  },
+				serverNodeId : { type : 's'   }
             }
         );
         return result;

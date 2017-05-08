@@ -32,12 +32,12 @@ export class KalturaTagFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTagFilter' },
-				objectTypeEqual : { type : 'es'  , subType : 'KalturaTaggedObjectType'},
-				tagEqual : { type : 's'  },
-				tagStartsWith : { type : 's'  },
-				instanceCountEqual : { type : 'n'  },
-				instanceCountIn : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaTagFilter'  },
+				objectTypeEqual : { type : 'es'   , subType : 'KalturaTaggedObjectType'},
+				tagEqual : { type : 's'   },
+				tagStartsWith : { type : 's'   },
+				instanceCountEqual : { type : 'n'   },
+				instanceCountIn : { type : 'n'   }
             }
         );
         return result;

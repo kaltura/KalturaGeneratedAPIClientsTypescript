@@ -22,7 +22,7 @@ export class BusinessProcessCaseServeDiagramAction extends KalturaRequest<string
 
     constructor(data : BusinessProcessCaseServeDiagramActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class BusinessProcessCaseServeDiagramAction extends KalturaRequest<string
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase' },
-				action : { type : 'c' , default : 'serveDiagram' },
-				objectType : { type : 'es'  , subType : 'KalturaEventNotificationEventObjectType'},
-				objectId : { type : 's'  },
-				businessProcessStartNotificationTemplateId : { type : 'n'  }
+                service : { type : 'c' , default : 'businessprocessnotification_businessprocesscase'  },
+				action : { type : 'c' , default : 'serveDiagram'  },
+				objectType : { type : 'es'   , subType : 'KalturaEventNotificationEventObjectType'},
+				objectId : { type : 's'   },
+				businessProcessStartNotificationTemplateId : { type : 'n'   }
             }
         );
         return result;

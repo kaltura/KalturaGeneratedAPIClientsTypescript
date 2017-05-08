@@ -21,7 +21,7 @@ export class AccessControlProfileListAction extends KalturaRequest<KalturaAccess
 
     constructor(data? : AccessControlProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaAccessControlProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAccessControlProfileListResponse', responseConstructor : KalturaAccessControlProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class AccessControlProfileListAction extends KalturaRequest<KalturaAccess
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrolprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaAccessControlProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'accesscontrolprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaAccessControlProfileFilter, subType : 'KalturaAccessControlProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

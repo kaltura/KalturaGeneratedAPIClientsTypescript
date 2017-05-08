@@ -20,7 +20,7 @@ export class VirusScanProfileUpdateAction extends KalturaRequest<KalturaVirusSca
 
     constructor(data : VirusScanProfileUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaVirusScanProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaVirusScanProfile', responseConstructor : KalturaVirusScanProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class VirusScanProfileUpdateAction extends KalturaRequest<KalturaVirusSca
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'virusscan_virusscanprofile' },
-				action : { type : 'c' , default : 'update' },
-				virusScanProfileId : { type : 'n'  },
-				virusScanProfile : { type : 'o'  , subType : 'KalturaVirusScanProfile'}
+                service : { type : 'c' , default : 'virusscan_virusscanprofile'  },
+				action : { type : 'c' , default : 'update'  },
+				virusScanProfileId : { type : 'n'   },
+				virusScanProfile : { type : 'o'   , fallbackConstructor :  KalturaVirusScanProfile, subType : 'KalturaVirusScanProfile'}
             }
         );
         return result;

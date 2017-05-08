@@ -20,7 +20,7 @@ export class LiveStreamIsLiveAction extends KalturaRequest<boolean> {
 
     constructor(data : LiveStreamIsLiveActionArgs)
     {
-        super(data, 'b', '');
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class LiveStreamIsLiveAction extends KalturaRequest<boolean> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'isLive' },
-				id : { type : 's'  },
-				protocol : { type : 'es'  , subType : 'KalturaPlaybackProtocol'}
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'isLive'  },
+				id : { type : 's'   },
+				protocol : { type : 'es'   , subType : 'KalturaPlaybackProtocol'}
             }
         );
         return result;

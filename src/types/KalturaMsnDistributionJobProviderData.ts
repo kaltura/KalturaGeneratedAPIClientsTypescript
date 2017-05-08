@@ -23,8 +23,8 @@ export class KalturaMsnDistributionJobProviderData extends KalturaConfigurableDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMsnDistributionJobProviderData' },
-				xml : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMsnDistributionJobProviderData'  },
+				xml : { type : 's'   }
             }
         );
         return result;

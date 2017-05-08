@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileGenericSilverLight extends KalturaDeliveryPro
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericSilverLight' },
-				pattern : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericSilverLight'  },
+				pattern : { type : 's'   }
             }
         );
         return result;

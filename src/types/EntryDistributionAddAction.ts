@@ -17,7 +17,7 @@ export class EntryDistributionAddAction extends KalturaRequest<KalturaEntryDistr
 
     constructor(data : EntryDistributionAddActionArgs)
     {
-        super(data, 'o', 'KalturaEntryDistribution');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEntryDistribution', responseConstructor : KalturaEntryDistribution  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class EntryDistributionAddAction extends KalturaRequest<KalturaEntryDistr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_entrydistribution' },
-				action : { type : 'c' , default : 'add' },
-				entryDistribution : { type : 'o'  , subType : 'KalturaEntryDistribution'}
+                service : { type : 'c' , default : 'contentdistribution_entrydistribution'  },
+				action : { type : 'c' , default : 'add'  },
+				entryDistribution : { type : 'o'   , fallbackConstructor :  KalturaEntryDistribution, subType : 'KalturaEntryDistribution'}
             }
         );
         return result;

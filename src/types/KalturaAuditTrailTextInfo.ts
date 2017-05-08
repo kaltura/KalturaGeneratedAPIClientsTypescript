@@ -23,8 +23,8 @@ export class KalturaAuditTrailTextInfo extends KalturaAuditTrailInfo {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailTextInfo' },
-				info : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAuditTrailTextInfo'  },
+				info : { type : 's'   }
             }
         );
         return result;

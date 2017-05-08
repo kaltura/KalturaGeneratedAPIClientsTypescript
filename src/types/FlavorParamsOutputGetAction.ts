@@ -17,7 +17,7 @@ export class FlavorParamsOutputGetAction extends KalturaRequest<KalturaFlavorPar
 
     constructor(data : FlavorParamsOutputGetActionArgs)
     {
-        super(data, 'o', 'KalturaFlavorParamsOutput');
+        super(data, {responseType : 'o', responseSubType : 'KalturaFlavorParamsOutput', responseConstructor : KalturaFlavorParamsOutput  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FlavorParamsOutputGetAction extends KalturaRequest<KalturaFlavorPar
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'flavorparamsoutput' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'flavorparamsoutput'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

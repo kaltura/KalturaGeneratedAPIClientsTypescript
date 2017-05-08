@@ -21,7 +21,7 @@ export class LiveStreamCreatePeriodicSyncPointsAction extends KalturaRequest<voi
 
     constructor(data : LiveStreamCreatePeriodicSyncPointsActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class LiveStreamCreatePeriodicSyncPointsAction extends KalturaRequest<voi
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'createPeriodicSyncPoints' },
-				entryId : { type : 's'  },
-				interval : { type : 'n'  },
-				duration : { type : 'n'  }
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'createPeriodicSyncPoints'  },
+				entryId : { type : 's'   },
+				interval : { type : 'n'   },
+				duration : { type : 'n'   }
             }
         );
         return result;

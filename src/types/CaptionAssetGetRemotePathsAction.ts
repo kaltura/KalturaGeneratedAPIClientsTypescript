@@ -17,7 +17,7 @@ export class CaptionAssetGetRemotePathsAction extends KalturaRequest<KalturaRemo
 
     constructor(data : CaptionAssetGetRemotePathsActionArgs)
     {
-        super(data, 'o', 'KalturaRemotePathListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaRemotePathListResponse', responseConstructor : KalturaRemotePathListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class CaptionAssetGetRemotePathsAction extends KalturaRequest<KalturaRemo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset' },
-				action : { type : 'c' , default : 'getRemotePaths' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'caption_captionasset'  },
+				action : { type : 'c' , default : 'getRemotePaths'  },
+				id : { type : 's'   }
             }
         );
         return result;

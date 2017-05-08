@@ -22,7 +22,7 @@ export class LiveReportsGetReportAction extends KalturaRequest<KalturaLiveStatsL
 
     constructor(data : LiveReportsGetReportActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStatsListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStatsListResponse', responseConstructor : KalturaLiveStatsListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class LiveReportsGetReportAction extends KalturaRequest<KalturaLiveStatsL
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livereports' },
-				action : { type : 'c' , default : 'getReport' },
-				reportType : { type : 'es'  , subType : 'KalturaLiveReportType'},
-				filter : { type : 'o'  , subType : 'KalturaLiveReportInputFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'livereports'  },
+				action : { type : 'c' , default : 'getReport'  },
+				reportType : { type : 'es'   , subType : 'KalturaLiveReportType'},
+				filter : { type : 'o'   , fallbackConstructor :  KalturaLiveReportInputFilter, subType : 'KalturaLiveReportInputFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

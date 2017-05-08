@@ -23,8 +23,8 @@ export class KalturaLiveParams extends KalturaFlavorParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveParams' },
-				streamSuffix : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaLiveParams'  },
+				streamSuffix : { type : 's'   }
             }
         );
         return result;

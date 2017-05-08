@@ -27,9 +27,9 @@ export class KalturaGenericXsltSyndicationFeed extends KalturaGenericSyndication
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericXsltSyndicationFeed' },
-				xslt : { type : 's'  },
-				itemXpathsToExtend : { type : 'a'  , subType : 'KalturaExtendingItemMrssParameter'}
+                objectType : { type : 'c' , default : 'KalturaGenericXsltSyndicationFeed'  },
+				xslt : { type : 's'   },
+				itemXpathsToExtend : { type : 'a'   , fallbackConstructor :  KalturaExtendingItemMrssParameter, subType : 'KalturaExtendingItemMrssParameter'}
             }
         );
         return result;

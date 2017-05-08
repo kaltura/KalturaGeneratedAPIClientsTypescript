@@ -19,7 +19,7 @@ export class ThumbAssetServeByEntryIdAction extends KalturaRequest<string> {
 
     constructor(data : ThumbAssetServeByEntryIdActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class ThumbAssetServeByEntryIdAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'serveByEntryId' },
-				entryId : { type : 's'  },
-				thumbParamId : { type : 'n'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'serveByEntryId'  },
+				entryId : { type : 's'   },
+				thumbParamId : { type : 'n'   }
             }
         );
         return result;

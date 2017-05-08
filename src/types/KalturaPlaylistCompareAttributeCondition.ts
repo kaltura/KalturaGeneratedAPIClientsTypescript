@@ -27,8 +27,8 @@ export class KalturaPlaylistCompareAttributeCondition extends KalturaSearchCompa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlaylistCompareAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaPlaylistCompareAttribute'}
+                objectType : { type : 'c' , default : 'KalturaPlaylistCompareAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaPlaylistCompareAttribute'}
             }
         );
         return result;

@@ -30,13 +30,13 @@ export class KalturaGroupUser extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGroupUser' },
-				userId : { type : 's'  },
-				groupId : { type : 's'  },
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaGroupUserStatus'},
-				partnerId : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaGroupUser'  },
+				userId : { type : 's'   },
+				groupId : { type : 's'   },
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaGroupUserStatus'},
+				partnerId : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true }
             }
         );
         return result;

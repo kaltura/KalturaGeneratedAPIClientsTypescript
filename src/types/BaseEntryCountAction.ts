@@ -18,7 +18,7 @@ export class BaseEntryCountAction extends KalturaRequest<number> {
 
     constructor(data? : BaseEntryCountActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class BaseEntryCountAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'count' },
-				filter : { type : 'o'  , subType : 'KalturaBaseEntryFilter'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'count'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaBaseEntryFilter, subType : 'KalturaBaseEntryFilter'}
             }
         );
         return result;

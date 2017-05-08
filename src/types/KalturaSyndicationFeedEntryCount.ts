@@ -27,10 +27,10 @@ export class KalturaSyndicationFeedEntryCount extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSyndicationFeedEntryCount' },
-				totalEntryCount : { type : 'n'  },
-				actualEntryCount : { type : 'n'  },
-				requireTranscodingCount : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaSyndicationFeedEntryCount'  },
+				totalEntryCount : { type : 'n'   },
+				actualEntryCount : { type : 'n'   },
+				requireTranscodingCount : { type : 'n'   }
             }
         );
         return result;

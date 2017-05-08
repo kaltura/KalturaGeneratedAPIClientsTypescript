@@ -23,7 +23,7 @@ export class KalturaDeliveryProfileGenericSilverLightFilter extends KalturaDeliv
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericSilverLightFilter' }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericSilverLightFilter'  }
             }
         );
         return result;

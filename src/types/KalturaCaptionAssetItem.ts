@@ -33,12 +33,12 @@ export class KalturaCaptionAssetItem extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionAssetItem' },
-				asset : { type : 'o'  , subType : 'KalturaCaptionAsset'},
-				entry : { type : 'o'  , subType : 'KalturaBaseEntry'},
-				startTime : { type : 'n'  },
-				endTime : { type : 'n'  },
-				content : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCaptionAssetItem'  },
+				asset : { type : 'o'   , fallbackConstructor :  KalturaCaptionAsset, subType : 'KalturaCaptionAsset'},
+				entry : { type : 'o'   , fallbackConstructor :  KalturaBaseEntry, subType : 'KalturaBaseEntry'},
+				startTime : { type : 'n'   },
+				endTime : { type : 'n'   },
+				content : { type : 's'   }
             }
         );
         return result;

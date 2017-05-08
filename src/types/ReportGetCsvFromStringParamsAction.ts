@@ -20,7 +20,7 @@ export class ReportGetCsvFromStringParamsAction extends KalturaRequest<string> {
 
     constructor(data : ReportGetCsvFromStringParamsActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class ReportGetCsvFromStringParamsAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report' },
-				action : { type : 'c' , default : 'getCsvFromStringParams' },
-				id : { type : 'n'  },
-				params : { type : 's'  }
+                service : { type : 'c' , default : 'report'  },
+				action : { type : 'c' , default : 'getCsvFromStringParams'  },
+				id : { type : 'n'   },
+				params : { type : 's'   }
             }
         );
         return result;

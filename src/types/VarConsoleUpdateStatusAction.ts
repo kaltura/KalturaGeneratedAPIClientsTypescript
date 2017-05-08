@@ -20,7 +20,7 @@ export class VarConsoleUpdateStatusAction extends KalturaRequest<void> {
 
     constructor(data : VarConsoleUpdateStatusActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class VarConsoleUpdateStatusAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'varconsole_varconsole' },
-				action : { type : 'c' , default : 'updateStatus' },
-				id : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaPartnerStatus'}
+                service : { type : 'c' , default : 'varconsole_varconsole'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				id : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaPartnerStatus'}
             }
         );
         return result;

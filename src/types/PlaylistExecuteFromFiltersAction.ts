@@ -25,7 +25,7 @@ export class PlaylistExecuteFromFiltersAction extends KalturaRequest<KalturaBase
 
     constructor(data : PlaylistExecuteFromFiltersActionArgs)
     {
-        super(data, 'a', 'KalturaBaseEntry');
+        super(data, {responseType : 'a', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
         if (typeof this.filters === 'undefined') this.filters = [];
 		if (typeof this.detailed === 'undefined') this.detailed = "1";
     }
@@ -36,12 +36,12 @@ export class PlaylistExecuteFromFiltersAction extends KalturaRequest<KalturaBase
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playlist' },
-				action : { type : 'c' , default : 'executeFromFilters' },
-				filters : { type : 'a'  , subType : 'KalturaMediaEntryFilterForPlaylist'},
-				totalResults : { type : 'n'  },
-				detailed : { type : 's'  },
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'playlist'  },
+				action : { type : 'c' , default : 'executeFromFilters'  },
+				filters : { type : 'a'   , fallbackConstructor :  KalturaMediaEntryFilterForPlaylist, subType : 'KalturaMediaEntryFilterForPlaylist'},
+				totalResults : { type : 'n'   },
+				detailed : { type : 's'   },
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -18,7 +18,7 @@ export class DocumentsConvertPptToSwfAction extends KalturaRequest<string> {
 
     constructor(data : DocumentsConvertPptToSwfActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class DocumentsConvertPptToSwfAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'convertPptToSwf' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'convertPptToSwf'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

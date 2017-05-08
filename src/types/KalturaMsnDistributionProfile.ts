@@ -51,22 +51,22 @@ export class KalturaMsnDistributionProfile extends KalturaConfigurableDistributi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMsnDistributionProfile' },
-				username : { type : 's'  },
-				password : { type : 's'  },
-				domain : { type : 's'  },
-				csId : { type : 's'  },
-				source : { type : 's'  },
-				sourceFriendlyName : { type : 's'  },
-				pageGroup : { type : 's'  },
-				sourceFlavorParamsId : { type : 'n'  },
-				wmvFlavorParamsId : { type : 'n'  },
-				flvFlavorParamsId : { type : 'n'  },
-				slFlavorParamsId : { type : 'n'  },
-				slHdFlavorParamsId : { type : 'n'  },
-				msnvideoCat : { type : 's'  },
-				msnvideoTop : { type : 's'  },
-				msnvideoTopCat : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMsnDistributionProfile'  },
+				username : { type : 's'   },
+				password : { type : 's'   },
+				domain : { type : 's'   },
+				csId : { type : 's'   },
+				source : { type : 's'   },
+				sourceFriendlyName : { type : 's'   },
+				pageGroup : { type : 's'   },
+				sourceFlavorParamsId : { type : 'n'   },
+				wmvFlavorParamsId : { type : 'n'   },
+				flvFlavorParamsId : { type : 'n'   },
+				slFlavorParamsId : { type : 'n'   },
+				slHdFlavorParamsId : { type : 'n'   },
+				msnvideoCat : { type : 's'   },
+				msnvideoTop : { type : 's'   },
+				msnvideoTopCat : { type : 's'   }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class UploadTokenDeleteAction extends KalturaRequest<void> {
 
     constructor(data : UploadTokenDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UploadTokenDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uploadtoken' },
-				action : { type : 'c' , default : 'delete' },
-				uploadTokenId : { type : 's'  }
+                service : { type : 'c' , default : 'uploadtoken'  },
+				action : { type : 'c' , default : 'delete'  },
+				uploadTokenId : { type : 's'   }
             }
         );
         return result;

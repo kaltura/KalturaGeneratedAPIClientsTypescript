@@ -21,7 +21,7 @@ export class ThumbAssetListAction extends KalturaRequest<KalturaThumbAssetListRe
 
     constructor(data? : ThumbAssetListActionArgs)
     {
-        super(data, 'o', 'KalturaThumbAssetListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaThumbAssetListResponse', responseConstructor : KalturaThumbAssetListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class ThumbAssetListAction extends KalturaRequest<KalturaThumbAssetListRe
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaAssetFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaAssetFilter, subType : 'KalturaAssetFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

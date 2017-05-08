@@ -17,7 +17,7 @@ export class AccessControlGetAction extends KalturaRequest<KalturaAccessControl>
 
     constructor(data : AccessControlGetActionArgs)
     {
-        super(data, 'o', 'KalturaAccessControl');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAccessControl', responseConstructor : KalturaAccessControl  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class AccessControlGetAction extends KalturaRequest<KalturaAccessControl>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'accesscontrol' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'accesscontrol'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

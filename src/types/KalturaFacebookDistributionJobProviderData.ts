@@ -29,10 +29,10 @@ export class KalturaFacebookDistributionJobProviderData extends KalturaConfigura
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFacebookDistributionJobProviderData' },
-				videoAssetFilePath : { type : 's'  },
-				thumbAssetFilePath : { type : 's'  },
-				captionsInfo : { type : 'a'  , subType : 'KalturaFacebookCaptionDistributionInfo'}
+                objectType : { type : 'c' , default : 'KalturaFacebookDistributionJobProviderData'  },
+				videoAssetFilePath : { type : 's'   },
+				thumbAssetFilePath : { type : 's'   },
+				captionsInfo : { type : 'a'   , fallbackConstructor :  KalturaFacebookCaptionDistributionInfo, subType : 'KalturaFacebookCaptionDistributionInfo'}
             }
         );
         return result;

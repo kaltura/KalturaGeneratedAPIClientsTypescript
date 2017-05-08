@@ -23,7 +23,7 @@ export class KalturaSearchItem extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchItem' }
+                objectType : { type : 'c' , default : 'KalturaSearchItem'  }
             }
         );
         return result;

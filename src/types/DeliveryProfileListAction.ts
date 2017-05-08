@@ -21,7 +21,7 @@ export class DeliveryProfileListAction extends KalturaRequest<KalturaDeliveryPro
 
     constructor(data? : DeliveryProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaDeliveryProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDeliveryProfileListResponse', responseConstructor : KalturaDeliveryProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class DeliveryProfileListAction extends KalturaRequest<KalturaDeliveryPro
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaDeliveryProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'deliveryprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaDeliveryProfileFilter, subType : 'KalturaDeliveryProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

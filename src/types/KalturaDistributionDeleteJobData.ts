@@ -23,8 +23,8 @@ export class KalturaDistributionDeleteJobData extends KalturaDistributionJobData
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionDeleteJobData' },
-				keepDistributionItem : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionDeleteJobData'  },
+				keepDistributionItem : { type : 'b'   }
             }
         );
         return result;

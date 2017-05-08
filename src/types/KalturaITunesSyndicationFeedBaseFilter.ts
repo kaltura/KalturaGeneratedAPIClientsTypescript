@@ -23,7 +23,7 @@ export class KalturaITunesSyndicationFeedBaseFilter extends KalturaBaseSyndicati
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaITunesSyndicationFeedBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaITunesSyndicationFeedBaseFilter'  }
             }
         );
         return result;

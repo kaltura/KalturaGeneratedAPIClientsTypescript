@@ -19,7 +19,7 @@ export class PlayReadyDrmGetEntryContentKeyAction extends KalturaRequest<Kaltura
 
     constructor(data : PlayReadyDrmGetEntryContentKeyActionArgs)
     {
-        super(data, 'o', 'KalturaPlayReadyContentKey');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlayReadyContentKey', responseConstructor : KalturaPlayReadyContentKey  });
         if (typeof this.createIfMissing === 'undefined') this.createIfMissing = false;
     }
 
@@ -29,10 +29,10 @@ export class PlayReadyDrmGetEntryContentKeyAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'playready_playreadydrm' },
-				action : { type : 'c' , default : 'getEntryContentKey' },
-				entryId : { type : 's'  },
-				createIfMissing : { type : 'b'  }
+                service : { type : 'c' , default : 'playready_playreadydrm'  },
+				action : { type : 'c' , default : 'getEntryContentKey'  },
+				entryId : { type : 's'   },
+				createIfMissing : { type : 'b'   }
             }
         );
         return result;

@@ -31,12 +31,12 @@ export class KalturaLikeBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLikeBaseFilter' },
-				entryIdEqual : { type : 's'  },
-				entryIdIn : { type : 's'  },
-				userIdEqual : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaLikeBaseFilter'  },
+				entryIdEqual : { type : 's'   },
+				entryIdIn : { type : 's'   },
+				userIdEqual : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaEventObjectChangedCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEventObjectChangedCondition' },
-				modifiedColumns : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaEventObjectChangedCondition'  },
+				modifiedColumns : { type : 's'   }
             }
         );
         return result;

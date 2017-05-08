@@ -17,7 +17,7 @@ export class UiConfGetAvailableTypesAction extends KalturaRequest<KalturaUiConfT
 
     constructor(data? : UiConfGetAvailableTypesActionArgs)
     {
-        super(data, 'a', 'KalturaUiConfTypeInfo');
+        super(data, {responseType : 'a', responseSubType : 'KalturaUiConfTypeInfo', responseConstructor : KalturaUiConfTypeInfo  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,8 +26,8 @@ export class UiConfGetAvailableTypesAction extends KalturaRequest<KalturaUiConfT
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf' },
-				action : { type : 'c' , default : 'getAvailableTypes' }
+                service : { type : 'c' , default : 'uiconf'  },
+				action : { type : 'c' , default : 'getAvailableTypes'  }
             }
         );
         return result;

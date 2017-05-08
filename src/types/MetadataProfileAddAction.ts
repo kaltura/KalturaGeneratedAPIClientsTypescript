@@ -22,7 +22,7 @@ export class MetadataProfileAddAction extends KalturaRequest<KalturaMetadataProf
 
     constructor(data : MetadataProfileAddActionArgs)
     {
-        super(data, 'o', 'KalturaMetadataProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadataProfile', responseConstructor : KalturaMetadataProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,11 +31,11 @@ export class MetadataProfileAddAction extends KalturaRequest<KalturaMetadataProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadataprofile' },
-				action : { type : 'c' , default : 'add' },
-				metadataProfile : { type : 'o'  , subType : 'KalturaMetadataProfile'},
-				xsdData : { type : 's'  },
-				viewsData : { type : 's'  }
+                service : { type : 'c' , default : 'metadata_metadataprofile'  },
+				action : { type : 'c' , default : 'add'  },
+				metadataProfile : { type : 'o'   , fallbackConstructor :  KalturaMetadataProfile, subType : 'KalturaMetadataProfile'},
+				xsdData : { type : 's'   },
+				viewsData : { type : 's'   }
             }
         );
         return result;

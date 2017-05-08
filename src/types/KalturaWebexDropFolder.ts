@@ -33,13 +33,13 @@ export class KalturaWebexDropFolder extends KalturaDropFolder {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaWebexDropFolder' },
-				webexUserId : { type : 's'  },
-				webexPassword : { type : 's'  },
-				webexSiteId : { type : 'n'  },
-				webexPartnerId : { type : 's'  },
-				webexServiceUrl : { type : 's'  },
-				webexHostIdMetadataFieldName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaWebexDropFolder'  },
+				webexUserId : { type : 's'   },
+				webexPassword : { type : 's'   },
+				webexSiteId : { type : 'n'   },
+				webexPartnerId : { type : 's'   },
+				webexServiceUrl : { type : 's'   },
+				webexHostIdMetadataFieldName : { type : 's'   }
             }
         );
         return result;

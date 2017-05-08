@@ -30,11 +30,11 @@ export class KalturaAssetParamsBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetParamsBaseFilter' },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				isSystemDefaultEqual : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				tagsEqual : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAssetParamsBaseFilter'  },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				isSystemDefaultEqual : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				tagsEqual : { type : 's'   }
             }
         );
         return result;

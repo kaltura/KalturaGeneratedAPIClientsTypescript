@@ -46,19 +46,19 @@ export class KalturaComcastMrssDistributionProfile extends KalturaConfigurableDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaComcastMrssDistributionProfile' },
-				metadataProfileId : { type : 'n'  },
-				feedUrl : { type : 's'  , readOnly : true},
-				feedTitle : { type : 's'  },
-				feedLink : { type : 's'  },
-				feedDescription : { type : 's'  },
-				feedLastBuildDate : { type : 's'  },
-				itemLink : { type : 's'  },
-				cPlatformTvSeries : { type : 'a'  , subType : 'KalturaKeyValue'},
-				cPlatformTvSeriesField : { type : 's'  },
-				shouldIncludeCuePoints : { type : 'b'  },
-				shouldIncludeCaptions : { type : 'b'  },
-				shouldAddThumbExtension : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaComcastMrssDistributionProfile'  },
+				metadataProfileId : { type : 'n'   },
+				feedUrl : { type : 's'  , readOnly : true },
+				feedTitle : { type : 's'   },
+				feedLink : { type : 's'   },
+				feedDescription : { type : 's'   },
+				feedLastBuildDate : { type : 's'   },
+				itemLink : { type : 's'   },
+				cPlatformTvSeries : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'},
+				cPlatformTvSeriesField : { type : 's'   },
+				shouldIncludeCuePoints : { type : 'b'   },
+				shouldIncludeCaptions : { type : 'b'   },
+				shouldAddThumbExtension : { type : 'b'   }
             }
         );
         return result;

@@ -42,17 +42,17 @@ export class KalturaResponseProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfileBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  },
-				statusEqual : { type : 'en'  , subType : 'KalturaResponseProfileStatus'},
-				statusIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaResponseProfileBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   },
+				statusEqual : { type : 'en'   , subType : 'KalturaResponseProfileStatus'},
+				statusIn : { type : 's'   }
             }
         );
         return result;

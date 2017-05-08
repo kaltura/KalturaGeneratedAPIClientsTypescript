@@ -21,7 +21,7 @@ export class WidgetListAction extends KalturaRequest<KalturaWidgetListResponse> 
 
     constructor(data? : WidgetListActionArgs)
     {
-        super(data, 'o', 'KalturaWidgetListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaWidgetListResponse', responseConstructor : KalturaWidgetListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class WidgetListAction extends KalturaRequest<KalturaWidgetListResponse> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'widget' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaWidgetFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'widget'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaWidgetFilter, subType : 'KalturaWidgetFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

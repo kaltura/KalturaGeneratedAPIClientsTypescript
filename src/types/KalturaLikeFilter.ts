@@ -23,7 +23,7 @@ export class KalturaLikeFilter extends KalturaLikeBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLikeFilter' }
+                objectType : { type : 'c' , default : 'KalturaLikeFilter'  }
             }
         );
         return result;

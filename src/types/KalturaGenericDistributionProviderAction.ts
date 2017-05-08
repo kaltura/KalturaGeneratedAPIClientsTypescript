@@ -52,24 +52,24 @@ export class KalturaGenericDistributionProviderAction extends KalturaObjectBase 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderAction' },
-				id : { type : 'n'  , readOnly : true},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				genericDistributionProviderId : { type : 'n'  },
-				action : { type : 'en'  , subType : 'KalturaDistributionAction'},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaGenericDistributionProviderStatus'},
-				resultsParser : { type : 'en'  , subType : 'KalturaGenericDistributionProviderParser'},
-				protocol : { type : 'en'  , subType : 'KalturaDistributionProtocol'},
-				serverAddress : { type : 's'  },
-				remotePath : { type : 's'  },
-				remoteUsername : { type : 's'  },
-				remotePassword : { type : 's'  },
-				editableFields : { type : 's'  },
-				mandatoryFields : { type : 's'  },
-				mrssTransformer : { type : 's'  , readOnly : true},
-				mrssValidator : { type : 's'  , readOnly : true},
-				resultsTransformer : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaGenericDistributionProviderAction'  },
+				id : { type : 'n'  , readOnly : true },
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				genericDistributionProviderId : { type : 'n'   },
+				action : { type : 'en'   , subType : 'KalturaDistributionAction'},
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaGenericDistributionProviderStatus'},
+				resultsParser : { type : 'en'   , subType : 'KalturaGenericDistributionProviderParser'},
+				protocol : { type : 'en'   , subType : 'KalturaDistributionProtocol'},
+				serverAddress : { type : 's'   },
+				remotePath : { type : 's'   },
+				remoteUsername : { type : 's'   },
+				remotePassword : { type : 's'   },
+				editableFields : { type : 's'   },
+				mandatoryFields : { type : 's'   },
+				mrssTransformer : { type : 's'  , readOnly : true },
+				mrssValidator : { type : 's'  , readOnly : true },
+				resultsTransformer : { type : 's'  , readOnly : true }
             }
         );
         return result;

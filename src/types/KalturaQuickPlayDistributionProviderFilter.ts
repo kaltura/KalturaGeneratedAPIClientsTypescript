@@ -23,7 +23,7 @@ export class KalturaQuickPlayDistributionProviderFilter extends KalturaQuickPlay
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionProviderFilter' }
+                objectType : { type : 'c' , default : 'KalturaQuickPlayDistributionProviderFilter'  }
             }
         );
         return result;

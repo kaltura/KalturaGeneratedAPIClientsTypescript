@@ -18,7 +18,7 @@ export class StorageProfileUpdateStatusAction extends KalturaRequest<void> {
 
     constructor(data : StorageProfileUpdateStatusActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,10 +27,10 @@ export class StorageProfileUpdateStatusAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'storageprofile' },
-				action : { type : 'c' , default : 'updateStatus' },
-				storageId : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaStorageProfileStatus'}
+                service : { type : 'c' , default : 'storageprofile'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				storageId : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaStorageProfileStatus'}
             }
         );
         return result;

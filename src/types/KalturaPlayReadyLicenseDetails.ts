@@ -30,11 +30,11 @@ export class KalturaPlayReadyLicenseDetails extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyLicenseDetails' },
-				policy : { type : 'o'  , subType : 'KalturaPlayReadyPolicy'},
-				beginDate : { type : 'n'  },
-				expirationDate : { type : 'n'  },
-				removalDate : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaPlayReadyLicenseDetails'  },
+				policy : { type : 'o'   , fallbackConstructor :  KalturaPlayReadyPolicy, subType : 'KalturaPlayReadyPolicy'},
+				beginDate : { type : 'n'   },
+				expirationDate : { type : 'n'   },
+				removalDate : { type : 'n'   }
             }
         );
         return result;

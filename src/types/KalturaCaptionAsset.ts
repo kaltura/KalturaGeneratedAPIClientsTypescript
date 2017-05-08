@@ -42,16 +42,16 @@ export class KalturaCaptionAsset extends KalturaAsset {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptionAsset' },
-				captionParamsId : { type : 'n'  },
-				language : { type : 'es'  , subType : 'KalturaLanguage'},
-				languageCode : { type : 'es'  , readOnly : true, subType : 'KalturaLanguageCode'},
-				isDefault : { type : 'en'  , subType : 'KalturaNullableBoolean'},
-				label : { type : 's'  },
-				format : { type : 'es'  , subType : 'KalturaCaptionType'},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaCaptionAssetStatus'},
-				parentId : { type : 's'  },
-				accuracy : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaCaptionAsset'  },
+				captionParamsId : { type : 'n'   },
+				language : { type : 'es'   , subType : 'KalturaLanguage'},
+				languageCode : { type : 'es'  , readOnly : true , subType : 'KalturaLanguageCode'},
+				isDefault : { type : 'en'   , subType : 'KalturaNullableBoolean'},
+				label : { type : 's'   },
+				format : { type : 'es'   , subType : 'KalturaCaptionType'},
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaCaptionAssetStatus'},
+				parentId : { type : 's'   },
+				accuracy : { type : 'n'   }
             }
         );
         return result;

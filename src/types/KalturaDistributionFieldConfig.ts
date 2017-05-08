@@ -39,15 +39,15 @@ export class KalturaDistributionFieldConfig extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionFieldConfig' },
-				fieldName : { type : 's'  },
-				userFriendlyFieldName : { type : 's'  },
-				entryMrssXslt : { type : 's'  },
-				isRequired : { type : 'en'  , subType : 'KalturaDistributionFieldRequiredStatus'},
-				updateOnChange : { type : 'b'  },
-				updateParams : { type : 'a'  , subType : 'KalturaString'},
-				isDefault : { type : 'b'  , readOnly : true},
-				triggerDeleteOnError : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionFieldConfig'  },
+				fieldName : { type : 's'   },
+				userFriendlyFieldName : { type : 's'   },
+				entryMrssXslt : { type : 's'   },
+				isRequired : { type : 'en'   , subType : 'KalturaDistributionFieldRequiredStatus'},
+				updateOnChange : { type : 'b'   },
+				updateParams : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				isDefault : { type : 'b'  , readOnly : true },
+				triggerDeleteOnError : { type : 'b'   }
             }
         );
         return result;

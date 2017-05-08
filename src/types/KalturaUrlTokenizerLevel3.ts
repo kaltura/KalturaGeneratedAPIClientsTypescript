@@ -27,10 +27,10 @@ export class KalturaUrlTokenizerLevel3 extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerLevel3' },
-				paramName : { type : 's'  },
-				expiryName : { type : 's'  },
-				gen : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUrlTokenizerLevel3'  },
+				paramName : { type : 's'   },
+				expiryName : { type : 's'   },
+				gen : { type : 's'   }
             }
         );
         return result;

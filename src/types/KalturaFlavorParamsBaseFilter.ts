@@ -24,8 +24,8 @@ export class KalturaFlavorParamsBaseFilter extends KalturaAssetParamsFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorParamsBaseFilter' },
-				formatEqual : { type : 'es'  , subType : 'KalturaContainerFormat'}
+                objectType : { type : 'c' , default : 'KalturaFlavorParamsBaseFilter'  },
+				formatEqual : { type : 'es'   , subType : 'KalturaContainerFormat'}
             }
         );
         return result;

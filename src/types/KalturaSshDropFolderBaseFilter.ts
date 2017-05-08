@@ -23,7 +23,7 @@ export class KalturaSshDropFolderBaseFilter extends KalturaRemoteDropFolderFilte
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSshDropFolderBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaSshDropFolderBaseFilter'  }
             }
         );
         return result;

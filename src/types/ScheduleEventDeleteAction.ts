@@ -17,7 +17,7 @@ export class ScheduleEventDeleteAction extends KalturaRequest<KalturaScheduleEve
 
     constructor(data : ScheduleEventDeleteActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleEvent');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEvent', responseConstructor : KalturaScheduleEvent  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ScheduleEventDeleteAction extends KalturaRequest<KalturaScheduleEve
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleevent' },
-				action : { type : 'c' , default : 'delete' },
-				scheduleEventId : { type : 'n'  }
+                service : { type : 'c' , default : 'schedule_scheduleevent'  },
+				action : { type : 'c' , default : 'delete'  },
+				scheduleEventId : { type : 'n'   }
             }
         );
         return result;

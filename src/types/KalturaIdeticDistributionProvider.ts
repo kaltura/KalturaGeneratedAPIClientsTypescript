@@ -23,7 +23,7 @@ export class KalturaIdeticDistributionProvider extends KalturaDistributionProvid
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaIdeticDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaIdeticDistributionProvider'  }
             }
         );
         return result;

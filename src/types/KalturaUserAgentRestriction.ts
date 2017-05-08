@@ -26,9 +26,9 @@ export class KalturaUserAgentRestriction extends KalturaBaseRestriction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserAgentRestriction' },
-				userAgentRestrictionType : { type : 'en'  , subType : 'KalturaUserAgentRestrictionType'},
-				userAgentRegexList : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUserAgentRestriction'  },
+				userAgentRestrictionType : { type : 'en'   , subType : 'KalturaUserAgentRestrictionType'},
+				userAgentRegexList : { type : 's'   }
             }
         );
         return result;

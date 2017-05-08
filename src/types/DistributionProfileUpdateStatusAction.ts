@@ -20,7 +20,7 @@ export class DistributionProfileUpdateStatusAction extends KalturaRequest<Kaltur
 
     constructor(data : DistributionProfileUpdateStatusActionArgs)
     {
-        super(data, 'o', 'KalturaDistributionProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDistributionProfile', responseConstructor : KalturaDistributionProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class DistributionProfileUpdateStatusAction extends KalturaRequest<Kaltur
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile' },
-				action : { type : 'c' , default : 'updateStatus' },
-				id : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaDistributionProfileStatus'}
+                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				id : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaDistributionProfileStatus'}
             }
         );
         return result;

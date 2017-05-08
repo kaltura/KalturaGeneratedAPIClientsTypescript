@@ -23,7 +23,7 @@ export class KalturaStorageAddAction extends KalturaRuleAction {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaStorageAddAction' }
+                objectType : { type : 'c' , default : 'KalturaStorageAddAction'  }
             }
         );
         return result;

@@ -27,8 +27,8 @@ export class KalturaLiveStreamEntryCompareAttributeCondition extends KalturaSear
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamEntryCompareAttributeCondition' },
-				attribute : { type : 'es'  , subType : 'KalturaLiveStreamEntryCompareAttribute'}
+                objectType : { type : 'c' , default : 'KalturaLiveStreamEntryCompareAttributeCondition'  },
+				attribute : { type : 'es'   , subType : 'KalturaLiveStreamEntryCompareAttribute'}
             }
         );
         return result;

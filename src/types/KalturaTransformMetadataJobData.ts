@@ -31,12 +31,12 @@ export class KalturaTransformMetadataJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTransformMetadataJobData' },
-				srcXslPath : { type : 's'  },
-				srcVersion : { type : 'n'  },
-				destVersion : { type : 'n'  },
-				destXsdPath : { type : 's'  },
-				metadataProfileId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaTransformMetadataJobData'  },
+				srcXslPath : { type : 's'   },
+				srcVersion : { type : 'n'   },
+				destVersion : { type : 'n'   },
+				destXsdPath : { type : 's'   },
+				metadataProfileId : { type : 'n'   }
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class PartnerRegisterAction extends KalturaRequest<KalturaPartner> {
 
     constructor(data : PartnerRegisterActionArgs)
     {
-        super(data, 'o', 'KalturaPartner');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartner', responseConstructor : KalturaPartner  });
         if (typeof this.silent === 'undefined') this.silent = false;
     }
 
@@ -33,12 +33,12 @@ export class PartnerRegisterAction extends KalturaRequest<KalturaPartner> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'register' },
-				partner : { type : 'o'  , subType : 'KalturaPartner'},
-				cmsPassword : { type : 's'  },
-				templatePartnerId : { type : 'n'  },
-				silent : { type : 'b'  }
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'register'  },
+				partner : { type : 'o'   , fallbackConstructor :  KalturaPartner, subType : 'KalturaPartner'},
+				cmsPassword : { type : 's'   },
+				templatePartnerId : { type : 'n'   },
+				silent : { type : 'b'   }
             }
         );
         return result;

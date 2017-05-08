@@ -25,8 +25,8 @@ export class KalturaBaseEntryListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBaseEntryListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaBaseEntry'}
+                objectType : { type : 'c' , default : 'KalturaBaseEntryListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaBaseEntry, subType : 'KalturaBaseEntry'}
             }
         );
         return result;

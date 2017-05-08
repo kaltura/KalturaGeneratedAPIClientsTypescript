@@ -37,15 +37,15 @@ export class KalturaCategoryFilter extends KalturaCategoryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryFilter' },
-				freeText : { type : 's'  },
-				membersIn : { type : 's'  },
-				nameOrReferenceIdStartsWith : { type : 's'  },
-				managerEqual : { type : 's'  },
-				memberEqual : { type : 's'  },
-				fullNameStartsWithIn : { type : 's'  },
-				ancestorIdIn : { type : 's'  },
-				idOrInheritedParentIdIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCategoryFilter'  },
+				freeText : { type : 's'   },
+				membersIn : { type : 's'   },
+				nameOrReferenceIdStartsWith : { type : 's'   },
+				managerEqual : { type : 's'   },
+				memberEqual : { type : 's'   },
+				fullNameStartsWithIn : { type : 's'   },
+				ancestorIdIn : { type : 's'   },
+				idOrInheritedParentIdIn : { type : 's'   }
             }
         );
         return result;

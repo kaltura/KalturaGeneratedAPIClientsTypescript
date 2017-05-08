@@ -25,10 +25,10 @@ export class KalturaReportTable extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaReportTable' },
-				header : { type : 's'  , readOnly : true},
-				data : { type : 's'  , readOnly : true},
-				totalCount : { type : 'n'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaReportTable'  },
+				header : { type : 's'  , readOnly : true },
+				data : { type : 's'  , readOnly : true },
+				totalCount : { type : 'n'  , readOnly : true }
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class LiveStreamUpdateOfflineThumbnailFromUrlAction extends KalturaReques
 
     constructor(data : LiveStreamUpdateOfflineThumbnailFromUrlActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStreamEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStreamEntry', responseConstructor : KalturaLiveStreamEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class LiveStreamUpdateOfflineThumbnailFromUrlAction extends KalturaReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'updateOfflineThumbnailFromUrl' },
-				entryId : { type : 's'  },
-				url : { type : 's'  }
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'updateOfflineThumbnailFromUrl'  },
+				entryId : { type : 's'   },
+				url : { type : 's'   }
             }
         );
         return result;

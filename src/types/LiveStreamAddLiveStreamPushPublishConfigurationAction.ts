@@ -25,7 +25,7 @@ export class LiveStreamAddLiveStreamPushPublishConfigurationAction extends Kaltu
 
     constructor(data : LiveStreamAddLiveStreamPushPublishConfigurationActionArgs)
     {
-        super(data, 'o', 'KalturaLiveStreamEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveStreamEntry', responseConstructor : KalturaLiveStreamEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class LiveStreamAddLiveStreamPushPublishConfigurationAction extends Kaltu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'addLiveStreamPushPublishConfiguration' },
-				entryId : { type : 's'  },
-				protocol : { type : 'es'  , subType : 'KalturaPlaybackProtocol'},
-				url : { type : 's'  },
-				liveStreamConfiguration : { type : 'o'  , subType : 'KalturaLiveStreamConfiguration'}
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'addLiveStreamPushPublishConfiguration'  },
+				entryId : { type : 's'   },
+				protocol : { type : 'es'   , subType : 'KalturaPlaybackProtocol'},
+				url : { type : 's'   },
+				liveStreamConfiguration : { type : 'o'   , fallbackConstructor :  KalturaLiveStreamConfiguration, subType : 'KalturaLiveStreamConfiguration'}
             }
         );
         return result;

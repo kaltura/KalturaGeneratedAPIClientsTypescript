@@ -17,7 +17,7 @@ export class DataDeleteAction extends KalturaRequest<void> {
 
     constructor(data : DataDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DataDeleteAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'data' },
-				action : { type : 'c' , default : 'delete' },
-				entryId : { type : 's'  }
+                service : { type : 'c' , default : 'data'  },
+				action : { type : 'c' , default : 'delete'  },
+				entryId : { type : 's'   }
             }
         );
         return result;

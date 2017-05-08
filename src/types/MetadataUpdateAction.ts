@@ -21,7 +21,7 @@ export class MetadataUpdateAction extends KalturaRequest<KalturaMetadata> {
 
     constructor(data : MetadataUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaMetadata');
+        super(data, {responseType : 'o', responseSubType : 'KalturaMetadata', responseConstructor : KalturaMetadata  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class MetadataUpdateAction extends KalturaRequest<KalturaMetadata> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 'n'  },
-				xmlData : { type : 's'  },
-				version : { type : 'n'  }
+                service : { type : 'c' , default : 'metadata_metadata'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 'n'   },
+				xmlData : { type : 's'   },
+				version : { type : 'n'   }
             }
         );
         return result;

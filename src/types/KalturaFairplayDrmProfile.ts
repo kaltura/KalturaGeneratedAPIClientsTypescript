@@ -23,8 +23,8 @@ export class KalturaFairplayDrmProfile extends KalturaDrmProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFairplayDrmProfile' },
-				publicCertificate : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFairplayDrmProfile'  },
+				publicCertificate : { type : 's'   }
             }
         );
         return result;

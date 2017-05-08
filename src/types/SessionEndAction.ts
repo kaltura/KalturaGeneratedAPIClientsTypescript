@@ -17,7 +17,7 @@ export class SessionEndAction extends KalturaRequest<void> {
 
     constructor(data? : SessionEndActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,8 +26,8 @@ export class SessionEndAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session' },
-				action : { type : 'c' , default : 'end' }
+                service : { type : 'c' , default : 'session'  },
+				action : { type : 'c' , default : 'end'  }
             }
         );
         return result;

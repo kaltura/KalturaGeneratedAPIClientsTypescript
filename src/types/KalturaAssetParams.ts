@@ -48,20 +48,20 @@ export class KalturaAssetParams extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetParams' },
-				id : { type : 'n'  , readOnly : true},
-				partnerId : { type : 'n'  },
-				name : { type : 's'  },
-				systemName : { type : 's'  },
-				description : { type : 's'  },
-				createdAt : { type : 'd'  , readOnly : true},
-				isSystemDefault : { type : 'en'  , readOnly : true, subType : 'KalturaNullableBoolean'},
-				tags : { type : 's'  },
-				requiredPermissions : { type : 'a'  , subType : 'KalturaString'},
-				sourceRemoteStorageProfileId : { type : 'n'  },
-				remoteStorageProfileIds : { type : 'n'  },
-				mediaParserType : { type : 'es'  , subType : 'KalturaMediaParserType'},
-				sourceAssetParamsIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAssetParams'  },
+				id : { type : 'n'  , readOnly : true },
+				partnerId : { type : 'n'   },
+				name : { type : 's'   },
+				systemName : { type : 's'   },
+				description : { type : 's'   },
+				createdAt : { type : 'd'  , readOnly : true },
+				isSystemDefault : { type : 'en'  , readOnly : true , subType : 'KalturaNullableBoolean'},
+				tags : { type : 's'   },
+				requiredPermissions : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				sourceRemoteStorageProfileId : { type : 'n'   },
+				remoteStorageProfileIds : { type : 'n'   },
+				mediaParserType : { type : 'es'   , subType : 'KalturaMediaParserType'},
+				sourceAssetParamsIds : { type : 's'   }
             }
         );
         return result;

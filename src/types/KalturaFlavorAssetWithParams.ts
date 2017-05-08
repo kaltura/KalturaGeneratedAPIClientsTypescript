@@ -29,10 +29,10 @@ export class KalturaFlavorAssetWithParams extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorAssetWithParams' },
-				flavorAsset : { type : 'o'  , subType : 'KalturaFlavorAsset'},
-				flavorParams : { type : 'o'  , subType : 'KalturaFlavorParams'},
-				entryId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFlavorAssetWithParams'  },
+				flavorAsset : { type : 'o'   , fallbackConstructor :  KalturaFlavorAsset, subType : 'KalturaFlavorAsset'},
+				flavorParams : { type : 'o'   , fallbackConstructor :  KalturaFlavorParams, subType : 'KalturaFlavorParams'},
+				entryId : { type : 's'   }
             }
         );
         return result;

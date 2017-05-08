@@ -26,11 +26,11 @@ export class KalturaMetadataProfileField extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataProfileField' },
-				id : { type : 'n'  , readOnly : true},
-				xPath : { type : 's'  , readOnly : true},
-				key : { type : 's'  , readOnly : true},
-				label : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaMetadataProfileField'  },
+				id : { type : 'n'  , readOnly : true },
+				xPath : { type : 's'  , readOnly : true },
+				key : { type : 's'  , readOnly : true },
+				label : { type : 's'  , readOnly : true }
             }
         );
         return result;

@@ -19,7 +19,7 @@ export class GenericDistributionProviderActionAddResultsTransformFromFileAction 
 
     constructor(data : GenericDistributionProviderActionAddResultsTransformFromFileActionArgs)
     {
-        super(data, 'o', 'KalturaGenericDistributionProviderAction');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenericDistributionProviderAction', responseConstructor : KalturaGenericDistributionProviderAction  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class GenericDistributionProviderActionAddResultsTransformFromFileAction 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction' },
-				action : { type : 'c' , default : 'addResultsTransformFromFile' },
-				id : { type : 'n'  },
-				transformFile : { type : 'f'  }
+                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
+				action : { type : 'c' , default : 'addResultsTransformFromFile'  },
+				id : { type : 'n'   },
+				transformFile : { type : 'f'   }
             }
         );
         return result;

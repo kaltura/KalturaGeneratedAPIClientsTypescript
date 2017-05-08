@@ -23,7 +23,7 @@ export class KalturaServerNodeFilter extends KalturaServerNodeBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaServerNodeFilter' }
+                objectType : { type : 'c' , default : 'KalturaServerNodeFilter'  }
             }
         );
         return result;

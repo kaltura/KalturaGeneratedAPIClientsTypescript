@@ -26,9 +26,9 @@ export class KalturaSearchResultResponse extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchResultResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaSearchResult'},
-				needMediaInfo : { type : 'b'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaSearchResultResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaSearchResult, subType : 'KalturaSearchResult'},
+				needMediaInfo : { type : 'b'  , readOnly : true }
             }
         );
         return result;

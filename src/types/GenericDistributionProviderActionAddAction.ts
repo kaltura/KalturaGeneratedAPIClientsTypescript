@@ -17,7 +17,7 @@ export class GenericDistributionProviderActionAddAction extends KalturaRequest<K
 
     constructor(data : GenericDistributionProviderActionAddActionArgs)
     {
-        super(data, 'o', 'KalturaGenericDistributionProviderAction');
+        super(data, {responseType : 'o', responseSubType : 'KalturaGenericDistributionProviderAction', responseConstructor : KalturaGenericDistributionProviderAction  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class GenericDistributionProviderActionAddAction extends KalturaRequest<K
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction' },
-				action : { type : 'c' , default : 'add' },
-				genericDistributionProviderAction : { type : 'o'  , subType : 'KalturaGenericDistributionProviderAction'}
+                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
+				action : { type : 'c' , default : 'add'  },
+				genericDistributionProviderAction : { type : 'o'   , fallbackConstructor :  KalturaGenericDistributionProviderAction, subType : 'KalturaGenericDistributionProviderAction'}
             }
         );
         return result;

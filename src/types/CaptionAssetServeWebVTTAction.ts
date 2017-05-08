@@ -23,7 +23,7 @@ export class CaptionAssetServeWebVTTAction extends KalturaRequest<string> {
 
     constructor(data : CaptionAssetServeWebVTTActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
         if (typeof this.segmentDuration === 'undefined') this.segmentDuration = 30;
 		if (typeof this.localTimestamp === 'undefined') this.localTimestamp = 10000;
     }
@@ -34,12 +34,12 @@ export class CaptionAssetServeWebVTTAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'caption_captionasset' },
-				action : { type : 'c' , default : 'serveWebVTT' },
-				captionAssetId : { type : 's'  },
-				segmentDuration : { type : 'n'  },
-				segmentIndex : { type : 'n'  },
-				localTimestamp : { type : 'n'  }
+                service : { type : 'c' , default : 'caption_captionasset'  },
+				action : { type : 'c' , default : 'serveWebVTT'  },
+				captionAssetId : { type : 's'   },
+				segmentDuration : { type : 'n'   },
+				segmentIndex : { type : 'n'   },
+				localTimestamp : { type : 'n'   }
             }
         );
         return result;

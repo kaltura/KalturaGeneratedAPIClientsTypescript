@@ -21,7 +21,7 @@ export class ConversionProfileAssetParamsListAction extends KalturaRequest<Kaltu
 
     constructor(data? : ConversionProfileAssetParamsListActionArgs)
     {
-        super(data, 'o', 'KalturaConversionProfileAssetParamsListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaConversionProfileAssetParamsListResponse', responseConstructor : KalturaConversionProfileAssetParamsListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class ConversionProfileAssetParamsListAction extends KalturaRequest<Kaltu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'conversionprofileassetparams' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaConversionProfileAssetParamsFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'conversionprofileassetparams'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaConversionProfileAssetParamsFilter, subType : 'KalturaConversionProfileAssetParamsFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

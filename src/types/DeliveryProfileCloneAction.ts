@@ -17,7 +17,7 @@ export class DeliveryProfileCloneAction extends KalturaRequest<KalturaDeliveryPr
 
     constructor(data : DeliveryProfileCloneActionArgs)
     {
-        super(data, 'o', 'KalturaDeliveryProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDeliveryProfile', responseConstructor : KalturaDeliveryProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DeliveryProfileCloneAction extends KalturaRequest<KalturaDeliveryPr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile' },
-				action : { type : 'c' , default : 'clone' },
-				deliveryId : { type : 'n'  }
+                service : { type : 'c' , default : 'deliveryprofile'  },
+				action : { type : 'c' , default : 'clone'  },
+				deliveryId : { type : 'n'   }
             }
         );
         return result;

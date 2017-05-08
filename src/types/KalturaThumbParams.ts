@@ -57,24 +57,24 @@ export class KalturaThumbParams extends KalturaAssetParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbParams' },
-				cropType : { type : 'en'  , subType : 'KalturaThumbCropType'},
-				quality : { type : 'n'  },
-				cropX : { type : 'n'  },
-				cropY : { type : 'n'  },
-				cropWidth : { type : 'n'  },
-				cropHeight : { type : 'n'  },
-				videoOffset : { type : 'n'  },
-				width : { type : 'n'  },
-				height : { type : 'n'  },
-				scaleWidth : { type : 'n'  },
-				scaleHeight : { type : 'n'  },
-				backgroundColor : { type : 's'  },
-				sourceParamsId : { type : 'n'  },
-				format : { type : 'es'  , subType : 'KalturaContainerFormat'},
-				density : { type : 'n'  },
-				stripProfiles : { type : 'b'  },
-				videoOffsetInPercentage : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaThumbParams'  },
+				cropType : { type : 'en'   , subType : 'KalturaThumbCropType'},
+				quality : { type : 'n'   },
+				cropX : { type : 'n'   },
+				cropY : { type : 'n'   },
+				cropWidth : { type : 'n'   },
+				cropHeight : { type : 'n'   },
+				videoOffset : { type : 'n'   },
+				width : { type : 'n'   },
+				height : { type : 'n'   },
+				scaleWidth : { type : 'n'   },
+				scaleHeight : { type : 'n'   },
+				backgroundColor : { type : 's'   },
+				sourceParamsId : { type : 'n'   },
+				format : { type : 'es'   , subType : 'KalturaContainerFormat'},
+				density : { type : 'n'   },
+				stripProfiles : { type : 'b'   },
+				videoOffsetInPercentage : { type : 'n'   }
             }
         );
         return result;

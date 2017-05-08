@@ -17,7 +17,7 @@ export class ScheduledTaskProfileRequestDryRunAction extends KalturaRequest<numb
 
     constructor(data : ScheduledTaskProfileRequestDryRunActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
         if (typeof this.maxResults === 'undefined') this.maxResults = 500;
     }
 
@@ -27,10 +27,10 @@ export class ScheduledTaskProfileRequestDryRunAction extends KalturaRequest<numb
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile' },
-				action : { type : 'c' , default : 'requestDryRun' },
-				scheduledTaskProfileId : { type : 'n'  },
-				maxResults : { type : 'n'  }
+                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
+				action : { type : 'c' , default : 'requestDryRun'  },
+				scheduledTaskProfileId : { type : 'n'   },
+				maxResults : { type : 'n'   }
             }
         );
         return result;

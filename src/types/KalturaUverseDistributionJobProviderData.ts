@@ -27,10 +27,10 @@ export class KalturaUverseDistributionJobProviderData extends KalturaConfigurabl
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUverseDistributionJobProviderData' },
-				localAssetFilePath : { type : 's'  },
-				remoteAssetUrl : { type : 's'  },
-				remoteAssetFileName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUverseDistributionJobProviderData'  },
+				localAssetFilePath : { type : 's'   },
+				remoteAssetUrl : { type : 's'   },
+				remoteAssetFileName : { type : 's'   }
             }
         );
         return result;

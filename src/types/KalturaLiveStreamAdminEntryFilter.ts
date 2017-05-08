@@ -23,7 +23,7 @@ export class KalturaLiveStreamAdminEntryFilter extends KalturaLiveStreamAdminEnt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamAdminEntryFilter' }
+                objectType : { type : 'c' , default : 'KalturaLiveStreamAdminEntryFilter'  }
             }
         );
         return result;

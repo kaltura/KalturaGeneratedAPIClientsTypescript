@@ -25,9 +25,9 @@ export class KalturaMetadataSearchItem extends KalturaSearchOperator {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMetadataSearchItem' },
-				metadataProfileId : { type : 'n'  },
-				orderBy : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMetadataSearchItem'  },
+				metadataProfileId : { type : 'n'   },
+				orderBy : { type : 's'   }
             }
         );
         return result;

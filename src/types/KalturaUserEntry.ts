@@ -33,15 +33,15 @@ export class KalturaUserEntry extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserEntry' },
-				id : { type : 'n'  , readOnly : true},
-				entryId : { type : 's'  },
-				userId : { type : 's'  },
-				partnerId : { type : 'n'  , readOnly : true},
-				status : { type : 'es'  , readOnly : true, subType : 'KalturaUserEntryStatus'},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				type : { type : 'es'  , readOnly : true, subType : 'KalturaUserEntryType'}
+                objectType : { type : 'c' , default : 'KalturaUserEntry'  },
+				id : { type : 'n'  , readOnly : true },
+				entryId : { type : 's'   },
+				userId : { type : 's'   },
+				partnerId : { type : 'n'  , readOnly : true },
+				status : { type : 'es'  , readOnly : true , subType : 'KalturaUserEntryStatus'},
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				type : { type : 'es'  , readOnly : true , subType : 'KalturaUserEntryType'}
             }
         );
         return result;

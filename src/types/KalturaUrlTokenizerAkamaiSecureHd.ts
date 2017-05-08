@@ -31,12 +31,12 @@ export class KalturaUrlTokenizerAkamaiSecureHd extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerAkamaiSecureHd' },
-				paramName : { type : 's'  },
-				aclPostfix : { type : 's'  },
-				customPostfixes : { type : 's'  },
-				useCookieHosts : { type : 's'  },
-				rootDir : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUrlTokenizerAkamaiSecureHd'  },
+				paramName : { type : 's'   },
+				aclPostfix : { type : 's'   },
+				customPostfixes : { type : 's'   },
+				useCookieHosts : { type : 's'   },
+				rootDir : { type : 's'   }
             }
         );
         return result;

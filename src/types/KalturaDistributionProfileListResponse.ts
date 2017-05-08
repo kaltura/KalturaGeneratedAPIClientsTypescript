@@ -25,8 +25,8 @@ export class KalturaDistributionProfileListResponse extends KalturaListResponse 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionProfileListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaDistributionProfile'}
+                objectType : { type : 'c' , default : 'KalturaDistributionProfileListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaDistributionProfile, subType : 'KalturaDistributionProfile'}
             }
         );
         return result;

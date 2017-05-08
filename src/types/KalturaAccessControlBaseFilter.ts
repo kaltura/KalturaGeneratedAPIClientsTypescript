@@ -33,13 +33,13 @@ export class KalturaAccessControlBaseFilter extends KalturaRelatedFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAccessControlBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  }
+                objectType : { type : 'c' , default : 'KalturaAccessControlBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   }
             }
         );
         return result;

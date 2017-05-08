@@ -49,20 +49,20 @@ export class KalturaDeliveryProfileBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileBaseFilter' },
-				idEqual : { type : 'n'  },
-				idIn : { type : 's'  },
-				partnerIdEqual : { type : 'n'  },
-				partnerIdIn : { type : 's'  },
-				systemNameEqual : { type : 's'  },
-				systemNameIn : { type : 's'  },
-				createdAtGreaterThanOrEqual : { type : 'd'  },
-				createdAtLessThanOrEqual : { type : 'd'  },
-				updatedAtGreaterThanOrEqual : { type : 'd'  },
-				updatedAtLessThanOrEqual : { type : 'd'  },
-				streamerTypeEqual : { type : 'es'  , subType : 'KalturaPlaybackProtocol'},
-				statusEqual : { type : 'en'  , subType : 'KalturaDeliveryStatus'},
-				statusIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileBaseFilter'  },
+				idEqual : { type : 'n'   },
+				idIn : { type : 's'   },
+				partnerIdEqual : { type : 'n'   },
+				partnerIdIn : { type : 's'   },
+				systemNameEqual : { type : 's'   },
+				systemNameIn : { type : 's'   },
+				createdAtGreaterThanOrEqual : { type : 'd'   },
+				createdAtLessThanOrEqual : { type : 'd'   },
+				updatedAtGreaterThanOrEqual : { type : 'd'   },
+				updatedAtLessThanOrEqual : { type : 'd'   },
+				streamerTypeEqual : { type : 'es'   , subType : 'KalturaPlaybackProtocol'},
+				statusEqual : { type : 'en'   , subType : 'KalturaDeliveryStatus'},
+				statusIn : { type : 's'   }
             }
         );
         return result;

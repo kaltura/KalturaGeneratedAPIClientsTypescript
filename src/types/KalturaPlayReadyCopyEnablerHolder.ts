@@ -24,8 +24,8 @@ export class KalturaPlayReadyCopyEnablerHolder extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlayReadyCopyEnablerHolder' },
-				type : { type : 'es'  , subType : 'KalturaPlayReadyCopyEnablerType'}
+                objectType : { type : 'c' , default : 'KalturaPlayReadyCopyEnablerHolder'  },
+				type : { type : 'es'   , subType : 'KalturaPlayReadyCopyEnablerType'}
             }
         );
         return result;

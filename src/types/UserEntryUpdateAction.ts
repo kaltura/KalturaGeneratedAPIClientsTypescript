@@ -18,7 +18,7 @@ export class UserEntryUpdateAction extends KalturaRequest<void> {
 
     constructor(data : UserEntryUpdateActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,10 +27,10 @@ export class UserEntryUpdateAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userentry' },
-				action : { type : 'c' , default : 'update' },
-				id : { type : 'n'  },
-				userEntry : { type : 'o'  , subType : 'KalturaUserEntry'}
+                service : { type : 'c' , default : 'userentry'  },
+				action : { type : 'c' , default : 'update'  },
+				id : { type : 'n'   },
+				userEntry : { type : 'o'   , fallbackConstructor :  KalturaUserEntry, subType : 'KalturaUserEntry'}
             }
         );
         return result;

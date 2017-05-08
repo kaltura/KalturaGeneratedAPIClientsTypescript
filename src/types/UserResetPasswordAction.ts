@@ -17,7 +17,7 @@ export class UserResetPasswordAction extends KalturaRequest<void> {
 
     constructor(data : UserResetPasswordActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UserResetPasswordAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'user' },
-				action : { type : 'c' , default : 'resetPassword' },
-				email : { type : 's'  }
+                service : { type : 'c' , default : 'user'  },
+				action : { type : 'c' , default : 'resetPassword'  },
+				email : { type : 's'   }
             }
         );
         return result;

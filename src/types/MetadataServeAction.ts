@@ -17,7 +17,7 @@ export class MetadataServeAction extends KalturaRequest<string> {
 
     constructor(data : MetadataServeActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class MetadataServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'metadata_metadata' },
-				action : { type : 'c' , default : 'serve' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'metadata_metadata'  },
+				action : { type : 'c' , default : 'serve'  },
+				id : { type : 'n'   }
             }
         );
         return result;

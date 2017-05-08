@@ -21,7 +21,7 @@ export class DocumentsListAction extends KalturaRequest<KalturaDocumentListRespo
 
     constructor(data? : DocumentsListActionArgs)
     {
-        super(data, 'o', 'KalturaDocumentListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDocumentListResponse', responseConstructor : KalturaDocumentListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class DocumentsListAction extends KalturaRequest<KalturaDocumentListRespo
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaDocumentEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaDocumentEntryFilter, subType : 'KalturaDocumentEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

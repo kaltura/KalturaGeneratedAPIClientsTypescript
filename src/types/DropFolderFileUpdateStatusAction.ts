@@ -20,7 +20,7 @@ export class DropFolderFileUpdateStatusAction extends KalturaRequest<KalturaDrop
 
     constructor(data : DropFolderFileUpdateStatusActionArgs)
     {
-        super(data, 'o', 'KalturaDropFolderFile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDropFolderFile', responseConstructor : KalturaDropFolderFile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class DropFolderFileUpdateStatusAction extends KalturaRequest<KalturaDrop
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'dropfolder_dropfolderfile' },
-				action : { type : 'c' , default : 'updateStatus' },
-				dropFolderFileId : { type : 'n'  },
-				status : { type : 'en'  , subType : 'KalturaDropFolderFileStatus'}
+                service : { type : 'c' , default : 'dropfolder_dropfolderfile'  },
+				action : { type : 'c' , default : 'updateStatus'  },
+				dropFolderFileId : { type : 'n'   },
+				status : { type : 'en'   , subType : 'KalturaDropFolderFileStatus'}
             }
         );
         return result;

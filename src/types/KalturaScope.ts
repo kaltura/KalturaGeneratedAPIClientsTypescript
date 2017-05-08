@@ -23,7 +23,7 @@ export class KalturaScope extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaScope' }
+                objectType : { type : 'c' , default : 'KalturaScope'  }
             }
         );
         return result;

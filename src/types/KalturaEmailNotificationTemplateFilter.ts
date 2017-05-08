@@ -23,7 +23,7 @@ export class KalturaEmailNotificationTemplateFilter extends KalturaEmailNotifica
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationTemplateFilter' }
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationTemplateFilter'  }
             }
         );
         return result;

@@ -23,8 +23,8 @@ export class KalturaDeleteFileJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeleteFileJobData' },
-				localFileSyncPath : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDeleteFileJobData'  },
+				localFileSyncPath : { type : 's'   }
             }
         );
         return result;

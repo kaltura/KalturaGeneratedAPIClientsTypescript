@@ -21,7 +21,7 @@ export class SearchSearchAction extends KalturaRequest<KalturaSearchResultRespon
 
     constructor(data : SearchSearchActionArgs)
     {
-        super(data, 'o', 'KalturaSearchResultResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaSearchResultResponse', responseConstructor : KalturaSearchResultResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class SearchSearchAction extends KalturaRequest<KalturaSearchResultRespon
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'search' },
-				action : { type : 'c' , default : 'search' },
-				search : { type : 'o'  , subType : 'KalturaSearch'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'search'  },
+				action : { type : 'c' , default : 'search'  },
+				search : { type : 'o'   , fallbackConstructor :  KalturaSearch, subType : 'KalturaSearch'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class DeliveryProfileAddAction extends KalturaRequest<KalturaDeliveryProf
 
     constructor(data : DeliveryProfileAddActionArgs)
     {
-        super(data, 'o', 'KalturaDeliveryProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDeliveryProfile', responseConstructor : KalturaDeliveryProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DeliveryProfileAddAction extends KalturaRequest<KalturaDeliveryProf
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'deliveryprofile' },
-				action : { type : 'c' , default : 'add' },
-				delivery : { type : 'o'  , subType : 'KalturaDeliveryProfile'}
+                service : { type : 'c' , default : 'deliveryprofile'  },
+				action : { type : 'c' , default : 'add'  },
+				delivery : { type : 'o'   , fallbackConstructor :  KalturaDeliveryProfile, subType : 'KalturaDeliveryProfile'}
             }
         );
         return result;

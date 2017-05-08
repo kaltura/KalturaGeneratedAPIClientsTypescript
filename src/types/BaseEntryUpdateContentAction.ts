@@ -25,7 +25,7 @@ export class BaseEntryUpdateContentAction extends KalturaRequest<KalturaBaseEntr
 
     constructor(data : BaseEntryUpdateContentActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntry', responseConstructor : KalturaBaseEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -34,12 +34,12 @@ export class BaseEntryUpdateContentAction extends KalturaRequest<KalturaBaseEntr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'updateContent' },
-				entryId : { type : 's'  },
-				resource : { type : 'o'  , subType : 'KalturaResource'},
-				conversionProfileId : { type : 'n'  },
-				advancedOptions : { type : 'o'  , subType : 'KalturaEntryReplacementOptions'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'updateContent'  },
+				entryId : { type : 's'   },
+				resource : { type : 'o'   , fallbackConstructor :  KalturaResource, subType : 'KalturaResource'},
+				conversionProfileId : { type : 'n'   },
+				advancedOptions : { type : 'o'   , fallbackConstructor :  KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions'}
             }
         );
         return result;

@@ -35,14 +35,14 @@ export class KalturaConvertCollectionFlavorData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConvertCollectionFlavorData' },
-				flavorAssetId : { type : 's'  },
-				flavorParamsOutputId : { type : 'n'  },
-				readyBehavior : { type : 'n'  },
-				videoBitrate : { type : 'n'  },
-				audioBitrate : { type : 'n'  },
-				destFileSyncLocalPath : { type : 's'  },
-				destFileSyncRemoteUrl : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaConvertCollectionFlavorData'  },
+				flavorAssetId : { type : 's'   },
+				flavorParamsOutputId : { type : 'n'   },
+				readyBehavior : { type : 'n'   },
+				videoBitrate : { type : 'n'   },
+				audioBitrate : { type : 'n'   },
+				destFileSyncLocalPath : { type : 's'   },
+				destFileSyncRemoteUrl : { type : 's'   }
             }
         );
         return result;

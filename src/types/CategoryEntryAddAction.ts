@@ -17,7 +17,7 @@ export class CategoryEntryAddAction extends KalturaRequest<KalturaCategoryEntry>
 
     constructor(data : CategoryEntryAddActionArgs)
     {
-        super(data, 'o', 'KalturaCategoryEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryEntry', responseConstructor : KalturaCategoryEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class CategoryEntryAddAction extends KalturaRequest<KalturaCategoryEntry>
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry' },
-				action : { type : 'c' , default : 'add' },
-				categoryEntry : { type : 'o'  , subType : 'KalturaCategoryEntry'}
+                service : { type : 'c' , default : 'categoryentry'  },
+				action : { type : 'c' , default : 'add'  },
+				categoryEntry : { type : 'o'   , fallbackConstructor :  KalturaCategoryEntry, subType : 'KalturaCategoryEntry'}
             }
         );
         return result;

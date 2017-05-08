@@ -23,7 +23,7 @@ export class KalturaLiveStreamScheduleEventBaseFilter extends KalturaEntrySchedu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveStreamScheduleEventBaseFilter' }
+                objectType : { type : 'c' , default : 'KalturaLiveStreamScheduleEventBaseFilter'  }
             }
         );
         return result;

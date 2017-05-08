@@ -38,15 +38,15 @@ export class KalturaThumbCuePointBaseFilter extends KalturaCuePointFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbCuePointBaseFilter' },
-				descriptionLike : { type : 's'  },
-				descriptionMultiLikeOr : { type : 's'  },
-				descriptionMultiLikeAnd : { type : 's'  },
-				titleLike : { type : 's'  },
-				titleMultiLikeOr : { type : 's'  },
-				titleMultiLikeAnd : { type : 's'  },
-				subTypeEqual : { type : 'en'  , subType : 'KalturaThumbCuePointSubType'},
-				subTypeIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaThumbCuePointBaseFilter'  },
+				descriptionLike : { type : 's'   },
+				descriptionMultiLikeOr : { type : 's'   },
+				descriptionMultiLikeAnd : { type : 's'   },
+				titleLike : { type : 's'   },
+				titleMultiLikeOr : { type : 's'   },
+				titleMultiLikeAnd : { type : 's'   },
+				subTypeEqual : { type : 'en'   , subType : 'KalturaThumbCuePointSubType'},
+				subTypeIn : { type : 's'   }
             }
         );
         return result;

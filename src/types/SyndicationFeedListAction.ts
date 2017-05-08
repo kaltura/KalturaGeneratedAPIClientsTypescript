@@ -21,7 +21,7 @@ export class SyndicationFeedListAction extends KalturaRequest<KalturaBaseSyndica
 
     constructor(data? : SyndicationFeedListActionArgs)
     {
-        super(data, 'o', 'KalturaBaseSyndicationFeedListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseSyndicationFeedListResponse', responseConstructor : KalturaBaseSyndicationFeedListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class SyndicationFeedListAction extends KalturaRequest<KalturaBaseSyndica
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'syndicationfeed' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaBaseSyndicationFeedFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'syndicationfeed'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaBaseSyndicationFeedFilter, subType : 'KalturaBaseSyndicationFeedFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

@@ -24,8 +24,8 @@ export class KalturaQuizAdvancedFilter extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaQuizAdvancedFilter' },
-				isQuiz : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaQuizAdvancedFilter'  },
+				isQuiz : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

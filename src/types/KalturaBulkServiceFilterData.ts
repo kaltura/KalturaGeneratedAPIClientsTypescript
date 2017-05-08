@@ -29,9 +29,9 @@ export class KalturaBulkServiceFilterData extends KalturaBulkServiceData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkServiceFilterData' },
-				filter : { type : 'o'  , subType : 'KalturaFilter'},
-				templateObject : { type : 'o'  , subType : 'KalturaObjectBase'}
+                objectType : { type : 'c' , default : 'KalturaBulkServiceFilterData'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaFilter, subType : 'KalturaFilter'},
+				templateObject : { type : 'o'   , fallbackConstructor :  KalturaObjectBase, subType : 'KalturaObjectBase'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaLiveChannelFilter extends KalturaLiveChannelBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaLiveChannelFilter' }
+                objectType : { type : 'c' , default : 'KalturaLiveChannelFilter'  }
             }
         );
         return result;

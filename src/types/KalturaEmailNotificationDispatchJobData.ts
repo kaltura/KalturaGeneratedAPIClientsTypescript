@@ -47,18 +47,18 @@ export class KalturaEmailNotificationDispatchJobData extends KalturaEventNotific
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationDispatchJobData' },
-				fromEmail : { type : 's'  },
-				fromName : { type : 's'  },
-				to : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientJobData'},
-				cc : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientJobData'},
-				bcc : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientJobData'},
-				replyTo : { type : 'o'  , subType : 'KalturaEmailNotificationRecipientJobData'},
-				priority : { type : 'en'  , subType : 'KalturaEmailNotificationTemplatePriority'},
-				confirmReadingTo : { type : 's'  },
-				hostname : { type : 's'  },
-				messageID : { type : 's'  },
-				customHeaders : { type : 'a'  , subType : 'KalturaKeyValue'}
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationDispatchJobData'  },
+				fromEmail : { type : 's'   },
+				fromName : { type : 's'   },
+				to : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientJobData, subType : 'KalturaEmailNotificationRecipientJobData'},
+				cc : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientJobData, subType : 'KalturaEmailNotificationRecipientJobData'},
+				bcc : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientJobData, subType : 'KalturaEmailNotificationRecipientJobData'},
+				replyTo : { type : 'o'   , fallbackConstructor :  KalturaEmailNotificationRecipientJobData, subType : 'KalturaEmailNotificationRecipientJobData'},
+				priority : { type : 'en'   , subType : 'KalturaEmailNotificationTemplatePriority'},
+				confirmReadingTo : { type : 's'   },
+				hostname : { type : 's'   },
+				messageID : { type : 's'   },
+				customHeaders : { type : 'a'   , fallbackConstructor :  KalturaKeyValue, subType : 'KalturaKeyValue'}
             }
         );
         return result;

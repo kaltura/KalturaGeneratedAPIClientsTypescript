@@ -18,7 +18,7 @@ export class PartnerGetStatisticsAction extends KalturaRequest<KalturaPartnerSta
 
     constructor(data? : PartnerGetStatisticsActionArgs)
     {
-        super(data, 'o', 'KalturaPartnerStatistics');
+        super(data, {responseType : 'o', responseSubType : 'KalturaPartnerStatistics', responseConstructor : KalturaPartnerStatistics  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,8 +27,8 @@ export class PartnerGetStatisticsAction extends KalturaRequest<KalturaPartnerSta
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'partner' },
-				action : { type : 'c' , default : 'getStatistics' }
+                service : { type : 'c' , default : 'partner'  },
+				action : { type : 'c' , default : 'getStatistics'  }
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class DistributionProfileAddAction extends KalturaRequest<KalturaDistribu
 
     constructor(data : DistributionProfileAddActionArgs)
     {
-        super(data, 'o', 'KalturaDistributionProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDistributionProfile', responseConstructor : KalturaDistributionProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class DistributionProfileAddAction extends KalturaRequest<KalturaDistribu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_distributionprofile' },
-				action : { type : 'c' , default : 'add' },
-				distributionProfile : { type : 'o'  , subType : 'KalturaDistributionProfile'}
+                service : { type : 'c' , default : 'contentdistribution_distributionprofile'  },
+				action : { type : 'c' , default : 'add'  },
+				distributionProfile : { type : 'o'   , fallbackConstructor :  KalturaDistributionProfile, subType : 'KalturaDistributionProfile'}
             }
         );
         return result;

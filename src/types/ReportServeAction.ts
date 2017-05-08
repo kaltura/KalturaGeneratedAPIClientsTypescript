@@ -17,7 +17,7 @@ export class ReportServeAction extends KalturaRequest<string> {
 
     constructor(data : ReportServeActionArgs)
     {
-        super(data, 's', '');
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class ReportServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'report' },
-				action : { type : 'c' , default : 'serve' },
-				id : { type : 's'  }
+                service : { type : 'c' , default : 'report'  },
+				action : { type : 'c' , default : 'serve'  },
+				id : { type : 's'   }
             }
         );
         return result;

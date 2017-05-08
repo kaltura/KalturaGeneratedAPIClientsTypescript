@@ -25,8 +25,8 @@ export class KalturaAuthenticatedCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuthenticatedCondition' },
-				privileges : { type : 'a'  , subType : 'KalturaStringValue'}
+                objectType : { type : 'c' , default : 'KalturaAuthenticatedCondition'  },
+				privileges : { type : 'a'   , fallbackConstructor :  KalturaStringValue, subType : 'KalturaStringValue'}
             }
         );
         return result;

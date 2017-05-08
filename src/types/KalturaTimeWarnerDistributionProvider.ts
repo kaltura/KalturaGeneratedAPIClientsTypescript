@@ -23,7 +23,7 @@ export class KalturaTimeWarnerDistributionProvider extends KalturaDistributionPr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProvider'  }
             }
         );
         return result;

@@ -18,7 +18,7 @@ export class EmailIngestionProfileAddAction extends KalturaRequest<KalturaEmailI
 
     constructor(data : EmailIngestionProfileAddActionArgs)
     {
-        super(data, 'o', 'KalturaEmailIngestionProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEmailIngestionProfile', responseConstructor : KalturaEmailIngestionProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class EmailIngestionProfileAddAction extends KalturaRequest<KalturaEmailI
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'emailingestionprofile' },
-				action : { type : 'c' , default : 'add' },
-				EmailIP : { type : 'o'  , subType : 'KalturaEmailIngestionProfile'}
+                service : { type : 'c' , default : 'emailingestionprofile'  },
+				action : { type : 'c' , default : 'add'  },
+				EmailIP : { type : 'o'   , fallbackConstructor :  KalturaEmailIngestionProfile, subType : 'KalturaEmailIngestionProfile'}
             }
         );
         return result;

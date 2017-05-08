@@ -23,7 +23,7 @@ export class KalturaRemoteDropFolder extends KalturaDropFolder {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRemoteDropFolder' }
+                objectType : { type : 'c' , default : 'KalturaRemoteDropFolder'  }
             }
         );
         return result;

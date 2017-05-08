@@ -17,7 +17,7 @@ export class EventNotificationTemplateDeleteAction extends KalturaRequest<void> 
 
     constructor(data : EventNotificationTemplateDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class EventNotificationTemplateDeleteAction extends KalturaRequest<void> 
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 'n'   }
             }
         );
         return result;

@@ -25,8 +25,8 @@ export class KalturaPlaylistListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaPlaylistListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaPlaylist'}
+                objectType : { type : 'c' , default : 'KalturaPlaylistListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaPlaylist, subType : 'KalturaPlaylist'}
             }
         );
         return result;

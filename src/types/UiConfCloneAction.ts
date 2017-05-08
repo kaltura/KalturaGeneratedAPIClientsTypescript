@@ -17,7 +17,7 @@ export class UiConfCloneAction extends KalturaRequest<KalturaUiConf> {
 
     constructor(data : UiConfCloneActionArgs)
     {
-        super(data, 'o', 'KalturaUiConf');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUiConf', responseConstructor : KalturaUiConf  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UiConfCloneAction extends KalturaRequest<KalturaUiConf> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'uiconf' },
-				action : { type : 'c' , default : 'clone' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'uiconf'  },
+				action : { type : 'c' , default : 'clone'  },
+				id : { type : 'n'   }
             }
         );
         return result;

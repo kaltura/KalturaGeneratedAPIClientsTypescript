@@ -29,9 +29,9 @@ export class KalturaContextDataResult extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaContextDataResult' },
-				messages : { type : 'a'  , subType : 'KalturaString'},
-				actions : { type : 'a'  , subType : 'KalturaRuleAction'}
+                objectType : { type : 'c' , default : 'KalturaContextDataResult'  },
+				messages : { type : 'a'   , fallbackConstructor :  KalturaString, subType : 'KalturaString'},
+				actions : { type : 'a'   , fallbackConstructor :  KalturaRuleAction, subType : 'KalturaRuleAction'}
             }
         );
         return result;

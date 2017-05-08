@@ -29,7 +29,7 @@ export class LiveStreamAppendRecordingAction extends KalturaRequest<KalturaLiveE
 
     constructor(data : LiveStreamAppendRecordingActionArgs)
     {
-        super(data, 'o', 'KalturaLiveEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveEntry', responseConstructor : KalturaLiveEntry  });
         if (typeof this.isLastChunk === 'undefined') this.isLastChunk = false;
     }
 
@@ -39,14 +39,14 @@ export class LiveStreamAppendRecordingAction extends KalturaRequest<KalturaLiveE
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'livestream' },
-				action : { type : 'c' , default : 'appendRecording' },
-				entryId : { type : 's'  },
-				assetId : { type : 's'  },
-				mediaServerIndex : { type : 'es'  , subType : 'KalturaEntryServerNodeType'},
-				resource : { type : 'o'  , subType : 'KalturaDataCenterContentResource'},
-				duration : { type : 'n'  },
-				isLastChunk : { type : 'b'  }
+                service : { type : 'c' , default : 'livestream'  },
+				action : { type : 'c' , default : 'appendRecording'  },
+				entryId : { type : 's'   },
+				assetId : { type : 's'   },
+				mediaServerIndex : { type : 'es'   , subType : 'KalturaEntryServerNodeType'},
+				resource : { type : 'o'   , fallbackConstructor :  KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource'},
+				duration : { type : 'n'   },
+				isLastChunk : { type : 'b'   }
             }
         );
         return result;

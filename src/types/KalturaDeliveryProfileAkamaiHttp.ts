@@ -23,8 +23,8 @@ export class KalturaDeliveryProfileAkamaiHttp extends KalturaDeliveryProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiHttp' },
-				useIntelliseek : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileAkamaiHttp'  },
+				useIntelliseek : { type : 'b'   }
             }
         );
         return result;

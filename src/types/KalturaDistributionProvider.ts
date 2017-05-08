@@ -39,16 +39,16 @@ export class KalturaDistributionProvider extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionProvider' },
-				type : { type : 'es'  , readOnly : true, subType : 'KalturaDistributionProviderType'},
-				name : { type : 's'  },
-				scheduleUpdateEnabled : { type : 'b'  },
-				availabilityUpdateEnabled : { type : 'b'  },
-				deleteInsteadUpdate : { type : 'b'  },
-				intervalBeforeSunrise : { type : 'n'  },
-				intervalBeforeSunset : { type : 'n'  },
-				updateRequiredEntryFields : { type : 's'  },
-				updateRequiredMetadataXPaths : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionProvider'  },
+				type : { type : 'es'  , readOnly : true , subType : 'KalturaDistributionProviderType'},
+				name : { type : 's'   },
+				scheduleUpdateEnabled : { type : 'b'   },
+				availabilityUpdateEnabled : { type : 'b'   },
+				deleteInsteadUpdate : { type : 'b'   },
+				intervalBeforeSunrise : { type : 'n'   },
+				intervalBeforeSunset : { type : 'n'   },
+				updateRequiredEntryFields : { type : 's'   },
+				updateRequiredMetadataXPaths : { type : 's'   }
             }
         );
         return result;

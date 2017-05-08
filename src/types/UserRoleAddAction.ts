@@ -17,7 +17,7 @@ export class UserRoleAddAction extends KalturaRequest<KalturaUserRole> {
 
     constructor(data : UserRoleAddActionArgs)
     {
-        super(data, 'o', 'KalturaUserRole');
+        super(data, {responseType : 'o', responseSubType : 'KalturaUserRole', responseConstructor : KalturaUserRole  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class UserRoleAddAction extends KalturaRequest<KalturaUserRole> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'userrole' },
-				action : { type : 'c' , default : 'add' },
-				userRole : { type : 'o'  , subType : 'KalturaUserRole'}
+                service : { type : 'c' , default : 'userrole'  },
+				action : { type : 'c' , default : 'add'  },
+				userRole : { type : 'o'   , fallbackConstructor :  KalturaUserRole, subType : 'KalturaUserRole'}
             }
         );
         return result;

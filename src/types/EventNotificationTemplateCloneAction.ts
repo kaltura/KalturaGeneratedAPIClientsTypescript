@@ -22,7 +22,7 @@ export class EventNotificationTemplateCloneAction extends KalturaRequest<Kaltura
 
     constructor(data : EventNotificationTemplateCloneActionArgs)
     {
-        super(data, 'o', 'KalturaEventNotificationTemplate');
+        super(data, {responseType : 'o', responseSubType : 'KalturaEventNotificationTemplate', responseConstructor : KalturaEventNotificationTemplate  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,10 +31,10 @@ export class EventNotificationTemplateCloneAction extends KalturaRequest<Kaltura
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate' },
-				action : { type : 'c' , default : 'clone' },
-				id : { type : 'n'  },
-				eventNotificationTemplate : { type : 'o'  , subType : 'KalturaEventNotificationTemplate'}
+                service : { type : 'c' , default : 'eventnotification_eventnotificationtemplate'  },
+				action : { type : 'c' , default : 'clone'  },
+				id : { type : 'n'   },
+				eventNotificationTemplate : { type : 'o'   , fallbackConstructor :  KalturaEventNotificationTemplate, subType : 'KalturaEventNotificationTemplate'}
             }
         );
         return result;

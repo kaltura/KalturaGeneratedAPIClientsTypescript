@@ -23,8 +23,8 @@ export class KalturaUserRoleCondition extends KalturaCondition {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUserRoleCondition' },
-				roleIds : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaUserRoleCondition'  },
+				roleIds : { type : 's'   }
             }
         );
         return result;

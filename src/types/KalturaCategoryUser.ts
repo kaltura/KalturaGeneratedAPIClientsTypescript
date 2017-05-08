@@ -39,17 +39,17 @@ export class KalturaCategoryUser extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCategoryUser' },
-				categoryId : { type : 'n'  },
-				userId : { type : 's'  },
-				partnerId : { type : 'n'  , readOnly : true},
-				permissionLevel : { type : 'en'  , subType : 'KalturaCategoryUserPermissionLevel'},
-				status : { type : 'en'  , readOnly : true, subType : 'KalturaCategoryUserStatus'},
-				createdAt : { type : 'd'  , readOnly : true},
-				updatedAt : { type : 'd'  , readOnly : true},
-				updateMethod : { type : 'en'  , subType : 'KalturaUpdateMethodType'},
-				categoryFullIds : { type : 's'  , readOnly : true},
-				permissionNames : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCategoryUser'  },
+				categoryId : { type : 'n'   },
+				userId : { type : 's'   },
+				partnerId : { type : 'n'  , readOnly : true },
+				permissionLevel : { type : 'en'   , subType : 'KalturaCategoryUserPermissionLevel'},
+				status : { type : 'en'  , readOnly : true , subType : 'KalturaCategoryUserStatus'},
+				createdAt : { type : 'd'  , readOnly : true },
+				updatedAt : { type : 'd'  , readOnly : true },
+				updateMethod : { type : 'en'   , subType : 'KalturaUpdateMethodType'},
+				categoryFullIds : { type : 's'  , readOnly : true },
+				permissionNames : { type : 's'   }
             }
         );
         return result;

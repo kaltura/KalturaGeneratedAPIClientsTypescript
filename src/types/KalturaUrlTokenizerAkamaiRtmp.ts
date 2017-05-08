@@ -29,11 +29,11 @@ export class KalturaUrlTokenizerAkamaiRtmp extends KalturaUrlTokenizer {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaUrlTokenizerAkamaiRtmp' },
-				profile : { type : 's'  },
-				type : { type : 's'  },
-				aifp : { type : 's'  },
-				usePrefix : { type : 'b'  }
+                objectType : { type : 'c' , default : 'KalturaUrlTokenizerAkamaiRtmp'  },
+				profile : { type : 's'   },
+				type : { type : 's'   },
+				aifp : { type : 's'   },
+				usePrefix : { type : 'b'   }
             }
         );
         return result;

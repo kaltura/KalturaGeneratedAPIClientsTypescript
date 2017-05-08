@@ -27,10 +27,10 @@ export class KalturaSshImportJobData extends KalturaImportJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSshImportJobData' },
-				privateKey : { type : 's'  },
-				publicKey : { type : 's'  },
-				passPhrase : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaSshImportJobData'  },
+				privateKey : { type : 's'   },
+				publicKey : { type : 's'   },
+				passPhrase : { type : 's'   }
             }
         );
         return result;

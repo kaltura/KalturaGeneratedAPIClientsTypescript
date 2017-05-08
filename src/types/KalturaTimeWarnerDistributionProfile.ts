@@ -23,8 +23,8 @@ export class KalturaTimeWarnerDistributionProfile extends KalturaConfigurableDis
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProfile' },
-				feedUrl : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaTimeWarnerDistributionProfile'  },
+				feedUrl : { type : 's'  , readOnly : true }
             }
         );
         return result;

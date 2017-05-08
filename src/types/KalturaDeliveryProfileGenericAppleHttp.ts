@@ -28,10 +28,10 @@ export class KalturaDeliveryProfileGenericAppleHttp extends KalturaDeliveryProfi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericAppleHttp' },
-				pattern : { type : 's'  },
-				rendererClass : { type : 's'  },
-				manifestRedirect : { type : 'en'  , subType : 'KalturaNullableBoolean'}
+                objectType : { type : 'c' , default : 'KalturaDeliveryProfileGenericAppleHttp'  },
+				pattern : { type : 's'   },
+				rendererClass : { type : 's'   },
+				manifestRedirect : { type : 'en'   , subType : 'KalturaNullableBoolean'}
             }
         );
         return result;

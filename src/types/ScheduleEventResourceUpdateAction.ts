@@ -21,7 +21,7 @@ export class ScheduleEventResourceUpdateAction extends KalturaRequest<KalturaSch
 
     constructor(data : ScheduleEventResourceUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaScheduleEventResource');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEventResource', responseConstructor : KalturaScheduleEventResource  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,11 +30,11 @@ export class ScheduleEventResourceUpdateAction extends KalturaRequest<KalturaSch
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'schedule_scheduleeventresource' },
-				action : { type : 'c' , default : 'update' },
-				scheduleEventId : { type : 'n'  },
-				scheduleResourceId : { type : 'n'  },
-				scheduleEventResource : { type : 'o'  , subType : 'KalturaScheduleEventResource'}
+                service : { type : 'c' , default : 'schedule_scheduleeventresource'  },
+				action : { type : 'c' , default : 'update'  },
+				scheduleEventId : { type : 'n'   },
+				scheduleResourceId : { type : 'n'   },
+				scheduleEventResource : { type : 'o'   , fallbackConstructor :  KalturaScheduleEventResource, subType : 'KalturaScheduleEventResource'}
             }
         );
         return result;

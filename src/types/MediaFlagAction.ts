@@ -18,7 +18,7 @@ export class MediaFlagAction extends KalturaRequest<void> {
 
     constructor(data : MediaFlagActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -27,9 +27,9 @@ export class MediaFlagAction extends KalturaRequest<void> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'media' },
-				action : { type : 'c' , default : 'flag' },
-				moderationFlag : { type : 'o'  , subType : 'KalturaModerationFlag'}
+                service : { type : 'c' , default : 'media'  },
+				action : { type : 'c' , default : 'flag'  },
+				moderationFlag : { type : 'o'   , fallbackConstructor :  KalturaModerationFlag, subType : 'KalturaModerationFlag'}
             }
         );
         return result;

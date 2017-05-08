@@ -44,18 +44,18 @@ export class KalturaSearchResult extends KalturaSearch {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSearchResult' },
-				id : { type : 's'  },
-				title : { type : 's'  },
-				thumbUrl : { type : 's'  },
-				description : { type : 's'  },
-				tags : { type : 's'  },
-				url : { type : 's'  },
-				sourceLink : { type : 's'  },
-				credit : { type : 's'  },
-				licenseType : { type : 'en'  , subType : 'KalturaLicenseType'},
-				flashPlaybackType : { type : 's'  },
-				fileExt : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaSearchResult'  },
+				id : { type : 's'   },
+				title : { type : 's'   },
+				thumbUrl : { type : 's'   },
+				description : { type : 's'   },
+				tags : { type : 's'   },
+				url : { type : 's'   },
+				sourceLink : { type : 's'   },
+				credit : { type : 's'   },
+				licenseType : { type : 'en'   , subType : 'KalturaLicenseType'},
+				flashPlaybackType : { type : 's'   },
+				fileExt : { type : 's'   }
             }
         );
         return result;

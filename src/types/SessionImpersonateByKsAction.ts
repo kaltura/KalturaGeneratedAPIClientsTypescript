@@ -26,7 +26,7 @@ export class SessionImpersonateByKsAction extends KalturaRequest<KalturaSessionI
 
     constructor(data : SessionImpersonateByKsActionArgs)
     {
-        super(data, 'o', 'KalturaSessionInfo');
+        super(data, {responseType : 'o', responseSubType : 'KalturaSessionInfo', responseConstructor : KalturaSessionInfo  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,12 +35,12 @@ export class SessionImpersonateByKsAction extends KalturaRequest<KalturaSessionI
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'session' },
-				action : { type : 'c' , default : 'impersonateByKs' },
-				session : { type : 's'  },
-				type : { type : 'en'  , subType : 'KalturaSessionType'},
-				expiry : { type : 'n'  },
-				privileges : { type : 's'  }
+                service : { type : 'c' , default : 'session'  },
+				action : { type : 'c' , default : 'impersonateByKs'  },
+				session : { type : 's'   },
+				type : { type : 'en'   , subType : 'KalturaSessionType'},
+				expiry : { type : 'n'   },
+				privileges : { type : 's'   }
             }
         );
         return result;

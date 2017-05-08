@@ -21,7 +21,7 @@ export class CategoryEntryListAction extends KalturaRequest<KalturaCategoryEntry
 
     constructor(data? : CategoryEntryListActionArgs)
     {
-        super(data, 'o', 'KalturaCategoryEntryListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryEntryListResponse', responseConstructor : KalturaCategoryEntryListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class CategoryEntryListAction extends KalturaRequest<KalturaCategoryEntry
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'categoryentry' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaCategoryEntryFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'categoryentry'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaCategoryEntryFilter, subType : 'KalturaCategoryEntryFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

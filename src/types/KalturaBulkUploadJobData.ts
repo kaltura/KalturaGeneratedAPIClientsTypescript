@@ -41,21 +41,21 @@ export class KalturaBulkUploadJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBulkUploadJobData' },
-				userId : { type : 's'  , readOnly : true},
-				uploadedBy : { type : 's'  , readOnly : true},
-				conversionProfileId : { type : 'n'  , readOnly : true},
-				resultsFileLocalPath : { type : 's'  , readOnly : true},
-				resultsFileUrl : { type : 's'  , readOnly : true},
-				numOfEntries : { type : 'n'  , readOnly : true},
-				numOfObjects : { type : 'n'  , readOnly : true},
-				filePath : { type : 's'  , readOnly : true},
-				bulkUploadObjectType : { type : 'es'  , readOnly : true, subType : 'KalturaBulkUploadObjectType'},
-				fileName : { type : 's'  },
-				objectData : { type : 'o'  , readOnly : true, subType : 'KalturaBulkUploadObjectData'},
-				type : { type : 'es'  , readOnly : true, subType : 'KalturaBulkUploadType'},
-				emailRecipients : { type : 's'  },
-				numOfErrorObjects : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaBulkUploadJobData'  },
+				userId : { type : 's'  , readOnly : true },
+				uploadedBy : { type : 's'  , readOnly : true },
+				conversionProfileId : { type : 'n'  , readOnly : true },
+				resultsFileLocalPath : { type : 's'  , readOnly : true },
+				resultsFileUrl : { type : 's'  , readOnly : true },
+				numOfEntries : { type : 'n'  , readOnly : true },
+				numOfObjects : { type : 'n'  , readOnly : true },
+				filePath : { type : 's'  , readOnly : true },
+				bulkUploadObjectType : { type : 'es'  , readOnly : true , subType : 'KalturaBulkUploadObjectType'},
+				fileName : { type : 's'   },
+				objectData : { type : 'o'  , readOnly : true , fallbackConstructor :  KalturaBulkUploadObjectData, subType : 'KalturaBulkUploadObjectData'},
+				type : { type : 'es'  , readOnly : true , subType : 'KalturaBulkUploadType'},
+				emailRecipients : { type : 's'   },
+				numOfErrorObjects : { type : 'n'   }
             }
         );
         return result;

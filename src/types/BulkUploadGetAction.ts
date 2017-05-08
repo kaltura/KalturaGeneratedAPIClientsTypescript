@@ -17,7 +17,7 @@ export class BulkUploadGetAction extends KalturaRequest<KalturaBulkUpload> {
 
     constructor(data : BulkUploadGetActionArgs)
     {
-        super(data, 'o', 'KalturaBulkUpload');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBulkUpload', responseConstructor : KalturaBulkUpload  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class BulkUploadGetAction extends KalturaRequest<KalturaBulkUpload> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'bulkupload' },
-				action : { type : 'c' , default : 'get' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'bulkupload'  },
+				action : { type : 'c' , default : 'get'  },
+				id : { type : 'n'   }
             }
         );
         return result;

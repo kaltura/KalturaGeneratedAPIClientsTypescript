@@ -25,9 +25,9 @@ export class KalturaResponseProfileCacheRecalculateResults extends KalturaObject
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaResponseProfileCacheRecalculateResults' },
-				lastObjectKey : { type : 's'  },
-				recalculated : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaResponseProfileCacheRecalculateResults'  },
+				lastObjectKey : { type : 's'   },
+				recalculated : { type : 'n'   }
             }
         );
         return result;

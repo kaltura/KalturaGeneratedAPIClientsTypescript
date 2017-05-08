@@ -27,10 +27,10 @@ export class KalturaAuditTrailChangeItem extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailChangeItem' },
-				descriptor : { type : 's'  },
-				oldValue : { type : 's'  },
-				newValue : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaAuditTrailChangeItem'  },
+				descriptor : { type : 's'   },
+				oldValue : { type : 's'   },
+				newValue : { type : 's'   }
             }
         );
         return result;

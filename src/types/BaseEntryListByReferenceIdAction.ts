@@ -20,7 +20,7 @@ export class BaseEntryListByReferenceIdAction extends KalturaRequest<KalturaBase
 
     constructor(data : BaseEntryListByReferenceIdActionArgs)
     {
-        super(data, 'o', 'KalturaBaseEntryListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaBaseEntryListResponse', responseConstructor : KalturaBaseEntryListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -29,10 +29,10 @@ export class BaseEntryListByReferenceIdAction extends KalturaRequest<KalturaBase
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'baseentry' },
-				action : { type : 'c' , default : 'listByReferenceId' },
-				refId : { type : 's'  },
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'baseentry'  },
+				action : { type : 'c' , default : 'listByReferenceId'  },
+				refId : { type : 's'   },
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

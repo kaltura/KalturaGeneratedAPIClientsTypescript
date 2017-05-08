@@ -26,9 +26,9 @@ export class KalturaDistributionProviderBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionProviderBaseFilter' },
-				typeEqual : { type : 'es'  , subType : 'KalturaDistributionProviderType'},
-				typeIn : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionProviderBaseFilter'  },
+				typeEqual : { type : 'es'   , subType : 'KalturaDistributionProviderType'},
+				typeIn : { type : 's'   }
             }
         );
         return result;

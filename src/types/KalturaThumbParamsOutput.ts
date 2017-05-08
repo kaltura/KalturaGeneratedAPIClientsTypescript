@@ -31,12 +31,12 @@ export class KalturaThumbParamsOutput extends KalturaThumbParams {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaThumbParamsOutput' },
-				thumbParamsId : { type : 'n'  },
-				thumbParamsVersion : { type : 's'  },
-				thumbAssetId : { type : 's'  },
-				thumbAssetVersion : { type : 's'  },
-				rotate : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaThumbParamsOutput'  },
+				thumbParamsId : { type : 'n'   },
+				thumbParamsVersion : { type : 's'   },
+				thumbAssetId : { type : 's'   },
+				thumbAssetVersion : { type : 's'   },
+				rotate : { type : 'n'   }
             }
         );
         return result;

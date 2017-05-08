@@ -25,7 +25,7 @@ export class KalturaOperationAttributes extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaOperationAttributes' }
+                objectType : { type : 'c' , default : 'KalturaOperationAttributes'  }
             }
         );
         return result;

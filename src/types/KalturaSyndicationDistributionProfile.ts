@@ -24,9 +24,9 @@ export class KalturaSyndicationDistributionProfile extends KalturaDistributionPr
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaSyndicationDistributionProfile' },
-				xsl : { type : 's'  },
-				feedId : { type : 's'  , readOnly : true}
+                objectType : { type : 'c' , default : 'KalturaSyndicationDistributionProfile'  },
+				xsl : { type : 's'   },
+				feedId : { type : 's'  , readOnly : true }
             }
         );
         return result;

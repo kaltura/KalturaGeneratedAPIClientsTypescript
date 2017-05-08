@@ -25,9 +25,9 @@ export class KalturaBusinessProcessSignalNotificationTemplate extends KalturaBus
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaBusinessProcessSignalNotificationTemplate' },
-				message : { type : 's'  },
-				eventId : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaBusinessProcessSignalNotificationTemplate'  },
+				message : { type : 's'   },
+				eventId : { type : 's'   }
             }
         );
         return result;

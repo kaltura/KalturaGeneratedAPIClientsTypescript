@@ -41,14 +41,14 @@ export class KalturaDetachedResponseProfile extends KalturaBaseResponseProfile {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDetachedResponseProfile' },
-				name : { type : 's'  },
-				type : { type : 'en'  , subType : 'KalturaResponseProfileType'},
-				fields : { type : 's'  },
-				filter : { type : 'o'  , subType : 'KalturaRelatedFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'},
-				relatedProfiles : { type : 'a'  , subType : 'KalturaDetachedResponseProfile'},
-				mappings : { type : 'a'  , subType : 'KalturaResponseProfileMapping'}
+                objectType : { type : 'c' , default : 'KalturaDetachedResponseProfile'  },
+				name : { type : 's'   },
+				type : { type : 'en'   , subType : 'KalturaResponseProfileType'},
+				fields : { type : 's'   },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaRelatedFilter, subType : 'KalturaRelatedFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'},
+				relatedProfiles : { type : 'a'   , fallbackConstructor :  KalturaDetachedResponseProfile, subType : 'KalturaDetachedResponseProfile'},
+				mappings : { type : 'a'   , fallbackConstructor :  KalturaResponseProfileMapping, subType : 'KalturaResponseProfileMapping'}
             }
         );
         return result;

@@ -27,9 +27,9 @@ export class KalturaAssetDistributionRule extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAssetDistributionRule' },
-				validationError : { type : 's'  },
-				assetDistributionConditions : { type : 'a'  , subType : 'KalturaAssetDistributionCondition'}
+                objectType : { type : 'c' , default : 'KalturaAssetDistributionRule'  },
+				validationError : { type : 's'   },
+				assetDistributionConditions : { type : 'a'   , fallbackConstructor :  KalturaAssetDistributionCondition, subType : 'KalturaAssetDistributionCondition'}
             }
         );
         return result;

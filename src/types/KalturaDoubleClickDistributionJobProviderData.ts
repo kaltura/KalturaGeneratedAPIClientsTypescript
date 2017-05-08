@@ -23,7 +23,7 @@ export class KalturaDoubleClickDistributionJobProviderData extends KalturaDistri
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionJobProviderData' }
+                objectType : { type : 'c' , default : 'KalturaDoubleClickDistributionJobProviderData'  }
             }
         );
         return result;

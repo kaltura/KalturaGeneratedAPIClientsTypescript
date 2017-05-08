@@ -23,8 +23,8 @@ export class KalturaDistributionValidationErrorMissingMetadata extends KalturaDi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingMetadata' },
-				fieldName : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaDistributionValidationErrorMissingMetadata'  },
+				fieldName : { type : 's'   }
             }
         );
         return result;

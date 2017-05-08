@@ -22,7 +22,7 @@ export class DocumentsConvertAction extends KalturaRequest<number> {
 
     constructor(data : DocumentsConvertActionArgs)
     {
-        super(data, 'n', '');
+        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
         if (typeof this.dynamicConversionAttributes === 'undefined') this.dynamicConversionAttributes = [];
     }
 
@@ -32,11 +32,11 @@ export class DocumentsConvertAction extends KalturaRequest<number> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'convert' },
-				entryId : { type : 's'  },
-				conversionProfileId : { type : 'n'  },
-				dynamicConversionAttributes : { type : 'a'  , subType : 'KalturaConversionAttribute'}
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'convert'  },
+				entryId : { type : 's'   },
+				conversionProfileId : { type : 'n'   },
+				dynamicConversionAttributes : { type : 'a'   , fallbackConstructor :  KalturaConversionAttribute, subType : 'KalturaConversionAttribute'}
             }
         );
         return result;

@@ -17,7 +17,7 @@ export class FileAssetServeAction extends KalturaRequest<string> {
 
     constructor(data : FileAssetServeActionArgs)
     {
-        super(data, 'f', '');
+        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class FileAssetServeAction extends KalturaRequest<string> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'fileasset' },
-				action : { type : 'c' , default : 'serve' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'fileasset'  },
+				action : { type : 'c' , default : 'serve'  },
+				id : { type : 'n'   }
             }
         );
         return result;

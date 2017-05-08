@@ -23,7 +23,7 @@ export class KalturaEntryDistributionFilter extends KalturaEntryDistributionBase
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryDistributionFilter' }
+                objectType : { type : 'c' , default : 'KalturaEntryDistributionFilter'  }
             }
         );
         return result;

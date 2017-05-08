@@ -17,7 +17,7 @@ export class GenericDistributionProviderActionDeleteAction extends KalturaReques
 
     constructor(data : GenericDistributionProviderActionDeleteActionArgs)
     {
-        super(data, 'v', '');
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class GenericDistributionProviderActionDeleteAction extends KalturaReques
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction' },
-				action : { type : 'c' , default : 'delete' },
-				id : { type : 'n'  }
+                service : { type : 'c' , default : 'contentdistribution_genericdistributionprovideraction'  },
+				action : { type : 'c' , default : 'delete'  },
+				id : { type : 'n'   }
             }
         );
         return result;

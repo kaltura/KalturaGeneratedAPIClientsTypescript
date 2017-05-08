@@ -23,7 +23,7 @@ export class KalturaEmailNotificationParameter extends KalturaEventNotificationP
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationParameter' }
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationParameter'  }
             }
         );
         return result;

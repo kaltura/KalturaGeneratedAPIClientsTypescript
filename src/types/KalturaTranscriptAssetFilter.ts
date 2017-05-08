@@ -23,7 +23,7 @@ export class KalturaTranscriptAssetFilter extends KalturaTranscriptAssetBaseFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaTranscriptAssetFilter' }
+                objectType : { type : 'c' , default : 'KalturaTranscriptAssetFilter'  }
             }
         );
         return result;

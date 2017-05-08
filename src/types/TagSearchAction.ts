@@ -19,7 +19,7 @@ export class TagSearchAction extends KalturaRequest<KalturaTagListResponse> {
 
     constructor(data : TagSearchActionArgs)
     {
-        super(data, 'o', 'KalturaTagListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaTagListResponse', responseConstructor : KalturaTagListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class TagSearchAction extends KalturaRequest<KalturaTagListResponse> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'tagsearch_tag' },
-				action : { type : 'c' , default : 'search' },
-				tagFilter : { type : 'o'  , subType : 'KalturaTagFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'tagsearch_tag'  },
+				action : { type : 'c' , default : 'search'  },
+				tagFilter : { type : 'o'   , fallbackConstructor :  KalturaTagFilter, subType : 'KalturaTagFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

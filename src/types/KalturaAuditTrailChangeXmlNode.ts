@@ -24,8 +24,8 @@ export class KalturaAuditTrailChangeXmlNode extends KalturaAuditTrailChangeItem 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaAuditTrailChangeXmlNode' },
-				type : { type : 'en'  , subType : 'KalturaAuditTrailChangeXmlNodeType'}
+                objectType : { type : 'c' , default : 'KalturaAuditTrailChangeXmlNode'  },
+				type : { type : 'en'   , subType : 'KalturaAuditTrailChangeXmlNodeType'}
             }
         );
         return result;

@@ -23,7 +23,7 @@ export class KalturaConfigurableDistributionProfileFilter extends KalturaConfigu
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaConfigurableDistributionProfileFilter' }
+                objectType : { type : 'c' , default : 'KalturaConfigurableDistributionProfileFilter'  }
             }
         );
         return result;

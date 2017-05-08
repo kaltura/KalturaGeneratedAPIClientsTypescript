@@ -27,8 +27,8 @@ export class KalturaEmailNotificationRecipientJobData extends KalturaObjectBase 
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEmailNotificationRecipientJobData' },
-				providerType : { type : 'es'  , readOnly : true, subType : 'KalturaEmailNotificationRecipientProviderType'}
+                objectType : { type : 'c' , default : 'KalturaEmailNotificationRecipientJobData'  },
+				providerType : { type : 'es'  , readOnly : true , subType : 'KalturaEmailNotificationRecipientProviderType'}
             }
         );
         return result;

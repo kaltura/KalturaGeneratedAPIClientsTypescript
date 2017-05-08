@@ -19,7 +19,7 @@ export class ResponseProfileCloneAction extends KalturaRequest<KalturaResponsePr
 
     constructor(data : ResponseProfileCloneActionArgs)
     {
-        super(data, 'o', 'KalturaResponseProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaResponseProfile', responseConstructor : KalturaResponseProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class ResponseProfileCloneAction extends KalturaRequest<KalturaResponsePr
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'responseprofile' },
-				action : { type : 'c' , default : 'clone' },
-				id : { type : 'n'  },
-				profile : { type : 'o'  , subType : 'KalturaResponseProfile'}
+                service : { type : 'c' , default : 'responseprofile'  },
+				action : { type : 'c' , default : 'clone'  },
+				id : { type : 'n'   },
+				profile : { type : 'o'   , fallbackConstructor :  KalturaResponseProfile, subType : 'KalturaResponseProfile'}
             }
         );
         return result;

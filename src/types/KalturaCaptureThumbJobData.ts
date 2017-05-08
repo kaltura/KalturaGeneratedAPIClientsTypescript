@@ -38,15 +38,15 @@ export class KalturaCaptureThumbJobData extends KalturaJobData {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaCaptureThumbJobData' },
-				srcFileSyncLocalPath : { type : 's'  },
-				actualSrcFileSyncLocalPath : { type : 's'  },
-				srcFileSyncRemoteUrl : { type : 's'  },
-				thumbParamsOutputId : { type : 'n'  },
-				thumbAssetId : { type : 's'  },
-				srcAssetId : { type : 's'  },
-				srcAssetType : { type : 'es'  , subType : 'KalturaAssetType'},
-				thumbPath : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaCaptureThumbJobData'  },
+				srcFileSyncLocalPath : { type : 's'   },
+				actualSrcFileSyncLocalPath : { type : 's'   },
+				srcFileSyncRemoteUrl : { type : 's'   },
+				thumbParamsOutputId : { type : 'n'   },
+				thumbAssetId : { type : 's'   },
+				srcAssetId : { type : 's'   },
+				srcAssetType : { type : 'es'   , subType : 'KalturaAssetType'},
+				thumbPath : { type : 's'   }
             }
         );
         return result;

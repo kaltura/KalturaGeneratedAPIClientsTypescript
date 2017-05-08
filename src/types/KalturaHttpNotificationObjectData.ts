@@ -32,11 +32,11 @@ export class KalturaHttpNotificationObjectData extends KalturaHttpNotificationDa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaHttpNotificationObjectData' },
-				apiObjectType : { type : 's'  },
-				format : { type : 'en'  , subType : 'KalturaResponseType'},
-				ignoreNull : { type : 'b'  },
-				code : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaHttpNotificationObjectData'  },
+				apiObjectType : { type : 's'   },
+				format : { type : 'en'   , subType : 'KalturaResponseType'},
+				ignoreNull : { type : 'b'   },
+				code : { type : 's'   }
             }
         );
         return result;

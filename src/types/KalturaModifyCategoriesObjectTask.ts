@@ -28,9 +28,9 @@ export class KalturaModifyCategoriesObjectTask extends KalturaObjectTask {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaModifyCategoriesObjectTask' },
-				addRemoveType : { type : 'en'  , subType : 'KalturaScheduledTaskAddOrRemoveType'},
-				categoryIds : { type : 'a'  , subType : 'KalturaIntegerValue'}
+                objectType : { type : 'c' , default : 'KalturaModifyCategoriesObjectTask'  },
+				addRemoveType : { type : 'en'   , subType : 'KalturaScheduledTaskAddOrRemoveType'},
+				categoryIds : { type : 'a'   , fallbackConstructor :  KalturaIntegerValue, subType : 'KalturaIntegerValue'}
             }
         );
         return result;

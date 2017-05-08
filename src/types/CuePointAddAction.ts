@@ -17,7 +17,7 @@ export class CuePointAddAction extends KalturaRequest<KalturaCuePoint> {
 
     constructor(data : CuePointAddActionArgs)
     {
-        super(data, 'o', 'KalturaCuePoint');
+        super(data, {responseType : 'o', responseSubType : 'KalturaCuePoint', responseConstructor : KalturaCuePoint  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,9 +26,9 @@ export class CuePointAddAction extends KalturaRequest<KalturaCuePoint> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'cuepoint_cuepoint' },
-				action : { type : 'c' , default : 'add' },
-				cuePoint : { type : 'o'  , subType : 'KalturaCuePoint'}
+                service : { type : 'c' , default : 'cuepoint_cuepoint'  },
+				action : { type : 'c' , default : 'add'  },
+				cuePoint : { type : 'o'   , fallbackConstructor :  KalturaCuePoint, subType : 'KalturaCuePoint'}
             }
         );
         return result;

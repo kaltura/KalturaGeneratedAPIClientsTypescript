@@ -25,8 +25,8 @@ export class KalturaFileSyncListResponse extends KalturaListResponse {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFileSyncListResponse' },
-				objects : { type : 'a'  , readOnly : true, subType : 'KalturaFileSync'}
+                objectType : { type : 'c' , default : 'KalturaFileSyncListResponse'  },
+				objects : { type : 'a'  , readOnly : true , fallbackConstructor :  KalturaFileSync, subType : 'KalturaFileSync'}
             }
         );
         return result;

@@ -28,9 +28,9 @@ export class KalturaClientNotification extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaClientNotification' },
-				url : { type : 's'  },
-				data : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaClientNotification'  },
+				url : { type : 's'   },
+				data : { type : 's'   }
             }
         );
         return result;

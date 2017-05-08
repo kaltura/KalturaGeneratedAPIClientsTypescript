@@ -19,7 +19,7 @@ export class DocumentsGetAction extends KalturaRequest<KalturaDocumentEntry> {
 
     constructor(data : DocumentsGetActionArgs)
     {
-        super(data, 'o', 'KalturaDocumentEntry');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDocumentEntry', responseConstructor : KalturaDocumentEntry  });
         if (typeof this.version === 'undefined') this.version = -1;
     }
 
@@ -29,10 +29,10 @@ export class DocumentsGetAction extends KalturaRequest<KalturaDocumentEntry> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'document_documents' },
-				action : { type : 'c' , default : 'get' },
-				entryId : { type : 's'  },
-				version : { type : 'n'  }
+                service : { type : 'c' , default : 'document_documents'  },
+				action : { type : 'c' , default : 'get'  },
+				entryId : { type : 's'   },
+				version : { type : 'n'   }
             }
         );
         return result;

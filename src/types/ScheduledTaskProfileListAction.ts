@@ -21,7 +21,7 @@ export class ScheduledTaskProfileListAction extends KalturaRequest<KalturaSchedu
 
     constructor(data? : ScheduledTaskProfileListActionArgs)
     {
-        super(data, 'o', 'KalturaScheduledTaskProfileListResponse');
+        super(data, {responseType : 'o', responseSubType : 'KalturaScheduledTaskProfileListResponse', responseConstructor : KalturaScheduledTaskProfileListResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -30,10 +30,10 @@ export class ScheduledTaskProfileListAction extends KalturaRequest<KalturaSchedu
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile' },
-				action : { type : 'c' , default : 'list' },
-				filter : { type : 'o'  , subType : 'KalturaScheduledTaskProfileFilter'},
-				pager : { type : 'o'  , subType : 'KalturaFilterPager'}
+                service : { type : 'c' , default : 'scheduledtask_scheduledtaskprofile'  },
+				action : { type : 'c' , default : 'list'  },
+				filter : { type : 'o'   , fallbackConstructor :  KalturaScheduledTaskProfileFilter, subType : 'KalturaScheduledTaskProfileFilter'},
+				pager : { type : 'o'   , fallbackConstructor :  KalturaFilterPager, subType : 'KalturaFilterPager'}
             }
         );
         return result;

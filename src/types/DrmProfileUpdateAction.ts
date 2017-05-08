@@ -19,7 +19,7 @@ export class DrmProfileUpdateAction extends KalturaRequest<KalturaDrmProfile> {
 
     constructor(data : DrmProfileUpdateActionArgs)
     {
-        super(data, 'o', 'KalturaDrmProfile');
+        super(data, {responseType : 'o', responseSubType : 'KalturaDrmProfile', responseConstructor : KalturaDrmProfile  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -28,10 +28,10 @@ export class DrmProfileUpdateAction extends KalturaRequest<KalturaDrmProfile> {
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'drm_drmprofile' },
-				action : { type : 'c' , default : 'update' },
-				drmProfileId : { type : 'n'  },
-				drmProfile : { type : 'o'  , subType : 'KalturaDrmProfile'}
+                service : { type : 'c' , default : 'drm_drmprofile'  },
+				action : { type : 'c' , default : 'update'  },
+				drmProfileId : { type : 'n'   },
+				drmProfile : { type : 'o'   , fallbackConstructor :  KalturaDrmProfile, subType : 'KalturaDrmProfile'}
             }
         );
         return result;

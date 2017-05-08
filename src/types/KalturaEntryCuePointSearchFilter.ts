@@ -27,10 +27,10 @@ export class KalturaEntryCuePointSearchFilter extends KalturaSearchItem {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaEntryCuePointSearchFilter' },
-				cuePointsFreeText : { type : 's'  },
-				cuePointTypeIn : { type : 's'  },
-				cuePointSubTypeEqual : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaEntryCuePointSearchFilter'  },
+				cuePointsFreeText : { type : 's'   },
+				cuePointTypeIn : { type : 's'   },
+				cuePointSubTypeEqual : { type : 'n'   }
             }
         );
         return result;

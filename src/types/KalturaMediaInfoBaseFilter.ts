@@ -23,8 +23,8 @@ export class KalturaMediaInfoBaseFilter extends KalturaFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaMediaInfoBaseFilter' },
-				flavorAssetIdEqual : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaMediaInfoBaseFilter'  },
+				flavorAssetIdEqual : { type : 's'   }
             }
         );
         return result;

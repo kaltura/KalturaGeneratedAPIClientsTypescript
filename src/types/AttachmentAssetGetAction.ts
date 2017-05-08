@@ -15,7 +15,7 @@ export class AttachmentAssetGetAction extends KalturaRequest<KalturaAttachmentAs
 
     constructor(data : AttachmentAssetGetActionArgs)
     {
-        super(data, 'o', 'KalturaAttachmentAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaAttachmentAsset', responseConstructor : KalturaAttachmentAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -24,9 +24,9 @@ export class AttachmentAssetGetAction extends KalturaRequest<KalturaAttachmentAs
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'attachment_attachmentasset' },
-				action : { type : 'c' , default : 'get' },
-				attachmentAssetId : { type : 's'  }
+                service : { type : 'c' , default : 'attachment_attachmentasset'  },
+				action : { type : 'c' , default : 'get'  },
+				attachmentAssetId : { type : 's'   }
             }
         );
         return result;

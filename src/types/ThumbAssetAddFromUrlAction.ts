@@ -17,7 +17,7 @@ export class ThumbAssetAddFromUrlAction extends KalturaRequest<KalturaThumbAsset
 
     constructor(data : ThumbAssetAddFromUrlActionArgs)
     {
-        super(data, 'o', 'KalturaThumbAsset');
+        super(data, {responseType : 'o', responseSubType : 'KalturaThumbAsset', responseConstructor : KalturaThumbAsset  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,10 +26,10 @@ export class ThumbAssetAddFromUrlAction extends KalturaRequest<KalturaThumbAsset
         Object.assign(
             result.properties,
             {
-                service : { type : 'c' , default : 'thumbasset' },
-				action : { type : 'c' , default : 'addFromUrl' },
-				entryId : { type : 's'  },
-				url : { type : 's'  }
+                service : { type : 'c' , default : 'thumbasset'  },
+				action : { type : 'c' , default : 'addFromUrl'  },
+				entryId : { type : 's'   },
+				url : { type : 's'   }
             }
         );
         return result;

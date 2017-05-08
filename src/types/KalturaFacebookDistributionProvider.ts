@@ -23,7 +23,7 @@ export class KalturaFacebookDistributionProvider extends KalturaDistributionProv
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProvider' }
+                objectType : { type : 'c' , default : 'KalturaFacebookDistributionProvider'  }
             }
         );
         return result;

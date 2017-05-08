@@ -29,11 +29,11 @@ export class KalturaFlavorParamsOutputBaseFilter extends KalturaFlavorParamsFilt
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaFlavorParamsOutputBaseFilter' },
-				flavorParamsIdEqual : { type : 'n'  },
-				flavorParamsVersionEqual : { type : 's'  },
-				flavorAssetIdEqual : { type : 's'  },
-				flavorAssetVersionEqual : { type : 's'  }
+                objectType : { type : 'c' , default : 'KalturaFlavorParamsOutputBaseFilter'  },
+				flavorParamsIdEqual : { type : 'n'   },
+				flavorParamsVersionEqual : { type : 's'   },
+				flavorAssetIdEqual : { type : 's'   },
+				flavorAssetVersionEqual : { type : 's'   }
             }
         );
         return result;

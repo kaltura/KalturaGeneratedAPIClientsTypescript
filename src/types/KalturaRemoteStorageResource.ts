@@ -27,8 +27,8 @@ export class KalturaRemoteStorageResource extends KalturaUrlResource {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c' , default : 'KalturaRemoteStorageResource' },
-				storageProfileId : { type : 'n'  }
+                objectType : { type : 'c' , default : 'KalturaRemoteStorageResource'  },
+				storageProfileId : { type : 'n'   }
             }
         );
         return result;
