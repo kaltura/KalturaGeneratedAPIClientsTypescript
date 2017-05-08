@@ -26,7 +26,7 @@ $ yarn add kaltura-typescript-client tslib
 For a Getting started guide, API docs and more - check out [our docs](/docs/getting-started.md)!
  
  
-For `Angular` projects you can clone a [sample repository]() demonstrating some common use cases with this library.
+For `Angular` projects you can clone a [sample repository](https://github.com/esakal/kaltura-angular-client-demo) demonstrating some common use cases with this library.
  
  
 ## TL;DR
