@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# 1.0.0 (2017-05-08)
+
+
+### Features
+
+* **bundling:** we now support bundling only what the app is using ([a7b8ef4](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/a7b8ef4))
+
+
+
 <a name="1.0.0-beta.1"></a>
 # 1.0.0-beta.1 (2017-05-07)
 
