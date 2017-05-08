@@ -50,7 +50,7 @@ The following is a list of all features supported by the library:
 - [x] Hide complex server API syntax such as:
    - [x] Classify objects using 'objectType' property.
    - [x] Mark Field for deletion
-- [x] Share properties among requests to reduce code duplication.
+- [x] Runtime configuration to seamlessly attach properties to all the requests.
    - [x] Valid KS
    - [x] Partner Id
    - [x] Client Tag
@@ -60,7 +60,9 @@ The following is a list of all features supported by the library:
 - [ ] Code documentation of classes/enums/actions.
 - [ ] Simplify syntax of enums representing strings.
 - [ ] Warn against deprecated classes/enums/actions.
+- [ ] Add configuration flag to indicate if a bundling of the complete library is allowed.
 - [ ] AOT compile support.
+- [ ] Attach 'apiVersion' to each request 
  
 ## License and Copyright Information
 All code in this project is released under the [AGPLv3 license](http://www.gnu.org/licenses/agpl-3.0.html) unless a different license for a particular library is specified in the applicable library path.
