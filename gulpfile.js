@@ -87,13 +87,11 @@ gulp.task('extras', function () {
 		}))
 		.pipe(gulp.dest('./.tmp/dist'));
 
-	var stylesResult = gulp.src(['./src/styles/**/*'], {base: './src/'}).pipe(gulp.dest('./.tmp/dist'));
 	var extraResult = gulp.src(['./LICENSE.txt','./.gitignore','./README.md','.npmignore'], {base: './'}).pipe(gulp.dest('./.tmp/dist'));
 
 
 	return merge([
 		extraResult,
-		stylesResult,
 		packageFileResult
 	])
 });
