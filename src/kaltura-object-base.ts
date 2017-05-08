@@ -14,7 +14,7 @@ export interface KalturaObjectPropertyMetadata
     type : string;
     subType? : string;
     default? : string;
-    fallbackConstructor? : { new() : KalturaObjectBase };
+    subTypeConstructor? : { new() : KalturaObjectBase };
 };
 
 export interface KalturaObjectBaseArgs
@@ -24,7 +24,7 @@ export interface KalturaObjectBaseArgs
 
 export abstract class KalturaObjectBase{
 
-    private dependentProperties : { [key : string] : DependentProperty} = {};
+    private _dependentProperties : { [key : string] : DependentProperty} = {};
 
     setData(handler : (request :  this) => void) :  this {
         if (handler) {
@@ -182,10 +182,9 @@ export abstract class KalturaObjectBase{
                         }
                         break;
                     case "es":
-                        // TODO suppoert enum as string
                         result = this._createKalturaObject(property.subType);
 
-                        if (typeof result !== 'undefined') {
+                        if (result && typeof result !== 'undefined') {
                             result['_value'] = sourceValue + '';
                         } else {
                             throw new Error(`Failed to create kaltura enum for type '${property.subType}'`);
@@ -208,6 +207,7 @@ export abstract class KalturaObjectBase{
     private _createKalturaObject(objectType : string, fallbackObjectType? : string) : KalturaObjectBase
     {
         let result = null;
+        let usedFallbackType = false;
         if (objectType)
         {
             result = KalturaTypesFactory.createObject(objectType);
@@ -215,8 +215,18 @@ export abstract class KalturaObjectBase{
 
         if (!result && fallbackObjectType)
         {
+            usedFallbackType = true;
             result = KalturaTypesFactory.createObject(fallbackObjectType);
         }
+
+        if (usedFallbackType && result)
+        {
+                console.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}', Falling back to '${fallbackObjectType}' object type. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`)
+        }else if (!result)
+        {
+            console.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}'. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`)
+        }
+
         return result;
     }
 
@@ -231,9 +241,9 @@ export abstract class KalturaObjectBase{
             {
                 result = { status : 'exists', value : property.default};
             }
-        } else if (this.dependentProperties[propertyName])
+        } else if (this._dependentProperties[propertyName])
         {
-            const dependentProperty = this.dependentProperties[propertyName];
+            const dependentProperty = this._dependentProperties[propertyName];
             const resultValue = `{${dependentProperty.request}:result${dependentProperty.targetPath ? ':' + dependentProperty.targetPath : ''}}`;
             result = { status : 'exists', value : resultValue};
         }
@@ -331,7 +341,7 @@ export abstract class KalturaObjectBase{
                 targetPath = item.length == 3 ? item[2] : null;
             }
 
-            this.dependentProperties[property] = { property , request, targetPath };
+            this._dependentProperties[property] = { property , request, targetPath };
         }
 
         return this;
