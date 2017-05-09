@@ -67,17 +67,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
             }
 
             xhr.open('POST', endpoint);
-
-            if (data.headers)
-            {
-                Object.keys(data.headers).forEach(headerKey =>
-                {
-                    const headerValue = data.headers[headerKey];
-                    xhr.setRequestHeader(headerKey,headerValue);
-                });
-            }
-
-            xhr.send(JSON.stringify(data.body));
+            xhr.send(data);
 
             return () =>
             {
