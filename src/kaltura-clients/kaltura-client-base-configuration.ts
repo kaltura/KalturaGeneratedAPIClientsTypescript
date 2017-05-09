@@ -10,11 +10,11 @@ export abstract class KalturaClientBaseConfiguration{
     prepareRequestParameters(parameters : any) : any
     {
         if (parameters) {
-            if (typeof parameters['ks'] === 'undefined') {
+            if (this.ks && typeof parameters['ks'] === 'undefined') {
                 parameters.ks = this.ks;
             }
 
-            if (typeof parameters['partnerId'] === 'undefined') {
+            if (this.partnerId && typeof parameters['partnerId'] === 'undefined') {
                 parameters.partnerId = this.partnerId;
             }
         }
