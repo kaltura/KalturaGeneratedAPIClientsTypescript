@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](http://github.com/KalturaGeneratedAPIClientsTypescript/compare/v1.0.0...v1.1.0) (2017-05-09)
+
+
+### Bug Fixes
+
+* fix upload file process ([2db951c](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/2db951c))
+* prevent IDE intellisense from importing by default types from the module that bundle the complete library ([61e5c4e](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/61e5c4e))
+* seamlessly add enum types used by requests to the bundle ([c417868](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/c417868))
+* send 'partnerId' only if provided (previously was sending 'undefined' if wan't provided) ([e128dfc](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/e128dfc))
+* setting dependent property in multi-request now uses zero index base. ([1599905](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/1599905))
+
+
+### Features
+
+* notify developer when response returned with type that wasn't mentioned in the acceptTypes list ([78a2f7c](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/78a2f7c))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2017-05-08)
 
