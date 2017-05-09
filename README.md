@@ -63,6 +63,7 @@ The following is a list of all features supported by the library:
 - [ ] Add configuration flag to indicate if a bundling of the complete library is allowed.
 - [ ] AOT compile support.
 - [ ] Attach 'apiVersion' to each request 
+- [ ] Support setting 'undefined' for required properties when using 'setDependency' in multiple request.
  
 ## License and Copyright Information
 All code in this project is released under the [AGPLv3 license](http://www.gnu.org/licenses/agpl-3.0.html) unless a different license for a particular library is specified in the applicable library path.

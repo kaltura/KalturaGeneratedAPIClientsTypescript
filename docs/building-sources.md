@@ -2,7 +2,7 @@
 > This library is auto-generated using `kaltura/clients-generator` php engine. Feel free to clone, build and play with this library but in order to submit PR you should work against the [kaltura/clients-generator](https://github.com/kaltura/clients-generator) repo. 
 
 ## Using yarn to manage dependencies
-We recommend using `yarn` to manage your dependencies. using `yarn` will prevent the endless chaise after dependent libraries upgrades. With `yarn` we get a lockfile for free, installing packages is blazing fast and they are automatically stored in package.json. The impact of installing and using Yarn is also minimal. 
+We encourage you to use `yarn` instead of `npm` to manage your dependencies. With `yarn` you don't need to worry that the build will fail due to an upgrade in some dependent libraries. In addition you get a lockfile for free, installing packages is blazing fast and they are automatically stored in package.json. The impact of installing and using Yarn is also minimal. 
 
 
 To check if you already have `yarn` installed on you machine run the following:
