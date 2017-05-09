@@ -17,7 +17,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* notify developer when response returned with type that wasn't mentioned in the acceptTypes list ([78a2f7c](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/78a2f7c))
+* notify developer when response from server returned with kaltura object type that wasn't bundled into the application ([78a2f7c](http://github.com/KalturaGeneratedAPIClientsTypescript/commit/78a2f7c))
 
 
 
