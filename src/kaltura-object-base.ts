@@ -337,7 +337,11 @@ export abstract class KalturaObjectBase{
             if (item instanceof Array)
             {
                 property = item[0];
-                request = item[1];
+
+                // The server expect one based index (meaning the first item has index 1)
+                // since Javascript array are zero based index we expose the api as zero based
+                // and transform the index value in the actual request by adding 1
+                request = item[1]+1;
                 targetPath = item.length == 3 ? item[2] : null;
             }
 
