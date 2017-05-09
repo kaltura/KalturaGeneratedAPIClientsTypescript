@@ -87,7 +87,7 @@ gulp.task('extras', function () {
 		}))
 		.pipe(gulp.dest('./.tmp/dist'));
 
-	var extraResult = gulp.src(['./LICENSE.txt','./.gitignore','./README.md','.npmignore'], {base: './'}).pipe(gulp.dest('./.tmp/dist'));
+	var extraResult = gulp.src(['./LICENSE','./.gitignore','./README.md','.npmignore'], {base: './'}).pipe(gulp.dest('./.tmp/dist'));
 
 
 	return merge([
@@ -97,7 +97,7 @@ gulp.task('extras', function () {
 });
 
 gulp.task('copyTmpToDist', ['clean:dist'], function () {
-	return gulp.src(['./.tmp/dist/**'], {base: './.tmp/dist/'}).pipe(gulp.dest('./dist'));
+	return gulp.src(['./.tmp/dist/**/*','./.tmp/dist/**/.*'], {base: './.tmp/dist/'}).pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build',function () {
