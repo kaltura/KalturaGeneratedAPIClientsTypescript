@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KalturaGeneratedAPIClientsTypescript.git"
+    "url": "https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript.git"
   },
   "bugs": {
-    "url": "https://github.com/KalturaGeneratedAPIClientsTypescript/issues"
+    "url": "https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/issues"
   },
   "main": "./index.js",
   "dependencies": {
