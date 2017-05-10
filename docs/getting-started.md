@@ -2,8 +2,7 @@
 
 This guide will show you how to setup your project to use `kaltura-typescript-client`.
 
-
-> Visit `kaltura-angular-client-demo repo` for [live demonstration](https://goo.gl/c02JX2) of an  application using this library.
+>Visit our [live demonstration](https://goo.gl/c02JX2) for code snippets and common use cases.
 
 ## Install
 using `npm`:

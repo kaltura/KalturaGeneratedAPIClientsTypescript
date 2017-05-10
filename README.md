@@ -7,7 +7,7 @@ This library uses `Typescript` files that are transpiled  into `ECMAScript 5` us
 
 This library have **_zero dependencies_** at runtime and it can be used in any Javascript project. Those who are using Typescript will benefit even more.
  
- >Visit `kaltura-angular-client-demo repo` for [live demonstration](https://goo.gl/c02JX2) of an  application using this library.
+ >Visit our [live demonstration](https://goo.gl/c02JX2) for code snippets and common use cases.
  
 ## Installation
 
