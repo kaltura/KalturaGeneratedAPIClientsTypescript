@@ -3,7 +3,11 @@
  
 > An easy-to-use facade to Kaltura server with typescript support for action requests, classes and enums.
  
-This library uses `Typescript` files that are transpiled  into `ECMAScript 5` using `commonjs` as a module system.
+This library uses `Typescript` files that are transpiled  into `ECMAScript 5` using `commonjs` as a module system. 
+
+This library have **_zero dependencies_** at runtime and it can be used in any Javascript project. Those who are using Typescript will benefit even more.
+ 
+ >Visit `kaltura-angular-client-demo repo` for [live demonstration](https://goo.gl/c02JX2) of an  application using this library.
  
 ## Installation
 
@@ -23,11 +27,13 @@ $ yarn add kaltura-typescript-client tslib
 ## Instructions
  
 ### Getting Started
-For a Getting started guide, API docs and more - check out [our docs](/docs/getting-started.md)!
+For a Getting started guide, API docs and more - check out [our docs](docs/getting-started.md)!
+  
+To keep being update review the [changelog](CHANGELOG.md) frequently.
  
+ If you have any use create [github issue](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/issues) and we will reply shortly.
  
-For `Angular` projects you can clone a [sample repository](https://github.com/esakal/kaltura-angular-client-demo) demonstrating some common use cases with this library.
- 
+
  
 ## TL;DR
 The following is a list of all features supported by the library:
@@ -58,9 +64,10 @@ The following is a list of all features supported by the library:
  Below is a list of features to be added:
 - [ ] Generate `kalsig` per request.
 - [ ] Code documentation of classes/enums/actions.
+- [ ] Add developer/api guide. 
 - [ ] Simplify syntax of enums representing strings.
 - [ ] Warn against deprecated classes/enums/actions.
-- [ ] Add configuration flag to indicate if a bundling of the complete library is allowed.
+- [ ] Protect against bundling the complete library by mistake.
 - [ ] AOT compile support.
 - [ ] Attach 'apiVersion' to each request 
 - [ ] Support setting 'undefined' for required properties when using 'setDependency' in multiple request.
