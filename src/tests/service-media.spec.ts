@@ -1,11 +1,10 @@
-import { KalturaHttpClientConfiguration} from "../kaltura-clients/kaltura-http-client-configuration";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import {
     MediaListAction,
     KalturaMediaListResponse,
     KalturaMediaEntry,
     KalturaMediaType
-} from "../types";
+} from "../types/all";
 
 import { TestsConfig } from './tests-config';
 
@@ -13,9 +12,11 @@ describe(`service 'Media' tests`, () =>
 {
     let client : KalturaBrowserHttpClient = null;
 
-    const httpConfiguration = new KalturaHttpClientConfiguration();
-    httpConfiguration.endpointUrl = TestsConfig.endpoint;
-    httpConfiguration.ks =TestsConfig.ks;
+    const httpConfiguration = {
+        endpointUrl : TestsConfig.endpoint,
+        ks  : TestsConfig.ks,
+        clientTag : 'kaltura-typescript-client-tests'
+    };
 
     beforeEach(() => {
       client = new KalturaBrowserHttpClient(httpConfiguration);

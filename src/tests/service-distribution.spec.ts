@@ -1,13 +1,14 @@
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import {
-    PlaylistListAction,
-    KalturaPlaylistListResponse,
-    KalturaPlaylist
+    KalturaMediaListResponse,
+    KalturaMediaEntry,
 } from "../types/all";
 
 import { TestsConfig } from './tests-config';
+import { DistributionProviderListAction } from '../types/DistributionProviderListAction';
+import { KalturaDistributionProviderListResponse } from '../types/KalturaDistributionProviderListResponse';
 
-describe(`service 'Playlist' tests`, () =>
+describe(`service 'Distribution' tests`, () =>
 {
     let client : KalturaBrowserHttpClient = null;
 
@@ -26,17 +27,17 @@ describe(`service 'Playlist' tests`, () =>
     });
 
     it(`invoke 'list' action`,(done) => {
-        client.request(new PlaylistListAction()).then(
+        client.request(new DistributionProviderListAction()).then(
             (response ) =>
             {
-                expect(response instanceof KalturaPlaylistListResponse).toBeTruthy();
+                expect(response instanceof KalturaDistributionProviderListResponse).toBeTruthy();
 
                 expect(response.objects).toBeDefined();
                 expect(response.objects instanceof Array).toBeTruthy();
 
                 response.objects.forEach(entry =>
                 {
-                    expect(entry instanceof KalturaPlaylist).toBeTruthy();
+                    expect(entry instanceof KalturaMediaEntry).toBeTruthy();
                 });
 
                 done();
@@ -47,5 +48,19 @@ describe(`service 'Playlist' tests`, () =>
                 done();
             }
         )
+    });
+
+    xit(`invoke 'createRemote' action`,(done) => {
+        // const media = new KalturaMediaEntry({
+        //    name : 'typescript.MediaTests.test_createRemote',
+        //    mediaType : KalturaMediaType.video
+        // });
+    });
+
+    describe(`utf-8 tests`, () => {
+        xit(`support utf-8 name`,(done) => {
+
+        });
+
     });
 });

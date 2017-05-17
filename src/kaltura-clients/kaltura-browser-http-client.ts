@@ -1,4 +1,3 @@
-import { KalturaHttpClientConfiguration } from "./kaltura-http-client-configuration";
 import { KalturaRequest } from '../kaltura-request';
 import { KalturaMultiRequest } from '../kaltura-multi-request';
 import { KalturaMultiResponse } from '../kaltura-multi-response';
@@ -7,10 +6,11 @@ import { KalturaHttpClientBase } from './kaltura-http-client-base';
 import { KalturaAPIException } from '../kaltura-api-exception';
 
 export class KalturaBrowserHttpClient extends KalturaHttpClientBase {
-    constructor(adapterConfiguration: KalturaHttpClientConfiguration) {
-        super(adapterConfiguration);
-    }
 
+
+    constructor(config : { endpointUrl : string, clientTag : string, ks? : string, partnerId? : number}) {
+        super(config);
+    }
 
     protected _createCancelableAction(data : { endpoint : string, headers : any, body : {}, type : any} ) : CancelableAction
     {

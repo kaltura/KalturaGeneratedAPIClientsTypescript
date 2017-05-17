@@ -7,6 +7,17 @@ import { CancelableAction } from '../utils/cancelable-action';
 
 export abstract class KalturaClientBase {
 
+    ks : string;
+    partnerId : number;
+    public clientTag : string;
+
+    constructor(config :  { clientTag : string, ks? : string, partnerId? : number})
+    {
+        this.clientTag = config.clientTag;
+        this.ks = config.ks;
+        this.partnerId = config.partnerId;
+    }
+
     protected abstract _transmitFileUploadRequest(request): CancelableAction;
     protected abstract _transmitRequest(request): CancelableAction;
 
@@ -75,5 +86,24 @@ export abstract class KalturaClientBase {
         } else {
             throw new KalturaAPIException("client::request_type_error", 'unsupported request type requested');
         }
+    }
+
+    protected _assignDefaultParameters(parameters : any) : any
+    {
+        if (parameters) {
+            if (this.ks && typeof parameters['ks'] === 'undefined') {
+                parameters.ks = this.ks;
+            }
+
+            if (this.partnerId && typeof parameters['partnerId'] === 'undefined') {
+                parameters.partnerId = this.partnerId;
+            }
+        }
+
+        if (this.clientTag) {
+            parameters.clientTag = this.clientTag;
+        }
+
+        return parameters;
     }
 }
