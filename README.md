@@ -1,5 +1,4 @@
-# Kaltura Typescript Client
- 
+# Kaltura Typescript Client [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) 
  
 > An easy-to-use facade to Kaltura server with typescript support for action requests, classes and enums.
  
