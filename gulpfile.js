@@ -87,7 +87,7 @@ gulp.task('extras', function () {
 		}))
 		.pipe(gulp.dest('./.tmp/dist'));
 
-	var extraResult = gulp.src(['./LICENSE','./.gitignore','./README.md','.npmignore'], {base: './'}).pipe(gulp.dest('./.tmp/dist'));
+	var extraResult = gulp.src(['./LICENSE','./.gitignore','./README.md','.npmignore','./CHANGELOG.md'], {base: './'}).pipe(gulp.dest('./.tmp/dist'));
 
 
 	return merge([
