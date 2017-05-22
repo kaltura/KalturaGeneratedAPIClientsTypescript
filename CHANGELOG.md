@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v2.0.0...v2.1.0) (2017-05-22)
+
+
+### Features
+
+* separate dynamic info (ks, partnerid) from configuration info (client tag, endpointUrl) ([12bf78e](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/12bf78e))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v1.1.0...v2.0.0) (2017-05-18)
 
