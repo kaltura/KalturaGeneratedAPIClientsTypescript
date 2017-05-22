@@ -1,12 +1,17 @@
 import { CancelableAction } from '../utils/cancelable-action';
-import { KalturaClientBase } from './kaltura-client-base';
+import { KalturaClientBase, KalturaClientBaseConfiguration } from './kaltura-client-base';
+
+export interface KalturaHttpClientBaseConfiguration extends KalturaClientBaseConfiguration
+{
+    endpointUrl : string;
+}
 
 export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
     public endpointUrl: string;
 
 
-    constructor(config :  { endpointUrl : string, clientTag : string, ks? : string, partnerId? : number}) {
+    constructor(config : KalturaHttpClientBaseConfiguration) {
         super(config);
         this.endpointUrl = config.endpointUrl;
     }

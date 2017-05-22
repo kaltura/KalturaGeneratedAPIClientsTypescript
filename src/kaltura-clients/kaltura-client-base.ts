@@ -5,17 +5,21 @@ import { KalturaAPIException } from '../kaltura-api-exception';
 import { KalturaUploadRequest } from '../kaltura-upload-request';
 import { CancelableAction } from '../utils/cancelable-action';
 
+export interface KalturaClientBaseConfiguration
+{
+    clientTag : string;
+
+}
+
 export abstract class KalturaClientBase {
 
     ks : string;
     partnerId : number;
     public clientTag : string;
 
-    constructor(config :  { clientTag : string, ks? : string, partnerId? : number})
+    constructor(config :  KalturaClientBaseConfiguration)
     {
         this.clientTag = config.clientTag;
-        this.ks = config.ks;
-        this.partnerId = config.partnerId;
     }
 
     protected abstract _transmitFileUploadRequest(request): CancelableAction;
