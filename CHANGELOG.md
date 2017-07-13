@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v3.0.0...v4.0.0) (2017-07-13)
+
+
+### Features
+
+* add service XInternal action XAddBulkDownload ([59b0ac6](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/59b0ac6))
+* prevent importing the complete library implicitly, force import types explicitly ([cdfa3a6](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/cdfa3a6))
+
+
+### BREAKING CHANGES
+
+* Any imports from types/all should be modified to explicitly import the relevant types.
+
+Before:
+
+import { KalturaPermissionFilter, UserLoginByLoginIdAction } from 'kaltura-typescript-client/types/all';
+
+After:
+
+import { KalturaPermissionFilter } from 'kaltura-typescript-client/types/KalturaPermissionFilter';
+import { UserLoginByLoginIdAction } from 'kaltura-typescript-client/types/UserLoginByLoginIdAction';
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v2.1.0...v3.0.0) (2017-07-13)
 
