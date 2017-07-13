@@ -1,55 +1,75 @@
-import { KalturaHttpClientConfiguration } from './kaltura-http-client-configuration';
 import { CancelableAction } from '../utils/cancelable-action';
-import { KalturaClientBase } from './kaltura-client-base';
-import { KalturaAPIException } from '../kaltura-api-exception';
+import { KalturaClientBase, KalturaClientBaseConfiguration } from './kaltura-client-base';
+
+export interface KalturaHttpClientBaseConfiguration extends KalturaClientBaseConfiguration
+{
+    endpointUrl : string;
+}
 
 export abstract class KalturaHttpClientBase extends KalturaClientBase {
-    constructor(public adapterConfiguration : KalturaHttpClientConfiguration) {
-        super();
+
+    public endpointUrl: string;
+
+
+    constructor(config : KalturaHttpClientBaseConfiguration) {
+        super(config);
+
+        if (!config || !config.endpointUrl) {
+            throw new Error('invalid config, missing endpoint url value');
+        }
+
+        this.endpointUrl = config.endpointUrl;
     }
 
-    protected _transmitFileUploadRequest(request): CancelableAction
-    {
-        const result = new CancelableAction((resolve, reject) => {
-            let isComplete = false
+    private _getHeaders(): any {
+        return {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        };
+    }
+
+    protected _transmitFileUploadRequest(request): CancelableAction {
+
+        return new CancelableAction((resolve, reject) => {
+            let isComplete = false;
             const parameters: any = Object.assign(
                 {
                     format: 1
                 },
                 request.toRequestObject()
             );
-            this.adapterConfiguration.prepareRequestParameters(parameters);
 
-            const data : any  = request.getFormData();
+            this._assignDefaultParameters(parameters);
 
-            const {service,action} = parameters;
+            const data: any = request.getFormData();
+
+            const {service, action} = parameters;
             delete parameters.service;
             delete parameters.action;
 
             // build endpoint
             const querystring = this._buildQuerystring(parameters);
-            const endpoint = `${this.adapterConfiguration.endpointUrl}/service/${service}/action/${action}?${querystring}`;
+            const endpoint = `${this.endpointUrl}/service/${service}/action/${action}?${querystring}`;
 
             const xhr = new XMLHttpRequest();
 
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState == 4){
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
                     let resp;
 
                     try {
-                        if(xhr.status == 200) {
+                        if (xhr.status == 200) {
                             resp = JSON.parse(xhr.response);
-                        }else {
+                        } else {
                             resp = new Error(xhr.responseText);
                         }
-                    } catch (e){
+                    } catch (e) {
                         resp = new Error(xhr.responseText);
                     }
 
-                    if (resp instanceof Error)
-                    {
+                    if (resp instanceof Error) {
                         reject(resp);
-                    }else {
+                    } else {
                         resolve(resp);
                     }
                 }
@@ -57,7 +77,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
             const progressCallback = request._getProgressCallback();
             if (progressCallback) {
-                xhr.upload.addEventListener('progress', function(e){
+                xhr.upload.addEventListener('progress', function (e) {
                     if (e.lengthComputable) {
                         progressCallback.apply(request, [e.loaded, e.total]);
                     } else {
@@ -69,23 +89,22 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
             xhr.open('POST', endpoint);
             xhr.send(data);
 
-            return () =>
-            {
+            return () => {
                 if (!isComplete) {
                     xhr.abort();
                     isComplete = true;
                 }
             }
         });
-
-        return result;
-
     }
 
     protected abstract _createCancelableAction(data : { endpoint : string, headers : any, body : {}} ) : CancelableAction;
 
-    protected _transmitRequest(request): CancelableAction
-    {
+
+
+    protected _transmitRequest(request): CancelableAction {
+
+
         const parameters: any = Object.assign(
             {
                 format: 1
@@ -93,17 +112,17 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
             request.toRequestObject()
         );
 
-        this.adapterConfiguration.prepareRequestParameters(parameters);
+        this._assignDefaultParameters(parameters);
 
         // build endpoint
-        const endpoint = `${this.adapterConfiguration.endpointUrl}/service/${parameters.service}/action/${parameters.action}`;
+        const endpoint = `${this.endpointUrl}/service/${parameters.service}/action/${parameters.action}`;
 
         delete parameters.service;
         delete parameters.action;
 
-        const headers = this.adapterConfiguration.getHeaders();
+        const headers = this._getHeaders();
 
-        return this._createCancelableAction({endpoint, headers, body : parameters});
+        return this._createCancelableAction({endpoint, headers, body: parameters});
     }
 
     private _buildQuerystring(data : {}, prefix? : string)

@@ -1,14 +1,14 @@
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import {
-    MediaListAction,
     KalturaMediaListResponse,
     KalturaMediaEntry,
-    KalturaMediaType
 } from "../types/all";
 
 import { TestsConfig } from './tests-config';
+import { DistributionProviderListAction } from '../types/DistributionProviderListAction';
+import { KalturaDistributionProviderListResponse } from '../types/KalturaDistributionProviderListResponse';
 
-describe(`service 'Media' tests`, () =>
+describe(`service 'Distribution' tests`, () =>
 {
     let client : KalturaBrowserHttpClient = null;
 
@@ -27,10 +27,10 @@ describe(`service 'Media' tests`, () =>
     });
 
     it(`invoke 'list' action`,(done) => {
-        client.request(new MediaListAction()).then(
+        client.request(new DistributionProviderListAction()).then(
             (response ) =>
             {
-                expect(response instanceof KalturaMediaListResponse).toBeTruthy();
+                expect(response instanceof KalturaDistributionProviderListResponse).toBeTruthy();
 
                 expect(response.objects).toBeDefined();
                 expect(response.objects instanceof Array).toBeTruthy();
@@ -44,7 +44,7 @@ describe(`service 'Media' tests`, () =>
             },
             (err) =>
             {
-                fail(`failed to perform request : ${err.message}`);
+                fail(`failed to perform request ${err.message}`);
                 done();
             }
         )

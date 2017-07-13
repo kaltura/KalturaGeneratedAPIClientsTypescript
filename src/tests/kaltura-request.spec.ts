@@ -1,4 +1,3 @@
-// import { KalturaHttpClientConfiguration} from "../kaltura-clients/kaltura-http-client-configuration";
 // import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 // import {
 //     KalturaBaseEntryFilter, KalturaMediaEntry, KalturaPlaylist, KalturaMediaEntryFilterForPlaylist,

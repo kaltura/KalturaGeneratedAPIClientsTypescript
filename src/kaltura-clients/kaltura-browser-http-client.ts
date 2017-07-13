@@ -1,16 +1,21 @@
-import { KalturaHttpClientConfiguration } from "./kaltura-http-client-configuration";
 import { KalturaRequest } from '../kaltura-request';
 import { KalturaMultiRequest } from '../kaltura-multi-request';
 import { KalturaMultiResponse } from '../kaltura-multi-response';
 import { CancelableAction } from '../utils/cancelable-action';
-import { KalturaHttpClientBase } from './kaltura-http-client-base';
+import { KalturaHttpClientBase, KalturaHttpClientBaseConfiguration } from './kaltura-http-client-base';
 import { KalturaAPIException } from '../kaltura-api-exception';
 
-export class KalturaBrowserHttpClient extends KalturaHttpClientBase {
-    constructor(adapterConfiguration: KalturaHttpClientConfiguration) {
-        super(adapterConfiguration);
-    }
 
+export interface KalturaBrowserHttpClientConfiguration extends KalturaHttpClientBaseConfiguration
+{
+}
+
+export class KalturaBrowserHttpClient extends KalturaHttpClientBase {
+
+
+    constructor(config : KalturaBrowserHttpClientConfiguration) {
+        super(config);
+    }
 
     protected _createCancelableAction(data : { endpoint : string, headers : any, body : {}, type : any} ) : CancelableAction
     {

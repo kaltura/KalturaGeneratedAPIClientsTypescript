@@ -1,5 +1,4 @@
-# Kaltura Typescript Client
- 
+# Kaltura Typescript Client [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) 
  
 > An easy-to-use facade to Kaltura server with typescript support for action requests, classes and enums.
  
@@ -63,6 +62,10 @@ The following is a list of all features supported by the library:
  
  Below is a list of features to be added:
 - [ ] Generate `kalsig` per request.
+- [ ] Request timeout support
+- [ ] Cancel file upload should abort request
+- [ ] Add Node.JS client 
+- [ ] When updating an object, ignore properties marked as insert only property.
 - [ ] Code documentation of classes/enums/actions.
 - [ ] Add developer/api guide. 
 - [ ] Simplify syntax of enums representing strings.

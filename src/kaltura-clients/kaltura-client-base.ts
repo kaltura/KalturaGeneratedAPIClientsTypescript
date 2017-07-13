@@ -5,7 +5,21 @@ import { KalturaAPIException } from '../kaltura-api-exception';
 import { KalturaUploadRequest } from '../kaltura-upload-request';
 import { CancelableAction } from '../utils/cancelable-action';
 
+export interface KalturaClientBaseConfiguration
+{
+    clientTag : string;
+}
+
 export abstract class KalturaClientBase {
+
+    ks : string;
+    partnerId : number;
+    public clientTag : string;
+
+    constructor(config :  KalturaClientBaseConfiguration)
+    {
+        this.clientTag = config.clientTag;
+    }
 
     protected abstract _transmitFileUploadRequest(request): CancelableAction;
     protected abstract _transmitRequest(request): CancelableAction;
@@ -75,5 +89,24 @@ export abstract class KalturaClientBase {
         } else {
             throw new KalturaAPIException("client::request_type_error", 'unsupported request type requested');
         }
+    }
+
+    protected _assignDefaultParameters(parameters : any) : any
+    {
+        if (parameters) {
+            if (this.ks && typeof parameters['ks'] === 'undefined') {
+                parameters.ks = this.ks;
+            }
+
+            if (this.partnerId && typeof parameters['partnerId'] === 'undefined') {
+                parameters.partnerId = this.partnerId;
+            }
+        }
+
+        if (this.clientTag) {
+            parameters.clientTag = this.clientTag;
+        }
+
+        return parameters;
     }
 }

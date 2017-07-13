@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v2.0.0...v2.1.0) (2017-05-22)
+
+
+### Features
+
+* separate dynamic info (ks, partnerid) from configuration info (client tag, endpointUrl) ([12bf78e](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/12bf78e))
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v1.1.0...v2.0.0) (2017-05-18)
+
+
+### Features
+
+* **kaltura-clients:** remove configuration objects, assign dynamic data directly on the clients ([8a30a72](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/8a30a72))
+
+
+### BREAKING CHANGES
+
+* **kaltura-clients:** the 'KalturaClientBaseConfiguration' and 'KalturaHttpClientConfiguration' objects were removed.
+
+Any dynamic data assigned on them should be done directly on the client instance.
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v1.1.0...v1.1.1) (2017-05-10)
 

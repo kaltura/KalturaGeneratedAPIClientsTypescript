@@ -12,7 +12,6 @@
 //
 // import {KalturaResponse} from "../kaltura-response";
 // import {KalturaMultiRequest} from "../kaltura-multi-request";
-// import {KalturaHttpClientConfiguration} from "../kaltura-clients/kaltura-http-client-configuration";
 // import {KalturaClientBase} from "../kaltura-clients/kaltura-server-client";
 // import {KalturaHttpPostClient} from "../kaltura-clients/kaltura-http-post-client.service";
 // import {UserLoginByLoginIdAction, UserGetByLoginIdAction} from "../services/user";

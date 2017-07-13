@@ -1,10 +1,9 @@
-import { KalturaHttpClientConfiguration} from "../kaltura-clients/kaltura-http-client-configuration";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import {
     PlaylistListAction,
     KalturaPlaylistListResponse,
     KalturaPlaylist
-} from "../types";
+} from "../types/all";
 
 import { TestsConfig } from './tests-config';
 
@@ -12,12 +11,14 @@ describe(`service 'Playlist' tests`, () =>
 {
     let client : KalturaBrowserHttpClient = null;
 
-    const httpConfiguration = new KalturaHttpClientConfiguration();
-    httpConfiguration.endpointUrl = TestsConfig.endpoint;
-    httpConfiguration.ks =TestsConfig.ks;
+    const httpConfiguration = {
+        endpointUrl : TestsConfig.endpoint,
+        clientTag : 'kaltura-typescript-client-tests'
+    };
 
     beforeEach(() => {
       client = new KalturaBrowserHttpClient(httpConfiguration);
+      client.ks = TestsConfig.ks;
     });
 
     afterEach(() => {
