@@ -1,7 +1,7 @@
 {
   "name": "kaltura-typescript-client",
-  "public" : false,
-  "version": "2.1.0",
+  "public": false,
+  "version": "3.0.0",
   "description": "Kaltura Typescript client",
   "keywords": [
     "Kaltura"

@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v2.1.0...v3.0.0) (2017-07-13)
+
+
+### Features
+
+* expose global ks and partner id from the client instead of from the configuration object. ([fac1eb7](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/fac1eb7))
+
+
+### BREAKING CHANGES
+
+* the global ks and partner id must be assigned on the client (previously was on the configuration)
+
+
+
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v1.1.0...v1.1.1) (2017-05-10)
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v2.0.0...v2.1.0) (2017-05-22)
 
