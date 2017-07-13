@@ -31,7 +31,9 @@ For a Getting started guide, API docs and more - check out [our docs](docs/getti
   
 To keep being update review the [changelog](CHANGELOG.md) frequently.
  
- If you have any use create [github issue](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/issues) and we will reply shortly.
+ **Have a question?** Ask us on [Gitter](https://gitter.im/kaltura-ng/kaltura-ng).
+ 
+ **Found a bug?** create [github issue](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/issues) or 
  
 
  
