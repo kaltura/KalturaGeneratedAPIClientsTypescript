@@ -10,17 +10,16 @@ This library have **_zero dependencies_** at runtime and it can be used in any J
  
  >Visit our [live demonstration](https://goo.gl/c02JX2) for code snippets and common use cases.
  
-## Installation
-
-Install using `npm`:
-```bash
-$ npm install --save kaltura-typescript-client tslib
-```
+ ## Technology stack and conventions
+ This package use the following technologies:
+ * [TypeScript](http://www.typescriptlang.org/) language (superset of Javascript).
+ * [Yarn](https://yarnpkg.com/en/) as our dependency management.
  
+## Installation
  
 Install using `yarn`:
 ```bash
-$ yarn add kaltura-typescript-client tslib
+$ yarn add kaltura-typescript-client
 ```
 
 
