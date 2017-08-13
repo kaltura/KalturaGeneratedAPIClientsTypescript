@@ -4,7 +4,7 @@ import { KalturaBaseResponseProfile } from './types/KalturaBaseResponseProfile';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from './kaltura-object-base';
 
 export interface KalturaRequestBaseArgs  extends KalturaObjectBaseArgs {
-    acceptedTypes? : { new() : KalturaObjectBase}[];
+    acceptedTypes? : KalturaObjectBase[];
 	partnerId? : number;
 	ks? : string;
 	responseProfile? : KalturaBaseResponseProfile;
@@ -13,7 +13,7 @@ export interface KalturaRequestBaseArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaRequestBase extends KalturaObjectBase {
 
-    acceptedTypes? : { new() : KalturaObjectBase}[];
+    acceptedTypes : KalturaObjectBase[];
 	partnerId : number;
 	ks : string;
 	responseProfile : KalturaBaseResponseProfile;
@@ -30,7 +30,8 @@ export class KalturaRequestBase extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                partnerId : { type : 'n' },
+                apiVersion : { type : 'c', default : '3.3.0' },
+				partnerId : { type : 'n' },
 				ks : { type : 's' },
 				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
             }
