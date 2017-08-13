@@ -60,7 +60,7 @@ The following is a list of all features supported by the library:
    - [x] Valid KS
    - [x] Partner Id
    - [x] Client Tag
-- [ ] Attach 'apiVersion' to each request
+- [x] Attach 'apiVersion' to each request
 
  Below is a list of features to be added:
 - [ ] Generate `kalsig` per request.
