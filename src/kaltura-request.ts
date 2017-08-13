@@ -28,22 +28,40 @@ export abstract class KalturaRequest<T> extends KalturaRequestBase {
         return this;
     }
 
+    private _unwrapResponse(response : any) : any
+    {
+        // if response is object without 'objectType' property and with 'result' property -> it is ott response
+        if (response && typeof response === 'object' && !response.objectType && response.result)
+        {
+            // if response.result is object without 'objectType' property and with 'error' property -> it is ott error response
+            if (typeof response.result === 'object' && !response.result.objectType && response.result.error) {
+                return response.result.error;
+            }else
+            {
+                return response.result;
+            }
+        }else {
+            return response;
+        }
+    }
+
     handleResponse(response: any): KalturaResponse<T> {
         let responseResult: any;
         let responseError: any;
 
         try {
+            const unwrappedResponse = this._unwrapResponse(response);
             let responseObject = null;
 
-            if (response) {
-                if (response.objectType === 'KalturaAPIException') {
+            if (unwrappedResponse) {
+                if (unwrappedResponse.objectType === 'KalturaAPIException') {
                     responseObject = super._parseResponseProperty(
                         "",
                         {
                             type: 'o',
                             subType: 'KalturaAPIException'
                         },
-                        response
+                        unwrappedResponse
                     );
                 } else {
                     responseObject = super._parseResponseProperty(
@@ -52,7 +70,7 @@ export abstract class KalturaRequest<T> extends KalturaRequestBase {
                             type: this.responseType,
                             subType: this.responseSubType
                         },
-                        response
+                        unwrappedResponse
                     );
                 }
             }
