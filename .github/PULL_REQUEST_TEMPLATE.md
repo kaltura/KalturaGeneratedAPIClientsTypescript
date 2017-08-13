@@ -1,34 +1,5 @@
-### PR information
-**What kind of change does this PR introduce?** (check one with "x")
-- [ ] Bugfix
-- [ ] Feature
-- [ ] Code style update (formatting, local variables)
-- [ ] Refactoring (no functional changes, no api changes)
-- [ ] Build related changes
-- [ ] CI related changes
-- [ ] Other... Please describe:
+### Submitting a change
 
-**What is the current behavior?** (You can also link to an open issue here)
+This library is auto-generated using `kaltura/clients-generator` php engine. Feel free to clone, build and play with this library but in order to submit PR you should work against the [kaltura/clients-generator](https://github.com/kaltura/clients-generator) repo. 
 
-
-
-**What is the new behavior?**
-
-
-
-**Does this PR introduce a breaking change?** (check one with "x")
-- [ ] Yes
-- [ ] No
-
-
-If this PR contains a breaking change, please describe the impact and migration path for existing applications: ...
-
----
-
-### Other information
-
-**Where should the reviewer start?**
-
-**How should this be manually tested?**
-
-**Any background context you want to provide?**
+If your fix is not complex you can open an issue or even a PR and we will consider adding it on our own to the generator. 
