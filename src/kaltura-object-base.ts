@@ -152,6 +152,26 @@ export abstract class KalturaObjectBase{
                         }
 
                         break;
+                    case 'm': // map
+                        const parsedMap = {};
+                        if (sourceValue instanceof Object) {
+                            Object.keys(sourceValue).forEach(itemKey =>
+                            {
+                                const itemValue = sourceValue[itemKey];
+                               const newItem =  this._createKalturaObject(property.subType);
+
+                                if (itemValue && newItem) {
+                                    newItem.fromResponseObject(itemValue);
+                                    parsedMap[itemKey] = newItem;
+                                } else {
+                                    throw new Error(`Failed to create kaltura object for type '${property.subType}'`);
+                                }
+
+                            });
+                        } else {
+                            throw new Error(`failed to parse property '${propertyName}. Expected type object, got type '${typeof sourceValue}`);
+                        }
+                        break;
                     case 'a': // array
                         if (sourceValue instanceof Array) {
                             const parsedArray = [];
