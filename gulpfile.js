@@ -83,6 +83,7 @@ gulp.task('extras', function () {
 			json.dependencies = {};
 			json.devDependencies = {};
 			json.scripts = {};
+			json.private = false;
 			return json; // must return JSON object.
 		}))
 		.pipe(gulp.dest('./.tmp/dist'));
