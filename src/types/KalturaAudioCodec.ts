@@ -24,6 +24,7 @@ export class KalturaAudioCodec extends KalturaObjectBase {
 	static ac3 = new KalturaAudioCodec('ac3');
 	static amrnb = new KalturaAudioCodec('amrnb');
 	static copy = new KalturaAudioCodec('copy');
+	static eac3 = new KalturaAudioCodec('eac3');
 	static mp3 = new KalturaAudioCodec('mp3');
 	static mpeg2 = new KalturaAudioCodec('mpeg2');
 	static none = new KalturaAudioCodec('');

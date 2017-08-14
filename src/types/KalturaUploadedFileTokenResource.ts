@@ -1,9 +1,9 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDataCenterContentResource, KalturaDataCenterContentResourceArgs } from './KalturaDataCenterContentResource';
+import { KalturaGenericDataCenterContentResource, KalturaGenericDataCenterContentResourceArgs } from './KalturaGenericDataCenterContentResource';
 
-export interface KalturaUploadedFileTokenResourceArgs  extends KalturaDataCenterContentResourceArgs {
+export interface KalturaUploadedFileTokenResourceArgs  extends KalturaGenericDataCenterContentResourceArgs {
     token? : string;
 }
 
@@ -11,7 +11,7 @@ export interface KalturaUploadedFileTokenResourceArgs  extends KalturaDataCenter
 * Used to ingest media that uploaded to the system and represented by token that
 * returned from upload.upload action or uploadToken.add action.
 **/
-export class KalturaUploadedFileTokenResource extends KalturaDataCenterContentResource {
+export class KalturaUploadedFileTokenResource extends KalturaGenericDataCenterContentResource {
 
     token : string;
 

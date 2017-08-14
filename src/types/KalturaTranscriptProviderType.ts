@@ -3,7 +3,7 @@
 import { KalturaObjectBase } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 
-export class KalturaDrmDeviceOrderBy extends KalturaObjectBase {
+export class KalturaTranscriptProviderType extends KalturaObjectBase {
     private _value : string;
     constructor( value?:string | number){
         super();
@@ -19,7 +19,7 @@ export class KalturaDrmDeviceOrderBy extends KalturaObjectBase {
         return this._value;
     }
 
-    static createdAtAsc = new KalturaDrmDeviceOrderBy('+createdAt');
-	static createdAtDesc = new KalturaDrmDeviceOrderBy('-createdAt');
+    static cielo24 = new KalturaTranscriptProviderType('cielo24.Cielo24');
+	static voicebase = new KalturaTranscriptProviderType('voicebase.Voicebase');
 }
-KalturaTypesFactory.registerType('KalturaDrmDeviceOrderBy',KalturaDrmDeviceOrderBy);
+KalturaTypesFactory.registerType('KalturaTranscriptProviderType',KalturaTranscriptProviderType);

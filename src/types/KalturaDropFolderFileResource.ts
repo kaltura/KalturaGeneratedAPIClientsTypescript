@@ -1,16 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDataCenterContentResource, KalturaDataCenterContentResourceArgs } from './KalturaDataCenterContentResource';
+import { KalturaGenericDataCenterContentResource, KalturaGenericDataCenterContentResourceArgs } from './KalturaGenericDataCenterContentResource';
 
-export interface KalturaDropFolderFileResourceArgs  extends KalturaDataCenterContentResourceArgs {
+export interface KalturaDropFolderFileResourceArgs  extends KalturaGenericDataCenterContentResourceArgs {
     dropFolderFileId? : number;
 }
 
 /** 
 * Used to ingest media that dropped through drop folder
 **/
-export class KalturaDropFolderFileResource extends KalturaDataCenterContentResource {
+export class KalturaDropFolderFileResource extends KalturaGenericDataCenterContentResource {
 
     dropFolderFileId : number;
 

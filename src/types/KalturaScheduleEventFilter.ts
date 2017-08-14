@@ -16,6 +16,7 @@ export interface KalturaScheduleEventFilterArgs  extends KalturaScheduleEventBas
 	templateEntryCategoriesIdsLike? : string;
 	resourceSystemNamesMultiLikeAnd? : string;
 	resourceSystemNamesLike? : string;
+	resourceIdEqual? : string;
 }
 
 
@@ -33,6 +34,7 @@ export class KalturaScheduleEventFilter extends KalturaScheduleEventBaseFilter {
 	templateEntryCategoriesIdsLike : string;
 	resourceSystemNamesMultiLikeAnd : string;
 	resourceSystemNamesLike : string;
+	resourceIdEqual : string;
 
     constructor(data? : KalturaScheduleEventFilterArgs)
     {
@@ -57,7 +59,8 @@ export class KalturaScheduleEventFilter extends KalturaScheduleEventBaseFilter {
 				resourceSystemNamesMultiLikeOr : { type : 's' },
 				templateEntryCategoriesIdsLike : { type : 's' },
 				resourceSystemNamesMultiLikeAnd : { type : 's' },
-				resourceSystemNamesLike : { type : 's' }
+				resourceSystemNamesLike : { type : 's' },
+				resourceIdEqual : { type : 's' }
             }
         );
         return result;

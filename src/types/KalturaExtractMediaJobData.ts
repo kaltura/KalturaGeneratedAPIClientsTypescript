@@ -8,6 +8,7 @@ export interface KalturaExtractMediaJobDataArgs  extends KalturaConvartableJobDa
 	calculateComplexity? : boolean;
 	extractId3Tags? : boolean;
 	destDataFilePath? : string;
+	detectGOP? : number;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaExtractMediaJobData extends KalturaConvartableJobData {
 	calculateComplexity : boolean;
 	extractId3Tags : boolean;
 	destDataFilePath : string;
+	detectGOP : number;
 
     constructor(data? : KalturaExtractMediaJobDataArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaExtractMediaJobData extends KalturaConvartableJobData {
 				flavorAssetId : { type : 's' },
 				calculateComplexity : { type : 'b' },
 				extractId3Tags : { type : 'b' },
-				destDataFilePath : { type : 's' }
+				destDataFilePath : { type : 's' },
+				detectGOP : { type : 'n' }
             }
         );
         return result;

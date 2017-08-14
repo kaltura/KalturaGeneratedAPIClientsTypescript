@@ -20,5 +20,6 @@ export class KalturaUserEntryType extends KalturaObjectBase {
     }
 
     static quiz = new KalturaUserEntryType('quiz.QUIZ');
+	static viewHistory = new KalturaUserEntryType('viewHistory.VIEW_HISTORY');
 }
 KalturaTypesFactory.registerType('KalturaUserEntryType',KalturaUserEntryType);

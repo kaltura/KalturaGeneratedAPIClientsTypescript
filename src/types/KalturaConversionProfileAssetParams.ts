@@ -15,7 +15,9 @@ export interface KalturaConversionProfileAssetParamsArgs  extends KalturaObjectB
 	deletePolicy? : KalturaAssetParamsDeletePolicy;
 	isEncrypted? : KalturaNullableBoolean;
 	contentAwareness? : number;
+	chunkedEncodeMode? : number;
 	twoPass? : KalturaNullableBoolean;
+	tags? : string;
 }
 
 
@@ -30,7 +32,9 @@ export class KalturaConversionProfileAssetParams extends KalturaObjectBase {
 	deletePolicy : KalturaAssetParamsDeletePolicy;
 	isEncrypted : KalturaNullableBoolean;
 	contentAwareness : number;
+	chunkedEncodeMode : number;
 	twoPass : KalturaNullableBoolean;
+	tags : string;
 
     constructor(data? : KalturaConversionProfileAssetParamsArgs)
     {
@@ -53,7 +57,9 @@ export class KalturaConversionProfileAssetParams extends KalturaObjectBase {
 				deletePolicy : { type : 'en', subTypeConstructor : KalturaAssetParamsDeletePolicy, subType : 'KalturaAssetParamsDeletePolicy' },
 				isEncrypted : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				contentAwareness : { type : 'n' },
-				twoPass : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				chunkedEncodeMode : { type : 'n' },
+				twoPass : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				tags : { type : 's' }
             }
         );
         return result;

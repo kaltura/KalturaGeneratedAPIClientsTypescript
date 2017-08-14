@@ -20,6 +20,7 @@ export class KalturaAttachmentType extends KalturaObjectBase {
     }
 
     static document = new KalturaAttachmentType('3');
+	static json = new KalturaAttachmentType('4');
 	static media = new KalturaAttachmentType('2');
 	static text = new KalturaAttachmentType('1');
 }

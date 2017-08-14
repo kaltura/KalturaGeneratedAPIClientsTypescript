@@ -38,6 +38,7 @@ export interface KalturaMediaInfoArgs  extends KalturaObjectBaseArgs {
 	isFastStart? : number;
 	contentStreams? : string;
 	complexityValue? : number;
+	maxGOP? : number;
 }
 
 
@@ -77,6 +78,7 @@ export class KalturaMediaInfo extends KalturaObjectBase {
 	isFastStart : number;
 	contentStreams : string;
 	complexityValue : number;
+	maxGOP : number;
 
     constructor(data? : KalturaMediaInfoArgs)
     {
@@ -123,7 +125,8 @@ export class KalturaMediaInfo extends KalturaObjectBase {
 				multiStream : { type : 's' },
 				isFastStart : { type : 'n' },
 				contentStreams : { type : 's' },
-				complexityValue : { type : 'n' }
+				complexityValue : { type : 'n' },
+				maxGOP : { type : 'n' }
             }
         );
         return result;

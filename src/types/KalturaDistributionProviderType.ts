@@ -37,6 +37,7 @@ export class KalturaDistributionProviderType extends KalturaObjectBase {
 	static msn = new KalturaDistributionProviderType('msnDistribution.MSN');
 	static ndn = new KalturaDistributionProviderType('ndnDistribution.NDN');
 	static podcast = new KalturaDistributionProviderType('podcastDistribution.PODCAST');
+	static pushToNews = new KalturaDistributionProviderType('pushToNewsDistribution.PUSH_TO_NEWS');
 	static quickplay = new KalturaDistributionProviderType('quickPlayDistribution.QUICKPLAY');
 	static synacorHbo = new KalturaDistributionProviderType('synacorHboDistribution.SYNACOR_HBO');
 	static syndication = new KalturaDistributionProviderType('2');

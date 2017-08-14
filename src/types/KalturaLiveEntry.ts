@@ -22,6 +22,7 @@ export interface KalturaLiveEntryArgs  extends KalturaMediaEntryArgs {
 	publishConfigurations? : KalturaLiveStreamPushPublishConfiguration[];
 	currentBroadcastStartTime? : number;
 	recordingOptions? : KalturaLiveEntryRecordingOptions;
+	segmentDuration? : number;
 }
 
 
@@ -41,6 +42,7 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 	currentBroadcastStartTime : number;
 	recordingOptions : KalturaLiveEntryRecordingOptions;
 	readonly liveStatus : KalturaEntryServerNodeStatus;
+	segmentDuration : number;
 
     constructor(data? : KalturaLiveEntryArgs)
     {
@@ -69,7 +71,8 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 				lastBroadcast : { type : 'n', readOnly : true },
 				currentBroadcastStartTime : { type : 'n' },
 				recordingOptions : { type : 'o', subTypeConstructor : KalturaLiveEntryRecordingOptions, subType : 'KalturaLiveEntryRecordingOptions' },
-				liveStatus : { type : 'en', readOnly : true, subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' }
+				liveStatus : { type : 'en', readOnly : true, subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' },
+				segmentDuration : { type : 'n' }
             }
         );
         return result;

@@ -11,12 +11,11 @@ export interface KalturaObjectArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaObject extends KalturaObjectBase {
 
-    readonly relatedObjects : KalturaListResponse[];
+    readonly relatedObjects : { [key : string] : KalturaListResponse};
 
     constructor(data? : KalturaObjectArgs)
     {
         super(data);
-        if (typeof this.relatedObjects === 'undefined') this.relatedObjects = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,7 +25,7 @@ export class KalturaObject extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaObject' },
-				relatedObjects : { type : 'a', readOnly : true, subTypeConstructor : KalturaListResponse, subType : 'KalturaListResponse' }
+				relatedObjects : { type : 'm', readOnly : true, subTypeConstructor : KalturaListResponse, subType : 'KalturaListResponse' }
             }
         );
         return result;

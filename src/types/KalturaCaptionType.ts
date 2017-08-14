@@ -19,7 +19,8 @@ export class KalturaCaptionType extends KalturaObjectBase {
         return this._value;
     }
 
-    static dfxp = new KalturaCaptionType('2');
+    static cap = new KalturaCaptionType('4');
+	static dfxp = new KalturaCaptionType('2');
 	static srt = new KalturaCaptionType('1');
 	static webvtt = new KalturaCaptionType('3');
 }

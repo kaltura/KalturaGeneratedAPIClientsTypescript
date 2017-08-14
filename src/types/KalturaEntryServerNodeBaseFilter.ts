@@ -3,14 +3,14 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEntryServerNodeStatus } from './KalturaEntryServerNodeStatus';
 import { KalturaEntryServerNodeType } from './KalturaEntryServerNodeType';
-import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelatedFilter';
+import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
-export interface KalturaEntryServerNodeBaseFilterArgs  extends KalturaRelatedFilterArgs {
+export interface KalturaEntryServerNodeBaseFilterArgs  extends KalturaFilterArgs {
     entryIdEqual? : string;
 	entryIdIn? : string;
 	serverNodeIdEqual? : number;
-	createdAtGreaterThanOrEqual? : Date;
 	createdAtLessThanOrEqual? : Date;
+	createdAtGreaterThanOrEqual? : Date;
 	updatedAtGreaterThanOrEqual? : Date;
 	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaEntryServerNodeStatus;
@@ -19,13 +19,13 @@ export interface KalturaEntryServerNodeBaseFilterArgs  extends KalturaRelatedFil
 }
 
 
-export class KalturaEntryServerNodeBaseFilter extends KalturaRelatedFilter {
+export class KalturaEntryServerNodeBaseFilter extends KalturaFilter {
 
     entryIdEqual : string;
 	entryIdIn : string;
 	serverNodeIdEqual : number;
-	createdAtGreaterThanOrEqual : Date;
 	createdAtLessThanOrEqual : Date;
+	createdAtGreaterThanOrEqual : Date;
 	updatedAtGreaterThanOrEqual : Date;
 	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaEntryServerNodeStatus;
@@ -47,8 +47,8 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaRelatedFilter {
 				entryIdEqual : { type : 's' },
 				entryIdIn : { type : 's' },
 				serverNodeIdEqual : { type : 'n' },
-				createdAtGreaterThanOrEqual : { type : 'd' },
 				createdAtLessThanOrEqual : { type : 'd' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
 				updatedAtGreaterThanOrEqual : { type : 'd' },
 				updatedAtLessThanOrEqual : { type : 'd' },
 				statusEqual : { type : 'en', subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' },

@@ -11,7 +11,7 @@ export interface KalturaServerNodeArgs  extends KalturaObjectBaseArgs {
 	description? : string;
 	hostName? : string;
 	tags? : string;
-	parentId? : number;
+	parentId? : string;
 }
 
 
@@ -30,7 +30,7 @@ export class KalturaServerNode extends KalturaObjectBase {
 	readonly type : KalturaServerNodeType;
 	tags : string;
 	readonly dc : number;
-	parentId : number;
+	parentId : string;
 
     constructor(data? : KalturaServerNodeArgs)
     {
@@ -57,7 +57,7 @@ export class KalturaServerNode extends KalturaObjectBase {
 				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaServerNodeType, subType : 'KalturaServerNodeType' },
 				tags : { type : 's' },
 				dc : { type : 'n', readOnly : true },
-				parentId : { type : 'n' }
+				parentId : { type : 's' }
             }
         );
         return result;

@@ -1,7 +1,8 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaPlaybackContextOptions } from './KalturaPlaybackContextOptions';
+import { KalturaPlaybackContext } from './KalturaPlaybackContext';
 
+import { KalturaPlaybackContextOptions } from './KalturaPlaybackContextOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface BaseEntryGetPlaybackContextActionArgs  extends KalturaRequestArgs {
@@ -12,14 +13,14 @@ export interface BaseEntryGetPlaybackContextActionArgs  extends KalturaRequestAr
 /** 
 * This action delivers all data relevant for player
 **/
-export class BaseEntryGetPlaybackContextAction extends KalturaRequest<KalturaPlaybackContextOptions> {
+export class BaseEntryGetPlaybackContextAction extends KalturaRequest<KalturaPlaybackContext> {
 
     entryId : string;
 	contextDataParams : KalturaPlaybackContextOptions;
 
     constructor(data : BaseEntryGetPlaybackContextActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaPlaybackContextOptions', responseConstructor : KalturaPlaybackContextOptions  });
+        super(data, {responseType : 'o', responseSubType : 'KalturaPlaybackContext', responseConstructor : KalturaPlaybackContext  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

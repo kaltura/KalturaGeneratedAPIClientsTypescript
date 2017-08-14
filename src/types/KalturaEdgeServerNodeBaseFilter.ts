@@ -4,13 +4,17 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaDeliveryServerNodeFilter, KalturaDeliveryServerNodeFilterArgs } from './KalturaDeliveryServerNodeFilter';
 
 export interface KalturaEdgeServerNodeBaseFilterArgs  extends KalturaDeliveryServerNodeFilterArgs {
-    
+    playbackDomainLike? : string;
+	playbackDomainMultiLikeOr? : string;
+	playbackDomainMultiLikeAnd? : string;
 }
 
 
 export class KalturaEdgeServerNodeBaseFilter extends KalturaDeliveryServerNodeFilter {
 
-    
+    playbackDomainLike : string;
+	playbackDomainMultiLikeOr : string;
+	playbackDomainMultiLikeAnd : string;
 
     constructor(data? : KalturaEdgeServerNodeBaseFilterArgs)
     {
@@ -23,7 +27,10 @@ export class KalturaEdgeServerNodeBaseFilter extends KalturaDeliveryServerNodeFi
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaEdgeServerNodeBaseFilter' }
+                objectType : { type : 'c', default : 'KalturaEdgeServerNodeBaseFilter' },
+				playbackDomainLike : { type : 's' },
+				playbackDomainMultiLikeOr : { type : 's' },
+				playbackDomainMultiLikeAnd : { type : 's' }
             }
         );
         return result;

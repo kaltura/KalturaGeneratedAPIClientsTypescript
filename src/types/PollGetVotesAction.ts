@@ -1,0 +1,40 @@
+
+import { KalturaObjectMetadata } from '../kaltura-object-base';
+
+
+import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+
+export interface PollGetVotesActionArgs  extends KalturaRequestArgs {
+    pollId : string;
+	answerIds : string;
+}
+
+/** 
+* Get Votes Action
+**/
+export class PollGetVotesAction extends KalturaRequest<string> {
+
+    pollId : string;
+	answerIds : string;
+
+    constructor(data : PollGetVotesActionArgs)
+    {
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                service : { type : 'c', default : 'poll_poll' },
+				action : { type : 'c', default : 'getVotes' },
+				pollId : { type : 's' },
+				answerIds : { type : 's' }
+            }
+        );
+        return result;
+    }
+}
+

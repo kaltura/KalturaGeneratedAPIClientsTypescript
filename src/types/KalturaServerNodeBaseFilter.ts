@@ -30,8 +30,9 @@ export interface KalturaServerNodeBaseFilterArgs  extends KalturaFilterArgs {
 	tagsMultiLikeAnd? : string;
 	dcEqual? : number;
 	dcIn? : string;
-	parentIdEqual? : number;
-	parentIdIn? : string;
+	parentIdLike? : string;
+	parentIdMultiLikeOr? : string;
+	parentIdMultiLikeAnd? : string;
 }
 
 
@@ -61,8 +62,9 @@ export class KalturaServerNodeBaseFilter extends KalturaFilter {
 	tagsMultiLikeAnd : string;
 	dcEqual : number;
 	dcIn : string;
-	parentIdEqual : number;
-	parentIdIn : string;
+	parentIdLike : string;
+	parentIdMultiLikeOr : string;
+	parentIdMultiLikeAnd : string;
 
     constructor(data? : KalturaServerNodeBaseFilterArgs)
     {
@@ -100,8 +102,9 @@ export class KalturaServerNodeBaseFilter extends KalturaFilter {
 				tagsMultiLikeAnd : { type : 's' },
 				dcEqual : { type : 'n' },
 				dcIn : { type : 's' },
-				parentIdEqual : { type : 'n' },
-				parentIdIn : { type : 's' }
+				parentIdLike : { type : 's' },
+				parentIdMultiLikeOr : { type : 's' },
+				parentIdMultiLikeAnd : { type : 's' }
             }
         );
         return result;

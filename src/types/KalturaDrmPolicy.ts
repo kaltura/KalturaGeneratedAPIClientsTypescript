@@ -6,6 +6,7 @@ import { KalturaDrmPolicyStatus } from './KalturaDrmPolicyStatus';
 import { KalturaDrmLicenseScenario } from './KalturaDrmLicenseScenario';
 import { KalturaDrmLicenseType } from './KalturaDrmLicenseType';
 import { KalturaDrmLicenseExpirationPolicy } from './KalturaDrmLicenseExpirationPolicy';
+import { KalturaKeyValue } from './KalturaKeyValue';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaDrmPolicyArgs  extends KalturaObjectBaseArgs {
@@ -19,6 +20,7 @@ export interface KalturaDrmPolicyArgs  extends KalturaObjectBaseArgs {
 	licenseType? : KalturaDrmLicenseType;
 	licenseExpirationPolicy? : KalturaDrmLicenseExpirationPolicy;
 	duration? : number;
+	licenseParams? : KalturaKeyValue[];
 }
 
 
@@ -37,10 +39,12 @@ export class KalturaDrmPolicy extends KalturaObjectBase {
 	duration : number;
 	readonly createdAt : number;
 	readonly updatedAt : number;
+	licenseParams : KalturaKeyValue[];
 
     constructor(data? : KalturaDrmPolicyArgs)
     {
         super(data);
+        if (typeof this.licenseParams === 'undefined') this.licenseParams = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -62,7 +66,8 @@ export class KalturaDrmPolicy extends KalturaObjectBase {
 				licenseExpirationPolicy : { type : 'en', subTypeConstructor : KalturaDrmLicenseExpirationPolicy, subType : 'KalturaDrmLicenseExpirationPolicy' },
 				duration : { type : 'n' },
 				createdAt : { type : 'n', readOnly : true },
-				updatedAt : { type : 'n', readOnly : true }
+				updatedAt : { type : 'n', readOnly : true },
+				licenseParams : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
         );
         return result;

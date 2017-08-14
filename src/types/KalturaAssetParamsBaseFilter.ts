@@ -5,7 +5,9 @@ import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelatedFilter';
 
 export interface KalturaAssetParamsBaseFilterArgs  extends KalturaRelatedFilterArgs {
-    systemNameEqual? : string;
+    idEqual? : number;
+	idIn? : string;
+	systemNameEqual? : string;
 	systemNameIn? : string;
 	isSystemDefaultEqual? : KalturaNullableBoolean;
 	tagsEqual? : string;
@@ -14,7 +16,9 @@ export interface KalturaAssetParamsBaseFilterArgs  extends KalturaRelatedFilterA
 
 export class KalturaAssetParamsBaseFilter extends KalturaRelatedFilter {
 
-    systemNameEqual : string;
+    idEqual : number;
+	idIn : string;
+	systemNameEqual : string;
 	systemNameIn : string;
 	isSystemDefaultEqual : KalturaNullableBoolean;
 	tagsEqual : string;
@@ -31,6 +35,8 @@ export class KalturaAssetParamsBaseFilter extends KalturaRelatedFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaAssetParamsBaseFilter' },
+				idEqual : { type : 'n' },
+				idIn : { type : 's' },
 				systemNameEqual : { type : 's' },
 				systemNameIn : { type : 's' },
 				isSystemDefaultEqual : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },

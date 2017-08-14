@@ -2,10 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
+import { KalturaAttachmentServeOptions } from './KalturaAttachmentServeOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AttachmentAssetServeActionArgs  extends KalturaRequestArgs {
     attachmentAssetId : string;
+	serveOptions? : KalturaAttachmentServeOptions;
 }
 
 /** 
@@ -14,6 +16,7 @@ export interface AttachmentAssetServeActionArgs  extends KalturaRequestArgs {
 export class AttachmentAssetServeAction extends KalturaRequest<string> {
 
     attachmentAssetId : string;
+	serveOptions : KalturaAttachmentServeOptions;
 
     constructor(data : AttachmentAssetServeActionArgs)
     {
@@ -28,7 +31,8 @@ export class AttachmentAssetServeAction extends KalturaRequest<string> {
             {
                 service : { type : 'c', default : 'attachment_attachmentasset' },
 				action : { type : 'c', default : 'serve' },
-				attachmentAssetId : { type : 's' }
+				attachmentAssetId : { type : 's' },
+				serveOptions : { type : 'o', subTypeConstructor : KalturaAttachmentServeOptions, subType : 'KalturaAttachmentServeOptions' }
             }
         );
         return result;

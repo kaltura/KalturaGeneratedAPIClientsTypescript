@@ -32,6 +32,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	mergeEntryLists? : number;
 	notificationsConfig? : string;
 	maxUploadSize? : number;
+	partnerPackage? : number;
 	allowMultiNotification? : number;
 	adminUserId? : string;
 	firstName? : string;
@@ -39,6 +40,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	country? : string;
 	state? : string;
 	additionalParams? : KalturaKeyValue[];
+	partnerParentId? : number;
 	referenceId? : string;
 }
 
@@ -69,7 +71,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	mergeEntryLists : number;
 	notificationsConfig : string;
 	maxUploadSize : number;
-	readonly partnerPackage : number;
+	partnerPackage : number;
 	readonly secret : string;
 	readonly adminSecret : string;
 	readonly cmsPassword : string;
@@ -94,7 +96,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly cdnHost : string;
 	readonly isFirstLogin : boolean;
 	readonly logoutUrl : string;
-	readonly partnerParentId : number;
+	partnerParentId : number;
 	readonly crmId : string;
 	referenceId : string;
 	readonly timeAlignedRenditions : boolean;
@@ -138,7 +140,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				mergeEntryLists : { type : 'n' },
 				notificationsConfig : { type : 's' },
 				maxUploadSize : { type : 'n' },
-				partnerPackage : { type : 'n', readOnly : true },
+				partnerPackage : { type : 'n' },
 				secret : { type : 's', readOnly : true },
 				adminSecret : { type : 's', readOnly : true },
 				cmsPassword : { type : 's', readOnly : true },
@@ -163,7 +165,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				cdnHost : { type : 's', readOnly : true },
 				isFirstLogin : { type : 'b', readOnly : true },
 				logoutUrl : { type : 's', readOnly : true },
-				partnerParentId : { type : 'n', readOnly : true },
+				partnerParentId : { type : 'n' },
 				crmId : { type : 's', readOnly : true },
 				referenceId : { type : 's' },
 				timeAlignedRenditions : { type : 'b', readOnly : true }

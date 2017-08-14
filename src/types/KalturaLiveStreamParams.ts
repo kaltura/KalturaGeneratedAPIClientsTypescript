@@ -11,6 +11,7 @@ export interface KalturaLiveStreamParamsArgs  extends KalturaObjectBaseArgs {
 	codec? : string;
 	frameRate? : number;
 	keyFrameInterval? : number;
+	language? : string;
 }
 
 
@@ -23,6 +24,7 @@ export class KalturaLiveStreamParams extends KalturaObjectBase {
 	codec : string;
 	frameRate : number;
 	keyFrameInterval : number;
+	language : string;
 
     constructor(data? : KalturaLiveStreamParamsArgs)
     {
@@ -42,7 +44,8 @@ export class KalturaLiveStreamParams extends KalturaObjectBase {
 				height : { type : 'n' },
 				codec : { type : 's' },
 				frameRate : { type : 'n' },
-				keyFrameInterval : { type : 'n' }
+				keyFrameInterval : { type : 'n' },
+				language : { type : 's' }
             }
         );
         return result;

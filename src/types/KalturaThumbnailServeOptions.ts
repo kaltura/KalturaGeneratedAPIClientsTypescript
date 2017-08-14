@@ -1,18 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaAssetServeOptions, KalturaAssetServeOptionsArgs } from './KalturaAssetServeOptions';
 
-export interface KalturaThumbnailServeOptionsArgs  extends KalturaObjectBaseArgs {
-    download? : boolean;
-	referrer? : string;
+export interface KalturaThumbnailServeOptionsArgs  extends KalturaAssetServeOptionsArgs {
+    
 }
 
 
-export class KalturaThumbnailServeOptions extends KalturaObjectBase {
+export class KalturaThumbnailServeOptions extends KalturaAssetServeOptions {
 
-    download : boolean;
-	referrer : string;
+    
 
     constructor(data? : KalturaThumbnailServeOptionsArgs)
     {
@@ -25,9 +23,7 @@ export class KalturaThumbnailServeOptions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaThumbnailServeOptions' },
-				download : { type : 'b' },
-				referrer : { type : 's' }
+                objectType : { type : 'c', default : 'KalturaThumbnailServeOptions' }
             }
         );
         return result;

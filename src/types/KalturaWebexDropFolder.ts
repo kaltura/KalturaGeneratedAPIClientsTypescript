@@ -10,6 +10,8 @@ export interface KalturaWebexDropFolderArgs  extends KalturaDropFolderArgs {
 	webexPartnerId? : string;
 	webexServiceUrl? : string;
 	webexHostIdMetadataFieldName? : string;
+	deleteFromRecycleBin? : boolean;
+	webexServiceType? : string;
 }
 
 
@@ -21,6 +23,8 @@ export class KalturaWebexDropFolder extends KalturaDropFolder {
 	webexPartnerId : string;
 	webexServiceUrl : string;
 	webexHostIdMetadataFieldName : string;
+	deleteFromRecycleBin : boolean;
+	webexServiceType : string;
 
     constructor(data? : KalturaWebexDropFolderArgs)
     {
@@ -39,7 +43,9 @@ export class KalturaWebexDropFolder extends KalturaDropFolder {
 				webexSiteId : { type : 'n' },
 				webexPartnerId : { type : 's' },
 				webexServiceUrl : { type : 's' },
-				webexHostIdMetadataFieldName : { type : 's' }
+				webexHostIdMetadataFieldName : { type : 's' },
+				deleteFromRecycleBin : { type : 'b' },
+				webexServiceType : { type : 's' }
             }
         );
         return result;

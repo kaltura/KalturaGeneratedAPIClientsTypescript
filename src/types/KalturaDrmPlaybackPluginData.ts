@@ -1,17 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaDrmSchemeName } from './KalturaDrmSchemeName';
 import { KalturaPluginData, KalturaPluginDataArgs } from './KalturaPluginData';
 
 export interface KalturaDrmPlaybackPluginDataArgs  extends KalturaPluginDataArgs {
-    scheme? : string;
+    scheme? : KalturaDrmSchemeName;
 	licenseURL? : string;
 }
 
 
 export class KalturaDrmPlaybackPluginData extends KalturaPluginData {
 
-    scheme : string;
+    scheme : KalturaDrmSchemeName;
 	licenseURL : string;
 
     constructor(data? : KalturaDrmPlaybackPluginDataArgs)
@@ -26,7 +27,7 @@ export class KalturaDrmPlaybackPluginData extends KalturaPluginData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDrmPlaybackPluginData' },
-				scheme : { type : 's' },
+				scheme : { type : 'es', subTypeConstructor : KalturaDrmSchemeName, subType : 'KalturaDrmSchemeName' },
 				licenseURL : { type : 's' }
             }
         );

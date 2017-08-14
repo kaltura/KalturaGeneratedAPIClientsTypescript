@@ -10,7 +10,8 @@ export interface KalturaPushNotificationDataArgs  extends KalturaObjectBaseArgs 
 
 export class KalturaPushNotificationData extends KalturaObjectBase {
 
-    readonly key : string;
+    readonly queueName : string;
+	readonly queueKey : string;
 	readonly url : string;
 
     constructor(data? : KalturaPushNotificationDataArgs)
@@ -25,7 +26,8 @@ export class KalturaPushNotificationData extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaPushNotificationData' },
-				key : { type : 's', readOnly : true },
+				queueName : { type : 's', readOnly : true },
+				queueKey : { type : 's', readOnly : true },
 				url : { type : 's', readOnly : true }
             }
         );

@@ -34,6 +34,7 @@ export interface KalturaFlavorParamsArgs  extends KalturaAssetParamsArgs {
 	multiStream? : string;
 	anamorphicPixels? : number;
 	isAvoidForcedKeyFrames? : number;
+	forcedKeyFramesMode? : number;
 	isCropIMX? : number;
 	optimizationPolicy? : number;
 	maxFrameRate? : number;
@@ -43,6 +44,7 @@ export interface KalturaFlavorParamsArgs  extends KalturaAssetParamsArgs {
 	subtitlesData? : string;
 	isEncrypted? : number;
 	contentAwareness? : number;
+	chunkedEncodeMode? : number;
 	clipOffset? : number;
 	clipDuration? : number;
 }
@@ -77,6 +79,7 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 	multiStream : string;
 	anamorphicPixels : number;
 	isAvoidForcedKeyFrames : number;
+	forcedKeyFramesMode : number;
 	isCropIMX : number;
 	optimizationPolicy : number;
 	maxFrameRate : number;
@@ -86,6 +89,7 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 	subtitlesData : string;
 	isEncrypted : number;
 	contentAwareness : number;
+	chunkedEncodeMode : number;
 	clipOffset : number;
 	clipDuration : number;
 
@@ -128,6 +132,7 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 				multiStream : { type : 's' },
 				anamorphicPixels : { type : 'n' },
 				isAvoidForcedKeyFrames : { type : 'n' },
+				forcedKeyFramesMode : { type : 'n' },
 				isCropIMX : { type : 'n' },
 				optimizationPolicy : { type : 'n' },
 				maxFrameRate : { type : 'n' },
@@ -137,6 +142,7 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 				subtitlesData : { type : 's' },
 				isEncrypted : { type : 'n' },
 				contentAwareness : { type : 'n' },
+				chunkedEncodeMode : { type : 'n' },
 				clipOffset : { type : 'n' },
 				clipDuration : { type : 'n' }
             }

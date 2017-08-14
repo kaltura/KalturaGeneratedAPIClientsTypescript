@@ -1,18 +1,20 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDataCenterContentResource, KalturaDataCenterContentResourceArgs } from './KalturaDataCenterContentResource';
+import { KalturaGenericDataCenterContentResource, KalturaGenericDataCenterContentResourceArgs } from './KalturaGenericDataCenterContentResource';
 
-export interface KalturaServerFileResourceArgs  extends KalturaDataCenterContentResourceArgs {
+export interface KalturaServerFileResourceArgs  extends KalturaGenericDataCenterContentResourceArgs {
     localFilePath? : string;
+	keepOriginalFile? : boolean;
 }
 
 /** 
 * Used to ingest media file that is already accessible on the shared disc.
 **/
-export class KalturaServerFileResource extends KalturaDataCenterContentResource {
+export class KalturaServerFileResource extends KalturaGenericDataCenterContentResource {
 
     localFilePath : string;
+	keepOriginalFile : boolean;
 
     constructor(data? : KalturaServerFileResourceArgs)
     {
@@ -26,7 +28,8 @@ export class KalturaServerFileResource extends KalturaDataCenterContentResource 
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaServerFileResource' },
-				localFilePath : { type : 's' }
+				localFilePath : { type : 's' },
+				keepOriginalFile : { type : 'b' }
             }
         );
         return result;

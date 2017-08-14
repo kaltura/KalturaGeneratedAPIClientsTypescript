@@ -19,6 +19,8 @@ export class KalturaGeoCoderType extends KalturaObjectBase {
         return this._value;
     }
 
-    static kaltura = new KalturaGeoCoderType('1');
+    static digitalElement = new KalturaGeoCoderType('3');
+	static kaltura = new KalturaGeoCoderType('1');
+	static maxMind = new KalturaGeoCoderType('2');
 }
 KalturaTypesFactory.registerType('KalturaGeoCoderType',KalturaGeoCoderType);

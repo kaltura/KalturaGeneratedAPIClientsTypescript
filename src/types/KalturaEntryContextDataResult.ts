@@ -23,7 +23,7 @@ export interface KalturaEntryContextDataResultArgs  extends KalturaContextDataRe
 	accessControlActions? : KalturaRuleAction[];
 	flavorAssets? : KalturaFlavorAsset[];
 	msDuration? : number;
-	pluginData? : KalturaPluginData[];
+	pluginData? : { [key : string] : KalturaPluginData};
 }
 
 
@@ -44,7 +44,7 @@ export class KalturaEntryContextDataResult extends KalturaContextDataResult {
 	accessControlActions : KalturaRuleAction[];
 	flavorAssets : KalturaFlavorAsset[];
 	msDuration : number;
-	pluginData : KalturaPluginData[];
+	pluginData : { [key : string] : KalturaPluginData};
 
     constructor(data? : KalturaEntryContextDataResultArgs)
     {
@@ -52,7 +52,6 @@ export class KalturaEntryContextDataResult extends KalturaContextDataResult {
         if (typeof this.accessControlMessages === 'undefined') this.accessControlMessages = [];
 		if (typeof this.accessControlActions === 'undefined') this.accessControlActions = [];
 		if (typeof this.flavorAssets === 'undefined') this.flavorAssets = [];
-		if (typeof this.pluginData === 'undefined') this.pluginData = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -77,7 +76,7 @@ export class KalturaEntryContextDataResult extends KalturaContextDataResult {
 				accessControlActions : { type : 'a', subTypeConstructor : KalturaRuleAction, subType : 'KalturaRuleAction' },
 				flavorAssets : { type : 'a', subTypeConstructor : KalturaFlavorAsset, subType : 'KalturaFlavorAsset' },
 				msDuration : { type : 'n' },
-				pluginData : { type : 'a', subTypeConstructor : KalturaPluginData, subType : 'KalturaPluginData' }
+				pluginData : { type : 'm', subTypeConstructor : KalturaPluginData, subType : 'KalturaPluginData' }
             }
         );
         return result;

@@ -21,11 +21,13 @@ export class KalturaMetadataObjectType extends KalturaObjectBase {
 
     static adCuePoint = new KalturaMetadataObjectType('adCuePointMetadata.AdCuePoint');
 	static annotation = new KalturaMetadataObjectType('annotationMetadata.Annotation');
+	static answerCuePoint = new KalturaMetadataObjectType('quiz.AnswerCuePoint');
 	static category = new KalturaMetadataObjectType('2');
 	static codeCuePoint = new KalturaMetadataObjectType('codeCuePointMetadata.CodeCuePoint');
 	static dynamicObject = new KalturaMetadataObjectType('5');
 	static entry = new KalturaMetadataObjectType('1');
 	static partner = new KalturaMetadataObjectType('4');
+	static questionCuePoint = new KalturaMetadataObjectType('quiz.QuestionCuePoint');
 	static thumbCuePoint = new KalturaMetadataObjectType('thumbCuePointMetadata.thumbCuePoint');
 	static user = new KalturaMetadataObjectType('3');
 }

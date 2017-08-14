@@ -10,6 +10,7 @@ export interface KalturaScheduleResourceBaseFilterArgs  extends KalturaRelatedFi
 	idNotIn? : string;
 	parentIdEqual? : number;
 	parentIdIn? : string;
+	nameEqual? : string;
 	systemNameEqual? : string;
 	systemNameIn? : string;
 	statusEqual? : KalturaScheduleResourceStatus;
@@ -31,6 +32,7 @@ export class KalturaScheduleResourceBaseFilter extends KalturaRelatedFilter {
 	idNotIn : string;
 	parentIdEqual : number;
 	parentIdIn : string;
+	nameEqual : string;
 	systemNameEqual : string;
 	systemNameIn : string;
 	statusEqual : KalturaScheduleResourceStatus;
@@ -60,6 +62,7 @@ export class KalturaScheduleResourceBaseFilter extends KalturaRelatedFilter {
 				idNotIn : { type : 's' },
 				parentIdEqual : { type : 'n' },
 				parentIdIn : { type : 's' },
+				nameEqual : { type : 's' },
 				systemNameEqual : { type : 's' },
 				systemNameIn : { type : 's' },
 				statusEqual : { type : 'en', subTypeConstructor : KalturaScheduleResourceStatus, subType : 'KalturaScheduleResourceStatus' },

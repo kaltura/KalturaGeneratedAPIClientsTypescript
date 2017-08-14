@@ -3,11 +3,13 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUserEntryStatus } from './KalturaUserEntryStatus';
 import { KalturaUserEntryType } from './KalturaUserEntryType';
+import { KalturaUserEntryExtendedStatus } from './KalturaUserEntryExtendedStatus';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUserEntryArgs  extends KalturaObjectBaseArgs {
     entryId? : string;
 	userId? : string;
+	extendedStatus? : KalturaUserEntryExtendedStatus;
 }
 
 
@@ -21,6 +23,7 @@ export class KalturaUserEntry extends KalturaObjectBase {
 	readonly createdAt : Date;
 	readonly updatedAt : Date;
 	readonly type : KalturaUserEntryType;
+	extendedStatus : KalturaUserEntryExtendedStatus;
 
     constructor(data? : KalturaUserEntryArgs)
     {
@@ -41,7 +44,8 @@ export class KalturaUserEntry extends KalturaObjectBase {
 				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaUserEntryStatus, subType : 'KalturaUserEntryStatus' },
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
-				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaUserEntryType, subType : 'KalturaUserEntryType' }
+				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaUserEntryType, subType : 'KalturaUserEntryType' },
+				extendedStatus : { type : 'es', subTypeConstructor : KalturaUserEntryExtendedStatus, subType : 'KalturaUserEntryExtendedStatus' }
             }
         );
         return result;

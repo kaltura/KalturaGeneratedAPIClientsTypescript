@@ -12,6 +12,7 @@ export interface LiveChannelSetRecordedContentActionArgs  extends KalturaRequest
 	resource : KalturaDataCenterContentResource;
 	duration : number;
 	recordedEntryId? : string;
+	flavorParamsId? : number;
 }
 
 /** 
@@ -24,6 +25,7 @@ export class LiveChannelSetRecordedContentAction extends KalturaRequest<KalturaL
 	resource : KalturaDataCenterContentResource;
 	duration : number;
 	recordedEntryId : string;
+	flavorParamsId : number;
 
     constructor(data : LiveChannelSetRecordedContentActionArgs)
     {
@@ -42,7 +44,8 @@ export class LiveChannelSetRecordedContentAction extends KalturaRequest<KalturaL
 				mediaServerIndex : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' },
 				resource : { type : 'o', subTypeConstructor : KalturaDataCenterContentResource, subType : 'KalturaDataCenterContentResource' },
 				duration : { type : 'n' },
-				recordedEntryId : { type : 's' }
+				recordedEntryId : { type : 's' },
+				flavorParamsId : { type : 'n' }
             }
         );
         return result;

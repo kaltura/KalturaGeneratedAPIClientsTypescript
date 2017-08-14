@@ -22,6 +22,7 @@ export class KalturaBatchJobType extends KalturaObjectBase {
     static bulkdownload = new KalturaBatchJobType('19');
 	static bulkupload = new KalturaBatchJobType('4');
 	static captureThumb = new KalturaBatchJobType('30');
+	static chunkedEncodeJobScheduler = new KalturaBatchJobType('43');
 	static cleanup = new KalturaBatchJobType('17');
 	static concat = new KalturaBatchJobType('35');
 	static convert = new KalturaBatchJobType('0');

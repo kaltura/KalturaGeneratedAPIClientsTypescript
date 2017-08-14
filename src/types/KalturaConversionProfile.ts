@@ -25,6 +25,10 @@ export interface KalturaConversionProfileArgs  extends KalturaObjectBaseArgs {
 	storageProfileId? : number;
 	mediaParserType? : KalturaMediaParserType;
 	calculateComplexity? : KalturaNullableBoolean;
+	collectionTags? : string;
+	conditionalProfiles? : string;
+	detectGOP? : number;
+	mediaInfoXslTransformation? : string;
 }
 
 
@@ -50,6 +54,10 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 	storageProfileId : number;
 	mediaParserType : KalturaMediaParserType;
 	calculateComplexity : KalturaNullableBoolean;
+	collectionTags : string;
+	conditionalProfiles : string;
+	detectGOP : number;
+	mediaInfoXslTransformation : string;
 
     constructor(data? : KalturaConversionProfileArgs)
     {
@@ -82,7 +90,11 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 				xslTransformation : { type : 's' },
 				storageProfileId : { type : 'n' },
 				mediaParserType : { type : 'es', subTypeConstructor : KalturaMediaParserType, subType : 'KalturaMediaParserType' },
-				calculateComplexity : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				calculateComplexity : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				collectionTags : { type : 's' },
+				conditionalProfiles : { type : 's' },
+				detectGOP : { type : 'n' },
+				mediaInfoXslTransformation : { type : 's' }
             }
         );
         return result;

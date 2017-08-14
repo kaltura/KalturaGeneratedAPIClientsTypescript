@@ -26,6 +26,7 @@ export class KalturaObjectTaskType extends KalturaObjectBase {
 	static dispatchEventNotification = new KalturaObjectTaskType('scheduledTaskEventNotification.DispatchEventNotification');
 	static distribute = new KalturaObjectTaskType('scheduledTaskContentDistribution.Distribute');
 	static executeMetadataXslt = new KalturaObjectTaskType('scheduledTaskMetadata.ExecuteMetadataXslt');
+	static mailNotification = new KalturaObjectTaskType('8');
 	static modifyCategories = new KalturaObjectTaskType('2');
 	static modifyEntry = new KalturaObjectTaskType('7');
 	static storageExport = new KalturaObjectTaskType('6');

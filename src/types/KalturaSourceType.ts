@@ -24,6 +24,7 @@ export class KalturaSourceType extends KalturaObjectBase {
 	static clip = new KalturaSourceType('35');
 	static file = new KalturaSourceType('1');
 	static kalturaRecordedLive = new KalturaSourceType('36');
+	static lectureCapture = new KalturaSourceType('37');
 	static limelightLive = new KalturaSourceType('limeLight.LIVE_STREAM');
 	static liveChannel = new KalturaSourceType('33');
 	static liveStream = new KalturaSourceType('32');

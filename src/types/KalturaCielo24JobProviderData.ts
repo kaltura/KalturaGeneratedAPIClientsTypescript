@@ -14,6 +14,7 @@ export interface KalturaCielo24JobProviderDataArgs  extends KalturaIntegrationJo
 	fidelity? : KalturaCielo24Fidelity;
 	spokenLanguage? : KalturaLanguage;
 	replaceMediaContent? : boolean;
+	additionalParameters? : string;
 }
 
 
@@ -29,6 +30,7 @@ export class KalturaCielo24JobProviderData extends KalturaIntegrationJobProvider
 	readonly baseUrl : string;
 	spokenLanguage : KalturaLanguage;
 	replaceMediaContent : boolean;
+	additionalParameters : string;
 
     constructor(data? : KalturaCielo24JobProviderDataArgs)
     {
@@ -51,7 +53,8 @@ export class KalturaCielo24JobProviderData extends KalturaIntegrationJobProvider
 				password : { type : 's', readOnly : true },
 				baseUrl : { type : 's', readOnly : true },
 				spokenLanguage : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
-				replaceMediaContent : { type : 'b' }
+				replaceMediaContent : { type : 'b' },
+				additionalParameters : { type : 's' }
             }
         );
         return result;

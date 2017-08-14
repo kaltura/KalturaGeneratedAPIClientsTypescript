@@ -8,6 +8,7 @@ import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 export interface KalturaFlavorAssetArgs  extends KalturaAssetArgs {
     flavorParamsId? : number;
 	language? : KalturaLanguage;
+	label? : string;
 }
 
 
@@ -24,7 +25,7 @@ export class KalturaFlavorAsset extends KalturaAsset {
 	readonly videoCodecId : string;
 	readonly status : KalturaFlavorAssetStatus;
 	language : KalturaLanguage;
-	readonly label : string;
+	label : string;
 
     constructor(data? : KalturaFlavorAssetArgs)
     {
@@ -49,7 +50,7 @@ export class KalturaFlavorAsset extends KalturaAsset {
 				videoCodecId : { type : 's', readOnly : true },
 				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaFlavorAssetStatus, subType : 'KalturaFlavorAssetStatus' },
 				language : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
-				label : { type : 's', readOnly : true }
+				label : { type : 's' }
             }
         );
         return result;
