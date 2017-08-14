@@ -8,19 +8,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* compile issues when typescript detect accepted types as array of classes that inherit from KalturaObjectBase ([efe50aa](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/efe50aa))
+* fix 'acceptedTypes' property compilation issue. ([efe50aa](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/efe50aa))
 
 
 ### Features
 
 * attach generated schema 'apiVersion' to each request ([5e5e2c8](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/5e5e2c8))
-* support properties of type map ([c866ca2](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/c866ca2))
+* support kaltura object properties of type map ([c866ca2](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/c866ca2))
 * update services/actions ([46beb73](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/46beb73))
 
 
 ### BREAKING CHANGES
 
-* changes in public api
+* changes in public api (services/actions/objects)
 
 
 
