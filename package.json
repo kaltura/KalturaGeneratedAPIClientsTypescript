@@ -1,6 +1,6 @@
 {
   "name": "kaltura-typescript-client",
-  "public": false,
+  "private": true,
   "version": "4.0.0",
   "description": "Kaltura Typescript client",
   "keywords": [
@@ -25,10 +25,7 @@
     "test": "karma start",
     "test:watch": "karma start --no-single-run --auto-watch",
     "watch": "gulp watch",
-    "release": "standard-version",
-    "wml": "wml",
-    "wml:sync": "wml once",
-    "wml:watch": "wml start"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -77,10 +74,10 @@
     "tslint-loader": "3.2.1",
     "typescript": "2.2.0",
     "webpack": "2.2.0",
-    "wml": "github:esakal/wml",
     "yargs": "^5.0.0"
   },
   "engines": {
-    "node": ">= 7.0.0"
+    "node": ">= 7.0.0",
+    "npm": ">= 5.0.0"
   }
 }

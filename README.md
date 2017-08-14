@@ -10,16 +10,11 @@ This library have **_zero dependencies_** at runtime and it can be used in any J
 
  >Visit our [live demonstration](https://goo.gl/c02JX2) for code snippets and common use cases.
 
- ## Technology stack and conventions
- This package use the following technologies:
- * [TypeScript](http://www.typescriptlang.org/) language (superset of Javascript).
- * [Yarn](https://yarnpkg.com/en/) as our dependency management.
-
 ## Installation
 
-Install using `yarn`:
+use 'npm' to get the library
 ```bash
-$ yarn add kaltura-typescript-client
+$ npm install kaltura-typescript-client
 ```
 
 ## Instructions
@@ -51,6 +46,7 @@ The following is a list of all features supported by the library:
    - [x] Simple types (number, string, boolean).
    - [x] Enums (both numeric enums or string enums).
    - [x] Kaltura objects including inheritance and fallback mechanism.
+   - [x] Kaltura array & map
 - [x] Handle 'readonly' fields, guard against mutating them or sending them to the server.
 - [x] Ability to upload files including abort & retry operations.
 - [x] Hide complex server API syntax such as:
@@ -80,20 +76,12 @@ The following is a list of all features supported by the library:
 # Building the sources
 > This library is auto-generated using `kaltura/clients-generator` php engine. Feel free to clone, build and play with this library but in order to submit PR you should work against the [kaltura/clients-generator](https://github.com/kaltura/clients-generator) repo.
 
-## Using yarn to manage dependencies
-This project uses `yarn` to manage dependencies. To get the dependencies you will need to run `yarn install`.
-
-To check if you already have `yarn` installed on you machine run the following:
-```bash
-$ yarn --version
-```
-If you don't have `yarn` install visit the following [link](https://yarnpkg.com/en/docs/install).
 
 ## Building the client library
 After cloning the repo you should install dependent libraries:
 ```bash
-$ yarn install
-$ yarn run build
+$ npm install
+$ npm run build
 ```
 
 ## Running integration tests
