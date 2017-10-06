@@ -32,7 +32,13 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T>
         return Object.keys(metadataProperties).find(propertyName => metadataProperties[propertyName].type === 'f');
     }
 
-    public getFormData()
+    public getFileData(): File {
+      const formDataPropertyName = this._getFormDataPropertyName();
+
+      return formDataPropertyName ? this[formDataPropertyName] : null;
+    }
+
+    public getFormData(): FormData
     {
         let result = null;
         const formDataPropertyName = this._getFormDataPropertyName();
