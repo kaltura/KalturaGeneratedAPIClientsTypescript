@@ -104,18 +104,18 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
           progressCallback.apply(request, [Math.floor(e.loaded / e.total * chunkSize) + loaded, fileSize]);
         };
       };
-      const xhrStateChangeHandler = (xhr) => {
-        if (xhr.readyState === 4) {
+      const xhrStateChangeHandler = (request) => {
+        if (request.readyState === 4) {
           let resp;
 
           try {
-            if (xhr.status === 200) {
-              resp = JSON.parse(xhr.response);
+            if (request.status === 200) {
+              resp = JSON.parse(request.response);
             } else {
-              resp = new Error(xhr.responseText);
+              resp = new Error(request.responseText);
             }
           } catch (e) {
-            resp = new Error(xhr.responseText);
+            resp = new Error(request.responseText);
           }
 
           if (resp instanceof Error) {
