@@ -97,25 +97,24 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
       let xhr;
 
       const progressCallback = request._getProgressCallback();
-      const getProgressCallbackHandler = (loaded: number) => {
+      const getProgressCallbackHandler = (loaded: number, finalChunk = false) => {
         return (e) => {
-          // TODO [kmcng] calculate correct progress
-          console.warn(Math.floor(e.loaded / e.total * chunkSize) + loaded);
-          progressCallback.apply(request, [Math.floor(e.loaded / e.total * chunkSize) + loaded, fileSize]);
+          const chunk = finalChunk ? fileSize - loaded : chunkSize;
+          progressCallback.apply(request, [Math.floor(e.loaded / e.total * chunk) + loaded, fileSize]);
         };
       };
-      const xhrStateChangeHandler = (request) => {
-        if (request.readyState === 4) {
+      const xhrStateChangeHandler = (xhrRequest) => {
+        if (xhrRequest.readyState === 4) {
           let resp;
 
           try {
-            if (request.status === 200) {
-              resp = JSON.parse(request.response);
+            if (xhrRequest.status === 200) {
+              resp = JSON.parse(xhrRequest.response);
             } else {
-              resp = new Error(request.responseText);
+              resp = new Error(xhrRequest.responseText);
             }
           } catch (e) {
-            resp = new Error(request.responseText);
+            resp = new Error(xhrRequest.responseText);
           }
 
           if (resp instanceof Error) {
@@ -138,7 +137,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
               data.append("uploadTokenId", parameters.ks);
               data.append("finalChunk", Number(parameters.finalChunk));
 
-              xhr = this._chunkUpload(data, parameters, xhrStateChangeHandler, getProgressCallbackHandler(start));
+              xhr = this._chunkUpload(data, parameters, xhrStateChangeHandler, getProgressCallbackHandler(start, parameters.finalChunk));
             } else {
               resolve(resp);
             }
