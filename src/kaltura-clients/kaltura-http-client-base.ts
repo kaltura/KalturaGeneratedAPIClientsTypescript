@@ -125,17 +125,13 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
               parameters.finalChunk = (fileSize - start) <= chunkSize;
               parameters.resumeAt = start;
+              parameters.resume = true;
 
               end = parameters.finalChunk ? fileSize : start + chunkSize;
 
               data = new FormData();
               data.append("fileName", file.name);
               data.append("fileData", file.slice(start, end, file.type), file.name);
-
-              // TODO [kmcng] might not be needed
-              data.append("resumeAt", parameters.resumeAt);
-              data.append("uploadTokenId", parameters.ks);
-              data.append("finalChunk", Number(parameters.finalChunk));
 
               xhr = this._chunkUpload(data, parameters, xhrStateChangeHandler, getProgressCallbackHandler(start, parameters.finalChunk));
             } else {
@@ -147,16 +143,12 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
       parameters.finalChunk = fileSize <= chunkSize;
       parameters.resumeAt = 0;
+      parameters.resume = false;
 
       const fileData = fileSize > chunkSize ? file.slice(start, end, file.type) : file;
       data = new FormData();
       data.append("fileData", fileData, file.name);
       data.append("fileName", file.name);
-
-      // TODO [kmcng] might not be needed
-      data.append("resumeAt", parameters.resumeAt);
-      data.append("uploadTokenId", parameters.ks);
-      data.append("finalChunk", Number(parameters.finalChunk));
 
       xhr = this._chunkUpload(data, parameters, xhrStateChangeHandler, getProgressCallbackHandler(start));
 
