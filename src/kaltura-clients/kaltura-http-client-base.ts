@@ -19,7 +19,14 @@ interface KalturaFileUploadParams {
   action?: string;
 }
 
+interface RetryUploadData {
+  [uploadToken: string]: {
+    resumeAt: number;
+  };
+}
+
 export abstract class KalturaHttpClientBase extends KalturaClientBase {
+  private _retryUploadData: RetryUploadData = {};
 
   public endpointUrl: string;
 
@@ -76,6 +83,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
   }
 
   protected _transmitFileUploadRequest(request): CancelableAction {
+    console.warn(this._retryUploadData);
     return new CancelableAction((resolve, reject) => {
       const file = request.getFileData();
 
@@ -122,6 +130,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
           } else {
             if (!parameters.finalChunk) {
               start = Number(resp.uploadedFileSize);
+              this._retryUploadData[parameters.uploadTokenId] = { resumeAt: start };
 
               parameters.finalChunk = (fileSize - start) <= chunkSize;
               parameters.resumeAt = start;
@@ -135,15 +144,27 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
               xhr = this._chunkUpload(data, parameters, xhrStateChangeHandler, getProgressCallbackHandler(start, parameters.finalChunk));
             } else {
+              delete this._retryUploadData[parameters.uploadTokenId];
               resolve(resp);
             }
           }
         }
       };
 
-      parameters.finalChunk = fileSize <= chunkSize;
-      parameters.resumeAt = 0;
-      parameters.resume = false;
+      if (this._retryUploadData[parameters.uploadTokenId]) {
+        parameters.resumeAt = this._retryUploadData[parameters.uploadTokenId].resumeAt;
+        parameters.resume = parameters.resumeAt > 0;
+        parameters.finalChunk = (fileSize - parameters.resumeAt) <= chunkSize;
+        start = parameters.resumeAt;
+        end = parameters.finalChunk ? fileSize : start + chunkSize;
+        console.log(`log: [info] [kaltura-http-client-base]: Upload token has found (${parameters.uploadTokenId}), resume upload from: ${start}`);
+      } else {
+        parameters.resumeAt = 0;
+        parameters.resume = false;
+        parameters.finalChunk = fileSize <= chunkSize;
+        this._retryUploadData[parameters.uploadTokenId] = { resumeAt: start };
+        console.log("log: [info] [kaltura-http-client-base]: Start new upload");
+      }
 
       const fileData = fileSize > chunkSize ? file.slice(start, end, file.type) : file;
       data = new FormData();
@@ -156,11 +177,12 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
         if (!isComplete) {
           xhr.abort();
           isComplete = true;
+
+          delete this._retryUploadData[parameters.uploadTokenId];
         }
       };
     });
   }
-
   protected abstract _createCancelableAction(data: { endpoint: string, headers: any, body: {} }): CancelableAction;
 
 
