@@ -71,6 +71,7 @@ export class KalturaDeliveryProfileType extends KalturaObjectBase {
 	static vodPackagerDash = new KalturaDeliveryProfileType('68');
 	static vodPackagerHds = new KalturaDeliveryProfileType('63');
 	static vodPackagerHls = new KalturaDeliveryProfileType('61');
+	static vodPackagerHlsManifest = new KalturaDeliveryProfileType('69');
 	static vodPackagerMss = new KalturaDeliveryProfileType('67');
 }
 KalturaTypesFactory.registerType('KalturaDeliveryProfileType',KalturaDeliveryProfileType);

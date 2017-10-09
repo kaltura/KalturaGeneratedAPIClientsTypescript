@@ -14,7 +14,7 @@ export interface KalturaLiveChannelSegmentArgs  extends KalturaObjectBaseArgs {
 	channelId? : string;
 	entryId? : string;
 	triggerType? : KalturaLiveChannelSegmentTriggerType;
-	triggerSegmentId? : string;
+	triggerSegmentId? : number;
 	startTime? : number;
 	duration? : number;
 }
@@ -22,7 +22,7 @@ export interface KalturaLiveChannelSegmentArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaLiveChannelSegment extends KalturaObjectBase {
 
-    readonly id : string;
+    readonly id : number;
 	readonly partnerId : number;
 	readonly createdAt : number;
 	readonly updatedAt : number;
@@ -34,7 +34,7 @@ export class KalturaLiveChannelSegment extends KalturaObjectBase {
 	channelId : string;
 	entryId : string;
 	triggerType : KalturaLiveChannelSegmentTriggerType;
-	triggerSegmentId : string;
+	triggerSegmentId : number;
 	startTime : number;
 	duration : number;
 
@@ -50,7 +50,7 @@ export class KalturaLiveChannelSegment extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaLiveChannelSegment' },
-				id : { type : 's', readOnly : true },
+				id : { type : 'n', readOnly : true },
 				partnerId : { type : 'n', readOnly : true },
 				createdAt : { type : 'n', readOnly : true },
 				updatedAt : { type : 'n', readOnly : true },
@@ -62,7 +62,7 @@ export class KalturaLiveChannelSegment extends KalturaObjectBase {
 				channelId : { type : 's' },
 				entryId : { type : 's' },
 				triggerType : { type : 'es', subTypeConstructor : KalturaLiveChannelSegmentTriggerType, subType : 'KalturaLiveChannelSegmentTriggerType' },
-				triggerSegmentId : { type : 's' },
+				triggerSegmentId : { type : 'n' },
 				startTime : { type : 'n' },
 				duration : { type : 'n' }
             }
