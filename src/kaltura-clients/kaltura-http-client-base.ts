@@ -121,7 +121,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
             reject(resp);
           } else {
             if (!parameters.finalChunk) {
-              start += Number(resp.uploadedFileSize);
+              start = Number(resp.uploadedFileSize);
 
               parameters.finalChunk = (fileSize - start) <= chunkSize;
               parameters.resumeAt = start;
