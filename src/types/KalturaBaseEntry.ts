@@ -34,6 +34,7 @@ export interface KalturaBaseEntryArgs  extends KalturaObjectBaseArgs {
 	operationAttributes? : KalturaOperationAttributes[];
 	entitledUsersEdit? : string;
 	entitledUsersPublish? : string;
+	entitledUsersView? : string;
 	templateEntryId? : string;
 	displayInSearch? : KalturaEntryDisplayInSearchType;
 }
@@ -82,6 +83,7 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 	operationAttributes : KalturaOperationAttributes[];
 	entitledUsersEdit : string;
 	entitledUsersPublish : string;
+	entitledUsersView : string;
 	readonly capabilities : string;
 	templateEntryId : string;
 	displayInSearch : KalturaEntryDisplayInSearchType;
@@ -140,6 +142,7 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 				operationAttributes : { type : 'a', subTypeConstructor : KalturaOperationAttributes, subType : 'KalturaOperationAttributes' },
 				entitledUsersEdit : { type : 's' },
 				entitledUsersPublish : { type : 's' },
+				entitledUsersView : { type : 's' },
 				capabilities : { type : 's', readOnly : true },
 				templateEntryId : { type : 's' },
 				displayInSearch : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' }
