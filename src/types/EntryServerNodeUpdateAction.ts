@@ -9,7 +9,16 @@ export interface EntryServerNodeUpdateActionArgs  extends KalturaRequestArgs {
 	entryServerNode : KalturaEntryServerNode;
 }
 
-
+/**
+ * Build request payload for service 'entryServerNode' action 'update'.
+ *
+ * 
+ *
+ * Server response type:         KalturaEntryServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryServerNodeUpdateAction extends KalturaRequest<KalturaEntryServerNode> {
 
     id : number;

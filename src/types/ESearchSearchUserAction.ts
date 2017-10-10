@@ -11,7 +11,16 @@ export interface ESearchSearchUserActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaPager;
 }
 
-
+/**
+ * Build request payload for service 'eSearch' action 'searchUser'.
+ *
+ * 
+ *
+ * Server response type:         KalturaESearchResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ESearchSearchUserAction extends KalturaRequest<KalturaESearchResponse> {
 
     searchParams : KalturaESearchParams;

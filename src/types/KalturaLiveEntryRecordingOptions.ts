@@ -11,9 +11,7 @@ export interface KalturaLiveEntryRecordingOptionsArgs  extends KalturaObjectBase
 	shouldMakeHidden? : KalturaNullableBoolean;
 }
 
-/** 
-* A representation of a live stream recording entry configuration
-**/
+
 export class KalturaLiveEntryRecordingOptions extends KalturaObjectBase {
 
     shouldCopyEntitlement : KalturaNullableBoolean;

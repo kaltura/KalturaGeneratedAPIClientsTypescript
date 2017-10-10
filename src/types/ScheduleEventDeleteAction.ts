@@ -8,9 +8,16 @@ export interface ScheduleEventDeleteActionArgs  extends KalturaRequestArgs {
     scheduleEventId : number;
 }
 
-/** 
-* Mark the KalturaScheduleEvent object as deleted
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'delete'.
+ *
+ * Usage: Mark the KalturaScheduleEvent object as deleted
+ *
+ * Server response type:         KalturaScheduleEvent
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventDeleteAction extends KalturaRequest<KalturaScheduleEvent> {
 
     scheduleEventId : number;

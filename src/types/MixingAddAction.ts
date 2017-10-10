@@ -8,10 +8,17 @@ export interface MixingAddActionArgs  extends KalturaRequestArgs {
     mixEntry : KalturaMixEntry;
 }
 
-/** 
-* Adds a new mix.   If the dataContent is null, a default timeline will be
-* created.
-**/
+/**
+ * Build request payload for service 'mixing' action 'add'.
+ *
+ * Usage: Adds a new mix.
+ * If the dataContent is null, a default timeline will be created
+ *
+ * Server response type:         KalturaMixEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingAddAction extends KalturaRequest<KalturaMixEntry> {
 
     mixEntry : KalturaMixEntry;

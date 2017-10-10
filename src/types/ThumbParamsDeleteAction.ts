@@ -8,9 +8,16 @@ export interface ThumbParamsDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete Thumb Params by ID
-**/
+/**
+ * Build request payload for service 'thumbParams' action 'delete'.
+ *
+ * Usage: Delete Thumb Params by ID
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbParamsDeleteAction extends KalturaRequest<void> {
 
     id : number;

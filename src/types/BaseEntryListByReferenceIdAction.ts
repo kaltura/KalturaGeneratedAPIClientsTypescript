@@ -10,9 +10,16 @@ export interface BaseEntryListByReferenceIdActionArgs  extends KalturaRequestArg
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List base entries by filter according to reference id
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'listByReferenceId'.
+ *
+ * Usage: List base entries by filter according to reference id
+ *
+ * Server response type:         KalturaBaseEntryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryListByReferenceIdAction extends KalturaRequest<KalturaBaseEntryListResponse> {
 
     refId : string;

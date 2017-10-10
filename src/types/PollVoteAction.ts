@@ -10,9 +10,16 @@ export interface PollVoteActionArgs  extends KalturaRequestArgs {
 	answerIds : string;
 }
 
-/** 
-* Vote Action
-**/
+/**
+ * Build request payload for service 'poll' action 'vote'.
+ *
+ * Usage: Vote Action
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PollVoteAction extends KalturaRequest<string> {
 
     pollId : string;

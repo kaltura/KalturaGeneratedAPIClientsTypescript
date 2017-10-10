@@ -13,9 +13,16 @@ export interface PlaylistExecuteFromFiltersActionArgs  extends KalturaRequestArg
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Revrieve playlist for playing purpose, based on media entry filters
-**/
+/**
+ * Build request payload for service 'playlist' action 'executeFromFilters'.
+ *
+ * Usage: Revrieve playlist for playing purpose, based on media entry filters
+ *
+ * Server response type:         KalturaBaseEntry[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistExecuteFromFiltersAction extends KalturaRequest<KalturaBaseEntry[]> {
 
     filters : KalturaMediaEntryFilterForPlaylist[];

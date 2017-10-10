@@ -10,7 +10,16 @@ export interface ReportExecuteActionArgs  extends KalturaRequestArgs {
 	params? : KalturaKeyValue[];
 }
 
-
+/**
+ * Build request payload for service 'report' action 'execute'.
+ *
+ * 
+ *
+ * Server response type:         KalturaReportResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportExecuteAction extends KalturaRequest<KalturaReportResponse> {
 
     id : number;

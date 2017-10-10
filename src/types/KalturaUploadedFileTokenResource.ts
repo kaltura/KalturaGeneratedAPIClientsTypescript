@@ -7,10 +7,7 @@ export interface KalturaUploadedFileTokenResourceArgs  extends KalturaGenericDat
     token? : string;
 }
 
-/** 
-* Used to ingest media that uploaded to the system and represented by token that
-* returned from upload.upload action or uploadToken.add action.
-**/
+
 export class KalturaUploadedFileTokenResource extends KalturaGenericDataCenterContentResource {
 
     token : string;

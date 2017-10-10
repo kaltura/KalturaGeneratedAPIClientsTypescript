@@ -9,10 +9,17 @@ export interface PermissionItemUpdateActionArgs  extends KalturaRequestArgs {
 	permissionItem : KalturaPermissionItem;
 }
 
-/** 
-* Updates an existing permission item object.   This action is available only to
-* Kaltura system administrators.
-**/
+/**
+ * Build request payload for service 'permissionItem' action 'update'.
+ *
+ * Usage: Updates an existing permission item object.
+ * This action is available only to Kaltura system administrators
+ *
+ * Server response type:         KalturaPermissionItem
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionItemUpdateAction extends KalturaRequest<KalturaPermissionItem> {
 
     permissionItemId : number;

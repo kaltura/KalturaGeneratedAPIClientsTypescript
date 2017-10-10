@@ -11,9 +11,16 @@ export interface WidgetListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Retrieve a list of available widget depends on the filter given
-**/
+/**
+ * Build request payload for service 'widget' action 'list'.
+ *
+ * Usage: Retrieve a list of available widget depends on the filter given
+ *
+ * Server response type:         KalturaWidgetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class WidgetListAction extends KalturaRequest<KalturaWidgetListResponse> {
 
     filter : KalturaWidgetFilter;

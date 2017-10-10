@@ -9,9 +9,16 @@ export interface PlaylistCloneActionArgs  extends KalturaRequestArgs {
 	newPlaylist? : KalturaPlaylist;
 }
 
-/** 
-* Clone an existing playlist
-**/
+/**
+ * Build request payload for service 'playlist' action 'clone'.
+ *
+ * Usage: Clone an existing playlist
+ *
+ * Server response type:         KalturaPlaylist
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistCloneAction extends KalturaRequest<KalturaPlaylist> {
 
     id : string;

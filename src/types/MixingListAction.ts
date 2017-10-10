@@ -11,10 +11,17 @@ export interface MixingListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List entries by filter with paging support.   Return parameter is an array of
-* mix entries.
-**/
+/**
+ * Build request payload for service 'mixing' action 'list'.
+ *
+ * Usage: List entries by filter with paging support.
+ * Return parameter is an array of mix entries
+ *
+ * Server response type:         KalturaMixListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingListAction extends KalturaRequest<KalturaMixListResponse> {
 
     filter : KalturaMixEntryFilter;

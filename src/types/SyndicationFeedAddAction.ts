@@ -8,9 +8,16 @@ export interface SyndicationFeedAddActionArgs  extends KalturaRequestArgs {
     syndicationFeed : KalturaBaseSyndicationFeed;
 }
 
-/** 
-* Add new Syndication Feed
-**/
+/**
+ * Build request payload for service 'syndicationFeed' action 'add'.
+ *
+ * Usage: Add new Syndication Feed
+ *
+ * Server response type:         KalturaBaseSyndicationFeed
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SyndicationFeedAddAction extends KalturaRequest<KalturaBaseSyndicationFeed> {
 
     syndicationFeed : KalturaBaseSyndicationFeed;

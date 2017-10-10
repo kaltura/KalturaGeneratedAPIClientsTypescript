@@ -10,10 +10,17 @@ export interface MediaAddFromSearchResultActionArgs  extends KalturaRequestArgs 
 	searchResult? : KalturaSearchResult;
 }
 
-/** 
-* Adds new media entry by importing the media file from a search provider.   This
-* action should be used with the search service result.
-**/
+/**
+ * Build request payload for service 'media' action 'addFromSearchResult'.
+ *
+ * Usage: Adds new media entry by importing the media file from a search provider.
+ * This action should be used with the search service result
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddFromSearchResultAction extends KalturaRequest<KalturaMediaEntry> {
 
     mediaEntry : KalturaMediaEntry;

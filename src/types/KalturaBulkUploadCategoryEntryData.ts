@@ -7,9 +7,7 @@ export interface KalturaBulkUploadCategoryEntryDataArgs  extends KalturaBulkUplo
     
 }
 
-/** 
-* This class represents object-specific data passed to the   bulk upload job.
-**/
+
 export class KalturaBulkUploadCategoryEntryData extends KalturaBulkUploadObjectData {
 
     

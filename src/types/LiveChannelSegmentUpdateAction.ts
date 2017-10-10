@@ -9,9 +9,16 @@ export interface LiveChannelSegmentUpdateActionArgs  extends KalturaRequestArgs 
 	liveChannelSegment : KalturaLiveChannelSegment;
 }
 
-/** 
-* Update live channel segment by id
-**/
+/**
+ * Build request payload for service 'liveChannelSegment' action 'update'.
+ *
+ * Usage: Update live channel segment by id
+ *
+ * Server response type:         KalturaLiveChannelSegment
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelSegmentUpdateAction extends KalturaRequest<KalturaLiveChannelSegment> {
 
     id : number;

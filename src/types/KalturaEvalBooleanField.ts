@@ -7,9 +7,7 @@ export interface KalturaEvalBooleanFieldArgs  extends KalturaBooleanFieldArgs {
     code? : string;
 }
 
-/** 
-* Evaluates PHP statement, depends on the execution context
-**/
+
 export class KalturaEvalBooleanField extends KalturaBooleanField {
 
     code : string;

@@ -8,9 +8,16 @@ export interface CaptionAssetItemParseActionArgs  extends KalturaRequestArgs {
     captionAssetId : string;
 }
 
-/** 
-* Parse content of caption asset and index it
-**/
+/**
+ * Build request payload for service 'captionAssetItem' action 'parse'.
+ *
+ * Usage: Parse content of caption asset and index it
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetItemParseAction extends KalturaRequest<void> {
 
     captionAssetId : string;

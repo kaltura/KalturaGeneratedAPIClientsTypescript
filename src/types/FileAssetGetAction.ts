@@ -8,9 +8,16 @@ export interface FileAssetGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get file asset by id
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'get'.
+ *
+ * Usage: Get file asset by id
+ *
+ * Server response type:         KalturaFileAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetGetAction extends KalturaRequest<KalturaFileAsset> {
 
     id : number;

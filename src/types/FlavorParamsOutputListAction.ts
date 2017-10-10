@@ -11,9 +11,16 @@ export interface FlavorParamsOutputListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List flavor params output objects by filter and pager
-**/
+/**
+ * Build request payload for service 'flavorParamsOutput' action 'list'.
+ *
+ * Usage: List flavor params output objects by filter and pager
+ *
+ * Server response type:         KalturaFlavorParamsOutputListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorParamsOutputListAction extends KalturaRequest<KalturaFlavorParamsOutputListResponse> {
 
     filter : KalturaFlavorParamsOutputFilter;

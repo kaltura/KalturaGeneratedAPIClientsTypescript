@@ -8,10 +8,17 @@ export interface PartnerGetStatisticsActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Get usage statistics for a partner   Calculation is done according to partner's
-* package
-**/
+/**
+ * Build request payload for service 'partner' action 'getStatistics'.
+ *
+ * Usage: Get usage statistics for a partner
+ * Calculation is done according to partner's package
+ *
+ * Server response type:         KalturaPartnerStatistics
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerGetStatisticsAction extends KalturaRequest<KalturaPartnerStatistics> {
 
     

@@ -11,9 +11,16 @@ export interface DocumentsConvertActionArgs  extends KalturaRequestArgs {
 	dynamicConversionAttributes? : KalturaConversionAttribute[];
 }
 
-/** 
-* Convert entry
-**/
+/**
+ * Build request payload for service 'documents' action 'convert'.
+ *
+ * Usage: Convert entry
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsConvertAction extends KalturaRequest<number> {
 
     entryId : string;

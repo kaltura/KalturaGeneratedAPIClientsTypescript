@@ -10,9 +10,16 @@ export interface DataAddContentActionArgs  extends KalturaRequestArgs {
 	resource : KalturaGenericDataCenterContentResource;
 }
 
-/** 
-* Update the dataContent of data entry using a resource
-**/
+/**
+ * Build request payload for service 'data' action 'addContent'.
+ *
+ * Usage: Update the dataContent of data entry using a resource
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataAddContentAction extends KalturaRequest<string> {
 
     entryId : string;

@@ -8,9 +8,7 @@ export interface KalturaEmailNotificationStaticRecipientProviderArgs  extends Ka
     emailRecipients? : KalturaEmailNotificationRecipient[];
 }
 
-/** 
-* API class for recipient provider containing a static list of email recipients.
-**/
+
 export class KalturaEmailNotificationStaticRecipientProvider extends KalturaEmailNotificationRecipientProvider {
 
     emailRecipients : KalturaEmailNotificationRecipient[];

@@ -8,9 +8,16 @@ export interface UserNotifyBanActionArgs  extends KalturaRequestArgs {
     userId : string;
 }
 
-/** 
-* Notifies that a user is banned from an account.
-**/
+/**
+ * Build request payload for service 'user' action 'notifyBan'.
+ *
+ * Usage: Notifies that a user is banned from an account
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserNotifyBanAction extends KalturaRequest<void> {
 
     userId : string;

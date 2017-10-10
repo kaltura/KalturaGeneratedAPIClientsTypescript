@@ -11,9 +11,16 @@ export interface GenericDistributionProviderActionUpdateByProviderIdActionArgs  
 	genericDistributionProviderAction : KalturaGenericDistributionProviderAction;
 }
 
-/** 
-* Update Generic Distribution Provider Action by provider id
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'updateByProviderId'.
+ *
+ * Usage: Update Generic Distribution Provider Action by provider id
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderActionUpdateByProviderIdAction extends KalturaRequest<KalturaGenericDistributionProviderAction> {
 
     genericDistributionProviderId : number;

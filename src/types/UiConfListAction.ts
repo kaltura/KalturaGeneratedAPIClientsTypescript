@@ -11,9 +11,16 @@ export interface UiConfListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Retrieve a list of available UIConfs
-**/
+/**
+ * Build request payload for service 'uiConf' action 'list'.
+ *
+ * Usage: Retrieve a list of available UIConfs
+ *
+ * Server response type:         KalturaUiConfListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfListAction extends KalturaRequest<KalturaUiConfListResponse> {
 
     filter : KalturaUiConfFilter;

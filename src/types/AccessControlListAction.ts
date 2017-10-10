@@ -11,9 +11,16 @@ export interface AccessControlListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Access Control Profiles by filter and pager
-**/
+/**
+ * Build request payload for service 'accessControl' action 'list'.
+ *
+ * Usage: List Access Control Profiles by filter and pager
+ *
+ * Server response type:         KalturaAccessControlListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AccessControlListAction extends KalturaRequest<KalturaAccessControlListResponse> {
 
     filter : KalturaAccessControlFilter;

@@ -10,9 +10,16 @@ export interface BaseEntryCloneActionArgs  extends KalturaRequestArgs {
 	cloneOptions? : KalturaBaseEntryCloneOptionItem[];
 }
 
-/** 
-* Clone an entry with optional attributes to apply to the clone
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'clone'.
+ *
+ * Usage: Clone an entry with optional attributes to apply to the clone
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryCloneAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

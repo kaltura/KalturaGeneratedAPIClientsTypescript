@@ -8,9 +8,16 @@ export interface CategoryGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get Category by id
-**/
+/**
+ * Build request payload for service 'category' action 'get'.
+ *
+ * Usage: Get Category by id
+ *
+ * Server response type:         KalturaCategory
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryGetAction extends KalturaRequest<KalturaCategory> {
 
     id : number;

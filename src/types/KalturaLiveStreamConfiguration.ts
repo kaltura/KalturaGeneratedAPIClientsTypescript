@@ -12,9 +12,7 @@ export interface KalturaLiveStreamConfigurationArgs  extends KalturaObjectBaseAr
 	streamName? : string;
 }
 
-/** 
-* A representation of a live stream configuration
-**/
+
 export class KalturaLiveStreamConfiguration extends KalturaObjectBase {
 
     protocol : KalturaPlaybackProtocol;

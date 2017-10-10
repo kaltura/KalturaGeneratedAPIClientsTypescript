@@ -8,9 +8,16 @@ export interface MediaApproveReplaceActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Approves media replacement
-**/
+/**
+ * Build request payload for service 'media' action 'approveReplace'.
+ *
+ * Usage: Approves media replacement
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaApproveReplaceAction extends KalturaRequest<KalturaMediaEntry> {
 
     entryId : string;

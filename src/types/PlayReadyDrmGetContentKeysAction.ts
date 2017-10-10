@@ -8,9 +8,16 @@ export interface PlayReadyDrmGetContentKeysActionArgs  extends KalturaRequestArg
     keyIds : string;
 }
 
-/** 
-* Get content keys for input key ids
-**/
+/**
+ * Build request payload for service 'playReadyDrm' action 'getContentKeys'.
+ *
+ * Usage: Get content keys for input key ids
+ *
+ * Server response type:         KalturaPlayReadyContentKey[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlayReadyDrmGetContentKeysAction extends KalturaRequest<KalturaPlayReadyContentKey[]> {
 
     keyIds : string;

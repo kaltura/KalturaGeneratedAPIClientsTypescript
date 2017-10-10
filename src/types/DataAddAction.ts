@@ -8,9 +8,16 @@ export interface DataAddActionArgs  extends KalturaRequestArgs {
     dataEntry : KalturaDataEntry;
 }
 
-/** 
-* Adds a new data entry
-**/
+/**
+ * Build request payload for service 'data' action 'add'.
+ *
+ * Usage: Adds a new data entry
+ *
+ * Server response type:         KalturaDataEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataAddAction extends KalturaRequest<KalturaDataEntry> {
 
     dataEntry : KalturaDataEntry;

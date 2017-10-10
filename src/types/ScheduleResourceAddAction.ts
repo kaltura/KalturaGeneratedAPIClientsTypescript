@@ -8,9 +8,16 @@ export interface ScheduleResourceAddActionArgs  extends KalturaRequestArgs {
     scheduleResource : KalturaScheduleResource;
 }
 
-/** 
-* Allows you to add a new KalturaScheduleResource object
-**/
+/**
+ * Build request payload for service 'scheduleResource' action 'add'.
+ *
+ * Usage: Allows you to add a new KalturaScheduleResource object
+ *
+ * Server response type:         KalturaScheduleResource
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleResourceAddAction extends KalturaRequest<KalturaScheduleResource> {
 
     scheduleResource : KalturaScheduleResource;

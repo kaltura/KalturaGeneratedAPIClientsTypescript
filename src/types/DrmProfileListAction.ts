@@ -11,9 +11,16 @@ export interface DrmProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List KalturaDrmProfile objects
-**/
+/**
+ * Build request payload for service 'drmProfile' action 'list'.
+ *
+ * Usage: List KalturaDrmProfile objects
+ *
+ * Server response type:         KalturaDrmProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmProfileListAction extends KalturaRequest<KalturaDrmProfileListResponse> {
 
     filter : KalturaDrmProfileFilter;

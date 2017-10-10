@@ -8,10 +8,7 @@ export interface KalturaLiveStreamAdminEntryMatchAttributeConditionArgs  extends
     attribute? : KalturaLiveStreamAdminEntryMatchAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaLiveStreamAdminEntry attributes.
-* Use KalturaLiveStreamAdminEntryMatchAttribute enum to provide attribute name. /
-**/
+
 export class KalturaLiveStreamAdminEntryMatchAttributeCondition extends KalturaSearchMatchAttributeCondition {
 
     attribute : KalturaLiveStreamAdminEntryMatchAttribute;

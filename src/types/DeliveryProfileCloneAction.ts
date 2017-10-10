@@ -8,9 +8,17 @@ export interface DeliveryProfileCloneActionArgs  extends KalturaRequestArgs {
     deliveryId : number;
 }
 
-/** 
-* Add delivery based on existing delivery.  Must provide valid sourceDeliveryId
-**/
+/**
+ * Build request payload for service 'deliveryProfile' action 'clone'.
+ *
+ * Usage: Add delivery based on existing delivery.
+ * Must provide valid sourceDeliveryId
+ *
+ * Server response type:         KalturaDeliveryProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeliveryProfileCloneAction extends KalturaRequest<KalturaDeliveryProfile> {
 
     deliveryId : number;

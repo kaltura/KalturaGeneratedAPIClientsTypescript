@@ -10,9 +10,16 @@ export interface BusinessProcessCaseListActionArgs  extends KalturaRequestArgs {
 	objectId : string;
 }
 
-/** 
-* list business-process cases
-**/
+/**
+ * Build request payload for service 'businessProcessCase' action 'list'.
+ *
+ * Usage: list business-process cases
+ *
+ * Server response type:         KalturaBusinessProcessCase[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BusinessProcessCaseListAction extends KalturaRequest<KalturaBusinessProcessCase[]> {
 
     objectType : KalturaEventNotificationEventObjectType;

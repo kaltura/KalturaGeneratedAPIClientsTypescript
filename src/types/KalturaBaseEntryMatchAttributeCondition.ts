@@ -8,10 +8,7 @@ export interface KalturaBaseEntryMatchAttributeConditionArgs  extends KalturaSea
     attribute? : KalturaBaseEntryMatchAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaBaseEntry attributes. Use
-* KalturaBaseEntryMatchAttribute enum to provide attribute name. /
-**/
+
 export class KalturaBaseEntryMatchAttributeCondition extends KalturaSearchMatchAttributeCondition {
 
     attribute : KalturaBaseEntryMatchAttribute;

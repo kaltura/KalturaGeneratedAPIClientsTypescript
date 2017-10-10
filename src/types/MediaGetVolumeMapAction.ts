@@ -8,9 +8,16 @@ export interface MediaGetVolumeMapActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Get volume map by entry id
-**/
+/**
+ * Build request payload for service 'media' action 'getVolumeMap'.
+ *
+ * Usage: Get volume map by entry id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaGetVolumeMapAction extends KalturaRequest<string> {
 
     entryId : string;

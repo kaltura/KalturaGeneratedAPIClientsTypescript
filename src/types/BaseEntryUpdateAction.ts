@@ -9,9 +9,16 @@ export interface BaseEntryUpdateActionArgs  extends KalturaRequestArgs {
 	baseEntry : KalturaBaseEntry;
 }
 
-/** 
-* Update base entry. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'update'.
+ *
+ * Usage: Update base entry. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryUpdateAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

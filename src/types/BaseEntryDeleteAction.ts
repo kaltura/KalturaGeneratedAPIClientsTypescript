@@ -8,9 +8,16 @@ export interface BaseEntryDeleteActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Delete an entry.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'delete'.
+ *
+ * Usage: Delete an entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

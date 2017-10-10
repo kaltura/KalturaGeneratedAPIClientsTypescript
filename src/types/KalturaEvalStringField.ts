@@ -7,9 +7,7 @@ export interface KalturaEvalStringFieldArgs  extends KalturaStringFieldArgs {
     code? : string;
 }
 
-/** 
-* Evaluates PHP statement, depends on the execution context
-**/
+
 export class KalturaEvalStringField extends KalturaStringField {
 
     code : string;

@@ -9,9 +9,16 @@ export interface MixingGetReadyMediaEntriesActionArgs  extends KalturaRequestArg
 	version? : number;
 }
 
-/** 
-* Get all ready media entries that exist in the given mix id
-**/
+/**
+ * Build request payload for service 'mixing' action 'getReadyMediaEntries'.
+ *
+ * Usage: Get all ready media entries that exist in the given mix id
+ *
+ * Server response type:         KalturaMediaEntry[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingGetReadyMediaEntriesAction extends KalturaRequest<KalturaMediaEntry[]> {
 
     mixId : string;

@@ -9,10 +9,16 @@ export interface MediaAddFromUploadedFileActionArgs  extends KalturaRequestArgs 
 	uploadTokenId : string;
 }
 
-/** 
-* Add new entry after the specific media file was uploaded and the upload token id
-* exists
-**/
+/**
+ * Build request payload for service 'media' action 'addFromUploadedFile'.
+ *
+ * Usage: Add new entry after the specific media file was uploaded and the upload token id exists
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddFromUploadedFileAction extends KalturaRequest<KalturaMediaEntry> {
 
     mediaEntry : KalturaMediaEntry;

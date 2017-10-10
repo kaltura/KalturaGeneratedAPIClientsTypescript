@@ -8,9 +8,16 @@ export interface MetadataDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete an existing metadata
-**/
+/**
+ * Build request payload for service 'metadata' action 'delete'.
+ *
+ * Usage: Delete an existing metadata
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataDeleteAction extends KalturaRequest<void> {
 
     id : number;

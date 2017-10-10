@@ -8,10 +8,17 @@ export interface DocumentsConvertPptToSwfActionArgs  extends KalturaRequestArgs 
     entryId : string;
 }
 
-/** 
-* This will queue a batch job for converting the document file to swf   Returns
-* the URL where the new swf will be available
-**/
+/**
+ * Build request payload for service 'documents' action 'convertPptToSwf'.
+ *
+ * Usage: This will queue a batch job for converting the document file to swf
+ * Returns the URL where the new swf will be available
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsConvertPptToSwfAction extends KalturaRequest<string> {
 
     entryId : string;

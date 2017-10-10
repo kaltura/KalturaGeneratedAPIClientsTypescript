@@ -8,9 +8,16 @@ export interface FlavorAssetReconvertActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Reconvert Flavor Asset by ID
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'reconvert'.
+ *
+ * Usage: Reconvert Flavor Asset by ID
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetReconvertAction extends KalturaRequest<void> {
 
     id : string;

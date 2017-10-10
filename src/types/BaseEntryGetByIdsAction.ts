@@ -8,9 +8,16 @@ export interface BaseEntryGetByIdsActionArgs  extends KalturaRequestArgs {
     entryIds : string;
 }
 
-/** 
-* Get an array of KalturaBaseEntry objects by a comma-separated list of ids.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'getByIds'.
+ *
+ * Usage: Get an array of KalturaBaseEntry objects by a comma-separated list of ids
+ *
+ * Server response type:         KalturaBaseEntry[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryGetByIdsAction extends KalturaRequest<KalturaBaseEntry[]> {
 
     entryIds : string;

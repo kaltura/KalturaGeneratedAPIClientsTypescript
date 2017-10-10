@@ -8,9 +8,16 @@ export interface CategoryUserAddActionArgs  extends KalturaRequestArgs {
     categoryUser : KalturaCategoryUser;
 }
 
-/** 
-* Add new CategoryUser
-**/
+/**
+ * Build request payload for service 'categoryUser' action 'add'.
+ *
+ * Usage: Add new CategoryUser
+ *
+ * Server response type:         KalturaCategoryUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUserAddAction extends KalturaRequest<KalturaCategoryUser> {
 
     categoryUser : KalturaCategoryUser;

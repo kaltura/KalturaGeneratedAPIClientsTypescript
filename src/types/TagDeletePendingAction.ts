@@ -8,10 +8,16 @@ export interface TagDeletePendingActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Action goes over all tags with instanceCount==0 and checks whether they need to
-* be removed from the DB. Returns number of removed tags.
-**/
+/**
+ * Build request payload for service 'tag' action 'deletePending'.
+ *
+ * Usage: Action goes over all tags with instanceCount==0 and checks whether they need to be removed from the DB. Returns number of removed tags
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TagDeletePendingAction extends KalturaRequest<number> {
 
     

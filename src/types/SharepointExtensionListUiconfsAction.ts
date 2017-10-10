@@ -8,9 +8,16 @@ export interface SharepointExtensionListUiconfsActionArgs  extends KalturaReques
     
 }
 
-/** 
-* list uiconfs for sharepoint extension
-**/
+/**
+ * Build request payload for service 'sharepointExtension' action 'listUiconfs'.
+ *
+ * Usage: list uiconfs for sharepoint extension
+ *
+ * Server response type:         KalturaUiConfListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SharepointExtensionListUiconfsAction extends KalturaRequest<KalturaUiConfListResponse> {
 
     

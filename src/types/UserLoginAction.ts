@@ -12,10 +12,16 @@ export interface UserLoginActionArgs  extends KalturaRequestArgs {
 	privileges? : string;
 }
 
-/** 
-* Logs a user into a partner account with a partner ID, a partner user ID (puser),
-* and a user password.
-**/
+/**
+ * Build request payload for service 'user' action 'login'.
+ *
+ * Usage: Logs a user into a partner account with a partner ID, a partner user ID (puser), and a user password
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserLoginAction extends KalturaRequest<string> {
 
     partnerId : number;

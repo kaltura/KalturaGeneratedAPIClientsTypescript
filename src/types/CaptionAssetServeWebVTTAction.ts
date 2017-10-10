@@ -11,9 +11,16 @@ export interface CaptionAssetServeWebVTTActionArgs  extends KalturaRequestArgs {
 	localTimestamp? : number;
 }
 
-/** 
-* Serves caption by its id converting it to segmented WebVTT
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'serveWebVTT'.
+ *
+ * Usage: Serves caption by its id converting it to segmented WebVTT
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetServeWebVTTAction extends KalturaRequest<string> {
 
     captionAssetId : string;

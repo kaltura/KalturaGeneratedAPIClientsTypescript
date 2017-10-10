@@ -11,9 +11,16 @@ export interface AttachmentAssetListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List attachment Assets by filter and pager
-**/
+/**
+ * Build request payload for service 'attachmentAsset' action 'list'.
+ *
+ * Usage: List attachment Assets by filter and pager
+ *
+ * Server response type:         KalturaAttachmentAssetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttachmentAssetListAction extends KalturaRequest<KalturaAttachmentAssetListResponse> {
 
     filter : KalturaAssetFilter;

@@ -8,10 +8,16 @@ export interface UserLoginByKsActionArgs  extends KalturaRequestArgs {
     requestedPartnerId : number;
 }
 
-/** 
-* Loges a user to the destination account as long the ks user id exists in the
-* desc acount and the loginData id match for both accounts
-**/
+/**
+ * Build request payload for service 'user' action 'loginByKs'.
+ *
+ * Usage: Loges a user to the destination account as long the ks user id exists in the desc acount and the loginData id match for both accounts
+ *
+ * Server response type:         KalturaSessionResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserLoginByKsAction extends KalturaRequest<KalturaSessionResponse> {
 
     requestedPartnerId : number;

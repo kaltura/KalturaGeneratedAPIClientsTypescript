@@ -11,7 +11,16 @@ export interface BeaconAddActionArgs  extends KalturaRequestArgs {
 	shouldLog? : KalturaNullableBoolean;
 }
 
-
+/**
+ * Build request payload for service 'beacon' action 'add'.
+ *
+ * 
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BeaconAddAction extends KalturaRequest<boolean> {
 
     beacon : KalturaBeacon;

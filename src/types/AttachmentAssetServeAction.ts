@@ -10,9 +10,16 @@ export interface AttachmentAssetServeActionArgs  extends KalturaRequestArgs {
 	serveOptions? : KalturaAttachmentServeOptions;
 }
 
-/** 
-* Serves attachment by its id
-**/
+/**
+ * Build request payload for service 'attachmentAsset' action 'serve'.
+ *
+ * Usage: Serves attachment by its id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttachmentAssetServeAction extends KalturaRequest<string> {
 
     attachmentAssetId : string;

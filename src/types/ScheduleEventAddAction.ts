@@ -8,9 +8,16 @@ export interface ScheduleEventAddActionArgs  extends KalturaRequestArgs {
     scheduleEvent : KalturaScheduleEvent;
 }
 
-/** 
-* Allows you to add a new KalturaScheduleEvent object
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'add'.
+ *
+ * Usage: Allows you to add a new KalturaScheduleEvent object
+ *
+ * Server response type:         KalturaScheduleEvent
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventAddAction extends KalturaRequest<KalturaScheduleEvent> {
 
     scheduleEvent : KalturaScheduleEvent;

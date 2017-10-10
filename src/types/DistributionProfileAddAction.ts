@@ -8,9 +8,16 @@ export interface DistributionProfileAddActionArgs  extends KalturaRequestArgs {
     distributionProfile : KalturaDistributionProfile;
 }
 
-/** 
-* Add new Distribution Profile
-**/
+/**
+ * Build request payload for service 'distributionProfile' action 'add'.
+ *
+ * Usage: Add new Distribution Profile
+ *
+ * Server response type:         KalturaDistributionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DistributionProfileAddAction extends KalturaRequest<KalturaDistributionProfile> {
 
     distributionProfile : KalturaDistributionProfile;

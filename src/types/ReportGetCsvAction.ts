@@ -10,7 +10,16 @@ export interface ReportGetCsvActionArgs  extends KalturaRequestArgs {
 	params? : KalturaKeyValue[];
 }
 
-
+/**
+ * Build request payload for service 'report' action 'getCsv'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportGetCsvAction extends KalturaRequest<string> {
 
     id : number;

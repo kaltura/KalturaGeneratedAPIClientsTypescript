@@ -9,9 +9,16 @@ export interface CaptionAssetServeByEntryIdActionArgs  extends KalturaRequestArg
 	captionParamId? : number;
 }
 
-/** 
-* Serves caption by entry id and thumnail params id
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'serveByEntryId'.
+ *
+ * Usage: Serves caption by entry id and thumnail params id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetServeByEntryIdAction extends KalturaRequest<string> {
 
     entryId : string;

@@ -10,10 +10,16 @@ export interface MetadataProfileAddFromFileActionArgs  extends KalturaUploadRequ
 	viewsFile? : File;
 }
 
-/** 
-* Allows you to add a metadata profile object and metadata profile file associated
-* with Kaltura object type
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'addFromFile'.
+ *
+ * Usage: Allows you to add a metadata profile object and metadata profile file associated with Kaltura object type
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataProfileAddFromFileAction extends KalturaUploadRequest<KalturaMetadataProfile> {
 
     metadataProfile : KalturaMetadataProfile;

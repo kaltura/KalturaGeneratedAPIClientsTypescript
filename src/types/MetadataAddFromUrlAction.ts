@@ -12,9 +12,16 @@ export interface MetadataAddFromUrlActionArgs  extends KalturaRequestArgs {
 	url : string;
 }
 
-/** 
-* Allows you to add a metadata xml data from remote URL
-**/
+/**
+ * Build request payload for service 'metadata' action 'addFromUrl'.
+ *
+ * Usage: Allows you to add a metadata xml data from remote URL
+ *
+ * Server response type:         KalturaMetadata
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataAddFromUrlAction extends KalturaRequest<KalturaMetadata> {
 
     metadataProfileId : number;

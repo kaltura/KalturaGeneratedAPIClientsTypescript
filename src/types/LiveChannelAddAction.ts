@@ -8,9 +8,16 @@ export interface LiveChannelAddActionArgs  extends KalturaRequestArgs {
     liveChannel : KalturaLiveChannel;
 }
 
-/** 
-* Adds new live channel.
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'add'.
+ *
+ * Usage: Adds new live channel
+ *
+ * Server response type:         KalturaLiveChannel
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelAddAction extends KalturaRequest<KalturaLiveChannel> {
 
     liveChannel : KalturaLiveChannel;

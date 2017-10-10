@@ -11,9 +11,16 @@ export interface MetadataProfileUpdateActionArgs  extends KalturaRequestArgs {
 	viewsData? : string;
 }
 
-/** 
-* Update an existing metadata object
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'update'.
+ *
+ * Usage: Update an existing metadata object
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileUpdateAction extends KalturaRequest<KalturaMetadataProfile> {
 
     id : number;

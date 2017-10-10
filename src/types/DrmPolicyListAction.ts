@@ -11,9 +11,16 @@ export interface DrmPolicyListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List KalturaDrmPolicy objects
-**/
+/**
+ * Build request payload for service 'drmPolicy' action 'list'.
+ *
+ * Usage: List KalturaDrmPolicy objects
+ *
+ * Server response type:         KalturaDrmPolicyListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmPolicyListAction extends KalturaRequest<KalturaDrmPolicyListResponse> {
 
     filter : KalturaDrmPolicyFilter;

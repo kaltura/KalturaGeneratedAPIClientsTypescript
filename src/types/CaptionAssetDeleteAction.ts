@@ -8,7 +8,16 @@ export interface CaptionAssetDeleteActionArgs  extends KalturaRequestArgs {
     captionAssetId : string;
 }
 
-
+/**
+ * Build request payload for service 'captionAsset' action 'delete'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetDeleteAction extends KalturaRequest<void> {
 
     captionAssetId : string;

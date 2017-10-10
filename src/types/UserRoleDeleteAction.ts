@@ -8,9 +8,16 @@ export interface UserRoleDeleteActionArgs  extends KalturaRequestArgs {
     userRoleId : number;
 }
 
-/** 
-* Deletes an existing user role object.
-**/
+/**
+ * Build request payload for service 'userRole' action 'delete'.
+ *
+ * Usage: Deletes an existing user role object
+ *
+ * Server response type:         KalturaUserRole
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserRoleDeleteAction extends KalturaRequest<KalturaUserRole> {
 
     userRoleId : number;

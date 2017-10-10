@@ -12,7 +12,16 @@ export interface LiveChannelCreateRecordedEntryActionArgs  extends KalturaReques
 	liveEntryStatus : KalturaEntryServerNodeStatus;
 }
 
-
+/**
+ * Build request payload for service 'liveChannel' action 'createRecordedEntry'.
+ *
+ * 
+ *
+ * Server response type:         KalturaLiveEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelCreateRecordedEntryAction extends KalturaRequest<KalturaLiveEntry> {
 
     entryId : string;

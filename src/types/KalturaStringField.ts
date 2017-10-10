@@ -7,9 +7,7 @@ export interface KalturaStringFieldArgs  extends KalturaStringValueArgs {
     
 }
 
-/** 
-* A string representation to return evaluated dynamic value
-**/
+
 export class KalturaStringField extends KalturaStringValue {
 
     

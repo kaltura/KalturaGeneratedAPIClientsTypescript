@@ -9,10 +9,16 @@ export interface DocumentsAddFromUploadedFileActionArgs  extends KalturaRequestA
 	uploadTokenId : string;
 }
 
-/** 
-* Add new document entry after the specific document file was uploaded and the
-* upload token id exists
-**/
+/**
+ * Build request payload for service 'documents' action 'addFromUploadedFile'.
+ *
+ * Usage: Add new document entry after the specific document file was uploaded and the upload token id exists
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsAddFromUploadedFileAction extends KalturaRequest<KalturaDocumentEntry> {
 
     documentEntry : KalturaDocumentEntry;

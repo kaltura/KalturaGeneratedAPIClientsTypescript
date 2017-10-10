@@ -11,7 +11,16 @@ export interface TagSearchActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'tag' action 'search'.
+ *
+ * 
+ *
+ * Server response type:         KalturaTagListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TagSearchAction extends KalturaRequest<KalturaTagListResponse> {
 
     tagFilter : KalturaTagFilter;

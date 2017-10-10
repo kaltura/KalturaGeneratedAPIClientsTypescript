@@ -11,9 +11,16 @@ export interface ExternalMediaListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List media entries by filter with paging support.
-**/
+/**
+ * Build request payload for service 'externalMedia' action 'list'.
+ *
+ * Usage: List media entries by filter with paging support
+ *
+ * Server response type:         KalturaExternalMediaEntryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ExternalMediaListAction extends KalturaRequest<KalturaExternalMediaEntryListResponse> {
 
     filter : KalturaExternalMediaEntryFilter;

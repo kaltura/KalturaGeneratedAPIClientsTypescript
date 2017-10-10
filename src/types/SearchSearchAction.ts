@@ -11,9 +11,16 @@ export interface SearchSearchActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Search for media in one of the supported media providers
-**/
+/**
+ * Build request payload for service 'search' action 'search'.
+ *
+ * Usage: Search for media in one of the supported media providers
+ *
+ * Server response type:         KalturaSearchResultResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SearchSearchAction extends KalturaRequest<KalturaSearchResultResponse> {
 
     search : KalturaSearch;

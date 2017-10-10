@@ -10,9 +10,16 @@ export interface AttachmentAssetSetContentActionArgs  extends KalturaRequestArgs
 	contentResource : KalturaContentResource;
 }
 
-/** 
-* Update content of attachment asset
-**/
+/**
+ * Build request payload for service 'attachmentAsset' action 'setContent'.
+ *
+ * Usage: Update content of attachment asset
+ *
+ * Server response type:         KalturaAttachmentAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttachmentAssetSetContentAction extends KalturaRequest<KalturaAttachmentAsset> {
 
     id : string;

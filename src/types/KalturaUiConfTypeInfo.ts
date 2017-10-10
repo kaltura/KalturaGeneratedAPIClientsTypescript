@@ -12,9 +12,7 @@ export interface KalturaUiConfTypeInfoArgs  extends KalturaObjectBaseArgs {
 	filename? : string;
 }
 
-/** 
-* Info about uiconf type
-**/
+
 export class KalturaUiConfTypeInfo extends KalturaObjectBase {
 
     type : KalturaUiConfObjType;

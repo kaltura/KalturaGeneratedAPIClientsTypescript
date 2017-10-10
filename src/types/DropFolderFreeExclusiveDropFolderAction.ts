@@ -10,9 +10,16 @@ export interface DropFolderFreeExclusiveDropFolderActionArgs  extends KalturaReq
 	errorDescription? : string;
 }
 
-/** 
-* freeExclusive KalturaDropFolder object
-**/
+/**
+ * Build request payload for service 'dropFolder' action 'freeExclusiveDropFolder'.
+ *
+ * Usage: freeExclusive KalturaDropFolder object
+ *
+ * Server response type:         KalturaDropFolder
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderFreeExclusiveDropFolderAction extends KalturaRequest<KalturaDropFolder> {
 
     dropFolderId : number;

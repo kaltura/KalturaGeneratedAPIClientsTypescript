@@ -12,10 +12,16 @@ export interface MetadataAddActionArgs  extends KalturaRequestArgs {
 	xmlData : string;
 }
 
-/** 
-* Allows you to add a metadata object and metadata content associated with Kaltura
-* object
-**/
+/**
+ * Build request payload for service 'metadata' action 'add'.
+ *
+ * Usage: Allows you to add a metadata object and metadata content associated with Kaltura object
+ *
+ * Server response type:         KalturaMetadata
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataAddAction extends KalturaRequest<KalturaMetadata> {
 
     metadataProfileId : number;

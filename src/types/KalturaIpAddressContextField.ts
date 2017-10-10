@@ -7,9 +7,7 @@ export interface KalturaIpAddressContextFieldArgs  extends KalturaStringFieldArg
     
 }
 
-/** 
-* Represents the current request IP address context
-**/
+
 export class KalturaIpAddressContextField extends KalturaStringField {
 
     

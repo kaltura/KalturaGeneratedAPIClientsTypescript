@@ -8,9 +8,16 @@ export interface VirusScanProfileGetActionArgs  extends KalturaRequestArgs {
     virusScanProfileId : number;
 }
 
-/** 
-* Retrieve an virus scan profile object by id
-**/
+/**
+ * Build request payload for service 'virusScanProfile' action 'get'.
+ *
+ * Usage: Retrieve an virus scan profile object by id
+ *
+ * Server response type:         KalturaVirusScanProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VirusScanProfileGetAction extends KalturaRequest<KalturaVirusScanProfile> {
 
     virusScanProfileId : number;

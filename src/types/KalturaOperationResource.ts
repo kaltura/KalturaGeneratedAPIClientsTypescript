@@ -10,10 +10,7 @@ export interface KalturaOperationResourceArgs  extends KalturaContentResourceArg
 	assetParamsId? : number;
 }
 
-/** 
-* A resource that perform operation (transcoding, clipping, cropping) before the
-* flavor is ready.
-**/
+
 export class KalturaOperationResource extends KalturaContentResource {
 
     resource : KalturaContentResource;

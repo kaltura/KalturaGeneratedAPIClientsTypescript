@@ -11,9 +11,16 @@ export interface ScheduleResourceListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List KalturaScheduleResource objects
-**/
+/**
+ * Build request payload for service 'scheduleResource' action 'list'.
+ *
+ * Usage: List KalturaScheduleResource objects
+ *
+ * Server response type:         KalturaScheduleResourceListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleResourceListAction extends KalturaRequest<KalturaScheduleResourceListResponse> {
 
     filter : KalturaScheduleResourceFilter;

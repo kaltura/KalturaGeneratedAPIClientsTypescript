@@ -8,9 +8,16 @@ export interface UiConfGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Retrieve a UIConf by id
-**/
+/**
+ * Build request payload for service 'uiConf' action 'get'.
+ *
+ * Usage: Retrieve a UIConf by id
+ *
+ * Server response type:         KalturaUiConf
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfGetAction extends KalturaRequest<KalturaUiConf> {
 
     id : number;

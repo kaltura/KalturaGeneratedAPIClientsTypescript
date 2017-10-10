@@ -11,9 +11,16 @@ export interface DocumentsListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List document entries by filter with paging support.
-**/
+/**
+ * Build request payload for service 'documents' action 'list'.
+ *
+ * Usage: List document entries by filter with paging support
+ *
+ * Server response type:         KalturaDocumentListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsListAction extends KalturaRequest<KalturaDocumentListResponse> {
 
     filter : KalturaDocumentEntryFilter;

@@ -8,7 +8,16 @@ export interface UserEntryDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-
+/**
+ * Build request payload for service 'userEntry' action 'delete'.
+ *
+ * 
+ *
+ * Server response type:         KalturaUserEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEntryDeleteAction extends KalturaRequest<KalturaUserEntry> {
 
     id : number;

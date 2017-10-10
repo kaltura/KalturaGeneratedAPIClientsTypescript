@@ -15,10 +15,17 @@ export interface SessionImpersonateActionArgs  extends KalturaRequestArgs {
 	privileges? : string;
 }
 
-/** 
-* Start an impersonated session with Kaltura's server.   The result KS is the
-* session key that you should pass to all services that requires a ticket.
-**/
+/**
+ * Build request payload for service 'session' action 'impersonate'.
+ *
+ * Usage: Start an impersonated session with Kaltura's server.
+ * The result KS is the session key that you should pass to all services that requires a ticket
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SessionImpersonateAction extends KalturaRequest<string> {
 
     secret : string;

@@ -9,9 +9,16 @@ export interface MixingGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Get mix entry by id.
-**/
+/**
+ * Build request payload for service 'mixing' action 'get'.
+ *
+ * Usage: Get mix entry by id
+ *
+ * Server response type:         KalturaMixEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingGetAction extends KalturaRequest<KalturaMixEntry> {
 
     entryId : string;

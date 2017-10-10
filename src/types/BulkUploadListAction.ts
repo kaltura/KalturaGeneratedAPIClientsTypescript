@@ -9,9 +9,16 @@ export interface BulkUploadListActionArgs  extends KalturaRequestArgs {
     pager? : KalturaFilterPager;
 }
 
-/** 
-* List bulk upload batch jobs
-**/
+/**
+ * Build request payload for service 'bulkUpload' action 'list'.
+ *
+ * Usage: List bulk upload batch jobs
+ *
+ * Server response type:         KalturaBulkUploadListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BulkUploadListAction extends KalturaRequest<KalturaBulkUploadListResponse> {
 
     pager : KalturaFilterPager;

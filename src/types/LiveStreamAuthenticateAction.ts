@@ -13,9 +13,16 @@ export interface LiveStreamAuthenticateActionArgs  extends KalturaRequestArgs {
 	applicationName? : string;
 }
 
-/** 
-* Authenticate live-stream entry against stream token and partner limitations
-**/
+/**
+ * Build request payload for service 'liveStream' action 'authenticate'.
+ *
+ * Usage: Authenticate live-stream entry against stream token and partner limitations
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamAuthenticateAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     entryId : string;

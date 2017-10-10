@@ -10,9 +10,16 @@ export interface DistributionProfileUpdateStatusActionArgs  extends KalturaReque
 	status : KalturaDistributionProfileStatus;
 }
 
-/** 
-* Update Distribution Profile status by id
-**/
+/**
+ * Build request payload for service 'distributionProfile' action 'updateStatus'.
+ *
+ * Usage: Update Distribution Profile status by id
+ *
+ * Server response type:         KalturaDistributionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DistributionProfileUpdateStatusAction extends KalturaRequest<KalturaDistributionProfile> {
 
     id : number;

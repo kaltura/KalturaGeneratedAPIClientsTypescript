@@ -14,10 +14,17 @@ export interface SessionStartActionArgs  extends KalturaRequestArgs {
 	privileges? : string;
 }
 
-/** 
-* Start a session with Kaltura's server.   The result KS is the session key that
-* you should pass to all services that requires a ticket.
-**/
+/**
+ * Build request payload for service 'session' action 'start'.
+ *
+ * Usage: Start a session with Kaltura's server.
+ * The result KS is the session key that you should pass to all services that requires a ticket
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SessionStartAction extends KalturaRequest<string> {
 
     secret : string;

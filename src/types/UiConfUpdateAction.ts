@@ -9,9 +9,16 @@ export interface UiConfUpdateActionArgs  extends KalturaRequestArgs {
 	uiConf : KalturaUiConf;
 }
 
-/** 
-* Update an existing UIConf
-**/
+/**
+ * Build request payload for service 'uiConf' action 'update'.
+ *
+ * Usage: Update an existing UIConf
+ *
+ * Server response type:         KalturaUiConf
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfUpdateAction extends KalturaRequest<KalturaUiConf> {
 
     id : number;

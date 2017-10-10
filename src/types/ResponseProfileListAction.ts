@@ -11,9 +11,16 @@ export interface ResponseProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List response profiles by filter and pager
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'list'.
+ *
+ * Usage: List response profiles by filter and pager
+ *
+ * Server response type:         KalturaResponseProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileListAction extends KalturaRequest<KalturaResponseProfileListResponse> {
 
     filter : KalturaResponseProfileFilter;

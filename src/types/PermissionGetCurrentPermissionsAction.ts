@@ -8,9 +8,16 @@ export interface PermissionGetCurrentPermissionsActionArgs  extends KalturaReque
     
 }
 
-/** 
-* Retrieves a list of permissions that apply to the current KS.
-**/
+/**
+ * Build request payload for service 'permission' action 'getCurrentPermissions'.
+ *
+ * Usage: Retrieves a list of permissions that apply to the current KS
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionGetCurrentPermissionsAction extends KalturaRequest<string> {
 
     

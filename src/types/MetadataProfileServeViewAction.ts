@@ -8,9 +8,16 @@ export interface MetadataProfileServeViewActionArgs  extends KalturaRequestArgs 
     id : number;
 }
 
-/** 
-* Serves metadata profile view file
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'serveView'.
+ *
+ * Usage: Serves metadata profile view file
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileServeViewAction extends KalturaRequest<string> {
 
     id : number;

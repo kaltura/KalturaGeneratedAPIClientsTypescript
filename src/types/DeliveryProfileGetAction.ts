@@ -8,9 +8,16 @@ export interface DeliveryProfileGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Get delivery by id
-**/
+/**
+ * Build request payload for service 'deliveryProfile' action 'get'.
+ *
+ * Usage: Get delivery by id
+ *
+ * Server response type:         KalturaDeliveryProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeliveryProfileGetAction extends KalturaRequest<KalturaDeliveryProfile> {
 
     id : string;

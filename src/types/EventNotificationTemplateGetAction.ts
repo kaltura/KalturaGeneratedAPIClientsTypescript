@@ -8,9 +8,16 @@ export interface EventNotificationTemplateGetActionArgs  extends KalturaRequestA
     id : number;
 }
 
-/** 
-* Retrieve an event notification template object by id
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'get'.
+ *
+ * Usage: Retrieve an event notification template object by id
+ *
+ * Server response type:         KalturaEventNotificationTemplate
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateGetAction extends KalturaRequest<KalturaEventNotificationTemplate> {
 
     id : number;

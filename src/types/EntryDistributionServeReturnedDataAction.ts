@@ -10,9 +10,16 @@ export interface EntryDistributionServeReturnedDataActionArgs  extends KalturaRe
 	actionType : KalturaDistributionAction;
 }
 
-/** 
-* Serves entry distribution returned data
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'serveReturnedData'.
+ *
+ * Usage: Serves entry distribution returned data
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionServeReturnedDataAction extends KalturaRequest<string> {
 
     id : number;

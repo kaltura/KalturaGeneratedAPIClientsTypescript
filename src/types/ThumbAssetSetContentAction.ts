@@ -10,9 +10,16 @@ export interface ThumbAssetSetContentActionArgs  extends KalturaRequestArgs {
 	contentResource : KalturaContentResource;
 }
 
-/** 
-* Update content of thumbnail asset
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'setContent'.
+ *
+ * Usage: Update content of thumbnail asset
+ *
+ * Server response type:         KalturaThumbAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetSetContentAction extends KalturaRequest<KalturaThumbAsset> {
 
     id : string;

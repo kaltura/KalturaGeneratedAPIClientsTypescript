@@ -9,9 +9,16 @@ export interface CategoryUserGetActionArgs  extends KalturaRequestArgs {
 	userId : string;
 }
 
-/** 
-* Get CategoryUser by id
-**/
+/**
+ * Build request payload for service 'categoryUser' action 'get'.
+ *
+ * Usage: Get CategoryUser by id
+ *
+ * Server response type:         KalturaCategoryUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUserGetAction extends KalturaRequest<KalturaCategoryUser> {
 
     categoryId : number;

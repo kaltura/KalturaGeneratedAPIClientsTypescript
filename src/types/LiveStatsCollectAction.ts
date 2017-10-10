@@ -9,10 +9,17 @@ export interface LiveStatsCollectActionArgs  extends KalturaRequestArgs {
     event : KalturaLiveStatsEvent;
 }
 
-/** 
-* Will write to the event log a single line representing the event  
-* KalturaStatsEvent $event
-**/
+/**
+ * Build request payload for service 'liveStats' action 'collect'.
+ *
+ * Usage: Will write to the event log a single line representing the event
+ * KalturaStatsEvent $event
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStatsCollectAction extends KalturaRequest<boolean> {
 
     event : KalturaLiveStatsEvent;

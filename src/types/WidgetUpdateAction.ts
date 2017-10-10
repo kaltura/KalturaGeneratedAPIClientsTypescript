@@ -9,9 +9,16 @@ export interface WidgetUpdateActionArgs  extends KalturaRequestArgs {
 	widget : KalturaWidget;
 }
 
-/** 
-* Update exisiting widget
-**/
+/**
+ * Build request payload for service 'widget' action 'update'.
+ *
+ * Usage: Update exisiting widget
+ *
+ * Server response type:         KalturaWidget
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class WidgetUpdateAction extends KalturaRequest<KalturaWidget> {
 
     id : string;

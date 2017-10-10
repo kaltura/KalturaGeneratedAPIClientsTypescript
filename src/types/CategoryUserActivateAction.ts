@@ -9,9 +9,16 @@ export interface CategoryUserActivateActionArgs  extends KalturaRequestArgs {
 	userId : string;
 }
 
-/** 
-* activate CategoryUser
-**/
+/**
+ * Build request payload for service 'categoryUser' action 'activate'.
+ *
+ * Usage: activate CategoryUser
+ *
+ * Server response type:         KalturaCategoryUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUserActivateAction extends KalturaRequest<KalturaCategoryUser> {
 
     categoryId : number;

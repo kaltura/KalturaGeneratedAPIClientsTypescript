@@ -8,9 +8,16 @@ export interface CaptionParamsGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get Caption Params by ID
-**/
+/**
+ * Build request payload for service 'captionParams' action 'get'.
+ *
+ * Usage: Get Caption Params by ID
+ *
+ * Server response type:         KalturaCaptionParams
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionParamsGetAction extends KalturaRequest<KalturaCaptionParams> {
 
     id : number;

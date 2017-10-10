@@ -9,9 +9,16 @@ export interface UserSetInitialPasswordActionArgs  extends KalturaRequestArgs {
 	newPassword : string;
 }
 
-/** 
-* Set initial users password
-**/
+/**
+ * Build request payload for service 'user' action 'setInitialPassword'.
+ *
+ * Usage: Set initial users password
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserSetInitialPasswordAction extends KalturaRequest<void> {
 
     hashKey : string;

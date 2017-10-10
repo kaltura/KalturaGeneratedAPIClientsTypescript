@@ -10,9 +10,16 @@ export interface DocumentsServeByFlavorParamsIdActionArgs  extends KalturaReques
 	forceProxy? : boolean;
 }
 
-/** 
-* Serves the file content
-**/
+/**
+ * Build request payload for service 'documents' action 'serveByFlavorParamsId'.
+ *
+ * Usage: Serves the file content
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsServeByFlavorParamsIdAction extends KalturaRequest<string> {
 
     entryId : string;

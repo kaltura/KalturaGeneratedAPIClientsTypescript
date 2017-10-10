@@ -8,9 +8,16 @@ export interface DropFolderGetActionArgs  extends KalturaRequestArgs {
     dropFolderId : number;
 }
 
-/** 
-* Retrieve a KalturaDropFolder object by ID
-**/
+/**
+ * Build request payload for service 'dropFolder' action 'get'.
+ *
+ * Usage: Retrieve a KalturaDropFolder object by ID
+ *
+ * Server response type:         KalturaDropFolder
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderGetAction extends KalturaRequest<KalturaDropFolder> {
 
     dropFolderId : number;

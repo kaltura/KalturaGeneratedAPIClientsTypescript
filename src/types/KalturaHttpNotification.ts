@@ -15,9 +15,7 @@ export interface KalturaHttpNotificationArgs  extends KalturaObjectBaseArgs {
 	eventType? : KalturaEventNotificationEventType;
 }
 
-/** 
-* Wrapper for sent notifications
-**/
+
 export class KalturaHttpNotification extends KalturaObjectBase {
 
     object : KalturaObjectBase;

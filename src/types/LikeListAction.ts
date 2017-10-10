@@ -11,7 +11,16 @@ export interface LikeListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'like' action 'list'.
+ *
+ * 
+ *
+ * Server response type:         KalturaLikeListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LikeListAction extends KalturaRequest<KalturaLikeListResponse> {
 
     filter : KalturaLikeFilter;

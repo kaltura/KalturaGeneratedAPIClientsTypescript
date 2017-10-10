@@ -10,9 +10,16 @@ export interface FlavorAssetSetContentActionArgs  extends KalturaRequestArgs {
 	contentResource : KalturaContentResource;
 }
 
-/** 
-* Update content of flavor asset
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'setContent'.
+ *
+ * Usage: Update content of flavor asset
+ *
+ * Server response type:         KalturaFlavorAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetSetContentAction extends KalturaRequest<KalturaFlavorAsset> {
 
     id : string;

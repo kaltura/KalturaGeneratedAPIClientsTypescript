@@ -8,9 +8,16 @@ export interface DocumentsCancelReplaceActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Cancels document replacement
-**/
+/**
+ * Build request payload for service 'documents' action 'cancelReplace'.
+ *
+ * Usage: Cancels document replacement
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsCancelReplaceAction extends KalturaRequest<KalturaDocumentEntry> {
 
     entryId : string;

@@ -8,9 +8,16 @@ export interface StorageProfileAddActionArgs  extends KalturaRequestArgs {
     storageProfile : KalturaStorageProfile;
 }
 
-/** 
-* Adds a storage profile to the Kaltura DB.
-**/
+/**
+ * Build request payload for service 'storageProfile' action 'add'.
+ *
+ * Usage: Adds a storage profile to the Kaltura DB
+ *
+ * Server response type:         KalturaStorageProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StorageProfileAddAction extends KalturaRequest<KalturaStorageProfile> {
 
     storageProfile : KalturaStorageProfile;

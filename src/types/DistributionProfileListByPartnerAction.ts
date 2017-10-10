@@ -11,7 +11,16 @@ export interface DistributionProfileListByPartnerActionArgs  extends KalturaRequ
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'distributionProfile' action 'listByPartner'.
+ *
+ * 
+ *
+ * Server response type:         KalturaDistributionProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DistributionProfileListByPartnerAction extends KalturaRequest<KalturaDistributionProfileListResponse> {
 
     filter : KalturaPartnerFilter;

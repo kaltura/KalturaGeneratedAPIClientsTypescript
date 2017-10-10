@@ -9,9 +9,16 @@ export interface CuePointCloneActionArgs  extends KalturaRequestArgs {
 	entryId : string;
 }
 
-/** 
-* Clone cuePoint with id to given entry
-**/
+/**
+ * Build request payload for service 'cuePoint' action 'clone'.
+ *
+ * Usage: Clone cuePoint with id to given entry
+ *
+ * Server response type:         KalturaCuePoint
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CuePointCloneAction extends KalturaRequest<KalturaCuePoint> {
 
     id : string;

@@ -11,9 +11,16 @@ export interface LiveChannelListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List live channels by filter with paging support.
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'list'.
+ *
+ * Usage: List live channels by filter with paging support
+ *
+ * Server response type:         KalturaLiveChannelListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelListAction extends KalturaRequest<KalturaLiveChannelListResponse> {
 
     filter : KalturaLiveChannelFilter;

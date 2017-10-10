@@ -9,9 +9,16 @@ export interface FileAssetUpdateActionArgs  extends KalturaRequestArgs {
 	fileAsset : KalturaFileAsset;
 }
 
-/** 
-* Update file asset by id
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'update'.
+ *
+ * Usage: Update file asset by id
+ *
+ * Server response type:         KalturaFileAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetUpdateAction extends KalturaRequest<KalturaFileAsset> {
 
     id : number;

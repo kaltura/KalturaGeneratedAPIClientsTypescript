@@ -8,7 +8,16 @@ export interface UnicornNotifyActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-
+/**
+ * Build request payload for service 'unicorn' action 'notify'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UnicornNotifyAction extends KalturaRequest<void> {
 
     id : number;

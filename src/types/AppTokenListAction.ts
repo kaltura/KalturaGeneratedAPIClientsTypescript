@@ -11,9 +11,16 @@ export interface AppTokenListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List application authentication tokens by filter and pager
-**/
+/**
+ * Build request payload for service 'appToken' action 'list'.
+ *
+ * Usage: List application authentication tokens by filter and pager
+ *
+ * Server response type:         KalturaAppTokenListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AppTokenListAction extends KalturaRequest<KalturaAppTokenListResponse> {
 
     filter : KalturaAppTokenFilter;

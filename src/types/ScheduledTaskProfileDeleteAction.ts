@@ -8,9 +8,16 @@ export interface ScheduledTaskProfileDeleteActionArgs  extends KalturaRequestArg
     id : number;
 }
 
-/** 
-* Delete a scheduled task profile
-**/
+/**
+ * Build request payload for service 'scheduledTaskProfile' action 'delete'.
+ *
+ * Usage: Delete a scheduled task profile
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduledTaskProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;

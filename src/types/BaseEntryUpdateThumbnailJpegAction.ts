@@ -9,9 +9,16 @@ export interface BaseEntryUpdateThumbnailJpegActionArgs  extends KalturaUploadRe
 	fileData : File;
 }
 
-/** 
-* Update entry thumbnail using a raw jpeg file.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'updateThumbnailJpeg'.
+ *
+ * Usage: Update entry thumbnail using a raw jpeg file
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class BaseEntryUpdateThumbnailJpegAction extends KalturaUploadRequest<KalturaBaseEntry> {
 
     entryId : string;

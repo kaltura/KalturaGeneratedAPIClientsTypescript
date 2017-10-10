@@ -7,9 +7,7 @@ export interface KalturaTimeContextFieldArgs  extends KalturaIntegerFieldArgs {
     offset? : number;
 }
 
-/** 
-* Represents the current time context on Kaltura servers
-**/
+
 export class KalturaTimeContextField extends KalturaIntegerField {
 
     offset : number;

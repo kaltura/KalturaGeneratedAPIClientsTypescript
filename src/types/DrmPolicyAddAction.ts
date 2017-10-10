@@ -8,9 +8,16 @@ export interface DrmPolicyAddActionArgs  extends KalturaRequestArgs {
     drmPolicy : KalturaDrmPolicy;
 }
 
-/** 
-* Allows you to add a new DrmPolicy object
-**/
+/**
+ * Build request payload for service 'drmPolicy' action 'add'.
+ *
+ * Usage: Allows you to add a new DrmPolicy object
+ *
+ * Server response type:         KalturaDrmPolicy
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmPolicyAddAction extends KalturaRequest<KalturaDrmPolicy> {
 
     drmPolicy : KalturaDrmPolicy;

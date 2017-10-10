@@ -9,10 +9,16 @@ export interface ReportGetCsvFromStringParamsActionArgs  extends KalturaRequestA
 	params? : string;
 }
 
-/** 
-* Returns report CSV file executed by string params with the following convention:
-* param1=value1;param2=value2
-**/
+/**
+ * Build request payload for service 'report' action 'getCsvFromStringParams'.
+ *
+ * Usage: Returns report CSV file executed by string params with the following convention: param1=value1;param2=value2
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportGetCsvFromStringParamsAction extends KalturaRequest<string> {
 
     id : number;

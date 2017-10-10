@@ -11,9 +11,16 @@ export interface VirusScanProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List virus scan profile objects by filter and pager
-**/
+/**
+ * Build request payload for service 'virusScanProfile' action 'list'.
+ *
+ * Usage: List virus scan profile objects by filter and pager
+ *
+ * Server response type:         KalturaVirusScanProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VirusScanProfileListAction extends KalturaRequest<KalturaVirusScanProfileListResponse> {
 
     filter : KalturaVirusScanProfileFilter;

@@ -8,9 +8,16 @@ export interface LiveStreamRegenerateStreamTokenActionArgs  extends KalturaReque
     entryId : string;
 }
 
-/** 
-* Regenerate new secure token for liveStream
-**/
+/**
+ * Build request payload for service 'liveStream' action 'regenerateStreamToken'.
+ *
+ * Usage: Regenerate new secure token for liveStream
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamRegenerateStreamTokenAction extends KalturaRequest<void> {
 
     entryId : string;

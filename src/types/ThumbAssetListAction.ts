@@ -11,9 +11,16 @@ export interface ThumbAssetListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Thumbnail Assets by filter and pager
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'list'.
+ *
+ * Usage: List Thumbnail Assets by filter and pager
+ *
+ * Server response type:         KalturaThumbAssetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetListAction extends KalturaRequest<KalturaThumbAssetListResponse> {
 
     filter : KalturaAssetFilter;

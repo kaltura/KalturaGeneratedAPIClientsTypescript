@@ -9,9 +9,16 @@ export interface MediaAddFromFlavorAssetActionArgs  extends KalturaRequestArgs {
 	mediaEntry? : KalturaMediaEntry;
 }
 
-/** 
-* Copy flavor asset into new entry
-**/
+/**
+ * Build request payload for service 'media' action 'addFromFlavorAsset'.
+ *
+ * Usage: Copy flavor asset into new entry
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddFromFlavorAssetAction extends KalturaRequest<KalturaMediaEntry> {
 
     sourceFlavorAssetId : string;

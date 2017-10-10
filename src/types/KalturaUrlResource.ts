@@ -8,11 +8,7 @@ export interface KalturaUrlResourceArgs  extends KalturaContentResourceArgs {
 	forceAsyncDownload? : boolean;
 }
 
-/** 
-* Used to ingest media that is available on remote server and accessible using the
-* supplied URL, media file will be downloaded using import job in order to make
-* the asset ready.
-**/
+
 export class KalturaUrlResource extends KalturaContentResource {
 
     url : string;

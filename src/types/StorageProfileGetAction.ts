@@ -8,9 +8,16 @@ export interface StorageProfileGetActionArgs  extends KalturaRequestArgs {
     storageProfileId : number;
 }
 
-/** 
-* Get storage profile by id
-**/
+/**
+ * Build request payload for service 'storageProfile' action 'get'.
+ *
+ * Usage: Get storage profile by id
+ *
+ * Server response type:         KalturaStorageProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StorageProfileGetAction extends KalturaRequest<KalturaStorageProfile> {
 
     storageProfileId : number;

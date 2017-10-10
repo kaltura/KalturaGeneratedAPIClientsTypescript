@@ -10,9 +10,16 @@ export interface CategoryDeleteActionArgs  extends KalturaRequestArgs {
 	moveEntriesToParentCategory? : KalturaNullableBoolean;
 }
 
-/** 
-* Delete a Category
-**/
+/**
+ * Build request payload for service 'category' action 'delete'.
+ *
+ * Usage: Delete a Category
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryDeleteAction extends KalturaRequest<void> {
 
     id : number;

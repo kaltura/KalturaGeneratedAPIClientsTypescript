@@ -9,9 +9,16 @@ export interface MetadataUpdateFromXSLActionArgs  extends KalturaUploadRequestAr
 	xslFile : File;
 }
 
-/** 
-* Action transforms current metadata object XML using a provided XSL.
-**/
+/**
+ * Build request payload for service 'metadata' action 'updateFromXSL'.
+ *
+ * Usage: Action transforms current metadata object XML using a provided XSL
+ *
+ * Server response type:         KalturaMetadata
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataUpdateFromXSLAction extends KalturaUploadRequest<KalturaMetadata> {
 
     id : number;

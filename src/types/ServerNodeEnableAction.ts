@@ -8,9 +8,16 @@ export interface ServerNodeEnableActionArgs  extends KalturaRequestArgs {
     serverNodeId : string;
 }
 
-/** 
-* Enable server node by id
-**/
+/**
+ * Build request payload for service 'serverNode' action 'enable'.
+ *
+ * Usage: Enable server node by id
+ *
+ * Server response type:         KalturaServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ServerNodeEnableAction extends KalturaRequest<KalturaServerNode> {
 
     serverNodeId : string;

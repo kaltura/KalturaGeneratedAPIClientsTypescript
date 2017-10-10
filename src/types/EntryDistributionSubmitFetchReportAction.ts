@@ -8,9 +8,16 @@ export interface EntryDistributionSubmitFetchReportActionArgs  extends KalturaRe
     id : number;
 }
 
-/** 
-* Submits Entry Distribution report request
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'submitFetchReport'.
+ *
+ * Usage: Submits Entry Distribution report request
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionSubmitFetchReportAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

@@ -11,9 +11,16 @@ export interface CategoryListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List all categories
-**/
+/**
+ * Build request payload for service 'category' action 'list'.
+ *
+ * Usage: List all categories
+ *
+ * Server response type:         KalturaCategoryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryListAction extends KalturaRequest<KalturaCategoryListResponse> {
 
     filter : KalturaCategoryFilter;

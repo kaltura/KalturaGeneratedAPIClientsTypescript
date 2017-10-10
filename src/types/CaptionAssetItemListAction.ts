@@ -12,9 +12,16 @@ export interface CaptionAssetItemListActionArgs  extends KalturaRequestArgs {
 	captionAssetItemPager? : KalturaFilterPager;
 }
 
-/** 
-* List caption asset items by filter and pager
-**/
+/**
+ * Build request payload for service 'captionAssetItem' action 'list'.
+ *
+ * Usage: List caption asset items by filter and pager
+ *
+ * Server response type:         KalturaCaptionAssetItemListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetItemListAction extends KalturaRequest<KalturaCaptionAssetItemListResponse> {
 
     captionAssetId : string;

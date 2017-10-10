@@ -8,10 +8,16 @@ export interface VirusScanProfileAddActionArgs  extends KalturaRequestArgs {
     virusScanProfile : KalturaVirusScanProfile;
 }
 
-/** 
-* Allows you to add an virus scan profile object and virus scan profile content
-* associated with Kaltura object
-**/
+/**
+ * Build request payload for service 'virusScanProfile' action 'add'.
+ *
+ * Usage: Allows you to add an virus scan profile object and virus scan profile content associated with Kaltura object
+ *
+ * Server response type:         KalturaVirusScanProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VirusScanProfileAddAction extends KalturaRequest<KalturaVirusScanProfile> {
 
     virusScanProfile : KalturaVirusScanProfile;

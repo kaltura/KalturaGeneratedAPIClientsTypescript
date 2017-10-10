@@ -9,9 +9,16 @@ export interface CategoryEntryDeleteActionArgs  extends KalturaRequestArgs {
 	categoryId : number;
 }
 
-/** 
-* Delete CategoryEntry
-**/
+/**
+ * Build request payload for service 'categoryEntry' action 'delete'.
+ *
+ * Usage: Delete CategoryEntry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryEntryDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

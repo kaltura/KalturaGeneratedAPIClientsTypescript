@@ -8,9 +8,16 @@ export interface UiConfAddActionArgs  extends KalturaRequestArgs {
     uiConf : KalturaUiConf;
 }
 
-/** 
-* UIConf Add action allows you to add a UIConf to Kaltura DB
-**/
+/**
+ * Build request payload for service 'uiConf' action 'add'.
+ *
+ * Usage: UIConf Add action allows you to add a UIConf to Kaltura DB
+ *
+ * Server response type:         KalturaUiConf
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfAddAction extends KalturaRequest<KalturaUiConf> {
 
     uiConf : KalturaUiConf;

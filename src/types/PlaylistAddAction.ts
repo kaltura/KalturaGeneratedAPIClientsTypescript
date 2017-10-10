@@ -9,10 +9,17 @@ export interface PlaylistAddActionArgs  extends KalturaRequestArgs {
 	updateStats? : boolean;
 }
 
-/** 
-* Add new playlist   Note that all entries used in a playlist will become public
-* and may appear in KalturaNetwork
-**/
+/**
+ * Build request payload for service 'playlist' action 'add'.
+ *
+ * Usage: Add new playlist
+ * Note that all entries used in a playlist will become public and may appear in KalturaNetwork
+ *
+ * Server response type:         KalturaPlaylist
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistAddAction extends KalturaRequest<KalturaPlaylist> {
 
     playlist : KalturaPlaylist;

@@ -9,9 +9,16 @@ export interface DrmPolicyUpdateActionArgs  extends KalturaRequestArgs {
 	drmPolicy : KalturaDrmPolicy;
 }
 
-/** 
-* Update an existing KalturaDrmPolicy object
-**/
+/**
+ * Build request payload for service 'drmPolicy' action 'update'.
+ *
+ * Usage: Update an existing KalturaDrmPolicy object
+ *
+ * Server response type:         KalturaDrmPolicy
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmPolicyUpdateAction extends KalturaRequest<KalturaDrmPolicy> {
 
     drmPolicyId : number;

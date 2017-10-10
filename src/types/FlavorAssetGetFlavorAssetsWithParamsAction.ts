@@ -8,10 +8,16 @@ export interface FlavorAssetGetFlavorAssetsWithParamsActionArgs  extends Kaltura
     entryId : string;
 }
 
-/** 
-* Get Flavor Asset with the relevant Flavor Params (Flavor Params can exist
-* without Flavor Asset & vice versa)
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'getFlavorAssetsWithParams'.
+ *
+ * Usage: Get Flavor Asset with the relevant Flavor Params (Flavor Params can exist without Flavor Asset & vice versa)
+ *
+ * Server response type:         KalturaFlavorAssetWithParams[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetGetFlavorAssetsWithParamsAction extends KalturaRequest<KalturaFlavorAssetWithParams[]> {
 
     entryId : string;

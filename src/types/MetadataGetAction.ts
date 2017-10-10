@@ -8,9 +8,16 @@ export interface MetadataGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Retrieve a metadata object by id
-**/
+/**
+ * Build request payload for service 'metadata' action 'get'.
+ *
+ * Usage: Retrieve a metadata object by id
+ *
+ * Server response type:         KalturaMetadata
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataGetAction extends KalturaRequest<KalturaMetadata> {
 
     id : number;

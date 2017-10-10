@@ -8,9 +8,16 @@ export interface DocumentsApproveReplaceActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Approves document replacement
-**/
+/**
+ * Build request payload for service 'documents' action 'approveReplace'.
+ *
+ * Usage: Approves document replacement
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsApproveReplaceAction extends KalturaRequest<KalturaDocumentEntry> {
 
     entryId : string;

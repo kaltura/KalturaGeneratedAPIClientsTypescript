@@ -9,7 +9,16 @@ export interface ESearchGetAllowedSearchTypesActionArgs  extends KalturaRequestA
     searchItem : KalturaESearchItem;
 }
 
-
+/**
+ * Build request payload for service 'eSearch' action 'getAllowedSearchTypes'.
+ *
+ * 
+ *
+ * Server response type:         KalturaKeyValue[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ESearchGetAllowedSearchTypesAction extends KalturaRequest<KalturaKeyValue[]> {
 
     searchItem : KalturaESearchItem;

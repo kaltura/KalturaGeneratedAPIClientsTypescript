@@ -8,9 +8,16 @@ export interface SyndicationFeedGetEntryCountActionArgs  extends KalturaRequestA
     feedId : string;
 }
 
-/** 
-* get entry count for a syndication feed
-**/
+/**
+ * Build request payload for service 'syndicationFeed' action 'getEntryCount'.
+ *
+ * Usage: get entry count for a syndication feed
+ *
+ * Server response type:         KalturaSyndicationFeedEntryCount
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SyndicationFeedGetEntryCountAction extends KalturaRequest<KalturaSyndicationFeedEntryCount> {
 
     feedId : string;

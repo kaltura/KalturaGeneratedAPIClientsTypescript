@@ -11,9 +11,16 @@ export interface CategoryUserUpdateActionArgs  extends KalturaRequestArgs {
 	override? : boolean;
 }
 
-/** 
-* Update CategoryUser by id
-**/
+/**
+ * Build request payload for service 'categoryUser' action 'update'.
+ *
+ * Usage: Update CategoryUser by id
+ *
+ * Server response type:         KalturaCategoryUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUserUpdateAction extends KalturaRequest<KalturaCategoryUser> {
 
     categoryId : number;

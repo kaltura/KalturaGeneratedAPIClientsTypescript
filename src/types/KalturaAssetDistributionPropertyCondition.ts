@@ -8,10 +8,7 @@ export interface KalturaAssetDistributionPropertyConditionArgs  extends KalturaA
 	propertyValue? : string;
 }
 
-/** 
-* Defines the condition to match a property and value on core asset object (or one
-* if its inherited objects)
-**/
+
 export class KalturaAssetDistributionPropertyCondition extends KalturaAssetDistributionCondition {
 
     propertyName : string;

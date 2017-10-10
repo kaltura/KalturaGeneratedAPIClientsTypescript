@@ -8,9 +8,16 @@ export interface GroupUserAddActionArgs  extends KalturaRequestArgs {
     groupUser : KalturaGroupUser;
 }
 
-/** 
-* Add new GroupUser
-**/
+/**
+ * Build request payload for service 'groupUser' action 'add'.
+ *
+ * Usage: Add new GroupUser
+ *
+ * Server response type:         KalturaGroupUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GroupUserAddAction extends KalturaRequest<KalturaGroupUser> {
 
     groupUser : KalturaGroupUser;

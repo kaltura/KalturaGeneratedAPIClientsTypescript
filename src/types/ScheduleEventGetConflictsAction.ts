@@ -11,9 +11,16 @@ export interface ScheduleEventGetConflictsActionArgs  extends KalturaRequestArgs
 	scheduleEventIdToIgnore? : string;
 }
 
-/** 
-* List conflicting events for resourcesIds by event's dates
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'getConflicts'.
+ *
+ * Usage: List conflicting events for resourcesIds by event's dates
+ *
+ * Server response type:         KalturaScheduleEventListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventGetConflictsAction extends KalturaRequest<KalturaScheduleEventListResponse> {
 
     resourceIds : string;

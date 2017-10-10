@@ -8,9 +8,16 @@ export interface PermissionAddActionArgs  extends KalturaRequestArgs {
     permission : KalturaPermission;
 }
 
-/** 
-* Adds a new permission object to the account.
-**/
+/**
+ * Build request payload for service 'permission' action 'add'.
+ *
+ * Usage: Adds a new permission object to the account
+ *
+ * Server response type:         KalturaPermission
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionAddAction extends KalturaRequest<KalturaPermission> {
 
     permission : KalturaPermission;

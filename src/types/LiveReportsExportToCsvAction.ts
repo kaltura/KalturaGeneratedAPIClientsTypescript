@@ -11,7 +11,16 @@ export interface LiveReportsExportToCsvActionArgs  extends KalturaRequestArgs {
 	params : KalturaLiveReportExportParams;
 }
 
-
+/**
+ * Build request payload for service 'liveReports' action 'exportToCsv'.
+ *
+ * 
+ *
+ * Server response type:         KalturaLiveReportExportResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveReportsExportToCsvAction extends KalturaRequest<KalturaLiveReportExportResponse> {
 
     reportType : KalturaLiveReportExportType;

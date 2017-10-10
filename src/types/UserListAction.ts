@@ -11,11 +11,18 @@ export interface UserListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Lists user objects that are associated with an account.   Blocked users are
-* listed unless you use a filter to exclude them.   Deleted users are not listed
-* unless you use a filter to include them.
-**/
+/**
+ * Build request payload for service 'user' action 'list'.
+ *
+ * Usage: Lists user objects that are associated with an account.
+ * Blocked users are listed unless you use a filter to exclude them.
+ * Deleted users are not listed unless you use a filter to include them
+ *
+ * Server response type:         KalturaUserListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserListAction extends KalturaRequest<KalturaUserListResponse> {
 
     filter : KalturaUserFilter;

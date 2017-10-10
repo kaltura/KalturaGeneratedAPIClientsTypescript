@@ -10,9 +10,16 @@ export interface LiveStreamRemoveLiveStreamPushPublishConfigurationActionArgs  e
 	protocol : KalturaPlaybackProtocol;
 }
 
-/** 
-* Remove push publish configuration from entry
-**/
+/**
+ * Build request payload for service 'liveStream' action 'removeLiveStreamPushPublishConfiguration'.
+ *
+ * Usage: Remove push publish configuration from entry
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamRemoveLiveStreamPushPublishConfigurationAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     entryId : string;

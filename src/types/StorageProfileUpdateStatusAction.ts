@@ -10,7 +10,16 @@ export interface StorageProfileUpdateStatusActionArgs  extends KalturaRequestArg
 	status : KalturaStorageProfileStatus;
 }
 
-
+/**
+ * Build request payload for service 'storageProfile' action 'updateStatus'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StorageProfileUpdateStatusAction extends KalturaRequest<void> {
 
     storageId : number;

@@ -9,10 +9,16 @@ export interface CategoryMoveActionArgs  extends KalturaRequestArgs {
 	targetCategoryParentId : number;
 }
 
-/** 
-* Move categories that belong to the same parent category to a target categroy -
-* enabled only for ks with disable entitlement
-**/
+/**
+ * Build request payload for service 'category' action 'move'.
+ *
+ * Usage: Move categories that belong to the same parent category to a target categroy - enabled only for ks with disable entitlement
+ *
+ * Server response type:         KalturaCategoryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryMoveAction extends KalturaRequest<KalturaCategoryListResponse> {
 
     categoryIds : string;

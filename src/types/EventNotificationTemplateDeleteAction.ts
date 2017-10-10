@@ -8,9 +8,16 @@ export interface EventNotificationTemplateDeleteActionArgs  extends KalturaReque
     id : number;
 }
 
-/** 
-* Delete an event notification template object
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'delete'.
+ *
+ * Usage: Delete an event notification template object
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateDeleteAction extends KalturaRequest<void> {
 
     id : number;

@@ -13,9 +13,16 @@ export interface UserUpdateLoginDataActionArgs  extends KalturaRequestArgs {
 	newLastName? : string;
 }
 
-/** 
-* Updates a user's login data: email, password, name.
-**/
+/**
+ * Build request payload for service 'user' action 'updateLoginData'.
+ *
+ * Usage: Updates a user's login data: email, password, name
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserUpdateLoginDataAction extends KalturaRequest<void> {
 
     oldLoginId : string;

@@ -8,9 +8,16 @@ export interface FlavorAssetSetAsSourceActionArgs  extends KalturaRequestArgs {
     assetId : string;
 }
 
-/** 
-* Set a given flavor as the original flavor
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'setAsSource'.
+ *
+ * Usage: Set a given flavor as the original flavor
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetSetAsSourceAction extends KalturaRequest<void> {
 
     assetId : string;

@@ -8,9 +8,16 @@ export interface LiveStreamDeleteActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Delete a live stream entry.
-**/
+/**
+ * Build request payload for service 'liveStream' action 'delete'.
+ *
+ * Usage: Delete a live stream entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

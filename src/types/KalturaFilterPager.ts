@@ -7,10 +7,7 @@ export interface KalturaFilterPagerArgs  extends KalturaPagerArgs {
     
 }
 
-/** 
-* The KalturaFilterPager object enables paging management to be applied upon
-* service list actions.
-**/
+
 export class KalturaFilterPager extends KalturaPager {
 
     

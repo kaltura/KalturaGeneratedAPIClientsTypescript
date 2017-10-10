@@ -8,9 +8,16 @@ export interface BaseEntryGetRemotePathsActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Get remote storage existing paths for the asset.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'getRemotePaths'.
+ *
+ * Usage: Get remote storage existing paths for the asset
+ *
+ * Server response type:         KalturaRemotePathListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryGetRemotePathsAction extends KalturaRequest<KalturaRemotePathListResponse> {
 
     entryId : string;

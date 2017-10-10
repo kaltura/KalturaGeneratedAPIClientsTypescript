@@ -11,9 +11,16 @@ export interface EventNotificationTemplateListTemplatesActionArgs  extends Kaltu
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Action lists the template partner event notification templates.
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'listTemplates'.
+ *
+ * Usage: Action lists the template partner event notification templates
+ *
+ * Server response type:         KalturaEventNotificationTemplateListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateListTemplatesAction extends KalturaRequest<KalturaEventNotificationTemplateListResponse> {
 
     filter : KalturaEventNotificationTemplateFilter;

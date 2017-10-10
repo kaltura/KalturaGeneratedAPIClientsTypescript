@@ -7,9 +7,7 @@ export interface KalturaUserEmailContextFieldArgs  extends KalturaStringFieldArg
     
 }
 
-/** 
-* Represents the current session user e-mail address context
-**/
+
 export class KalturaUserEmailContextField extends KalturaStringField {
 
     

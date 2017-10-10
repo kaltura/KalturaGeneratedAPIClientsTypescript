@@ -9,7 +9,16 @@ export interface UserEntryBulkDeleteActionArgs  extends KalturaRequestArgs {
     filter : KalturaUserEntryFilter;
 }
 
-
+/**
+ * Build request payload for service 'userEntry' action 'bulkDelete'.
+ *
+ * 
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEntryBulkDeleteAction extends KalturaRequest<number> {
 
     filter : KalturaUserEntryFilter;

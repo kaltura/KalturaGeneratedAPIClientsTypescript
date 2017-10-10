@@ -11,11 +11,19 @@ export interface PartnerGetUsageActionArgs  extends KalturaRequestArgs {
 	resolution? : KalturaReportInterval;
 }
 
-/** 
-* Get usage statistics for a partner   Calculation is done according to partner's
-* package   Additional data returned is a graph points of streaming usage in a
-* timeframe   The resolution can be "days" or "months"
-**/
+/**
+ * Build request payload for service 'partner' action 'getUsage'.
+ *
+ * Usage: Get usage statistics for a partner
+ * Calculation is done according to partner's package
+ * Additional data returned is a graph points of streaming usage in a timeframe
+ * The resolution can be "days" or "months"
+ *
+ * Server response type:         KalturaPartnerUsage
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerGetUsageAction extends KalturaRequest<KalturaPartnerUsage> {
 
     year : number;

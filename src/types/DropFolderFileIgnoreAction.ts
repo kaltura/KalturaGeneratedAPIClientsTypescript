@@ -8,10 +8,16 @@ export interface DropFolderFileIgnoreActionArgs  extends KalturaRequestArgs {
     dropFolderFileId : number;
 }
 
-/** 
-* Set the KalturaDropFolderFile status to ignore
-* (KalturaDropFolderFileStatus::IGNORE)
-**/
+/**
+ * Build request payload for service 'dropFolderFile' action 'ignore'.
+ *
+ * Usage: Set the KalturaDropFolderFile status to ignore (KalturaDropFolderFileStatus::IGNORE)
+ *
+ * Server response type:         KalturaDropFolderFile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderFileIgnoreAction extends KalturaRequest<KalturaDropFolderFile> {
 
     dropFolderFileId : number;

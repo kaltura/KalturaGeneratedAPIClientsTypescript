@@ -8,9 +8,16 @@ export interface DistributionProfileDeleteActionArgs  extends KalturaRequestArgs
     id : number;
 }
 
-/** 
-* Delete Distribution Profile by id
-**/
+/**
+ * Build request payload for service 'distributionProfile' action 'delete'.
+ *
+ * Usage: Delete Distribution Profile by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DistributionProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;

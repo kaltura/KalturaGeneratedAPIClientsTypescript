@@ -7,10 +7,7 @@ export interface KalturaWebcamTokenResourceArgs  extends KalturaDataCenterConten
     token? : string;
 }
 
-/** 
-* Used to ingest media that streamed to the system and represented by token that
-* returned from media server such as FMS or red5.
-**/
+
 export class KalturaWebcamTokenResource extends KalturaDataCenterContentResource {
 
     token : string;

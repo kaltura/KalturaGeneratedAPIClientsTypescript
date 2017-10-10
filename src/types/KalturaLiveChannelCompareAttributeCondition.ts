@@ -8,10 +8,7 @@ export interface KalturaLiveChannelCompareAttributeConditionArgs  extends Kaltur
     attribute? : KalturaLiveChannelCompareAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaLiveChannel attributes. Use
-* KalturaLiveChannelCompareAttribute enum to provide attribute name. /
-**/
+
 export class KalturaLiveChannelCompareAttributeCondition extends KalturaSearchComparableAttributeCondition {
 
     attribute : KalturaLiveChannelCompareAttribute;

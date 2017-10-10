@@ -8,10 +8,7 @@ export interface KalturaPagerArgs  extends KalturaObjectBaseArgs {
 	pageIndex? : number;
 }
 
-/** 
-* The KalturaPager object enables paging management to be applied upon service
-* list/search actions.
-**/
+
 export class KalturaPager extends KalturaObjectBase {
 
     pageSize : number;

@@ -8,9 +8,16 @@ export interface CaptionParamsDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete Caption Params by ID
-**/
+/**
+ * Build request payload for service 'captionParams' action 'delete'.
+ *
+ * Usage: Delete Caption Params by ID
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionParamsDeleteAction extends KalturaRequest<void> {
 
     id : number;

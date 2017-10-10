@@ -8,9 +8,16 @@ export interface PartnerListFeatureStatusActionArgs  extends KalturaRequestArgs 
     
 }
 
-/** 
-* List partner's current processes' statuses
-**/
+/**
+ * Build request payload for service 'partner' action 'listFeatureStatus'.
+ *
+ * Usage: List partner's current processes' statuses
+ *
+ * Server response type:         KalturaFeatureStatusListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerListFeatureStatusAction extends KalturaRequest<KalturaFeatureStatusListResponse> {
 
     

@@ -8,9 +8,16 @@ export interface DocumentsDeleteActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Delete a document entry.
-**/
+/**
+ * Build request payload for service 'documents' action 'delete'.
+ *
+ * Usage: Delete a document entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

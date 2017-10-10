@@ -11,9 +11,16 @@ export interface QuizListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List quiz objects by filter and pager
-**/
+/**
+ * Build request payload for service 'quiz' action 'list'.
+ *
+ * Usage: List quiz objects by filter and pager
+ *
+ * Server response type:         KalturaQuizListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class QuizListAction extends KalturaRequest<KalturaQuizListResponse> {
 
     filter : KalturaQuizFilter;

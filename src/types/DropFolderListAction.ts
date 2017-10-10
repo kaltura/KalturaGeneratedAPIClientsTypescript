@@ -11,9 +11,16 @@ export interface DropFolderListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List KalturaDropFolder objects
-**/
+/**
+ * Build request payload for service 'dropFolder' action 'list'.
+ *
+ * Usage: List KalturaDropFolder objects
+ *
+ * Server response type:         KalturaDropFolderListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderListAction extends KalturaRequest<KalturaDropFolderListResponse> {
 
     filter : KalturaDropFolderFilter;

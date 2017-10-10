@@ -7,9 +7,7 @@ export interface KalturaIntegerFieldArgs  extends KalturaIntegerValueArgs {
     
 }
 
-/** 
-* An int representation to return evaluated dynamic value
-**/
+
 export class KalturaIntegerField extends KalturaIntegerValue {
 
     

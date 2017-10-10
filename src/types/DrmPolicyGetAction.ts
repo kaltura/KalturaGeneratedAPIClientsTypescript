@@ -8,9 +8,16 @@ export interface DrmPolicyGetActionArgs  extends KalturaRequestArgs {
     drmPolicyId : number;
 }
 
-/** 
-* Retrieve a KalturaDrmPolicy object by ID
-**/
+/**
+ * Build request payload for service 'drmPolicy' action 'get'.
+ *
+ * Usage: Retrieve a KalturaDrmPolicy object by ID
+ *
+ * Server response type:         KalturaDrmPolicy
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmPolicyGetAction extends KalturaRequest<KalturaDrmPolicy> {
 
     drmPolicyId : number;

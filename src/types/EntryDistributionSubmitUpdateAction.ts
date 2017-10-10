@@ -8,9 +8,16 @@ export interface EntryDistributionSubmitUpdateActionArgs  extends KalturaRequest
     id : number;
 }
 
-/** 
-* Submits Entry Distribution changes to the remote destination
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'submitUpdate'.
+ *
+ * Usage: Submits Entry Distribution changes to the remote destination
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionSubmitUpdateAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

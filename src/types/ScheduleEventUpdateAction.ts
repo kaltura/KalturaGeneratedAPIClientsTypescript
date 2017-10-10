@@ -9,9 +9,16 @@ export interface ScheduleEventUpdateActionArgs  extends KalturaRequestArgs {
 	scheduleEvent : KalturaScheduleEvent;
 }
 
-/** 
-* Update an existing KalturaScheduleEvent object
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'update'.
+ *
+ * Usage: Update an existing KalturaScheduleEvent object
+ *
+ * Server response type:         KalturaScheduleEvent
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventUpdateAction extends KalturaRequest<KalturaScheduleEvent> {
 
     scheduleEventId : number;

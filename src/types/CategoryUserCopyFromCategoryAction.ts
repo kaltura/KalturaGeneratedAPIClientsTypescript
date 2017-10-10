@@ -8,9 +8,16 @@ export interface CategoryUserCopyFromCategoryActionArgs  extends KalturaRequestA
     categoryId : number;
 }
 
-/** 
-* Copy all memeber from parent category
-**/
+/**
+ * Build request payload for service 'categoryUser' action 'copyFromCategory'.
+ *
+ * Usage: Copy all memeber from parent category
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUserCopyFromCategoryAction extends KalturaRequest<void> {
 
     categoryId : number;

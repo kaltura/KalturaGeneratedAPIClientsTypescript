@@ -10,10 +10,16 @@ export interface SharepointExtensionIsVersionSupportedActionArgs  extends Kaltur
 	serverBuild : number;
 }
 
-/** 
-* Is this Kaltura-Sharepoint-Server-Plugin supports minimum version of
-* $major.$minor.$build (which is required by the extension)
-**/
+/**
+ * Build request payload for service 'sharepointExtension' action 'isVersionSupported'.
+ *
+ * Usage: Is this Kaltura-Sharepoint-Server-Plugin supports minimum version of $major.$minor.$build (which is required by the extension)
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SharepointExtensionIsVersionSupportedAction extends KalturaRequest<boolean> {
 
     serverMajor : number;

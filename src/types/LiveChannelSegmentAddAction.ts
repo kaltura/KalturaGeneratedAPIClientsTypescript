@@ -8,9 +8,16 @@ export interface LiveChannelSegmentAddActionArgs  extends KalturaRequestArgs {
     liveChannelSegment : KalturaLiveChannelSegment;
 }
 
-/** 
-* Add new live channel segment
-**/
+/**
+ * Build request payload for service 'liveChannelSegment' action 'add'.
+ *
+ * Usage: Add new live channel segment
+ *
+ * Server response type:         KalturaLiveChannelSegment
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelSegmentAddAction extends KalturaRequest<KalturaLiveChannelSegment> {
 
     liveChannelSegment : KalturaLiveChannelSegment;

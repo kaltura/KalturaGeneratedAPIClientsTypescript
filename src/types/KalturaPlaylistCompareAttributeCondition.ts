@@ -8,10 +8,7 @@ export interface KalturaPlaylistCompareAttributeConditionArgs  extends KalturaSe
     attribute? : KalturaPlaylistCompareAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaPlaylist attributes. Use
-* KalturaPlaylistCompareAttribute enum to provide attribute name. /
-**/
+
 export class KalturaPlaylistCompareAttributeCondition extends KalturaSearchComparableAttributeCondition {
 
     attribute : KalturaPlaylistCompareAttribute;

@@ -8,10 +8,7 @@ export interface KalturaPlayableEntryMatchAttributeConditionArgs  extends Kaltur
     attribute? : KalturaPlayableEntryMatchAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaPlayableEntry attributes. Use
-* KalturaPlayableEntryMatchAttribute enum to provide attribute name. /
-**/
+
 export class KalturaPlayableEntryMatchAttributeCondition extends KalturaSearchMatchAttributeCondition {
 
     attribute : KalturaPlayableEntryMatchAttribute;

@@ -8,9 +8,16 @@ export interface ThumbParamsGetByConversionProfileIdActionArgs  extends KalturaR
     conversionProfileId : number;
 }
 
-/** 
-* Get Thumb Params by Conversion Profile ID
-**/
+/**
+ * Build request payload for service 'thumbParams' action 'getByConversionProfileId'.
+ *
+ * Usage: Get Thumb Params by Conversion Profile ID
+ *
+ * Server response type:         KalturaThumbParams[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbParamsGetByConversionProfileIdAction extends KalturaRequest<KalturaThumbParams[]> {
 
     conversionProfileId : number;

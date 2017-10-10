@@ -8,12 +8,7 @@ export interface KalturaEntryResourceArgs  extends KalturaContentResourceArgs {
 	flavorParamsId? : number;
 }
 
-/** 
-* Used to ingest media that is already ingested to Kaltura system as a different
-* entry in the past, the new created flavor asset will be ready immediately using
-* a file sync of link type that will point to the existing file sync of the
-* existing entry.
-**/
+
 export class KalturaEntryResource extends KalturaContentResource {
 
     entryId : string;

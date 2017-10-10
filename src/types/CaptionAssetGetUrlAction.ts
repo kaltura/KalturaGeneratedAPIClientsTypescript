@@ -9,9 +9,16 @@ export interface CaptionAssetGetUrlActionArgs  extends KalturaRequestArgs {
 	storageId? : number;
 }
 
-/** 
-* Get download URL for the asset
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'getUrl'.
+ *
+ * Usage: Get download URL for the asset
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetGetUrlAction extends KalturaRequest<string> {
 
     id : string;

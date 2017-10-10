@@ -7,10 +7,7 @@ export interface KalturaEmailNotificationRecipientProviderArgs  extends KalturaO
     
 }
 
-/** 
-* Abstract core class  which provides the recipients (to, CC, BCC) for an email
-* notification
-**/
+
 export class KalturaEmailNotificationRecipientProvider extends KalturaObjectBase {
 
     

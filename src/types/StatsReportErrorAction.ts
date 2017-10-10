@@ -9,9 +9,16 @@ export interface StatsReportErrorActionArgs  extends KalturaRequestArgs {
 	errorMessage : string;
 }
 
-/** 
-* Use this action to report errors to the kaltura server.
-**/
+/**
+ * Build request payload for service 'stats' action 'reportError'.
+ *
+ * Usage: Use this action to report errors to the kaltura server
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StatsReportErrorAction extends KalturaRequest<void> {
 
     errorCode : string;

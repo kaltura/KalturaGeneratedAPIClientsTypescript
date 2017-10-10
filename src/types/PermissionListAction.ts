@@ -11,11 +11,18 @@ export interface PermissionListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Lists permission objects that are associated with an account.   Blocked
-* permissions are listed unless you use a filter to exclude them.   Blocked
-* permissions are listed unless you use a filter to exclude them.
-**/
+/**
+ * Build request payload for service 'permission' action 'list'.
+ *
+ * Usage: Lists permission objects that are associated with an account.
+ * Blocked permissions are listed unless you use a filter to exclude them.
+ * Blocked permissions are listed unless you use a filter to exclude them
+ *
+ * Server response type:         KalturaPermissionListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionListAction extends KalturaRequest<KalturaPermissionListResponse> {
 
     filter : KalturaPermissionFilter;

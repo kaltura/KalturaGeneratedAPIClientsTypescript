@@ -10,10 +10,17 @@ export interface PlaylistUpdateActionArgs  extends KalturaRequestArgs {
 	updateStats? : boolean;
 }
 
-/** 
-* Update existing playlist   Note - you cannot change playlist type. updated
-* playlist must be of the same type.
-**/
+/**
+ * Build request payload for service 'playlist' action 'update'.
+ *
+ * Usage: Update existing playlist
+ * Note - you cannot change playlist type. updated playlist must be of the same type
+ *
+ * Server response type:         KalturaPlaylist
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistUpdateAction extends KalturaRequest<KalturaPlaylist> {
 
     id : string;

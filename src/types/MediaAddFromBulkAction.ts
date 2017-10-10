@@ -10,11 +10,18 @@ export interface MediaAddFromBulkActionArgs  extends KalturaRequestArgs {
 	bulkUploadId : number;
 }
 
-/** 
-* Adds new media entry by importing an HTTP or FTP URL.   The entry will be queued
-* for import and then for conversion.   This action should be exposed only to the
-* batches
-**/
+/**
+ * Build request payload for service 'media' action 'addFromBulk'.
+ *
+ * Usage: Adds new media entry by importing an HTTP or FTP URL.
+ * The entry will be queued for import and then for conversion.
+ * This action should be exposed only to the batches
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddFromBulkAction extends KalturaRequest<KalturaMediaEntry> {
 
     mediaEntry : KalturaMediaEntry;

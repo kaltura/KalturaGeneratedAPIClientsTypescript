@@ -8,10 +8,7 @@ export interface KalturaEmailNotificationRecipientJobDataArgs  extends KalturaOb
     
 }
 
-/** 
-* Abstract class representing the final output recipients going into the batch
-* mechanism
-**/
+
 export class KalturaEmailNotificationRecipientJobData extends KalturaObjectBase {
 
     readonly providerType : KalturaEmailNotificationRecipientProviderType;

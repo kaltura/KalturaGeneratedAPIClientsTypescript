@@ -8,9 +8,16 @@ export interface DataDeleteActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Delete a data entry.
-**/
+/**
+ * Build request payload for service 'data' action 'delete'.
+ *
+ * Usage: Delete a data entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

@@ -8,9 +8,16 @@ export interface BulkAbortActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Aborts the bulk upload and all its child jobs
-**/
+/**
+ * Build request payload for service 'bulk' action 'abort'.
+ *
+ * Usage: Aborts the bulk upload and all its child jobs
+ *
+ * Server response type:         KalturaBulkUpload
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BulkAbortAction extends KalturaRequest<KalturaBulkUpload> {
 
     id : number;

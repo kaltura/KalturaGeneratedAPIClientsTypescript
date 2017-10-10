@@ -10,9 +10,16 @@ export interface NotificationGetClientNotificationActionArgs  extends KalturaReq
 	type : KalturaNotificationType;
 }
 
-/** 
-* Return the notifications for a specific entry id and type
-**/
+/**
+ * Build request payload for service 'notification' action 'getClientNotification'.
+ *
+ * Usage: Return the notifications for a specific entry id and type
+ *
+ * Server response type:         KalturaClientNotification
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NotificationGetClientNotificationAction extends KalturaRequest<KalturaClientNotification> {
 
     entryId : string;

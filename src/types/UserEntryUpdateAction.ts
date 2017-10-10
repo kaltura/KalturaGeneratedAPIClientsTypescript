@@ -10,7 +10,16 @@ export interface UserEntryUpdateActionArgs  extends KalturaRequestArgs {
 	userEntry : KalturaUserEntry;
 }
 
-
+/**
+ * Build request payload for service 'userEntry' action 'update'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEntryUpdateAction extends KalturaRequest<void> {
 
     id : number;

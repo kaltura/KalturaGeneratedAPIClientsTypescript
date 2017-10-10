@@ -9,9 +9,16 @@ export interface BaseEntryUpdateThumbnailFromUrlActionArgs  extends KalturaReque
 	url : string;
 }
 
-/** 
-* Update entry thumbnail using url.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'updateThumbnailFromUrl'.
+ *
+ * Usage: Update entry thumbnail using url
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryUpdateThumbnailFromUrlAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

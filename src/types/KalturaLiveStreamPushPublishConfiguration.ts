@@ -9,9 +9,7 @@ export interface KalturaLiveStreamPushPublishConfigurationArgs  extends KalturaO
 	port? : string;
 }
 
-/** 
-* Basic push-publish configuration for Kaltura live stream entry
-**/
+
 export class KalturaLiveStreamPushPublishConfiguration extends KalturaObjectBase {
 
     publishUrl : string;

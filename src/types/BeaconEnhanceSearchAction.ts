@@ -11,7 +11,16 @@ export interface BeaconEnhanceSearchActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'beacon' action 'enhanceSearch'.
+ *
+ * 
+ *
+ * Server response type:         KalturaBeaconListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BeaconEnhanceSearchAction extends KalturaRequest<KalturaBeaconListResponse> {
 
     filter : KalturaBeaconEnhanceFilter;

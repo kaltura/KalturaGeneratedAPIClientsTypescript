@@ -11,7 +11,16 @@ export interface SearchExternalLoginActionArgs  extends KalturaRequestArgs {
 	password : string;
 }
 
-
+/**
+ * Build request payload for service 'search' action 'externalLogin'.
+ *
+ * 
+ *
+ * Server response type:         KalturaSearchAuthData
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SearchExternalLoginAction extends KalturaRequest<KalturaSearchAuthData> {
 
     searchSource : KalturaSearchProviderType;

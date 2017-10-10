@@ -8,9 +8,16 @@ export interface AppTokenGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Get application authentication token by id
-**/
+/**
+ * Build request payload for service 'appToken' action 'get'.
+ *
+ * Usage: Get application authentication token by id
+ *
+ * Server response type:         KalturaAppToken
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AppTokenGetAction extends KalturaRequest<KalturaAppToken> {
 
     id : string;

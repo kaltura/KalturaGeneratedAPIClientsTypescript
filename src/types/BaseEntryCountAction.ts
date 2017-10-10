@@ -9,9 +9,16 @@ export interface BaseEntryCountActionArgs  extends KalturaRequestArgs {
     filter? : KalturaBaseEntryFilter;
 }
 
-/** 
-* Count base entries by filter.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'count'.
+ *
+ * Usage: Count base entries by filter
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryCountAction extends KalturaRequest<number> {
 
     filter : KalturaBaseEntryFilter;

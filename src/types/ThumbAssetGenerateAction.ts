@@ -11,7 +11,16 @@ export interface ThumbAssetGenerateActionArgs  extends KalturaRequestArgs {
 	sourceAssetId? : string;
 }
 
-
+/**
+ * Build request payload for service 'thumbAsset' action 'generate'.
+ *
+ * 
+ *
+ * Server response type:         KalturaThumbAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetGenerateAction extends KalturaRequest<KalturaThumbAsset> {
 
     entryId : string;

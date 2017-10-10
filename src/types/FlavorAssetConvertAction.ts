@@ -10,9 +10,16 @@ export interface FlavorAssetConvertActionArgs  extends KalturaRequestArgs {
 	priority? : number;
 }
 
-/** 
-* Add and convert new Flavor Asset for Entry with specific Flavor Params
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'convert'.
+ *
+ * Usage: Add and convert new Flavor Asset for Entry with specific Flavor Params
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetConvertAction extends KalturaRequest<void> {
 
     entryId : string;

@@ -8,9 +8,7 @@ export interface KalturaClipAttributesArgs  extends KalturaOperationAttributesAr
 	duration? : number;
 }
 
-/** 
-* Clip operation attributes
-**/
+
 export class KalturaClipAttributes extends KalturaOperationAttributes {
 
     offset : number;

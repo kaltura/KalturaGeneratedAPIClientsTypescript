@@ -13,7 +13,16 @@ export interface LiveReportsGetEventsActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'liveReports' action 'getEvents'.
+ *
+ * 
+ *
+ * Server response type:         KalturaReportGraph[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveReportsGetEventsAction extends KalturaRequest<KalturaReportGraph[]> {
 
     reportType : KalturaLiveReportType;

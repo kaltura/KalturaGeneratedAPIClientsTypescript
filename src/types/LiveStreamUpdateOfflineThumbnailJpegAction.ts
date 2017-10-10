@@ -9,9 +9,16 @@ export interface LiveStreamUpdateOfflineThumbnailJpegActionArgs  extends Kaltura
 	fileData : File;
 }
 
-/** 
-* Update live stream entry thumbnail using a raw jpeg file
-**/
+/**
+ * Build request payload for service 'liveStream' action 'updateOfflineThumbnailJpeg'.
+ *
+ * Usage: Update live stream entry thumbnail using a raw jpeg file
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class LiveStreamUpdateOfflineThumbnailJpegAction extends KalturaUploadRequest<KalturaLiveStreamEntry> {
 
     entryId : string;
