@@ -2,10 +2,10 @@ import { KalturaRequest, KalturaRequestArgs } from './kaltura-request';
 import { KalturaObjectBase } from './kaltura-object-base';
 
 export type ProgressCallback = (loaded : number, total : number) => void;
-
+g
 export interface KalturaUploadRequestArgs extends KalturaRequestArgs
 {
-
+    uploadedFileSize : number
 }
 
 export class KalturaUploadRequest<T> extends KalturaRequest<T>
