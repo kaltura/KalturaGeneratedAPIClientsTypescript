@@ -1,5 +1,6 @@
 import { CancelableAction } from "../utils/cancelable-action";
 import { KalturaClientBase, KalturaClientBaseConfiguration } from "./kaltura-client-base";
+import { KalturaUploadRequest } from '../kaltura-upload-request';
 
 export interface KalturaHttpClientBaseConfiguration extends KalturaClientBaseConfiguration {
   endpointUrl: string;
@@ -33,9 +34,9 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
     };
   }
 
-  protected _transmitFileUploadRequest(request): CancelableAction {
+  protected _transmitFileUploadRequest(request : KalturaUploadRequest<any>): CancelableAction {
     return new CancelableAction((resolve, reject) => {
-      const uploadedFileSize = request.getUploadedFileSize ? request.getUploadedFileSize() : 0;
+      const uploadedFileSize = request.getUploadedFileSize();
       const data: ChunkData = { resume: !!uploadedFileSize, finalChunk: false, resumeAt: uploadedFileSize };
 
       const handleChunkUploadError = reason => {
@@ -62,7 +63,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
     });
   }
 
-  private _chunkUpload(request, uploadChunkData: ChunkData): CancelableAction {
+  private _chunkUpload(request: KalturaUploadRequest<any>, uploadChunkData: ChunkData): CancelableAction {
     return new CancelableAction((resolve, reject) => {
       let isComplete = false;
       const parameters: any = Object.assign(
@@ -86,7 +87,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
       const start = uploadChunkData.resumeAt;
       const end = uploadChunkData.finalChunk ? file.size : start + this._fileChunkSize;
 
-      data.set(request.getFormDataPropertyName(), file.slice(start, end, file.type), file.name);
+      data.set(request.getFilePropertyName(), file.slice(start, end, file.type), file.name);
 
       Object.assign(parameters, uploadChunkData);
 

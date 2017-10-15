@@ -9,9 +9,11 @@ export interface KalturaUploadRequestArgs extends KalturaRequestArgs {
 
 export class KalturaUploadRequest<T> extends KalturaRequest<T> {
   private _progressCallback: ProgressCallback;
+  public uploadedFileSize: number = 0;
 
   constructor(data: KalturaUploadRequestArgs, { responseType, responseSubType, responseConstructor }: { responseType: string, responseSubType?: string, responseConstructor: { new(): KalturaObjectBase } }) {
     super(data, { responseType, responseSubType, responseConstructor });
+    this.uploadedFileSize = data.uploadedFileSize;
   }
 
   setProgress(callback: ProgressCallback): this {
@@ -23,15 +25,14 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T> {
     return this._progressCallback;
   }
 
-  public getFormDataPropertyName(): string {
+  public getFilePropertyName(): string {
     const metadataProperties = this._getMetadata().properties;
     return Object.keys(metadataProperties).find(propertyName => metadataProperties[propertyName].type === "f");
   }
 
   public getFileData(): File {
-    const formDataPropertyName = this.getFormDataPropertyName();
-
-    return formDataPropertyName ? this[formDataPropertyName] : null;
+    const filePropertyName = this.getFilePropertyName();
+    return filePropertyName ? this[filePropertyName] : null;
   }
 
   public getUploadedFileSize(): number {
@@ -40,15 +41,15 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T> {
 
   public getFormData(): FormData {
     let result = null;
-    const formDataPropertyName = this.getFormDataPropertyName();
+    const filePropertyName = this.getFilePropertyName();
 
-    if (formDataPropertyName) {
-      const file = this[formDataPropertyName];
+    if (filePropertyName) {
+      const file = this[filePropertyName];
 
       if (file) {
         result = new FormData();
         result.append("fileName", file.name);
-        result.append(formDataPropertyName, file);
+        result.append(filePropertyName, file);
       }
     }
 
@@ -57,10 +58,10 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T> {
 
   public toRequestObject(): {} {
     const result = super.toRequestObject();
-    const formDataPropertyName = this.getFormDataPropertyName();
+    const filePropertyName = this.getFilePropertyName();
 
-    if (formDataPropertyName) {
-      delete result[formDataPropertyName];
+    if (filePropertyName) {
+      delete result[filePropertyName];
     }
 
     return result;
