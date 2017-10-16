@@ -17,7 +17,6 @@ All notable changes to this project will be documented in this file. See [standa
 * add documentation to service actions ([301586e](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/301586e))
 * support chunk file upload and resume upload action ([e04830a](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/e04830a))
 * syncing services with server changes on date 02/10/17 04:15:21 ([de7a5a1](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/de7a5a1))
-* update services to latest ([38f9047](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/38f9047))
 
 
 
