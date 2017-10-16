@@ -34,11 +34,7 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T> {
     const filePropertyName = this.getFilePropertyName();
     return filePropertyName ? this[filePropertyName] : null;
   }
-
-  public getUploadedFileSize(): number {
-    return this["uploadedFileSize"] || 0;
-  }
-
+  
   public getFormData(): FormData {
     let result = null;
     const filePropertyName = this.getFilePropertyName();
