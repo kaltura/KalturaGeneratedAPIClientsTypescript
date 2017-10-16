@@ -9,9 +9,16 @@ export interface ScheduledTaskProfileUpdateActionArgs  extends KalturaRequestArg
 	scheduledTaskProfile : KalturaScheduledTaskProfile;
 }
 
-/** 
-* Update an existing scheduled task profile
-**/
+/**
+ * Build request payload for service 'scheduledTaskProfile' action 'update'.
+ *
+ * Usage: Update an existing scheduled task profile
+ *
+ * Server response type:         KalturaScheduledTaskProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduledTaskProfileUpdateAction extends KalturaRequest<KalturaScheduledTaskProfile> {
 
     id : number;

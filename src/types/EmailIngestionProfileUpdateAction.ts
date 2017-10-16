@@ -9,9 +9,16 @@ export interface EmailIngestionProfileUpdateActionArgs  extends KalturaRequestAr
 	EmailIP : KalturaEmailIngestionProfile;
 }
 
-/** 
-* Update an existing EmailIngestionProfile
-**/
+/**
+ * Build request payload for service 'EmailIngestionProfile' action 'update'.
+ *
+ * Usage: Update an existing EmailIngestionProfile
+ *
+ * Server response type:         KalturaEmailIngestionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EmailIngestionProfileUpdateAction extends KalturaRequest<KalturaEmailIngestionProfile> {
 
     id : number;

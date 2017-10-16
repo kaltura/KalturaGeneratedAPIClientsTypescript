@@ -8,7 +8,16 @@ export interface LikeUnlikeActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-
+/**
+ * Build request payload for service 'like' action 'unlike'.
+ *
+ * 
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LikeUnlikeAction extends KalturaRequest<boolean> {
 
     entryId : string;

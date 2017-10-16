@@ -11,9 +11,16 @@ export interface GroupUserListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List all GroupUsers
-**/
+/**
+ * Build request payload for service 'groupUser' action 'list'.
+ *
+ * Usage: List all GroupUsers
+ *
+ * Server response type:         KalturaGroupUserListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GroupUserListAction extends KalturaRequest<KalturaGroupUserListResponse> {
 
     filter : KalturaGroupUserFilter;

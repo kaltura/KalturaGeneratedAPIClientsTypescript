@@ -8,9 +8,16 @@ export interface MediaAddActionArgs  extends KalturaRequestArgs {
     entry : KalturaMediaEntry;
 }
 
-/** 
-* Add entry
-**/
+/**
+ * Build request payload for service 'media' action 'add'.
+ *
+ * Usage: Add entry
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddAction extends KalturaRequest<KalturaMediaEntry> {
 
     entry : KalturaMediaEntry;

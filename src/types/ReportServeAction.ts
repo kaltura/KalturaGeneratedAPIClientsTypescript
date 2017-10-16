@@ -8,9 +8,16 @@ export interface ReportServeActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Will serve a requested report
-**/
+/**
+ * Build request payload for service 'report' action 'serve'.
+ *
+ * Usage: Will serve a requested report
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportServeAction extends KalturaRequest<string> {
 
     id : string;

@@ -10,9 +10,16 @@ export interface DocumentsAddFromEntryActionArgs  extends KalturaRequestArgs {
 	sourceFlavorParamsId? : number;
 }
 
-/** 
-* Copy entry into new entry
-**/
+/**
+ * Build request payload for service 'documents' action 'addFromEntry'.
+ *
+ * Usage: Copy entry into new entry
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsAddFromEntryAction extends KalturaRequest<KalturaDocumentEntry> {
 
     sourceEntryId : string;

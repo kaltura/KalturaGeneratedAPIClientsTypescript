@@ -12,7 +12,16 @@ export interface CategoryAddFromBulkUploadActionArgs  extends KalturaUploadReque
 	bulkUploadCategoryData? : KalturaBulkUploadCategoryData;
 }
 
-
+/**
+ * Build request payload for service 'category' action 'addFromBulkUpload'.
+ *
+ * 
+ *
+ * Server response type:         KalturaBulkUpload
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class CategoryAddFromBulkUploadAction extends KalturaUploadRequest<KalturaBulkUpload> {
 
     fileData : File;

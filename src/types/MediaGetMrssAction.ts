@@ -11,9 +11,17 @@ export interface MediaGetMrssActionArgs  extends KalturaRequestArgs {
 	features? : string;
 }
 
-/** 
-* Get MRSS by entry id      XML will return as an escaped string
-**/
+/**
+ * Build request payload for service 'media' action 'getMrss'.
+ *
+ * Usage: Get MRSS by entry id
+ * XML will return as an escaped string
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaGetMrssAction extends KalturaRequest<string> {
 
     entryId : string;

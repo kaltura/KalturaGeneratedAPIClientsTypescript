@@ -11,9 +11,16 @@ export interface LiveStreamListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List live stream entries by filter with paging support.
-**/
+/**
+ * Build request payload for service 'liveStream' action 'list'.
+ *
+ * Usage: List live stream entries by filter with paging support
+ *
+ * Server response type:         KalturaLiveStreamListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamListAction extends KalturaRequest<KalturaLiveStreamListResponse> {
 
     filter : KalturaLiveStreamEntryFilter;

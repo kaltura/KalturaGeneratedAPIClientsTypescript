@@ -11,9 +11,16 @@ export interface DocumentsUpdateContentActionArgs  extends KalturaRequestArgs {
 	conversionProfileId? : number;
 }
 
-/** 
-* Replace content associated with the given document entry.
-**/
+/**
+ * Build request payload for service 'documents' action 'updateContent'.
+ *
+ * Usage: Replace content associated with the given document entry
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsUpdateContentAction extends KalturaRequest<KalturaDocumentEntry> {
 
     entryId : string;

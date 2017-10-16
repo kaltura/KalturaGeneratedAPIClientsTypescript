@@ -8,7 +8,16 @@ export interface EntryServerNodeGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-
+/**
+ * Build request payload for service 'entryServerNode' action 'get'.
+ *
+ * 
+ *
+ * Server response type:         KalturaEntryServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryServerNodeGetAction extends KalturaRequest<KalturaEntryServerNode> {
 
     id : string;

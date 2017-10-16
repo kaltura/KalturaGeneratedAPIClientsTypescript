@@ -9,9 +9,16 @@ export interface FlavorAssetExportActionArgs  extends KalturaRequestArgs {
 	storageProfileId : number;
 }
 
-/** 
-* manually export an asset
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'export'.
+ *
+ * Usage: manually export an asset
+ *
+ * Server response type:         KalturaFlavorAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetExportAction extends KalturaRequest<KalturaFlavorAsset> {
 
     assetId : string;

@@ -8,9 +8,16 @@ export interface MixingGetMixesByMediaIdActionArgs  extends KalturaRequestArgs {
     mediaEntryId : string;
 }
 
-/** 
-* Get the mixes in which the media entry is included
-**/
+/**
+ * Build request payload for service 'mixing' action 'getMixesByMediaId'.
+ *
+ * Usage: Get the mixes in which the media entry is included
+ *
+ * Server response type:         KalturaMixEntry[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingGetMixesByMediaIdAction extends KalturaRequest<KalturaMixEntry[]> {
 
     mediaEntryId : string;

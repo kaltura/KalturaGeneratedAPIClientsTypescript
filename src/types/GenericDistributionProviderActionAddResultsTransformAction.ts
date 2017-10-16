@@ -9,9 +9,16 @@ export interface GenericDistributionProviderActionAddResultsTransformActionArgs 
 	transformData : string;
 }
 
-/** 
-* Add results transform file to generic distribution provider action
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'addResultsTransform'.
+ *
+ * Usage: Add results transform file to generic distribution provider action
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderActionAddResultsTransformAction extends KalturaRequest<KalturaGenericDistributionProviderAction> {
 
     id : number;

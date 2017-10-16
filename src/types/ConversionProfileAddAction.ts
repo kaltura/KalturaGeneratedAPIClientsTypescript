@@ -8,9 +8,16 @@ export interface ConversionProfileAddActionArgs  extends KalturaRequestArgs {
     conversionProfile : KalturaConversionProfile;
 }
 
-/** 
-* Add new Conversion Profile
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'add'.
+ *
+ * Usage: Add new Conversion Profile
+ *
+ * Server response type:         KalturaConversionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileAddAction extends KalturaRequest<KalturaConversionProfile> {
 
     conversionProfile : KalturaConversionProfile;

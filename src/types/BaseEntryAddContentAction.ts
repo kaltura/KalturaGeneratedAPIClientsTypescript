@@ -10,9 +10,16 @@ export interface BaseEntryAddContentActionArgs  extends KalturaRequestArgs {
 	resource : KalturaResource;
 }
 
-/** 
-* Attach content resource to entry in status NO_MEDIA
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'addContent'.
+ *
+ * Usage: Attach content resource to entry in status NO_MEDIA
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryAddContentAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

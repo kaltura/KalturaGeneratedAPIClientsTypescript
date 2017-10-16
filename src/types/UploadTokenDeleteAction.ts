@@ -8,9 +8,16 @@ export interface UploadTokenDeleteActionArgs  extends KalturaRequestArgs {
     uploadTokenId : string;
 }
 
-/** 
-* Deletes the upload token by upload token id
-**/
+/**
+ * Build request payload for service 'uploadToken' action 'delete'.
+ *
+ * Usage: Deletes the upload token by upload token id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UploadTokenDeleteAction extends KalturaRequest<void> {
 
     uploadTokenId : string;

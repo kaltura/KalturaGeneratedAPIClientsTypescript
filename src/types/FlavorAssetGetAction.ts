@@ -8,9 +8,16 @@ export interface FlavorAssetGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Get Flavor Asset by ID
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'get'.
+ *
+ * Usage: Get Flavor Asset by ID
+ *
+ * Server response type:         KalturaFlavorAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetGetAction extends KalturaRequest<KalturaFlavorAsset> {
 
     id : string;

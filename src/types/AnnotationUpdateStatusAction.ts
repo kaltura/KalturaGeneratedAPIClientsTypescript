@@ -10,9 +10,16 @@ export interface AnnotationUpdateStatusActionArgs  extends KalturaRequestArgs {
 	status : KalturaCuePointStatus;
 }
 
-/** 
-* Update cuePoint status by id
-**/
+/**
+ * Build request payload for service 'annotation' action 'updateStatus'.
+ *
+ * Usage: Update cuePoint status by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnotationUpdateStatusAction extends KalturaRequest<void> {
 
     id : string;

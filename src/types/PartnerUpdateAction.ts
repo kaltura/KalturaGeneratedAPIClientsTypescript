@@ -9,9 +9,16 @@ export interface PartnerUpdateActionArgs  extends KalturaRequestArgs {
 	allowEmpty? : boolean;
 }
 
-/** 
-* Update details and settings of an existing partner
-**/
+/**
+ * Build request payload for service 'partner' action 'update'.
+ *
+ * Usage: Update details and settings of an existing partner
+ *
+ * Server response type:         KalturaPartner
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerUpdateAction extends KalturaRequest<KalturaPartner> {
 
     partner : KalturaPartner;

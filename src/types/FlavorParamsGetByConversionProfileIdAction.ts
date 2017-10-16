@@ -8,9 +8,16 @@ export interface FlavorParamsGetByConversionProfileIdActionArgs  extends Kaltura
     conversionProfileId : number;
 }
 
-/** 
-* Get Flavor Params by Conversion Profile ID
-**/
+/**
+ * Build request payload for service 'flavorParams' action 'getByConversionProfileId'.
+ *
+ * Usage: Get Flavor Params by Conversion Profile ID
+ *
+ * Server response type:         KalturaFlavorParams[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorParamsGetByConversionProfileIdAction extends KalturaRequest<KalturaFlavorParams[]> {
 
     conversionProfileId : number;

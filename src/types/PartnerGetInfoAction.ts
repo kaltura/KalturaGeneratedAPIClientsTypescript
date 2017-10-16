@@ -8,10 +8,17 @@ export interface PartnerGetInfoActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Retrieve all info attributed to the partner   This action expects no parameters.
-* It returns information for the current KS partnerId.
-**/
+/**
+ * Build request payload for service 'partner' action 'getInfo'.
+ *
+ * Usage: Retrieve all info attributed to the partner
+ * This action expects no parameters. It returns information for the current KS partnerId
+ *
+ * Server response type:         KalturaPartner
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerGetInfoAction extends KalturaRequest<KalturaPartner> {
 
     

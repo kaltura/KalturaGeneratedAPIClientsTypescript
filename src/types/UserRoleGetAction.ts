@@ -8,9 +8,16 @@ export interface UserRoleGetActionArgs  extends KalturaRequestArgs {
     userRoleId : number;
 }
 
-/** 
-* Retrieves a user role object using its ID.
-**/
+/**
+ * Build request payload for service 'userRole' action 'get'.
+ *
+ * Usage: Retrieves a user role object using its ID
+ *
+ * Server response type:         KalturaUserRole
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserRoleGetAction extends KalturaRequest<KalturaUserRole> {
 
     userRoleId : number;

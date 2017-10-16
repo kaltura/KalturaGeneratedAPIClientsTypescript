@@ -11,9 +11,16 @@ export interface BusinessProcessCaseServeDiagramActionArgs  extends KalturaReque
 	businessProcessStartNotificationTemplateId : number;
 }
 
-/** 
-* Server business-process case diagram
-**/
+/**
+ * Build request payload for service 'businessProcessCase' action 'serveDiagram'.
+ *
+ * Usage: Server business-process case diagram
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BusinessProcessCaseServeDiagramAction extends KalturaRequest<string> {
 
     objectType : KalturaEventNotificationEventObjectType;

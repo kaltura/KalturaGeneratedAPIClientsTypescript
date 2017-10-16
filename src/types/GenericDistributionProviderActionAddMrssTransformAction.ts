@@ -9,9 +9,16 @@ export interface GenericDistributionProviderActionAddMrssTransformActionArgs  ex
 	xslData : string;
 }
 
-/** 
-* Add MRSS transform file to generic distribution provider action
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'addMrssTransform'.
+ *
+ * Usage: Add MRSS transform file to generic distribution provider action
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderActionAddMrssTransformAction extends KalturaRequest<KalturaGenericDistributionProviderAction> {
 
     id : number;

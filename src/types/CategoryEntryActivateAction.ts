@@ -9,9 +9,16 @@ export interface CategoryEntryActivateActionArgs  extends KalturaRequestArgs {
 	categoryId : number;
 }
 
-/** 
-* activate CategoryEntry when it is pending moderation
-**/
+/**
+ * Build request payload for service 'categoryEntry' action 'activate'.
+ *
+ * Usage: activate CategoryEntry when it is pending moderation
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryEntryActivateAction extends KalturaRequest<void> {
 
     entryId : string;

@@ -9,9 +9,16 @@ export interface ThumbAssetAddActionArgs  extends KalturaRequestArgs {
 	thumbAsset : KalturaThumbAsset;
 }
 
-/** 
-* Add thumbnail asset
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'add'.
+ *
+ * Usage: Add thumbnail asset
+ *
+ * Server response type:         KalturaThumbAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetAddAction extends KalturaRequest<KalturaThumbAsset> {
 
     entryId : string;

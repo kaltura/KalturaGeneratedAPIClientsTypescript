@@ -11,10 +11,16 @@ export interface BaseEntryAddFromUploadedFileActionArgs  extends KalturaRequestA
 	type? : KalturaEntryType;
 }
 
-/** 
-* Generic add entry using an uploaded file, should be used when the uploaded entry
-* type is not known.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'addFromUploadedFile'.
+ *
+ * Usage: Generic add entry using an uploaded file, should be used when the uploaded entry type is not known
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryAddFromUploadedFileAction extends KalturaRequest<KalturaBaseEntry> {
 
     entry : KalturaBaseEntry;

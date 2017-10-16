@@ -8,10 +8,16 @@ export interface AuditTrailAddActionArgs  extends KalturaRequestArgs {
     auditTrail : KalturaAuditTrail;
 }
 
-/** 
-* Allows you to add an audit trail object and audit trail content associated with
-* Kaltura object
-**/
+/**
+ * Build request payload for service 'auditTrail' action 'add'.
+ *
+ * Usage: Allows you to add an audit trail object and audit trail content associated with Kaltura object
+ *
+ * Server response type:         KalturaAuditTrail
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AuditTrailAddAction extends KalturaRequest<KalturaAuditTrail> {
 
     auditTrail : KalturaAuditTrail;

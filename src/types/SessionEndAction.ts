@@ -8,9 +8,16 @@ export interface SessionEndActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* End a session with the Kaltura server, making the current KS invalid.
-**/
+/**
+ * Build request payload for service 'session' action 'end'.
+ *
+ * Usage: End a session with the Kaltura server, making the current KS invalid
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SessionEndAction extends KalturaRequest<void> {
 
     

@@ -12,9 +12,16 @@ export interface PlayReadyDrmGetLicenseDetailsActionArgs  extends KalturaRequest
 	referrer? : string;
 }
 
-/** 
-* Get Play Ready policy and dates for license creation
-**/
+/**
+ * Build request payload for service 'playReadyDrm' action 'getLicenseDetails'.
+ *
+ * Usage: Get Play Ready policy and dates for license creation
+ *
+ * Server response type:         KalturaPlayReadyLicenseDetails
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlayReadyDrmGetLicenseDetailsAction extends KalturaRequest<KalturaPlayReadyLicenseDetails> {
 
     keyId : string;

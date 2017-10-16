@@ -8,10 +8,7 @@ export interface KalturaDocumentEntryMatchAttributeConditionArgs  extends Kaltur
     attribute? : KalturaDocumentEntryMatchAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaDocumentEntry attributes. Use
-* KalturaDocumentEntryMatchAttribute enum to provide attribute name. /
-**/
+
 export class KalturaDocumentEntryMatchAttributeCondition extends KalturaSearchMatchAttributeCondition {
 
     attribute : KalturaDocumentEntryMatchAttribute;

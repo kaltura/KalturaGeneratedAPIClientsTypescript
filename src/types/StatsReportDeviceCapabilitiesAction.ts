@@ -8,9 +8,16 @@ export interface StatsReportDeviceCapabilitiesActionArgs  extends KalturaRequest
     data : string;
 }
 
-/** 
-* Use this action to report device capabilities to the kaltura server.
-**/
+/**
+ * Build request payload for service 'stats' action 'reportDeviceCapabilities'.
+ *
+ * Usage: Use this action to report device capabilities to the kaltura server
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StatsReportDeviceCapabilitiesAction extends KalturaRequest<void> {
 
     data : string;

@@ -8,9 +8,16 @@ export interface ScheduledTaskProfileGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Retrieve a scheduled task profile by id
-**/
+/**
+ * Build request payload for service 'scheduledTaskProfile' action 'get'.
+ *
+ * Usage: Retrieve a scheduled task profile by id
+ *
+ * Server response type:         KalturaScheduledTaskProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduledTaskProfileGetAction extends KalturaRequest<KalturaScheduledTaskProfile> {
 
     id : number;

@@ -8,9 +8,16 @@ export interface MixingCloneActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Clones an existing mix.
-**/
+/**
+ * Build request payload for service 'mixing' action 'clone'.
+ *
+ * Usage: Clones an existing mix
+ *
+ * Server response type:         KalturaMixEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingCloneAction extends KalturaRequest<KalturaMixEntry> {
 
     entryId : string;

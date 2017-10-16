@@ -8,9 +8,16 @@ export interface DeliveryProfileAddActionArgs  extends KalturaRequestArgs {
     delivery : KalturaDeliveryProfile;
 }
 
-/** 
-* Add new delivery.
-**/
+/**
+ * Build request payload for service 'deliveryProfile' action 'add'.
+ *
+ * Usage: Add new delivery
+ *
+ * Server response type:         KalturaDeliveryProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeliveryProfileAddAction extends KalturaRequest<KalturaDeliveryProfile> {
 
     delivery : KalturaDeliveryProfile;

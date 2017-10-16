@@ -9,7 +9,16 @@ export interface BaseEntryExportActionArgs  extends KalturaRequestArgs {
 	storageProfileId : number;
 }
 
-
+/**
+ * Build request payload for service 'baseEntry' action 'export'.
+ *
+ * 
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryExportAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

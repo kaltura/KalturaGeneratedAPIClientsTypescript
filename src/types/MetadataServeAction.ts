@@ -8,9 +8,16 @@ export interface MetadataServeActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Serves metadata XML file
-**/
+/**
+ * Build request payload for service 'metadata' action 'serve'.
+ *
+ * Usage: Serves metadata XML file
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataServeAction extends KalturaRequest<string> {
 
     id : number;

@@ -8,9 +8,16 @@ export interface EntryServerNodeValidateRegisteredEntryServerNodeActionArgs  ext
     id : number;
 }
 
-/** 
-* Validates server node still registered on entry
-**/
+/**
+ * Build request payload for service 'entryServerNode' action 'validateRegisteredEntryServerNode'.
+ *
+ * Usage: Validates server node still registered on entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryServerNodeValidateRegisteredEntryServerNodeAction extends KalturaRequest<void> {
 
     id : number;

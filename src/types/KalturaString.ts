@@ -7,9 +7,7 @@ export interface KalturaStringArgs  extends KalturaObjectBaseArgs {
     value? : string;
 }
 
-/** 
-* A string representation to return an array of strings
-**/
+
 export class KalturaString extends KalturaObjectBase {
 
     value : string;

@@ -13,9 +13,16 @@ export interface CaptionAssetItemSearchEntriesActionArgs  extends KalturaRequest
 	captionAssetItemPager? : KalturaFilterPager;
 }
 
-/** 
-* Search caption asset items by filter, pager and free text
-**/
+/**
+ * Build request payload for service 'captionAssetItem' action 'searchEntries'.
+ *
+ * Usage: Search caption asset items by filter, pager and free text
+ *
+ * Server response type:         KalturaBaseEntryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetItemSearchEntriesAction extends KalturaRequest<KalturaBaseEntryListResponse> {
 
     entryFilter : KalturaBaseEntryFilter;

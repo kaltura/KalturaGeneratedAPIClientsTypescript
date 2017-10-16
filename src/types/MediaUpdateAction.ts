@@ -9,9 +9,16 @@ export interface MediaUpdateActionArgs  extends KalturaRequestArgs {
 	mediaEntry : KalturaMediaEntry;
 }
 
-/** 
-* Update media entry. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'media' action 'update'.
+ *
+ * Usage: Update media entry. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaUpdateAction extends KalturaRequest<KalturaMediaEntry> {
 
     entryId : string;

@@ -9,9 +9,7 @@ export interface KalturaBulkUploadCsvJobDataArgs  extends KalturaBulkUploadJobDa
     columns? : KalturaString[];
 }
 
-/** 
-* Represents the Bulk upload job data for xml bulk upload
-**/
+
 export class KalturaBulkUploadCsvJobData extends KalturaBulkUploadJobData {
 
     readonly csvVersion : KalturaBulkUploadCsvVersion;

@@ -8,10 +8,7 @@ export interface KalturaEmailNotificationUserRecipientProviderArgs  extends Kalt
     filter? : KalturaUserFilter;
 }
 
-/** 
-* API class for recipient provider which constructs a dynamic list of recipients
-* according to a user filter
-**/
+
 export class KalturaEmailNotificationUserRecipientProvider extends KalturaEmailNotificationRecipientProvider {
 
     filter : KalturaUserFilter;

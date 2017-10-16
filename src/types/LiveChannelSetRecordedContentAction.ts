@@ -15,9 +15,16 @@ export interface LiveChannelSetRecordedContentActionArgs  extends KalturaRequest
 	flavorParamsId? : number;
 }
 
-/** 
-* Sey recorded video to live entry
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'setRecordedContent'.
+ *
+ * Usage: Sey recorded video to live entry
+ *
+ * Server response type:         KalturaLiveEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelSetRecordedContentAction extends KalturaRequest<KalturaLiveEntry> {
 
     entryId : string;

@@ -8,10 +8,17 @@ export interface SyndicationFeedRequestConversionActionArgs  extends KalturaRequ
     feedId : string;
 }
 
-/** 
-* request conversion for all entries that doesnt have the required flavor param  
-* returns a comma-separated ids of conversion jobs
-**/
+/**
+ * Build request payload for service 'syndicationFeed' action 'requestConversion'.
+ *
+ * Usage: request conversion for all entries that doesnt have the required flavor param
+ * returns a comma-separated ids of conversion jobs
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SyndicationFeedRequestConversionAction extends KalturaRequest<string> {
 
     feedId : string;

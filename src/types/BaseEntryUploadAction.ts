@@ -8,9 +8,16 @@ export interface BaseEntryUploadActionArgs  extends KalturaUploadRequestArgs {
     fileData : File;
 }
 
-/** 
-* Upload a file to Kaltura, that can be used to create an entry.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'upload'.
+ *
+ * Usage: Upload a file to Kaltura, that can be used to create an entry
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class BaseEntryUploadAction extends KalturaUploadRequest<string> {
 
     fileData : File;

@@ -7,9 +7,7 @@ export interface KalturaBulkUploadEntryDataArgs  extends KalturaBulkUploadObject
     conversionProfileId? : number;
 }
 
-/** 
-* This class represents object-specific data passed to the   bulk upload job.
-**/
+
 export class KalturaBulkUploadEntryData extends KalturaBulkUploadObjectData {
 
     conversionProfileId : number;

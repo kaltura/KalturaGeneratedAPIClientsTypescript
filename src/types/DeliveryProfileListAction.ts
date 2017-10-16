@@ -11,9 +11,16 @@ export interface DeliveryProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Retrieve a list of available delivery depends on the filter given
-**/
+/**
+ * Build request payload for service 'deliveryProfile' action 'list'.
+ *
+ * Usage: Retrieve a list of available delivery depends on the filter given
+ *
+ * Server response type:         KalturaDeliveryProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeliveryProfileListAction extends KalturaRequest<KalturaDeliveryProfileListResponse> {
 
     filter : KalturaDeliveryProfileFilter;

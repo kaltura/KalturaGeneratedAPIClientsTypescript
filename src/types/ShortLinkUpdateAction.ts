@@ -9,9 +9,16 @@ export interface ShortLinkUpdateActionArgs  extends KalturaRequestArgs {
 	shortLink : KalturaShortLink;
 }
 
-/** 
-* Update exisitng short link
-**/
+/**
+ * Build request payload for service 'shortLink' action 'update'.
+ *
+ * Usage: Update exisitng short link
+ *
+ * Server response type:         KalturaShortLink
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ShortLinkUpdateAction extends KalturaRequest<KalturaShortLink> {
 
     id : string;

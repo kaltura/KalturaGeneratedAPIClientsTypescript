@@ -10,10 +10,16 @@ export interface MetadataProfileAddActionArgs  extends KalturaRequestArgs {
 	viewsData? : string;
 }
 
-/** 
-* Allows you to add a metadata profile object and metadata profile content
-* associated with Kaltura object type
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'add'.
+ *
+ * Usage: Allows you to add a metadata profile object and metadata profile content associated with Kaltura object type
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileAddAction extends KalturaRequest<KalturaMetadataProfile> {
 
     metadataProfile : KalturaMetadataProfile;

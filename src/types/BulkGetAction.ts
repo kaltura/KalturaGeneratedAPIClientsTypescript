@@ -8,9 +8,16 @@ export interface BulkGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get bulk upload batch job by id
-**/
+/**
+ * Build request payload for service 'bulk' action 'get'.
+ *
+ * Usage: Get bulk upload batch job by id
+ *
+ * Server response type:         KalturaBulkUpload
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BulkGetAction extends KalturaRequest<KalturaBulkUpload> {
 
     id : number;

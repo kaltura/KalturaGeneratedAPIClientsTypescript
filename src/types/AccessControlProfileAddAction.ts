@@ -8,9 +8,16 @@ export interface AccessControlProfileAddActionArgs  extends KalturaRequestArgs {
     accessControlProfile : KalturaAccessControlProfile;
 }
 
-/** 
-* Add new access control profile
-**/
+/**
+ * Build request payload for service 'accessControlProfile' action 'add'.
+ *
+ * Usage: Add new access control profile
+ *
+ * Server response type:         KalturaAccessControlProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AccessControlProfileAddAction extends KalturaRequest<KalturaAccessControlProfile> {
 
     accessControlProfile : KalturaAccessControlProfile;

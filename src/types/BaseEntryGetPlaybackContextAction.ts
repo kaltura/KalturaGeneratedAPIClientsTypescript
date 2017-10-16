@@ -10,9 +10,16 @@ export interface BaseEntryGetPlaybackContextActionArgs  extends KalturaRequestAr
 	contextDataParams : KalturaPlaybackContextOptions;
 }
 
-/** 
-* This action delivers all data relevant for player
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'getPlaybackContext'.
+ *
+ * Usage: This action delivers all data relevant for player
+ *
+ * Server response type:         KalturaPlaybackContext
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryGetPlaybackContextAction extends KalturaRequest<KalturaPlaybackContext> {
 
     entryId : string;

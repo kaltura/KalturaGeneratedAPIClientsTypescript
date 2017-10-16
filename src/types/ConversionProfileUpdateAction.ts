@@ -9,9 +9,16 @@ export interface ConversionProfileUpdateActionArgs  extends KalturaRequestArgs {
 	conversionProfile : KalturaConversionProfile;
 }
 
-/** 
-* Update Conversion Profile by ID
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'update'.
+ *
+ * Usage: Update Conversion Profile by ID
+ *
+ * Server response type:         KalturaConversionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileUpdateAction extends KalturaRequest<KalturaConversionProfile> {
 
     id : number;

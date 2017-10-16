@@ -19,10 +19,7 @@ export interface KalturaLiveStatsEventArgs  extends KalturaObjectBaseArgs {
 	deliveryType? : KalturaPlaybackProtocol;
 }
 
-/** 
-* Will hold data from the Kaltura Player components to be passed on to the live
-* analytics system
-**/
+
 export class KalturaLiveStatsEvent extends KalturaObjectBase {
 
     partnerId : number;

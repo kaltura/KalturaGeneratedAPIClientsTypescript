@@ -9,10 +9,16 @@ export interface DrmProfileGetByProviderActionArgs  extends KalturaRequestArgs {
     provider : KalturaDrmProviderType;
 }
 
-/** 
-* Retrieve a KalturaDrmProfile object by provider, if no specific profile defined
-* return default profile
-**/
+/**
+ * Build request payload for service 'drmProfile' action 'getByProvider'.
+ *
+ * Usage: Retrieve a KalturaDrmProfile object by provider, if no specific profile defined return default profile
+ *
+ * Server response type:         KalturaDrmProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmProfileGetByProviderAction extends KalturaRequest<KalturaDrmProfile> {
 
     provider : KalturaDrmProviderType;

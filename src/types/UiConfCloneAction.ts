@@ -8,9 +8,16 @@ export interface UiConfCloneActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Clone an existing UIConf
-**/
+/**
+ * Build request payload for service 'uiConf' action 'clone'.
+ *
+ * Usage: Clone an existing UIConf
+ *
+ * Server response type:         KalturaUiConf
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfCloneAction extends KalturaRequest<KalturaUiConf> {
 
     id : number;

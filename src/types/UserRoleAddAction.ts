@@ -8,9 +8,16 @@ export interface UserRoleAddActionArgs  extends KalturaRequestArgs {
     userRole : KalturaUserRole;
 }
 
-/** 
-* Adds a new user role object to the account.
-**/
+/**
+ * Build request payload for service 'userRole' action 'add'.
+ *
+ * Usage: Adds a new user role object to the account
+ *
+ * Server response type:         KalturaUserRole
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserRoleAddAction extends KalturaRequest<KalturaUserRole> {
 
     userRole : KalturaUserRole;

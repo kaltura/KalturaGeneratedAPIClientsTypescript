@@ -7,9 +7,7 @@ export interface KalturaObjectIdentifierArgs  extends KalturaObjectBaseArgs {
     extendedFeatures? : string;
 }
 
-/** 
-* Configuration for extended item in the Kaltura MRSS feeds
-**/
+
 export class KalturaObjectIdentifier extends KalturaObjectBase {
 
     extendedFeatures : string;

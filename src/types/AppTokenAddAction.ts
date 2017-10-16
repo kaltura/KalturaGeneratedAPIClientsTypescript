@@ -8,9 +8,16 @@ export interface AppTokenAddActionArgs  extends KalturaRequestArgs {
     appToken : KalturaAppToken;
 }
 
-/** 
-* Add new application authentication token
-**/
+/**
+ * Build request payload for service 'appToken' action 'add'.
+ *
+ * Usage: Add new application authentication token
+ *
+ * Server response type:         KalturaAppToken
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AppTokenAddAction extends KalturaRequest<KalturaAppToken> {
 
     appToken : KalturaAppToken;

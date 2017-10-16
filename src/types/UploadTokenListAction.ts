@@ -11,10 +11,17 @@ export interface UploadTokenListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List upload token by filter with pager support.    When using a user session the
-* service will be restricted to users objects only.
-**/
+/**
+ * Build request payload for service 'uploadToken' action 'list'.
+ *
+ * Usage: List upload token by filter with pager support.
+ * When using a user session the service will be restricted to users objects only
+ *
+ * Server response type:         KalturaUploadTokenListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UploadTokenListAction extends KalturaRequest<KalturaUploadTokenListResponse> {
 
     filter : KalturaUploadTokenFilter;

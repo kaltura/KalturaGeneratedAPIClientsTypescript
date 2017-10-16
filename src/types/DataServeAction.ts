@@ -10,9 +10,16 @@ export interface DataServeActionArgs  extends KalturaRequestArgs {
 	forceProxy? : boolean;
 }
 
-/** 
-* serve action returan the file from dataContent field.
-**/
+/**
+ * Build request payload for service 'data' action 'serve'.
+ *
+ * Usage: serve action returan the file from dataContent field
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataServeAction extends KalturaRequest<string> {
 
     entryId : string;

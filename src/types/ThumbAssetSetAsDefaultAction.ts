@@ -8,11 +8,17 @@ export interface ThumbAssetSetAsDefaultActionArgs  extends KalturaRequestArgs {
     thumbAssetId : string;
 }
 
-/** 
-* Tags the thumbnail as DEFAULT_THUMB and removes that tag from all other
-* thumbnail assets of the entry.   Create a new file sync link on the entry
-* thumbnail that points to the thumbnail asset file sync.
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'setAsDefault'.
+ *
+ * Usage: Tags the thumbnail as DEFAULT_THUMB and removes that tag from all other thumbnail assets of the entry.
+ * Create a new file sync link on the entry thumbnail that points to the thumbnail asset file sync
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetSetAsDefaultAction extends KalturaRequest<void> {
 
     thumbAssetId : string;

@@ -8,9 +8,16 @@ export interface DrmPolicyDeleteActionArgs  extends KalturaRequestArgs {
     drmPolicyId : number;
 }
 
-/** 
-* Mark the KalturaDrmPolicy object as deleted
-**/
+/**
+ * Build request payload for service 'drmPolicy' action 'delete'.
+ *
+ * Usage: Mark the KalturaDrmPolicy object as deleted
+ *
+ * Server response type:         KalturaDrmPolicy
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmPolicyDeleteAction extends KalturaRequest<KalturaDrmPolicy> {
 
     drmPolicyId : number;

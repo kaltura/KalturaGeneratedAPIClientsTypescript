@@ -7,9 +7,7 @@ export interface KalturaStringResourceArgs  extends KalturaContentResourceArgs {
     content? : string;
 }
 
-/** 
-* Used to ingest string content.
-**/
+
 export class KalturaStringResource extends KalturaContentResource {
 
     content : string;

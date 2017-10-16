@@ -7,9 +7,7 @@ export interface KalturaBulkUploadXmlJobDataArgs  extends KalturaBulkUploadJobDa
     
 }
 
-/** 
-* Represents the Bulk upload job data for xml bulk upload
-**/
+
 export class KalturaBulkUploadXmlJobData extends KalturaBulkUploadJobData {
 
     

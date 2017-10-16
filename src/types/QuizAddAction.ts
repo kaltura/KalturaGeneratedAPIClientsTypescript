@@ -9,9 +9,16 @@ export interface QuizAddActionArgs  extends KalturaRequestArgs {
 	quiz : KalturaQuiz;
 }
 
-/** 
-* Allows to add a quiz to an entry
-**/
+/**
+ * Build request payload for service 'quiz' action 'add'.
+ *
+ * Usage: Allows to add a quiz to an entry
+ *
+ * Server response type:         KalturaQuiz
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class QuizAddAction extends KalturaRequest<KalturaQuiz> {
 
     entryId : string;

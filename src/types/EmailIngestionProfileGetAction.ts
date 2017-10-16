@@ -8,9 +8,16 @@ export interface EmailIngestionProfileGetActionArgs  extends KalturaRequestArgs 
     id : number;
 }
 
-/** 
-* Retrieve a EmailIngestionProfile by id
-**/
+/**
+ * Build request payload for service 'EmailIngestionProfile' action 'get'.
+ *
+ * Usage: Retrieve a EmailIngestionProfile by id
+ *
+ * Server response type:         KalturaEmailIngestionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EmailIngestionProfileGetAction extends KalturaRequest<KalturaEmailIngestionProfile> {
 
     id : number;

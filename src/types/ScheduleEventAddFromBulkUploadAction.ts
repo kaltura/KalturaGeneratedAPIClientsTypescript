@@ -10,9 +10,16 @@ export interface ScheduleEventAddFromBulkUploadActionArgs  extends KalturaUpload
 	bulkUploadData? : KalturaBulkUploadICalJobData;
 }
 
-/** 
-* Add new bulk upload batch job
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'addFromBulkUpload'.
+ *
+ * Usage: Add new bulk upload batch job
+ *
+ * Server response type:         KalturaBulkUpload
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class ScheduleEventAddFromBulkUploadAction extends KalturaUploadRequest<KalturaBulkUpload> {
 
     fileData : File;

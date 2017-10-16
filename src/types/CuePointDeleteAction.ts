@@ -8,9 +8,16 @@ export interface CuePointDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* delete cue point by id, and delete all children cue points
-**/
+/**
+ * Build request payload for service 'cuePoint' action 'delete'.
+ *
+ * Usage: delete cue point by id, and delete all children cue points
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CuePointDeleteAction extends KalturaRequest<void> {
 
     id : string;

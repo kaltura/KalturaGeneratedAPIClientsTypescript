@@ -8,7 +8,16 @@ export interface ScheduledTaskProfileGetDryRunResultsActionArgs  extends Kaltura
     requestId : number;
 }
 
-
+/**
+ * Build request payload for service 'scheduledTaskProfile' action 'getDryRunResults'.
+ *
+ * 
+ *
+ * Server response type:         KalturaObjectListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduledTaskProfileGetDryRunResultsAction extends KalturaRequest<KalturaObjectListResponse> {
 
     requestId : number;

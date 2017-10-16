@@ -9,9 +9,16 @@ export interface ThumbAssetServeByEntryIdActionArgs  extends KalturaRequestArgs 
 	thumbParamId? : number;
 }
 
-/** 
-* Serves thumbnail by entry id and thumnail params id
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'serveByEntryId'.
+ *
+ * Usage: Serves thumbnail by entry id and thumnail params id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetServeByEntryIdAction extends KalturaRequest<string> {
 
     entryId : string;

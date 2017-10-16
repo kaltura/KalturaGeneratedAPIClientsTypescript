@@ -11,9 +11,16 @@ export interface BaseEntryListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List base entries by filter with paging support.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'list'.
+ *
+ * Usage: List base entries by filter with paging support
+ *
+ * Server response type:         KalturaBaseEntryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryListAction extends KalturaRequest<KalturaBaseEntryListResponse> {
 
     filter : KalturaBaseEntryFilter;

@@ -10,9 +10,16 @@ export interface EntryDistributionServeSentDataActionArgs  extends KalturaReques
 	actionType : KalturaDistributionAction;
 }
 
-/** 
-* Serves entry distribution sent data
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'serveSentData'.
+ *
+ * Usage: Serves entry distribution sent data
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionServeSentDataAction extends KalturaRequest<string> {
 
     id : number;

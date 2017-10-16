@@ -8,9 +8,16 @@ export interface FlavorParamsOutputGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get flavor params output object by ID
-**/
+/**
+ * Build request payload for service 'flavorParamsOutput' action 'get'.
+ *
+ * Usage: Get flavor params output object by ID
+ *
+ * Server response type:         KalturaFlavorParamsOutput
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorParamsOutputGetAction extends KalturaRequest<KalturaFlavorParamsOutput> {
 
     id : number;

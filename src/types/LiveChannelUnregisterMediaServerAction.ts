@@ -11,9 +11,16 @@ export interface LiveChannelUnregisterMediaServerActionArgs  extends KalturaRequ
 	mediaServerIndex : KalturaEntryServerNodeType;
 }
 
-/** 
-* Unregister media server from live entry
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'unregisterMediaServer'.
+ *
+ * Usage: Unregister media server from live entry
+ *
+ * Server response type:         KalturaLiveEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelUnregisterMediaServerAction extends KalturaRequest<KalturaLiveEntry> {
 
     entryId : string;

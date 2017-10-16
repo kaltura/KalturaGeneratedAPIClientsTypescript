@@ -8,9 +8,16 @@ export interface ServerNodeGetActionArgs  extends KalturaRequestArgs {
     serverNodeId : number;
 }
 
-/** 
-* Get server node by id
-**/
+/**
+ * Build request payload for service 'serverNode' action 'get'.
+ *
+ * Usage: Get server node by id
+ *
+ * Server response type:         KalturaServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ServerNodeGetAction extends KalturaRequest<KalturaServerNode> {
 
     serverNodeId : number;

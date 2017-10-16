@@ -8,9 +8,16 @@ export interface ConversionProfileDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete Conversion Profile by ID
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'delete'.
+ *
+ * Usage: Delete Conversion Profile by ID
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;

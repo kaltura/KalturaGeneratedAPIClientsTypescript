@@ -9,9 +9,16 @@ export interface PermissionUpdateActionArgs  extends KalturaRequestArgs {
 	permission : KalturaPermission;
 }
 
-/** 
-* Updates an existing permission object.
-**/
+/**
+ * Build request payload for service 'permission' action 'update'.
+ *
+ * Usage: Updates an existing permission object
+ *
+ * Server response type:         KalturaPermission
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionUpdateAction extends KalturaRequest<KalturaPermission> {
 
     permissionName : string;

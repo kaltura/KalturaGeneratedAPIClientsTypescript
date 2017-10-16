@@ -13,9 +13,16 @@ export interface AppTokenStartSessionActionArgs  extends KalturaRequestArgs {
 	expiry? : number;
 }
 
-/** 
-* Starts a new KS (kaltura Session) based on application authentication token id
-**/
+/**
+ * Build request payload for service 'appToken' action 'startSession'.
+ *
+ * Usage: Starts a new KS (kaltura Session) based on application authentication token id
+ *
+ * Server response type:         KalturaSessionInfo
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInfo> {
 
     id : string;

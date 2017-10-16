@@ -7,9 +7,7 @@ export interface KalturaBooleanFieldArgs  extends KalturaBooleanValueArgs {
     
 }
 
-/** 
-* A boolean representation to return evaluated dynamic value
-**/
+
 export class KalturaBooleanField extends KalturaBooleanValue {
 
     

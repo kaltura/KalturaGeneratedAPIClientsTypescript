@@ -8,9 +8,16 @@ export interface ThumbAssetGetRemotePathsActionArgs  extends KalturaRequestArgs 
     id : string;
 }
 
-/** 
-* Get remote storage existing paths for the asset
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'getRemotePaths'.
+ *
+ * Usage: Get remote storage existing paths for the asset
+ *
+ * Server response type:         KalturaRemotePathListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetGetRemotePathsAction extends KalturaRequest<KalturaRemotePathListResponse> {
 
     id : string;

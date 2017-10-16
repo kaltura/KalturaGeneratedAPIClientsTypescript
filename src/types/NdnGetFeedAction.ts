@@ -9,7 +9,16 @@ export interface NdnGetFeedActionArgs  extends KalturaRequestArgs {
 	hash : string;
 }
 
-
+/**
+ * Build request payload for service 'ndn' action 'getFeed'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class NdnGetFeedAction extends KalturaRequest<string> {
 
     distributionProfileId : number;

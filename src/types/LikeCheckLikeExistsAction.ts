@@ -9,7 +9,16 @@ export interface LikeCheckLikeExistsActionArgs  extends KalturaRequestArgs {
 	userId? : string;
 }
 
-
+/**
+ * Build request payload for service 'like' action 'checkLikeExists'.
+ *
+ * 
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LikeCheckLikeExistsAction extends KalturaRequest<boolean> {
 
     entryId : string;

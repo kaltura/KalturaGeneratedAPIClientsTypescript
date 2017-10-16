@@ -9,9 +9,16 @@ export interface FlavorAssetGetDownloadUrlActionArgs  extends KalturaRequestArgs
 	useCdn? : boolean;
 }
 
-/** 
-* Get download URL for the Flavor Asset
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'getDownloadUrl'.
+ *
+ * Usage: Get download URL for the Flavor Asset
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetGetDownloadUrlAction extends KalturaRequest<string> {
 
     id : string;

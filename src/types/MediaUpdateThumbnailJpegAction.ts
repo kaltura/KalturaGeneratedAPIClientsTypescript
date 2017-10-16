@@ -9,9 +9,16 @@ export interface MediaUpdateThumbnailJpegActionArgs  extends KalturaUploadReques
 	fileData : File;
 }
 
-/** 
-* Update media entry thumbnail using a raw jpeg file
-**/
+/**
+ * Build request payload for service 'media' action 'updateThumbnailJpeg'.
+ *
+ * Usage: Update media entry thumbnail using a raw jpeg file
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MediaUpdateThumbnailJpegAction extends KalturaUploadRequest<KalturaMediaEntry> {
 
     entryId : string;

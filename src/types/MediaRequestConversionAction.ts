@@ -9,10 +9,16 @@ export interface MediaRequestConversionActionArgs  extends KalturaRequestArgs {
 	fileFormat : string;
 }
 
-/** 
-* Request a new conversion job, this can be used to convert the media entry to a
-* different format
-**/
+/**
+ * Build request payload for service 'media' action 'requestConversion'.
+ *
+ * Usage: Request a new conversion job, this can be used to convert the media entry to a different format
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaRequestConversionAction extends KalturaRequest<number> {
 
     entryId : string;

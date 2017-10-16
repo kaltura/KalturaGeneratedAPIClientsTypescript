@@ -9,9 +9,16 @@ export interface DocumentsUpdateActionArgs  extends KalturaRequestArgs {
 	documentEntry : KalturaDocumentEntry;
 }
 
-/** 
-* Update document entry. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'documents' action 'update'.
+ *
+ * Usage: Update document entry. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsUpdateAction extends KalturaRequest<KalturaDocumentEntry> {
 
     entryId : string;

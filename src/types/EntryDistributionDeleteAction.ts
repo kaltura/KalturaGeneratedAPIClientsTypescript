@@ -8,9 +8,16 @@ export interface EntryDistributionDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete Entry Distribution by id
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'delete'.
+ *
+ * Usage: Delete Entry Distribution by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionDeleteAction extends KalturaRequest<void> {
 
     id : number;

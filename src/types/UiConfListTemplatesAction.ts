@@ -11,9 +11,16 @@ export interface UiConfListTemplatesActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* retrieve a list of available template UIConfs
-**/
+/**
+ * Build request payload for service 'uiConf' action 'listTemplates'.
+ *
+ * Usage: retrieve a list of available template UIConfs
+ *
+ * Server response type:         KalturaUiConfListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfListTemplatesAction extends KalturaRequest<KalturaUiConfListResponse> {
 
     filter : KalturaUiConfFilter;

@@ -8,9 +8,16 @@ export interface EmailIngestionProfileGetByEmailAddressActionArgs  extends Kaltu
     emailAddress : string;
 }
 
-/** 
-* Retrieve a EmailIngestionProfile by email address
-**/
+/**
+ * Build request payload for service 'EmailIngestionProfile' action 'getByEmailAddress'.
+ *
+ * Usage: Retrieve a EmailIngestionProfile by email address
+ *
+ * Server response type:         KalturaEmailIngestionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EmailIngestionProfileGetByEmailAddressAction extends KalturaRequest<KalturaEmailIngestionProfile> {
 
     emailAddress : string;

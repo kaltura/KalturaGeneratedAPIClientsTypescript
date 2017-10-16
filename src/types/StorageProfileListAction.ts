@@ -11,7 +11,16 @@ export interface StorageProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'storageProfile' action 'list'.
+ *
+ * 
+ *
+ * Server response type:         KalturaStorageProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StorageProfileListAction extends KalturaRequest<KalturaStorageProfileListResponse> {
 
     filter : KalturaStorageProfileFilter;

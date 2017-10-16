@@ -9,9 +9,16 @@ export interface MixingCountActionArgs  extends KalturaRequestArgs {
     filter? : KalturaMediaEntryFilter;
 }
 
-/** 
-* Count mix entries by filter.
-**/
+/**
+ * Build request payload for service 'mixing' action 'count'.
+ *
+ * Usage: Count mix entries by filter
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingCountAction extends KalturaRequest<number> {
 
     filter : KalturaMediaEntryFilter;

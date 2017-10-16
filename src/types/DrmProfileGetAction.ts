@@ -8,9 +8,16 @@ export interface DrmProfileGetActionArgs  extends KalturaRequestArgs {
     drmProfileId : number;
 }
 
-/** 
-* Retrieve a KalturaDrmProfile object by ID
-**/
+/**
+ * Build request payload for service 'drmProfile' action 'get'.
+ *
+ * Usage: Retrieve a KalturaDrmProfile object by ID
+ *
+ * Server response type:         KalturaDrmProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmProfileGetAction extends KalturaRequest<KalturaDrmProfile> {
 
     drmProfileId : number;

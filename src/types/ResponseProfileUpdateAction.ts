@@ -9,9 +9,16 @@ export interface ResponseProfileUpdateActionArgs  extends KalturaRequestArgs {
 	updateResponseProfile : KalturaResponseProfile;
 }
 
-/** 
-* Update response profile by id
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'update'.
+ *
+ * Usage: Update response profile by id
+ *
+ * Server response type:         KalturaResponseProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileUpdateAction extends KalturaRequest<KalturaResponseProfile> {
 
     id : number;

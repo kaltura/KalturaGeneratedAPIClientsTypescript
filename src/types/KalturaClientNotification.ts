@@ -8,10 +8,7 @@ export interface KalturaClientNotificationArgs  extends KalturaObjectBaseArgs {
 	data? : string;
 }
 
-/** 
-* Client notification object to hold the notification url and the data when
-* sending client side notifications
-**/
+
 export class KalturaClientNotification extends KalturaObjectBase {
 
     url : string;

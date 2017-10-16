@@ -9,9 +9,16 @@ export interface FlavorAssetAddActionArgs  extends KalturaRequestArgs {
 	flavorAsset : KalturaFlavorAsset;
 }
 
-/** 
-* Add flavor asset
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'add'.
+ *
+ * Usage: Add flavor asset
+ *
+ * Server response type:         KalturaFlavorAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetAddAction extends KalturaRequest<KalturaFlavorAsset> {
 
     entryId : string;

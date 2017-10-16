@@ -8,9 +8,16 @@ export interface CaptionAssetServeActionArgs  extends KalturaRequestArgs {
     captionAssetId : string;
 }
 
-/** 
-* Serves caption by its id
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'serve'.
+ *
+ * Usage: Serves caption by its id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetServeAction extends KalturaRequest<string> {
 
     captionAssetId : string;

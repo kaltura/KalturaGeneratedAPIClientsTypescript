@@ -7,9 +7,7 @@ export interface KalturaMetadataReplacementOptionsItemArgs  extends KalturaPlugi
     shouldCopyMetadata? : boolean;
 }
 
-/** 
-* Advanced metadata configuration for entry replacement process
-**/
+
 export class KalturaMetadataReplacementOptionsItem extends KalturaPluginReplacementOptionsItem {
 
     shouldCopyMetadata : boolean;

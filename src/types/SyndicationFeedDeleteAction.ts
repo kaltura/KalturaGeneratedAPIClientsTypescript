@@ -8,9 +8,16 @@ export interface SyndicationFeedDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete Syndication Feed by ID
-**/
+/**
+ * Build request payload for service 'syndicationFeed' action 'delete'.
+ *
+ * Usage: Delete Syndication Feed by ID
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SyndicationFeedDeleteAction extends KalturaRequest<void> {
 
     id : string;

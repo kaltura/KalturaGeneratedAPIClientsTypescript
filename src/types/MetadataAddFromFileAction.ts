@@ -12,10 +12,16 @@ export interface MetadataAddFromFileActionArgs  extends KalturaUploadRequestArgs
 	xmlFile : File;
 }
 
-/** 
-* Allows you to add a metadata object and metadata file associated with Kaltura
-* object
-**/
+/**
+ * Build request payload for service 'metadata' action 'addFromFile'.
+ *
+ * Usage: Allows you to add a metadata object and metadata file associated with Kaltura object
+ *
+ * Server response type:         KalturaMetadata
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataAddFromFileAction extends KalturaUploadRequest<KalturaMetadata> {
 
     metadataProfileId : number;

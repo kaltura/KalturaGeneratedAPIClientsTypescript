@@ -8,9 +8,16 @@ export interface PlayReadyDrmGenerateKeyActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Generate key id and content key for PlayReady encryption
-**/
+/**
+ * Build request payload for service 'playReadyDrm' action 'generateKey'.
+ *
+ * Usage: Generate key id and content key for PlayReady encryption
+ *
+ * Server response type:         KalturaPlayReadyContentKey
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlayReadyDrmGenerateKeyAction extends KalturaRequest<KalturaPlayReadyContentKey> {
 
     

@@ -9,9 +9,16 @@ export interface MetadataIndexActionArgs  extends KalturaRequestArgs {
 	shouldUpdate : boolean;
 }
 
-/** 
-* Index metadata by id, will also index the related object
-**/
+/**
+ * Build request payload for service 'metadata' action 'index'.
+ *
+ * Usage: Index metadata by id, will also index the related object
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataIndexAction extends KalturaRequest<number> {
 
     id : string;

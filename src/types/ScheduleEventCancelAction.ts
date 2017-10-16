@@ -8,9 +8,16 @@ export interface ScheduleEventCancelActionArgs  extends KalturaRequestArgs {
     scheduleEventId : number;
 }
 
-/** 
-* Mark the KalturaScheduleEvent object as cancelled
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'cancel'.
+ *
+ * Usage: Mark the KalturaScheduleEvent object as cancelled
+ *
+ * Server response type:         KalturaScheduleEvent
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventCancelAction extends KalturaRequest<KalturaScheduleEvent> {
 
     scheduleEventId : number;

@@ -9,7 +9,16 @@ export interface UverseClickToOrderGetFeedActionArgs  extends KalturaRequestArgs
 	hash : string;
 }
 
-
+/**
+ * Build request payload for service 'uverseClickToOrder' action 'getFeed'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UverseClickToOrderGetFeedAction extends KalturaRequest<string> {
 
     distributionProfileId : number;

@@ -8,9 +8,16 @@ export interface FlavorAssetDeleteLocalContentActionArgs  extends KalturaRequest
     assetId : string;
 }
 
-/** 
-* delete all local file syncs for this asset
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'deleteLocalContent'.
+ *
+ * Usage: delete all local file syncs for this asset
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetDeleteLocalContentAction extends KalturaRequest<void> {
 
     assetId : string;

@@ -15,9 +15,16 @@ export interface LiveStreamAppendRecordingActionArgs  extends KalturaRequestArgs
 	isLastChunk? : boolean;
 }
 
-/** 
-* Append recorded video to live entry
-**/
+/**
+ * Build request payload for service 'liveStream' action 'appendRecording'.
+ *
+ * Usage: Append recorded video to live entry
+ *
+ * Server response type:         KalturaLiveEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamAppendRecordingAction extends KalturaRequest<KalturaLiveEntry> {
 
     entryId : string;

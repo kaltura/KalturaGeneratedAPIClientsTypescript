@@ -8,9 +8,16 @@ export interface ResponseProfileAddActionArgs  extends KalturaRequestArgs {
     addResponseProfile : KalturaResponseProfile;
 }
 
-/** 
-* Add new response profile
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'add'.
+ *
+ * Usage: Add new response profile
+ *
+ * Server response type:         KalturaResponseProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileAddAction extends KalturaRequest<KalturaResponseProfile> {
 
     addResponseProfile : KalturaResponseProfile;

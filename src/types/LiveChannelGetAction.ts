@@ -8,9 +8,16 @@ export interface LiveChannelGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Get live channel by ID.
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'get'.
+ *
+ * Usage: Get live channel by ID
+ *
+ * Server response type:         KalturaLiveChannel
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelGetAction extends KalturaRequest<KalturaLiveChannel> {
 
     id : string;

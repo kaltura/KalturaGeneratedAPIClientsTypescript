@@ -9,9 +9,16 @@ export interface CategoryUpdateActionArgs  extends KalturaRequestArgs {
 	category : KalturaCategory;
 }
 
-/** 
-* Update Category
-**/
+/**
+ * Build request payload for service 'category' action 'update'.
+ *
+ * Usage: Update Category
+ *
+ * Server response type:         KalturaCategory
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUpdateAction extends KalturaRequest<KalturaCategory> {
 
     id : number;

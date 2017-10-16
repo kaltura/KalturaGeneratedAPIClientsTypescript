@@ -11,9 +11,16 @@ export interface AuditTrailListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List audit trail objects by filter and pager
-**/
+/**
+ * Build request payload for service 'auditTrail' action 'list'.
+ *
+ * Usage: List audit trail objects by filter and pager
+ *
+ * Server response type:         KalturaAuditTrailListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AuditTrailListAction extends KalturaRequest<KalturaAuditTrailListResponse> {
 
     filter : KalturaAuditTrailFilter;

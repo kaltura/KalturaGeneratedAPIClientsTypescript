@@ -9,9 +9,16 @@ export interface CategoryUserDeactivateActionArgs  extends KalturaRequestArgs {
 	userId : string;
 }
 
-/** 
-* reject CategoryUser
-**/
+/**
+ * Build request payload for service 'categoryUser' action 'deactivate'.
+ *
+ * Usage: reject CategoryUser
+ *
+ * Server response type:         KalturaCategoryUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUserDeactivateAction extends KalturaRequest<KalturaCategoryUser> {
 
     categoryId : number;

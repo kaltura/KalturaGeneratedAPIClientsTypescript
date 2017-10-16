@@ -9,9 +9,16 @@ export interface AccessControlProfileUpdateActionArgs  extends KalturaRequestArg
 	accessControlProfile : KalturaAccessControlProfile;
 }
 
-/** 
-* Update access control profile by id
-**/
+/**
+ * Build request payload for service 'accessControlProfile' action 'update'.
+ *
+ * Usage: Update access control profile by id
+ *
+ * Server response type:         KalturaAccessControlProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AccessControlProfileUpdateAction extends KalturaRequest<KalturaAccessControlProfile> {
 
     id : number;

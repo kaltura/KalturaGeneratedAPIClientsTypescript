@@ -9,9 +9,16 @@ export interface PlaylistGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Retrieve a playlist
-**/
+/**
+ * Build request payload for service 'playlist' action 'get'.
+ *
+ * Usage: Retrieve a playlist
+ *
+ * Server response type:         KalturaPlaylist
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistGetAction extends KalturaRequest<KalturaPlaylist> {
 
     id : string;

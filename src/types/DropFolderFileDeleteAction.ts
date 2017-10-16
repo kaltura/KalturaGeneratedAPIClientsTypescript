@@ -8,9 +8,16 @@ export interface DropFolderFileDeleteActionArgs  extends KalturaRequestArgs {
     dropFolderFileId : number;
 }
 
-/** 
-* Mark the KalturaDropFolderFile object as deleted
-**/
+/**
+ * Build request payload for service 'dropFolderFile' action 'delete'.
+ *
+ * Usage: Mark the KalturaDropFolderFile object as deleted
+ *
+ * Server response type:         KalturaDropFolderFile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderFileDeleteAction extends KalturaRequest<KalturaDropFolderFile> {
 
     dropFolderFileId : number;

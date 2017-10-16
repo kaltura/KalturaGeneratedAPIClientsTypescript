@@ -10,10 +10,16 @@ export interface AdminUserLoginActionArgs  extends KalturaRequestArgs {
 	partnerId? : number;
 }
 
-/** 
-* Get an admin session using admin email and password (Used for login to the KMC
-* application)
-**/
+/**
+ * Build request payload for service 'adminUser' action 'login'.
+ *
+ * Usage: Get an admin session using admin email and password (Used for login to the KMC application)
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AdminUserLoginAction extends KalturaRequest<string> {
 
     email : string;

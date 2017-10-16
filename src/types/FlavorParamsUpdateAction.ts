@@ -9,9 +9,16 @@ export interface FlavorParamsUpdateActionArgs  extends KalturaRequestArgs {
 	flavorParams : KalturaFlavorParams;
 }
 
-/** 
-* Update Flavor Params by ID
-**/
+/**
+ * Build request payload for service 'flavorParams' action 'update'.
+ *
+ * Usage: Update Flavor Params by ID
+ *
+ * Server response type:         KalturaFlavorParams
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorParamsUpdateAction extends KalturaRequest<KalturaFlavorParams> {
 
     id : number;

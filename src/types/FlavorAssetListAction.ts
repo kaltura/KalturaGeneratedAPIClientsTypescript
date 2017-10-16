@@ -11,9 +11,16 @@ export interface FlavorAssetListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Flavor Assets by filter and pager
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'list'.
+ *
+ * Usage: List Flavor Assets by filter and pager
+ *
+ * Server response type:         KalturaFlavorAssetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetListAction extends KalturaRequest<KalturaFlavorAssetListResponse> {
 
     filter : KalturaAssetFilter;

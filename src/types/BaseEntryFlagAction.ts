@@ -9,9 +9,16 @@ export interface BaseEntryFlagActionArgs  extends KalturaRequestArgs {
     moderationFlag : KalturaModerationFlag;
 }
 
-/** 
-* Flag inappropriate entry for moderation.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'flag'.
+ *
+ * Usage: Flag inappropriate entry for moderation
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryFlagAction extends KalturaRequest<void> {
 
     moderationFlag : KalturaModerationFlag;

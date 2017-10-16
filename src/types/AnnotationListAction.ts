@@ -11,9 +11,16 @@ export interface AnnotationListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List annotation objects by filter and pager
-**/
+/**
+ * Build request payload for service 'annotation' action 'list'.
+ *
+ * Usage: List annotation objects by filter and pager
+ *
+ * Server response type:         KalturaAnnotationListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnotationListAction extends KalturaRequest<KalturaAnnotationListResponse> {
 
     filter : KalturaCuePointFilter;

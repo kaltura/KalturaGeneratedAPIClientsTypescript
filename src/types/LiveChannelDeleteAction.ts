@@ -8,9 +8,16 @@ export interface LiveChannelDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete a live channel.
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'delete'.
+ *
+ * Usage: Delete a live channel
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelDeleteAction extends KalturaRequest<void> {
 
     id : string;

@@ -9,9 +9,16 @@ export interface EntryDistributionSubmitAddActionArgs  extends KalturaRequestArg
 	submitWhenReady? : boolean;
 }
 
-/** 
-* Submits Entry Distribution to the remote destination
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'submitAdd'.
+ *
+ * Usage: Submits Entry Distribution to the remote destination
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionSubmitAddAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

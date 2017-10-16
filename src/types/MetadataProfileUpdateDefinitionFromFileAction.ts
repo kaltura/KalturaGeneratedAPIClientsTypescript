@@ -9,9 +9,16 @@ export interface MetadataProfileUpdateDefinitionFromFileActionArgs  extends Kalt
 	xsdFile : File;
 }
 
-/** 
-* Update an existing metadata object definition file
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'updateDefinitionFromFile'.
+ *
+ * Usage: Update an existing metadata object definition file
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataProfileUpdateDefinitionFromFileAction extends KalturaUploadRequest<KalturaMetadataProfile> {
 
     id : number;

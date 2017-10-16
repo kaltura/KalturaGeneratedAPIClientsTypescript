@@ -11,9 +11,16 @@ export interface MetadataProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List metadata profile objects by filter and pager
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'list'.
+ *
+ * Usage: List metadata profile objects by filter and pager
+ *
+ * Server response type:         KalturaMetadataProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileListAction extends KalturaRequest<KalturaMetadataProfileListResponse> {
 
     filter : KalturaMetadataProfileFilter;

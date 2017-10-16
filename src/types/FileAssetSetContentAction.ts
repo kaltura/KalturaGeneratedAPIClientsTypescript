@@ -10,9 +10,16 @@ export interface FileAssetSetContentActionArgs  extends KalturaRequestArgs {
 	contentResource : KalturaContentResource;
 }
 
-/** 
-* Set content of file asset
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'setContent'.
+ *
+ * Usage: Set content of file asset
+ *
+ * Server response type:         KalturaFileAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetSetContentAction extends KalturaRequest<KalturaFileAsset> {
 
     id : string;

@@ -8,9 +8,16 @@ export interface EntryDistributionRetrySubmitActionArgs  extends KalturaRequestA
     id : number;
 }
 
-/** 
-* Retries last submit action
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'retrySubmit'.
+ *
+ * Usage: Retries last submit action
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionRetrySubmitAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

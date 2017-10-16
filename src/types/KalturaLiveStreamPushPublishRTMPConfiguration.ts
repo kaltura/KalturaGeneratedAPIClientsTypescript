@@ -10,9 +10,7 @@ export interface KalturaLiveStreamPushPublishRTMPConfigurationArgs  extends Kalt
 	applicationName? : string;
 }
 
-/** 
-* A representation of an RTMP live stream configuration
-**/
+
 export class KalturaLiveStreamPushPublishRTMPConfiguration extends KalturaLiveStreamPushPublishConfiguration {
 
     userId : string;

@@ -13,9 +13,16 @@ export interface LiveStreamAddLiveStreamPushPublishConfigurationActionArgs  exte
 	liveStreamConfiguration? : KalturaLiveStreamConfiguration;
 }
 
-/** 
-* Add new pushPublish configuration to entry
-**/
+/**
+ * Build request payload for service 'liveStream' action 'addLiveStreamPushPublishConfiguration'.
+ *
+ * Usage: Add new pushPublish configuration to entry
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamAddLiveStreamPushPublishConfigurationAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     entryId : string;

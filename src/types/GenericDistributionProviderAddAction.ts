@@ -8,9 +8,16 @@ export interface GenericDistributionProviderAddActionArgs  extends KalturaReques
     genericDistributionProvider : KalturaGenericDistributionProvider;
 }
 
-/** 
-* Add new Generic Distribution Provider
-**/
+/**
+ * Build request payload for service 'genericDistributionProvider' action 'add'.
+ *
+ * Usage: Add new Generic Distribution Provider
+ *
+ * Server response type:         KalturaGenericDistributionProvider
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderAddAction extends KalturaRequest<KalturaGenericDistributionProvider> {
 
     genericDistributionProvider : KalturaGenericDistributionProvider;

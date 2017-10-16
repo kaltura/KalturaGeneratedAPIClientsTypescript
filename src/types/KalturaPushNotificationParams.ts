@@ -8,9 +8,7 @@ export interface KalturaPushNotificationParamsArgs  extends KalturaObjectBaseArg
     userParams? : KalturaPushEventNotificationParameter[];
 }
 
-/** 
-* Object which contains contextual entry-related data.
-**/
+
 export class KalturaPushNotificationParams extends KalturaObjectBase {
 
     userParams : KalturaPushEventNotificationParameter[];

@@ -8,9 +8,16 @@ export interface GenericDistributionProviderDeleteActionArgs  extends KalturaReq
     id : number;
 }
 
-/** 
-* Delete Generic Distribution Provider by id
-**/
+/**
+ * Build request payload for service 'genericDistributionProvider' action 'delete'.
+ *
+ * Usage: Delete Generic Distribution Provider by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderDeleteAction extends KalturaRequest<void> {
 
     id : number;

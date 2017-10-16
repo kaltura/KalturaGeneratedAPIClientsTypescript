@@ -10,9 +10,16 @@ export interface CategoryEntryIndexActionArgs  extends KalturaRequestArgs {
 	shouldUpdate? : boolean;
 }
 
-/** 
-* Index CategoryEntry by Id
-**/
+/**
+ * Build request payload for service 'categoryEntry' action 'index'.
+ *
+ * Usage: Index CategoryEntry by Id
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryEntryIndexAction extends KalturaRequest<number> {
 
     entryId : string;

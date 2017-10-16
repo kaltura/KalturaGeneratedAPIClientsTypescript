@@ -8,9 +8,16 @@ export interface UserEntryAddActionArgs  extends KalturaRequestArgs {
     userEntry : KalturaUserEntry;
 }
 
-/** 
-* Adds a user_entry to the Kaltura DB.
-**/
+/**
+ * Build request payload for service 'userEntry' action 'add'.
+ *
+ * Usage: Adds a user_entry to the Kaltura DB
+ *
+ * Server response type:         KalturaUserEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEntryAddAction extends KalturaRequest<KalturaUserEntry> {
 
     userEntry : KalturaUserEntry;

@@ -12,9 +12,16 @@ export interface EmailIngestionProfileAddMediaEntryActionArgs  extends KalturaRe
 	emailMsgId : string;
 }
 
-/** 
-* add KalturaMediaEntry from email ingestion
-**/
+/**
+ * Build request payload for service 'EmailIngestionProfile' action 'addMediaEntry'.
+ *
+ * Usage: add KalturaMediaEntry from email ingestion
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EmailIngestionProfileAddMediaEntryAction extends KalturaRequest<KalturaMediaEntry> {
 
     mediaEntry : KalturaMediaEntry;

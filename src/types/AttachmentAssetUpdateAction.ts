@@ -9,9 +9,16 @@ export interface AttachmentAssetUpdateActionArgs  extends KalturaRequestArgs {
 	attachmentAsset : KalturaAttachmentAsset;
 }
 
-/** 
-* Update attachment asset
-**/
+/**
+ * Build request payload for service 'attachmentAsset' action 'update'.
+ *
+ * Usage: Update attachment asset
+ *
+ * Server response type:         KalturaAttachmentAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttachmentAssetUpdateAction extends KalturaRequest<KalturaAttachmentAsset> {
 
     id : string;

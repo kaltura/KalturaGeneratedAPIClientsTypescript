@@ -10,9 +10,7 @@ export interface KalturaEntryContextDataParamsArgs  extends KalturaAccessControl
 	mediaProtocol? : string;
 }
 
-/** 
-* Object which contains contextual entry-related data.
-**/
+
 export class KalturaEntryContextDataParams extends KalturaAccessControlScope {
 
     flavorAssetId : string;

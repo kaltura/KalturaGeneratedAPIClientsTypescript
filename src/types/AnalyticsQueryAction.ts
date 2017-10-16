@@ -11,10 +11,16 @@ export interface AnalyticsQueryActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* report query action allows to get a analytics data for specific query
-* dimensions, metrics and filters.
-**/
+/**
+ * Build request payload for service 'analytics' action 'query'.
+ *
+ * Usage: report query action allows to get a analytics data for specific query dimensions, metrics and filters
+ *
+ * Server response type:         KalturaReportResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnalyticsQueryAction extends KalturaRequest<KalturaReportResponse> {
 
     filter : KalturaAnalyticsFilter;

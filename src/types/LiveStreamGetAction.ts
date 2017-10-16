@@ -9,9 +9,16 @@ export interface LiveStreamGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Get live stream entry by ID.
-**/
+/**
+ * Build request payload for service 'liveStream' action 'get'.
+ *
+ * Usage: Get live stream entry by ID
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamGetAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     entryId : string;

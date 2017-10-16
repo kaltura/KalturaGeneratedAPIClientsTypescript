@@ -10,9 +10,16 @@ export interface CaptionAssetSetContentActionArgs  extends KalturaRequestArgs {
 	contentResource : KalturaContentResource;
 }
 
-/** 
-* Update content of caption asset
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'setContent'.
+ *
+ * Usage: Update content of caption asset
+ *
+ * Server response type:         KalturaCaptionAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetSetContentAction extends KalturaRequest<KalturaCaptionAsset> {
 
     id : string;

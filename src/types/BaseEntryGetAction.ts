@@ -9,9 +9,16 @@ export interface BaseEntryGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Get base entry by ID.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'get'.
+ *
+ * Usage: Get base entry by ID
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryGetAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

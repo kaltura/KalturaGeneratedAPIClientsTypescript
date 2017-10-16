@@ -12,9 +12,16 @@ export interface ReportGetTotalActionArgs  extends KalturaRequestArgs {
 	objectIds? : string;
 }
 
-/** 
-* report getTotal action allows to get a graph data for a specific report.
-**/
+/**
+ * Build request payload for service 'report' action 'getTotal'.
+ *
+ * Usage: report getTotal action allows to get a graph data for a specific report
+ *
+ * Server response type:         KalturaReportTotal
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportGetTotalAction extends KalturaRequest<KalturaReportTotal> {
 
     reportType : KalturaReportType;

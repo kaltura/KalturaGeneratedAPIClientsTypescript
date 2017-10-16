@@ -10,9 +10,16 @@ export interface PartnerGetSecretsActionArgs  extends KalturaRequestArgs {
 	cmsPassword : string;
 }
 
-/** 
-* Retrieve partner secret and admin secret
-**/
+/**
+ * Build request payload for service 'partner' action 'getSecrets'.
+ *
+ * Usage: Retrieve partner secret and admin secret
+ *
+ * Server response type:         KalturaPartner
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerGetSecretsAction extends KalturaRequest<KalturaPartner> {
 
     partnerId : number;

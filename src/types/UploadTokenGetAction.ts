@@ -8,9 +8,16 @@ export interface UploadTokenGetActionArgs  extends KalturaRequestArgs {
     uploadTokenId : string;
 }
 
-/** 
-* Get upload token by id
-**/
+/**
+ * Build request payload for service 'uploadToken' action 'get'.
+ *
+ * Usage: Get upload token by id
+ *
+ * Server response type:         KalturaUploadToken
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UploadTokenGetAction extends KalturaRequest<KalturaUploadToken> {
 
     uploadTokenId : string;

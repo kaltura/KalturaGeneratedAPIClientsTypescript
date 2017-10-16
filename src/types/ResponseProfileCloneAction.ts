@@ -9,9 +9,16 @@ export interface ResponseProfileCloneActionArgs  extends KalturaRequestArgs {
 	profile : KalturaResponseProfile;
 }
 
-/** 
-* Clone an existing response profile
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'clone'.
+ *
+ * Usage: Clone an existing response profile
+ *
+ * Server response type:         KalturaResponseProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileCloneAction extends KalturaRequest<KalturaResponseProfile> {
 
     id : number;

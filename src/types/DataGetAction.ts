@@ -9,9 +9,16 @@ export interface DataGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Get data entry by ID.
-**/
+/**
+ * Build request payload for service 'data' action 'get'.
+ *
+ * Usage: Get data entry by ID
+ *
+ * Server response type:         KalturaDataEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataGetAction extends KalturaRequest<KalturaDataEntry> {
 
     entryId : string;

@@ -9,9 +9,16 @@ export interface MetadataProfileRevertActionArgs  extends KalturaRequestArgs {
 	toVersion : number;
 }
 
-/** 
-* Update an existing metadata object definition file
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'revert'.
+ *
+ * Usage: Update an existing metadata object definition file
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileRevertAction extends KalturaRequest<KalturaMetadataProfile> {
 
     id : number;

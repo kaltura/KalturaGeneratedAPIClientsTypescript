@@ -8,9 +8,16 @@ export interface ServerNodeDeleteActionArgs  extends KalturaRequestArgs {
     serverNodeId : string;
 }
 
-/** 
-* delete server node by id
-**/
+/**
+ * Build request payload for service 'serverNode' action 'delete'.
+ *
+ * Usage: delete server node by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ServerNodeDeleteAction extends KalturaRequest<void> {
 
     serverNodeId : string;

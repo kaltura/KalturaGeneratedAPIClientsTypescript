@@ -8,9 +8,16 @@ export interface QuizGetActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Allows to get a quiz
-**/
+/**
+ * Build request payload for service 'quiz' action 'get'.
+ *
+ * Usage: Allows to get a quiz
+ *
+ * Server response type:         KalturaQuiz
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class QuizGetAction extends KalturaRequest<KalturaQuiz> {
 
     entryId : string;

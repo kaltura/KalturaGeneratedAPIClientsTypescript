@@ -8,7 +8,16 @@ export interface SystemGetTimeActionArgs  extends KalturaRequestArgs {
     
 }
 
-
+/**
+ * Build request payload for service 'system' action 'getTime'.
+ *
+ * 
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SystemGetTimeAction extends KalturaRequest<number> {
 
     

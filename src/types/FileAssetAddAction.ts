@@ -8,9 +8,16 @@ export interface FileAssetAddActionArgs  extends KalturaRequestArgs {
     fileAsset : KalturaFileAsset;
 }
 
-/** 
-* Add new file asset
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'add'.
+ *
+ * Usage: Add new file asset
+ *
+ * Server response type:         KalturaFileAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetAddAction extends KalturaRequest<KalturaFileAsset> {
 
     fileAsset : KalturaFileAsset;

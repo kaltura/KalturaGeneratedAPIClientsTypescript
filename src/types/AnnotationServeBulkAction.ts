@@ -11,9 +11,16 @@ export interface AnnotationServeBulkActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Download multiple cue points objects as XML definitions
-**/
+/**
+ * Build request payload for service 'annotation' action 'serveBulk'.
+ *
+ * Usage: Download multiple cue points objects as XML definitions
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnotationServeBulkAction extends KalturaRequest<string> {
 
     filter : KalturaCuePointFilter;

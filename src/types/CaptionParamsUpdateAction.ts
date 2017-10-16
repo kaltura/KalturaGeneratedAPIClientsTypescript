@@ -9,9 +9,16 @@ export interface CaptionParamsUpdateActionArgs  extends KalturaRequestArgs {
 	captionParams : KalturaCaptionParams;
 }
 
-/** 
-* Update Caption Params by ID
-**/
+/**
+ * Build request payload for service 'captionParams' action 'update'.
+ *
+ * Usage: Update Caption Params by ID
+ *
+ * Server response type:         KalturaCaptionParams
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionParamsUpdateAction extends KalturaRequest<KalturaCaptionParams> {
 
     id : number;

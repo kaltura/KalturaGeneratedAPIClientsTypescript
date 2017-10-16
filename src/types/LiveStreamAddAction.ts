@@ -10,9 +10,17 @@ export interface LiveStreamAddActionArgs  extends KalturaRequestArgs {
 	sourceType? : KalturaSourceType;
 }
 
-/** 
-* Adds new live stream entry.   The entry will be queued for provision.
-**/
+/**
+ * Build request payload for service 'liveStream' action 'add'.
+ *
+ * Usage: Adds new live stream entry.
+ * The entry will be queued for provision
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamAddAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     liveStreamEntry : KalturaLiveStreamEntry;

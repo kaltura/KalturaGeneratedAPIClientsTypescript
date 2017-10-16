@@ -7,10 +7,7 @@ export interface KalturaHttpNotificationDataFieldsArgs  extends KalturaHttpNotif
     
 }
 
-/** 
-* If this class used as the template data, the fields will be taken from the
-* content parameters
-**/
+
 export class KalturaHttpNotificationDataFields extends KalturaHttpNotificationData {
 
     

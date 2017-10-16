@@ -8,9 +8,16 @@ export interface ScheduleEventGetActionArgs  extends KalturaRequestArgs {
     scheduleEventId : number;
 }
 
-/** 
-* Retrieve a KalturaScheduleEvent object by ID
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'get'.
+ *
+ * Usage: Retrieve a KalturaScheduleEvent object by ID
+ *
+ * Server response type:         KalturaScheduleEvent
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventGetAction extends KalturaRequest<KalturaScheduleEvent> {
 
     scheduleEventId : number;

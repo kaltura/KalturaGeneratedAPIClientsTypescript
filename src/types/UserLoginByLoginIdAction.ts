@@ -13,9 +13,16 @@ export interface UserLoginByLoginIdActionArgs  extends KalturaRequestArgs {
 	otp? : string;
 }
 
-/** 
-* Logs a user into a partner account with a user login ID and a user password.
-**/
+/**
+ * Build request payload for service 'user' action 'loginByLoginId'.
+ *
+ * Usage: Logs a user into a partner account with a user login ID and a user password
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserLoginByLoginIdAction extends KalturaRequest<string> {
 
     loginId : string;

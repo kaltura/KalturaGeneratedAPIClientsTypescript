@@ -8,9 +8,16 @@ export interface PermissionItemGetActionArgs  extends KalturaRequestArgs {
     permissionItemId : number;
 }
 
-/** 
-* Retrieves a permission item object using its ID.
-**/
+/**
+ * Build request payload for service 'permissionItem' action 'get'.
+ *
+ * Usage: Retrieves a permission item object using its ID
+ *
+ * Server response type:         KalturaPermissionItem
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionItemGetAction extends KalturaRequest<KalturaPermissionItem> {
 
     permissionItemId : number;

@@ -8,9 +8,16 @@ export interface LiveChannelSegmentGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get live channel segment by id
-**/
+/**
+ * Build request payload for service 'liveChannelSegment' action 'get'.
+ *
+ * Usage: Get live channel segment by id
+ *
+ * Server response type:         KalturaLiveChannelSegment
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelSegmentGetAction extends KalturaRequest<KalturaLiveChannelSegment> {
 
     id : number;

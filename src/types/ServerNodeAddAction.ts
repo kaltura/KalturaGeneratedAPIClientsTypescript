@@ -8,9 +8,16 @@ export interface ServerNodeAddActionArgs  extends KalturaRequestArgs {
     serverNode : KalturaServerNode;
 }
 
-/** 
-* Adds a server node to the Kaltura DB.
-**/
+/**
+ * Build request payload for service 'serverNode' action 'add'.
+ *
+ * Usage: Adds a server node to the Kaltura DB
+ *
+ * Server response type:         KalturaServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ServerNodeAddAction extends KalturaRequest<KalturaServerNode> {
 
     serverNode : KalturaServerNode;

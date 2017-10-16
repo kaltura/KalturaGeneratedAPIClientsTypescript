@@ -11,9 +11,16 @@ export interface ShortLinkListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List short link objects by filter and pager
-**/
+/**
+ * Build request payload for service 'shortLink' action 'list'.
+ *
+ * Usage: List short link objects by filter and pager
+ *
+ * Server response type:         KalturaShortLinkListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ShortLinkListAction extends KalturaRequest<KalturaShortLinkListResponse> {
 
     filter : KalturaShortLinkFilter;

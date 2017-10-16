@@ -10,9 +10,7 @@ export interface KalturaBulkUploadFilterJobDataArgs  extends KalturaBulkUploadJo
 	templateObject? : KalturaObjectBase;
 }
 
-/** 
-* Represents the Bulk upload job data for filter bulk upload
-**/
+
 export class KalturaBulkUploadFilterJobData extends KalturaBulkUploadJobData {
 
     filter : KalturaFilter;

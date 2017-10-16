@@ -10,9 +10,16 @@ export interface EventNotificationTemplateDispatchActionArgs  extends KalturaReq
 	scope : KalturaEventNotificationScope;
 }
 
-/** 
-* Dispatch event notification object by id
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'dispatch'.
+ *
+ * Usage: Dispatch event notification object by id
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateDispatchAction extends KalturaRequest<number> {
 
     id : number;

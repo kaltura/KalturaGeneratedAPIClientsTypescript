@@ -9,11 +9,17 @@ export interface UserDisableLoginActionArgs  extends KalturaRequestArgs {
 	loginId? : string;
 }
 
-/** 
-* Disables a user's ability to log into a partner account using an email address
-* and a password.   You may use either a userId or a loginId parameter for this
-* action.
-**/
+/**
+ * Build request payload for service 'user' action 'disableLogin'.
+ *
+ * Usage: Disables a user's ability to log into a partner account using an email address and a password.
+ * You may use either a userId or a loginId parameter for this action
+ *
+ * Server response type:         KalturaUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserDisableLoginAction extends KalturaRequest<KalturaUser> {
 
     userId : string;

@@ -8,7 +8,16 @@ export interface ThumbAssetDeleteActionArgs  extends KalturaRequestArgs {
     thumbAssetId : string;
 }
 
-
+/**
+ * Build request payload for service 'thumbAsset' action 'delete'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetDeleteAction extends KalturaRequest<void> {
 
     thumbAssetId : string;

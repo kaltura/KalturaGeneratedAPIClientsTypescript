@@ -9,9 +9,16 @@ export interface WidevineDrmGetLicenseActionArgs  extends KalturaRequestArgs {
 	referrer? : string;
 }
 
-/** 
-* Get license for encrypted content playback
-**/
+/**
+ * Build request payload for service 'widevineDrm' action 'getLicense'.
+ *
+ * Usage: Get license for encrypted content playback
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class WidevineDrmGetLicenseAction extends KalturaRequest<string> {
 
     flavorAssetId : string;

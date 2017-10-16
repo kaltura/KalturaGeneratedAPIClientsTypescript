@@ -8,9 +8,16 @@ export interface ResponseProfileGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get response profile by id
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'get'.
+ *
+ * Usage: Get response profile by id
+ *
+ * Server response type:         KalturaResponseProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileGetAction extends KalturaRequest<KalturaResponseProfile> {
 
     id : number;

@@ -9,9 +9,16 @@ export interface SchemaServeActionArgs  extends KalturaRequestArgs {
     type : KalturaSchemaType;
 }
 
-/** 
-* Serves the requested XSD according to the type and name.
-**/
+/**
+ * Build request payload for service 'schema' action 'serve'.
+ *
+ * Usage: Serves the requested XSD according to the type and name
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SchemaServeAction extends KalturaRequest<string> {
 
     type : KalturaSchemaType;

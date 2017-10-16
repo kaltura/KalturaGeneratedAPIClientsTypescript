@@ -11,9 +11,16 @@ export interface PartnerListPartnersForUserActionArgs  extends KalturaRequestArg
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Retrieve a list of partner objects which the current user is allowed to access.
-**/
+/**
+ * Build request payload for service 'partner' action 'listPartnersForUser'.
+ *
+ * Usage: Retrieve a list of partner objects which the current user is allowed to access
+ *
+ * Server response type:         KalturaPartnerListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerListPartnersForUserAction extends KalturaRequest<KalturaPartnerListResponse> {
 
     partnerFilter : KalturaPartnerFilter;

@@ -8,9 +8,16 @@ export interface PollResetVotesActionArgs  extends KalturaRequestArgs {
     pollId : string;
 }
 
-/** 
-* Get resetVotes Action
-**/
+/**
+ * Build request payload for service 'poll' action 'resetVotes'.
+ *
+ * Usage: Get resetVotes Action
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PollResetVotesAction extends KalturaRequest<void> {
 
     pollId : string;

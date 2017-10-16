@@ -10,10 +10,16 @@ export interface UserEnableLoginActionArgs  extends KalturaRequestArgs {
 	password? : string;
 }
 
-/** 
-* Enables a user to log into a partner account using an email address and a
-* password
-**/
+/**
+ * Build request payload for service 'user' action 'enableLogin'.
+ *
+ * Usage: Enables a user to log into a partner account using an email address and a password
+ *
+ * Server response type:         KalturaUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEnableLoginAction extends KalturaRequest<KalturaUser> {
 
     userId : string;

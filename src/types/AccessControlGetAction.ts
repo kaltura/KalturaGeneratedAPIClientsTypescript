@@ -8,9 +8,16 @@ export interface AccessControlGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get Access Control Profile by id
-**/
+/**
+ * Build request payload for service 'accessControl' action 'get'.
+ *
+ * Usage: Get Access Control Profile by id
+ *
+ * Server response type:         KalturaAccessControl
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AccessControlGetAction extends KalturaRequest<KalturaAccessControl> {
 
     id : number;

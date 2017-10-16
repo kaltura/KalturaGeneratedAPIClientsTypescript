@@ -9,9 +9,16 @@ export interface DocumentsAddFromFlavorAssetActionArgs  extends KalturaRequestAr
 	documentEntry? : KalturaDocumentEntry;
 }
 
-/** 
-* Copy flavor asset into new entry
-**/
+/**
+ * Build request payload for service 'documents' action 'addFromFlavorAsset'.
+ *
+ * Usage: Copy flavor asset into new entry
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsAddFromFlavorAssetAction extends KalturaRequest<KalturaDocumentEntry> {
 
     sourceFlavorAssetId : string;

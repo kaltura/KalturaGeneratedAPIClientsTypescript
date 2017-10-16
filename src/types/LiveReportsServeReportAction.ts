@@ -8,9 +8,16 @@ export interface LiveReportsServeReportActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Will serve a requested report
-**/
+/**
+ * Build request payload for service 'liveReports' action 'serveReport'.
+ *
+ * Usage: Will serve a requested report
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveReportsServeReportAction extends KalturaRequest<string> {
 
     id : string;

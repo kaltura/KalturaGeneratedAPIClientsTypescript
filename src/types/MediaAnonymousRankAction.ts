@@ -9,9 +9,16 @@ export interface MediaAnonymousRankActionArgs  extends KalturaRequestArgs {
 	rank : number;
 }
 
-/** 
-* Anonymously rank a media entry, no validation is done on duplicate rankings
-**/
+/**
+ * Build request payload for service 'media' action 'anonymousRank'.
+ *
+ * Usage: Anonymously rank a media entry, no validation is done on duplicate rankings
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAnonymousRankAction extends KalturaRequest<void> {
 
     entryId : string;

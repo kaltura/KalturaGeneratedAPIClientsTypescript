@@ -8,9 +8,16 @@ export interface BulkUploadServeLogActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* serveLog action returan the original file.
-**/
+/**
+ * Build request payload for service 'bulkUpload' action 'serveLog'.
+ *
+ * Usage: serveLog action returan the original file
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BulkUploadServeLogAction extends KalturaRequest<string> {
 
     id : number;

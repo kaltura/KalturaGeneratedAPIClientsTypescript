@@ -9,9 +9,16 @@ export interface PlayReadyDrmGetEntryContentKeyActionArgs  extends KalturaReques
 	createIfMissing? : boolean;
 }
 
-/** 
-* Get content key and key id for the given entry
-**/
+/**
+ * Build request payload for service 'playReadyDrm' action 'getEntryContentKey'.
+ *
+ * Usage: Get content key and key id for the given entry
+ *
+ * Server response type:         KalturaPlayReadyContentKey
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlayReadyDrmGetEntryContentKeyAction extends KalturaRequest<KalturaPlayReadyContentKey> {
 
     entryId : string;

@@ -9,9 +9,16 @@ export interface GenericDistributionProviderActionUpdateActionArgs  extends Kalt
 	genericDistributionProviderAction : KalturaGenericDistributionProviderAction;
 }
 
-/** 
-* Update Generic Distribution Provider Action by id
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'update'.
+ *
+ * Usage: Update Generic Distribution Provider Action by id
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderActionUpdateAction extends KalturaRequest<KalturaGenericDistributionProviderAction> {
 
     id : number;

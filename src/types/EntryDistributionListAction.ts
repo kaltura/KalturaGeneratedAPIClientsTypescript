@@ -11,9 +11,16 @@ export interface EntryDistributionListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List all distribution providers
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'list'.
+ *
+ * Usage: List all distribution providers
+ *
+ * Server response type:         KalturaEntryDistributionListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionListAction extends KalturaRequest<KalturaEntryDistributionListResponse> {
 
     filter : KalturaEntryDistributionFilter;

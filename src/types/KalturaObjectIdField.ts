@@ -7,9 +7,7 @@ export interface KalturaObjectIdFieldArgs  extends KalturaStringFieldArgs {
     
 }
 
-/** 
-* Evaluates object ID according to given context
-**/
+
 export class KalturaObjectIdField extends KalturaStringField {
 
     

@@ -9,9 +9,16 @@ export interface LiveChannelUpdateActionArgs  extends KalturaRequestArgs {
 	liveChannel : KalturaLiveChannel;
 }
 
-/** 
-* Update live channel. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'update'.
+ *
+ * Usage: Update live channel. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaLiveChannel
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelUpdateAction extends KalturaRequest<KalturaLiveChannel> {
 
     id : string;

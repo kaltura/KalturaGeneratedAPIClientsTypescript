@@ -10,9 +10,16 @@ export interface ConversionProfileAssetParamsUpdateActionArgs  extends KalturaRe
 	conversionProfileAssetParams : KalturaConversionProfileAssetParams;
 }
 
-/** 
-* Update asset parmas of conversion profile by ID
-**/
+/**
+ * Build request payload for service 'conversionProfileAssetParams' action 'update'.
+ *
+ * Usage: Update asset parmas of conversion profile by ID
+ *
+ * Server response type:         KalturaConversionProfileAssetParams
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileAssetParamsUpdateAction extends KalturaRequest<KalturaConversionProfileAssetParams> {
 
     conversionProfileId : number;

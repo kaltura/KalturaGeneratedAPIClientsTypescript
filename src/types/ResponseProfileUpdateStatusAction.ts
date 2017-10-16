@@ -10,9 +10,16 @@ export interface ResponseProfileUpdateStatusActionArgs  extends KalturaRequestAr
 	status : KalturaResponseProfileStatus;
 }
 
-/** 
-* Update response profile status by id
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'updateStatus'.
+ *
+ * Usage: Update response profile status by id
+ *
+ * Server response type:         KalturaResponseProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileUpdateStatusAction extends KalturaRequest<KalturaResponseProfile> {
 
     id : number;

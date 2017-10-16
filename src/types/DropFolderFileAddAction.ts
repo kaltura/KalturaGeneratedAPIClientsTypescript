@@ -8,9 +8,16 @@ export interface DropFolderFileAddActionArgs  extends KalturaRequestArgs {
     dropFolderFile : KalturaDropFolderFile;
 }
 
-/** 
-* Allows you to add a new KalturaDropFolderFile object
-**/
+/**
+ * Build request payload for service 'dropFolderFile' action 'add'.
+ *
+ * Usage: Allows you to add a new KalturaDropFolderFile object
+ *
+ * Server response type:         KalturaDropFolderFile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderFileAddAction extends KalturaRequest<KalturaDropFolderFile> {
 
     dropFolderFile : KalturaDropFolderFile;

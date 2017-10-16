@@ -10,9 +10,16 @@ export interface DocumentsServeActionArgs  extends KalturaRequestArgs {
 	forceProxy? : boolean;
 }
 
-/** 
-* Serves the file content
-**/
+/**
+ * Build request payload for service 'documents' action 'serve'.
+ *
+ * Usage: Serves the file content
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsServeAction extends KalturaRequest<string> {
 
     entryId : string;

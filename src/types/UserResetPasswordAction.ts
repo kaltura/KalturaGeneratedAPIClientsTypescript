@@ -8,9 +8,16 @@ export interface UserResetPasswordActionArgs  extends KalturaRequestArgs {
     email : string;
 }
 
-/** 
-* Reset user's password and send the user an email to generate a new one.
-**/
+/**
+ * Build request payload for service 'user' action 'resetPassword'.
+ *
+ * Usage: Reset user's password and send the user an email to generate a new one
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserResetPasswordAction extends KalturaRequest<void> {
 
     email : string;

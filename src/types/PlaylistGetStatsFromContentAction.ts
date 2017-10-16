@@ -10,9 +10,16 @@ export interface PlaylistGetStatsFromContentActionArgs  extends KalturaRequestAr
 	playlistContent : string;
 }
 
-/** 
-* Retrieve playlist statistics
-**/
+/**
+ * Build request payload for service 'playlist' action 'getStatsFromContent'.
+ *
+ * Usage: Retrieve playlist statistics
+ *
+ * Server response type:         KalturaPlaylist
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistGetStatsFromContentAction extends KalturaRequest<KalturaPlaylist> {
 
     playlistType : KalturaPlaylistType;

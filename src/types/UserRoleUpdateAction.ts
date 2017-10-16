@@ -9,9 +9,16 @@ export interface UserRoleUpdateActionArgs  extends KalturaRequestArgs {
 	userRole : KalturaUserRole;
 }
 
-/** 
-* Updates an existing user role object.
-**/
+/**
+ * Build request payload for service 'userRole' action 'update'.
+ *
+ * Usage: Updates an existing user role object
+ *
+ * Server response type:         KalturaUserRole
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserRoleUpdateAction extends KalturaRequest<KalturaUserRole> {
 
     userRoleId : number;

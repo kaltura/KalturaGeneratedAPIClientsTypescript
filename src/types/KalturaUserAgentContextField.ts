@@ -7,9 +7,7 @@ export interface KalturaUserAgentContextFieldArgs  extends KalturaStringFieldArg
     
 }
 
-/** 
-* Represents the current request user agent context
-**/
+
 export class KalturaUserAgentContextField extends KalturaStringField {
 
     

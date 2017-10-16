@@ -11,9 +11,16 @@ export interface CuePointServeBulkActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Download multiple cue points objects as XML definitions
-**/
+/**
+ * Build request payload for service 'cuePoint' action 'serveBulk'.
+ *
+ * Usage: Download multiple cue points objects as XML definitions
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CuePointServeBulkAction extends KalturaRequest<string> {
 
     filter : KalturaCuePointFilter;

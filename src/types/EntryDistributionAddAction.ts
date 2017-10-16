@@ -8,9 +8,16 @@ export interface EntryDistributionAddActionArgs  extends KalturaRequestArgs {
     entryDistribution : KalturaEntryDistribution;
 }
 
-/** 
-* Add new Entry Distribution
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'add'.
+ *
+ * Usage: Add new Entry Distribution
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionAddAction extends KalturaRequest<KalturaEntryDistribution> {
 
     entryDistribution : KalturaEntryDistribution;

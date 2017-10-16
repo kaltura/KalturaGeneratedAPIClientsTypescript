@@ -9,10 +9,17 @@ export interface MediaAddFromUrlActionArgs  extends KalturaRequestArgs {
 	url : string;
 }
 
-/** 
-* Adds new media entry by importing an HTTP or FTP URL.   The entry will be queued
-* for import and then for conversion.
-**/
+/**
+ * Build request payload for service 'media' action 'addFromUrl'.
+ *
+ * Usage: Adds new media entry by importing an HTTP or FTP URL.
+ * The entry will be queued for import and then for conversion
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddFromUrlAction extends KalturaRequest<KalturaMediaEntry> {
 
     mediaEntry : KalturaMediaEntry;

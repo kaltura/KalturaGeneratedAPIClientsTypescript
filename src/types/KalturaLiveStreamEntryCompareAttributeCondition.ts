@@ -8,10 +8,7 @@ export interface KalturaLiveStreamEntryCompareAttributeConditionArgs  extends Ka
     attribute? : KalturaLiveStreamEntryCompareAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaLiveStreamEntry attributes. Use
-* KalturaLiveStreamEntryCompareAttribute enum to provide attribute name. /
-**/
+
 export class KalturaLiveStreamEntryCompareAttributeCondition extends KalturaSearchComparableAttributeCondition {
 
     attribute : KalturaLiveStreamEntryCompareAttribute;

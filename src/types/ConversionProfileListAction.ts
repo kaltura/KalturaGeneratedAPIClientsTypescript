@@ -11,9 +11,16 @@ export interface ConversionProfileListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Conversion Profiles by filter with paging support
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'list'.
+ *
+ * Usage: List Conversion Profiles by filter with paging support
+ *
+ * Server response type:         KalturaConversionProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileListAction extends KalturaRequest<KalturaConversionProfileListResponse> {
 
     filter : KalturaConversionProfileFilter;

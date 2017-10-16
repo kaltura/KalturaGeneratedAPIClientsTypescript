@@ -8,9 +8,16 @@ export interface LiveStreamValidateRegisteredMediaServersActionArgs  extends Kal
     entryId : string;
 }
 
-/** 
-* Validates all registered media servers
-**/
+/**
+ * Build request payload for service 'liveStream' action 'validateRegisteredMediaServers'.
+ *
+ * Usage: Validates all registered media servers
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamValidateRegisteredMediaServersAction extends KalturaRequest<void> {
 
     entryId : string;

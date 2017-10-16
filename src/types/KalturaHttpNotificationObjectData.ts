@@ -11,9 +11,7 @@ export interface KalturaHttpNotificationObjectDataArgs  extends KalturaHttpNotif
 	code? : string;
 }
 
-/** 
-* Evaluates PHP statement, depends on the execution context
-**/
+
 export class KalturaHttpNotificationObjectData extends KalturaHttpNotificationData {
 
     apiObjectType : string;

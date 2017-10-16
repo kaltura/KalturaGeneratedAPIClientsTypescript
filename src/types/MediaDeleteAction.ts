@@ -8,9 +8,16 @@ export interface MediaDeleteActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Delete a media entry.
-**/
+/**
+ * Build request payload for service 'media' action 'delete'.
+ *
+ * Usage: Delete a media entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

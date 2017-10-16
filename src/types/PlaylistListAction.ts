@@ -11,9 +11,16 @@ export interface PlaylistListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List available playlists
-**/
+/**
+ * Build request payload for service 'playlist' action 'list'.
+ *
+ * Usage: List available playlists
+ *
+ * Server response type:         KalturaPlaylistListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistListAction extends KalturaRequest<KalturaPlaylistListResponse> {
 
     filter : KalturaPlaylistFilter;

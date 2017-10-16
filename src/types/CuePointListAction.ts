@@ -11,9 +11,16 @@ export interface CuePointListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List cue point objects by filter and pager
-**/
+/**
+ * Build request payload for service 'cuePoint' action 'list'.
+ *
+ * Usage: List cue point objects by filter and pager
+ *
+ * Server response type:         KalturaCuePointListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CuePointListAction extends KalturaRequest<KalturaCuePointListResponse> {
 
     filter : KalturaCuePointFilter;

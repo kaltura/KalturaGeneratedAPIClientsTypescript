@@ -8,10 +8,16 @@ export interface CaptionAssetSetAsDefaultActionArgs  extends KalturaRequestArgs 
     captionAssetId : string;
 }
 
-/** 
-* Markss the caption as default and removes that mark from all other caption
-* assets of the entry.
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'setAsDefault'.
+ *
+ * Usage: Markss the caption as default and removes that mark from all other caption assets of the entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetSetAsDefaultAction extends KalturaRequest<void> {
 
     captionAssetId : string;

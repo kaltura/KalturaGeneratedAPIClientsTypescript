@@ -9,7 +9,16 @@ export interface SynacorHboGetFeedActionArgs  extends KalturaRequestArgs {
 	hash : string;
 }
 
-
+/**
+ * Build request payload for service 'synacorHbo' action 'getFeed'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SynacorHboGetFeedAction extends KalturaRequest<string> {
 
     distributionProfileId : number;

@@ -8,10 +8,17 @@ export interface PermissionItemDeleteActionArgs  extends KalturaRequestArgs {
     permissionItemId : number;
 }
 
-/** 
-* Deletes an existing permission item object.   This action is available only to
-* Kaltura system administrators.
-**/
+/**
+ * Build request payload for service 'permissionItem' action 'delete'.
+ *
+ * Usage: Deletes an existing permission item object.
+ * This action is available only to Kaltura system administrators
+ *
+ * Server response type:         KalturaPermissionItem
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionItemDeleteAction extends KalturaRequest<KalturaPermissionItem> {
 
     permissionItemId : number;

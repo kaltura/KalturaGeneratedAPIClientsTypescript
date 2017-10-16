@@ -9,9 +9,16 @@ export interface CaptionAssetUpdateActionArgs  extends KalturaRequestArgs {
 	captionAsset : KalturaCaptionAsset;
 }
 
-/** 
-* Update caption asset
-**/
+/**
+ * Build request payload for service 'captionAsset' action 'update'.
+ *
+ * Usage: Update caption asset
+ *
+ * Server response type:         KalturaCaptionAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionAssetUpdateAction extends KalturaRequest<KalturaCaptionAsset> {
 
     id : string;
