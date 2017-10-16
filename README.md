@@ -20,16 +20,58 @@ $ npm install kaltura-typescript-client
 ## Instructions
 
 ### Getting Started
+For a Getting started guide, API docs and more - check out [our docs](docs/getting-started.md)!
+
 To keep being update review the [changelog](CHANGELOG.md) frequently.
 
  **Have a question?** Ask us on [Gitter](https://gitter.im/kaltura-ng/kaltura-ng).
 
- **Found a bug?** create [github issue](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/issues)
+ **Found a bug?** create [github issue](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/issues) or
 
 
 
 ## Features list
-View list of features [here](features.md).
+The following is a list of all features supported by the library:
+
+- [x] Bundle only used actions, classes and enums (a.k.a kaltura types) in your application to reduce bundle size.
+- [x] Represent each kaltura types as a typed object with simple API.
+- [x] Use generated action classes to easily access Kaltura services.
+- [x] Invoke multi-requests against the server.
+  - [x] Handle each request response separately.
+  - [x] Expose interceptors to handle multi-request responses together.
+  - [x] Use simple API to define dependent properties between requests using placeholders.
+- [x] Support default properties value in requests.
+- [x] Support the following property types:
+   - [x] Dates.
+   - [x] Simple types (number, string, boolean).
+   - [x] Enums (both numeric enums or string enums).
+   - [x] Kaltura objects including inheritance and fallback mechanism.
+   - [x] Kaltura array & map
+- [x] Handle 'readonly' fields, guard against mutating them or sending them to the server.
+- [x] Ability to upload files including abort & retry operations.
+- [x] Hide complex server API syntax such as:
+   - [x] Classify objects using 'objectType' property.
+   - [x] Mark Field for deletion
+- [x] Runtime configuration to seamlessly attach properties to all the requests.
+   - [x] Valid KS
+   - [x] Partner Id
+   - [x] Client Tag
+- [x] Attach 'apiVersion' to each request
+
+ Below is a list of features to be added:
+- [ ] Generate `kalsig` per request.
+- [ ] Request timeout support
+- [ ] Cancel file upload should abort request
+- [ ] Add Node.JS client
+- [ ] When updating an object, ignore properties marked as insert only property.
+- [ ] Code documentation of classes/enums/actions.
+- [ ] Add developer/api guide.
+- [ ] Simplify syntax of enums representing strings.
+- [ ] Warn against deprecated classes/enums/actions.
+- [ ] Protect against bundling the complete library by mistake.
+- [ ] AOT compile support.
+- [ ] Support setting 'undefined' for required properties when using 'setDependency' in multiple request.
+
 
 # Building the sources
 > This library is auto-generated using `kaltura/clients-generator` php engine. Feel free to clone, build and play with this library but in order to submit PR you should work against the [kaltura/clients-generator](https://github.com/kaltura/clients-generator) repo.

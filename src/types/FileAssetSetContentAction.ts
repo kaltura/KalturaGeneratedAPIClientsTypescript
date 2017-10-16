@@ -6,7 +6,7 @@ import { KalturaContentResource } from './KalturaContentResource';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface FileAssetSetContentActionArgs  extends KalturaRequestArgs {
-    id : number;
+    id : string;
 	contentResource : KalturaContentResource;
 }
 
@@ -22,7 +22,7 @@ export interface FileAssetSetContentActionArgs  extends KalturaRequestArgs {
  */
 export class FileAssetSetContentAction extends KalturaRequest<KalturaFileAsset> {
 
-    id : number;
+    id : string;
 	contentResource : KalturaContentResource;
 
     constructor(data : FileAssetSetContentActionArgs)
@@ -38,7 +38,7 @@ export class FileAssetSetContentAction extends KalturaRequest<KalturaFileAsset> 
             {
                 service : { type : 'c', default : 'fileasset' },
 				action : { type : 'c', default : 'setContent' },
-				id : { type : 'n' },
+				id : { type : 's' },
 				contentResource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' }
             }
         );

@@ -22,7 +22,7 @@ export class KalturaBatchJobType extends KalturaObjectBase {
     static bulkdownload = new KalturaBatchJobType('19');
 	static bulkupload = new KalturaBatchJobType('4');
 	static captureThumb = new KalturaBatchJobType('30');
-	static chunkedEncodeJobScheduler = new KalturaBatchJobType('44');
+	static chunkedEncodeJobScheduler = new KalturaBatchJobType('43');
 	static cleanup = new KalturaBatchJobType('17');
 	static concat = new KalturaBatchJobType('35');
 	static convert = new KalturaBatchJobType('0');
@@ -30,7 +30,6 @@ export class KalturaBatchJobType extends KalturaObjectBase {
 	static convertLiveSegment = new KalturaBatchJobType('36');
 	static convertProfile = new KalturaBatchJobType('10');
 	static copy = new KalturaBatchJobType('34');
-	static copyCaptions = new KalturaBatchJobType('43');
 	static copyPartner = new KalturaBatchJobType('37');
 	static dbCleanup = new KalturaBatchJobType('20');
 	static delete = new KalturaBatchJobType('2');

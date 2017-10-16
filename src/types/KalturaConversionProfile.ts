@@ -6,7 +6,6 @@ import { KalturaConversionProfileType } from './KalturaConversionProfileType';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaCropDimensions } from './KalturaCropDimensions';
 import { KalturaMediaParserType } from './KalturaMediaParserType';
-import { KalturaEntryReplacementOptions } from './KalturaEntryReplacementOptions';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaConversionProfileArgs  extends KalturaObjectBaseArgs {
@@ -30,7 +29,6 @@ export interface KalturaConversionProfileArgs  extends KalturaObjectBaseArgs {
 	conditionalProfiles? : string;
 	detectGOP? : number;
 	mediaInfoXslTransformation? : string;
-	defaultReplacementOptions? : KalturaEntryReplacementOptions;
 }
 
 
@@ -60,7 +58,6 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 	conditionalProfiles : string;
 	detectGOP : number;
 	mediaInfoXslTransformation : string;
-	defaultReplacementOptions : KalturaEntryReplacementOptions;
 
     constructor(data? : KalturaConversionProfileArgs)
     {
@@ -97,8 +94,7 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 				collectionTags : { type : 's' },
 				conditionalProfiles : { type : 's' },
 				detectGOP : { type : 'n' },
-				mediaInfoXslTransformation : { type : 's' },
-				defaultReplacementOptions : { type : 'o', subTypeConstructor : KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions' }
+				mediaInfoXslTransformation : { type : 's' }
             }
         );
         return result;

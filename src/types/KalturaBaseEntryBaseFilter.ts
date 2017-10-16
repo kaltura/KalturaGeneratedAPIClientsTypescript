@@ -81,8 +81,6 @@ export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	entitledUsersEditMatchOr? : string;
 	entitledUsersPublishMatchAnd? : string;
 	entitledUsersPublishMatchOr? : string;
-	entitledUsersViewMatchAnd? : string;
-	entitledUsersViewMatchOr? : string;
 	tagsNameMultiLikeOr? : string;
 	tagsAdminTagsMultiLikeOr? : string;
 	tagsAdminTagsNameMultiLikeOr? : string;
@@ -166,8 +164,6 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 	entitledUsersEditMatchOr : string;
 	entitledUsersPublishMatchAnd : string;
 	entitledUsersPublishMatchOr : string;
-	entitledUsersViewMatchAnd : string;
-	entitledUsersViewMatchOr : string;
 	tagsNameMultiLikeOr : string;
 	tagsAdminTagsMultiLikeOr : string;
 	tagsAdminTagsNameMultiLikeOr : string;
@@ -259,8 +255,6 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 				entitledUsersEditMatchOr : { type : 's' },
 				entitledUsersPublishMatchAnd : { type : 's' },
 				entitledUsersPublishMatchOr : { type : 's' },
-				entitledUsersViewMatchAnd : { type : 's' },
-				entitledUsersViewMatchOr : { type : 's' },
 				tagsNameMultiLikeOr : { type : 's' },
 				tagsAdminTagsMultiLikeOr : { type : 's' },
 				tagsAdminTagsNameMultiLikeOr : { type : 's' },
