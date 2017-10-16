@@ -21,7 +21,6 @@ export class KalturaUploadToken extends KalturaObjectBase {
 	readonly uploadedFileSize : number;
 	readonly createdAt : Date;
 	readonly updatedAt : Date;
-	readonly uploadUrl : string;
 
     constructor(data? : KalturaUploadTokenArgs)
     {
@@ -43,8 +42,7 @@ export class KalturaUploadToken extends KalturaObjectBase {
 				fileSize : { type : 'n' },
 				uploadedFileSize : { type : 'n', readOnly : true },
 				createdAt : { type : 'd', readOnly : true },
-				updatedAt : { type : 'd', readOnly : true },
-				uploadUrl : { type : 's', readOnly : true }
+				updatedAt : { type : 'd', readOnly : true }
             }
         );
         return result;

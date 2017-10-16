@@ -6,6 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface DropFolderFreeExclusiveDropFolderActionArgs  extends KalturaRequestArgs {
     dropFolderId : number;
+	status : number;
 	errorCode? : string;
 	errorDescription? : string;
 }
@@ -16,6 +17,7 @@ export interface DropFolderFreeExclusiveDropFolderActionArgs  extends KalturaReq
 export class DropFolderFreeExclusiveDropFolderAction extends KalturaRequest<KalturaDropFolder> {
 
     dropFolderId : number;
+	status : number;
 	errorCode : string;
 	errorDescription : string;
 
@@ -33,6 +35,7 @@ export class DropFolderFreeExclusiveDropFolderAction extends KalturaRequest<Kalt
                 service : { type : 'c', default : 'dropfolder_dropfolder' },
 				action : { type : 'c', default : 'freeExclusiveDropFolder' },
 				dropFolderId : { type : 'n' },
+				status : { type : 'n' },
 				errorCode : { type : 's' },
 				errorDescription : { type : 's' }
             }
