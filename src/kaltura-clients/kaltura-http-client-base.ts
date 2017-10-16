@@ -4,6 +4,7 @@ import { KalturaUploadRequest } from '../kaltura-upload-request';
 
 export interface KalturaHttpClientBaseConfiguration extends KalturaClientBaseConfiguration {
   endpointUrl: string;
+  chunkFileSize?: number;
 }
 
 interface ChunkData {
@@ -13,8 +14,8 @@ interface ChunkData {
 }
 
 export abstract class KalturaHttpClientBase extends KalturaClientBase {
-  private _fileChunkSize = 5e6; // 5mb
 
+  public chunkFileSize: number;
   public endpointUrl: string;
 
   constructor(config: KalturaHttpClientBaseConfiguration) {
@@ -25,6 +26,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
     }
 
     this.endpointUrl = config.endpointUrl;
+    this.chunkFileSize = config.chunkFileSize;
   }
 
   private _getHeaders(): any {
@@ -82,14 +84,29 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
       delete parameters.service;
       delete parameters.action;
 
-      uploadChunkData.finalChunk = (file.size - uploadChunkData.resumeAt) <= this._fileChunkSize;
+        let actualChunkSize = 5e6; // default
+        if (this.chunkFileSize) {
+            if (this.chunkFileSize < 1e6) {
+                console.warn(`user requested for invalid upload chunk size '${this.chunkFileSize}'. minimal value 1Mb. using minimal value 1Mb instead`);
+                actualChunkSize = 1e6;
+            } else {
+                actualChunkSize = this.chunkFileSize;
+                console.log(`using user requetsed chunk size '${this.chunkFileSize}'`);
+            }
+        } else {
+            console.log(`user requested for invalid (empty) upload chunk size. minimal value 1Mb. using default value 5Mb instead`);
+        }
+
+      uploadChunkData.finalChunk = (file.size - uploadChunkData.resumeAt) <= actualChunkSize;
 
       const start = uploadChunkData.resumeAt;
-      const end = uploadChunkData.finalChunk ? file.size : start + this._fileChunkSize;
+      const end = uploadChunkData.finalChunk ? file.size : start + actualChunkSize;
 
       data.set(request.getFilePropertyName(), file.slice(start, end, file.type), file.name);
 
-      Object.assign(parameters, uploadChunkData);
+      parameters.resume = uploadChunkData.resume;
+      parameters.resumeAt = uploadChunkData.resumeAt;
+      parameters.finalChunk = uploadChunkData.finalChunk;
 
       // build endpoint
       const querystring = this._buildQuerystring(parameters);
@@ -128,7 +145,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
       if (progressCallback) {
         xhr.upload.addEventListener("progress", e => {
           if (e.lengthComputable) {
-            const chunkSize = uploadChunkData.finalChunk ? file.size - start : this._fileChunkSize;
+            const chunkSize = uploadChunkData.finalChunk ? file.size - start : actualChunkSize;
             progressCallback.apply(request, [Math.floor(e.loaded / e.total * chunkSize) + start, file.size]);
           } else {
             // Unable to compute progress information since the total size is unknown
