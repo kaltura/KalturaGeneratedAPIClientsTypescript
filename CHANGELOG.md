@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.1.1"></a>
+## [5.1.1](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v5.1.0...v5.1.1) (2017-10-22)
+
+
+### Bug Fixes
+
+* upload of new files whose size is smaller then the chunk size ([107635e](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/107635e))
+
+
+
 <a name="5.1.0"></a>
 # [5.1.0](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v5.0.0...v5.1.0) (2017-10-16)
 
