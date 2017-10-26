@@ -1,65 +1,58 @@
-import { KalturaHttpClientConfiguration} from "../kaltura-clients/kaltura-http-client-configuration";
+import { TestsConfig } from "./tests-config";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
-import {
-    MediaListAction,
-    KalturaMediaListResponse,
-    KalturaMediaEntry,
-    KalturaMediaType
-} from "../types";
+import { MediaListAction } from "../types/MediaListAction";
+import { KalturaMediaListResponse } from "../types/KalturaMediaListResponse";
+import { KalturaMediaEntry } from "../types/KalturaMediaEntry";
 
-import { TestsConfig } from './tests-config';
+describe(`service "Media" tests`, () => {
+  let kalturaClient: KalturaBrowserHttpClient = null;
 
-describe(`service 'Media' tests`, () =>
-{
-    let client : KalturaBrowserHttpClient = null;
+  const httpConfiguration = {
+    endpointUrl: TestsConfig.endpoint,
+    clientTag: TestsConfig.clientTag
+  };
 
-    const httpConfiguration = new KalturaHttpClientConfiguration();
-    httpConfiguration.endpointUrl = TestsConfig.endpoint;
-    httpConfiguration.ks =TestsConfig.ks;
+  beforeEach(() => {
+    kalturaClient = new KalturaBrowserHttpClient(httpConfiguration);
+    kalturaClient.ks = TestsConfig.ks;
+  });
 
-    beforeEach(() => {
-      client = new KalturaBrowserHttpClient(httpConfiguration);
-    });
+  afterEach(() => {
+    kalturaClient = null;
+  });
 
-    afterEach(() => {
-        client = null;
-    });
+  test(`invoke "list" action`, (done) => {
+    kalturaClient.request(new MediaListAction()).then(
+      (response) => {
+        expect(response instanceof KalturaMediaListResponse).toBeTruthy();
 
-    it(`invoke 'list' action`,(done) => {
-        client.request(new MediaListAction()).then(
-            (response ) =>
-            {
-                expect(response instanceof KalturaMediaListResponse).toBeTruthy();
+        expect(response.objects).toBeDefined();
+        expect(response.objects instanceof Array).toBeTruthy();
 
-                expect(response.objects).toBeDefined();
-                expect(response.objects instanceof Array).toBeTruthy();
-
-                response.objects.forEach(entry =>
-                {
-                    expect(entry instanceof KalturaMediaEntry).toBeTruthy();
-                });
-
-                done();
-            },
-            () =>
-            {
-                fail(`failed to perform request`);
-                done();
-            }
-        )
-    });
-
-    xit(`invoke 'createRemote' action`,(done) => {
-        // const media = new KalturaMediaEntry({
-        //    name : 'typescript.MediaTests.test_createRemote',
-        //    mediaType : KalturaMediaType.video
-        // });
-    });
-
-    describe(`utf-8 tests`, () => {
-        xit(`support utf-8 name`,(done) => {
-
+        response.objects.forEach(entry => {
+          expect(entry instanceof KalturaMediaEntry).toBeTruthy();
         });
 
+        done();
+      },
+      () => {
+        fail(`failed to perform request`);
+        done();
+      }
+    );
+  });
+
+  xtest(`invoke "createRemote" action`, (done) => {
+    // const media = new KalturaMediaEntry({
+    //    name : "typescript.MediaTests.test_createRemote",
+    //    mediaType : KalturaMediaType.video
+    // });
+  });
+
+  describe(`utf-8 tests`, () => {
+    xtest(`support utf-8 name`, (done) => {
+
     });
+
+  });
 });
