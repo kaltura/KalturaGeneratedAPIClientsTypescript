@@ -10,9 +10,16 @@ export interface BaseEntryListFlagsActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List all pending flags for the entry.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'listFlags'.
+ *
+ * Usage: List all pending flags for the entry
+ *
+ * Server response type:         KalturaModerationFlagListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryListFlagsAction extends KalturaRequest<KalturaModerationFlagListResponse> {
 
     entryId : string;

@@ -9,9 +9,16 @@ export interface ShortLinkGotoActionArgs  extends KalturaRequestArgs {
 	proxy? : boolean;
 }
 
-/** 
-* Serves short link
-**/
+/**
+ * Build request payload for service 'shortLink' action 'goto'.
+ *
+ * Usage: Serves short link
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ShortLinkGotoAction extends KalturaRequest<string> {
 
     id : string;

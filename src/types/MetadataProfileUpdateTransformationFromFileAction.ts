@@ -9,9 +9,16 @@ export interface MetadataProfileUpdateTransformationFromFileActionArgs  extends 
 	xsltFile : File;
 }
 
-/** 
-* Update an existing metadata object xslt file
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'updateTransformationFromFile'.
+ *
+ * Usage: Update an existing metadata object xslt file
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataProfileUpdateTransformationFromFileAction extends KalturaUploadRequest<KalturaMetadataProfile> {
 
     id : number;

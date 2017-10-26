@@ -10,10 +10,16 @@ export interface BaseEntryUpdateThumbnailFromSourceEntryActionArgs  extends Kalt
 	timeOffset : number;
 }
 
-/** 
-* Update entry thumbnail from a different entry by a specified time offset (in
-* seconds).
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'updateThumbnailFromSourceEntry'.
+ *
+ * Usage: Update entry thumbnail from a different entry by a specified time offset (in seconds)
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryUpdateThumbnailFromSourceEntryAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

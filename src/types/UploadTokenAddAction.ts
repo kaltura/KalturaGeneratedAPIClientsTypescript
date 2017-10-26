@@ -8,9 +8,16 @@ export interface UploadTokenAddActionArgs  extends KalturaRequestArgs {
     uploadToken? : KalturaUploadToken;
 }
 
-/** 
-* Adds new upload token to upload a file
-**/
+/**
+ * Build request payload for service 'uploadToken' action 'add'.
+ *
+ * Usage: Adds new upload token to upload a file
+ *
+ * Server response type:         KalturaUploadToken
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UploadTokenAddAction extends KalturaRequest<KalturaUploadToken> {
 
     uploadToken : KalturaUploadToken;

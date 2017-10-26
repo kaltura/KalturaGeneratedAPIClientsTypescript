@@ -10,10 +10,16 @@ export interface BaseEntryGetContextDataActionArgs  extends KalturaRequestArgs {
 	contextDataParams : KalturaEntryContextDataParams;
 }
 
-/** 
-* This action delivers entry-related data, based on the user's context: access
-* control, restriction, playback format and storage information.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'getContextData'.
+ *
+ * Usage: This action delivers entry-related data, based on the user's context: access control, restriction, playback format and storage information
+ *
+ * Server response type:         KalturaEntryContextDataResult
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryGetContextDataAction extends KalturaRequest<KalturaEntryContextDataResult> {
 
     entryId : string;

@@ -8,10 +8,7 @@ export interface KalturaPlaylistMatchAttributeConditionArgs  extends KalturaSear
     attribute? : KalturaPlaylistMatchAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaPlaylist attributes. Use
-* KalturaPlaylistMatchAttribute enum to provide attribute name. /
-**/
+
 export class KalturaPlaylistMatchAttributeCondition extends KalturaSearchMatchAttributeCondition {
 
     attribute : KalturaPlaylistMatchAttribute;

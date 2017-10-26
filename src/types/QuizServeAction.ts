@@ -10,10 +10,18 @@ export interface QuizServeActionArgs  extends KalturaRequestArgs {
 	quizOutputType : KalturaQuizOutputType;
 }
 
-/** 
-* creates a pdf from quiz object   The Output type defines the file format in
-* which the quiz will be generated   Currently only PDF files are supported
-**/
+/**
+ * Build request payload for service 'quiz' action 'serve'.
+ *
+ * Usage: creates a pdf from quiz object
+ * The Output type defines the file format in which the quiz will be generated
+ * Currently only PDF files are supported
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class QuizServeAction extends KalturaRequest<string> {
 
     entryId : string;

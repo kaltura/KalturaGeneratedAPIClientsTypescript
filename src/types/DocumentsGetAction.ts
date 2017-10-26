@@ -9,9 +9,16 @@ export interface DocumentsGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Get document entry by ID.
-**/
+/**
+ * Build request payload for service 'documents' action 'get'.
+ *
+ * Usage: Get document entry by ID
+ *
+ * Server response type:         KalturaDocumentEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DocumentsGetAction extends KalturaRequest<KalturaDocumentEntry> {
 
     entryId : string;

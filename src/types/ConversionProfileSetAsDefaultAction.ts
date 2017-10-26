@@ -8,9 +8,16 @@ export interface ConversionProfileSetAsDefaultActionArgs  extends KalturaRequest
     id : number;
 }
 
-/** 
-* Set Conversion Profile to be the partner default
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'setAsDefault'.
+ *
+ * Usage: Set Conversion Profile to be the partner default
+ *
+ * Server response type:         KalturaConversionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileSetAsDefaultAction extends KalturaRequest<KalturaConversionProfile> {
 
     id : number;

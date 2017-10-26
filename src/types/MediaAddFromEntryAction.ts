@@ -10,9 +10,16 @@ export interface MediaAddFromEntryActionArgs  extends KalturaRequestArgs {
 	sourceFlavorParamsId? : number;
 }
 
-/** 
-* Copy entry into new entry
-**/
+/**
+ * Build request payload for service 'media' action 'addFromEntry'.
+ *
+ * Usage: Copy entry into new entry
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaAddFromEntryAction extends KalturaRequest<KalturaMediaEntry> {
 
     sourceEntryId : string;

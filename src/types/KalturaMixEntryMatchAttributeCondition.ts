@@ -8,10 +8,7 @@ export interface KalturaMixEntryMatchAttributeConditionArgs  extends KalturaSear
     attribute? : KalturaMixEntryMatchAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaMixEntry attributes. Use
-* KalturaMixEntryMatchAttribute enum to provide attribute name. /
-**/
+
 export class KalturaMixEntryMatchAttributeCondition extends KalturaSearchMatchAttributeCondition {
 
     attribute : KalturaMixEntryMatchAttribute;

@@ -8,9 +8,16 @@ export interface EntryDistributionGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get Entry Distribution by id
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'get'.
+ *
+ * Usage: Get Entry Distribution by id
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionGetAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

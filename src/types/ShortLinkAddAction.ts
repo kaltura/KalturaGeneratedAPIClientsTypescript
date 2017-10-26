@@ -8,9 +8,16 @@ export interface ShortLinkAddActionArgs  extends KalturaRequestArgs {
     shortLink : KalturaShortLink;
 }
 
-/** 
-* Allows you to add a short link object
-**/
+/**
+ * Build request payload for service 'shortLink' action 'add'.
+ *
+ * Usage: Allows you to add a short link object
+ *
+ * Server response type:         KalturaShortLink
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ShortLinkAddAction extends KalturaRequest<KalturaShortLink> {
 
     shortLink : KalturaShortLink;

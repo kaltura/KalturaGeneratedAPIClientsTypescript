@@ -8,7 +8,16 @@ export interface StatsReportKceErrorActionArgs  extends KalturaRequestArgs {
     kalturaCEError : KalturaCEError;
 }
 
-
+/**
+ * Build request payload for service 'stats' action 'reportKceError'.
+ *
+ * 
+ *
+ * Server response type:         KalturaCEError
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StatsReportKceErrorAction extends KalturaRequest<KalturaCEError> {
 
     kalturaCEError : KalturaCEError;

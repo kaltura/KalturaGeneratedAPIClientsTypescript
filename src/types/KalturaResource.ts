@@ -7,10 +7,7 @@ export interface KalturaResourceArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Used to ingest entry object, as single resource or list of resources accompanied
-* by asset params ids.
-**/
+
 export class KalturaResource extends KalturaObjectBase {
 
     

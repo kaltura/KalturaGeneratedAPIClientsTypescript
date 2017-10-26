@@ -11,7 +11,16 @@ export interface UserEntryListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'userEntry' action 'list'.
+ *
+ * 
+ *
+ * Server response type:         KalturaUserEntryListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEntryListAction extends KalturaRequest<KalturaUserEntryListResponse> {
 
     filter : KalturaUserEntryFilter;

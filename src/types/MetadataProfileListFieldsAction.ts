@@ -8,9 +8,16 @@ export interface MetadataProfileListFieldsActionArgs  extends KalturaRequestArgs
     metadataProfileId : number;
 }
 
-/** 
-* List metadata profile fields by metadata profile id
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'listFields'.
+ *
+ * Usage: List metadata profile fields by metadata profile id
+ *
+ * Server response type:         KalturaMetadataProfileFieldListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileListFieldsAction extends KalturaRequest<KalturaMetadataProfileFieldListResponse> {
 
     metadataProfileId : number;

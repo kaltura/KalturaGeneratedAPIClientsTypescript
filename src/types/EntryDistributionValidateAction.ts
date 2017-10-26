@@ -8,9 +8,16 @@ export interface EntryDistributionValidateActionArgs  extends KalturaRequestArgs
     id : number;
 }
 
-/** 
-* Validates Entry Distribution by id for submission
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'validate'.
+ *
+ * Usage: Validates Entry Distribution by id for submission
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionValidateAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

@@ -10,10 +10,16 @@ export interface EventNotificationTemplateRegisterActionArgs  extends KalturaReq
 	pushNotificationParams : KalturaPushNotificationParams;
 }
 
-/** 
-* Register to a queue from which event messages will be provided according to
-* given template. Queue will be created if not already exists
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'register'.
+ *
+ * Usage: Register to a queue from which event messages will be provided according to given template. Queue will be created if not already exists
+ *
+ * Server response type:         KalturaPushNotificationData
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateRegisterAction extends KalturaRequest<KalturaPushNotificationData> {
 
     notificationTemplateSystemName : string;

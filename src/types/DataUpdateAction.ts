@@ -9,9 +9,16 @@ export interface DataUpdateActionArgs  extends KalturaRequestArgs {
 	documentEntry : KalturaDataEntry;
 }
 
-/** 
-* Update data entry. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'data' action 'update'.
+ *
+ * Usage: Update data entry. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaDataEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataUpdateAction extends KalturaRequest<KalturaDataEntry> {
 
     entryId : string;

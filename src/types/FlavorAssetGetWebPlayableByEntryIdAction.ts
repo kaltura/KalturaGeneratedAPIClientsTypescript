@@ -8,9 +8,16 @@ export interface FlavorAssetGetWebPlayableByEntryIdActionArgs  extends KalturaRe
     entryId : string;
 }
 
-/** 
-* Get web playable Flavor Assets for Entry
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'getWebPlayableByEntryId'.
+ *
+ * Usage: Get web playable Flavor Assets for Entry
+ *
+ * Server response type:         KalturaFlavorAsset[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetGetWebPlayableByEntryIdAction extends KalturaRequest<KalturaFlavorAsset[]> {
 
     entryId : string;

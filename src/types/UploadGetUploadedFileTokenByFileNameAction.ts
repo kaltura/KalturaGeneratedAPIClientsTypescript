@@ -8,7 +8,16 @@ export interface UploadGetUploadedFileTokenByFileNameActionArgs  extends Kaltura
     fileName : string;
 }
 
-
+/**
+ * Build request payload for service 'upload' action 'getUploadedFileTokenByFileName'.
+ *
+ * 
+ *
+ * Server response type:         KalturaUploadResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UploadGetUploadedFileTokenByFileNameAction extends KalturaRequest<KalturaUploadResponse> {
 
     fileName : string;

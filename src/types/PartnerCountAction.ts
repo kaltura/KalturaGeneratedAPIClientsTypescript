@@ -9,9 +9,16 @@ export interface PartnerCountActionArgs  extends KalturaRequestArgs {
     filter? : KalturaPartnerFilter;
 }
 
-/** 
-* Count partner's existing sub-publishers (count includes the partner itself).
-**/
+/**
+ * Build request payload for service 'partner' action 'count'.
+ *
+ * Usage: Count partner's existing sub-publishers (count includes the partner itself)
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerCountAction extends KalturaRequest<number> {
 
     filter : KalturaPartnerFilter;

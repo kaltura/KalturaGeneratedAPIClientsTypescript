@@ -10,9 +10,18 @@ export interface DrmLicenseAccessGetAccessActionArgs  extends KalturaRequestArgs
 	referrer : string;
 }
 
-/** 
-* getAccessAction      input: flavor ids, drmProvider      Get Access Action
-**/
+/**
+ * Build request payload for service 'drmLicenseAccess' action 'getAccess'.
+ *
+ * Usage: getAccessAction
+ * input: flavor ids, drmProvider
+ * Get Access Action
+ *
+ * Server response type:         KalturaDrmLicenseAccessDetails
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmLicenseAccessGetAccessAction extends KalturaRequest<KalturaDrmLicenseAccessDetails> {
 
     entryId : string;

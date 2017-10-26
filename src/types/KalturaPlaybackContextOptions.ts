@@ -7,9 +7,7 @@ export interface KalturaPlaybackContextOptionsArgs  extends KalturaEntryContextD
     
 }
 
-/** 
-* Object which contains contextual entry-related data.
-**/
+
 export class KalturaPlaybackContextOptions extends KalturaEntryContextDataParams {
 
     

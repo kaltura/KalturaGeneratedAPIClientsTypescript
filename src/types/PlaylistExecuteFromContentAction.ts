@@ -13,9 +13,16 @@ export interface PlaylistExecuteFromContentActionArgs  extends KalturaRequestArg
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Retrieve playlist for playing purpose, based on content
-**/
+/**
+ * Build request payload for service 'playlist' action 'executeFromContent'.
+ *
+ * Usage: Retrieve playlist for playing purpose, based on content
+ *
+ * Server response type:         KalturaBaseEntry[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistExecuteFromContentAction extends KalturaRequest<KalturaBaseEntry[]> {
 
     playlistType : KalturaPlaylistType;

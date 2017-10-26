@@ -9,9 +9,16 @@ export interface LiveStreamUpdateOfflineThumbnailFromUrlActionArgs  extends Kalt
 	url : string;
 }
 
-/** 
-* Update entry thumbnail using url
-**/
+/**
+ * Build request payload for service 'liveStream' action 'updateOfflineThumbnailFromUrl'.
+ *
+ * Usage: Update entry thumbnail using url
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamUpdateOfflineThumbnailFromUrlAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     entryId : string;

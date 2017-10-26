@@ -8,9 +8,16 @@ export interface PlaylistDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete existing playlist
-**/
+/**
+ * Build request payload for service 'playlist' action 'delete'.
+ *
+ * Usage: Delete existing playlist
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistDeleteAction extends KalturaRequest<void> {
 
     id : string;

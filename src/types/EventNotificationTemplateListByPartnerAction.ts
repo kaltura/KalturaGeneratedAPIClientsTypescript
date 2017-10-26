@@ -11,7 +11,16 @@ export interface EventNotificationTemplateListByPartnerActionArgs  extends Kaltu
 	pager? : KalturaFilterPager;
 }
 
-
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'listByPartner'.
+ *
+ * 
+ *
+ * Server response type:         KalturaEventNotificationTemplateListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateListByPartnerAction extends KalturaRequest<KalturaEventNotificationTemplateListResponse> {
 
     filter : KalturaPartnerFilter;

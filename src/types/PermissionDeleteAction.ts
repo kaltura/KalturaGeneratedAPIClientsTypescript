@@ -8,9 +8,16 @@ export interface PermissionDeleteActionArgs  extends KalturaRequestArgs {
     permissionName : string;
 }
 
-/** 
-* Deletes an existing permission object.
-**/
+/**
+ * Build request payload for service 'permission' action 'delete'.
+ *
+ * Usage: Deletes an existing permission object
+ *
+ * Server response type:         KalturaPermission
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionDeleteAction extends KalturaRequest<KalturaPermission> {
 
     permissionName : string;

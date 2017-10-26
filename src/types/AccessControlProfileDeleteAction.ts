@@ -8,9 +8,16 @@ export interface AccessControlProfileDeleteActionArgs  extends KalturaRequestArg
     id : number;
 }
 
-/** 
-* Delete access control profile by id
-**/
+/**
+ * Build request payload for service 'accessControlProfile' action 'delete'.
+ *
+ * Usage: Delete access control profile by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AccessControlProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;

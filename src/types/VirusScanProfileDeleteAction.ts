@@ -8,9 +8,16 @@ export interface VirusScanProfileDeleteActionArgs  extends KalturaRequestArgs {
     virusScanProfileId : number;
 }
 
-/** 
-* Mark the virus scan profile as deleted
-**/
+/**
+ * Build request payload for service 'virusScanProfile' action 'delete'.
+ *
+ * Usage: Mark the virus scan profile as deleted
+ *
+ * Server response type:         KalturaVirusScanProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VirusScanProfileDeleteAction extends KalturaRequest<KalturaVirusScanProfile> {
 
     virusScanProfileId : number;

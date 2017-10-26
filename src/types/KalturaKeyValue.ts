@@ -8,10 +8,7 @@ export interface KalturaKeyValueArgs  extends KalturaObjectBaseArgs {
 	value? : string;
 }
 
-/** 
-* A key value pair representation to return an array of key-value pairs
-* (associative array)
-**/
+
 export class KalturaKeyValue extends KalturaObjectBase {
 
     key : string;

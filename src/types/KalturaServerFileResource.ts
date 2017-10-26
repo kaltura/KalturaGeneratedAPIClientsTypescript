@@ -8,9 +8,7 @@ export interface KalturaServerFileResourceArgs  extends KalturaGenericDataCenter
 	keepOriginalFile? : boolean;
 }
 
-/** 
-* Used to ingest media file that is already accessible on the shared disc.
-**/
+
 export class KalturaServerFileResource extends KalturaGenericDataCenterContentResource {
 
     localFilePath : string;

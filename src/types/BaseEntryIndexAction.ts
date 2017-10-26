@@ -9,9 +9,16 @@ export interface BaseEntryIndexActionArgs  extends KalturaRequestArgs {
 	shouldUpdate? : boolean;
 }
 
-/** 
-* Index an entry by id.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'index'.
+ *
+ * Usage: Index an entry by id
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryIndexAction extends KalturaRequest<number> {
 
     id : string;

@@ -8,9 +8,16 @@ export interface WidgetGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Get widget by id
-**/
+/**
+ * Build request payload for service 'widget' action 'get'.
+ *
+ * Usage: Get widget by id
+ *
+ * Server response type:         KalturaWidget
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class WidgetGetAction extends KalturaRequest<KalturaWidget> {
 
     id : string;

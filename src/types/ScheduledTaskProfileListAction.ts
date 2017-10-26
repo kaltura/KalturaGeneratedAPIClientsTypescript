@@ -11,9 +11,16 @@ export interface ScheduledTaskProfileListActionArgs  extends KalturaRequestArgs 
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List scheduled task profiles
-**/
+/**
+ * Build request payload for service 'scheduledTaskProfile' action 'list'.
+ *
+ * Usage: List scheduled task profiles
+ *
+ * Server response type:         KalturaScheduledTaskProfileListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduledTaskProfileListAction extends KalturaRequest<KalturaScheduledTaskProfileListResponse> {
 
     filter : KalturaScheduledTaskProfileFilter;

@@ -13,9 +13,16 @@ export interface BaseEntryUpdateContentActionArgs  extends KalturaRequestArgs {
 	advancedOptions? : KalturaEntryReplacementOptions;
 }
 
-/** 
-* Update the content resource associated with the entry.
-**/
+/**
+ * Build request payload for service 'baseEntry' action 'updateContent'.
+ *
+ * Usage: Update the content resource associated with the entry
+ *
+ * Server response type:         KalturaBaseEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BaseEntryUpdateContentAction extends KalturaRequest<KalturaBaseEntry> {
 
     entryId : string;

@@ -9,9 +9,16 @@ export interface MediaCountActionArgs  extends KalturaRequestArgs {
     filter? : KalturaMediaEntryFilter;
 }
 
-/** 
-* Count media entries by filter.
-**/
+/**
+ * Build request payload for service 'media' action 'count'.
+ *
+ * Usage: Count media entries by filter
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaCountAction extends KalturaRequest<number> {
 
     filter : KalturaMediaEntryFilter;

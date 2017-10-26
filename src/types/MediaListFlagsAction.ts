@@ -10,9 +10,16 @@ export interface MediaListFlagsActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List all pending flags for the media entry
-**/
+/**
+ * Build request payload for service 'media' action 'listFlags'.
+ *
+ * Usage: List all pending flags for the media entry
+ *
+ * Server response type:         KalturaModerationFlagListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaListFlagsAction extends KalturaRequest<KalturaModerationFlagListResponse> {
 
     entryId : string;

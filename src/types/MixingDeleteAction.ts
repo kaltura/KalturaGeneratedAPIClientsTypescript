@@ -8,9 +8,16 @@ export interface MixingDeleteActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Delete a mix entry.
-**/
+/**
+ * Build request payload for service 'mixing' action 'delete'.
+ *
+ * Usage: Delete a mix entry
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingDeleteAction extends KalturaRequest<void> {
 
     entryId : string;

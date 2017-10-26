@@ -9,9 +9,16 @@ export interface MediaGetActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Get media entry by ID.
-**/
+/**
+ * Build request payload for service 'media' action 'get'.
+ *
+ * Usage: Get media entry by ID
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaGetAction extends KalturaRequest<KalturaMediaEntry> {
 
     entryId : string;

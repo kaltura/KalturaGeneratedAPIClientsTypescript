@@ -8,9 +8,16 @@ export interface MediaCancelReplaceActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Cancels media replacement
-**/
+/**
+ * Build request payload for service 'media' action 'cancelReplace'.
+ *
+ * Usage: Cancels media replacement
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaCancelReplaceAction extends KalturaRequest<KalturaMediaEntry> {
 
     entryId : string;

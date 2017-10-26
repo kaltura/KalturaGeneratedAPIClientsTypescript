@@ -9,9 +9,16 @@ export interface LiveStreamUpdateActionArgs  extends KalturaRequestArgs {
 	liveStreamEntry : KalturaLiveStreamEntry;
 }
 
-/** 
-* Update live stream entry. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'liveStream' action 'update'.
+ *
+ * Usage: Update live stream entry. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaLiveStreamEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamUpdateAction extends KalturaRequest<KalturaLiveStreamEntry> {
 
     entryId : string;

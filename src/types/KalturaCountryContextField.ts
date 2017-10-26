@@ -8,10 +8,7 @@ export interface KalturaCountryContextFieldArgs  extends KalturaStringFieldArgs 
     geoCoderType? : KalturaGeoCoderType;
 }
 
-/** 
-* Represents the current request country context as calculated based on the IP
-* address
-**/
+
 export class KalturaCountryContextField extends KalturaStringField {
 
     geoCoderType : KalturaGeoCoderType;

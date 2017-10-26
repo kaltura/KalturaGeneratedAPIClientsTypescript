@@ -8,9 +8,16 @@ export interface FileAssetDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete file asset by id
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'delete'.
+ *
+ * Usage: Delete file asset by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetDeleteAction extends KalturaRequest<void> {
 
     id : number;

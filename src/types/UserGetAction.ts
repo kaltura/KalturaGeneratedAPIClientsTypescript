@@ -8,9 +8,16 @@ export interface UserGetActionArgs  extends KalturaRequestArgs {
     userId? : string;
 }
 
-/** 
-* Retrieves a user object for a specified user ID.
-**/
+/**
+ * Build request payload for service 'user' action 'get'.
+ *
+ * Usage: Retrieves a user object for a specified user ID
+ *
+ * Server response type:         KalturaUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserGetAction extends KalturaRequest<KalturaUser> {
 
     userId : string;

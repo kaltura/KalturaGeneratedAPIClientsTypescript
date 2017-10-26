@@ -10,9 +10,16 @@ export interface LiveStreamIsLiveActionArgs  extends KalturaRequestArgs {
 	protocol : KalturaPlaybackProtocol;
 }
 
-/** 
-* Delivering the status of a live stream (on-air/offline) if it is possible
-**/
+/**
+ * Build request payload for service 'liveStream' action 'isLive'.
+ *
+ * Usage: Delivering the status of a live stream (on-air/offline) if it is possible
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamIsLiveAction extends KalturaRequest<boolean> {
 
     id : string;

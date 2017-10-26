@@ -9,10 +9,17 @@ export interface UserUpdateActionArgs  extends KalturaRequestArgs {
 	user : KalturaUser;
 }
 
-/** 
-* Updates an existing user object.   You can also use this action to update the
-* userId.
-**/
+/**
+ * Build request payload for service 'user' action 'update'.
+ *
+ * Usage: Updates an existing user object.
+ * You can also use this action to update the userId
+ *
+ * Server response type:         KalturaUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserUpdateAction extends KalturaRequest<KalturaUser> {
 
     userId : string;

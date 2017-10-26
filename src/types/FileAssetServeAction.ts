@@ -8,9 +8,16 @@ export interface FileAssetServeActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Serve file asset by id
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'serve'.
+ *
+ * Usage: Serve file asset by id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetServeAction extends KalturaRequest<string> {
 
     id : number;

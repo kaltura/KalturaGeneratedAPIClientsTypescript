@@ -8,9 +8,16 @@ export interface DrmProfileDeleteActionArgs  extends KalturaRequestArgs {
     drmProfileId : number;
 }
 
-/** 
-* Mark the KalturaDrmProfile object as deleted
-**/
+/**
+ * Build request payload for service 'drmProfile' action 'delete'.
+ *
+ * Usage: Mark the KalturaDrmProfile object as deleted
+ *
+ * Server response type:         KalturaDrmProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmProfileDeleteAction extends KalturaRequest<KalturaDrmProfile> {
 
     drmProfileId : number;

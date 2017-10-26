@@ -11,9 +11,16 @@ export interface AdminUserUpdatePasswordActionArgs  extends KalturaRequestArgs {
 	newPassword? : string;
 }
 
-/** 
-* Update admin user password and email
-**/
+/**
+ * Build request payload for service 'adminUser' action 'updatePassword'.
+ *
+ * Usage: Update admin user password and email
+ *
+ * Server response type:         KalturaAdminUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AdminUserUpdatePasswordAction extends KalturaRequest<KalturaAdminUser> {
 
     email : string;

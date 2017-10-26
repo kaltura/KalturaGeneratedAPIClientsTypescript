@@ -13,9 +13,16 @@ export interface ThumbAssetServeActionArgs  extends KalturaRequestArgs {
 	options? : KalturaThumbnailServeOptions;
 }
 
-/** 
-* Serves thumbnail by its id
-**/
+/**
+ * Build request payload for service 'thumbAsset' action 'serve'.
+ *
+ * Usage: Serves thumbnail by its id
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetServeAction extends KalturaRequest<string> {
 
     thumbAssetId : string;

@@ -9,9 +9,16 @@ export interface GroupUserDeleteActionArgs  extends KalturaRequestArgs {
 	groupId : string;
 }
 
-/** 
-* delete by userId and groupId
-**/
+/**
+ * Build request payload for service 'groupUser' action 'delete'.
+ *
+ * Usage: delete by userId and groupId
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GroupUserDeleteAction extends KalturaRequest<void> {
 
     userId : string;

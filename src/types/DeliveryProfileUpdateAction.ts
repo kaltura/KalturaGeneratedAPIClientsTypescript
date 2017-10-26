@@ -9,9 +9,16 @@ export interface DeliveryProfileUpdateActionArgs  extends KalturaRequestArgs {
 	delivery : KalturaDeliveryProfile;
 }
 
-/** 
-* Update exisiting delivery
-**/
+/**
+ * Build request payload for service 'deliveryProfile' action 'update'.
+ *
+ * Usage: Update exisiting delivery
+ *
+ * Server response type:         KalturaDeliveryProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DeliveryProfileUpdateAction extends KalturaRequest<KalturaDeliveryProfile> {
 
     id : string;

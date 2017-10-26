@@ -10,9 +10,16 @@ export interface QuizGetUrlActionArgs  extends KalturaRequestArgs {
 	quizOutputType : KalturaQuizOutputType;
 }
 
-/** 
-* sends a with an api request for pdf from quiz object
-**/
+/**
+ * Build request payload for service 'quiz' action 'getUrl'.
+ *
+ * Usage: sends a with an api request for pdf from quiz object
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class QuizGetUrlAction extends KalturaRequest<string> {
 
     entryId : string;

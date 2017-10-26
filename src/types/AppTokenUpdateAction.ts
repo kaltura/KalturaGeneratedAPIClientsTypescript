@@ -9,9 +9,16 @@ export interface AppTokenUpdateActionArgs  extends KalturaRequestArgs {
 	appToken : KalturaAppToken;
 }
 
-/** 
-* Update application authentication token by id
-**/
+/**
+ * Build request payload for service 'appToken' action 'update'.
+ *
+ * Usage: Update application authentication token by id
+ *
+ * Server response type:         KalturaAppToken
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AppTokenUpdateAction extends KalturaRequest<KalturaAppToken> {
 
     id : string;

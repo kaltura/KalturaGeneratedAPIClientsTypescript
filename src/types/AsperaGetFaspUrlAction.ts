@@ -8,7 +8,16 @@ export interface AsperaGetFaspUrlActionArgs  extends KalturaRequestArgs {
     flavorAssetId : string;
 }
 
-
+/**
+ * Build request payload for service 'aspera' action 'getFaspUrl'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AsperaGetFaspUrlAction extends KalturaRequest<string> {
 
     flavorAssetId : string;

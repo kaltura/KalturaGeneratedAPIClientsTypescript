@@ -11,11 +11,18 @@ export interface UserRoleListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Lists user role objects that are associated with an account.   Blocked user
-* roles are listed unless you use a filter to exclude them.   Deleted user roles
-* are not listed unless you use a filter to include them.
-**/
+/**
+ * Build request payload for service 'userRole' action 'list'.
+ *
+ * Usage: Lists user role objects that are associated with an account.
+ * Blocked user roles are listed unless you use a filter to exclude them.
+ * Deleted user roles are not listed unless you use a filter to include them
+ *
+ * Server response type:         KalturaUserRoleListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserRoleListAction extends KalturaRequest<KalturaUserRoleListResponse> {
 
     filter : KalturaUserRoleFilter;

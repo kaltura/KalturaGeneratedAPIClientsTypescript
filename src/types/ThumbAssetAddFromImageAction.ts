@@ -9,7 +9,16 @@ export interface ThumbAssetAddFromImageActionArgs  extends KalturaUploadRequestA
 	fileData : File;
 }
 
-
+/**
+ * Build request payload for service 'thumbAsset' action 'addFromImage'.
+ *
+ * 
+ *
+ * Server response type:         KalturaThumbAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class ThumbAssetAddFromImageAction extends KalturaUploadRequest<KalturaThumbAsset> {
 
     entryId : string;

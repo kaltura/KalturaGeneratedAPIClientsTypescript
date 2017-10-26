@@ -9,7 +9,16 @@ export interface TimeWarnerGetFeedActionArgs  extends KalturaRequestArgs {
 	hash : string;
 }
 
-
+/**
+ * Build request payload for service 'timeWarner' action 'getFeed'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TimeWarnerGetFeedAction extends KalturaRequest<string> {
 
     distributionProfileId : number;

@@ -11,9 +11,16 @@ export interface BusinessProcessCaseAbortActionArgs  extends KalturaRequestArgs 
 	businessProcessStartNotificationTemplateId : number;
 }
 
-/** 
-* Abort business-process case
-**/
+/**
+ * Build request payload for service 'businessProcessCase' action 'abort'.
+ *
+ * Usage: Abort business-process case
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class BusinessProcessCaseAbortAction extends KalturaRequest<void> {
 
     objectType : KalturaEventNotificationEventObjectType;

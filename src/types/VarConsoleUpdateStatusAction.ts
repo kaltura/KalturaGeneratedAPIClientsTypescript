@@ -10,9 +10,16 @@ export interface VarConsoleUpdateStatusActionArgs  extends KalturaRequestArgs {
 	status : KalturaPartnerStatus;
 }
 
-/** 
-* Function to change a sub-publisher's status
-**/
+/**
+ * Build request payload for service 'varConsole' action 'updateStatus'.
+ *
+ * Usage: Function to change a sub-publisher's status
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VarConsoleUpdateStatusAction extends KalturaRequest<void> {
 
     id : number;

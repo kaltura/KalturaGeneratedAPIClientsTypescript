@@ -8,10 +8,7 @@ export interface KalturaDocumentEntryCompareAttributeConditionArgs  extends Kalt
     attribute? : KalturaDocumentEntryCompareAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaDocumentEntry attributes. Use
-* KalturaDocumentEntryCompareAttribute enum to provide attribute name. /
-**/
+
 export class KalturaDocumentEntryCompareAttributeCondition extends KalturaSearchComparableAttributeCondition {
 
     attribute : KalturaDocumentEntryCompareAttribute;

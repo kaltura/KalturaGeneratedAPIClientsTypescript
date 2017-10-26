@@ -9,7 +9,16 @@ export interface ThumbAssetAddFromUrlActionArgs  extends KalturaRequestArgs {
 	url : string;
 }
 
-
+/**
+ * Build request payload for service 'thumbAsset' action 'addFromUrl'.
+ *
+ * 
+ *
+ * Server response type:         KalturaThumbAsset
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbAssetAddFromUrlAction extends KalturaRequest<KalturaThumbAsset> {
 
     entryId : string;

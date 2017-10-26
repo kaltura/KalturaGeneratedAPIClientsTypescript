@@ -29,10 +29,7 @@ export interface KalturaStatsEventArgs  extends KalturaObjectBaseArgs {
 	featureType? : KalturaStatsFeatureType;
 }
 
-/** 
-* Will hold data from the Kaltura UI components to be passed on to the reports and
-* analytics system
-**/
+
 export class KalturaStatsEvent extends KalturaObjectBase {
 
     clientVer : string;

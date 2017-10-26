@@ -9,7 +9,16 @@ export interface ScheduledTaskProfileRequestDryRunActionArgs  extends KalturaReq
 	maxResults? : number;
 }
 
-
+/**
+ * Build request payload for service 'scheduledTaskProfile' action 'requestDryRun'.
+ *
+ * 
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduledTaskProfileRequestDryRunAction extends KalturaRequest<number> {
 
     scheduledTaskProfileId : number;

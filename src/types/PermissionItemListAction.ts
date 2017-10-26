@@ -11,9 +11,16 @@ export interface PermissionItemListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Lists permission item objects that are associated with an account.
-**/
+/**
+ * Build request payload for service 'permissionItem' action 'list'.
+ *
+ * Usage: Lists permission item objects that are associated with an account
+ *
+ * Server response type:         KalturaPermissionItemListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionItemListAction extends KalturaRequest<KalturaPermissionItemListResponse> {
 
     filter : KalturaPermissionItemFilter;

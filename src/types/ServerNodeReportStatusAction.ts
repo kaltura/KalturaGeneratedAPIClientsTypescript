@@ -9,9 +9,16 @@ export interface ServerNodeReportStatusActionArgs  extends KalturaRequestArgs {
 	serverNode? : KalturaServerNode;
 }
 
-/** 
-* Update server node status
-**/
+/**
+ * Build request payload for service 'serverNode' action 'reportStatus'.
+ *
+ * Usage: Update server node status
+ *
+ * Server response type:         KalturaServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ServerNodeReportStatusAction extends KalturaRequest<KalturaServerNode> {
 
     hostName : string;

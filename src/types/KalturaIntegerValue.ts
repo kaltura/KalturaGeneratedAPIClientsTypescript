@@ -7,9 +7,7 @@ export interface KalturaIntegerValueArgs  extends KalturaValueArgs {
     value? : number;
 }
 
-/** 
-* An int representation to return an array of ints
-**/
+
 export class KalturaIntegerValue extends KalturaValue {
 
     value : number;

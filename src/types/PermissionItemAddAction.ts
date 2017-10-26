@@ -8,10 +8,17 @@ export interface PermissionItemAddActionArgs  extends KalturaRequestArgs {
     permissionItem : KalturaPermissionItem;
 }
 
-/** 
-* Adds a new permission item object to the account.   This action is available
-* only to Kaltura system administrators.
-**/
+/**
+ * Build request payload for service 'permissionItem' action 'add'.
+ *
+ * Usage: Adds a new permission item object to the account.
+ * This action is available only to Kaltura system administrators
+ *
+ * Server response type:         KalturaPermissionItem
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PermissionItemAddAction extends KalturaRequest<KalturaPermissionItem> {
 
     permissionItem : KalturaPermissionItem;

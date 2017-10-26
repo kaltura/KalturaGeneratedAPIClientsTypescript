@@ -9,9 +9,16 @@ export interface CategoryEntrySyncPrivacyContextActionArgs  extends KalturaReque
 	categoryId : number;
 }
 
-/** 
-* update privacy context from the category
-**/
+/**
+ * Build request payload for service 'categoryEntry' action 'syncPrivacyContext'.
+ *
+ * Usage: update privacy context from the category
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryEntrySyncPrivacyContextAction extends KalturaRequest<void> {
 
     entryId : string;

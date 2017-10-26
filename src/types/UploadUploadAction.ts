@@ -8,7 +8,16 @@ export interface UploadUploadActionArgs  extends KalturaUploadRequestArgs {
     fileData : File;
 }
 
-
+/**
+ * Build request payload for service 'upload' action 'upload'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class UploadUploadAction extends KalturaUploadRequest<string> {
 
     fileData : File;

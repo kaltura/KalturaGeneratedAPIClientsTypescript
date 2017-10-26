@@ -10,9 +10,16 @@ export interface FlavorAssetServeAdStitchCmdActionArgs  extends KalturaRequestAr
 	duration? : string;
 }
 
-/** 
-* serve cmd line to transcode the ad
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'serveAdStitchCmd'.
+ *
+ * Usage: serve cmd line to transcode the ad
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetServeAdStitchCmdAction extends KalturaRequest<string> {
 
     assetId : string;

@@ -12,9 +12,16 @@ export interface IntegrationDispatchActionArgs  extends KalturaRequestArgs {
 	objectId : string;
 }
 
-/** 
-* Dispatch integration task
-**/
+/**
+ * Build request payload for service 'integration' action 'dispatch'.
+ *
+ * Usage: Dispatch integration task
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class IntegrationDispatchAction extends KalturaRequest<number> {
 
     data : KalturaIntegrationJobData;

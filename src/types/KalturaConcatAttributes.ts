@@ -8,9 +8,7 @@ export interface KalturaConcatAttributesArgs  extends KalturaOperationAttributes
     resource? : KalturaDataCenterContentResource;
 }
 
-/** 
-* Concat operation attributes
-**/
+
 export class KalturaConcatAttributes extends KalturaOperationAttributes {
 
     resource : KalturaDataCenterContentResource;

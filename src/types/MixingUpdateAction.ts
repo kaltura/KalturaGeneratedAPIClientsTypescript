@@ -9,9 +9,16 @@ export interface MixingUpdateActionArgs  extends KalturaRequestArgs {
 	mixEntry : KalturaMixEntry;
 }
 
-/** 
-* Update mix entry. Only the properties that were set will be updated.
-**/
+/**
+ * Build request payload for service 'mixing' action 'update'.
+ *
+ * Usage: Update mix entry. Only the properties that were set will be updated
+ *
+ * Server response type:         KalturaMixEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MixingUpdateAction extends KalturaRequest<KalturaMixEntry> {
 
     entryId : string;

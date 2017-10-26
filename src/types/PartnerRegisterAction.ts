@@ -11,9 +11,16 @@ export interface PartnerRegisterActionArgs  extends KalturaRequestArgs {
 	silent? : boolean;
 }
 
-/** 
-* Create a new Partner object
-**/
+/**
+ * Build request payload for service 'partner' action 'register'.
+ *
+ * Usage: Create a new Partner object
+ *
+ * Server response type:         KalturaPartner
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerRegisterAction extends KalturaRequest<KalturaPartner> {
 
     partner : KalturaPartner;

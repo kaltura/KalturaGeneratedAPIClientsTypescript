@@ -10,9 +10,16 @@ export interface DropFolderFileUpdateStatusActionArgs  extends KalturaRequestArg
 	status : KalturaDropFolderFileStatus;
 }
 
-/** 
-* Update status of KalturaDropFolderFile
-**/
+/**
+ * Build request payload for service 'dropFolderFile' action 'updateStatus'.
+ *
+ * Usage: Update status of KalturaDropFolderFile
+ *
+ * Server response type:         KalturaDropFolderFile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderFileUpdateStatusAction extends KalturaRequest<KalturaDropFolderFile> {
 
     dropFolderFileId : number;

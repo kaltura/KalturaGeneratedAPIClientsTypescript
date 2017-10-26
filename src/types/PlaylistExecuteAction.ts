@@ -15,9 +15,16 @@ export interface PlaylistExecuteActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Retrieve playlist for playing purpose
-**/
+/**
+ * Build request payload for service 'playlist' action 'execute'.
+ *
+ * Usage: Retrieve playlist for playing purpose
+ *
+ * Server response type:         KalturaBaseEntry[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PlaylistExecuteAction extends KalturaRequest<KalturaBaseEntry[]> {
 
     id : string;

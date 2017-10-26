@@ -8,9 +8,16 @@ export interface GenericDistributionProviderActionGetActionArgs  extends Kaltura
     id : number;
 }
 
-/** 
-* Get Generic Distribution Provider Action by id
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'get'.
+ *
+ * Usage: Get Generic Distribution Provider Action by id
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderActionGetAction extends KalturaRequest<KalturaGenericDistributionProviderAction> {
 
     id : number;

@@ -8,9 +8,16 @@ export interface ConversionProfileGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Get Conversion Profile by ID
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'get'.
+ *
+ * Usage: Get Conversion Profile by ID
+ *
+ * Server response type:         KalturaConversionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileGetAction extends KalturaRequest<KalturaConversionProfile> {
 
     id : number;

@@ -10,9 +10,7 @@ export interface KalturaEmailNotificationCategoryRecipientProviderArgs  extends 
 	categoryUserFilter? : KalturaCategoryUserProviderFilter;
 }
 
-/** 
-* API object which provides the recipients of category related notifications.
-**/
+
 export class KalturaEmailNotificationCategoryRecipientProvider extends KalturaEmailNotificationRecipientProvider {
 
     categoryId : KalturaStringValue;

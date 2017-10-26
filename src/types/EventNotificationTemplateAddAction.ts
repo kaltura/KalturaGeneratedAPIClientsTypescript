@@ -8,12 +8,16 @@ export interface EventNotificationTemplateAddActionArgs  extends KalturaRequestA
     eventNotificationTemplate : KalturaEventNotificationTemplate;
 }
 
-/** 
-* This action allows for the creation of new backend event types in the system.
-* This action requires access to the Kaltura server Admin Console. If you're
-* looking to register to existing event types, please use the clone action
-* instead.
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'add'.
+ *
+ * Usage: This action allows for the creation of new backend event types in the system. This action requires access to the Kaltura server Admin Console. If you're looking to register to existing event types, please use the clone action instead
+ *
+ * Server response type:         KalturaEventNotificationTemplate
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateAddAction extends KalturaRequest<KalturaEventNotificationTemplate> {
 
     eventNotificationTemplate : KalturaEventNotificationTemplate;

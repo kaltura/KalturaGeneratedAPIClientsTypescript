@@ -7,9 +7,7 @@ export interface KalturaDropFolderFileResourceArgs  extends KalturaGenericDataCe
     dropFolderFileId? : number;
 }
 
-/** 
-* Used to ingest media that dropped through drop folder
-**/
+
 export class KalturaDropFolderFileResource extends KalturaGenericDataCenterContentResource {
 
     dropFolderFileId : number;

@@ -9,9 +9,16 @@ export interface CuePointCountActionArgs  extends KalturaRequestArgs {
     filter? : KalturaCuePointFilter;
 }
 
-/** 
-* count cue point objects by filter
-**/
+/**
+ * Build request payload for service 'cuePoint' action 'count'.
+ *
+ * Usage: count cue point objects by filter
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CuePointCountAction extends KalturaRequest<number> {
 
     filter : KalturaCuePointFilter;

@@ -8,9 +8,16 @@ export interface CategoryUnlockCategoriesActionArgs  extends KalturaRequestArgs 
     
 }
 
-/** 
-* Unlock categories
-**/
+/**
+ * Build request payload for service 'category' action 'unlockCategories'.
+ *
+ * Usage: Unlock categories
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CategoryUnlockCategoriesAction extends KalturaRequest<void> {
 
     

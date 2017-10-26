@@ -9,9 +9,16 @@ export interface ResponseProfileRecalculateActionArgs  extends KalturaRequestArg
     options : KalturaResponseProfileCacheRecalculateOptions;
 }
 
-/** 
-* Recalculate response profile cached objects
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'recalculate'.
+ *
+ * Usage: Recalculate response profile cached objects
+ *
+ * Server response type:         KalturaResponseProfileCacheRecalculateResults
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileRecalculateAction extends KalturaRequest<KalturaResponseProfileCacheRecalculateResults> {
 
     options : KalturaResponseProfileCacheRecalculateOptions;

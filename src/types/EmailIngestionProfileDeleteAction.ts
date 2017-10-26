@@ -8,9 +8,16 @@ export interface EmailIngestionProfileDeleteActionArgs  extends KalturaRequestAr
     id : number;
 }
 
-/** 
-* Delete an existing EmailIngestionProfile
-**/
+/**
+ * Build request payload for service 'EmailIngestionProfile' action 'delete'.
+ *
+ * Usage: Delete an existing EmailIngestionProfile
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EmailIngestionProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;

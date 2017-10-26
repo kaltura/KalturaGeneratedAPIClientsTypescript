@@ -8,10 +8,7 @@ export interface KalturaMediaEntryCompareAttributeConditionArgs  extends Kaltura
     attribute? : KalturaMediaEntryCompareAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaMediaEntry attributes. Use
-* KalturaMediaEntryCompareAttribute enum to provide attribute name. /
-**/
+
 export class KalturaMediaEntryCompareAttributeCondition extends KalturaSearchComparableAttributeCondition {
 
     attribute : KalturaMediaEntryCompareAttribute;

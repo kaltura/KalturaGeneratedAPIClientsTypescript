@@ -13,9 +13,16 @@ export interface VarConsoleGetPartnerUsageActionArgs  extends KalturaRequestArgs
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Function which calulates partner usage of a group of a VAR's sub-publishers
-**/
+/**
+ * Build request payload for service 'varConsole' action 'getPartnerUsage'.
+ *
+ * Usage: Function which calulates partner usage of a group of a VAR's sub-publishers
+ *
+ * Server response type:         KalturaPartnerUsageListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VarConsoleGetPartnerUsageAction extends KalturaRequest<KalturaPartnerUsageListResponse> {
 
     partnerFilter : KalturaPartnerFilter;

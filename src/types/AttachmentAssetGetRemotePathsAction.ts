@@ -8,9 +8,16 @@ export interface AttachmentAssetGetRemotePathsActionArgs  extends KalturaRequest
     id : string;
 }
 
-/** 
-* Get remote storage existing paths for the asset
-**/
+/**
+ * Build request payload for service 'attachmentAsset' action 'getRemotePaths'.
+ *
+ * Usage: Get remote storage existing paths for the asset
+ *
+ * Server response type:         KalturaRemotePathListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttachmentAssetGetRemotePathsAction extends KalturaRequest<KalturaRemotePathListResponse> {
 
     id : string;

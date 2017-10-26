@@ -9,9 +9,16 @@ export interface StorageProfileUpdateActionArgs  extends KalturaRequestArgs {
 	storageProfile : KalturaStorageProfile;
 }
 
-/** 
-* Update storage profile by id
-**/
+/**
+ * Build request payload for service 'storageProfile' action 'update'.
+ *
+ * Usage: Update storage profile by id
+ *
+ * Server response type:         KalturaStorageProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class StorageProfileUpdateAction extends KalturaRequest<KalturaStorageProfile> {
 
     storageProfileId : number;

@@ -10,7 +10,16 @@ export interface TagIndexCategoryEntryTagsActionArgs  extends KalturaRequestArgs
 	pcToIncrement : string;
 }
 
-
+/**
+ * Build request payload for service 'tag' action 'indexCategoryEntryTags'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class TagIndexCategoryEntryTagsAction extends KalturaRequest<void> {
 
     categoryId : number;

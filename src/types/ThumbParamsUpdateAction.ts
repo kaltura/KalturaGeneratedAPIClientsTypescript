@@ -9,9 +9,16 @@ export interface ThumbParamsUpdateActionArgs  extends KalturaRequestArgs {
 	thumbParams : KalturaThumbParams;
 }
 
-/** 
-* Update Thumb Params by ID
-**/
+/**
+ * Build request payload for service 'thumbParams' action 'update'.
+ *
+ * Usage: Update Thumb Params by ID
+ *
+ * Server response type:         KalturaThumbParams
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbParamsUpdateAction extends KalturaRequest<KalturaThumbParams> {
 
     id : number;

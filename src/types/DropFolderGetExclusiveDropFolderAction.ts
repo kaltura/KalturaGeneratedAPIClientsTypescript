@@ -9,9 +9,16 @@ export interface DropFolderGetExclusiveDropFolderActionArgs  extends KalturaRequ
 	maxTime : number;
 }
 
-/** 
-* getExclusive KalturaDropFolder object
-**/
+/**
+ * Build request payload for service 'dropFolder' action 'getExclusiveDropFolder'.
+ *
+ * Usage: getExclusive KalturaDropFolder object
+ *
+ * Server response type:         KalturaDropFolder
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DropFolderGetExclusiveDropFolderAction extends KalturaRequest<KalturaDropFolder> {
 
     tag : string;

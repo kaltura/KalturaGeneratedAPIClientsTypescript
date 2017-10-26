@@ -9,9 +9,16 @@ export interface SessionStartWidgetSessionActionArgs  extends KalturaRequestArgs
 	expiry? : number;
 }
 
-/** 
-* Start a session for Kaltura's flash widgets
-**/
+/**
+ * Build request payload for service 'session' action 'startWidgetSession'.
+ *
+ * Usage: Start a session for Kaltura's flash widgets
+ *
+ * Server response type:         KalturaStartWidgetSessionResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SessionStartWidgetSessionAction extends KalturaRequest<KalturaStartWidgetSessionResponse> {
 
     widgetId : string;

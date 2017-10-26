@@ -11,9 +11,16 @@ export interface MediaConvertActionArgs  extends KalturaRequestArgs {
 	dynamicConversionAttributes? : KalturaConversionAttribute[];
 }
 
-/** 
-* Convert entry
-**/
+/**
+ * Build request payload for service 'media' action 'convert'.
+ *
+ * Usage: Convert entry
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaConvertAction extends KalturaRequest<number> {
 
     entryId : string;

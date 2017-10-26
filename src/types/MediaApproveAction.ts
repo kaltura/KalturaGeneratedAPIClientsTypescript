@@ -8,10 +8,16 @@ export interface MediaApproveActionArgs  extends KalturaRequestArgs {
     entryId : string;
 }
 
-/** 
-* Approve the media entry and mark the pending flags (if any) as moderated (this
-* will make the entry playable)
-**/
+/**
+ * Build request payload for service 'media' action 'approve'.
+ *
+ * Usage: Approve the media entry and mark the pending flags (if any) as moderated (this will make the entry playable)
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaApproveAction extends KalturaRequest<void> {
 
     entryId : string;

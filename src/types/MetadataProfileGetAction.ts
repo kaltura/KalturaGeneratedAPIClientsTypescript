@@ -8,9 +8,16 @@ export interface MetadataProfileGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Retrieve a metadata profile object by id
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'get'.
+ *
+ * Usage: Retrieve a metadata profile object by id
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileGetAction extends KalturaRequest<KalturaMetadataProfile> {
 
     id : number;

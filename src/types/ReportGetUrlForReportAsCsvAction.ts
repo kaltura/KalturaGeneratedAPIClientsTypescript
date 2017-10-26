@@ -19,9 +19,16 @@ export interface ReportGetUrlForReportAsCsvActionArgs  extends KalturaRequestArg
 	objectIds? : string;
 }
 
-/** 
-* will create a Csv file for the given report and return the URL to access it
-**/
+/**
+ * Build request payload for service 'report' action 'getUrlForReportAsCsv'.
+ *
+ * Usage: will create a Csv file for the given report and return the URL to access it
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportGetUrlForReportAsCsvAction extends KalturaRequest<string> {
 
     reportTitle : string;

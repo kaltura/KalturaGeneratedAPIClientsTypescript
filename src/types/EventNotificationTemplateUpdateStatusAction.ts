@@ -10,9 +10,16 @@ export interface EventNotificationTemplateUpdateStatusActionArgs  extends Kaltur
 	status : KalturaEventNotificationTemplateStatus;
 }
 
-/** 
-* Update event notification template status by id
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'updateStatus'.
+ *
+ * Usage: Update event notification template status by id
+ *
+ * Server response type:         KalturaEventNotificationTemplate
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateUpdateStatusAction extends KalturaRequest<KalturaEventNotificationTemplate> {
 
     id : number;

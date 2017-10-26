@@ -8,9 +8,16 @@ export interface AuditTrailGetActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Retrieve an audit trail object by id
-**/
+/**
+ * Build request payload for service 'auditTrail' action 'get'.
+ *
+ * Usage: Retrieve an audit trail object by id
+ *
+ * Server response type:         KalturaAuditTrail
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AuditTrailGetAction extends KalturaRequest<KalturaAuditTrail> {
 
     id : number;

@@ -9,9 +9,16 @@ export interface MetadataProfileUpdateViewsFromFileActionArgs  extends KalturaUp
 	viewsFile : File;
 }
 
-/** 
-* Update an existing metadata object views file
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'updateViewsFromFile'.
+ *
+ * Usage: Update an existing metadata object views file
+ *
+ * Server response type:         KalturaMetadataProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataProfileUpdateViewsFromFileAction extends KalturaUploadRequest<KalturaMetadataProfile> {
 
     id : number;

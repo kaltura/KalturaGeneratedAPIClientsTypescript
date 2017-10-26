@@ -8,9 +8,16 @@ export interface LiveChannelIsLiveActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delivering the status of a live channel (on-air/offline)
-**/
+/**
+ * Build request payload for service 'liveChannel' action 'isLive'.
+ *
+ * Usage: Delivering the status of a live channel (on-air/offline)
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveChannelIsLiveAction extends KalturaRequest<boolean> {
 
     id : string;

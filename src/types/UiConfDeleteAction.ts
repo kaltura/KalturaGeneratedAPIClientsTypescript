@@ -8,9 +8,16 @@ export interface UiConfDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete an existing UIConf
-**/
+/**
+ * Build request payload for service 'uiConf' action 'delete'.
+ *
+ * Usage: Delete an existing UIConf
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfDeleteAction extends KalturaRequest<void> {
 
     id : number;

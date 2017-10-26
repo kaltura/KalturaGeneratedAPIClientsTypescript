@@ -9,9 +9,16 @@ export interface MetadataUpdateFromFileActionArgs  extends KalturaUploadRequestA
 	xmlFile? : File;
 }
 
-/** 
-* Update an existing metadata object with new XML file
-**/
+/**
+ * Build request payload for service 'metadata' action 'updateFromFile'.
+ *
+ * Usage: Update an existing metadata object with new XML file
+ *
+ * Server response type:         KalturaMetadata
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class MetadataUpdateFromFileAction extends KalturaUploadRequest<KalturaMetadata> {
 
     id : number;

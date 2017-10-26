@@ -8,7 +8,16 @@ export interface IntegrationNotifyActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-
+/**
+ * Build request payload for service 'integration' action 'notify'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class IntegrationNotifyAction extends KalturaRequest<void> {
 
     id : number;

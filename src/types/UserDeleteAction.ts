@@ -8,9 +8,16 @@ export interface UserDeleteActionArgs  extends KalturaRequestArgs {
     userId : string;
 }
 
-/** 
-* Deletes a user from a partner account.
-**/
+/**
+ * Build request payload for service 'user' action 'delete'.
+ *
+ * Usage: Deletes a user from a partner account
+ *
+ * Server response type:         KalturaUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserDeleteAction extends KalturaRequest<KalturaUser> {
 
     userId : string;

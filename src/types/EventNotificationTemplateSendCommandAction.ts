@@ -12,9 +12,16 @@ export interface EventNotificationTemplateSendCommandActionArgs  extends Kaltura
 	command : KalturaPushNotificationCommandType;
 }
 
-/** 
-* Clear queue messages
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'sendCommand'.
+ *
+ * Usage: Clear queue messages
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateSendCommandAction extends KalturaRequest<void> {
 
     notificationTemplateSystemName : string;

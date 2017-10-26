@@ -8,9 +8,16 @@ export interface EntryDistributionSubmitDeleteActionArgs  extends KalturaRequest
     id : number;
 }
 
-/** 
-* Deletes Entry Distribution from the remote destination
-**/
+/**
+ * Build request payload for service 'entryDistribution' action 'submitDelete'.
+ *
+ * Usage: Deletes Entry Distribution from the remote destination
+ *
+ * Server response type:         KalturaEntryDistribution
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EntryDistributionSubmitDeleteAction extends KalturaRequest<KalturaEntryDistribution> {
 
     id : number;

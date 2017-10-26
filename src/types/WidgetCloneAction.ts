@@ -8,9 +8,17 @@ export interface WidgetCloneActionArgs  extends KalturaRequestArgs {
     widget : KalturaWidget;
 }
 
-/** 
-* Add widget based on existing widget.   Must provide valid sourceWidgetId
-**/
+/**
+ * Build request payload for service 'widget' action 'clone'.
+ *
+ * Usage: Add widget based on existing widget.
+ * Must provide valid sourceWidgetId
+ *
+ * Server response type:         KalturaWidget
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class WidgetCloneAction extends KalturaRequest<KalturaWidget> {
 
     widget : KalturaWidget;

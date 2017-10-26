@@ -9,9 +9,16 @@ export interface AnnotationAddActionArgs  extends KalturaRequestArgs {
     annotation : KalturaCuePoint;
 }
 
-/** 
-* Allows you to add an annotation object associated with an entry
-**/
+/**
+ * Build request payload for service 'annotation' action 'add'.
+ *
+ * Usage: Allows you to add an annotation object associated with an entry
+ *
+ * Server response type:         KalturaAnnotation
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnotationAddAction extends KalturaRequest<KalturaAnnotation> {
 
     annotation : KalturaCuePoint;

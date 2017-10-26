@@ -10,10 +10,17 @@ export interface MediaUpdateThumbnailActionArgs  extends KalturaRequestArgs {
 	flavorParamsId? : number;
 }
 
-/** 
-* Update media entry thumbnail by a specified time offset (In seconds)   If flavor
-* params id not specified, source flavor will be used by default
-**/
+/**
+ * Build request payload for service 'media' action 'updateThumbnail'.
+ *
+ * Usage: Update media entry thumbnail by a specified time offset (In seconds)
+ * If flavor params id not specified, source flavor will be used by default
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaUpdateThumbnailAction extends KalturaRequest<KalturaMediaEntry> {
 
     entryId : string;

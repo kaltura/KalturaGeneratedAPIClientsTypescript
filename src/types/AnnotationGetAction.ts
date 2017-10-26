@@ -8,9 +8,16 @@ export interface AnnotationGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Retrieve an CuePoint object by id
-**/
+/**
+ * Build request payload for service 'annotation' action 'get'.
+ *
+ * Usage: Retrieve an CuePoint object by id
+ *
+ * Server response type:         KalturaCuePoint
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AnnotationGetAction extends KalturaRequest<KalturaCuePoint> {
 
     id : string;

@@ -8,10 +8,16 @@ export interface EmailIngestionProfileAddActionArgs  extends KalturaRequestArgs 
     EmailIP : KalturaEmailIngestionProfile;
 }
 
-/** 
-* EmailIngestionProfile Add action allows you to add a EmailIngestionProfile to
-* Kaltura DB
-**/
+/**
+ * Build request payload for service 'EmailIngestionProfile' action 'add'.
+ *
+ * Usage: EmailIngestionProfile Add action allows you to add a EmailIngestionProfile to Kaltura DB
+ *
+ * Server response type:         KalturaEmailIngestionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EmailIngestionProfileAddAction extends KalturaRequest<KalturaEmailIngestionProfile> {
 
     EmailIP : KalturaEmailIngestionProfile;

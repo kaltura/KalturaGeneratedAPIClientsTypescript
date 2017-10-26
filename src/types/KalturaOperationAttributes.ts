@@ -7,9 +7,7 @@ export interface KalturaOperationAttributesArgs  extends KalturaObjectBaseArgs {
     
 }
 
-/** 
-* Base class to all operation attributes types
-**/
+
 export class KalturaOperationAttributes extends KalturaObjectBase {
 
     

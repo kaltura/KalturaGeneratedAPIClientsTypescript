@@ -11,9 +11,16 @@ export interface ScheduleEventListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List KalturaScheduleEvent objects
-**/
+/**
+ * Build request payload for service 'scheduleEvent' action 'list'.
+ *
+ * Usage: List KalturaScheduleEvent objects
+ *
+ * Server response type:         KalturaScheduleEventListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleEventListAction extends KalturaRequest<KalturaScheduleEventListResponse> {
 
     filter : KalturaScheduleEventFilter;

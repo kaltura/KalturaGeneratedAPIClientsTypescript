@@ -8,7 +8,16 @@ export interface AttachmentAssetDeleteActionArgs  extends KalturaRequestArgs {
     attachmentAssetId : string;
 }
 
-
+/**
+ * Build request payload for service 'attachmentAsset' action 'delete'.
+ *
+ * 
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttachmentAssetDeleteAction extends KalturaRequest<void> {
 
     attachmentAssetId : string;

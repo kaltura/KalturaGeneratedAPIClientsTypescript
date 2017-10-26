@@ -9,9 +9,16 @@ export interface MediaFlagActionArgs  extends KalturaRequestArgs {
     moderationFlag : KalturaModerationFlag;
 }
 
-/** 
-* Flag inappropriate media entry for moderation
-**/
+/**
+ * Build request payload for service 'media' action 'flag'.
+ *
+ * Usage: Flag inappropriate media entry for moderation
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaFlagAction extends KalturaRequest<void> {
 
     moderationFlag : KalturaModerationFlag;

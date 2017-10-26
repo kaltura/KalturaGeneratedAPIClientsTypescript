@@ -9,12 +9,16 @@ export interface EventNotificationTemplateCloneActionArgs  extends KalturaReques
 	eventNotificationTemplate? : KalturaEventNotificationTemplate;
 }
 
-/** 
-* This action allows registering to various backend event. Use this action to
-* create notifications that will react to events such as new video was uploaded or
-* metadata field was updated. To see the list of available event types, call the
-* listTemplates action.
-**/
+/**
+ * Build request payload for service 'eventNotificationTemplate' action 'clone'.
+ *
+ * Usage: This action allows registering to various backend event. Use this action to create notifications that will react to events such as new video was uploaded or metadata field was updated. To see the list of available event types, call the listTemplates action
+ *
+ * Server response type:         KalturaEventNotificationTemplate
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class EventNotificationTemplateCloneAction extends KalturaRequest<KalturaEventNotificationTemplate> {
 
     id : number;

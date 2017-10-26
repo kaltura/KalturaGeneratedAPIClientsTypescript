@@ -9,9 +9,16 @@ export interface UserCheckLoginDataExistsActionArgs  extends KalturaRequestArgs 
     filter : KalturaUserLoginDataFilter;
 }
 
-/** 
-* Action which checks whther user login
-**/
+/**
+ * Build request payload for service 'user' action 'checkLoginDataExists'.
+ *
+ * Usage: Action which checks whther user login
+ *
+ * Server response type:         boolean
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserCheckLoginDataExistsAction extends KalturaRequest<boolean> {
 
     filter : KalturaUserLoginDataFilter;

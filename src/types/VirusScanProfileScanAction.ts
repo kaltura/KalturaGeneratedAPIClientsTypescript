@@ -9,9 +9,16 @@ export interface VirusScanProfileScanActionArgs  extends KalturaRequestArgs {
 	virusScanProfileId? : number;
 }
 
-/** 
-* Scan flavor asset according to virus scan profile
-**/
+/**
+ * Build request payload for service 'virusScanProfile' action 'scan'.
+ *
+ * Usage: Scan flavor asset according to virus scan profile
+ *
+ * Server response type:         number
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class VirusScanProfileScanAction extends KalturaRequest<number> {
 
     flavorAssetId : string;

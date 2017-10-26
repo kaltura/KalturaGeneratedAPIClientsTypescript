@@ -9,9 +9,16 @@ export interface GenericDistributionProviderActionAddMrssValidateActionArgs  ext
 	xsdData : string;
 }
 
-/** 
-* Add MRSS validate file to generic distribution provider action
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'addMrssValidate'.
+ *
+ * Usage: Add MRSS validate file to generic distribution provider action
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class GenericDistributionProviderActionAddMrssValidateAction extends KalturaRequest<KalturaGenericDistributionProviderAction> {
 
     id : number;

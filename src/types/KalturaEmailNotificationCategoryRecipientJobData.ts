@@ -8,9 +8,7 @@ export interface KalturaEmailNotificationCategoryRecipientJobDataArgs  extends K
     categoryUserFilter? : KalturaCategoryUserFilter;
 }
 
-/** 
-* Job Data representing the provider of recipients for a single categoryId
-**/
+
 export class KalturaEmailNotificationCategoryRecipientJobData extends KalturaEmailNotificationRecipientJobData {
 
     categoryUserFilter : KalturaCategoryUserFilter;

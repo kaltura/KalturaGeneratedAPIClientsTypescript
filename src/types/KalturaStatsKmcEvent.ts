@@ -17,10 +17,7 @@ export interface KalturaStatsKmcEventArgs  extends KalturaObjectBaseArgs {
 	userId? : string;
 }
 
-/** 
-* Will hold data from the Kaltura UI components to be passed on to the reports and
-* analytics system
-**/
+
 export class KalturaStatsKmcEvent extends KalturaObjectBase {
 
     clientVer : string;

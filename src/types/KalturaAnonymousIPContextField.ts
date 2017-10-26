@@ -8,10 +8,7 @@ export interface KalturaAnonymousIPContextFieldArgs  extends KalturaStringFieldA
     geoCoderType? : KalturaGeoCoderType;
 }
 
-/** 
-* Represents the current request country context as calculated based on the IP
-* address
-**/
+
 export class KalturaAnonymousIPContextField extends KalturaStringField {
 
     geoCoderType : KalturaGeoCoderType;

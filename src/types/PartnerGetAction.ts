@@ -8,9 +8,16 @@ export interface PartnerGetActionArgs  extends KalturaRequestArgs {
     id? : number;
 }
 
-/** 
-* Retrieve partner object by Id
-**/
+/**
+ * Build request payload for service 'partner' action 'get'.
+ *
+ * Usage: Retrieve partner object by Id
+ *
+ * Server response type:         KalturaPartner
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PartnerGetAction extends KalturaRequest<KalturaPartner> {
 
     id : number;

@@ -11,10 +11,16 @@ export interface CaptionParamsListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Caption Params by filter with paging support (By default - all system
-* default params will be listed too)
-**/
+/**
+ * Build request payload for service 'captionParams' action 'list'.
+ *
+ * Usage: List Caption Params by filter with paging support (By default - all system default params will be listed too)
+ *
+ * Server response type:         KalturaCaptionParamsListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class CaptionParamsListAction extends KalturaRequest<KalturaCaptionParamsListResponse> {
 
     filter : KalturaCaptionParamsFilter;

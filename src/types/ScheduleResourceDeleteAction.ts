@@ -8,9 +8,16 @@ export interface ScheduleResourceDeleteActionArgs  extends KalturaRequestArgs {
     scheduleResourceId : number;
 }
 
-/** 
-* Mark the KalturaScheduleResource object as deleted
-**/
+/**
+ * Build request payload for service 'scheduleResource' action 'delete'.
+ *
+ * Usage: Mark the KalturaScheduleResource object as deleted
+ *
+ * Server response type:         KalturaScheduleResource
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleResourceDeleteAction extends KalturaRequest<KalturaScheduleResource> {
 
     scheduleResourceId : number;

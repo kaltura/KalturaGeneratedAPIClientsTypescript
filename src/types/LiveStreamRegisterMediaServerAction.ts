@@ -15,9 +15,16 @@ export interface LiveStreamRegisterMediaServerActionArgs  extends KalturaRequest
 	shouldCreateRecordedEntry? : boolean;
 }
 
-/** 
-* Register media server to live entry
-**/
+/**
+ * Build request payload for service 'liveStream' action 'registerMediaServer'.
+ *
+ * Usage: Register media server to live entry
+ *
+ * Server response type:         KalturaLiveEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamRegisterMediaServerAction extends KalturaRequest<KalturaLiveEntry> {
 
     entryId : string;

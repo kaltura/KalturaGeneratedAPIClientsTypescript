@@ -11,9 +11,7 @@ export interface KalturaOptionalAnswerArgs  extends KalturaObjectBaseArgs {
 	isCorrect? : KalturaNullableBoolean;
 }
 
-/** 
-* A representation of an optional answer for question cue point
-**/
+
 export class KalturaOptionalAnswer extends KalturaObjectBase {
 
     key : string;

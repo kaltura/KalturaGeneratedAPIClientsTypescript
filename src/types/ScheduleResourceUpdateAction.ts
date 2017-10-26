@@ -9,9 +9,16 @@ export interface ScheduleResourceUpdateActionArgs  extends KalturaRequestArgs {
 	scheduleResource : KalturaScheduleResource;
 }
 
-/** 
-* Update an existing KalturaScheduleResource object
-**/
+/**
+ * Build request payload for service 'scheduleResource' action 'update'.
+ *
+ * Usage: Update an existing KalturaScheduleResource object
+ *
+ * Server response type:         KalturaScheduleResource
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ScheduleResourceUpdateAction extends KalturaRequest<KalturaScheduleResource> {
 
     scheduleResourceId : number;

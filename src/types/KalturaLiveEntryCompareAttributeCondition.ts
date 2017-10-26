@@ -8,10 +8,7 @@ export interface KalturaLiveEntryCompareAttributeConditionArgs  extends KalturaS
     attribute? : KalturaLiveEntryCompareAttribute;
 }
 
-/** 
-* Auto-generated class.  Used to search KalturaLiveEntry attributes. Use
-* KalturaLiveEntryCompareAttribute enum to provide attribute name. /
-**/
+
 export class KalturaLiveEntryCompareAttributeCondition extends KalturaSearchComparableAttributeCondition {
 
     attribute : KalturaLiveEntryCompareAttribute;

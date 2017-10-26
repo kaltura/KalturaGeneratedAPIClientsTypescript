@@ -8,10 +8,17 @@ export interface UserAddActionArgs  extends KalturaRequestArgs {
     user : KalturaUser;
 }
 
-/** 
-* Adds a new user to an existing account in the Kaltura database.   Input param
-* $id is the unique identifier in the partner's system.
-**/
+/**
+ * Build request payload for service 'user' action 'add'.
+ *
+ * Usage: Adds a new user to an existing account in the Kaltura database.
+ * Input param $id is the unique identifier in the partner's system
+ *
+ * Server response type:         KalturaUser
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserAddAction extends KalturaRequest<KalturaUser> {
 
     user : KalturaUser;

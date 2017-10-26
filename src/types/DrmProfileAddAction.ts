@@ -8,9 +8,16 @@ export interface DrmProfileAddActionArgs  extends KalturaRequestArgs {
     drmProfile : KalturaDrmProfile;
 }
 
-/** 
-* Allows you to add a new DrmProfile object
-**/
+/**
+ * Build request payload for service 'drmProfile' action 'add'.
+ *
+ * Usage: Allows you to add a new DrmProfile object
+ *
+ * Server response type:         KalturaDrmProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmProfileAddAction extends KalturaRequest<KalturaDrmProfile> {
 
     drmProfile : KalturaDrmProfile;

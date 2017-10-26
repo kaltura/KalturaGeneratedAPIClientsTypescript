@@ -11,9 +11,16 @@ export interface FileAssetListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List file assets by filter and pager
-**/
+/**
+ * Build request payload for service 'fileAsset' action 'list'.
+ *
+ * Usage: List file assets by filter and pager
+ *
+ * Server response type:         KalturaFileAssetListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FileAssetListAction extends KalturaRequest<KalturaFileAssetListResponse> {
 
     filter : KalturaFileAssetFilter;

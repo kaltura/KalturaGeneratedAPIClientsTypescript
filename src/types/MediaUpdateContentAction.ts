@@ -13,9 +13,16 @@ export interface MediaUpdateContentActionArgs  extends KalturaRequestArgs {
 	advancedOptions? : KalturaEntryReplacementOptions;
 }
 
-/** 
-* Replace content associated with the media entry.
-**/
+/**
+ * Build request payload for service 'media' action 'updateContent'.
+ *
+ * Usage: Replace content associated with the media entry
+ *
+ * Server response type:         KalturaMediaEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MediaUpdateContentAction extends KalturaRequest<KalturaMediaEntry> {
 
     entryId : string;

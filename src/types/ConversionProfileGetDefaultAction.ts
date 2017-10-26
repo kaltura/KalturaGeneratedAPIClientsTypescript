@@ -9,9 +9,16 @@ export interface ConversionProfileGetDefaultActionArgs  extends KalturaRequestAr
     type? : KalturaConversionProfileType;
 }
 
-/** 
-* Get the partner's default conversion profile
-**/
+/**
+ * Build request payload for service 'conversionProfile' action 'getDefault'.
+ *
+ * Usage: Get the partner's default conversion profile
+ *
+ * Server response type:         KalturaConversionProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileGetDefaultAction extends KalturaRequest<KalturaConversionProfile> {
 
     type : KalturaConversionProfileType;

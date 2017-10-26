@@ -13,9 +13,16 @@ export interface ReportGetGraphsActionArgs  extends KalturaRequestArgs {
 	objectIds? : string;
 }
 
-/** 
-* report getGraphs action allows to get a graph data for a specific report.
-**/
+/**
+ * Build request payload for service 'report' action 'getGraphs'.
+ *
+ * Usage: report getGraphs action allows to get a graph data for a specific report
+ *
+ * Server response type:         KalturaReportGraph[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ReportGetGraphsAction extends KalturaRequest<KalturaReportGraph[]> {
 
     reportType : KalturaReportType;

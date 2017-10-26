@@ -8,9 +8,16 @@ export interface MetadataProfileServeActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Serves metadata profile XSD file
-**/
+/**
+ * Build request payload for service 'metadataProfile' action 'serve'.
+ *
+ * Usage: Serves metadata profile XSD file
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataProfileServeAction extends KalturaRequest<string> {
 
     id : number;

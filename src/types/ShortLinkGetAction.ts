@@ -8,9 +8,16 @@ export interface ShortLinkGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Retrieve an short link object by id
-**/
+/**
+ * Build request payload for service 'shortLink' action 'get'.
+ *
+ * Usage: Retrieve an short link object by id
+ *
+ * Server response type:         KalturaShortLink
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ShortLinkGetAction extends KalturaRequest<KalturaShortLink> {
 
     id : string;

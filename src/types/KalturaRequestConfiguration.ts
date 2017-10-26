@@ -10,9 +10,7 @@ export interface KalturaRequestConfigurationArgs  extends KalturaObjectBaseArgs 
 	responseProfile? : KalturaBaseResponseProfile;
 }
 
-/** 
-* Define client request optional configurations  /
-**/
+
 export class KalturaRequestConfiguration extends KalturaObjectBase {
 
     partnerId : number;

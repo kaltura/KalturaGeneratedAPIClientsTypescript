@@ -9,7 +9,16 @@ export interface AttUverseGetFeedActionArgs  extends KalturaRequestArgs {
 	hash : string;
 }
 
-
+/**
+ * Build request payload for service 'attUverse' action 'getFeed'.
+ *
+ * 
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class AttUverseGetFeedAction extends KalturaRequest<string> {
 
     distributionProfileId : number;

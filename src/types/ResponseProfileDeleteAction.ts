@@ -8,9 +8,16 @@ export interface ResponseProfileDeleteActionArgs  extends KalturaRequestArgs {
     id : number;
 }
 
-/** 
-* Delete response profile by id
-**/
+/**
+ * Build request payload for service 'responseProfile' action 'delete'.
+ *
+ * Usage: Delete response profile by id
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ResponseProfileDeleteAction extends KalturaRequest<void> {
 
     id : number;

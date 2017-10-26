@@ -9,9 +9,7 @@ export interface KalturaEntryReplacementOptionsArgs  extends KalturaObjectBaseAr
 	pluginOptionItems? : KalturaPluginReplacementOptionsItem[];
 }
 
-/** 
-* Advanced configuration for entry replacement process
-**/
+
 export class KalturaEntryReplacementOptions extends KalturaObjectBase {
 
     keepManualThumbnails : number;

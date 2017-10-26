@@ -11,9 +11,16 @@ export interface SyndicationFeedListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Syndication Feeds by filter with paging support
-**/
+/**
+ * Build request payload for service 'syndicationFeed' action 'list'.
+ *
+ * Usage: List Syndication Feeds by filter with paging support
+ *
+ * Server response type:         KalturaBaseSyndicationFeedListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class SyndicationFeedListAction extends KalturaRequest<KalturaBaseSyndicationFeedListResponse> {
 
     filter : KalturaBaseSyndicationFeedFilter;

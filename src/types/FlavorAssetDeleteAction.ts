@@ -8,9 +8,16 @@ export interface FlavorAssetDeleteActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-/** 
-* Delete Flavor Asset by ID
-**/
+/**
+ * Build request payload for service 'flavorAsset' action 'delete'.
+ *
+ * Usage: Delete Flavor Asset by ID
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class FlavorAssetDeleteAction extends KalturaRequest<void> {
 
     id : string;

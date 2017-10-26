@@ -9,11 +9,7 @@ export interface KalturaSshUrlResourceArgs  extends KalturaUrlResourceArgs {
 	keyPassphrase? : string;
 }
 
-/** 
-* Used to ingest media that is available on remote SSH server and accessible using
-* the supplied URL, media file will be downloaded using import job in order to
-* make the asset ready.
-**/
+
 export class KalturaSshUrlResource extends KalturaUrlResource {
 
     privateKey : string;

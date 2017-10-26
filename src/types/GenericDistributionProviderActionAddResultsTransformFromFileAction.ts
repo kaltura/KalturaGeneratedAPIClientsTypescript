@@ -9,9 +9,16 @@ export interface GenericDistributionProviderActionAddResultsTransformFromFileAct
 	transformFile : File;
 }
 
-/** 
-* Add MRSS transform file to generic distribution provider action
-**/
+/**
+ * Build request payload for service 'genericDistributionProviderAction' action 'addResultsTransformFromFile'.
+ *
+ * Usage: Add MRSS transform file to generic distribution provider action
+ *
+ * Server response type:         KalturaGenericDistributionProviderAction
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaUploadRequest
+ */
 export class GenericDistributionProviderActionAddResultsTransformFromFileAction extends KalturaUploadRequest<KalturaGenericDistributionProviderAction> {
 
     id : number;

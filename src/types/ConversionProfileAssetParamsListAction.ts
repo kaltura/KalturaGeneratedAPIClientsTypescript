@@ -11,9 +11,16 @@ export interface ConversionProfileAssetParamsListActionArgs  extends KalturaRequ
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* Lists asset parmas of conversion profile by ID
-**/
+/**
+ * Build request payload for service 'conversionProfileAssetParams' action 'list'.
+ *
+ * Usage: Lists asset parmas of conversion profile by ID
+ *
+ * Server response type:         KalturaConversionProfileAssetParamsListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ConversionProfileAssetParamsListAction extends KalturaRequest<KalturaConversionProfileAssetParamsListResponse> {
 
     filter : KalturaConversionProfileAssetParamsFilter;

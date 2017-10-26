@@ -11,10 +11,16 @@ export interface ThumbParamsListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List Thumb Params by filter with paging support (By default - all system default
-* params will be listed too)
-**/
+/**
+ * Build request payload for service 'thumbParams' action 'list'.
+ *
+ * Usage: List Thumb Params by filter with paging support (By default - all system default params will be listed too)
+ *
+ * Server response type:         KalturaThumbParamsListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ThumbParamsListAction extends KalturaRequest<KalturaThumbParamsListResponse> {
 
     filter : KalturaThumbParamsFilter;

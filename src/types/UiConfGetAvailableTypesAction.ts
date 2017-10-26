@@ -8,9 +8,16 @@ export interface UiConfGetAvailableTypesActionArgs  extends KalturaRequestArgs {
     
 }
 
-/** 
-* Retrieve a list of all available versions by object type
-**/
+/**
+ * Build request payload for service 'uiConf' action 'getAvailableTypes'.
+ *
+ * Usage: Retrieve a list of all available versions by object type
+ *
+ * Server response type:         KalturaUiConfTypeInfo[]
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UiConfGetAvailableTypesAction extends KalturaRequest<KalturaUiConfTypeInfo[]> {
 
     

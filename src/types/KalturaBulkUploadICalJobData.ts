@@ -8,9 +8,7 @@ export interface KalturaBulkUploadICalJobDataArgs  extends KalturaBulkUploadJobD
     eventsType? : KalturaScheduleEventType;
 }
 
-/** 
-* Represents the Bulk upload job data for iCal bulk upload
-**/
+
 export class KalturaBulkUploadICalJobData extends KalturaBulkUploadJobData {
 
     eventsType : KalturaScheduleEventType;

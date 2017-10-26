@@ -8,9 +8,7 @@ export interface KalturaEmailNotificationUserRecipientJobDataArgs  extends Kaltu
     filter? : KalturaUserFilter;
 }
 
-/** 
-* JobData representing the dynamic user receipient array
-**/
+
 export class KalturaEmailNotificationUserRecipientJobData extends KalturaEmailNotificationRecipientJobData {
 
     filter : KalturaUserFilter;

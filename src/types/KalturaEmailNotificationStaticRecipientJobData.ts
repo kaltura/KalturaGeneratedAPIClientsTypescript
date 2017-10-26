@@ -8,9 +8,7 @@ export interface KalturaEmailNotificationStaticRecipientJobDataArgs  extends Kal
     emailRecipients? : KalturaKeyValue[];
 }
 
-/** 
-* JobData representing the static receipient array
-**/
+
 export class KalturaEmailNotificationStaticRecipientJobData extends KalturaEmailNotificationRecipientJobData {
 
     emailRecipients : KalturaKeyValue[];

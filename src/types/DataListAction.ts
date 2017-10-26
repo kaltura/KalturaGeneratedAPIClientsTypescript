@@ -11,9 +11,16 @@ export interface DataListActionArgs  extends KalturaRequestArgs {
 	pager? : KalturaFilterPager;
 }
 
-/** 
-* List data entries by filter with paging support.
-**/
+/**
+ * Build request payload for service 'data' action 'list'.
+ *
+ * Usage: List data entries by filter with paging support
+ *
+ * Server response type:         KalturaDataListResponse
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DataListAction extends KalturaRequest<KalturaDataListResponse> {
 
     filter : KalturaDataEntryFilter;

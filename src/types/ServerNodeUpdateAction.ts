@@ -9,9 +9,16 @@ export interface ServerNodeUpdateActionArgs  extends KalturaRequestArgs {
 	serverNode : KalturaServerNode;
 }
 
-/** 
-* Update server node by id
-**/
+/**
+ * Build request payload for service 'serverNode' action 'update'.
+ *
+ * Usage: Update server node by id
+ *
+ * Server response type:         KalturaServerNode
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class ServerNodeUpdateAction extends KalturaRequest<KalturaServerNode> {
 
     serverNodeId : number;

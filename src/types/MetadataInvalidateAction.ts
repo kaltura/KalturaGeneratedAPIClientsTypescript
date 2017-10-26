@@ -9,9 +9,17 @@ export interface MetadataInvalidateActionArgs  extends KalturaRequestArgs {
 	version? : number;
 }
 
-/** 
-* Mark existing metadata as invalid   Used by batch metadata transform
-**/
+/**
+ * Build request payload for service 'metadata' action 'invalidate'.
+ *
+ * Usage: Mark existing metadata as invalid
+ * Used by batch metadata transform
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class MetadataInvalidateAction extends KalturaRequest<void> {
 
     id : number;

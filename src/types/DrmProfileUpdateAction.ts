@@ -9,9 +9,16 @@ export interface DrmProfileUpdateActionArgs  extends KalturaRequestArgs {
 	drmProfile : KalturaDrmProfile;
 }
 
-/** 
-* Update an existing KalturaDrmProfile object
-**/
+/**
+ * Build request payload for service 'drmProfile' action 'update'.
+ *
+ * Usage: Update an existing KalturaDrmProfile object
+ *
+ * Server response type:         KalturaDrmProfile
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class DrmProfileUpdateAction extends KalturaRequest<KalturaDrmProfile> {
 
     drmProfileId : number;

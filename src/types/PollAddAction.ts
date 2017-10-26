@@ -8,9 +8,16 @@ export interface PollAddActionArgs  extends KalturaRequestArgs {
     pollType? : string;
 }
 
-/** 
-* Add Action
-**/
+/**
+ * Build request payload for service 'poll' action 'add'.
+ *
+ * Usage: Add Action
+ *
+ * Server response type:         string
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class PollAddAction extends KalturaRequest<string> {
 
     pollType : string;

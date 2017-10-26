@@ -8,7 +8,16 @@ export interface UserEntryGetActionArgs  extends KalturaRequestArgs {
     id : string;
 }
 
-
+/**
+ * Build request payload for service 'userEntry' action 'get'.
+ *
+ * 
+ *
+ * Server response type:         KalturaUserEntry
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class UserEntryGetAction extends KalturaRequest<KalturaUserEntry> {
 
     id : string;

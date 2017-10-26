@@ -10,9 +10,16 @@ export interface LiveStreamCreatePeriodicSyncPointsActionArgs  extends KalturaRe
 	duration : number;
 }
 
-/** 
-* Creates perioding metadata sync-point events on a live stream
-**/
+/**
+ * Build request payload for service 'liveStream' action 'createPeriodicSyncPoints'.
+ *
+ * Usage: Creates perioding metadata sync-point events on a live stream
+ *
+ * Server response type:         void
+ * Server failure response type: KalturaAPIException
+ * @class
+ * @extends KalturaRequest
+ */
 export class LiveStreamCreatePeriodicSyncPointsAction extends KalturaRequest<void> {
 
     entryId : string;

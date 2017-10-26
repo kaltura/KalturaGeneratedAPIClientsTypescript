@@ -7,9 +7,7 @@ export interface KalturaAssetDistributionConditionArgs  extends KalturaObjectBas
     
 }
 
-/** 
-* Abstract class for asset distribution condition
-**/
+
 export class KalturaAssetDistributionCondition extends KalturaObjectBase {
 
     
