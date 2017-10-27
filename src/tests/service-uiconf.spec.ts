@@ -73,7 +73,6 @@ describe(`service "UIConf" tests`, () => {
             // TODO [kmc] blocked by previous test-case
             // expect(players.indexOf(Number(obj.objType)) !== -1).toBeTruthy();
             const match = /isPlaylist="(.*?)"/g.exec(obj.confFile);
-            console.log(match);
             if (match) {
               expect(["true", "multi"].indexOf(match[1]) !== -1).toBeTruthy();
             }
