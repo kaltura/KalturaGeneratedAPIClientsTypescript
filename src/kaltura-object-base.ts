@@ -1,5 +1,6 @@
 import { KalturaUtils } from "./utils/kaltura-utils";
 import { KalturaTypesFactory } from './kaltura-types-factory';
+import { KalturaLogger } from './kaltura-logger';
 
 export type DependentProperty = { property : string, request : number, targetPath? : string[] };
 
@@ -21,6 +22,8 @@ export interface KalturaObjectBaseArgs
 {
 
 }
+
+const logger = new KalturaLogger();
 
 export abstract class KalturaObjectBase{
 
@@ -77,7 +80,7 @@ export abstract class KalturaObjectBase{
         }catch(err)
         {
             // TODO [kaltura] should use logHandler
-            console.warn(err.message);
+            logger.warn(err.message);
             throw err;
         }
 
@@ -101,7 +104,7 @@ export abstract class KalturaObjectBase{
         }catch(err)
         {
             // TODO [kaltura] should use logHandler
-            console.warn(err.message);
+            logger.warn(err.message);
             throw err;
         }
 
@@ -241,10 +244,10 @@ export abstract class KalturaObjectBase{
 
         if (usedFallbackType && result)
         {
-                console.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}', Falling back to '${fallbackObjectType}' object type. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`)
+                logger.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}', Falling back to '${fallbackObjectType}' object type. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`);
         }else if (!result)
         {
-            console.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}'. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`)
+            logger.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}'. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`);
         }
 
         return result;
