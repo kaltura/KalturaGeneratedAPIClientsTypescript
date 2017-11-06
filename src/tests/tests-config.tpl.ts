@@ -1,5 +1,7 @@
 export const TestsConfig = {
-  endpoint: "@endpoint@",
-  ks: "@ks@",
-  clientTag: "@clientTag@"
+    partnerId: "@partnerId@",
+    userName: "@userName@",
+    adminSecret: "@adminSecret@",
+    endpointUrl: "@endpointUrl@",
+    clientTag: "typescript-tests"
 };

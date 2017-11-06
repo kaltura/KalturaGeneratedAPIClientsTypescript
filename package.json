@@ -24,7 +24,7 @@
     "lint": "tslint src/**/*.ts",
     "watch": "gulp watch",
     "release": "standard-version",
-    "test": "jest"
+    "test": "jest service-distribution.spec"
   },
   "repository": {
     "type": "git",

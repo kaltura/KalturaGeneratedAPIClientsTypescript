@@ -1,4 +1,3 @@
-import { TestsConfig } from "./tests-config";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import { DistributionProviderListAction } from "../types/DistributionProviderListAction";
 import { KalturaDistributionProviderListResponse } from "../types/KalturaDistributionProviderListResponse";
@@ -9,23 +8,22 @@ import { KalturaDistributionProfile } from "../types/KalturaDistributionProfile"
 import { EntryDistributionListAction } from "../types/EntryDistributionListAction";
 import { KalturaEntryDistributionListResponse } from "../types/KalturaEntryDistributionListResponse";
 import { KalturaEntryDistribution } from "../types/KalturaEntryDistribution";
+import { getClient } from "./utils";
+import { LoggerSettings, LogLevels } from "../kaltura-logger";
 
 describe(`service "Distribution" tests`, () => {
   let kalturaClient: KalturaBrowserHttpClient = null;
 
-  const httpConfiguration = {
-    endpointUrl: TestsConfig.endpoint,
-    clientTag: TestsConfig.clientTag
-  };
+    beforeAll(async () => {
+        LoggerSettings.logLevel = LogLevels.error; // suspend warnings
 
-  beforeEach(() => {
-    kalturaClient = new KalturaBrowserHttpClient(httpConfiguration);
-    kalturaClient.ks = TestsConfig.ks;
-  });
-
-  afterEach(() => {
-    kalturaClient = null;
-  });
+        return getClient()
+            .then(client => {
+                kalturaClient = client;
+            }).catch(error => {
+                fail(error);
+            });
+    });
 
   test("distribution provider list", (done) => {
     kalturaClient.request(new DistributionProviderListAction())
@@ -36,8 +34,8 @@ describe(`service "Distribution" tests`, () => {
           expect(response.objects.every(obj => obj instanceof KalturaDistributionProvider)).toBeTruthy();
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         });
   });
