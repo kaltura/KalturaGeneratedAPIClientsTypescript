@@ -1,22 +1,24 @@
-import { TestsConfig } from "./tests-config";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import { WidgetListAction } from "../types/WidgetListAction";
 import { KalturaWidgetListResponse } from "../types/KalturaWidgetListResponse";
+import { getClient } from "./utils";
+import { LoggerSettings, LogLevels } from "../kaltura-logger";
 
 describe(`service "Widget" tests`, () => {
   let kalturaClient: KalturaBrowserHttpClient = null;
 
-  const httpConfiguration = {
-    endpointUrl: TestsConfig.endpoint,
-    clientTag: TestsConfig.clientTag
-  };
+  beforeAll(async () => {
+    LoggerSettings.logLevel = LogLevels.error; // suspend warnings
 
-  beforeEach(() => {
-    kalturaClient = new KalturaBrowserHttpClient(httpConfiguration);
-    kalturaClient.ks = TestsConfig.ks;
+    return getClient()
+      .then(client => {
+        kalturaClient = client;
+      }).catch(error => {
+        fail(error);
+      });
   });
 
-  afterEach(() => {
+  afterAll(() => {
     kalturaClient = null;
   });
 
@@ -27,8 +29,8 @@ describe(`service "Widget" tests`, () => {
           expect(response instanceof KalturaWidgetListResponse).toBeTruthy();
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         }
       );

@@ -1,4 +1,3 @@
-import { TestsConfig } from "./tests-config";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import { UiConfListAction } from "../types/UiConfListAction";
 import { KalturaUiConfListResponse } from "../types/KalturaUiConfListResponse";
@@ -6,21 +5,24 @@ import { KalturaUiConf } from "../types/KalturaUiConf";
 import { KalturaUiConfFilter } from "../types/KalturaUiConfFilter";
 import { KalturaUiConfObjType } from "../types/KalturaUiConfObjType";
 import { UiConfListTemplatesAction } from "../types/UiConfListTemplatesAction";
+import { getClient } from "./utils";
+import { LoggerSettings, LogLevels } from "../kaltura-logger";
 
 describe(`service "UIConf" tests`, () => {
   let kalturaClient: KalturaBrowserHttpClient = null;
 
-  const httpConfiguration = {
-    endpointUrl: TestsConfig.endpoint,
-    clientTag: TestsConfig.clientTag
-  };
+  beforeAll(async () => {
+    LoggerSettings.logLevel = LogLevels.error; // suspend warnings
 
-  beforeEach(() => {
-    kalturaClient = new KalturaBrowserHttpClient(httpConfiguration);
-    kalturaClient.ks = TestsConfig.ks;
+    return getClient()
+      .then(client => {
+        kalturaClient = client;
+      }).catch(error => {
+        fail(error);
+      });
   });
 
-  afterEach(() => {
+  afterAll(() => {
     kalturaClient = null;
   });
 
@@ -33,8 +35,8 @@ describe(`service "UIConf" tests`, () => {
           expect(response.objects.every(obj => obj instanceof KalturaUiConf)).toBeTruthy();
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         }
       );
@@ -52,8 +54,8 @@ describe(`service "UIConf" tests`, () => {
           expect(response.objects.every(obj => players.indexOf(Number(obj.objType)) !== -1)).toBeTruthy();
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         }
       );
@@ -81,8 +83,8 @@ describe(`service "UIConf" tests`, () => {
 
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         }
       );
@@ -97,8 +99,8 @@ describe(`service "UIConf" tests`, () => {
           expect(response.objects.every(obj => obj instanceof KalturaUiConf)).toBeTruthy();
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         }
       );

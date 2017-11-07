@@ -1,37 +1,34 @@
-import { TestsConfig } from "./tests-config";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
 import { FlavorAssetListAction } from "../types/FlavorAssetListAction";
 import { KalturaFlavorAssetListResponse } from "../types/KalturaFlavorAssetListResponse";
 import { KalturaFlavorAsset } from "../types/KalturaFlavorAsset";
+import { KalturaAssetFilter } from "../types/KalturaAssetFilter";
+import { getClient } from "./utils";
+import { LoggerSettings, LogLevels } from "../kaltura-logger";
 
 describe(`service "Flavor" tests`, () => {
   let kalturaClient: KalturaBrowserHttpClient = null;
 
-  const httpConfiguration = {
-    endpointUrl: TestsConfig.endpoint,
-    clientTag: TestsConfig.clientTag
-  };
+  beforeAll(async () => {
+    LoggerSettings.logLevel = LogLevels.error; // suspend warnings
 
-  beforeEach(() => {
-    kalturaClient = new KalturaBrowserHttpClient(httpConfiguration);
-    kalturaClient.ks = TestsConfig.ks;
+    return getClient()
+      .then(client => {
+        kalturaClient = client;
+      }).catch(error => {
+        fail(error);
+      });
   });
 
-  afterEach(() => {
+  afterAll(() => {
     kalturaClient = null;
   });
 
-  // TODO [kmc] check response
-  /*
-    {
-      "code":"PROPERTY_VALIDATION_CANNOT_BE_NULL",
-      "message":"The property \"KalturaFlavorAssetFilter::entryIdEqual\/KalturaFlavorAssetFilter::entryIdIn\" cannot be null",
-      "objectType":"KalturaAPIException",
-      "args":{ "PROP_NAME":"KalturaFlavorAssetFilter::entryIdEqual\/KalturaFlavorAssetFilter::entryIdIn" }
-    }
-   */
-  xtest("flavor list", (done) => {
-    kalturaClient.request(new FlavorAssetListAction())
+  test("flavor list", (done) => {
+    const filter = new KalturaAssetFilter({
+      entryIdEqual: "1_2vp1gp7u"
+    });
+    kalturaClient.request(new FlavorAssetListAction({ filter }))
       .then(
         response => {
           expect(response instanceof KalturaFlavorAssetListResponse).toBeTruthy();
@@ -39,8 +36,8 @@ describe(`service "Flavor" tests`, () => {
           expect(response.objects.every(obj => obj instanceof KalturaFlavorAsset)).toBeTruthy();
           done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
           done();
         }
       );

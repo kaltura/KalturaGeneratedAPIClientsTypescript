@@ -8,19 +8,24 @@ import { KalturaAPIException } from "../kaltura-api-exception";
 import { KalturaMultiResponse } from "../kaltura-multi-response";
 import { KalturaUser } from "../types/KalturaUser";
 import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
-import { TestsConfig } from "./tests-config";
+import { getClient } from "./utils";
+import { LoggerSettings, LogLevels } from "../kaltura-logger";
 
 describe("Kaltura server API multi request", () => {
   const fakeUserName = "";
   const fakePassword = "";
 
-  let kalturaClient;
+  let kalturaClient: KalturaBrowserHttpClient = null;
 
-  beforeAll(() => {
-    kalturaClient = new KalturaBrowserHttpClient({
-      endpointUrl: TestsConfig.endpoint,
-      clientTag: TestsConfig.clientTag
-    });
+  beforeAll(async () => {
+    LoggerSettings.logLevel = LogLevels.error; // suspend warnings
+
+    return getClient()
+      .then(client => {
+        kalturaClient = client;
+      }).catch(error => {
+        fail(error);
+      });
   });
 
   afterAll(() => {
@@ -135,7 +140,7 @@ describe("Kaltura server API multi request", () => {
   });
 
   describe("Invoking multi request", () => {
-    test("executes multi request set completion on some requests and on the multi request instance", () => {
+    test("executes multi request set completion on some requests and on the multi request instance", (done) => {
       kalturaClient.multiRequest(new KalturaMultiRequest(
         new UserLoginByLoginIdAction({
           loginId: fakeUserName,
@@ -161,14 +166,16 @@ describe("Kaltura server API multi request", () => {
         expect(responses.hasErrors()).toBe(false);
       })).then(
         (responses) => {
+          done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
+          done();
         }
       );
     });
 
-    test("handles multi request response with failure on some inner requests", () => {
+    test("handles multi request response with failure on some inner requests", (done) => {
       kalturaClient.multiRequest(new KalturaMultiRequest(
         new UserLoginByLoginIdAction({
           loginId: fakeUserName,
@@ -192,9 +199,11 @@ describe("Kaltura server API multi request", () => {
         expect(responses.hasErrors()).toBe(true);
       })).then(
         (responses) => {
+          done();
         },
-        () => {
-          fail("should not reach this part");
+        (error) => {
+          fail(error);
+          done();
         }
       );
     });
