@@ -23,7 +23,7 @@ export interface KalturaObjectBaseArgs
 
 }
 
-const logger = new KalturaLogger();
+const logger = new KalturaLogger('KalturaObjectBase');
 
 export abstract class KalturaObjectBase{
 
@@ -54,6 +54,10 @@ export abstract class KalturaObjectBase{
         return { properties : {}};
     }
 
+    public hasMetadataProperty(propertyName: string): boolean
+    {
+        return !!this._getMetadata().properties[propertyName];
+    }
 
     toRequestObject() : {} {
         const metadata = this._getMetadata();
@@ -110,6 +114,8 @@ export abstract class KalturaObjectBase{
 
         return result;
     }
+
+
 
     protected _parseResponseProperty(propertyName : string, property : KalturaObjectPropertyMetadata, source : any) : any {
 
