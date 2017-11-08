@@ -25,6 +25,8 @@ export class KalturaBaseEntryCloneOptions extends KalturaObjectBase {
 	static categories = new KalturaBaseEntryCloneOptions('2');
 	static childEntries = new KalturaBaseEntryCloneOptions('3');
 	static codeCuePoints = new KalturaBaseEntryCloneOptions('codeCuePoint.CODE_CUE_POINTS');
+	static flavors = new KalturaBaseEntryCloneOptions('6');
+	static metadata = new KalturaBaseEntryCloneOptions('5');
 	static thumbCuePoints = new KalturaBaseEntryCloneOptions('thumbCuePoint.THUMB_CUE_POINTS');
 	static users = new KalturaBaseEntryCloneOptions('1');
 }
