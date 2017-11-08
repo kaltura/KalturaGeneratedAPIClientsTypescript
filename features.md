@@ -27,6 +27,7 @@ The following is a list of all features supported by the library:
 - [x] Attach 'apiVersion' to each request
 - [x] Upload file with chunk support
 - [x] Resume file upload action
+- [x] Resume file upload action
 
  Below is a list of features to be added:
 - [ ] Generate `kalsig` per request.
