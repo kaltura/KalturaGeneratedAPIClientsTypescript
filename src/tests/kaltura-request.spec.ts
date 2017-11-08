@@ -21,6 +21,7 @@ import { KalturaAppTokenHashType } from "../types/KalturaAppTokenHashType";
 import { KalturaMediaEntry } from "../types/KalturaMediaEntry";
 import { getClient } from "./utils";
 import { LoggerSettings, LogLevels } from "../kaltura-logger";
+import { KalturaFilterPager } from "../types/KalturaFilterPager";
 
 describe("Kaltura server API request", () => {
   let kalturaClient: KalturaBrowserHttpClient = null;
@@ -591,11 +592,15 @@ describe("Kaltura server API request", () => {
     });
 
     test("parse array response property", (done) => {
-      kalturaClient.request(new BaseEntryListAction()).then(
+      kalturaClient.request(new BaseEntryListAction({
+          pager: new KalturaFilterPager({
+              pageSize: 30
+          })
+      })).then(
         (response) => {
 
           expect(response).toBeDefined();
-          expect(response.totalCount).toBe(48260);
+          expect(response.totalCount).toBeGreaterThan(30);
           expect(response.objects).toBeDefined();
           expect(response.objects.length).toBe(30);
           const object1 = response.objects[1];
@@ -693,13 +698,19 @@ describe("Kaltura server API request", () => {
     });
 
     test("parse array of objects response property", (done) => {
-      kalturaClient.request(new BaseEntryListAction()).then(
+      kalturaClient.request(new BaseEntryListAction(
+          {
+              pager: new KalturaFilterPager({
+                  pageSize: 30
+              })
+          }
+      )).then(
         (response) => {
           expect(response instanceof KalturaBaseEntryListResponse).toBeTruthy();
 
           // verify length of array and totalCount
-          expect(response.totalCount).toBe(48260);
-          expect(response.objects).toBeDefined();
+            expect(response.totalCount).toBeGreaterThan(30);
+            expect(response.objects).toBeDefined();
           expect(response.objects.length).toBe(30);
 
           // verify item is of the right type
