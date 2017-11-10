@@ -62,6 +62,19 @@ export class KalturaUploadRequest<T> extends KalturaRequest<T> {
         return result;
     }
 
+    public getUpdatedFileData(fileChunk: Blob, fileName: string): FormData {
+        let result = null;
+        const filePropertyName = this.getFilePropertyName();
+
+        if (filePropertyName) {
+                result = new FormData();
+                result.append("fileName", fileName);
+                result.append(filePropertyName, fileChunk);
+        }
+
+        return result;
+    }
+
     public toRequestObject(): {} {
         const result = super.toRequestObject();
         const filePropertyName = this.getFilePropertyName();

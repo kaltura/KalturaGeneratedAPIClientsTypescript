@@ -104,8 +104,8 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
 
             this._assignDefaultParameters(parameters);
 
-            const data = request.getFormData();
             const file = request.getFileData();
+            let data = request.getFormData();
 
             let fileStart = 0;
             let uploadSize: number = null;
@@ -129,7 +129,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
                 fileStart = uploadChunkData.resumeAt;
                 const fileEnd = uploadChunkData.finalChunk ? file.size : fileStart + uploadSize;
 
-                data.set(request.getFilePropertyName(), file.slice(fileStart, fileEnd, file.type), file.name);
+                data = request.getUpdatedFileData(file.slice(fileStart, fileEnd, file.type), file.name);
 
                 parameters.resume = uploadChunkData.resume;
                 parameters.resumeAt = uploadChunkData.resumeAt;
