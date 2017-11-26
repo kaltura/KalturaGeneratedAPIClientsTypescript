@@ -217,7 +217,7 @@ export abstract class KalturaHttpClientBase extends KalturaClientBase {
     protected abstract _createCancelableAction(data: { endpoint: string, headers: any, body: {} }): CancelableAction;
 
     private _createEndpoint(parameters: any): string {
-        let endpoint = `${this.endpointUrl}/service/${parameters.service}`;
+        let endpoint = `${this.endpointUrl}/api_v3/service/${parameters.service}`;
         if (parameters.action) {
             endpoint = `${endpoint}/action/${parameters.action}`;
         }
