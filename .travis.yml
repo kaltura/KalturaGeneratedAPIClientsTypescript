@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+      - "7"
+before_install: npm install && npm run build
+script: npm run test
+notifications:
+  email:
+    recipients:
+      - jess.portnoy@kaltura.com
+      - eran.sakal@kaltura.com
+      - Amir.Chervinsky@kaltura.com
+    on_success: change
+    on_failure: always
