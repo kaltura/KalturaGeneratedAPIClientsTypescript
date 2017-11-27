@@ -12,6 +12,7 @@ export interface KalturaESearchCuePointItemDataArgs  extends KalturaESearchItemD
 	startTime? : string;
 	endTime? : string;
 	subType? : string;
+	question? : string;
 	answers? : string;
 	hint? : string;
 	explanation? : string;
@@ -28,6 +29,7 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
 	startTime : string;
 	endTime : string;
 	subType : string;
+	question : string;
 	answers : string;
 	hint : string;
 	explanation : string;
@@ -52,6 +54,7 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
 				startTime : { type : 's' },
 				endTime : { type : 's' },
 				subType : { type : 's' },
+				question : { type : 's' },
 				answers : { type : 's' },
 				hint : { type : 's' },
 				explanation : { type : 's' }

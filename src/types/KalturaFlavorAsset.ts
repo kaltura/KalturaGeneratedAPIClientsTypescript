@@ -3,12 +3,14 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaFlavorAssetStatus } from './KalturaFlavorAssetStatus';
 import { KalturaLanguage } from './KalturaLanguage';
+import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
 export interface KalturaFlavorAssetArgs  extends KalturaAssetArgs {
     flavorParamsId? : number;
 	language? : KalturaLanguage;
 	label? : string;
+	isDefault? : KalturaNullableBoolean;
 }
 
 
@@ -26,6 +28,7 @@ export class KalturaFlavorAsset extends KalturaAsset {
 	readonly status : KalturaFlavorAssetStatus;
 	language : KalturaLanguage;
 	label : string;
+	isDefault : KalturaNullableBoolean;
 
     constructor(data? : KalturaFlavorAssetArgs)
     {
@@ -50,7 +53,8 @@ export class KalturaFlavorAsset extends KalturaAsset {
 				videoCodecId : { type : 's', readOnly : true },
 				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaFlavorAssetStatus, subType : 'KalturaFlavorAssetStatus' },
 				language : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
-				label : { type : 's' }
+				label : { type : 's' },
+				isDefault : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

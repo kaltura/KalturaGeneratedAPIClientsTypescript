@@ -210,6 +210,7 @@ export class KalturaLanguage extends KalturaObjectBase {
 	static ha = new KalturaLanguage('Hausa');
 	static haa = new KalturaLanguage('Han');
 	static hai = new KalturaLanguage('Haida');
+	static hak = new KalturaLanguage('Hakka');
 	static has = new KalturaLanguage('Haisla');
 	static haw = new KalturaLanguage('Hawaiian');
 	static he = new KalturaLanguage('Hebrew');
@@ -217,8 +218,10 @@ export class KalturaLanguage extends KalturaObjectBase {
 	static hi = new KalturaLanguage('Hindi');
 	static hid = new KalturaLanguage('Hidatsa');
 	static hil = new KalturaLanguage('Hiligaynon');
+	static hkk = new KalturaLanguage('Hokkien');
 	static hmn = new KalturaLanguage('Hmong');
 	static hni = new KalturaLanguage('Hani');
+	static hnn = new KalturaLanguage('Hainanese');
 	static hop = new KalturaLanguage('Hopi');
 	static hr = new KalturaLanguage('Croatian');
 	static hsb = new KalturaLanguage('Sorbian Upper');
@@ -498,6 +501,7 @@ export class KalturaLanguage extends KalturaObjectBase {
 	static tcy = new KalturaLanguage('Tulu');
 	static tdd = new KalturaLanguage('Tai Na');
 	static te = new KalturaLanguage('Telugu');
+	static teo = new KalturaLanguage('Teo Chew');
 	static tet = new KalturaLanguage('Tetum');
 	static tg = new KalturaLanguage('Tajik');
 	static tgx = new KalturaLanguage('Tagish');

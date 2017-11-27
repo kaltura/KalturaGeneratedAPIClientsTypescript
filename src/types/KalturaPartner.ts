@@ -8,6 +8,7 @@ import { KalturaKeyValue } from './KalturaKeyValue';
 import { KalturaPartnerGroupType } from './KalturaPartnerGroupType';
 import { KalturaPlayerDeliveryType } from './KalturaPlayerDeliveryType';
 import { KalturaPlayerEmbedCodeType } from './KalturaPlayerEmbedCodeType';
+import { KalturaESearchLanguageItem } from './KalturaESearchLanguageItem';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
@@ -42,6 +43,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	additionalParams? : KalturaKeyValue[];
 	partnerParentId? : number;
 	referenceId? : string;
+	eSearchLanguages? : KalturaESearchLanguageItem[];
 }
 
 
@@ -100,6 +102,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly crmId : string;
 	referenceId : string;
 	readonly timeAlignedRenditions : boolean;
+	eSearchLanguages : KalturaESearchLanguageItem[];
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -107,6 +110,7 @@ export class KalturaPartner extends KalturaObjectBase {
         if (typeof this.additionalParams === 'undefined') this.additionalParams = [];
 		if (typeof this.deliveryTypes === 'undefined') this.deliveryTypes = [];
 		if (typeof this.embedCodeTypes === 'undefined') this.embedCodeTypes = [];
+		if (typeof this.eSearchLanguages === 'undefined') this.eSearchLanguages = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -168,7 +172,8 @@ export class KalturaPartner extends KalturaObjectBase {
 				partnerParentId : { type : 'n' },
 				crmId : { type : 's', readOnly : true },
 				referenceId : { type : 's' },
-				timeAlignedRenditions : { type : 'b', readOnly : true }
+				timeAlignedRenditions : { type : 'b', readOnly : true },
+				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' }
             }
         );
         return result;

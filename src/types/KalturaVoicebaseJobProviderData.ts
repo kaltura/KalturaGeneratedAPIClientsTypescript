@@ -25,6 +25,7 @@ export class KalturaVoicebaseJobProviderData extends KalturaIntegrationJobProvid
 	spokenLanguage : KalturaLanguage;
 	readonly fileLocation : string;
 	replaceMediaContent : boolean;
+	readonly additionalParameters : string;
 
     constructor(data? : KalturaVoicebaseJobProviderDataArgs)
     {
@@ -46,7 +47,8 @@ export class KalturaVoicebaseJobProviderData extends KalturaIntegrationJobProvid
 				apiPassword : { type : 's', readOnly : true },
 				spokenLanguage : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
 				fileLocation : { type : 's', readOnly : true },
-				replaceMediaContent : { type : 'b' }
+				replaceMediaContent : { type : 'b' },
+				additionalParameters : { type : 's', readOnly : true }
             }
         );
         return result;

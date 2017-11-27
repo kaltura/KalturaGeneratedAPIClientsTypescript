@@ -20,8 +20,6 @@ export class KalturaIntegrationProviderType extends KalturaObjectBase {
     }
 
     static cielo24 = new KalturaIntegrationProviderType('cielo24.Cielo24');
-	static dexter = new KalturaIntegrationProviderType('dexterIntegration.Dexter');
-	static example = new KalturaIntegrationProviderType('exampleIntegration.Example');
 	static voicebase = new KalturaIntegrationProviderType('voicebase.Voicebase');
 }
 KalturaTypesFactory.registerType('KalturaIntegrationProviderType',KalturaIntegrationProviderType);

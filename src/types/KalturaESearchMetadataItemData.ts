@@ -6,6 +6,7 @@ import { KalturaESearchItemData, KalturaESearchItemDataArgs } from './KalturaESe
 export interface KalturaESearchMetadataItemDataArgs  extends KalturaESearchItemDataArgs {
     xpath? : string;
 	metadataProfileId? : number;
+	metadataFieldId? : number;
 	valueText? : string;
 	valueInt? : number;
 }
@@ -15,6 +16,7 @@ export class KalturaESearchMetadataItemData extends KalturaESearchItemData {
 
     xpath : string;
 	metadataProfileId : number;
+	metadataFieldId : number;
 	valueText : string;
 	valueInt : number;
 
@@ -32,6 +34,7 @@ export class KalturaESearchMetadataItemData extends KalturaESearchItemData {
                 objectType : { type : 'c', default : 'KalturaESearchMetadataItemData' },
 				xpath : { type : 's' },
 				metadataProfileId : { type : 'n' },
+				metadataFieldId : { type : 'n' },
 				valueText : { type : 's' },
 				valueInt : { type : 'n' }
             }

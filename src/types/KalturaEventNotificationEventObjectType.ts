@@ -45,6 +45,7 @@ export class KalturaEventNotificationEventObjectType extends KalturaObjectBase {
 	static genericsyndicationfeed = new KalturaEventNotificationEventObjectType('18');
 	static kuser = new KalturaEventNotificationEventObjectType('8');
 	static kusertouserrole = new KalturaEventNotificationEventObjectType('19');
+	static liveStream = new KalturaEventNotificationEventObjectType('38');
 	static metadata = new KalturaEventNotificationEventObjectType('metadataEventNotifications.Metadata');
 	static partner = new KalturaEventNotificationEventObjectType('20');
 	static permission = new KalturaEventNotificationEventObjectType('21');

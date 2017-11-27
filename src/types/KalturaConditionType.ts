@@ -19,8 +19,7 @@ export class KalturaConditionType extends KalturaObjectBase {
         return this._value;
     }
 
-    static abcWatermark = new KalturaConditionType('abcScreenersWatermarkAccessControl.abcWatermark');
-	static activeEdgeValidate = new KalturaConditionType('14');
+    static activeEdgeValidate = new KalturaConditionType('14');
 	static anonymousIp = new KalturaConditionType('15');
 	static assetPropertiesCompare = new KalturaConditionType('8');
 	static authenticated = new KalturaConditionType('1');

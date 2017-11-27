@@ -8,6 +8,9 @@ import { KalturaLivePublishStatus } from './KalturaLivePublishStatus';
 import { KalturaLiveStreamPushPublishConfiguration } from './KalturaLiveStreamPushPublishConfiguration';
 import { KalturaLiveEntryRecordingOptions } from './KalturaLiveEntryRecordingOptions';
 import { KalturaEntryServerNodeStatus } from './KalturaEntryServerNodeStatus';
+import { KalturaNullableBoolean } from './KalturaNullableBoolean';
+import { KalturaViewMode } from './KalturaViewMode';
+import { KalturaRecordingStatus } from './KalturaRecordingStatus';
 import { KalturaMediaEntry, KalturaMediaEntryArgs } from './KalturaMediaEntry';
 
 export interface KalturaLiveEntryArgs  extends KalturaMediaEntryArgs {
@@ -23,6 +26,9 @@ export interface KalturaLiveEntryArgs  extends KalturaMediaEntryArgs {
 	currentBroadcastStartTime? : number;
 	recordingOptions? : KalturaLiveEntryRecordingOptions;
 	segmentDuration? : number;
+	explicitLive? : KalturaNullableBoolean;
+	viewMode? : KalturaViewMode;
+	recordingStatus? : KalturaRecordingStatus;
 }
 
 
@@ -43,6 +49,9 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 	recordingOptions : KalturaLiveEntryRecordingOptions;
 	readonly liveStatus : KalturaEntryServerNodeStatus;
 	segmentDuration : number;
+	explicitLive : KalturaNullableBoolean;
+	viewMode : KalturaViewMode;
+	recordingStatus : KalturaRecordingStatus;
 
     constructor(data? : KalturaLiveEntryArgs)
     {
@@ -72,7 +81,10 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 				currentBroadcastStartTime : { type : 'n' },
 				recordingOptions : { type : 'o', subTypeConstructor : KalturaLiveEntryRecordingOptions, subType : 'KalturaLiveEntryRecordingOptions' },
 				liveStatus : { type : 'en', readOnly : true, subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' },
-				segmentDuration : { type : 'n' }
+				segmentDuration : { type : 'n' },
+				explicitLive : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				viewMode : { type : 'en', subTypeConstructor : KalturaViewMode, subType : 'KalturaViewMode' },
+				recordingStatus : { type : 'en', subTypeConstructor : KalturaRecordingStatus, subType : 'KalturaRecordingStatus' }
             }
         );
         return result;

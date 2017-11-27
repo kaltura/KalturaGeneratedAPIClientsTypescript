@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaCategoryListResponse } from './KalturaCategoryListResponse';
+
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -14,19 +14,19 @@ export interface CategoryMoveActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Move categories that belong to the same parent category to a target categroy - enabled only for ks with disable entitlement
  *
- * Server response type:         KalturaCategoryListResponse
+ * Server response type:         boolean
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class CategoryMoveAction extends KalturaRequest<KalturaCategoryListResponse> {
+export class CategoryMoveAction extends KalturaRequest<boolean> {
 
     categoryIds : string;
 	targetCategoryParentId : number;
 
     constructor(data : CategoryMoveActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaCategoryListResponse', responseConstructor : KalturaCategoryListResponse  });
+        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

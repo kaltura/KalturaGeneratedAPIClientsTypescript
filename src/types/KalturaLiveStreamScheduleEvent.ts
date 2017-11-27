@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEntryScheduleEvent, KalturaEntryScheduleEventArgs } from './KalturaEntryScheduleEvent';
 
 export interface KalturaLiveStreamScheduleEventArgs  extends KalturaEntryScheduleEventArgs {
-    
+    projectedAudience? : number;
 }
 
 
 export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
 
-    
+    projectedAudience : number;
 
     constructor(data? : KalturaLiveStreamScheduleEventArgs)
     {
@@ -23,7 +23,8 @@ export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEvent' }
+                objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEvent' },
+				projectedAudience : { type : 'n' }
             }
         );
         return result;

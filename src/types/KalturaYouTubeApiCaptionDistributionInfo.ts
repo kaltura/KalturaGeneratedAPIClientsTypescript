@@ -8,6 +8,7 @@ export interface KalturaYouTubeApiCaptionDistributionInfoArgs  extends KalturaOb
     language? : string;
 	label? : string;
 	filePath? : string;
+	encryptionKey? : string;
 	remoteId? : string;
 	action? : KalturaYouTubeApiDistributionCaptionAction;
 	version? : string;
@@ -20,6 +21,7 @@ export class KalturaYouTubeApiCaptionDistributionInfo extends KalturaObjectBase 
     language : string;
 	label : string;
 	filePath : string;
+	encryptionKey : string;
 	remoteId : string;
 	action : KalturaYouTubeApiDistributionCaptionAction;
 	version : string;
@@ -40,6 +42,7 @@ export class KalturaYouTubeApiCaptionDistributionInfo extends KalturaObjectBase 
 				language : { type : 's' },
 				label : { type : 's' },
 				filePath : { type : 's' },
+				encryptionKey : { type : 's' },
 				remoteId : { type : 's' },
 				action : { type : 'en', subTypeConstructor : KalturaYouTubeApiDistributionCaptionAction, subType : 'KalturaYouTubeApiDistributionCaptionAction' },
 				version : { type : 's' },

@@ -22,6 +22,7 @@ export class KalturaBaseEntryCloneOptions extends KalturaObjectBase {
     static accessControl = new KalturaBaseEntryCloneOptions('4');
 	static adCuePoints = new KalturaBaseEntryCloneOptions('adCuePoint.AD_CUE_POINTS');
 	static annotationCuePoints = new KalturaBaseEntryCloneOptions('annotation.ANNOTATION_CUE_POINTS');
+	static captions = new KalturaBaseEntryCloneOptions('7');
 	static categories = new KalturaBaseEntryCloneOptions('2');
 	static childEntries = new KalturaBaseEntryCloneOptions('3');
 	static codeCuePoints = new KalturaBaseEntryCloneOptions('codeCuePoint.CODE_CUE_POINTS');

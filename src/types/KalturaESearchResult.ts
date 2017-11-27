@@ -6,6 +6,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaESearchResultArgs  extends KalturaObjectBaseArgs {
     object? : KalturaObjectBase;
+	highlight? : string;
 	itemsData? : KalturaESearchItemDataResult[];
 }
 
@@ -13,6 +14,7 @@ export interface KalturaESearchResultArgs  extends KalturaObjectBaseArgs {
 export class KalturaESearchResult extends KalturaObjectBase {
 
     object : KalturaObjectBase;
+	highlight : string;
 	itemsData : KalturaESearchItemDataResult[];
 
     constructor(data? : KalturaESearchResultArgs)
@@ -29,6 +31,7 @@ export class KalturaESearchResult extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaESearchResult' },
 				object : { type : 'o', subTypeConstructor : KalturaObjectBase, subType : 'KalturaObjectBase' },
+				highlight : { type : 's' },
 				itemsData : { type : 'a', subTypeConstructor : KalturaESearchItemDataResult, subType : 'KalturaESearchItemDataResult' }
             }
         );

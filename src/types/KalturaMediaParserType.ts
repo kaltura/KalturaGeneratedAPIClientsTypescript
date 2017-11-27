@@ -21,6 +21,5 @@ export class KalturaMediaParserType extends KalturaObjectBase {
 
     static ffmpeg = new KalturaMediaParserType('1');
 	static mediainfo = new KalturaMediaParserType('0');
-	static remoteMediainfo = new KalturaMediaParserType('remoteMediaInfo.RemoteMediaInfo');
 }
 KalturaTypesFactory.registerType('KalturaMediaParserType',KalturaMediaParserType);

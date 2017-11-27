@@ -7,6 +7,7 @@ import { KalturaEmailNotificationRecipientProvider, KalturaEmailNotificationReci
 
 export interface KalturaEmailNotificationCategoryRecipientProviderArgs  extends KalturaEmailNotificationRecipientProviderArgs {
     categoryId? : KalturaStringValue;
+	categoryIds? : KalturaStringValue;
 	categoryUserFilter? : KalturaCategoryUserProviderFilter;
 }
 
@@ -14,6 +15,7 @@ export interface KalturaEmailNotificationCategoryRecipientProviderArgs  extends 
 export class KalturaEmailNotificationCategoryRecipientProvider extends KalturaEmailNotificationRecipientProvider {
 
     categoryId : KalturaStringValue;
+	categoryIds : KalturaStringValue;
 	categoryUserFilter : KalturaCategoryUserProviderFilter;
 
     constructor(data? : KalturaEmailNotificationCategoryRecipientProviderArgs)
@@ -29,6 +31,7 @@ export class KalturaEmailNotificationCategoryRecipientProvider extends KalturaEm
             {
                 objectType : { type : 'c', default : 'KalturaEmailNotificationCategoryRecipientProvider' },
 				categoryId : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				categoryIds : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				categoryUserFilter : { type : 'o', subTypeConstructor : KalturaCategoryUserProviderFilter, subType : 'KalturaCategoryUserProviderFilter' }
             }
         );

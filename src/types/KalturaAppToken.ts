@@ -13,6 +13,7 @@ export interface KalturaAppTokenArgs  extends KalturaObjectBaseArgs {
 	sessionDuration? : number;
 	sessionPrivileges? : string;
 	hashType? : KalturaAppTokenHashType;
+	description? : string;
 }
 
 
@@ -30,6 +31,7 @@ export class KalturaAppToken extends KalturaObjectBase {
 	sessionDuration : number;
 	sessionPrivileges : string;
 	hashType : KalturaAppTokenHashType;
+	description : string;
 
     constructor(data? : KalturaAppTokenArgs)
     {
@@ -54,7 +56,8 @@ export class KalturaAppToken extends KalturaObjectBase {
 				sessionUserId : { type : 's' },
 				sessionDuration : { type : 'n' },
 				sessionPrivileges : { type : 's' },
-				hashType : { type : 'es', subTypeConstructor : KalturaAppTokenHashType, subType : 'KalturaAppTokenHashType' }
+				hashType : { type : 'es', subTypeConstructor : KalturaAppTokenHashType, subType : 'KalturaAppTokenHashType' },
+				description : { type : 's' }
             }
         );
         return result;

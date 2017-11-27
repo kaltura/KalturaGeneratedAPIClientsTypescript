@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaESearchItemDataArgs  extends KalturaObjectBaseArgs {
-    
+    highlight? : string;
 }
 
 
 export class KalturaESearchItemData extends KalturaObjectBase {
 
-    
+    highlight : string;
 
     constructor(data? : KalturaESearchItemDataArgs)
     {
@@ -23,7 +23,8 @@ export class KalturaESearchItemData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaESearchItemData' }
+                objectType : { type : 'c', default : 'KalturaESearchItemData' },
+				highlight : { type : 's' }
             }
         );
         return result;

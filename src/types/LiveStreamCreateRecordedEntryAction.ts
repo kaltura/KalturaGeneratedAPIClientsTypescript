@@ -15,7 +15,7 @@ export interface LiveStreamCreateRecordedEntryActionArgs  extends KalturaRequest
 /**
  * Build request payload for service 'liveStream' action 'createRecordedEntry'.
  *
- * 
+ * Usage: Create recorded entry id if it doesn't exist and make sure it happens on the DC that the live entry was created on
  *
  * Server response type:         KalturaLiveEntry
  * Server failure response type: KalturaAPIException

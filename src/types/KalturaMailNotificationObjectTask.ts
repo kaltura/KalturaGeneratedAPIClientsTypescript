@@ -8,6 +8,7 @@ export interface KalturaMailNotificationObjectTaskArgs  extends KalturaObjectTas
 	sender? : string;
 	subject? : string;
 	message? : string;
+	footer? : string;
 	link? : string;
 	sendToUsers? : boolean;
 }
@@ -19,6 +20,7 @@ export class KalturaMailNotificationObjectTask extends KalturaObjectTask {
 	sender : string;
 	subject : string;
 	message : string;
+	footer : string;
 	link : string;
 	sendToUsers : boolean;
 
@@ -38,6 +40,7 @@ export class KalturaMailNotificationObjectTask extends KalturaObjectTask {
 				sender : { type : 's' },
 				subject : { type : 's' },
 				message : { type : 's' },
+				footer : { type : 's' },
 				link : { type : 's' },
 				sendToUsers : { type : 'b' }
             }

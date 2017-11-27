@@ -1,11 +1,12 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaFileContainer } from './KalturaFileContainer';
 import { KalturaAssetType } from './KalturaAssetType';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaCaptureThumbJobDataArgs  extends KalturaJobDataArgs {
-    srcFileSyncLocalPath? : string;
+    fileContainer? : KalturaFileContainer;
 	actualSrcFileSyncLocalPath? : string;
 	srcFileSyncRemoteUrl? : string;
 	thumbParamsOutputId? : number;
@@ -18,7 +19,7 @@ export interface KalturaCaptureThumbJobDataArgs  extends KalturaJobDataArgs {
 
 export class KalturaCaptureThumbJobData extends KalturaJobData {
 
-    srcFileSyncLocalPath : string;
+    fileContainer : KalturaFileContainer;
 	actualSrcFileSyncLocalPath : string;
 	srcFileSyncRemoteUrl : string;
 	thumbParamsOutputId : number;
@@ -39,7 +40,7 @@ export class KalturaCaptureThumbJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCaptureThumbJobData' },
-				srcFileSyncLocalPath : { type : 's' },
+				fileContainer : { type : 'o', subTypeConstructor : KalturaFileContainer, subType : 'KalturaFileContainer' },
 				actualSrcFileSyncLocalPath : { type : 's' },
 				srcFileSyncRemoteUrl : { type : 's' },
 				thumbParamsOutputId : { type : 'n' },

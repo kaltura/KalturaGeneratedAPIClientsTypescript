@@ -5,6 +5,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaFileSyncDescriptorArgs  extends KalturaObjectBaseArgs {
     fileSyncLocalPath? : string;
+	fileEncryptionKey? : string;
 	fileSyncRemoteUrl? : string;
 	fileSyncObjectSubType? : number;
 }
@@ -13,6 +14,7 @@ export interface KalturaFileSyncDescriptorArgs  extends KalturaObjectBaseArgs {
 export class KalturaFileSyncDescriptor extends KalturaObjectBase {
 
     fileSyncLocalPath : string;
+	fileEncryptionKey : string;
 	fileSyncRemoteUrl : string;
 	fileSyncObjectSubType : number;
 
@@ -29,6 +31,7 @@ export class KalturaFileSyncDescriptor extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaFileSyncDescriptor' },
 				fileSyncLocalPath : { type : 's' },
+				fileEncryptionKey : { type : 's' },
 				fileSyncRemoteUrl : { type : 's' },
 				fileSyncObjectSubType : { type : 'n' }
             }

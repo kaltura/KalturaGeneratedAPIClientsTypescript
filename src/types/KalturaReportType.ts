@@ -26,15 +26,15 @@ export class KalturaReportType extends KalturaObjectBase {
 	static contentInteractions = new KalturaReportType('3');
 	static live = new KalturaReportType('24');
 	static mapOverlay = new KalturaReportType('4');
-	static operationSystem = new KalturaReportType('22');
+	static operatingSystem = new KalturaReportType('22');
 	static partnerUsage = new KalturaReportType('201');
 	static platforms = new KalturaReportType('21');
 	static quiz = new KalturaReportType('quiz.QUIZ');
 	static quizAggregateByQuestion = new KalturaReportType('quiz.QUIZ_AGGREGATE_BY_QUESTION');
 	static quizUserAggregateByQuestion = new KalturaReportType('quiz.QUIZ_USER_AGGREGATE_BY_QUESTION');
 	static quizUserPercentage = new KalturaReportType('quiz.QUIZ_USER_PERCENTAGE');
+	static specificUserEngagement = new KalturaReportType('12');
 	static specificUserUsage = new KalturaReportType('18');
-	static speficicUserEngagement = new KalturaReportType('12');
 	static topContent = new KalturaReportType('1');
 	static topContributors = new KalturaReportType('5');
 	static topCreators = new KalturaReportType('20');

@@ -7,6 +7,7 @@ export interface KalturaParseMultiLanguageCaptionAssetJobDataArgs  extends Kaltu
     multiLanaguageCaptionAssetId? : string;
 	entryId? : string;
 	fileLocation? : string;
+	fileEncryptionKey? : string;
 }
 
 
@@ -15,6 +16,7 @@ export class KalturaParseMultiLanguageCaptionAssetJobData extends KalturaJobData
     multiLanaguageCaptionAssetId : string;
 	entryId : string;
 	fileLocation : string;
+	fileEncryptionKey : string;
 
     constructor(data? : KalturaParseMultiLanguageCaptionAssetJobDataArgs)
     {
@@ -30,7 +32,8 @@ export class KalturaParseMultiLanguageCaptionAssetJobData extends KalturaJobData
                 objectType : { type : 'c', default : 'KalturaParseMultiLanguageCaptionAssetJobData' },
 				multiLanaguageCaptionAssetId : { type : 's' },
 				entryId : { type : 's' },
-				fileLocation : { type : 's' }
+				fileLocation : { type : 's' },
+				fileEncryptionKey : { type : 's' }
             }
         );
         return result;

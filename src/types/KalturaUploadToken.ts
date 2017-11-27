@@ -2,11 +2,13 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUploadTokenStatus } from './KalturaUploadTokenStatus';
+import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUploadTokenArgs  extends KalturaObjectBaseArgs {
     fileName? : string;
 	fileSize? : number;
+	autoFinalize? : KalturaNullableBoolean;
 }
 
 
@@ -22,6 +24,7 @@ export class KalturaUploadToken extends KalturaObjectBase {
 	readonly createdAt : Date;
 	readonly updatedAt : Date;
 	readonly uploadUrl : string;
+	autoFinalize : KalturaNullableBoolean;
 
     constructor(data? : KalturaUploadTokenArgs)
     {
@@ -44,7 +47,8 @@ export class KalturaUploadToken extends KalturaObjectBase {
 				uploadedFileSize : { type : 'n', readOnly : true },
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
-				uploadUrl : { type : 's', readOnly : true }
+				uploadUrl : { type : 's', readOnly : true },
+				autoFinalize : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;

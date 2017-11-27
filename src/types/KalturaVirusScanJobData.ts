@@ -1,12 +1,13 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaFileContainer } from './KalturaFileContainer';
 import { KalturaVirusScanJobResult } from './KalturaVirusScanJobResult';
 import { KalturaVirusFoundAction } from './KalturaVirusFoundAction';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaVirusScanJobDataArgs  extends KalturaJobDataArgs {
-    srcFilePath? : string;
+    fileContainer? : KalturaFileContainer;
 	flavorAssetId? : string;
 	scanResult? : KalturaVirusScanJobResult;
 	virusFoundAction? : KalturaVirusFoundAction;
@@ -15,7 +16,7 @@ export interface KalturaVirusScanJobDataArgs  extends KalturaJobDataArgs {
 
 export class KalturaVirusScanJobData extends KalturaJobData {
 
-    srcFilePath : string;
+    fileContainer : KalturaFileContainer;
 	flavorAssetId : string;
 	scanResult : KalturaVirusScanJobResult;
 	virusFoundAction : KalturaVirusFoundAction;
@@ -32,7 +33,7 @@ export class KalturaVirusScanJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaVirusScanJobData' },
-				srcFilePath : { type : 's' },
+				fileContainer : { type : 'o', subTypeConstructor : KalturaFileContainer, subType : 'KalturaFileContainer' },
 				flavorAssetId : { type : 's' },
 				scanResult : { type : 'en', subTypeConstructor : KalturaVirusScanJobResult, subType : 'KalturaVirusScanJobResult' },
 				virusFoundAction : { type : 'en', subTypeConstructor : KalturaVirusFoundAction, subType : 'KalturaVirusFoundAction' }

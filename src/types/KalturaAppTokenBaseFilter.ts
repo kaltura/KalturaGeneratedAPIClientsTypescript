@@ -13,6 +13,7 @@ export interface KalturaAppTokenBaseFilterArgs  extends KalturaFilterArgs {
 	updatedAtLessThanOrEqual? : Date;
 	statusEqual? : KalturaAppTokenStatus;
 	statusIn? : string;
+	sessionUserIdEqual? : string;
 }
 
 
@@ -26,6 +27,7 @@ export class KalturaAppTokenBaseFilter extends KalturaFilter {
 	updatedAtLessThanOrEqual : Date;
 	statusEqual : KalturaAppTokenStatus;
 	statusIn : string;
+	sessionUserIdEqual : string;
 
     constructor(data? : KalturaAppTokenBaseFilterArgs)
     {
@@ -46,7 +48,8 @@ export class KalturaAppTokenBaseFilter extends KalturaFilter {
 				updatedAtGreaterThanOrEqual : { type : 'd' },
 				updatedAtLessThanOrEqual : { type : 'd' },
 				statusEqual : { type : 'en', subTypeConstructor : KalturaAppTokenStatus, subType : 'KalturaAppTokenStatus' },
-				statusIn : { type : 's' }
+				statusIn : { type : 's' },
+				sessionUserIdEqual : { type : 's' }
             }
         );
         return result;

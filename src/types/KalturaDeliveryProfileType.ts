@@ -30,8 +30,6 @@ export class KalturaDeliveryProfileType extends KalturaObjectBase {
 	static appleHttp = new KalturaDeliveryProfileType('1');
 	static edgeCastHttp = new KalturaDeliveryProfileType('edgeCast.EDGE_CAST_HTTP');
 	static edgeCastRtmp = new KalturaDeliveryProfileType('edgeCast.EDGE_CAST_RTMP');
-	static forensicWatermarkAppleHttp = new KalturaDeliveryProfileType('forensicWatermark.FORENSIC_WATERMARK_APPLE_HTTP');
-	static forensicWatermarkDash = new KalturaDeliveryProfileType('forensicWatermark.FORENSIC_WATERMARK_DASH');
 	static genericHds = new KalturaDeliveryProfileType('23');
 	static genericHdsManifest = new KalturaDeliveryProfileType('26');
 	static genericHls = new KalturaDeliveryProfileType('21');
@@ -64,8 +62,6 @@ export class KalturaDeliveryProfileType extends KalturaObjectBase {
 	static rtmp = new KalturaDeliveryProfileType('5');
 	static rtsp = new KalturaDeliveryProfileType('6');
 	static silverLight = new KalturaDeliveryProfileType('7');
-	static uplynkHttp = new KalturaDeliveryProfileType('uplynk.UPLYNK_HTTP');
-	static uplynkRtmp = new KalturaDeliveryProfileType('uplynk.UPLYNK_RTMP');
 	static velocixHds = new KalturaDeliveryProfileType('velocix.VELOCIX_HDS');
 	static velocixHls = new KalturaDeliveryProfileType('velocix.VELOCIX_HLS');
 	static vodPackagerDash = new KalturaDeliveryProfileType('68');

@@ -18,7 +18,7 @@ export interface LiveStreamSetRecordedContentActionArgs  extends KalturaRequestA
 /**
  * Build request payload for service 'liveStream' action 'setRecordedContent'.
  *
- * Usage: Sey recorded video to live entry
+ * Usage: Set recorded video to live entry
  *
  * Server response type:         KalturaLiveEntry
  * Server failure response type: KalturaAPIException

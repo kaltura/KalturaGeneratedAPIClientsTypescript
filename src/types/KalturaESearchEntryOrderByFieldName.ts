@@ -21,7 +21,10 @@ export class KalturaESearchEntryOrderByFieldName extends KalturaObjectBase {
 
     static entryCreatedAt = new KalturaESearchEntryOrderByFieldName('created_at');
 	static entryEndDate = new KalturaESearchEntryOrderByFieldName('end_date');
+	static entryName = new KalturaESearchEntryOrderByFieldName('name.keyword');
 	static entryStartDate = new KalturaESearchEntryOrderByFieldName('start_date');
 	static entryUpdatedAt = new KalturaESearchEntryOrderByFieldName('updated_at');
+	static entryViews = new KalturaESearchEntryOrderByFieldName('views');
+	static entryVotes = new KalturaESearchEntryOrderByFieldName('votes');
 }
 KalturaTypesFactory.registerType('KalturaESearchEntryOrderByFieldName',KalturaESearchEntryOrderByFieldName);

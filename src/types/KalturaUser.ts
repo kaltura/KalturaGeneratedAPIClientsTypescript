@@ -32,7 +32,9 @@ export interface KalturaUserArgs  extends KalturaObjectBaseArgs {
 	lastName? : string;
 	isAdmin? : boolean;
 	language? : KalturaLanguageCode;
+	loginEnabled? : boolean;
 	roleIds? : string;
+	isAccountOwner? : boolean;
 	allowedPartnerIds? : string;
 	allowedPartnerPackages? : string;
 }
@@ -71,10 +73,10 @@ export class KalturaUser extends KalturaObjectBase {
 	readonly lastLoginTime : number;
 	readonly statusUpdatedAt : number;
 	readonly deletedAt : Date;
-	readonly loginEnabled : boolean;
+	loginEnabled : boolean;
 	roleIds : string;
 	readonly roleNames : string;
-	readonly isAccountOwner : boolean;
+	isAccountOwner : boolean;
 	allowedPartnerIds : string;
 	allowedPartnerPackages : string;
 
@@ -121,10 +123,10 @@ export class KalturaUser extends KalturaObjectBase {
 				lastLoginTime : { type : 'n', readOnly : true },
 				statusUpdatedAt : { type : 'n', readOnly : true },
 				deletedAt : { type : 'd', readOnly : true },
-				loginEnabled : { type : 'b', readOnly : true },
+				loginEnabled : { type : 'b' },
 				roleIds : { type : 's' },
 				roleNames : { type : 's', readOnly : true },
-				isAccountOwner : { type : 'b', readOnly : true },
+				isAccountOwner : { type : 'b' },
 				allowedPartnerIds : { type : 's' },
 				allowedPartnerPackages : { type : 's' }
             }
