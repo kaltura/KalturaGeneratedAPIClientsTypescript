@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file. See [standa
 * append action value to endpoint uri only if provided by request ([e53a9b5](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/e53a9b5))
 * generate endpoint to service with '/api_v3/' as a prefix. ([fdaf513](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/fdaf513))
 * support empty array as a valid resopnse ([6c677df](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/commit/6c677df))
-
+* Fix upload file in IE11 and edge and Safari
 
 ### Features
 
