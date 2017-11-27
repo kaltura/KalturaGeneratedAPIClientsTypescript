@@ -9,6 +9,10 @@ export function getTestFile(): string | Buffer {
   return fs.readFileSync(path.join(__dirname, "DemoVideo.flv"));
 }
 
+export function escapeRegExp(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\$&");
+}
+
 export function getClient(): Promise<KalturaBrowserHttpClient> {
     const httpConfiguration = {
         endpointUrl: TestsConfig.endpointUrl,
