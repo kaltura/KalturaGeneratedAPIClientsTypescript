@@ -8,6 +8,6 @@ notifications:
     recipients:
       - jess.portnoy@kaltura.com
       - eran.sakal@kaltura.com
-      - Amir.Chervinsky@kaltura.com
+      - amir.chervinsky@kaltura.com
     on_success: change
     on_failure: always
