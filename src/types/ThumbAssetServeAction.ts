@@ -4,9 +4,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaThumbParams } from './KalturaThumbParams';
 import { KalturaThumbnailServeOptions } from './KalturaThumbnailServeOptions';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface ThumbAssetServeActionArgs  extends KalturaRequestArgs {
+export interface ThumbAssetServeActionArgs  extends KalturaFileRequestArgs {
     thumbAssetId : string;
 	version? : number;
 	thumbParams? : KalturaThumbParams;
@@ -18,12 +18,12 @@ export interface ThumbAssetServeActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Serves thumbnail by its id
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class ThumbAssetServeAction extends KalturaRequest<string> {
+export class ThumbAssetServeAction extends KalturaFileRequest {
 
     thumbAssetId : string;
 	version : number;
@@ -32,7 +32,7 @@ export class ThumbAssetServeAction extends KalturaRequest<string> {
 
     constructor(data : ThumbAssetServeActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

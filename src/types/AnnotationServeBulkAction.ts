@@ -4,9 +4,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 import { KalturaCuePointFilter } from './KalturaCuePointFilter';
 import { KalturaFilterPager } from './KalturaFilterPager';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface AnnotationServeBulkActionArgs  extends KalturaRequestArgs {
+export interface AnnotationServeBulkActionArgs  extends KalturaFileRequestArgs {
     filter? : KalturaCuePointFilter;
 	pager? : KalturaFilterPager;
 }
@@ -16,19 +16,19 @@ export interface AnnotationServeBulkActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Download multiple cue points objects as XML definitions
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class AnnotationServeBulkAction extends KalturaRequest<string> {
+export class AnnotationServeBulkAction extends KalturaFileRequest {
 
     filter : KalturaCuePointFilter;
 	pager : KalturaFilterPager;
 
     constructor(data? : AnnotationServeBulkActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

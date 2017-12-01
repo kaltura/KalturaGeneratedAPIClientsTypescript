@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
 import { KalturaAttachmentServeOptions } from './KalturaAttachmentServeOptions';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface AttachmentAssetServeActionArgs  extends KalturaRequestArgs {
+export interface AttachmentAssetServeActionArgs  extends KalturaFileRequestArgs {
     attachmentAssetId : string;
 	serveOptions? : KalturaAttachmentServeOptions;
 }
@@ -15,19 +15,19 @@ export interface AttachmentAssetServeActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Serves attachment by its id
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class AttachmentAssetServeAction extends KalturaRequest<string> {
+export class AttachmentAssetServeAction extends KalturaFileRequest {
 
     attachmentAssetId : string;
 	serveOptions : KalturaAttachmentServeOptions;
 
     constructor(data : AttachmentAssetServeActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

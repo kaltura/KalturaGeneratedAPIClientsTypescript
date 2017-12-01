@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
 import { KalturaQuizOutputType } from './KalturaQuizOutputType';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface QuizServeActionArgs  extends KalturaRequestArgs {
+export interface QuizServeActionArgs  extends KalturaFileRequestArgs {
     entryId : string;
 	quizOutputType : KalturaQuizOutputType;
 }
@@ -17,19 +17,19 @@ export interface QuizServeActionArgs  extends KalturaRequestArgs {
  * The Output type defines the file format in which the quiz will be generated
  * Currently only PDF files are supported
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class QuizServeAction extends KalturaRequest<string> {
+export class QuizServeAction extends KalturaFileRequest {
 
     entryId : string;
 	quizOutputType : KalturaQuizOutputType;
 
     constructor(data : QuizServeActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

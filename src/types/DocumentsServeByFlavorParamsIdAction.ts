@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface DocumentsServeByFlavorParamsIdActionArgs  extends KalturaRequestArgs {
+export interface DocumentsServeByFlavorParamsIdActionArgs  extends KalturaFileRequestArgs {
     entryId : string;
 	flavorParamsId? : string;
 	forceProxy? : boolean;
@@ -15,12 +15,12 @@ export interface DocumentsServeByFlavorParamsIdActionArgs  extends KalturaReques
  *
  * Usage: Serves the file content
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class DocumentsServeByFlavorParamsIdAction extends KalturaRequest<string> {
+export class DocumentsServeByFlavorParamsIdAction extends KalturaFileRequest {
 
     entryId : string;
 	flavorParamsId : string;
@@ -28,7 +28,7 @@ export class DocumentsServeByFlavorParamsIdAction extends KalturaRequest<string>
 
     constructor(data : DocumentsServeByFlavorParamsIdActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
         if (typeof this.forceProxy === 'undefined') this.forceProxy = false;
     }
 

@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface FlavorAssetGetVolumeMapActionArgs  extends KalturaRequestArgs {
+export interface FlavorAssetGetVolumeMapActionArgs  extends KalturaFileRequestArgs {
     flavorId : string;
 }
 
@@ -13,18 +13,18 @@ export interface FlavorAssetGetVolumeMapActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Get volume map by entry id
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class FlavorAssetGetVolumeMapAction extends KalturaRequest<string> {
+export class FlavorAssetGetVolumeMapAction extends KalturaFileRequest {
 
     flavorId : string;
 
     constructor(data : FlavorAssetGetVolumeMapActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

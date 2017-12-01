@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
 import { KalturaEventNotificationEventObjectType } from './KalturaEventNotificationEventObjectType';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface BusinessProcessCaseServeDiagramActionArgs  extends KalturaRequestArgs {
+export interface BusinessProcessCaseServeDiagramActionArgs  extends KalturaFileRequestArgs {
     objectType : KalturaEventNotificationEventObjectType;
 	objectId : string;
 	businessProcessStartNotificationTemplateId : number;
@@ -16,12 +16,12 @@ export interface BusinessProcessCaseServeDiagramActionArgs  extends KalturaReque
  *
  * Usage: Server business-process case diagram
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class BusinessProcessCaseServeDiagramAction extends KalturaRequest<string> {
+export class BusinessProcessCaseServeDiagramAction extends KalturaFileRequest {
 
     objectType : KalturaEventNotificationEventObjectType;
 	objectId : string;
@@ -29,7 +29,7 @@ export class BusinessProcessCaseServeDiagramAction extends KalturaRequest<string
 
     constructor(data : BusinessProcessCaseServeDiagramActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

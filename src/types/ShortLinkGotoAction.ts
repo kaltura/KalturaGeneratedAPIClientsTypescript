@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface ShortLinkGotoActionArgs  extends KalturaRequestArgs {
+export interface ShortLinkGotoActionArgs  extends KalturaFileRequestArgs {
     id : string;
 	proxy? : boolean;
 }
@@ -14,19 +14,19 @@ export interface ShortLinkGotoActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Serves short link
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class ShortLinkGotoAction extends KalturaRequest<string> {
+export class ShortLinkGotoAction extends KalturaFileRequest {
 
     id : string;
 	proxy : boolean;
 
     constructor(data : ShortLinkGotoActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
         if (typeof this.proxy === 'undefined') this.proxy = false;
     }
 

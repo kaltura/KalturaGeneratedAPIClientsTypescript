@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface MediaGetVolumeMapActionArgs  extends KalturaRequestArgs {
+export interface MediaGetVolumeMapActionArgs  extends KalturaFileRequestArgs {
     entryId : string;
 }
 
@@ -13,18 +13,18 @@ export interface MediaGetVolumeMapActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Get volume map by entry id
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class MediaGetVolumeMapAction extends KalturaRequest<string> {
+export class MediaGetVolumeMapAction extends KalturaFileRequest {
 
     entryId : string;
 
     constructor(data : MediaGetVolumeMapActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

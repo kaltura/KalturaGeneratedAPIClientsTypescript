@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface DataServeActionArgs  extends KalturaRequestArgs {
+export interface DataServeActionArgs  extends KalturaFileRequestArgs {
     entryId : string;
 	version? : number;
 	forceProxy? : boolean;
@@ -15,12 +15,12 @@ export interface DataServeActionArgs  extends KalturaRequestArgs {
  *
  * Usage: serve action returan the file from dataContent field
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class DataServeAction extends KalturaRequest<string> {
+export class DataServeAction extends KalturaFileRequest {
 
     entryId : string;
 	version : number;
@@ -28,7 +28,7 @@ export class DataServeAction extends KalturaRequest<string> {
 
     constructor(data : DataServeActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
         if (typeof this.version === 'undefined') this.version = -1;
 		if (typeof this.forceProxy === 'undefined') this.forceProxy = false;
     }

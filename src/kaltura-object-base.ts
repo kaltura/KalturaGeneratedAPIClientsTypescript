@@ -247,10 +247,10 @@ export abstract class KalturaObjectBase{
 
         if (usedFallbackType && result)
         {
-                logger.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}', Falling back to '${fallbackObjectType}' object type. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`);
+                logger.warn(`[kaltura-client]: Could not find object type '${objectType}', Falling back to '${fallbackObjectType}' object type. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`);
         }else if (!result)
         {
-            logger.warn(`[kaltura-typescript-client]: Could not find object type '${objectType}'. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`);
+            logger.warn(`[kaltura-client]: Could not find object type '${objectType}'. (Did you remember to set your accepted object types in the request “acceptedTypes” attribute?)`);
         }
 
         return result;

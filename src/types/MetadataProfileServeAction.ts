@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface MetadataProfileServeActionArgs  extends KalturaRequestArgs {
+export interface MetadataProfileServeActionArgs  extends KalturaFileRequestArgs {
     id : number;
 }
 
@@ -13,18 +13,18 @@ export interface MetadataProfileServeActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Serves metadata profile XSD file
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class MetadataProfileServeAction extends KalturaRequest<string> {
+export class MetadataProfileServeAction extends KalturaFileRequest {
 
     id : number;
 
     constructor(data : MetadataProfileServeActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface ReportGetCsvFromStringParamsActionArgs  extends KalturaRequestArgs {
+export interface ReportGetCsvFromStringParamsActionArgs  extends KalturaFileRequestArgs {
     id : number;
 	params? : string;
 }
@@ -14,19 +14,19 @@ export interface ReportGetCsvFromStringParamsActionArgs  extends KalturaRequestA
  *
  * Usage: Returns report CSV file executed by string params with the following convention: param1=value1;param2=value2
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class ReportGetCsvFromStringParamsAction extends KalturaRequest<string> {
+export class ReportGetCsvFromStringParamsAction extends KalturaFileRequest {
 
     id : number;
 	params : string;
 
     constructor(data : ReportGetCsvFromStringParamsActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

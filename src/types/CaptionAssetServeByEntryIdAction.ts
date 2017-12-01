@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface CaptionAssetServeByEntryIdActionArgs  extends KalturaRequestArgs {
+export interface CaptionAssetServeByEntryIdActionArgs  extends KalturaFileRequestArgs {
     entryId : string;
 	captionParamId? : number;
 }
@@ -14,19 +14,19 @@ export interface CaptionAssetServeByEntryIdActionArgs  extends KalturaRequestArg
  *
  * Usage: Serves caption by entry id and thumnail params id
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class CaptionAssetServeByEntryIdAction extends KalturaRequest<string> {
+export class CaptionAssetServeByEntryIdAction extends KalturaFileRequest {
 
     entryId : string;
 	captionParamId : number;
 
     constructor(data : CaptionAssetServeByEntryIdActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

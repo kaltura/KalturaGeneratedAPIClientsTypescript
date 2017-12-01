@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
 import { KalturaKeyValue } from './KalturaKeyValue';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface ReportGetCsvActionArgs  extends KalturaRequestArgs {
+export interface ReportGetCsvActionArgs  extends KalturaFileRequestArgs {
     id : number;
 	params? : KalturaKeyValue[];
 }
@@ -15,19 +15,19 @@ export interface ReportGetCsvActionArgs  extends KalturaRequestArgs {
  *
  * 
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class ReportGetCsvAction extends KalturaRequest<string> {
+export class ReportGetCsvAction extends KalturaFileRequest {
 
     id : number;
 	params : KalturaKeyValue[];
 
     constructor(data : ReportGetCsvActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
         if (typeof this.params === 'undefined') this.params = [];
     }
 

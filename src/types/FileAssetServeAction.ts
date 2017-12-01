@@ -2,9 +2,9 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface FileAssetServeActionArgs  extends KalturaRequestArgs {
+export interface FileAssetServeActionArgs  extends KalturaFileRequestArgs {
     id : number;
 }
 
@@ -13,18 +13,18 @@ export interface FileAssetServeActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Serve file asset by id
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class FileAssetServeAction extends KalturaRequest<string> {
+export class FileAssetServeAction extends KalturaFileRequest {
 
     id : number;
 
     constructor(data : FileAssetServeActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata

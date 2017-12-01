@@ -3,9 +3,9 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
 import { KalturaDistributionAction } from './KalturaDistributionAction';
-import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
+import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
-export interface EntryDistributionServeReturnedDataActionArgs  extends KalturaRequestArgs {
+export interface EntryDistributionServeReturnedDataActionArgs  extends KalturaFileRequestArgs {
     id : number;
 	actionType : KalturaDistributionAction;
 }
@@ -15,19 +15,19 @@ export interface EntryDistributionServeReturnedDataActionArgs  extends KalturaRe
  *
  * Usage: Serves entry distribution returned data
  *
- * Server response type:         string
+ * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
  * @class
- * @extends KalturaRequest
+ * @extends KalturaFileRequest
  */
-export class EntryDistributionServeReturnedDataAction extends KalturaRequest<string> {
+export class EntryDistributionServeReturnedDataAction extends KalturaFileRequest {
 
     id : number;
 	actionType : KalturaDistributionAction;
 
     constructor(data : EntryDistributionServeReturnedDataActionArgs)
     {
-        super(data, {responseType : 'f', responseSubType : '', responseConstructor : null });
+        super(data);
     }
 
     protected _getMetadata() : KalturaObjectMetadata
