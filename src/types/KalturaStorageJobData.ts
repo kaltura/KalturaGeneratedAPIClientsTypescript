@@ -12,6 +12,7 @@ export interface KalturaStorageJobDataArgs  extends KalturaJobDataArgs {
 	serverPassPhrase? : string;
 	ftpPassiveMode? : boolean;
 	srcFileSyncLocalPath? : string;
+	srcFileEncryptionKey? : string;
 	srcFileSyncId? : string;
 	destFileSyncStoredPath? : string;
 }
@@ -27,6 +28,7 @@ export class KalturaStorageJobData extends KalturaJobData {
 	serverPassPhrase : string;
 	ftpPassiveMode : boolean;
 	srcFileSyncLocalPath : string;
+	srcFileEncryptionKey : string;
 	srcFileSyncId : string;
 	destFileSyncStoredPath : string;
 
@@ -50,6 +52,7 @@ export class KalturaStorageJobData extends KalturaJobData {
 				serverPassPhrase : { type : 's' },
 				ftpPassiveMode : { type : 'b' },
 				srcFileSyncLocalPath : { type : 's' },
+				srcFileEncryptionKey : { type : 's' },
 				srcFileSyncId : { type : 's' },
 				destFileSyncStoredPath : { type : 's' }
             }

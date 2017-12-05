@@ -1,10 +1,11 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaFileContainer } from './KalturaFileContainer';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaTransformMetadataJobDataArgs  extends KalturaJobDataArgs {
-    srcXslPath? : string;
+    srcXsl? : KalturaFileContainer;
 	srcVersion? : number;
 	destVersion? : number;
 	destXsdPath? : string;
@@ -14,7 +15,7 @@ export interface KalturaTransformMetadataJobDataArgs  extends KalturaJobDataArgs
 
 export class KalturaTransformMetadataJobData extends KalturaJobData {
 
-    srcXslPath : string;
+    srcXsl : KalturaFileContainer;
 	srcVersion : number;
 	destVersion : number;
 	destXsdPath : string;
@@ -32,7 +33,7 @@ export class KalturaTransformMetadataJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaTransformMetadataJobData' },
-				srcXslPath : { type : 's' },
+				srcXsl : { type : 'o', subTypeConstructor : KalturaFileContainer, subType : 'KalturaFileContainer' },
 				srcVersion : { type : 'n' },
 				destVersion : { type : 'n' },
 				destXsdPath : { type : 's' },

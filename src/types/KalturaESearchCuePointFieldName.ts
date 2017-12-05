@@ -30,6 +30,5 @@ export class KalturaESearchCuePointFieldName extends KalturaObjectBase {
 	static cuePointSubType = new KalturaESearchCuePointFieldName('cue_points.cue_point_sub_type');
 	static cuePointTags = new KalturaESearchCuePointFieldName('cue_points.cue_point_tags');
 	static cuePointText = new KalturaESearchCuePointFieldName('cue_points.cue_point_text');
-	static cuePointType = new KalturaESearchCuePointFieldName('cue_points.cue_point_type');
 }
 KalturaTypesFactory.registerType('KalturaESearchCuePointFieldName',KalturaESearchCuePointFieldName);
