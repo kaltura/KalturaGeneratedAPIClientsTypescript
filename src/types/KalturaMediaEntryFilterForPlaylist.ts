@@ -5,12 +5,14 @@ import { KalturaMediaEntryFilter, KalturaMediaEntryFilterArgs } from './KalturaM
 
 export interface KalturaMediaEntryFilterForPlaylistArgs  extends KalturaMediaEntryFilterArgs {
     limit? : number;
+	name? : string;
 }
 
 
 export class KalturaMediaEntryFilterForPlaylist extends KalturaMediaEntryFilter {
 
     limit : number;
+	name : string;
 
     constructor(data? : KalturaMediaEntryFilterForPlaylistArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaMediaEntryFilterForPlaylist extends KalturaMediaEntryFilter 
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaMediaEntryFilterForPlaylist' },
-				limit : { type : 'n' }
+				limit : { type : 'n' },
+				name : { type : 's' }
             }
         );
         return result;

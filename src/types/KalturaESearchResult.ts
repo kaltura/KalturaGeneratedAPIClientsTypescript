@@ -1,12 +1,13 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaESearchHighlight } from './KalturaESearchHighlight';
 import { KalturaESearchItemDataResult } from './KalturaESearchItemDataResult';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaESearchResultArgs  extends KalturaObjectBaseArgs {
     object? : KalturaObjectBase;
-	highlight? : string;
+	highlight? : KalturaESearchHighlight[];
 	itemsData? : KalturaESearchItemDataResult[];
 }
 
@@ -14,13 +15,14 @@ export interface KalturaESearchResultArgs  extends KalturaObjectBaseArgs {
 export class KalturaESearchResult extends KalturaObjectBase {
 
     object : KalturaObjectBase;
-	highlight : string;
+	highlight : KalturaESearchHighlight[];
 	itemsData : KalturaESearchItemDataResult[];
 
     constructor(data? : KalturaESearchResultArgs)
     {
         super(data);
-        if (typeof this.itemsData === 'undefined') this.itemsData = [];
+        if (typeof this.highlight === 'undefined') this.highlight = [];
+		if (typeof this.itemsData === 'undefined') this.itemsData = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -31,7 +33,7 @@ export class KalturaESearchResult extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaESearchResult' },
 				object : { type : 'o', subTypeConstructor : KalturaObjectBase, subType : 'KalturaObjectBase' },
-				highlight : { type : 's' },
+				highlight : { type : 'a', subTypeConstructor : KalturaESearchHighlight, subType : 'KalturaESearchHighlight' },
 				itemsData : { type : 'a', subTypeConstructor : KalturaESearchItemDataResult, subType : 'KalturaESearchItemDataResult' }
             }
         );
