@@ -27,18 +27,19 @@ The following is a list of all features supported by the library:
 - [x] Attach 'apiVersion' to each request
 - [x] Upload file with chunk support
 - [x] Resume file upload action
-- [x] Add unit-tests 
+- [x] Add unit-tests
+- [x] Support requests that serve files by returning a valid download url for that files.
+- [x] AOT compile support (for kaltura-ngx-client library)
+- [x] Simplify syntax of enums representing strings.
+- [x] Parse relatedObjects in responses from the server
 
  Below is a list of features to be added:
 - [ ] Generate `kalsig` per request.
 - [ ] Request timeout support
 - [ ] Cancel file upload should abort request
-- [ ] Add Node.JS client
 - [ ] When updating an object, ignore properties marked as insert only property.
 - [ ] Code documentation of classes/enums/actions.
 - [ ] Add developer/api guide.
-- [ ] Simplify syntax of enums representing strings.
 - [ ] Warn against deprecated classes/enums/actions.
 - [ ] Protect against bundling the complete library by mistake.
-- [ ] AOT compile support.
 - [ ] Support setting 'undefined' for required properties when using 'setDependency' in multiple request.

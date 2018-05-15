@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 6.3.1 (2018-05-09)
+
+### Fix
+
+* build upload url correctly to prevent failured during upload 
+
+## 6.3.0 (2018-05-08)
+
+### Features
+
+* provide api to allow sending empty arrays to the server
+
+To allow sending empty arrays for properties, use `allowEmptyArray()` method:
+```
+const profile = new KalturaAccessControl();
+profile.allowEmptyArray('restrictions');
+``` 
+this will instruct the kaltura client to send empty arrays if assigned for `restrictions` property
+
+## 6.2.0 (2018-05-03)
+
+### Features
+
+* parse relatedObjects in responses from the server
+
+## 6.1.2 (2018-04-08)
+
+### Fix
+
+* provide the api version as part of the multi-request payload instead of sending it as part of each inner requests payload 
+
+
 <a name="6.1.1"></a>
 ## [6.1.1](https://github.com/kaltura/KalturaGeneratedAPIClientsTypescript/compare/v6.1.0...v6.1.1) (2017-12-07)
 

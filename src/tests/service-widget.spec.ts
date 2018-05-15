@@ -1,11 +1,11 @@
-import { KalturaBrowserHttpClient } from "../kaltura-clients/kaltura-browser-http-client";
-import { WidgetListAction } from "../types/WidgetListAction";
-import { KalturaWidgetListResponse } from "../types/KalturaWidgetListResponse";
+import { KalturaClient } from "../kaltura-client-service";
+import { WidgetListAction } from "../api/types/WidgetListAction";
+import { KalturaWidgetListResponse } from "../api/types/KalturaWidgetListResponse";
 import { getClient } from "./utils";
-import { LoggerSettings, LogLevels } from "../kaltura-logger";
+import { LoggerSettings, LogLevels } from "../api/kaltura-logger";
 
 describe(`service "Widget" tests`, () => {
-  let kalturaClient: KalturaBrowserHttpClient = null;
+  let kalturaClient: KalturaClient = null;
 
   beforeAll(async () => {
     LoggerSettings.logLevel = LogLevels.error; // suspend warnings
