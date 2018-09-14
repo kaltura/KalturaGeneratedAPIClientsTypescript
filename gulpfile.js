@@ -5,11 +5,12 @@ var gulp = require('gulp');
 // load plugins
 var $ = require('gulp-load-plugins')();
 var tslint = require("gulp-tslint");
+var del = require('del');
+var runSequence = require('run-sequence');
 const argv = require("yargs").argv;
 var jeditor = require("gulp-json-editor");
 var merge = require('merge2');  // Require separate installation
 //var KarmaServer = require('karma').Server;
-const fs = require('fs-extra');
 
 function formatTwoDigitsNumber(value)
 {
@@ -20,20 +21,17 @@ function formatTwoDigitsNumber(value)
 const tsconfig = require('./tsconfig.json').compilerOptions;
 
 // clean the contents of the distribution directory
+gulp.task('clean', function () {
+  return del(['.tmp', 'dist/**/*'], {force: true});
+});
+
 gulp.task('clean:tmp', function () {
-  return fs.remove('./.tmp');
+  return del(['.tmp'], {force: true});
 });
 
 gulp.task('clean:dist', function () {
-  return fs.remove('./dist');
+  return del(['dist/**/*'], {force: true});
 });
-
-gulp.task('clean',
-  gulp.series(
-    'clean:tmp',
-    'clean:dist'
-  )
-);
 
 gulp.task('scripts:library', function () {
   return compileAppScripts();
@@ -107,29 +105,17 @@ gulp.task('extras', function () {
   ])
 });
 
-gulp.task(
-  'updateDistFolder',
-  gulp.series('clean:dist', function copyFilesToDist(done) {
-    fs.move('./.tmp/dist', './dist', err => {
-      done(err);
-    });
-  })
-);
+gulp.task('copyTmpToDist', ['clean:dist'], function () {
+  return gulp.src(['./.tmp/dist/**/*','./.tmp/dist/**/.*'], {base: './.tmp/dist/'}).pipe(gulp.dest('./dist'));
+});
 
-gulp.task(
-  'build',
-  gulp.series(
-    'clean:tmp',
-    'scripts:library',
-    'extras',
-    'updateDistFolder',
-    'clean:tmp'
-  )
-);
+gulp.task('build',function () {
+  return runSequence('clean:tmp','scripts:library','extras','copyTmpToDist','clean:tmp');
+});
 
-gulp.task(
-  'watch',
-  gulp.series(
+gulp.task('watch', [], function () {
+
+  runSequence(
     'clean:tmp',
     'build',
     function()
@@ -142,7 +128,8 @@ gulp.task(
       });
     }
   )
-);
+
+});
 
 function debounced (task, interval) {
   var rerun = false;
