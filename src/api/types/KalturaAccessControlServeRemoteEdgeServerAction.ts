@@ -1,16 +1,19 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaRuleAction, KalturaRuleActionArgs } from './KalturaRuleAction';
 
 export interface KalturaAccessControlServeRemoteEdgeServerActionArgs  extends KalturaRuleActionArgs {
     edgeServerIds? : string;
+	seamlessFallbackEnabled? : KalturaNullableBoolean;
 }
 
 
 export class KalturaAccessControlServeRemoteEdgeServerAction extends KalturaRuleAction {
 
     edgeServerIds : string;
+	seamlessFallbackEnabled : KalturaNullableBoolean;
 
     constructor(data? : KalturaAccessControlServeRemoteEdgeServerActionArgs)
     {
@@ -24,7 +27,8 @@ export class KalturaAccessControlServeRemoteEdgeServerAction extends KalturaRule
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaAccessControlServeRemoteEdgeServerAction' },
-				edgeServerIds : { type : 's' }
+				edgeServerIds : { type : 's' },
+				seamlessFallbackEnabled : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;
