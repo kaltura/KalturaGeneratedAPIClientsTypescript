@@ -12,6 +12,7 @@ export interface KalturaCaptureThumbJobDataArgs  extends KalturaJobDataArgs {
 	thumbParamsOutputId? : number;
 	thumbAssetId? : string;
 	srcAssetId? : string;
+	srcAssetEncryptionKey? : string;
 	srcAssetType? : KalturaAssetType;
 	thumbPath? : string;
 }
@@ -25,6 +26,7 @@ export class KalturaCaptureThumbJobData extends KalturaJobData {
 	thumbParamsOutputId : number;
 	thumbAssetId : string;
 	srcAssetId : string;
+	srcAssetEncryptionKey : string;
 	srcAssetType : KalturaAssetType;
 	thumbPath : string;
 
@@ -46,6 +48,7 @@ export class KalturaCaptureThumbJobData extends KalturaJobData {
 				thumbParamsOutputId : { type : 'n' },
 				thumbAssetId : { type : 's' },
 				srcAssetId : { type : 's' },
+				srcAssetEncryptionKey : { type : 's' },
 				srcAssetType : { type : 'es', subTypeConstructor : KalturaAssetType, subType : 'KalturaAssetType' },
 				thumbPath : { type : 's' }
             }
