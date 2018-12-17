@@ -2,7 +2,9 @@ language: node_js
 node_js:
       - "9"
 before_install: npm install && npm run build
-script: npm run test
+script: 
+    - sed -e "s#@YOUR_PARTNER_ID@#$PARTNER_ID#g" -e "s#@YOUR_ADMIN_SECRET@#$ADMIN_SECRET#g" -e "s#@SERVICE_URL@#https://www.kaltura.com#g" src/tests/tests-config.template.ts > src/tests/tests-config.ts
+    - npm run test
 notifications:
   email:
     recipients:
