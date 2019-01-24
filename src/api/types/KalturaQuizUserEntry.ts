@@ -4,13 +4,14 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUserEntry, KalturaUserEntryArgs } from './KalturaUserEntry';
 
 export interface KalturaQuizUserEntryArgs  extends KalturaUserEntryArgs {
-    
+    feedback? : string;
 }
 
 
 export class KalturaQuizUserEntry extends KalturaUserEntry {
 
     readonly score : number;
+	feedback : string;
 
     constructor(data? : KalturaQuizUserEntryArgs)
     {
@@ -24,7 +25,8 @@ export class KalturaQuizUserEntry extends KalturaUserEntry {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaQuizUserEntry' },
-				score : { type : 'n', readOnly : true }
+				score : { type : 'n', readOnly : true },
+				feedback : { type : 's' }
             }
         );
         return result;
