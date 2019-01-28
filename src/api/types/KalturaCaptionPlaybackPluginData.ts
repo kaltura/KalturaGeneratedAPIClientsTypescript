@@ -10,6 +10,7 @@ export interface KalturaCaptionPlaybackPluginDataArgs  extends KalturaObjectBase
 	webVttUrl? : string;
 	url? : string;
 	isDefault? : boolean;
+	languageCode? : string;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaCaptionPlaybackPluginData extends KalturaObjectBase {
 	webVttUrl : string;
 	url : string;
 	isDefault : boolean;
+	languageCode : string;
 
     constructor(data? : KalturaCaptionPlaybackPluginDataArgs)
     {
@@ -39,7 +41,8 @@ export class KalturaCaptionPlaybackPluginData extends KalturaObjectBase {
 				language : { type : 's' },
 				webVttUrl : { type : 's' },
 				url : { type : 's' },
-				isDefault : { type : 'b' }
+				isDefault : { type : 'b' },
+				languageCode : { type : 's' }
             }
         );
         return result;
