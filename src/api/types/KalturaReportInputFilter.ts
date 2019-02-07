@@ -23,6 +23,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	interval? : KalturaReportInterval;
 	mediaTypeIn? : string;
 	sourceTypeIn? : string;
+	ownerIdsIn? : string;
 }
 
 
@@ -46,6 +47,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	interval : KalturaReportInterval;
 	mediaTypeIn : string;
 	sourceTypeIn : string;
+	ownerIdsIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -76,7 +78,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				timeZoneOffset : { type : 'n' },
 				interval : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' },
 				mediaTypeIn : { type : 's' },
-				sourceTypeIn : { type : 's' }
+				sourceTypeIn : { type : 's' },
+				ownerIdsIn : { type : 's' }
             }
         );
         return result;
