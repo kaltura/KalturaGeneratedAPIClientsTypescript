@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaReportInterval } from './KalturaReportInterval';
+import { KalturaESearchEntryOperator } from './KalturaESearchEntryOperator';
 import { KalturaReportInputBaseFilter, KalturaReportInputBaseFilterArgs } from './KalturaReportInputBaseFilter';
 
 export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFilterArgs {
@@ -24,6 +25,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	mediaTypeIn? : string;
 	sourceTypeIn? : string;
 	ownerIdsIn? : string;
+	entryOperator? : KalturaESearchEntryOperator;
 }
 
 
@@ -48,6 +50,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	mediaTypeIn : string;
 	sourceTypeIn : string;
 	ownerIdsIn : string;
+	entryOperator : KalturaESearchEntryOperator;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -79,7 +82,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				interval : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' },
 				mediaTypeIn : { type : 's' },
 				sourceTypeIn : { type : 's' },
-				ownerIdsIn : { type : 's' }
+				ownerIdsIn : { type : 's' },
+				entryOperator : { type : 'o', subTypeConstructor : KalturaESearchEntryOperator, subType : 'KalturaESearchEntryOperator' }
             }
         );
         return result;
