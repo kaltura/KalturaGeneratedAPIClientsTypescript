@@ -23,6 +23,7 @@ export interface KalturaThumbParamsArgs  extends KalturaAssetParamsArgs {
 	density? : number;
 	stripProfiles? : boolean;
 	videoOffsetInPercentage? : number;
+	interval? : number;
 }
 
 
@@ -45,6 +46,7 @@ export class KalturaThumbParams extends KalturaAssetParams {
 	density : number;
 	stripProfiles : boolean;
 	videoOffsetInPercentage : number;
+	interval : number;
 
     constructor(data? : KalturaThumbParamsArgs)
     {
@@ -74,7 +76,8 @@ export class KalturaThumbParams extends KalturaAssetParams {
 				format : { type : 'es', subTypeConstructor : KalturaContainerFormat, subType : 'KalturaContainerFormat' },
 				density : { type : 'n' },
 				stripProfiles : { type : 'b' },
-				videoOffsetInPercentage : { type : 'n' }
+				videoOffsetInPercentage : { type : 'n' },
+				interval : { type : 'n' }
             }
         );
         return result;
