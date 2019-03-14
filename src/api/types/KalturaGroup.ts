@@ -1,18 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaUserType } from './KalturaUserType';
-import { KalturaUser, KalturaUserArgs } from './KalturaUser';
+import { KalturaBaseUser, KalturaBaseUserArgs } from './KalturaBaseUser';
 
-export interface KalturaGroupArgs  extends KalturaUserArgs {
-    type? : KalturaUserType;
+export interface KalturaGroupArgs  extends KalturaBaseUserArgs {
+    
 }
 
 
-export class KalturaGroup extends KalturaUser {
+export class KalturaGroup extends KalturaBaseUser {
 
-    type : KalturaUserType;
-	readonly membersCount : number;
+    readonly membersCount : number;
 
     constructor(data? : KalturaGroupArgs)
     {
@@ -26,7 +24,6 @@ export class KalturaGroup extends KalturaUser {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaGroup' },
-				type : { type : 'en', subTypeConstructor : KalturaUserType, subType : 'KalturaUserType' },
 				membersCount : { type : 'n', readOnly : true }
             }
         );
