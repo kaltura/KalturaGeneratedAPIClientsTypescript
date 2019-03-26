@@ -9,6 +9,7 @@ import { KalturaReachProfileContentDeletionPolicy } from './KalturaReachProfileC
 import { KalturaRule } from './KalturaRule';
 import { KalturaBaseVendorCredit } from './KalturaBaseVendorCredit';
 import { KalturaDictionary } from './KalturaDictionary';
+import { KalturaVendorTaskProcessingRegion } from './KalturaVendorTaskProcessingRegion';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
@@ -29,6 +30,7 @@ export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
 	credit? : KalturaBaseVendorCredit;
 	dictionaries? : KalturaDictionary[];
 	flavorParamsIds? : string;
+	vendorTaskProcessingRegion? : KalturaVendorTaskProcessingRegion;
 }
 
 
@@ -57,6 +59,7 @@ export class KalturaReachProfile extends KalturaObjectBase {
 	readonly usedCredit : number;
 	dictionaries : KalturaDictionary[];
 	flavorParamsIds : string;
+	vendorTaskProcessingRegion : KalturaVendorTaskProcessingRegion;
 
     constructor(data? : KalturaReachProfileArgs)
     {
@@ -94,7 +97,8 @@ export class KalturaReachProfile extends KalturaObjectBase {
 				credit : { type : 'o', subTypeConstructor : KalturaBaseVendorCredit, subType : 'KalturaBaseVendorCredit' },
 				usedCredit : { type : 'n', readOnly : true },
 				dictionaries : { type : 'a', subTypeConstructor : KalturaDictionary, subType : 'KalturaDictionary' },
-				flavorParamsIds : { type : 's' }
+				flavorParamsIds : { type : 's' },
+				vendorTaskProcessingRegion : { type : 'en', subTypeConstructor : KalturaVendorTaskProcessingRegion, subType : 'KalturaVendorTaskProcessingRegion' }
             }
         );
         return result;
