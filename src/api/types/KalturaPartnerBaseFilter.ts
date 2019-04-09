@@ -21,6 +21,8 @@ export interface KalturaPartnerBaseFilterArgs  extends KalturaFilterArgs {
 	partnerPackageIn? : string;
 	partnerGroupTypeEqual? : KalturaPartnerGroupType;
 	partnerNameDescriptionWebsiteAdminNameAdminEmailLike? : string;
+	createdAtGreaterThanOrEqual? : Date;
+	idGreaterThan? : number;
 }
 
 
@@ -41,6 +43,8 @@ export class KalturaPartnerBaseFilter extends KalturaFilter {
 	partnerPackageIn : string;
 	partnerGroupTypeEqual : KalturaPartnerGroupType;
 	partnerNameDescriptionWebsiteAdminNameAdminEmailLike : string;
+	createdAtGreaterThanOrEqual : Date;
+	idGreaterThan : number;
 
     constructor(data? : KalturaPartnerBaseFilterArgs)
     {
@@ -68,7 +72,9 @@ export class KalturaPartnerBaseFilter extends KalturaFilter {
 				partnerPackageLessThanOrEqual : { type : 'n' },
 				partnerPackageIn : { type : 's' },
 				partnerGroupTypeEqual : { type : 'en', subTypeConstructor : KalturaPartnerGroupType, subType : 'KalturaPartnerGroupType' },
-				partnerNameDescriptionWebsiteAdminNameAdminEmailLike : { type : 's' }
+				partnerNameDescriptionWebsiteAdminNameAdminEmailLike : { type : 's' },
+				createdAtGreaterThanOrEqual : { type : 'd' },
+				idGreaterThan : { type : 'n' }
             }
         );
         return result;
