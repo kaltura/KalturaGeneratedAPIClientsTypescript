@@ -6,6 +6,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaPartnerPublicInfoArgs  extends KalturaObjectBaseArgs {
     analyticsUrl? : string;
 	ottEnvironmentUrl? : string;
+	analyticsPersistentSessionId? : boolean;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaPartnerPublicInfo extends KalturaObjectBase {
 
     analyticsUrl : string;
 	ottEnvironmentUrl : string;
+	analyticsPersistentSessionId : boolean;
 
     constructor(data? : KalturaPartnerPublicInfoArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaPartnerPublicInfo extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaPartnerPublicInfo' },
 				analyticsUrl : { type : 's' },
-				ottEnvironmentUrl : { type : 's' }
+				ottEnvironmentUrl : { type : 's' },
+				analyticsPersistentSessionId : { type : 'b' }
             }
         );
         return result;
