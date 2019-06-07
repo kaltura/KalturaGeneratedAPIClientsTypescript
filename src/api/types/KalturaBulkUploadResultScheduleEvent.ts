@@ -1,13 +1,12 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaScheduleEventType } from './KalturaScheduleEventType';
 import { KalturaBulkUploadResult, KalturaBulkUploadResultArgs } from './KalturaBulkUploadResult';
 
 export interface KalturaBulkUploadResultScheduleEventArgs  extends KalturaBulkUploadResultArgs {
     referenceId? : string;
 	templateEntryId? : string;
-	eventType? : KalturaScheduleEventType;
+	eventType? : number;
 	title? : string;
 	description? : string;
 	tags? : string;
@@ -29,7 +28,7 @@ export class KalturaBulkUploadResultScheduleEvent extends KalturaBulkUploadResul
 
     referenceId : string;
 	templateEntryId : string;
-	eventType : KalturaScheduleEventType;
+	eventType : number;
 	title : string;
 	description : string;
 	tags : string;
@@ -59,7 +58,7 @@ export class KalturaBulkUploadResultScheduleEvent extends KalturaBulkUploadResul
                 objectType : { type : 'c', default : 'KalturaBulkUploadResultScheduleEvent' },
 				referenceId : { type : 's' },
 				templateEntryId : { type : 's' },
-				eventType : { type : 'en', subTypeConstructor : KalturaScheduleEventType, subType : 'KalturaScheduleEventType' },
+				eventType : { type : 'n' },
 				title : { type : 's' },
 				description : { type : 's' },
 				tags : { type : 's' },
