@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaAuthentication } from './KalturaAuthentication';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -14,19 +14,19 @@ export interface AdminUserSetInitialPasswordActionArgs  extends KalturaRequestAr
  *
  * Usage: Set initial users password
  *
- * Server response type:         void
+ * Server response type:         KalturaAuthentication
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class AdminUserSetInitialPasswordAction extends KalturaRequest<void> {
+export class AdminUserSetInitialPasswordAction extends KalturaRequest<KalturaAuthentication> {
 
     hashKey : string;
 	newPassword : string;
 
     constructor(data : AdminUserSetInitialPasswordActionArgs)
     {
-        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaAuthentication', responseConstructor : KalturaAuthentication  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

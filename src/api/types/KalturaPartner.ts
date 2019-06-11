@@ -9,6 +9,7 @@ import { KalturaPartnerGroupType } from './KalturaPartnerGroupType';
 import { KalturaPlayerDeliveryType } from './KalturaPlayerDeliveryType';
 import { KalturaPlayerEmbedCodeType } from './KalturaPlayerEmbedCodeType';
 import { KalturaESearchLanguageItem } from './KalturaESearchLanguageItem';
+import { KalturaPartnerAuthenticationType } from './KalturaPartnerAuthenticationType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
@@ -106,7 +107,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly ovpEnvironmentUrl : string;
 	readonly ottEnvironmentUrl : string;
 	eSearchLanguages : KalturaESearchLanguageItem[];
-	readonly authenticationType : number;
+	readonly authenticationType : KalturaPartnerAuthenticationType;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -181,7 +182,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				ovpEnvironmentUrl : { type : 's', readOnly : true },
 				ottEnvironmentUrl : { type : 's', readOnly : true },
 				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' },
-				authenticationType : { type : 'n', readOnly : true }
+				authenticationType : { type : 'en', readOnly : true, subTypeConstructor : KalturaPartnerAuthenticationType, subType : 'KalturaPartnerAuthenticationType' }
             }
         );
         return result;
