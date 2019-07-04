@@ -9,7 +9,6 @@ export interface KalturaUploadTokenArgs  extends KalturaObjectBaseArgs {
     fileName? : string;
 	fileSize? : number;
 	autoFinalize? : KalturaNullableBoolean;
-	minimumChunkSize? : number;
 }
 
 
@@ -26,7 +25,6 @@ export class KalturaUploadToken extends KalturaObjectBase {
 	readonly updatedAt : Date;
 	readonly uploadUrl : string;
 	autoFinalize : KalturaNullableBoolean;
-	minimumChunkSize : number;
 
     constructor(data? : KalturaUploadTokenArgs)
     {
@@ -50,8 +48,7 @@ export class KalturaUploadToken extends KalturaObjectBase {
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
 				uploadUrl : { type : 's', readOnly : true },
-				autoFinalize : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				minimumChunkSize : { type : 'n' }
+				autoFinalize : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;
