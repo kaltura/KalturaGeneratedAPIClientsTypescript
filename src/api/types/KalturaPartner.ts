@@ -33,6 +33,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	allowQuickEdit? : number;
 	mergeEntryLists? : number;
 	notificationsConfig? : string;
+	allowedFromEmailWhiteList? : string;
 	maxUploadSize? : number;
 	partnerPackage? : number;
 	allowMultiNotification? : number;
@@ -73,6 +74,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	allowQuickEdit : number;
 	mergeEntryLists : number;
 	notificationsConfig : string;
+	allowedFromEmailWhiteList : string;
 	maxUploadSize : number;
 	partnerPackage : number;
 	readonly secret : string;
@@ -148,6 +150,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				allowQuickEdit : { type : 'n' },
 				mergeEntryLists : { type : 'n' },
 				notificationsConfig : { type : 's' },
+				allowedFromEmailWhiteList : { type : 's' },
 				maxUploadSize : { type : 'n' },
 				partnerPackage : { type : 'n' },
 				secret : { type : 's', readOnly : true },
