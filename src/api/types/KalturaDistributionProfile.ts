@@ -6,6 +6,7 @@ import { KalturaDistributionProfileStatus } from './KalturaDistributionProfileSt
 import { KalturaDistributionProfileActionStatus } from './KalturaDistributionProfileActionStatus';
 import { KalturaDistributionThumbDimensions } from './KalturaDistributionThumbDimensions';
 import { KalturaAssetDistributionRule } from './KalturaAssetDistributionRule';
+import { KalturaDistributeTrigger } from './KalturaDistributeTrigger';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaDistributionProfileArgs  extends KalturaObjectBaseArgs {
@@ -29,6 +30,7 @@ export interface KalturaDistributionProfileArgs  extends KalturaObjectBaseArgs {
 	recommendedStorageProfileForDownload? : number;
 	recommendedDcForDownload? : number;
 	recommendedDcForExecute? : number;
+	distributeTrigger? : KalturaDistributeTrigger;
 }
 
 
@@ -58,6 +60,7 @@ export class KalturaDistributionProfile extends KalturaObjectBase {
 	recommendedStorageProfileForDownload : number;
 	recommendedDcForDownload : number;
 	recommendedDcForExecute : number;
+	distributeTrigger : KalturaDistributeTrigger;
 
     constructor(data? : KalturaDistributionProfileArgs)
     {
@@ -98,7 +101,8 @@ export class KalturaDistributionProfile extends KalturaObjectBase {
 				sunsetDefaultOffset : { type : 'n' },
 				recommendedStorageProfileForDownload : { type : 'n' },
 				recommendedDcForDownload : { type : 'n' },
-				recommendedDcForExecute : { type : 'n' }
+				recommendedDcForExecute : { type : 'n' },
+				distributeTrigger : { type : 'en', subTypeConstructor : KalturaDistributeTrigger, subType : 'KalturaDistributeTrigger' }
             }
         );
         return result;

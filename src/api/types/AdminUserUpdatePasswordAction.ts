@@ -9,6 +9,7 @@ export interface AdminUserUpdatePasswordActionArgs  extends KalturaRequestArgs {
 	password : string;
 	newEmail? : string;
 	newPassword? : string;
+	otp? : string;
 }
 
 /**
@@ -27,6 +28,7 @@ export class AdminUserUpdatePasswordAction extends KalturaRequest<KalturaAdminUs
 	password : string;
 	newEmail : string;
 	newPassword : string;
+	otp : string;
 
     constructor(data : AdminUserUpdatePasswordActionArgs)
     {
@@ -44,7 +46,8 @@ export class AdminUserUpdatePasswordAction extends KalturaRequest<KalturaAdminUs
 				email : { type : 's' },
 				password : { type : 's' },
 				newEmail : { type : 's' },
-				newPassword : { type : 's' }
+				newPassword : { type : 's' },
+				otp : { type : 's' }
             }
         );
         return result;

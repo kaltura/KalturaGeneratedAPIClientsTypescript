@@ -11,6 +11,7 @@ export interface UserUpdateLoginDataActionArgs  extends KalturaRequestArgs {
 	newPassword? : string;
 	newFirstName? : string;
 	newLastName? : string;
+	otp? : string;
 }
 
 /**
@@ -31,6 +32,7 @@ export class UserUpdateLoginDataAction extends KalturaRequest<void> {
 	newPassword : string;
 	newFirstName : string;
 	newLastName : string;
+	otp : string;
 
     constructor(data : UserUpdateLoginDataActionArgs)
     {
@@ -50,7 +52,8 @@ export class UserUpdateLoginDataAction extends KalturaRequest<void> {
 				newLoginId : { type : 's' },
 				newPassword : { type : 's' },
 				newFirstName : { type : 's' },
-				newLastName : { type : 's' }
+				newLastName : { type : 's' },
+				otp : { type : 's' }
             }
         );
         return result;
