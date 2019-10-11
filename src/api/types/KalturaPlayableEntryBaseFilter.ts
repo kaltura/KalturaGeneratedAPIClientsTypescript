@@ -6,6 +6,7 @@ import { KalturaBaseEntryFilter, KalturaBaseEntryFilterArgs } from './KalturaBas
 export interface KalturaPlayableEntryBaseFilterArgs  extends KalturaBaseEntryFilterArgs {
     lastPlayedAtGreaterThanOrEqual? : Date;
 	lastPlayedAtLessThanOrEqual? : Date;
+	lastPlayedAtLessThanOrEqualOrNull? : Date;
 	durationLessThan? : number;
 	durationGreaterThan? : number;
 	durationLessThanOrEqual? : number;
@@ -18,6 +19,7 @@ export class KalturaPlayableEntryBaseFilter extends KalturaBaseEntryFilter {
 
     lastPlayedAtGreaterThanOrEqual : Date;
 	lastPlayedAtLessThanOrEqual : Date;
+	lastPlayedAtLessThanOrEqualOrNull : Date;
 	durationLessThan : number;
 	durationGreaterThan : number;
 	durationLessThanOrEqual : number;
@@ -38,6 +40,7 @@ export class KalturaPlayableEntryBaseFilter extends KalturaBaseEntryFilter {
                 objectType : { type : 'c', default : 'KalturaPlayableEntryBaseFilter' },
 				lastPlayedAtGreaterThanOrEqual : { type : 'd' },
 				lastPlayedAtLessThanOrEqual : { type : 'd' },
+				lastPlayedAtLessThanOrEqualOrNull : { type : 'd' },
 				durationLessThan : { type : 'n' },
 				durationGreaterThan : { type : 'n' },
 				durationLessThanOrEqual : { type : 'n' },
