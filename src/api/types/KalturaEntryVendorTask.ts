@@ -4,6 +4,8 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEntryVendorTaskStatus } from './KalturaEntryVendorTaskStatus';
 import { KalturaEntryVendorTaskCreationMode } from './KalturaEntryVendorTaskCreationMode';
 import { KalturaVendorTaskData } from './KalturaVendorTaskData';
+import { KalturaVendorServiceType } from './KalturaVendorServiceType';
+import { KalturaVendorServiceFeature } from './KalturaVendorServiceFeature';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaEntryVendorTaskArgs  extends KalturaObjectBaseArgs {
@@ -48,6 +50,9 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	partnerData : string;
 	readonly creationMode : KalturaEntryVendorTaskCreationMode;
 	taskJobData : KalturaVendorTaskData;
+	readonly expectedFinishTime : Date;
+	readonly serviceType : KalturaVendorServiceType;
+	readonly serviceFeature : KalturaVendorServiceFeature;
 
     constructor(data? : KalturaEntryVendorTaskArgs)
     {
@@ -85,7 +90,10 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				outputObjectId : { type : 's' },
 				partnerData : { type : 's' },
 				creationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaEntryVendorTaskCreationMode, subType : 'KalturaEntryVendorTaskCreationMode' },
-				taskJobData : { type : 'o', subTypeConstructor : KalturaVendorTaskData, subType : 'KalturaVendorTaskData' }
+				taskJobData : { type : 'o', subTypeConstructor : KalturaVendorTaskData, subType : 'KalturaVendorTaskData' },
+				expectedFinishTime : { type : 'd', readOnly : true },
+				serviceType : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceType, subType : 'KalturaVendorServiceType' },
+				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' }
             }
         );
         return result;
