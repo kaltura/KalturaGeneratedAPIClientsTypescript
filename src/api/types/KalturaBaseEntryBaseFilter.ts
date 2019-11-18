@@ -49,6 +49,8 @@ export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	createdAtLessThanOrEqual? : Date;
 	updatedAtGreaterThanOrEqual? : Date;
 	updatedAtLessThanOrEqual? : Date;
+	rankLessThanOrEqual? : number;
+	rankGreaterThanOrEqual? : number;
 	totalRankLessThanOrEqual? : number;
 	totalRankGreaterThanOrEqual? : number;
 	groupIdEqual? : number;
@@ -134,6 +136,8 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 	createdAtLessThanOrEqual : Date;
 	updatedAtGreaterThanOrEqual : Date;
 	updatedAtLessThanOrEqual : Date;
+	rankLessThanOrEqual : number;
+	rankGreaterThanOrEqual : number;
 	totalRankLessThanOrEqual : number;
 	totalRankGreaterThanOrEqual : number;
 	groupIdEqual : number;
@@ -227,6 +231,8 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 				createdAtLessThanOrEqual : { type : 'd' },
 				updatedAtGreaterThanOrEqual : { type : 'd' },
 				updatedAtLessThanOrEqual : { type : 'd' },
+				rankLessThanOrEqual : { type : 'n' },
+				rankGreaterThanOrEqual : { type : 'n' },
 				totalRankLessThanOrEqual : { type : 'n' },
 				totalRankGreaterThanOrEqual : { type : 'n' },
 				groupIdEqual : { type : 'n' },
