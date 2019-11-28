@@ -8,6 +8,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaConfMapsArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	content? : string;
+	rawData? : string;
 	relatedHost? : string;
 	sourceLocation? : KalturaConfMapsSourceLocation;
 	remarks? : string;
@@ -19,8 +20,9 @@ export class KalturaConfMaps extends KalturaObjectBase {
 
     name : string;
 	content : string;
+	rawData : string;
 	readonly isEditable : boolean;
-	readonly lastUpdate : Date;
+	readonly createdAt : Date;
 	relatedHost : string;
 	readonly version : number;
 	sourceLocation : KalturaConfMapsSourceLocation;
@@ -41,8 +43,9 @@ export class KalturaConfMaps extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaConfMaps' },
 				name : { type : 's' },
 				content : { type : 's' },
+				rawData : { type : 's' },
 				isEditable : { type : 'b', readOnly : true },
-				lastUpdate : { type : 'd', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
 				relatedHost : { type : 's' },
 				version : { type : 'n', readOnly : true },
 				sourceLocation : { type : 'es', subTypeConstructor : KalturaConfMapsSourceLocation, subType : 'KalturaConfMapsSourceLocation' },
