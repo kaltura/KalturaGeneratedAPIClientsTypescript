@@ -9,6 +9,7 @@ export interface KalturaConfMapsArgs  extends KalturaObjectBaseArgs {
     name? : string;
 	content? : string;
 	rawData? : string;
+	userId? : string;
 	relatedHost? : string;
 	sourceLocation? : KalturaConfMapsSourceLocation;
 	remarks? : string;
@@ -21,6 +22,7 @@ export class KalturaConfMaps extends KalturaObjectBase {
     name : string;
 	content : string;
 	rawData : string;
+	userId : string;
 	readonly isEditable : boolean;
 	readonly createdAt : Date;
 	relatedHost : string;
@@ -44,6 +46,7 @@ export class KalturaConfMaps extends KalturaObjectBase {
 				name : { type : 's' },
 				content : { type : 's' },
 				rawData : { type : 's' },
+				userId : { type : 's' },
 				isEditable : { type : 'b', readOnly : true },
 				createdAt : { type : 'd', readOnly : true },
 				relatedHost : { type : 's' },
