@@ -9,6 +9,8 @@ export interface KalturaLiveEntryRecordingOptionsArgs  extends KalturaObjectBase
 	shouldCopyScheduling? : KalturaNullableBoolean;
 	shouldCopyThumbnail? : KalturaNullableBoolean;
 	shouldMakeHidden? : KalturaNullableBoolean;
+	shouldAutoArchive? : KalturaNullableBoolean;
+	nonDeletedCuePointsTags? : string;
 }
 
 
@@ -18,6 +20,8 @@ export class KalturaLiveEntryRecordingOptions extends KalturaObjectBase {
 	shouldCopyScheduling : KalturaNullableBoolean;
 	shouldCopyThumbnail : KalturaNullableBoolean;
 	shouldMakeHidden : KalturaNullableBoolean;
+	shouldAutoArchive : KalturaNullableBoolean;
+	nonDeletedCuePointsTags : string;
 
     constructor(data? : KalturaLiveEntryRecordingOptionsArgs)
     {
@@ -34,7 +38,9 @@ export class KalturaLiveEntryRecordingOptions extends KalturaObjectBase {
 				shouldCopyEntitlement : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				shouldCopyScheduling : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				shouldCopyThumbnail : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				shouldMakeHidden : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				shouldMakeHidden : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				shouldAutoArchive : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				nonDeletedCuePointsTags : { type : 's' }
             }
         );
         return result;
