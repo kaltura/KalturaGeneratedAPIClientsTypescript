@@ -8,6 +8,8 @@ export interface KalturaLiveStreamEntryArgs  extends KalturaLiveEntryArgs {
     bitrates? : KalturaLiveStreamBitrate[];
 	primaryBroadcastingUrl? : string;
 	secondaryBroadcastingUrl? : string;
+	primarySecuredBroadcastingUrl? : string;
+	secondarySecuredBroadcastingUrl? : string;
 	primaryRtspBroadcastingUrl? : string;
 	secondaryRtspBroadcastingUrl? : string;
 	streamName? : string;
@@ -27,6 +29,8 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 	bitrates : KalturaLiveStreamBitrate[];
 	primaryBroadcastingUrl : string;
 	secondaryBroadcastingUrl : string;
+	primarySecuredBroadcastingUrl : string;
+	secondarySecuredBroadcastingUrl : string;
 	primaryRtspBroadcastingUrl : string;
 	secondaryRtspBroadcastingUrl : string;
 	streamName : string;
@@ -58,6 +62,8 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 				bitrates : { type : 'a', subTypeConstructor : KalturaLiveStreamBitrate, subType : 'KalturaLiveStreamBitrate' },
 				primaryBroadcastingUrl : { type : 's' },
 				secondaryBroadcastingUrl : { type : 's' },
+				primarySecuredBroadcastingUrl : { type : 's' },
+				secondarySecuredBroadcastingUrl : { type : 's' },
 				primaryRtspBroadcastingUrl : { type : 's' },
 				secondaryRtspBroadcastingUrl : { type : 's' },
 				streamName : { type : 's' },
