@@ -11,6 +11,7 @@ export interface KalturaLiveEntryRecordingOptionsArgs  extends KalturaObjectBase
 	shouldMakeHidden? : KalturaNullableBoolean;
 	shouldAutoArchive? : KalturaNullableBoolean;
 	nonDeletedCuePointsTags? : string;
+	archiveVodSuffixTimezone? : string;
 }
 
 
@@ -22,6 +23,7 @@ export class KalturaLiveEntryRecordingOptions extends KalturaObjectBase {
 	shouldMakeHidden : KalturaNullableBoolean;
 	shouldAutoArchive : KalturaNullableBoolean;
 	nonDeletedCuePointsTags : string;
+	archiveVodSuffixTimezone : string;
 
     constructor(data? : KalturaLiveEntryRecordingOptionsArgs)
     {
@@ -40,7 +42,8 @@ export class KalturaLiveEntryRecordingOptions extends KalturaObjectBase {
 				shouldCopyThumbnail : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				shouldMakeHidden : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				shouldAutoArchive : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				nonDeletedCuePointsTags : { type : 's' }
+				nonDeletedCuePointsTags : { type : 's' },
+				archiveVodSuffixTimezone : { type : 's' }
             }
         );
         return result;
