@@ -6,6 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface LiveStreamArchiveActionArgs  extends KalturaRequestArgs {
     liveEntryId : string;
+	vodEntryId : string;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface LiveStreamArchiveActionArgs  extends KalturaRequestArgs {
 export class LiveStreamArchiveAction extends KalturaRequest<boolean> {
 
     liveEntryId : string;
+	vodEntryId : string;
 
     constructor(data : LiveStreamArchiveActionArgs)
     {
@@ -35,7 +37,8 @@ export class LiveStreamArchiveAction extends KalturaRequest<boolean> {
             {
                 service : { type : 'c', default : 'livestream' },
 				action : { type : 'c', default : 'archive' },
-				liveEntryId : { type : 's' }
+				liveEntryId : { type : 's' },
+				vodEntryId : { type : 's' }
             }
         );
         return result;

@@ -5,12 +5,14 @@ import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaLiveEntryArchiveJobDataArgs  extends KalturaJobDataArgs {
     liveEntryId? : string;
+	vodEntryId? : string;
 }
 
 
 export class KalturaLiveEntryArchiveJobData extends KalturaJobData {
 
     liveEntryId : string;
+	vodEntryId : string;
 
     constructor(data? : KalturaLiveEntryArchiveJobDataArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaLiveEntryArchiveJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaLiveEntryArchiveJobData' },
-				liveEntryId : { type : 's' }
+				liveEntryId : { type : 's' },
+				vodEntryId : { type : 's' }
             }
         );
         return result;
