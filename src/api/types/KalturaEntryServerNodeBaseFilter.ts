@@ -10,6 +10,7 @@ export interface KalturaEntryServerNodeBaseFilterArgs  extends KalturaFilterArgs
 	entryIdIn? : string;
 	serverNodeIdEqual? : number;
 	serverNodeIdIn? : string;
+	serverNodeIdNotIn? : string;
 	createdAtLessThanOrEqual? : Date;
 	createdAtGreaterThanOrEqual? : Date;
 	updatedAtGreaterThanOrEqual? : Date;
@@ -28,6 +29,7 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaFilter {
 	entryIdIn : string;
 	serverNodeIdEqual : number;
 	serverNodeIdIn : string;
+	serverNodeIdNotIn : string;
 	createdAtLessThanOrEqual : Date;
 	createdAtGreaterThanOrEqual : Date;
 	updatedAtGreaterThanOrEqual : Date;
@@ -54,6 +56,7 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaFilter {
 				entryIdIn : { type : 's' },
 				serverNodeIdEqual : { type : 'n' },
 				serverNodeIdIn : { type : 's' },
+				serverNodeIdNotIn : { type : 's' },
 				createdAtLessThanOrEqual : { type : 'd' },
 				createdAtGreaterThanOrEqual : { type : 'd' },
 				updatedAtGreaterThanOrEqual : { type : 'd' },
