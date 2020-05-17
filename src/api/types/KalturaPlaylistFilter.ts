@@ -1,16 +1,19 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaPlaylistType } from './KalturaPlaylistType';
 import { KalturaPlaylistBaseFilter, KalturaPlaylistBaseFilterArgs } from './KalturaPlaylistBaseFilter';
 
 export interface KalturaPlaylistFilterArgs  extends KalturaPlaylistBaseFilterArgs {
-    
+    playListTypeEqual? : KalturaPlaylistType;
+	playListTypeIn? : string;
 }
 
 
 export class KalturaPlaylistFilter extends KalturaPlaylistBaseFilter {
 
-    
+    playListTypeEqual : KalturaPlaylistType;
+	playListTypeIn : string;
 
     constructor(data? : KalturaPlaylistFilterArgs)
     {
@@ -23,7 +26,9 @@ export class KalturaPlaylistFilter extends KalturaPlaylistBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaPlaylistFilter' }
+                objectType : { type : 'c', default : 'KalturaPlaylistFilter' },
+				playListTypeEqual : { type : 'en', subTypeConstructor : KalturaPlaylistType, subType : 'KalturaPlaylistType' },
+				playListTypeIn : { type : 's' }
             }
         );
         return result;

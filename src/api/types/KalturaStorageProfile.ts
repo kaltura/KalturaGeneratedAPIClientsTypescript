@@ -38,8 +38,10 @@ export interface KalturaStorageProfileArgs  extends KalturaObjectBaseArgs {
 	publicKey? : string;
 	passPhrase? : string;
 	shouldExportThumbs? : boolean;
-	mappedPackagerUrl? : string;
-	regularPackagerUrl? : string;
+	packagerUrl? : string;
+	exportPeriodically? : boolean;
+	excludedFlavorParamsIds? : string;
+	shouldExportCaptions? : boolean;
 }
 
 
@@ -77,8 +79,10 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 	publicKey : string;
 	passPhrase : string;
 	shouldExportThumbs : boolean;
-	mappedPackagerUrl : string;
-	regularPackagerUrl : string;
+	packagerUrl : string;
+	exportPeriodically : boolean;
+	excludedFlavorParamsIds : string;
+	shouldExportCaptions : boolean;
 
     constructor(data? : KalturaStorageProfileArgs)
     {
@@ -127,8 +131,10 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 				publicKey : { type : 's' },
 				passPhrase : { type : 's' },
 				shouldExportThumbs : { type : 'b' },
-				mappedPackagerUrl : { type : 's' },
-				regularPackagerUrl : { type : 's' }
+				packagerUrl : { type : 's' },
+				exportPeriodically : { type : 'b' },
+				excludedFlavorParamsIds : { type : 's' },
+				shouldExportCaptions : { type : 'b' }
             }
         );
         return result;
