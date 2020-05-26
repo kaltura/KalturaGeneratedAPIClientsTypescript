@@ -11,6 +11,7 @@ export interface KalturaAmazonS3StorageExportJobDataArgs  extends KalturaStorage
 	sseKmsKeyId? : string;
 	signatureType? : string;
 	endPoint? : string;
+	storageClass? : string;
 }
 
 
@@ -22,6 +23,7 @@ export class KalturaAmazonS3StorageExportJobData extends KalturaStorageExportJob
 	sseKmsKeyId : string;
 	signatureType : string;
 	endPoint : string;
+	storageClass : string;
 
     constructor(data? : KalturaAmazonS3StorageExportJobDataArgs)
     {
@@ -40,7 +42,8 @@ export class KalturaAmazonS3StorageExportJobData extends KalturaStorageExportJob
 				sseType : { type : 's' },
 				sseKmsKeyId : { type : 's' },
 				signatureType : { type : 's' },
-				endPoint : { type : 's' }
+				endPoint : { type : 's' },
+				storageClass : { type : 's' }
             }
         );
         return result;

@@ -12,6 +12,7 @@ export interface KalturaFileSyncArgs  extends KalturaObjectBaseArgs {
 	filePath? : string;
 	srcPath? : string;
 	srcEncKey? : string;
+	storageClass? : string;
 }
 
 
@@ -44,6 +45,7 @@ export class KalturaFileSync extends KalturaObjectBase {
 	readonly originalId : number;
 	srcPath : string;
 	srcEncKey : string;
+	storageClass : string;
 
     constructor(data? : KalturaFileSyncArgs)
     {
@@ -83,7 +85,8 @@ export class KalturaFileSync extends KalturaObjectBase {
 				isDir : { type : 'b', readOnly : true },
 				originalId : { type : 'n', readOnly : true },
 				srcPath : { type : 's' },
-				srcEncKey : { type : 's' }
+				srcEncKey : { type : 's' },
+				storageClass : { type : 's' }
             }
         );
         return result;
