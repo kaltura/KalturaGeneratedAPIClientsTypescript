@@ -1,20 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendorTaskData';
+import { KalturaVendorTaskDataCaptionAsset, KalturaVendorTaskDataCaptionAssetArgs } from './KalturaVendorTaskDataCaptionAsset';
 
-export interface KalturaAlignmentVendorTaskDataArgs  extends KalturaVendorTaskDataArgs {
+export interface KalturaAlignmentVendorTaskDataArgs  extends KalturaVendorTaskDataCaptionAssetArgs {
     textTranscriptAssetId? : string;
 	jsonTranscriptAssetId? : string;
-	captionAssetId? : string;
 }
 
 
-export class KalturaAlignmentVendorTaskData extends KalturaVendorTaskData {
+export class KalturaAlignmentVendorTaskData extends KalturaVendorTaskDataCaptionAsset {
 
     textTranscriptAssetId : string;
 	jsonTranscriptAssetId : string;
-	captionAssetId : string;
 
     constructor(data? : KalturaAlignmentVendorTaskDataArgs)
     {
@@ -29,8 +27,7 @@ export class KalturaAlignmentVendorTaskData extends KalturaVendorTaskData {
             {
                 objectType : { type : 'c', default : 'KalturaAlignmentVendorTaskData' },
 				textTranscriptAssetId : { type : 's' },
-				jsonTranscriptAssetId : { type : 's' },
-				captionAssetId : { type : 's' }
+				jsonTranscriptAssetId : { type : 's' }
             }
         );
         return result;
