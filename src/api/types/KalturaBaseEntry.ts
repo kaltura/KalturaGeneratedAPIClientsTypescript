@@ -8,6 +8,7 @@ import { KalturaLicenseType } from './KalturaLicenseType';
 import { KalturaEntryReplacementStatus } from './KalturaEntryReplacementStatus';
 import { KalturaOperationAttributes } from './KalturaOperationAttributes';
 import { KalturaEntryDisplayInSearchType } from './KalturaEntryDisplayInSearchType';
+import { KalturaEntryApplication } from './KalturaEntryApplication';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBaseEntryArgs  extends KalturaObjectBaseArgs {
@@ -37,6 +38,8 @@ export interface KalturaBaseEntryArgs  extends KalturaObjectBaseArgs {
 	entitledUsersView? : string;
 	templateEntryId? : string;
 	displayInSearch? : KalturaEntryDisplayInSearchType;
+	application? : KalturaEntryApplication;
+	applicationVersion? : string;
 }
 
 
@@ -87,6 +90,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 	readonly capabilities : string;
 	templateEntryId : string;
 	displayInSearch : KalturaEntryDisplayInSearchType;
+	application : KalturaEntryApplication;
+	applicationVersion : string;
 
     constructor(data? : KalturaBaseEntryArgs)
     {
@@ -145,7 +150,9 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 				entitledUsersView : { type : 's' },
 				capabilities : { type : 's', readOnly : true },
 				templateEntryId : { type : 's' },
-				displayInSearch : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' }
+				displayInSearch : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' },
+				application : { type : 'es', subTypeConstructor : KalturaEntryApplication, subType : 'KalturaEntryApplication' },
+				applicationVersion : { type : 's' }
             }
         );
         return result;
