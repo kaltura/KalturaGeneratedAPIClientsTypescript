@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaLiveStreamBitrate } from './KalturaLiveStreamBitrate';
+import { KalturaSipSourceType } from './KalturaSipSourceType';
 import { KalturaLiveEntry, KalturaLiveEntryArgs } from './KalturaLiveEntry';
 
 export interface KalturaLiveStreamEntryArgs  extends KalturaLiveEntryArgs {
@@ -43,6 +44,7 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 	readonly streamUsername : string;
 	readonly primaryServerNodeId : number;
 	readonly sipToken : string;
+	readonly sipSourceType : KalturaSipSourceType;
 
     constructor(data? : KalturaLiveStreamEntryArgs)
     {
@@ -75,7 +77,8 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 				streamPassword : { type : 's' },
 				streamUsername : { type : 's', readOnly : true },
 				primaryServerNodeId : { type : 'n', readOnly : true },
-				sipToken : { type : 's', readOnly : true }
+				sipToken : { type : 's', readOnly : true },
+				sipSourceType : { type : 'en', readOnly : true, subTypeConstructor : KalturaSipSourceType, subType : 'KalturaSipSourceType' }
             }
         );
         return result;
