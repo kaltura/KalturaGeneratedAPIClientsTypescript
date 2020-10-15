@@ -5,12 +5,16 @@ import { KalturaEntryScheduleEvent, KalturaEntryScheduleEventArgs } from './Kalt
 
 export interface KalturaLiveStreamScheduleEventArgs  extends KalturaEntryScheduleEventArgs {
     projectedAudience? : number;
+	sourceEntryId? : string;
+	preStartTime? : number;
 }
 
 
 export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
 
     projectedAudience : number;
+	sourceEntryId : string;
+	preStartTime : number;
 
     constructor(data? : KalturaLiveStreamScheduleEventArgs)
     {
@@ -24,7 +28,9 @@ export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEvent' },
-				projectedAudience : { type : 'n' }
+				projectedAudience : { type : 'n' },
+				sourceEntryId : { type : 's' },
+				preStartTime : { type : 'n' }
             }
         );
         return result;

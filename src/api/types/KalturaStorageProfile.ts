@@ -17,6 +17,7 @@ export interface KalturaStorageProfileArgs  extends KalturaObjectBaseArgs {
 	protocol? : KalturaStorageProfileProtocol;
 	storageUrl? : string;
 	storageBaseDir? : string;
+	pathPrefix? : string;
 	storageUsername? : string;
 	storagePassword? : string;
 	storageFtpPassiveMode? : boolean;
@@ -59,6 +60,7 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 	protocol : KalturaStorageProfileProtocol;
 	storageUrl : string;
 	storageBaseDir : string;
+	pathPrefix : string;
 	storageUsername : string;
 	storagePassword : string;
 	storageFtpPassiveMode : boolean;
@@ -112,6 +114,7 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 				protocol : { type : 'es', subTypeConstructor : KalturaStorageProfileProtocol, subType : 'KalturaStorageProfileProtocol' },
 				storageUrl : { type : 's' },
 				storageBaseDir : { type : 's' },
+				pathPrefix : { type : 's' },
 				storageUsername : { type : 's' },
 				storagePassword : { type : 's' },
 				storageFtpPassiveMode : { type : 'b' },
