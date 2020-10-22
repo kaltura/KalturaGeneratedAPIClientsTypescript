@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDeliveryProfile, KalturaDeliveryProfileArgs } from './KalturaDeliveryProfile';
+import { KalturaDeliveryProfileHttp, KalturaDeliveryProfileHttpArgs } from './KalturaDeliveryProfileHttp';
 
-export interface KalturaDeliveryProfileGenericHttpArgs  extends KalturaDeliveryProfileArgs {
+export interface KalturaDeliveryProfileGenericHttpArgs  extends KalturaDeliveryProfileHttpArgs {
     pattern? : string;
 }
 
 
-export class KalturaDeliveryProfileGenericHttp extends KalturaDeliveryProfile {
+export class KalturaDeliveryProfileGenericHttp extends KalturaDeliveryProfileHttp {
 
     pattern : string;
 
