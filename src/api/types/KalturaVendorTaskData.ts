@@ -10,7 +10,7 @@ export interface KalturaVendorTaskDataArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaVendorTaskData extends KalturaObjectBase {
 
-    
+    readonly entryDuration : number;
 
     constructor(data? : KalturaVendorTaskDataArgs)
     {
@@ -23,7 +23,8 @@ export class KalturaVendorTaskData extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaVendorTaskData' }
+                objectType : { type : 'c', default : 'KalturaVendorTaskData' },
+				entryDuration : { type : 'n', readOnly : true }
             }
         );
         return result;
