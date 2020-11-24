@@ -6,6 +6,7 @@ import { KalturaCaptionPlaybackPluginData } from './KalturaCaptionPlaybackPlugin
 import { KalturaFlavorAsset } from './KalturaFlavorAsset';
 import { KalturaRuleAction } from './KalturaRuleAction';
 import { KalturaAccessControlMessage } from './KalturaAccessControlMessage';
+import { KalturaTypedArray } from './KalturaTypedArray';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPlaybackContextArgs  extends KalturaObjectBaseArgs {
@@ -14,6 +15,7 @@ export interface KalturaPlaybackContextArgs  extends KalturaObjectBaseArgs {
 	flavorAssets? : KalturaFlavorAsset[];
 	actions? : KalturaRuleAction[];
 	messages? : KalturaAccessControlMessage[];
+	bumperData? : KalturaTypedArray;
 }
 
 
@@ -24,6 +26,7 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 	flavorAssets : KalturaFlavorAsset[];
 	actions : KalturaRuleAction[];
 	messages : KalturaAccessControlMessage[];
+	bumperData : KalturaTypedArray;
 
     constructor(data? : KalturaPlaybackContextArgs)
     {
@@ -46,7 +49,8 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 				playbackCaptions : { type : 'a', subTypeConstructor : KalturaCaptionPlaybackPluginData, subType : 'KalturaCaptionPlaybackPluginData' },
 				flavorAssets : { type : 'a', subTypeConstructor : KalturaFlavorAsset, subType : 'KalturaFlavorAsset' },
 				actions : { type : 'a', subTypeConstructor : KalturaRuleAction, subType : 'KalturaRuleAction' },
-				messages : { type : 'a', subTypeConstructor : KalturaAccessControlMessage, subType : 'KalturaAccessControlMessage' }
+				messages : { type : 'a', subTypeConstructor : KalturaAccessControlMessage, subType : 'KalturaAccessControlMessage' },
+				bumperData : { type : 'o', subTypeConstructor : KalturaTypedArray, subType : 'KalturaTypedArray' }
             }
         );
         return result;
