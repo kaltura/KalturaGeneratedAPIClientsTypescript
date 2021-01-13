@@ -25,6 +25,8 @@ export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
 	enableAudioTags? : KalturaNullableBoolean;
 	enableProfanityRemoval? : KalturaNullableBoolean;
 	maxCharactersPerCaptionLine? : number;
+	labelAdditionForMachineServiceType? : string;
+	labelAdditionForHumanServiceType? : string;
 	contentDeletionPolicy? : KalturaReachProfileContentDeletionPolicy;
 	rules? : KalturaRule[];
 	credit? : KalturaBaseVendorCredit;
@@ -53,6 +55,8 @@ export class KalturaReachProfile extends KalturaObjectBase {
 	enableAudioTags : KalturaNullableBoolean;
 	enableProfanityRemoval : KalturaNullableBoolean;
 	maxCharactersPerCaptionLine : number;
+	labelAdditionForMachineServiceType : string;
+	labelAdditionForHumanServiceType : string;
 	contentDeletionPolicy : KalturaReachProfileContentDeletionPolicy;
 	rules : KalturaRule[];
 	credit : KalturaBaseVendorCredit;
@@ -92,6 +96,8 @@ export class KalturaReachProfile extends KalturaObjectBase {
 				enableAudioTags : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableProfanityRemoval : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				maxCharactersPerCaptionLine : { type : 'n' },
+				labelAdditionForMachineServiceType : { type : 's' },
+				labelAdditionForHumanServiceType : { type : 's' },
 				contentDeletionPolicy : { type : 'en', subTypeConstructor : KalturaReachProfileContentDeletionPolicy, subType : 'KalturaReachProfileContentDeletionPolicy' },
 				rules : { type : 'a', subTypeConstructor : KalturaRule, subType : 'KalturaRule' },
 				credit : { type : 'o', subTypeConstructor : KalturaBaseVendorCredit, subType : 'KalturaBaseVendorCredit' },

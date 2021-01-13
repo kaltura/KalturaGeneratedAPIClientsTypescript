@@ -41,6 +41,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	nodeIdsIn? : string;
 	categoriesAncestorIdIn? : string;
 	hotspotIdIn? : string;
+	crmIdIn? : string;
 }
 
 
@@ -81,6 +82,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	nodeIdsIn : string;
 	categoriesAncestorIdIn : string;
 	hotspotIdIn : string;
+	crmIdIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -128,7 +130,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				applicationVersionIn : { type : 's' },
 				nodeIdsIn : { type : 's' },
 				categoriesAncestorIdIn : { type : 's' },
-				hotspotIdIn : { type : 's' }
+				hotspotIdIn : { type : 's' },
+				crmIdIn : { type : 's' }
             }
         );
         return result;
