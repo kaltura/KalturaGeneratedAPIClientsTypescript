@@ -31,6 +31,7 @@ export interface KalturaCategoryArgs  extends KalturaObjectBaseArgs {
 	moderation? : KalturaNullableBoolean;
 	isAggregationCategory? : KalturaNullableBoolean;
 	aggregationCategories? : string;
+	adminTags? : string;
 }
 
 
@@ -71,6 +72,7 @@ export class KalturaCategory extends KalturaObjectBase {
 	readonly pendingEntriesCount : number;
 	isAggregationCategory : KalturaNullableBoolean;
 	aggregationCategories : string;
+	adminTags : string;
 
     constructor(data? : KalturaCategoryArgs)
     {
@@ -118,7 +120,8 @@ export class KalturaCategory extends KalturaObjectBase {
 				moderation : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				pendingEntriesCount : { type : 'n', readOnly : true },
 				isAggregationCategory : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				aggregationCategories : { type : 's' }
+				aggregationCategories : { type : 's' },
+				adminTags : { type : 's' }
             }
         );
         return result;
