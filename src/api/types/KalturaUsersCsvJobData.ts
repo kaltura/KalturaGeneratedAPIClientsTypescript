@@ -2,30 +2,20 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUserFilter } from './KalturaUserFilter';
-import { KalturaCsvAdditionalFieldInfo } from './KalturaCsvAdditionalFieldInfo';
-import { KalturaKeyValue } from './KalturaKeyValue';
-import { KalturaExportCsvJobData, KalturaExportCsvJobDataArgs } from './KalturaExportCsvJobData';
+import { KalturaMappedObjectsCsvJobData, KalturaMappedObjectsCsvJobDataArgs } from './KalturaMappedObjectsCsvJobData';
 
-export interface KalturaUsersCsvJobDataArgs  extends KalturaExportCsvJobDataArgs {
+export interface KalturaUsersCsvJobDataArgs  extends KalturaMappedObjectsCsvJobDataArgs {
     filter? : KalturaUserFilter;
-	metadataProfileId? : number;
-	additionalFields? : KalturaCsvAdditionalFieldInfo[];
-	mappedFields? : KalturaKeyValue[];
 }
 
 
-export class KalturaUsersCsvJobData extends KalturaExportCsvJobData {
+export class KalturaUsersCsvJobData extends KalturaMappedObjectsCsvJobData {
 
     filter : KalturaUserFilter;
-	metadataProfileId : number;
-	additionalFields : KalturaCsvAdditionalFieldInfo[];
-	mappedFields : KalturaKeyValue[];
 
     constructor(data? : KalturaUsersCsvJobDataArgs)
     {
         super(data);
-        if (typeof this.additionalFields === 'undefined') this.additionalFields = [];
-		if (typeof this.mappedFields === 'undefined') this.mappedFields = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,10 +25,7 @@ export class KalturaUsersCsvJobData extends KalturaExportCsvJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaUsersCsvJobData' },
-				filter : { type : 'o', subTypeConstructor : KalturaUserFilter, subType : 'KalturaUserFilter' },
-				metadataProfileId : { type : 'n' },
-				additionalFields : { type : 'a', subTypeConstructor : KalturaCsvAdditionalFieldInfo, subType : 'KalturaCsvAdditionalFieldInfo' },
-				mappedFields : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				filter : { type : 'o', subTypeConstructor : KalturaUserFilter, subType : 'KalturaUserFilter' }
             }
         );
         return result;

@@ -1,20 +1,20 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaEntryScheduleEvent, KalturaEntryScheduleEventArgs } from './KalturaEntryScheduleEvent';
+import { KalturaBaseLiveScheduleEvent, KalturaBaseLiveScheduleEventArgs } from './KalturaBaseLiveScheduleEvent';
 
-export interface KalturaLiveStreamScheduleEventArgs  extends KalturaEntryScheduleEventArgs {
-    projectedAudience? : number;
-	sourceEntryId? : string;
+export interface KalturaLiveStreamScheduleEventArgs  extends KalturaBaseLiveScheduleEventArgs {
+    sourceEntryId? : string;
+	projectedAudience? : number;
 	preStartTime? : number;
 	postEndTime? : number;
 }
 
 
-export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
+export class KalturaLiveStreamScheduleEvent extends KalturaBaseLiveScheduleEvent {
 
-    projectedAudience : number;
-	sourceEntryId : string;
+    sourceEntryId : string;
+	projectedAudience : number;
 	preStartTime : number;
 	postEndTime : number;
 
@@ -30,8 +30,8 @@ export class KalturaLiveStreamScheduleEvent extends KalturaEntryScheduleEvent {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEvent' },
-				projectedAudience : { type : 'n' },
 				sourceEntryId : { type : 's' },
+				projectedAudience : { type : 'n' },
 				preStartTime : { type : 'n' },
 				postEndTime : { type : 'n' }
             }
