@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaVendorCatalogItem, KalturaVendorCatalogItemArgs } from './KalturaVendorCatalogItem';
 
-export interface KalturaVendorChapteringCatalogItemArgs  extends KalturaVendorCatalogItemArgs {
+export interface KalturaVendorIntelligentTaggingCatalogItemArgs  extends KalturaVendorCatalogItemArgs {
     
 }
 
 
-export class KalturaVendorChapteringCatalogItem extends KalturaVendorCatalogItem {
+export class KalturaVendorIntelligentTaggingCatalogItem extends KalturaVendorCatalogItem {
 
     
 
-    constructor(data? : KalturaVendorChapteringCatalogItemArgs)
+    constructor(data? : KalturaVendorIntelligentTaggingCatalogItemArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaVendorChapteringCatalogItem extends KalturaVendorCatalogItem
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaVendorChapteringCatalogItem' }
+                objectType : { type : 'c', default : 'KalturaVendorIntelligentTaggingCatalogItem' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaVendorChapteringCatalogItem',KalturaVendorChapteringCatalogItem);
+KalturaTypesFactory.registerType('KalturaVendorIntelligentTaggingCatalogItem',KalturaVendorIntelligentTaggingCatalogItem);

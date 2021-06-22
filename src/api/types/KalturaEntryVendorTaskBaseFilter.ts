@@ -7,6 +7,7 @@ import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelated
 export interface KalturaEntryVendorTaskBaseFilterArgs  extends KalturaRelatedFilterArgs {
     idEqual? : number;
 	idIn? : string;
+	idNotIn? : string;
 	vendorPartnerIdEqual? : number;
 	vendorPartnerIdIn? : string;
 	createdAtGreaterThanOrEqual? : Date;
@@ -26,6 +27,8 @@ export interface KalturaEntryVendorTaskBaseFilterArgs  extends KalturaRelatedFil
 	catalogItemIdIn? : string;
 	userIdEqual? : string;
 	contextEqual? : string;
+	expectedFinishTimeGreaterThanOrEqual? : Date;
+	expectedFinishTimeLessThanOrEqual? : Date;
 }
 
 
@@ -33,6 +36,7 @@ export class KalturaEntryVendorTaskBaseFilter extends KalturaRelatedFilter {
 
     idEqual : number;
 	idIn : string;
+	idNotIn : string;
 	vendorPartnerIdEqual : number;
 	vendorPartnerIdIn : string;
 	createdAtGreaterThanOrEqual : Date;
@@ -52,6 +56,8 @@ export class KalturaEntryVendorTaskBaseFilter extends KalturaRelatedFilter {
 	catalogItemIdIn : string;
 	userIdEqual : string;
 	contextEqual : string;
+	expectedFinishTimeGreaterThanOrEqual : Date;
+	expectedFinishTimeLessThanOrEqual : Date;
 
     constructor(data? : KalturaEntryVendorTaskBaseFilterArgs)
     {
@@ -67,6 +73,7 @@ export class KalturaEntryVendorTaskBaseFilter extends KalturaRelatedFilter {
                 objectType : { type : 'c', default : 'KalturaEntryVendorTaskBaseFilter' },
 				idEqual : { type : 'n' },
 				idIn : { type : 's' },
+				idNotIn : { type : 's' },
 				vendorPartnerIdEqual : { type : 'n' },
 				vendorPartnerIdIn : { type : 's' },
 				createdAtGreaterThanOrEqual : { type : 'd' },
@@ -85,7 +92,9 @@ export class KalturaEntryVendorTaskBaseFilter extends KalturaRelatedFilter {
 				catalogItemIdEqual : { type : 'n' },
 				catalogItemIdIn : { type : 's' },
 				userIdEqual : { type : 's' },
-				contextEqual : { type : 's' }
+				contextEqual : { type : 's' },
+				expectedFinishTimeGreaterThanOrEqual : { type : 'd' },
+				expectedFinishTimeLessThanOrEqual : { type : 'd' }
             }
         );
         return result;

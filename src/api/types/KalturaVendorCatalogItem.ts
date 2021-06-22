@@ -6,6 +6,8 @@ import { KalturaVendorServiceType } from './KalturaVendorServiceType';
 import { KalturaVendorServiceFeature } from './KalturaVendorServiceFeature';
 import { KalturaVendorServiceTurnAroundTime } from './KalturaVendorServiceTurnAroundTime';
 import { KalturaVendorCatalogItemPricing } from './KalturaVendorCatalogItemPricing';
+import { KalturaReachVendorEngineType } from './KalturaReachVendorEngineType';
+import { KalturaCatalogItemLanguage } from './KalturaCatalogItemLanguage';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
@@ -15,6 +17,8 @@ export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
 	serviceType? : KalturaVendorServiceType;
 	turnAroundTime? : KalturaVendorServiceTurnAroundTime;
 	pricing? : KalturaVendorCatalogItemPricing;
+	engineType? : KalturaReachVendorEngineType;
+	sourceLanguage? : KalturaCatalogItemLanguage;
 	allowResubmission? : boolean;
 }
 
@@ -32,6 +36,8 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 	readonly serviceFeature : KalturaVendorServiceFeature;
 	turnAroundTime : KalturaVendorServiceTurnAroundTime;
 	pricing : KalturaVendorCatalogItemPricing;
+	engineType : KalturaReachVendorEngineType;
+	sourceLanguage : KalturaCatalogItemLanguage;
 	allowResubmission : boolean;
 
     constructor(data? : KalturaVendorCatalogItemArgs)
@@ -57,6 +63,8 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' },
 				turnAroundTime : { type : 'en', subTypeConstructor : KalturaVendorServiceTurnAroundTime, subType : 'KalturaVendorServiceTurnAroundTime' },
 				pricing : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemPricing, subType : 'KalturaVendorCatalogItemPricing' },
+				engineType : { type : 'es', subTypeConstructor : KalturaReachVendorEngineType, subType : 'KalturaReachVendorEngineType' },
+				sourceLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' },
 				allowResubmission : { type : 'b' }
             }
         );
