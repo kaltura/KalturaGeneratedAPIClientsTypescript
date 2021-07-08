@@ -20,6 +20,7 @@ export interface KalturaDropFolderArgs  extends KalturaObjectBaseArgs {
 	path? : string;
 	fileSizeCheckInterval? : number;
 	fileDeletePolicy? : KalturaDropFolderFileDeletePolicy;
+	fileDeleteRegex? : string;
 	autoFileDeleteDays? : number;
 	fileHandlerType? : KalturaDropFolderFileHandlerType;
 	fileNamePatterns? : string;
@@ -51,6 +52,7 @@ export class KalturaDropFolder extends KalturaObjectBase {
 	path : string;
 	fileSizeCheckInterval : number;
 	fileDeletePolicy : KalturaDropFolderFileDeletePolicy;
+	fileDeleteRegex : string;
 	autoFileDeleteDays : number;
 	fileHandlerType : KalturaDropFolderFileHandlerType;
 	fileNamePatterns : string;
@@ -92,6 +94,7 @@ export class KalturaDropFolder extends KalturaObjectBase {
 				path : { type : 's' },
 				fileSizeCheckInterval : { type : 'n' },
 				fileDeletePolicy : { type : 'en', subTypeConstructor : KalturaDropFolderFileDeletePolicy, subType : 'KalturaDropFolderFileDeletePolicy' },
+				fileDeleteRegex : { type : 's' },
 				autoFileDeleteDays : { type : 'n' },
 				fileHandlerType : { type : 'es', subTypeConstructor : KalturaDropFolderFileHandlerType, subType : 'KalturaDropFolderFileHandlerType' },
 				fileNamePatterns : { type : 's' },
