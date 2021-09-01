@@ -5,16 +5,12 @@ import { KalturaEntryVendorTaskBaseFilter, KalturaEntryVendorTaskBaseFilterArgs 
 
 export interface KalturaEntryVendorTaskFilterArgs  extends KalturaEntryVendorTaskBaseFilterArgs {
     freeText? : string;
-	expectedFinishTimeGreaterThanOrEqual? : Date;
-	expectedFinishTimeLessThanOrEqual? : Date;
 }
 
 
 export class KalturaEntryVendorTaskFilter extends KalturaEntryVendorTaskBaseFilter {
 
     freeText : string;
-	expectedFinishTimeGreaterThanOrEqual : Date;
-	expectedFinishTimeLessThanOrEqual : Date;
 
     constructor(data? : KalturaEntryVendorTaskFilterArgs)
     {
@@ -28,9 +24,7 @@ export class KalturaEntryVendorTaskFilter extends KalturaEntryVendorTaskBaseFilt
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaEntryVendorTaskFilter' },
-				freeText : { type : 's' },
-				expectedFinishTimeGreaterThanOrEqual : { type : 'd' },
-				expectedFinishTimeLessThanOrEqual : { type : 'd' }
+				freeText : { type : 's' }
             }
         );
         return result;
