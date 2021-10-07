@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaDeliveryProfile, KalturaDeliveryProfileArgs } from './KalturaDeliveryProfile';
+import { KalturaDeliveryProfileVod, KalturaDeliveryProfileVodArgs } from './KalturaDeliveryProfileVod';
 
-export interface KalturaDeliveryProfileVodPackagerPlayServerArgs  extends KalturaDeliveryProfileArgs {
+export interface KalturaDeliveryProfileVodPackagerPlayServerArgs  extends KalturaDeliveryProfileVodArgs {
     adStitchingEnabled? : boolean;
 }
 
 
-export class KalturaDeliveryProfileVodPackagerPlayServer extends KalturaDeliveryProfile {
+export class KalturaDeliveryProfileVodPackagerPlayServer extends KalturaDeliveryProfileVod {
 
     adStitchingEnabled : boolean;
 

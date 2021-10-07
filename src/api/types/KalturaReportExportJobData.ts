@@ -11,6 +11,7 @@ export interface KalturaReportExportJobDataArgs  extends KalturaJobDataArgs {
 	filePaths? : string;
 	reportsGroup? : string;
 	files? : KalturaReportExportFile[];
+	baseUrl? : string;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaReportExportJobData extends KalturaJobData {
 	filePaths : string;
 	reportsGroup : string;
 	files : KalturaReportExportFile[];
+	baseUrl : string;
 
     constructor(data? : KalturaReportExportJobDataArgs)
     {
@@ -40,7 +42,8 @@ export class KalturaReportExportJobData extends KalturaJobData {
 				reportItems : { type : 'a', subTypeConstructor : KalturaReportExportItem, subType : 'KalturaReportExportItem' },
 				filePaths : { type : 's' },
 				reportsGroup : { type : 's' },
-				files : { type : 'a', subTypeConstructor : KalturaReportExportFile, subType : 'KalturaReportExportFile' }
+				files : { type : 'a', subTypeConstructor : KalturaReportExportFile, subType : 'KalturaReportExportFile' },
+				baseUrl : { type : 's' }
             }
         );
         return result;

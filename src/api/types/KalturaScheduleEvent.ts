@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaScheduleEventStatus } from './KalturaScheduleEventStatus';
+import { KalturaLinkedScheduleEvent } from './KalturaLinkedScheduleEvent';
 import { KalturaScheduleEventClassificationType } from './KalturaScheduleEventClassificationType';
 import { KalturaScheduleEventRecurrenceType } from './KalturaScheduleEventRecurrenceType';
 import { KalturaScheduleEventRecurrence } from './KalturaScheduleEventRecurrence';
@@ -13,6 +14,8 @@ export interface KalturaScheduleEventArgs  extends KalturaObjectBaseArgs {
 	startDate? : Date;
 	endDate? : Date;
 	referenceId? : string;
+	linkedTo? : KalturaLinkedScheduleEvent;
+	linkedBy? : string;
 	classificationType? : KalturaScheduleEventClassificationType;
 	geoLatitude? : number;
 	geoLongitude? : number;
@@ -41,6 +44,8 @@ export class KalturaScheduleEvent extends KalturaObjectBase {
 	startDate : Date;
 	endDate : Date;
 	referenceId : string;
+	linkedTo : KalturaLinkedScheduleEvent;
+	linkedBy : string;
 	classificationType : KalturaScheduleEventClassificationType;
 	geoLatitude : number;
 	geoLongitude : number;
@@ -79,6 +84,8 @@ export class KalturaScheduleEvent extends KalturaObjectBase {
 				startDate : { type : 'd' },
 				endDate : { type : 'd' },
 				referenceId : { type : 's' },
+				linkedTo : { type : 'o', subTypeConstructor : KalturaLinkedScheduleEvent, subType : 'KalturaLinkedScheduleEvent' },
+				linkedBy : { type : 's' },
 				classificationType : { type : 'en', subTypeConstructor : KalturaScheduleEventClassificationType, subType : 'KalturaScheduleEventClassificationType' },
 				geoLatitude : { type : 'n' },
 				geoLongitude : { type : 'n' },

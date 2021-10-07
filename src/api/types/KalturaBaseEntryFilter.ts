@@ -12,6 +12,7 @@ export interface KalturaBaseEntryFilterArgs  extends KalturaBaseEntryBaseFilterA
 	categoriesFullNameIn? : string;
 	categoryAncestorIdIn? : string;
 	redirectFromEntryId? : string;
+	conversionProfileIdEqual? : number;
 }
 
 
@@ -24,6 +25,7 @@ export class KalturaBaseEntryFilter extends KalturaBaseEntryBaseFilter {
 	categoriesFullNameIn : string;
 	categoryAncestorIdIn : string;
 	redirectFromEntryId : string;
+	conversionProfileIdEqual : number;
 
     constructor(data? : KalturaBaseEntryFilterArgs)
     {
@@ -43,7 +45,8 @@ export class KalturaBaseEntryFilter extends KalturaBaseEntryBaseFilter {
 				isRoot : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				categoriesFullNameIn : { type : 's' },
 				categoryAncestorIdIn : { type : 's' },
-				redirectFromEntryId : { type : 's' }
+				redirectFromEntryId : { type : 's' },
+				conversionProfileIdEqual : { type : 'n' }
             }
         );
         return result;

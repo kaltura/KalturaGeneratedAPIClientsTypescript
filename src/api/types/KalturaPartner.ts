@@ -10,6 +10,7 @@ import { KalturaPlayerDeliveryType } from './KalturaPlayerDeliveryType';
 import { KalturaPlayerEmbedCodeType } from './KalturaPlayerEmbedCodeType';
 import { KalturaESearchLanguageItem } from './KalturaESearchLanguageItem';
 import { KalturaPartnerAuthenticationType } from './KalturaPartnerAuthenticationType';
+import { KalturaTwoFactorAuthenticationMode } from './KalturaTwoFactorAuthenticationMode';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
@@ -131,6 +132,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	maxLoginAttempts : number;
 	loginBlockPeriod : number;
 	numPrevPassToKeep : number;
+	readonly twoFactorAuthenticationMode : KalturaTwoFactorAuthenticationMode;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -221,7 +223,8 @@ export class KalturaPartner extends KalturaObjectBase {
 				passReplaceFreq : { type : 'n' },
 				maxLoginAttempts : { type : 'n' },
 				loginBlockPeriod : { type : 'n' },
-				numPrevPassToKeep : { type : 'n' }
+				numPrevPassToKeep : { type : 'n' },
+				twoFactorAuthenticationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaTwoFactorAuthenticationMode, subType : 'KalturaTwoFactorAuthenticationMode' }
             }
         );
         return result;
