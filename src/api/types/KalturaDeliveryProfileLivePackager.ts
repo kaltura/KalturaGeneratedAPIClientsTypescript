@@ -5,12 +5,14 @@ import { KalturaDeliveryProfile, KalturaDeliveryProfileArgs } from './KalturaDel
 
 export interface KalturaDeliveryProfileLivePackagerArgs  extends KalturaDeliveryProfileArgs {
     livePackagerSigningDomain? : string;
+	shouldRedirect? : boolean;
 }
 
 
 export class KalturaDeliveryProfileLivePackager extends KalturaDeliveryProfile {
 
     livePackagerSigningDomain : string;
+	shouldRedirect : boolean;
 
     constructor(data? : KalturaDeliveryProfileLivePackagerArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaDeliveryProfileLivePackager extends KalturaDeliveryProfile {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDeliveryProfileLivePackager' },
-				livePackagerSigningDomain : { type : 's' }
+				livePackagerSigningDomain : { type : 's' },
+				shouldRedirect : { type : 'b' }
             }
         );
         return result;
