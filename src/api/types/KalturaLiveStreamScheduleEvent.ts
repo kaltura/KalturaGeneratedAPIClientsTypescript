@@ -10,6 +10,7 @@ export interface KalturaLiveStreamScheduleEventArgs  extends KalturaBaseLiveSche
 	postEndTime? : number;
 	preStartEntryId? : string;
 	postEndEntryId? : string;
+	isContentInterruptible? : boolean;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaLiveStreamScheduleEvent extends KalturaBaseLiveScheduleEvent
 	postEndTime : number;
 	preStartEntryId : string;
 	postEndEntryId : string;
+	isContentInterruptible : boolean;
 
     constructor(data? : KalturaLiveStreamScheduleEventArgs)
     {
@@ -39,7 +41,8 @@ export class KalturaLiveStreamScheduleEvent extends KalturaBaseLiveScheduleEvent
 				preStartTime : { type : 'n' },
 				postEndTime : { type : 'n' },
 				preStartEntryId : { type : 's' },
-				postEndEntryId : { type : 's' }
+				postEndEntryId : { type : 's' },
+				isContentInterruptible : { type : 'b' }
             }
         );
         return result;
