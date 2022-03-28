@@ -13,6 +13,10 @@ export interface KalturaLiveStreamEntryArgs  extends KalturaLiveEntryArgs {
 	secondarySecuredBroadcastingUrl? : string;
 	primaryRtspBroadcastingUrl? : string;
 	secondaryRtspBroadcastingUrl? : string;
+	primarySrtBroadcastingUrl? : string;
+	primarySrtStreamId? : string;
+	secondarySrtBroadcastingUrl? : string;
+	secondarySrtStreamId? : string;
 	streamName? : string;
 	streamUrl? : string;
 	hlsStreamUrl? : string;
@@ -20,6 +24,7 @@ export interface KalturaLiveStreamEntryArgs  extends KalturaLiveEntryArgs {
 	encodingIP1? : string;
 	encodingIP2? : string;
 	streamPassword? : string;
+	srtPass? : string;
 }
 
 
@@ -34,6 +39,10 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 	secondarySecuredBroadcastingUrl : string;
 	primaryRtspBroadcastingUrl : string;
 	secondaryRtspBroadcastingUrl : string;
+	primarySrtBroadcastingUrl : string;
+	primarySrtStreamId : string;
+	secondarySrtBroadcastingUrl : string;
+	secondarySrtStreamId : string;
 	streamName : string;
 	streamUrl : string;
 	hlsStreamUrl : string;
@@ -42,6 +51,7 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 	encodingIP2 : string;
 	streamPassword : string;
 	readonly streamUsername : string;
+	srtPass : string;
 	readonly primaryServerNodeId : number;
 	readonly sipToken : string;
 	readonly sipSourceType : KalturaSipSourceType;
@@ -68,6 +78,10 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 				secondarySecuredBroadcastingUrl : { type : 's' },
 				primaryRtspBroadcastingUrl : { type : 's' },
 				secondaryRtspBroadcastingUrl : { type : 's' },
+				primarySrtBroadcastingUrl : { type : 's' },
+				primarySrtStreamId : { type : 's' },
+				secondarySrtBroadcastingUrl : { type : 's' },
+				secondarySrtStreamId : { type : 's' },
 				streamName : { type : 's' },
 				streamUrl : { type : 's' },
 				hlsStreamUrl : { type : 's' },
@@ -76,6 +90,7 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 				encodingIP2 : { type : 's' },
 				streamPassword : { type : 's' },
 				streamUsername : { type : 's', readOnly : true },
+				srtPass : { type : 's' },
 				primaryServerNodeId : { type : 'n', readOnly : true },
 				sipToken : { type : 's', readOnly : true },
 				sipSourceType : { type : 'en', readOnly : true, subTypeConstructor : KalturaSipSourceType, subType : 'KalturaSipSourceType' }

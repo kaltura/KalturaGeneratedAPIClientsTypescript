@@ -21,6 +21,7 @@ export interface KalturaUserArgs  extends KalturaBaseUserArgs {
 	title? : string;
 	company? : string;
 	ksPrivileges? : string;
+	isSsoExcluded? : boolean;
 }
 
 
@@ -43,6 +44,7 @@ export class KalturaUser extends KalturaBaseUser {
 	company : string;
 	ksPrivileges : string;
 	readonly encryptedSeed : string;
+	isSsoExcluded : boolean;
 
     constructor(data? : KalturaUserArgs)
     {
@@ -72,7 +74,8 @@ export class KalturaUser extends KalturaBaseUser {
 				title : { type : 's' },
 				company : { type : 's' },
 				ksPrivileges : { type : 's' },
-				encryptedSeed : { type : 's', readOnly : true }
+				encryptedSeed : { type : 's', readOnly : true },
+				isSsoExcluded : { type : 'b' }
             }
         );
         return result;

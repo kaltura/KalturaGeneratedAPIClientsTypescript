@@ -136,6 +136,8 @@ export class KalturaPartner extends KalturaObjectBase {
 	numPrevPassToKeep : number;
 	readonly twoFactorAuthenticationMode : KalturaTwoFactorAuthenticationMode;
 	isSelfServe : boolean;
+	readonly allowedDomains : string;
+	readonly excludedAdminRoleName : string;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -229,7 +231,9 @@ export class KalturaPartner extends KalturaObjectBase {
 				loginBlockPeriod : { type : 'n' },
 				numPrevPassToKeep : { type : 'n' },
 				twoFactorAuthenticationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaTwoFactorAuthenticationMode, subType : 'KalturaTwoFactorAuthenticationMode' },
-				isSelfServe : { type : 'b' }
+				isSelfServe : { type : 'b' },
+				allowedDomains : { type : 's', readOnly : true },
+				excludedAdminRoleName : { type : 's', readOnly : true }
             }
         );
         return result;
