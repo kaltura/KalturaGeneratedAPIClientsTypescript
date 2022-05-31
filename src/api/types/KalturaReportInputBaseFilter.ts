@@ -4,8 +4,8 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaReportInputBaseFilterArgs  extends KalturaObjectBaseArgs {
-    fromDate? : Date;
-	toDate? : Date;
+    fromDate? : number;
+	toDate? : number;
 	fromDay? : string;
 	toDay? : string;
 }
@@ -13,8 +13,8 @@ export interface KalturaReportInputBaseFilterArgs  extends KalturaObjectBaseArgs
 
 export class KalturaReportInputBaseFilter extends KalturaObjectBase {
 
-    fromDate : Date;
-	toDate : Date;
+    fromDate : number;
+	toDate : number;
 	fromDay : string;
 	toDay : string;
 
@@ -30,8 +30,8 @@ export class KalturaReportInputBaseFilter extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaReportInputBaseFilter' },
-				fromDate : { type : 'd' },
-				toDate : { type : 'd' },
+				fromDate : { type : 'n' },
+				toDate : { type : 'n' },
 				fromDay : { type : 's' },
 				toDay : { type : 's' }
             }

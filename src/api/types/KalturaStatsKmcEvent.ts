@@ -8,7 +8,7 @@ export interface KalturaStatsKmcEventArgs  extends KalturaObjectBaseArgs {
     clientVer? : string;
 	kmcEventActionPath? : string;
 	kmcEventType? : KalturaStatsKmcEventType;
-	eventTimestamp? : Date;
+	eventTimestamp? : number;
 	sessionId? : string;
 	partnerId? : number;
 	entryId? : string;
@@ -23,7 +23,7 @@ export class KalturaStatsKmcEvent extends KalturaObjectBase {
     clientVer : string;
 	kmcEventActionPath : string;
 	kmcEventType : KalturaStatsKmcEventType;
-	eventTimestamp : Date;
+	eventTimestamp : number;
 	sessionId : string;
 	partnerId : number;
 	entryId : string;
@@ -47,7 +47,7 @@ export class KalturaStatsKmcEvent extends KalturaObjectBase {
 				clientVer : { type : 's' },
 				kmcEventActionPath : { type : 's' },
 				kmcEventType : { type : 'en', subTypeConstructor : KalturaStatsKmcEventType, subType : 'KalturaStatsKmcEventType' },
-				eventTimestamp : { type : 'd' },
+				eventTimestamp : { type : 'n' },
 				sessionId : { type : 's' },
 				partnerId : { type : 'n' },
 				entryId : { type : 's' },
