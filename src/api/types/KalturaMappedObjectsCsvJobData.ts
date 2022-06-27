@@ -3,12 +3,14 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaCsvAdditionalFieldInfo } from './KalturaCsvAdditionalFieldInfo';
 import { KalturaKeyValue } from './KalturaKeyValue';
+import { KalturaExportToCsvOptions } from './KalturaExportToCsvOptions';
 import { KalturaExportCsvJobData, KalturaExportCsvJobDataArgs } from './KalturaExportCsvJobData';
 
 export interface KalturaMappedObjectsCsvJobDataArgs  extends KalturaExportCsvJobDataArgs {
     metadataProfileId? : number;
 	additionalFields? : KalturaCsvAdditionalFieldInfo[];
 	mappedFields? : KalturaKeyValue[];
+	options? : KalturaExportToCsvOptions;
 }
 
 
@@ -17,6 +19,7 @@ export class KalturaMappedObjectsCsvJobData extends KalturaExportCsvJobData {
     metadataProfileId : number;
 	additionalFields : KalturaCsvAdditionalFieldInfo[];
 	mappedFields : KalturaKeyValue[];
+	options : KalturaExportToCsvOptions;
 
     constructor(data? : KalturaMappedObjectsCsvJobDataArgs)
     {
@@ -34,7 +37,8 @@ export class KalturaMappedObjectsCsvJobData extends KalturaExportCsvJobData {
                 objectType : { type : 'c', default : 'KalturaMappedObjectsCsvJobData' },
 				metadataProfileId : { type : 'n' },
 				additionalFields : { type : 'a', subTypeConstructor : KalturaCsvAdditionalFieldInfo, subType : 'KalturaCsvAdditionalFieldInfo' },
-				mappedFields : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				mappedFields : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				options : { type : 'o', subTypeConstructor : KalturaExportToCsvOptions, subType : 'KalturaExportToCsvOptions' }
             }
         );
         return result;
