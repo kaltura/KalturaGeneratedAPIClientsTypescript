@@ -47,6 +47,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	canonicalUrlIn? : string;
 	virtualEventIdIn? : string;
 	originIn? : string;
+	uiConfIdIn? : string;
 }
 
 
@@ -93,6 +94,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	canonicalUrlIn : string;
 	virtualEventIdIn : string;
 	originIn : string;
+	uiConfIdIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -146,7 +148,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				domainIn : { type : 's' },
 				canonicalUrlIn : { type : 's' },
 				virtualEventIdIn : { type : 's' },
-				originIn : { type : 's' }
+				originIn : { type : 's' },
+				uiConfIdIn : { type : 's' }
             }
         );
         return result;
