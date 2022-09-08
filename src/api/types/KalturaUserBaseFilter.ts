@@ -6,7 +6,9 @@ import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaBaseUserFilter, KalturaBaseUserFilterArgs } from './KalturaBaseUserFilter';
 
 export interface KalturaUserBaseFilterArgs  extends KalturaBaseUserFilterArgs {
-    typeEqual? : KalturaUserType;
+    idEqual? : string;
+	idIn? : string;
+	typeEqual? : KalturaUserType;
 	typeIn? : string;
 	isAdminEqual? : KalturaNullableBoolean;
 	firstNameStartsWith? : string;
@@ -16,7 +18,9 @@ export interface KalturaUserBaseFilterArgs  extends KalturaBaseUserFilterArgs {
 
 export class KalturaUserBaseFilter extends KalturaBaseUserFilter {
 
-    typeEqual : KalturaUserType;
+    idEqual : string;
+	idIn : string;
+	typeEqual : KalturaUserType;
 	typeIn : string;
 	isAdminEqual : KalturaNullableBoolean;
 	firstNameStartsWith : string;
@@ -34,6 +38,8 @@ export class KalturaUserBaseFilter extends KalturaBaseUserFilter {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaUserBaseFilter' },
+				idEqual : { type : 's' },
+				idIn : { type : 's' },
 				typeEqual : { type : 'en', subTypeConstructor : KalturaUserType, subType : 'KalturaUserType' },
 				typeIn : { type : 's' },
 				isAdminEqual : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
