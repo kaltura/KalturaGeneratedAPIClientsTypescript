@@ -1,6 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaMultiLingualString } from './KalturaMultiLingualString';
 import { KalturaEntryStatus } from './KalturaEntryStatus';
 import { KalturaEntryModerationStatus } from './KalturaEntryModerationStatus';
 import { KalturaEntryType } from './KalturaEntryType';
@@ -13,10 +14,13 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaBaseEntryArgs  extends KalturaObjectBaseArgs {
     name? : string;
+	multiLingual_name? : KalturaMultiLingualString[];
 	description? : string;
+	multiLingual_description? : KalturaMultiLingualString[];
 	userId? : string;
 	creatorId? : string;
 	tags? : string;
+	multiLingual_tags? : KalturaMultiLingualString[];
 	adminTags? : string;
 	categories? : string;
 	categoriesIds? : string;
@@ -48,11 +52,14 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 
     readonly id : string;
 	name : string;
+	multiLingual_name : KalturaMultiLingualString[];
 	description : string;
+	multiLingual_description : KalturaMultiLingualString[];
 	readonly partnerId : number;
 	userId : string;
 	creatorId : string;
 	tags : string;
+	multiLingual_tags : KalturaMultiLingualString[];
 	adminTags : string;
 	categories : string;
 	categoriesIds : string;
@@ -98,7 +105,10 @@ export class KalturaBaseEntry extends KalturaObjectBase {
     constructor(data? : KalturaBaseEntryArgs)
     {
         super(data);
-        if (typeof this.operationAttributes === 'undefined') this.operationAttributes = [];
+        if (typeof this.multiLingual_name === 'undefined') this.multiLingual_name = [];
+		if (typeof this.multiLingual_description === 'undefined') this.multiLingual_description = [];
+		if (typeof this.multiLingual_tags === 'undefined') this.multiLingual_tags = [];
+		if (typeof this.operationAttributes === 'undefined') this.operationAttributes = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -110,11 +120,14 @@ export class KalturaBaseEntry extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaBaseEntry' },
 				id : { type : 's', readOnly : true },
 				name : { type : 's' },
+				multiLingual_name : { type : 'a', subTypeConstructor : KalturaMultiLingualString, subType : 'KalturaMultiLingualString' },
 				description : { type : 's' },
+				multiLingual_description : { type : 'a', subTypeConstructor : KalturaMultiLingualString, subType : 'KalturaMultiLingualString' },
 				partnerId : { type : 'n', readOnly : true },
 				userId : { type : 's' },
 				creatorId : { type : 's' },
 				tags : { type : 's' },
+				multiLingual_tags : { type : 'a', subTypeConstructor : KalturaMultiLingualString, subType : 'KalturaMultiLingualString' },
 				adminTags : { type : 's' },
 				categories : { type : 's' },
 				categoriesIds : { type : 's' },

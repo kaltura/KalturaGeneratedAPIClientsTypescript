@@ -7,6 +7,7 @@ export interface KalturaRequestOptionsArgs  extends KalturaObjectBaseArgs {
     acceptedTypes? : {new(...args: any[]) : KalturaObjectBase}[];
 	partnerId? : number;
 	ks? : string;
+	language? : string;
 	responseProfile? : KalturaBaseResponseProfile;
 }
 
@@ -16,6 +17,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
     acceptedTypes : {new(...args: any[]) : KalturaObjectBase}[];
 	partnerId : number;
 	ks : string;
+	language : string;
 	responseProfile : KalturaBaseResponseProfile;
 
     constructor(data? : KalturaRequestOptionsArgs)
@@ -32,6 +34,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
             {
                 partnerId : { type : 'n' },
 				ks : { type : 's' },
+				language : { type : 's' },
 				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
             }
         );
