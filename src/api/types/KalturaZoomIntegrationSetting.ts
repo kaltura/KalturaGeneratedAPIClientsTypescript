@@ -16,7 +16,6 @@ export interface KalturaZoomIntegrationSettingArgs  extends KalturaIntegrationSe
 	jwtToken? : string;
 	enableZoomTranscription? : KalturaNullableBoolean;
 	zoomAccountDescription? : string;
-	enableMeetingUpload? : KalturaNullableBoolean;
 	optOutGroupNames? : string;
 	optInGroupNames? : string;
 	groupParticipationType? : KalturaZoomGroupParticipationType;
@@ -34,7 +33,6 @@ export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 	jwtToken : string;
 	enableZoomTranscription : KalturaNullableBoolean;
 	zoomAccountDescription : string;
-	enableMeetingUpload : KalturaNullableBoolean;
 	optOutGroupNames : string;
 	optInGroupNames : string;
 	groupParticipationType : KalturaZoomGroupParticipationType;
@@ -60,7 +58,6 @@ export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 				jwtToken : { type : 's' },
 				enableZoomTranscription : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				zoomAccountDescription : { type : 's' },
-				enableMeetingUpload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				optOutGroupNames : { type : 's' },
 				optInGroupNames : { type : 's' },
 				groupParticipationType : { type : 'en', subTypeConstructor : KalturaZoomGroupParticipationType, subType : 'KalturaZoomGroupParticipationType' }

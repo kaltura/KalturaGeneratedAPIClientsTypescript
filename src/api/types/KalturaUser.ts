@@ -10,6 +10,7 @@ export interface KalturaUserArgs  extends KalturaBaseUserArgs {
 	dateOfBirth? : number;
 	gender? : KalturaGender;
 	isAdmin? : boolean;
+	isGuest? : boolean;
 	roleIds? : string;
 	isAccountOwner? : boolean;
 	password? : string;
@@ -22,6 +23,7 @@ export interface KalturaUserArgs  extends KalturaBaseUserArgs {
 	company? : string;
 	ksPrivileges? : string;
 	isSsoExcluded? : boolean;
+	externalId? : string;
 }
 
 
@@ -31,6 +33,7 @@ export class KalturaUser extends KalturaBaseUser {
 	dateOfBirth : number;
 	gender : KalturaGender;
 	isAdmin : boolean;
+	isGuest : boolean;
 	roleIds : string;
 	readonly roleNames : string;
 	isAccountOwner : boolean;
@@ -45,6 +48,7 @@ export class KalturaUser extends KalturaBaseUser {
 	ksPrivileges : string;
 	readonly encryptedSeed : string;
 	isSsoExcluded : boolean;
+	externalId : string;
 
     constructor(data? : KalturaUserArgs)
     {
@@ -62,6 +66,7 @@ export class KalturaUser extends KalturaBaseUser {
 				dateOfBirth : { type : 'n' },
 				gender : { type : 'en', subTypeConstructor : KalturaGender, subType : 'KalturaGender' },
 				isAdmin : { type : 'b' },
+				isGuest : { type : 'b' },
 				roleIds : { type : 's' },
 				roleNames : { type : 's', readOnly : true },
 				isAccountOwner : { type : 'b' },
@@ -75,7 +80,8 @@ export class KalturaUser extends KalturaBaseUser {
 				company : { type : 's' },
 				ksPrivileges : { type : 's' },
 				encryptedSeed : { type : 's', readOnly : true },
-				isSsoExcluded : { type : 'b' }
+				isSsoExcluded : { type : 'b' },
+				externalId : { type : 's' }
             }
         );
         return result;

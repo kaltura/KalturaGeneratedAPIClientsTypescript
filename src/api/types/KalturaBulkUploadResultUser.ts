@@ -18,6 +18,7 @@ export interface KalturaBulkUploadResultUserArgs  extends KalturaBulkUploadResul
 	firstName? : string;
 	lastName? : string;
 	group? : string;
+	externalId? : string;
 }
 
 
@@ -37,6 +38,7 @@ export class KalturaBulkUploadResultUser extends KalturaBulkUploadResult {
 	firstName : string;
 	lastName : string;
 	group : string;
+	externalId : string;
 
     constructor(data? : KalturaBulkUploadResultUserArgs)
     {
@@ -63,7 +65,8 @@ export class KalturaBulkUploadResultUser extends KalturaBulkUploadResult {
 				gender : { type : 'n' },
 				firstName : { type : 's' },
 				lastName : { type : 's' },
-				group : { type : 's' }
+				group : { type : 's' },
+				externalId : { type : 's' }
             }
         );
         return result;

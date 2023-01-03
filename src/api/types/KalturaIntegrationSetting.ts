@@ -12,6 +12,7 @@ export interface KalturaIntegrationSettingArgs  extends KalturaObjectBaseArgs {
 	conversionProfileId? : number;
 	handleParticipantsMode? : KalturaHandleParticipantsMode;
 	deletionPolicy? : KalturaNullableBoolean;
+	enableMeetingUpload? : KalturaNullableBoolean;
 }
 
 
@@ -28,6 +29,7 @@ export class KalturaIntegrationSetting extends KalturaObjectBase {
 	readonly createdAt : string;
 	readonly updatedAt : string;
 	readonly partnerId : number;
+	enableMeetingUpload : KalturaNullableBoolean;
 
     constructor(data? : KalturaIntegrationSettingArgs)
     {
@@ -51,7 +53,8 @@ export class KalturaIntegrationSetting extends KalturaObjectBase {
 				deletionPolicy : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				createdAt : { type : 's', readOnly : true },
 				updatedAt : { type : 's', readOnly : true },
-				partnerId : { type : 'n', readOnly : true }
+				partnerId : { type : 'n', readOnly : true },
+				enableMeetingUpload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;
