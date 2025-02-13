@@ -5,12 +5,14 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaRegexItemArgs  extends KalturaObjectBaseArgs {
     regex? : string;
+	description? : string;
 }
 
 
 export class KalturaRegexItem extends KalturaObjectBase {
 
     regex : string;
+	description : string;
 
     constructor(data? : KalturaRegexItemArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaRegexItem extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaRegexItem' },
-				regex : { type : 's' }
+				regex : { type : 's' },
+				description : { type : 's' }
             }
         );
         return result;

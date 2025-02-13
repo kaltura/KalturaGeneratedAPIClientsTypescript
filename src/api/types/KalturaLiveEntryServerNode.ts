@@ -12,6 +12,7 @@ export interface KalturaLiveEntryServerNodeArgs  extends KalturaEntryServerNodeA
 	isPlayableUser? : boolean;
 	viewMode? : KalturaViewMode;
 	featuresUpdatedAt? : Date;
+	viewModeUpdatedAt? : Date;
 }
 
 
@@ -22,6 +23,7 @@ export class KalturaLiveEntryServerNode extends KalturaEntryServerNode {
 	isPlayableUser : boolean;
 	viewMode : KalturaViewMode;
 	featuresUpdatedAt : Date;
+	viewModeUpdatedAt : Date;
 
     constructor(data? : KalturaLiveEntryServerNodeArgs)
     {
@@ -41,7 +43,8 @@ export class KalturaLiveEntryServerNode extends KalturaEntryServerNode {
 				recordingInfo : { type : 'a', subTypeConstructor : KalturaLiveEntryServerNodeRecordingInfo, subType : 'KalturaLiveEntryServerNodeRecordingInfo' },
 				isPlayableUser : { type : 'b' },
 				viewMode : { type : 'en', subTypeConstructor : KalturaViewMode, subType : 'KalturaViewMode' },
-				featuresUpdatedAt : { type : 'd' }
+				featuresUpdatedAt : { type : 'd' },
+				viewModeUpdatedAt : { type : 'd' }
             }
         );
         return result;

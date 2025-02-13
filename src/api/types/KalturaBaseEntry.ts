@@ -101,6 +101,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 	application : KalturaEntryApplication;
 	applicationVersion : string;
 	blockAutoTranscript : boolean;
+	readonly defaultLanguage : string;
+	readonly responseLanguage : string;
 
     constructor(data? : KalturaBaseEntryArgs)
     {
@@ -168,7 +170,9 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 				displayInSearch : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' },
 				application : { type : 'es', subTypeConstructor : KalturaEntryApplication, subType : 'KalturaEntryApplication' },
 				applicationVersion : { type : 's' },
-				blockAutoTranscript : { type : 'b' }
+				blockAutoTranscript : { type : 'b' },
+				defaultLanguage : { type : 's', readOnly : true },
+				responseLanguage : { type : 's', readOnly : true }
             }
         );
         return result;

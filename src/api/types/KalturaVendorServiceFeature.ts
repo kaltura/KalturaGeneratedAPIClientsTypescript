@@ -5,9 +5,14 @@ export enum KalturaVendorServiceFeature {
 	audioDescription=4,
 	captions=1,
 	chaptering=5,
+	clips=10,
 	dubbing=7,
 	extendedAudioDescription=9,
 	intelligentTagging=6,
 	liveCaption=8,
-	translation=2
+	liveTranslation=11,
+	quiz=12,
+	summary=13,
+	translation=2,
+	videoAnalysis=14
 }

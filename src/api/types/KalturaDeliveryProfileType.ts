@@ -44,6 +44,8 @@ export enum KalturaDeliveryProfileType {
 	rtmp = '5',
 	rtsp = '6',
 	silverLight = '7',
+	uplynkHttp = 'uplynk.UPLYNK_HTTP',
+	uplynkRtmp = 'uplynk.UPLYNK_RTMP',
 	velocixHds = 'velocix.VELOCIX_HDS',
 	velocixHls = 'velocix.VELOCIX_HLS',
 	vodPackagerDash = '68',

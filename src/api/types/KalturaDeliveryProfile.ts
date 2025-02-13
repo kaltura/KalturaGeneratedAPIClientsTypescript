@@ -24,6 +24,7 @@ export interface KalturaDeliveryProfileArgs  extends KalturaObjectBaseArgs {
 	priority? : number;
 	extraParams? : string;
 	supplementaryAssetsFilter? : KalturaAssetFilter;
+	enforceDeliveriesSupport? : string;
 }
 
 
@@ -49,6 +50,7 @@ export class KalturaDeliveryProfile extends KalturaObjectBase {
 	priority : number;
 	extraParams : string;
 	supplementaryAssetsFilter : KalturaAssetFilter;
+	enforceDeliveriesSupport : string;
 
     constructor(data? : KalturaDeliveryProfileArgs)
     {
@@ -81,7 +83,8 @@ export class KalturaDeliveryProfile extends KalturaObjectBase {
 				mediaProtocols : { type : 's' },
 				priority : { type : 'n' },
 				extraParams : { type : 's' },
-				supplementaryAssetsFilter : { type : 'o', subTypeConstructor : KalturaAssetFilter, subType : 'KalturaAssetFilter' }
+				supplementaryAssetsFilter : { type : 'o', subTypeConstructor : KalturaAssetFilter, subType : 'KalturaAssetFilter' },
+				enforceDeliveriesSupport : { type : 's' }
             }
         );
         return result;

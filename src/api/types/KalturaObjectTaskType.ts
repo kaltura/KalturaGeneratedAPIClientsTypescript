@@ -11,5 +11,6 @@ export enum KalturaObjectTaskType {
 	mailNotification = '8',
 	modifyCategories = '2',
 	modifyEntry = '7',
+	recycleBinCleanup = '9',
 	storageExport = '6'
 }

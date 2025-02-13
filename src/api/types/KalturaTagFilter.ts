@@ -6,6 +6,7 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 
 export interface KalturaTagFilterArgs  extends KalturaFilterArgs {
     objectTypeEqual? : KalturaTaggedObjectType;
+	objectTypeIn? : string;
 	tagEqual? : string;
 	tagStartsWith? : string;
 	instanceCountEqual? : number;
@@ -16,6 +17,7 @@ export interface KalturaTagFilterArgs  extends KalturaFilterArgs {
 export class KalturaTagFilter extends KalturaFilter {
 
     objectTypeEqual : KalturaTaggedObjectType;
+	objectTypeIn : string;
 	tagEqual : string;
 	tagStartsWith : string;
 	instanceCountEqual : number;
@@ -34,6 +36,7 @@ export class KalturaTagFilter extends KalturaFilter {
             {
                 objectType : { type : 'c', default : 'KalturaTagFilter' },
 				objectTypeEqual : { type : 'es', subTypeConstructor : KalturaTaggedObjectType, subType : 'KalturaTaggedObjectType' },
+				objectTypeIn : { type : 's' },
 				tagEqual : { type : 's' },
 				tagStartsWith : { type : 's' },
 				instanceCountEqual : { type : 'n' },

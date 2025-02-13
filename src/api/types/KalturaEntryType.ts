@@ -11,5 +11,6 @@ export enum KalturaEntryType {
 	mediaClip = '1',
 	mix = '2',
 	playlist = '5',
+	room = 'room.room',
 	sipEntryServer = 'sip.SIP_ENTRY_SERVER'
 }

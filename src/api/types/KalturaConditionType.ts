@@ -1,7 +1,8 @@
 
 
 export enum KalturaConditionType {
-    actionName = '20',
+    abcWatermark = 'abcScreenersWatermarkAccessControl.abcWatermark',
+	actionName = '20',
 	activeEdgeValidate = '14',
 	anonymousIp = '15',
 	assetPropertiesCompare = '8',

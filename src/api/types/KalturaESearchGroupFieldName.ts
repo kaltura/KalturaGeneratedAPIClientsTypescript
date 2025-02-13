@@ -1,12 +1,14 @@
 
 
 export enum KalturaESearchGroupFieldName {
-    company = 'company',
+    capabilities = 'capabilities',
+	company = 'company',
 	country = 'country',
 	createdAt = 'created_at',
 	email = 'email',
 	externalId = 'external_id',
 	firstName = 'first_name',
+	fullName = 'full_name',
 	groupIds = 'group_ids',
 	isAdmin = 'is_admin',
 	isHashed = 'is_hashed',

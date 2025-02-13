@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEffect } from './KalturaEffect';
+import { KalturaCaptionAttributes } from './KalturaCaptionAttributes';
 import { KalturaOperationAttributes, KalturaOperationAttributesArgs } from './KalturaOperationAttributes';
 
 export interface KalturaClipAttributesArgs  extends KalturaOperationAttributesArgs {
@@ -9,6 +10,8 @@ export interface KalturaClipAttributesArgs  extends KalturaOperationAttributesAr
 	duration? : number;
 	globalOffsetInDestination? : number;
 	effectArray? : KalturaEffect[];
+	cropAlignment? : number;
+	captionAttributes? : KalturaCaptionAttributes[];
 }
 
 
@@ -18,11 +21,14 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
 	duration : number;
 	globalOffsetInDestination : number;
 	effectArray : KalturaEffect[];
+	cropAlignment : number;
+	captionAttributes : KalturaCaptionAttributes[];
 
     constructor(data? : KalturaClipAttributesArgs)
     {
         super(data);
         if (typeof this.effectArray === 'undefined') this.effectArray = [];
+		if (typeof this.captionAttributes === 'undefined') this.captionAttributes = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -35,7 +41,9 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
 				offset : { type : 'n' },
 				duration : { type : 'n' },
 				globalOffsetInDestination : { type : 'n' },
-				effectArray : { type : 'a', subTypeConstructor : KalturaEffect, subType : 'KalturaEffect' }
+				effectArray : { type : 'a', subTypeConstructor : KalturaEffect, subType : 'KalturaEffect' },
+				cropAlignment : { type : 'n' },
+				captionAttributes : { type : 'a', subTypeConstructor : KalturaCaptionAttributes, subType : 'KalturaCaptionAttributes' }
             }
         );
         return result;

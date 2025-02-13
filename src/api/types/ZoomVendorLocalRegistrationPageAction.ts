@@ -5,7 +5,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ZoomVendorLocalRegistrationPageActionArgs  extends KalturaRequestArgs {
-    jwt : string;
+    zoomAccountId : string;
 }
 
 /**
@@ -20,7 +20,7 @@ export interface ZoomVendorLocalRegistrationPageActionArgs  extends KalturaReque
  */
 export class ZoomVendorLocalRegistrationPageAction extends KalturaRequest<void> {
 
-    jwt : string;
+    zoomAccountId : string;
 
     constructor(data : ZoomVendorLocalRegistrationPageActionArgs)
     {
@@ -35,7 +35,7 @@ export class ZoomVendorLocalRegistrationPageAction extends KalturaRequest<void> 
             {
                 service : { type : 'c', default : 'vendor_zoomvendor' },
 				action : { type : 'c', default : 'localRegistrationPage' },
-				jwt : { type : 's' }
+				zoomAccountId : { type : 's' }
             }
         );
         return result;

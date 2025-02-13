@@ -20,6 +20,7 @@ export interface KalturaScheduledTaskProfileBaseFilterArgs  extends KalturaFilte
 	lastExecutionStartedAtGreaterThanOrEqual? : Date;
 	lastExecutionStartedAtLessThanOrEqual? : Date;
 	lastExecutionStartedAtLessThanOrEqualOrNull? : Date;
+	objectFilterEngineTypeIn? : string;
 }
 
 
@@ -40,6 +41,7 @@ export class KalturaScheduledTaskProfileBaseFilter extends KalturaFilter {
 	lastExecutionStartedAtGreaterThanOrEqual : Date;
 	lastExecutionStartedAtLessThanOrEqual : Date;
 	lastExecutionStartedAtLessThanOrEqualOrNull : Date;
+	objectFilterEngineTypeIn : string;
 
     constructor(data? : KalturaScheduledTaskProfileBaseFilterArgs)
     {
@@ -67,7 +69,8 @@ export class KalturaScheduledTaskProfileBaseFilter extends KalturaFilter {
 				updatedAtLessThanOrEqual : { type : 'd' },
 				lastExecutionStartedAtGreaterThanOrEqual : { type : 'd' },
 				lastExecutionStartedAtLessThanOrEqual : { type : 'd' },
-				lastExecutionStartedAtLessThanOrEqualOrNull : { type : 'd' }
+				lastExecutionStartedAtLessThanOrEqualOrNull : { type : 'd' },
+				objectFilterEngineTypeIn : { type : 's' }
             }
         );
         return result;

@@ -1,20 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaVendorCaptionsCatalogItem, KalturaVendorCaptionsCatalogItemArgs } from './KalturaVendorCaptionsCatalogItem';
+import { KalturaVendorLiveCatalogItem, KalturaVendorLiveCatalogItemArgs } from './KalturaVendorLiveCatalogItem';
 
-export interface KalturaVendorLiveCaptionCatalogItemArgs  extends KalturaVendorCaptionsCatalogItemArgs {
-    minimalRefundTime? : number;
-	minimalOrderTime? : number;
-	durationLimit? : number;
+export interface KalturaVendorLiveCaptionCatalogItemArgs  extends KalturaVendorLiveCatalogItemArgs {
+    
 }
 
 
-export class KalturaVendorLiveCaptionCatalogItem extends KalturaVendorCaptionsCatalogItem {
+export class KalturaVendorLiveCaptionCatalogItem extends KalturaVendorLiveCatalogItem {
 
-    minimalRefundTime : number;
-	minimalOrderTime : number;
-	durationLimit : number;
+    
 
     constructor(data? : KalturaVendorLiveCaptionCatalogItemArgs)
     {
@@ -27,10 +23,7 @@ export class KalturaVendorLiveCaptionCatalogItem extends KalturaVendorCaptionsCa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaVendorLiveCaptionCatalogItem' },
-				minimalRefundTime : { type : 'n' },
-				minimalOrderTime : { type : 'n' },
-				durationLimit : { type : 'n' }
+                objectType : { type : 'c', default : 'KalturaVendorLiveCaptionCatalogItem' }
             }
         );
         return result;

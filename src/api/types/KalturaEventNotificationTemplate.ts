@@ -7,6 +7,7 @@ import { KalturaEventNotificationEventType } from './KalturaEventNotificationEve
 import { KalturaEventNotificationEventObjectType } from './KalturaEventNotificationEventObjectType';
 import { KalturaCondition } from './KalturaCondition';
 import { KalturaEventNotificationParameter } from './KalturaEventNotificationParameter';
+import { KalturaEventNotificationDelayedCondition } from './KalturaEventNotificationDelayedCondition';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaEventNotificationTemplateArgs  extends KalturaObjectBaseArgs {
@@ -21,6 +22,7 @@ export interface KalturaEventNotificationTemplateArgs  extends KalturaObjectBase
 	eventConditions? : KalturaCondition[];
 	contentParameters? : KalturaEventNotificationParameter[];
 	userParameters? : KalturaEventNotificationParameter[];
+	eventDelayedCondition? : KalturaEventNotificationDelayedCondition;
 }
 
 
@@ -42,6 +44,7 @@ export class KalturaEventNotificationTemplate extends KalturaObjectBase {
 	eventConditions : KalturaCondition[];
 	contentParameters : KalturaEventNotificationParameter[];
 	userParameters : KalturaEventNotificationParameter[];
+	eventDelayedCondition : KalturaEventNotificationDelayedCondition;
 
     constructor(data? : KalturaEventNotificationTemplateArgs)
     {
@@ -73,7 +76,8 @@ export class KalturaEventNotificationTemplate extends KalturaObjectBase {
 				eventObjectType : { type : 'es', subTypeConstructor : KalturaEventNotificationEventObjectType, subType : 'KalturaEventNotificationEventObjectType' },
 				eventConditions : { type : 'a', subTypeConstructor : KalturaCondition, subType : 'KalturaCondition' },
 				contentParameters : { type : 'a', subTypeConstructor : KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter' },
-				userParameters : { type : 'a', subTypeConstructor : KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter' }
+				userParameters : { type : 'a', subTypeConstructor : KalturaEventNotificationParameter, subType : 'KalturaEventNotificationParameter' },
+				eventDelayedCondition : { type : 'en', subTypeConstructor : KalturaEventNotificationDelayedCondition, subType : 'KalturaEventNotificationDelayedCondition' }
             }
         );
         return result;

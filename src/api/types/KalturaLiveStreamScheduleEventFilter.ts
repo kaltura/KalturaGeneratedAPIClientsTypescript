@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaLiveStreamScheduleEventBaseFilter, KalturaLiveStreamScheduleEventBaseFilterArgs } from './KalturaLiveStreamScheduleEventBaseFilter';
 
 export interface KalturaLiveStreamScheduleEventFilterArgs  extends KalturaLiveStreamScheduleEventBaseFilterArgs {
-    
+    sourceEntryIdEqual? : string;
 }
 
 
 export class KalturaLiveStreamScheduleEventFilter extends KalturaLiveStreamScheduleEventBaseFilter {
 
-    
+    sourceEntryIdEqual : string;
 
     constructor(data? : KalturaLiveStreamScheduleEventFilterArgs)
     {
@@ -23,7 +23,8 @@ export class KalturaLiveStreamScheduleEventFilter extends KalturaLiveStreamSched
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEventFilter' }
+                objectType : { type : 'c', default : 'KalturaLiveStreamScheduleEventFilter' },
+				sourceEntryIdEqual : { type : 's' }
             }
         );
         return result;

@@ -1,6 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaUserEntryExtendedStatus } from './KalturaUserEntryExtendedStatus';
 import { KalturaUserEntry, KalturaUserEntryArgs } from './KalturaUserEntry';
 
 export interface KalturaViewHistoryUserEntryArgs  extends KalturaUserEntryArgs {
@@ -8,6 +9,7 @@ export interface KalturaViewHistoryUserEntryArgs  extends KalturaUserEntryArgs {
 	lastTimeReached? : number;
 	lastUpdateTime? : Date;
 	playlistLastEntryId? : string;
+	extendedStatus? : KalturaUserEntryExtendedStatus;
 }
 
 
@@ -17,6 +19,7 @@ export class KalturaViewHistoryUserEntry extends KalturaUserEntry {
 	lastTimeReached : number;
 	lastUpdateTime : Date;
 	playlistLastEntryId : string;
+	extendedStatus : KalturaUserEntryExtendedStatus;
 
     constructor(data? : KalturaViewHistoryUserEntryArgs)
     {
@@ -33,7 +36,8 @@ export class KalturaViewHistoryUserEntry extends KalturaUserEntry {
 				playbackContext : { type : 's' },
 				lastTimeReached : { type : 'n' },
 				lastUpdateTime : { type : 'd' },
-				playlistLastEntryId : { type : 's' }
+				playlistLastEntryId : { type : 's' },
+				extendedStatus : { type : 'es', subTypeConstructor : KalturaUserEntryExtendedStatus, subType : 'KalturaUserEntryExtendedStatus' }
             }
         );
         return result;

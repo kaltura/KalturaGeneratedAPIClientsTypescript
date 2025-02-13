@@ -10,6 +10,7 @@ export enum KalturaESearchEntryOrderByFieldName {
 	playsLast30Days = 'plays_last_30_days',
 	playsLast7Days = 'plays_last_7_days',
 	rank = 'rank',
+	recycledAt = 'recycled_at',
 	startDate = 'start_date',
 	updatedAt = 'updated_at',
 	views = 'views',

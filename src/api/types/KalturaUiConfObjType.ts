@@ -20,6 +20,8 @@ export enum KalturaUiConfObjType {
 	playerSl=14,
 	playerV3=8,
 	playlist=5,
+	reels=23,
+	sap=22,
 	simpleEditor=3,
 	webcasting=21
 }

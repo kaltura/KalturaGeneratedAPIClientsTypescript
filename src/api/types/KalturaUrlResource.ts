@@ -8,6 +8,7 @@ export interface KalturaUrlResourceArgs  extends KalturaContentResourceArgs {
     url? : string;
 	forceAsyncDownload? : boolean;
 	urlHeaders? : KalturaString[];
+	shouldRedirect? : boolean;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaUrlResource extends KalturaContentResource {
     url : string;
 	forceAsyncDownload : boolean;
 	urlHeaders : KalturaString[];
+	shouldRedirect : boolean;
 
     constructor(data? : KalturaUrlResourceArgs)
     {
@@ -32,7 +34,8 @@ export class KalturaUrlResource extends KalturaContentResource {
                 objectType : { type : 'c', default : 'KalturaUrlResource' },
 				url : { type : 's' },
 				forceAsyncDownload : { type : 'b' },
-				urlHeaders : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' }
+				urlHeaders : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				shouldRedirect : { type : 'b' }
             }
         );
         return result;

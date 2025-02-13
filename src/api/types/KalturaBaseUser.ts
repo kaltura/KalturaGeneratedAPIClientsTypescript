@@ -4,6 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUserStatus } from './KalturaUserStatus';
 import { KalturaLanguageCode } from './KalturaLanguageCode';
 import { KalturaUserMode } from './KalturaUserMode';
+import { KalturaUserCapability } from './KalturaUserCapability';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaBaseUserArgs  extends KalturaObjectBaseArgs {
@@ -27,6 +28,7 @@ export interface KalturaBaseUserArgs  extends KalturaObjectBaseArgs {
 	allowedPartnerIds? : string;
 	allowedPartnerPackages? : string;
 	userMode? : KalturaUserMode;
+	capabilities? : KalturaUserCapability[];
 }
 
 
@@ -59,10 +61,12 @@ export class KalturaBaseUser extends KalturaObjectBase {
 	allowedPartnerIds : string;
 	allowedPartnerPackages : string;
 	userMode : KalturaUserMode;
+	capabilities : KalturaUserCapability[];
 
     constructor(data? : KalturaBaseUserArgs)
     {
         super(data);
+        if (typeof this.capabilities === 'undefined') this.capabilities = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -98,7 +102,8 @@ export class KalturaBaseUser extends KalturaObjectBase {
 				deletedAt : { type : 'd', readOnly : true },
 				allowedPartnerIds : { type : 's' },
 				allowedPartnerPackages : { type : 's' },
-				userMode : { type : 'en', subTypeConstructor : KalturaUserMode, subType : 'KalturaUserMode' }
+				userMode : { type : 'en', subTypeConstructor : KalturaUserMode, subType : 'KalturaUserMode' },
+				capabilities : { type : 'a', subTypeConstructor : KalturaUserCapability, subType : 'KalturaUserCapability' }
             }
         );
         return result;

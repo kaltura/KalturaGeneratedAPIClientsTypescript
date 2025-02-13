@@ -1,6 +1,7 @@
 
 
 export enum KalturaVendorCatalogItemPriceFunction {
-    pricePerMinute = 'kReachUtils::calcPricePerMinute',
+    pricePerHour = 'kReachUtils::calcPricePerHour',
+	pricePerMinute = 'kReachUtils::calcPricePerMinute',
 	pricePerSecond = 'kReachUtils::calcPricePerSecond'
 }

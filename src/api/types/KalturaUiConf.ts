@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUiConfObjType } from './KalturaUiConfObjType';
 import { KalturaUiConfCreationMode } from './KalturaUiConfCreationMode';
+import { KalturaUiConfV2Redirect } from './KalturaUiConfV2Redirect';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUiConfArgs  extends KalturaObjectBaseArgs {
@@ -23,6 +24,7 @@ export interface KalturaUiConfArgs  extends KalturaObjectBaseArgs {
 	creationMode? : KalturaUiConfCreationMode;
 	html5Url? : string;
 	partnerTags? : string;
+	v2Redirect? : KalturaUiConfV2Redirect;
 }
 
 
@@ -52,6 +54,7 @@ export class KalturaUiConf extends KalturaObjectBase {
 	html5Url : string;
 	readonly version : string;
 	partnerTags : string;
+	v2Redirect : KalturaUiConfV2Redirect;
 
     constructor(data? : KalturaUiConfArgs)
     {
@@ -88,7 +91,8 @@ export class KalturaUiConf extends KalturaObjectBase {
 				creationMode : { type : 'en', subTypeConstructor : KalturaUiConfCreationMode, subType : 'KalturaUiConfCreationMode' },
 				html5Url : { type : 's' },
 				version : { type : 's', readOnly : true },
-				partnerTags : { type : 's' }
+				partnerTags : { type : 's' },
+				v2Redirect : { type : 'o', subTypeConstructor : KalturaUiConfV2Redirect, subType : 'KalturaUiConfV2Redirect' }
             }
         );
         return result;

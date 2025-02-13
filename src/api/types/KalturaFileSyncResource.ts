@@ -8,6 +8,7 @@ export interface KalturaFileSyncResourceArgs  extends KalturaContentResourceArgs
 	objectSubType? : number;
 	objectId? : string;
 	version? : string;
+	originEntryId? : string;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaFileSyncResource extends KalturaContentResource {
 	objectSubType : number;
 	objectId : string;
 	version : string;
+	originEntryId : string;
 
     constructor(data? : KalturaFileSyncResourceArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaFileSyncResource extends KalturaContentResource {
 				fileSyncObjectType : { type : 'n' },
 				objectSubType : { type : 'n' },
 				objectId : { type : 's' },
-				version : { type : 's' }
+				version : { type : 's' },
+				originEntryId : { type : 's' }
             }
         );
         return result;

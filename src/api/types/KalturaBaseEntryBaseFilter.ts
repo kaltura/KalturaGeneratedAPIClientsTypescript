@@ -93,6 +93,7 @@ export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	tagsAdminTagsMultiLikeAnd? : string;
 	tagsAdminTagsNameMultiLikeAnd? : string;
 	displayInSearchEqual? : KalturaEntryDisplayInSearchType;
+	displayInSearchIn? : string;
 }
 
 
@@ -181,6 +182,7 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 	tagsAdminTagsMultiLikeAnd : string;
 	tagsAdminTagsNameMultiLikeAnd : string;
 	displayInSearchEqual : KalturaEntryDisplayInSearchType;
+	displayInSearchIn : string;
 
     constructor(data? : KalturaBaseEntryBaseFilterArgs)
     {
@@ -276,7 +278,8 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 				tagsNameMultiLikeAnd : { type : 's' },
 				tagsAdminTagsMultiLikeAnd : { type : 's' },
 				tagsAdminTagsNameMultiLikeAnd : { type : 's' },
-				displayInSearchEqual : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' }
+				displayInSearchEqual : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' },
+				displayInSearchIn : { type : 's' }
             }
         );
         return result;

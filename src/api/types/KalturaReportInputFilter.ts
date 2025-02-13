@@ -48,6 +48,13 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	virtualEventIdIn? : string;
 	originIn? : string;
 	uiConfIdIn? : string;
+	cuePointIdIn? : string;
+	contextIdIn? : string;
+	roleIn? : string;
+	industryIn? : string;
+	playbackModeIn? : string;
+	companyIn? : string;
+	eventSessionContextIdIn? : string;
 }
 
 
@@ -95,6 +102,13 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	virtualEventIdIn : string;
 	originIn : string;
 	uiConfIdIn : string;
+	cuePointIdIn : string;
+	contextIdIn : string;
+	roleIn : string;
+	industryIn : string;
+	playbackModeIn : string;
+	companyIn : string;
+	eventSessionContextIdIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -149,7 +163,14 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				canonicalUrlIn : { type : 's' },
 				virtualEventIdIn : { type : 's' },
 				originIn : { type : 's' },
-				uiConfIdIn : { type : 's' }
+				uiConfIdIn : { type : 's' },
+				cuePointIdIn : { type : 's' },
+				contextIdIn : { type : 's' },
+				roleIn : { type : 's' },
+				industryIn : { type : 's' },
+				playbackModeIn : { type : 's' },
+				companyIn : { type : 's' },
+				eventSessionContextIdIn : { type : 's' }
             }
         );
         return result;

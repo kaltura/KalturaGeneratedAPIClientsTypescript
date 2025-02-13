@@ -7,5 +7,6 @@ export enum KalturaCuePointType {
 	event = 'eventCuePoint.Event',
 	quizAnswer = 'quiz.QUIZ_ANSWER',
 	quizQuestion = 'quiz.QUIZ_QUESTION',
+	session = 'sessionCuePoint.Session',
 	thumb = 'thumbCuePoint.Thumb'
 }

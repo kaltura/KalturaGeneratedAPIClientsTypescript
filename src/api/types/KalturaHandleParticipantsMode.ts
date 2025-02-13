@@ -1,7 +1,9 @@
 
 
 export enum KalturaHandleParticipantsMode {
-    addAsCoPublishers=0,
+    addAsCoEditors=3,
+	addAsCoEditorsCoPublishers=4,
+	addAsCoPublishers=0,
 	addAsCoViewers=1,
 	ignore=2
 }

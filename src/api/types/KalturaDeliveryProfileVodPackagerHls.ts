@@ -5,12 +5,14 @@ import { KalturaDeliveryProfileVodPackagerPlayServer, KalturaDeliveryProfileVodP
 
 export interface KalturaDeliveryProfileVodPackagerHlsArgs  extends KalturaDeliveryProfileVodPackagerPlayServerArgs {
     allowFairplayOffline? : boolean;
+	supportFmp4? : boolean;
 }
 
 
 export class KalturaDeliveryProfileVodPackagerHls extends KalturaDeliveryProfileVodPackagerPlayServer {
 
     allowFairplayOffline : boolean;
+	supportFmp4 : boolean;
 
     constructor(data? : KalturaDeliveryProfileVodPackagerHlsArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaDeliveryProfileVodPackagerHls extends KalturaDeliveryProfile
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDeliveryProfileVodPackagerHls' },
-				allowFairplayOffline : { type : 'b' }
+				allowFairplayOffline : { type : 'b' },
+				supportFmp4 : { type : 'b' }
             }
         );
         return result;

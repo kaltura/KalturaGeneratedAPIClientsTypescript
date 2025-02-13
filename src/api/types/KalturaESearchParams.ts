@@ -8,6 +8,7 @@ export interface KalturaESearchParamsArgs  extends KalturaObjectBaseArgs {
     objectStatuses? : string;
 	objectId? : string;
 	orderBy? : KalturaESearchOrderBy;
+	ignoreSynonym? : boolean;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaESearchParams extends KalturaObjectBase {
     objectStatuses : string;
 	objectId : string;
 	orderBy : KalturaESearchOrderBy;
+	ignoreSynonym : boolean;
 
     constructor(data? : KalturaESearchParamsArgs)
     {
@@ -31,7 +33,8 @@ export class KalturaESearchParams extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaESearchParams' },
 				objectStatuses : { type : 's' },
 				objectId : { type : 's' },
-				orderBy : { type : 'o', subTypeConstructor : KalturaESearchOrderBy, subType : 'KalturaESearchOrderBy' }
+				orderBy : { type : 'o', subTypeConstructor : KalturaESearchOrderBy, subType : 'KalturaESearchOrderBy' },
+				ignoreSynonym : { type : 'b' }
             }
         );
         return result;

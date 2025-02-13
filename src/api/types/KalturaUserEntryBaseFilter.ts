@@ -3,7 +3,6 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaUserEntryStatus } from './KalturaUserEntryStatus';
 import { KalturaUserEntryType } from './KalturaUserEntryType';
-import { KalturaUserEntryExtendedStatus } from './KalturaUserEntryExtendedStatus';
 import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelatedFilter';
 
 export interface KalturaUserEntryBaseFilterArgs  extends KalturaRelatedFilterArgs {
@@ -22,9 +21,6 @@ export interface KalturaUserEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	updatedAtLessThanOrEqual? : Date;
 	updatedAtGreaterThanOrEqual? : Date;
 	typeEqual? : KalturaUserEntryType;
-	extendedStatusEqual? : KalturaUserEntryExtendedStatus;
-	extendedStatusIn? : string;
-	extendedStatusNotIn? : string;
 }
 
 
@@ -45,9 +41,6 @@ export class KalturaUserEntryBaseFilter extends KalturaRelatedFilter {
 	updatedAtLessThanOrEqual : Date;
 	updatedAtGreaterThanOrEqual : Date;
 	typeEqual : KalturaUserEntryType;
-	extendedStatusEqual : KalturaUserEntryExtendedStatus;
-	extendedStatusIn : string;
-	extendedStatusNotIn : string;
 
     constructor(data? : KalturaUserEntryBaseFilterArgs)
     {
@@ -75,10 +68,7 @@ export class KalturaUserEntryBaseFilter extends KalturaRelatedFilter {
 				createdAtGreaterThanOrEqual : { type : 'd' },
 				updatedAtLessThanOrEqual : { type : 'd' },
 				updatedAtGreaterThanOrEqual : { type : 'd' },
-				typeEqual : { type : 'es', subTypeConstructor : KalturaUserEntryType, subType : 'KalturaUserEntryType' },
-				extendedStatusEqual : { type : 'es', subTypeConstructor : KalturaUserEntryExtendedStatus, subType : 'KalturaUserEntryExtendedStatus' },
-				extendedStatusIn : { type : 's' },
-				extendedStatusNotIn : { type : 's' }
+				typeEqual : { type : 'es', subTypeConstructor : KalturaUserEntryType, subType : 'KalturaUserEntryType' }
             }
         );
         return result;

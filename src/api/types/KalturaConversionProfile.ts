@@ -33,6 +33,7 @@ export interface KalturaConversionProfileArgs  extends KalturaObjectBaseArgs {
 	mediaInfoXslTransformation? : string;
 	defaultReplacementOptions? : KalturaEntryReplacementOptions;
 	defaultAudioLang? : KalturaLanguage;
+	deliveryTag? : string;
 }
 
 
@@ -64,6 +65,7 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 	mediaInfoXslTransformation : string;
 	defaultReplacementOptions : KalturaEntryReplacementOptions;
 	defaultAudioLang : KalturaLanguage;
+	deliveryTag : string;
 
     constructor(data? : KalturaConversionProfileArgs)
     {
@@ -102,7 +104,8 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 				detectGOP : { type : 'n' },
 				mediaInfoXslTransformation : { type : 's' },
 				defaultReplacementOptions : { type : 'o', subTypeConstructor : KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions' },
-				defaultAudioLang : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' }
+				defaultAudioLang : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' },
+				deliveryTag : { type : 's' }
             }
         );
         return result;

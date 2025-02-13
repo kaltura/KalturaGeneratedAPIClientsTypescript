@@ -45,6 +45,8 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	country? : string;
 	state? : string;
 	additionalParams? : KalturaKeyValue[];
+	useSso? : boolean;
+	blockDirectLogin? : boolean;
 	partnerParentId? : number;
 	referenceId? : string;
 	eSearchLanguages? : KalturaESearchLanguageItem[];
@@ -56,6 +58,8 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	numPrevPassToKeep? : number;
 	isSelfServe? : boolean;
 	eventPlatformAllowedTemplates? : string;
+	customAnalyticsDomain? : string;
+	allowedEmailDomainsForAdmins? : string;
 }
 
 
@@ -107,7 +111,9 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly embedCodeTypes : KalturaPlayerEmbedCodeType[];
 	readonly templatePartnerId : number;
 	readonly ignoreSeoLinks : boolean;
-	readonly blockDirectLogin : boolean;
+	readonly useTwoFactorAuthentication : boolean;
+	useSso : boolean;
+	blockDirectLogin : boolean;
 	readonly host : string;
 	readonly cdnHost : string;
 	readonly isFirstLogin : boolean;
@@ -142,6 +148,9 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly excludedAdminRoleName : string;
 	eventPlatformAllowedTemplates : string;
 	readonly verticalClassificationId : number;
+	readonly recycleBinRetentionPeriod : number;
+	customAnalyticsDomain : string;
+	allowedEmailDomainsForAdmins : string;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -206,7 +215,9 @@ export class KalturaPartner extends KalturaObjectBase {
 				embedCodeTypes : { type : 'a', readOnly : true, subTypeConstructor : KalturaPlayerEmbedCodeType, subType : 'KalturaPlayerEmbedCodeType' },
 				templatePartnerId : { type : 'n', readOnly : true },
 				ignoreSeoLinks : { type : 'b', readOnly : true },
-				blockDirectLogin : { type : 'b', readOnly : true },
+				useTwoFactorAuthentication : { type : 'b', readOnly : true },
+				useSso : { type : 'b' },
+				blockDirectLogin : { type : 'b' },
 				host : { type : 's', readOnly : true },
 				cdnHost : { type : 's', readOnly : true },
 				isFirstLogin : { type : 'b', readOnly : true },
@@ -240,7 +251,10 @@ export class KalturaPartner extends KalturaObjectBase {
 				allowedDomains : { type : 's', readOnly : true },
 				excludedAdminRoleName : { type : 's', readOnly : true },
 				eventPlatformAllowedTemplates : { type : 's' },
-				verticalClassificationId : { type : 'n', readOnly : true }
+				verticalClassificationId : { type : 'n', readOnly : true },
+				recycleBinRetentionPeriod : { type : 'n', readOnly : true },
+				customAnalyticsDomain : { type : 's' },
+				allowedEmailDomainsForAdmins : { type : 's' }
             }
         );
         return result;

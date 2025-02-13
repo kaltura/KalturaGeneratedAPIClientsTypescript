@@ -9,5 +9,6 @@ export enum KalturaBatchJobObjectType {
 	fileSync = '3',
 	metadata = 'metadata.Metadata',
 	metadataProfile = 'metadata.MetadataProfile',
-	scheduledTaskProfile = 'scheduledTask.ScheduledTaskProfile'
+	scheduledTaskProfile = 'scheduledTask.ScheduledTaskProfile',
+	user = '5'
 }

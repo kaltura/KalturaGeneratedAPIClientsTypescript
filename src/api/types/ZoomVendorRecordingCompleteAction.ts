@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaEndpointValidationResponse } from './KalturaEndpointValidationResponse';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -13,18 +13,18 @@ export interface ZoomVendorRecordingCompleteActionArgs  extends KalturaRequestAr
  *
  * 
  *
- * Server response type:         void
+ * Server response type:         KalturaEndpointValidationResponse
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class ZoomVendorRecordingCompleteAction extends KalturaRequest<void> {
+export class ZoomVendorRecordingCompleteAction extends KalturaRequest<KalturaEndpointValidationResponse> {
 
     
 
     constructor(data? : ZoomVendorRecordingCompleteActionArgs)
     {
-        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaEndpointValidationResponse', responseConstructor : KalturaEndpointValidationResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

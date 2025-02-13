@@ -10,6 +10,7 @@ export enum KalturaBaseEntryCloneOptions {
 	codeCuePoints = 'codeCuePoint.CODE_CUE_POINTS',
 	flavors = '6',
 	metadata = '5',
+	sessionCuePoints = 'sessionCuePoint.SESSION_CUE_POINTS',
 	thumbCuePoints = 'thumbCuePoint.THUMB_CUE_POINTS',
 	users = '1'
 }

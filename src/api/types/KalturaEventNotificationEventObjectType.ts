@@ -50,5 +50,6 @@ export enum KalturaEventNotificationEventObjectType {
 	uploadtoken = '33',
 	userlogindata = '34',
 	userrole = '35',
+	virtualEvent = 'virtualEventEventNotifications.VirtualEvent',
 	widget = '36'
 }

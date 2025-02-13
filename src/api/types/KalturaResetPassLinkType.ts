@@ -1,7 +1,9 @@
 
 
 export enum KalturaResetPassLinkType {
-    kmc = '1',
+    ep = '4',
+	kmc = '1',
 	kme = '3',
+	kmeNr = '5',
 	kms = '2'
 }

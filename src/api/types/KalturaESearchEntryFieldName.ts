@@ -3,6 +3,7 @@
 export enum KalturaESearchEntryFieldName {
     accessControlId = 'access_control_id',
 	adminTags = 'admin_tags',
+	broadcastEntryId = 'broadcast_entry_id',
 	captionsContent = 'captions_content',
 	conversionProfileId = 'conversion_profile_id',
 	createdAt = 'created_at',
@@ -30,8 +31,10 @@ export enum KalturaESearchEntryFieldName {
 	pushPublish = 'push_publish',
 	rank = 'rank',
 	recordedEntryId = 'recorded_entry_id',
+	recycledAt = 'recycled_at',
 	redirectEntryId = 'redirect_entry_id',
 	referenceId = 'reference_id',
+	roomType = 'room_type',
 	rootId = 'root_id',
 	siteUrl = 'site_url',
 	sourceType = 'source_type',

@@ -6,12 +6,14 @@ import { KalturaVendorCaptionsCatalogItem, KalturaVendorCaptionsCatalogItemArgs 
 
 export interface KalturaVendorTranslationCatalogItemArgs  extends KalturaVendorCaptionsCatalogItemArgs {
     targetLanguage? : KalturaCatalogItemLanguage;
+	requireSource? : boolean;
 }
 
 
 export class KalturaVendorTranslationCatalogItem extends KalturaVendorCaptionsCatalogItem {
 
     targetLanguage : KalturaCatalogItemLanguage;
+	requireSource : boolean;
 
     constructor(data? : KalturaVendorTranslationCatalogItemArgs)
     {
@@ -25,7 +27,8 @@ export class KalturaVendorTranslationCatalogItem extends KalturaVendorCaptionsCa
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaVendorTranslationCatalogItem' },
-				targetLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' }
+				targetLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' },
+				requireSource : { type : 'b' }
             }
         );
         return result;

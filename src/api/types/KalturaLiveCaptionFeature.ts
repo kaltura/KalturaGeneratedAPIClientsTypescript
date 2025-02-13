@@ -9,6 +9,8 @@ export interface KalturaLiveCaptionFeatureArgs  extends KalturaLiveFeatureArgs {
 	captionUrl? : string;
 	captionToken? : string;
 	inputDelay? : number;
+	captionFormat? : string;
+	language? : string;
 }
 
 
@@ -19,6 +21,8 @@ export class KalturaLiveCaptionFeature extends KalturaLiveFeature {
 	captionUrl : string;
 	captionToken : string;
 	inputDelay : number;
+	captionFormat : string;
+	language : string;
 
     constructor(data? : KalturaLiveCaptionFeatureArgs)
     {
@@ -36,7 +40,9 @@ export class KalturaLiveCaptionFeature extends KalturaLiveFeature {
 				mediaKey : { type : 's' },
 				captionUrl : { type : 's' },
 				captionToken : { type : 's' },
-				inputDelay : { type : 'n' }
+				inputDelay : { type : 'n' },
+				captionFormat : { type : 's' },
+				language : { type : 's' }
             }
         );
         return result;

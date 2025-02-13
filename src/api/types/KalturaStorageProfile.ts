@@ -45,6 +45,7 @@ export interface KalturaStorageProfileArgs  extends KalturaObjectBaseArgs {
 	excludedFlavorParamsIds? : string;
 	shouldExportCaptions? : boolean;
 	excludedEntryTypes? : string;
+	additionalInfo? : KalturaKeyValue[];
 }
 
 
@@ -89,6 +90,7 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 	excludedFlavorParamsIds : string;
 	shouldExportCaptions : boolean;
 	excludedEntryTypes : string;
+	additionalInfo : KalturaKeyValue[];
 
     constructor(data? : KalturaStorageProfileArgs)
     {
@@ -96,6 +98,7 @@ export class KalturaStorageProfile extends KalturaObjectBase {
         if (typeof this.pathManagerParams === 'undefined') this.pathManagerParams = [];
 		if (typeof this.rules === 'undefined') this.rules = [];
 		if (typeof this.deliveryProfileIds === 'undefined') this.deliveryProfileIds = [];
+		if (typeof this.additionalInfo === 'undefined') this.additionalInfo = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -143,7 +146,8 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 				exportPeriodically : { type : 'b' },
 				excludedFlavorParamsIds : { type : 's' },
 				shouldExportCaptions : { type : 'b' },
-				excludedEntryTypes : { type : 's' }
+				excludedEntryTypes : { type : 's' },
+				additionalInfo : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
         );
         return result;

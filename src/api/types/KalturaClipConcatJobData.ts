@@ -5,17 +5,29 @@ import { KalturaOperationAttributes } from './KalturaOperationAttributes';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaClipConcatJobDataArgs  extends KalturaJobDataArgs {
-    partnerId? : number;
+    destEntryId? : string;
+	tempEntryId? : string;
+	sourceEntryId? : string;
+	importUrl? : string;
+	partnerId? : number;
 	priority? : number;
 	operationAttributes? : KalturaOperationAttributes[];
+	resourceOrder? : number;
+	conversionParams? : string;
 }
 
 
 export class KalturaClipConcatJobData extends KalturaJobData {
 
-    partnerId : number;
+    destEntryId : string;
+	tempEntryId : string;
+	sourceEntryId : string;
+	importUrl : string;
+	partnerId : number;
 	priority : number;
 	operationAttributes : KalturaOperationAttributes[];
+	resourceOrder : number;
+	conversionParams : string;
 
     constructor(data? : KalturaClipConcatJobDataArgs)
     {
@@ -30,9 +42,15 @@ export class KalturaClipConcatJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaClipConcatJobData' },
+				destEntryId : { type : 's' },
+				tempEntryId : { type : 's' },
+				sourceEntryId : { type : 's' },
+				importUrl : { type : 's' },
 				partnerId : { type : 'n' },
 				priority : { type : 'n' },
-				operationAttributes : { type : 'a', subTypeConstructor : KalturaOperationAttributes, subType : 'KalturaOperationAttributes' }
+				operationAttributes : { type : 'a', subTypeConstructor : KalturaOperationAttributes, subType : 'KalturaOperationAttributes' },
+				resourceOrder : { type : 'n' },
+				conversionParams : { type : 's' }
             }
         );
         return result;

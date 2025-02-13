@@ -24,6 +24,7 @@ export interface KalturaBulkUploadResultEntryArgs  extends KalturaBulkUploadResu
 	creatorId? : string;
 	entitledUsersEdit? : string;
 	entitledUsersPublish? : string;
+	entitledUsersView? : string;
 	ownerId? : string;
 	referenceId? : string;
 	templateEntryId? : string;
@@ -52,6 +53,7 @@ export class KalturaBulkUploadResultEntry extends KalturaBulkUploadResult {
 	creatorId : string;
 	entitledUsersEdit : string;
 	entitledUsersPublish : string;
+	entitledUsersView : string;
 	ownerId : string;
 	referenceId : string;
 	templateEntryId : string;
@@ -88,6 +90,7 @@ export class KalturaBulkUploadResultEntry extends KalturaBulkUploadResult {
 				creatorId : { type : 's' },
 				entitledUsersEdit : { type : 's' },
 				entitledUsersPublish : { type : 's' },
+				entitledUsersView : { type : 's' },
 				ownerId : { type : 's' },
 				referenceId : { type : 's' },
 				templateEntryId : { type : 's' }

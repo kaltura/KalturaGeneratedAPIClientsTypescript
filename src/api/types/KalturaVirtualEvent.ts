@@ -15,6 +15,8 @@ export interface KalturaVirtualEventArgs  extends KalturaObjectBaseArgs {
 	mainEventScheduleEventId? : number;
 	deletionDueDate? : Date;
 	registrationFormSchema? : string;
+	eventUrl? : string;
+	webhookRegistrationToken? : string;
 }
 
 
@@ -35,6 +37,8 @@ export class KalturaVirtualEvent extends KalturaObjectBase {
 	readonly updatedAt : Date;
 	deletionDueDate : Date;
 	registrationFormSchema : string;
+	eventUrl : string;
+	webhookRegistrationToken : string;
 
     constructor(data? : KalturaVirtualEventArgs)
     {
@@ -62,7 +66,9 @@ export class KalturaVirtualEvent extends KalturaObjectBase {
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
 				deletionDueDate : { type : 'd' },
-				registrationFormSchema : { type : 's' }
+				registrationFormSchema : { type : 's' },
+				eventUrl : { type : 's' },
+				webhookRegistrationToken : { type : 's' }
             }
         );
         return result;

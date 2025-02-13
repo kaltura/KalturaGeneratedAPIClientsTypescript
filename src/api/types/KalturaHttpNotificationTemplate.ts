@@ -8,6 +8,7 @@ import { KalturaHttpNotificationSslVersion } from './KalturaHttpNotificationSslV
 import { KalturaHttpNotificationCertificateType } from './KalturaHttpNotificationCertificateType';
 import { KalturaHttpNotificationSslKeyType } from './KalturaHttpNotificationSslKeyType';
 import { KalturaKeyValue } from './KalturaKeyValue';
+import { KalturaSecureHashingAlgo } from './KalturaSecureHashingAlgo';
 import { KalturaEventNotificationTemplate, KalturaEventNotificationTemplateArgs } from './KalturaEventNotificationTemplate';
 
 export interface KalturaHttpNotificationTemplateArgs  extends KalturaEventNotificationTemplateArgs {
@@ -29,6 +30,7 @@ export interface KalturaHttpNotificationTemplateArgs  extends KalturaEventNotifi
 	sslKey? : string;
 	sslKeyPassword? : string;
 	customHeaders? : KalturaKeyValue[];
+	secureHashingAlgo? : KalturaSecureHashingAlgo;
 }
 
 
@@ -52,6 +54,7 @@ export class KalturaHttpNotificationTemplate extends KalturaEventNotificationTem
 	sslKey : string;
 	sslKeyPassword : string;
 	customHeaders : KalturaKeyValue[];
+	secureHashingAlgo : KalturaSecureHashingAlgo;
 
     constructor(data? : KalturaHttpNotificationTemplateArgs)
     {
@@ -83,7 +86,8 @@ export class KalturaHttpNotificationTemplate extends KalturaEventNotificationTem
 				sslKeyType : { type : 'es', subTypeConstructor : KalturaHttpNotificationSslKeyType, subType : 'KalturaHttpNotificationSslKeyType' },
 				sslKey : { type : 's' },
 				sslKeyPassword : { type : 's' },
-				customHeaders : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				customHeaders : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				secureHashingAlgo : { type : 'en', subTypeConstructor : KalturaSecureHashingAlgo, subType : 'KalturaSecureHashingAlgo' }
             }
         );
         return result;

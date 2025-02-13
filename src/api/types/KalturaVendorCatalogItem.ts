@@ -8,6 +8,7 @@ import { KalturaVendorServiceTurnAroundTime } from './KalturaVendorServiceTurnAr
 import { KalturaVendorCatalogItemPricing } from './KalturaVendorCatalogItemPricing';
 import { KalturaReachVendorEngineType } from './KalturaReachVendorEngineType';
 import { KalturaCatalogItemLanguage } from './KalturaCatalogItemLanguage';
+import { KalturaVendorCatalogItemStage } from './KalturaVendorCatalogItemStage';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
@@ -20,6 +21,14 @@ export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
 	engineType? : KalturaReachVendorEngineType;
 	sourceLanguage? : KalturaCatalogItemLanguage;
 	allowResubmission? : boolean;
+	vendorData? : string;
+	stage? : KalturaVendorCatalogItemStage;
+	lastBulkUpdateId? : number;
+	contract? : string;
+	createdBy? : string;
+	notes? : string;
+	partnerId? : number;
+	adminTagsToExclude? : string;
 }
 
 
@@ -39,6 +48,14 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 	engineType : KalturaReachVendorEngineType;
 	sourceLanguage : KalturaCatalogItemLanguage;
 	allowResubmission : boolean;
+	vendorData : string;
+	stage : KalturaVendorCatalogItemStage;
+	lastBulkUpdateId : number;
+	contract : string;
+	createdBy : string;
+	notes : string;
+	partnerId : number;
+	adminTagsToExclude : string;
 
     constructor(data? : KalturaVendorCatalogItemArgs)
     {
@@ -65,7 +82,15 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 				pricing : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemPricing, subType : 'KalturaVendorCatalogItemPricing' },
 				engineType : { type : 'es', subTypeConstructor : KalturaReachVendorEngineType, subType : 'KalturaReachVendorEngineType' },
 				sourceLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' },
-				allowResubmission : { type : 'b' }
+				allowResubmission : { type : 'b' },
+				vendorData : { type : 's' },
+				stage : { type : 'en', subTypeConstructor : KalturaVendorCatalogItemStage, subType : 'KalturaVendorCatalogItemStage' },
+				lastBulkUpdateId : { type : 'n' },
+				contract : { type : 's' },
+				createdBy : { type : 's' },
+				notes : { type : 's' },
+				partnerId : { type : 'n' },
+				adminTagsToExclude : { type : 's' }
             }
         );
         return result;

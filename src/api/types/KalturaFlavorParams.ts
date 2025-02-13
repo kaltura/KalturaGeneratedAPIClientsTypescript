@@ -42,6 +42,7 @@ export interface KalturaFlavorParamsArgs  extends KalturaAssetParamsArgs {
 	videoBitrateTolerance? : number;
 	watermarkData? : string;
 	subtitlesData? : string;
+	cropData? : string;
 	isEncrypted? : number;
 	contentAwareness? : number;
 	chunkedEncodeMode? : number;
@@ -87,6 +88,7 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 	videoBitrateTolerance : number;
 	watermarkData : string;
 	subtitlesData : string;
+	cropData : string;
 	isEncrypted : number;
 	contentAwareness : number;
 	chunkedEncodeMode : number;
@@ -140,6 +142,7 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 				videoBitrateTolerance : { type : 'n' },
 				watermarkData : { type : 's' },
 				subtitlesData : { type : 's' },
+				cropData : { type : 's' },
 				isEncrypted : { type : 'n' },
 				contentAwareness : { type : 'n' },
 				chunkedEncodeMode : { type : 'n' },

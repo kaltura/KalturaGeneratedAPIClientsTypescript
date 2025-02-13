@@ -5,12 +5,14 @@ import { KalturaVendorCatalogItemBaseFilter, KalturaVendorCatalogItemBaseFilterA
 
 export interface KalturaVendorCatalogItemFilterArgs  extends KalturaVendorCatalogItemBaseFilterArgs {
     partnerIdEqual? : number;
+	catalogItemIdEqual? : number;
 }
 
 
 export class KalturaVendorCatalogItemFilter extends KalturaVendorCatalogItemBaseFilter {
 
     partnerIdEqual : number;
+	catalogItemIdEqual : number;
 
     constructor(data? : KalturaVendorCatalogItemFilterArgs)
     {
@@ -24,7 +26,8 @@ export class KalturaVendorCatalogItemFilter extends KalturaVendorCatalogItemBase
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaVendorCatalogItemFilter' },
-				partnerIdEqual : { type : 'n' }
+				partnerIdEqual : { type : 'n' },
+				catalogItemIdEqual : { type : 'n' }
             }
         );
         return result;

@@ -4,6 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaZoomUsersMatching } from './KalturaZoomUsersMatching';
 import { KalturaZoomGroupParticipationType } from './KalturaZoomGroupParticipationType';
+import { KalturaHandleParticipantsMode } from './KalturaHandleParticipantsMode';
 import { KalturaIntegrationSetting, KalturaIntegrationSettingArgs } from './KalturaIntegrationSetting';
 
 export interface KalturaZoomIntegrationSettingArgs  extends KalturaIntegrationSettingArgs {
@@ -13,12 +14,13 @@ export interface KalturaZoomIntegrationSettingArgs  extends KalturaIntegrationSe
 	zoomUserPostfix? : string;
 	zoomWebinarCategory? : string;
 	enableWebinarUploads? : KalturaNullableBoolean;
-	jwtToken? : string;
 	enableZoomTranscription? : KalturaNullableBoolean;
 	zoomAccountDescription? : string;
 	optOutGroupNames? : string;
 	optInGroupNames? : string;
 	groupParticipationType? : KalturaZoomGroupParticipationType;
+	handleCohostsMode? : KalturaHandleParticipantsMode;
+	handleAlternativeHostsMode? : KalturaHandleParticipantsMode;
 }
 
 
@@ -30,12 +32,13 @@ export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 	zoomUserPostfix : string;
 	zoomWebinarCategory : string;
 	enableWebinarUploads : KalturaNullableBoolean;
-	jwtToken : string;
 	enableZoomTranscription : KalturaNullableBoolean;
 	zoomAccountDescription : string;
 	optOutGroupNames : string;
 	optInGroupNames : string;
 	groupParticipationType : KalturaZoomGroupParticipationType;
+	handleCohostsMode : KalturaHandleParticipantsMode;
+	handleAlternativeHostsMode : KalturaHandleParticipantsMode;
 
     constructor(data? : KalturaZoomIntegrationSettingArgs)
     {
@@ -55,12 +58,13 @@ export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 				zoomUserPostfix : { type : 's' },
 				zoomWebinarCategory : { type : 's' },
 				enableWebinarUploads : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				jwtToken : { type : 's' },
 				enableZoomTranscription : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				zoomAccountDescription : { type : 's' },
 				optOutGroupNames : { type : 's' },
 				optInGroupNames : { type : 's' },
-				groupParticipationType : { type : 'en', subTypeConstructor : KalturaZoomGroupParticipationType, subType : 'KalturaZoomGroupParticipationType' }
+				groupParticipationType : { type : 'en', subTypeConstructor : KalturaZoomGroupParticipationType, subType : 'KalturaZoomGroupParticipationType' },
+				handleCohostsMode : { type : 'en', subTypeConstructor : KalturaHandleParticipantsMode, subType : 'KalturaHandleParticipantsMode' },
+				handleAlternativeHostsMode : { type : 'en', subTypeConstructor : KalturaHandleParticipantsMode, subType : 'KalturaHandleParticipantsMode' }
             }
         );
         return result;

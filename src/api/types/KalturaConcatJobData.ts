@@ -12,6 +12,8 @@ export interface KalturaConcatJobDataArgs  extends KalturaJobDataArgs {
 	duration? : number;
 	concatenatedDuration? : number;
 	shouldSort? : boolean;
+	conversionCommands? : KalturaString[];
+	multiSource? : boolean;
 }
 
 
@@ -24,11 +26,14 @@ export class KalturaConcatJobData extends KalturaJobData {
 	duration : number;
 	concatenatedDuration : number;
 	shouldSort : boolean;
+	conversionCommands : KalturaString[];
+	multiSource : boolean;
 
     constructor(data? : KalturaConcatJobDataArgs)
     {
         super(data);
         if (typeof this.srcFiles === 'undefined') this.srcFiles = [];
+		if (typeof this.conversionCommands === 'undefined') this.conversionCommands = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -44,7 +49,9 @@ export class KalturaConcatJobData extends KalturaJobData {
 				offset : { type : 'n' },
 				duration : { type : 'n' },
 				concatenatedDuration : { type : 'n' },
-				shouldSort : { type : 'b' }
+				shouldSort : { type : 'b' },
+				conversionCommands : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				multiSource : { type : 'b' }
             }
         );
         return result;
