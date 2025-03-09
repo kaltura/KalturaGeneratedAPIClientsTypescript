@@ -11,6 +11,7 @@ export enum KalturaVendorServiceFeature {
 	intelligentTagging=6,
 	liveCaption=8,
 	liveTranslation=11,
+	moderation=15,
 	quiz=12,
 	summary=13,
 	translation=2,

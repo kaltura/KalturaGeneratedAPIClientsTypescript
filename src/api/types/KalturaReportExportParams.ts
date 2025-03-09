@@ -6,6 +6,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 
 export interface KalturaReportExportParamsArgs  extends KalturaObjectBaseArgs {
     recipientEmail? : string;
+	recipientName? : string;
 	timeZoneOffset? : number;
 	reportItems? : KalturaReportExportItem[];
 	reportsItemsGroup? : string;
@@ -16,6 +17,7 @@ export interface KalturaReportExportParamsArgs  extends KalturaObjectBaseArgs {
 export class KalturaReportExportParams extends KalturaObjectBase {
 
     recipientEmail : string;
+	recipientName : string;
 	timeZoneOffset : number;
 	reportItems : KalturaReportExportItem[];
 	reportsItemsGroup : string;
@@ -35,6 +37,7 @@ export class KalturaReportExportParams extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaReportExportParams' },
 				recipientEmail : { type : 's' },
+				recipientName : { type : 's' },
 				timeZoneOffset : { type : 'n' },
 				reportItems : { type : 'a', subTypeConstructor : KalturaReportExportItem, subType : 'KalturaReportExportItem' },
 				reportsItemsGroup : { type : 's' },

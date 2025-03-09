@@ -8,6 +8,7 @@ import { KalturaFilter, KalturaFilterArgs } from './KalturaFilter';
 export interface KalturaDropFolderFileBaseFilterArgs  extends KalturaFilterArgs {
     idEqual? : number;
 	idIn? : string;
+	idGreaterThanOrEqual? : number;
 	partnerIdEqual? : number;
 	partnerIdIn? : string;
 	dropFolderIdEqual? : number;
@@ -40,6 +41,7 @@ export class KalturaDropFolderFileBaseFilter extends KalturaFilter {
 
     idEqual : number;
 	idIn : string;
+	idGreaterThanOrEqual : number;
 	partnerIdEqual : number;
 	partnerIdIn : string;
 	dropFolderIdEqual : number;
@@ -80,6 +82,7 @@ export class KalturaDropFolderFileBaseFilter extends KalturaFilter {
                 objectType : { type : 'c', default : 'KalturaDropFolderFileBaseFilter' },
 				idEqual : { type : 'n' },
 				idIn : { type : 's' },
+				idGreaterThanOrEqual : { type : 'n' },
 				partnerIdEqual : { type : 'n' },
 				partnerIdIn : { type : 's' },
 				dropFolderIdEqual : { type : 'n' },

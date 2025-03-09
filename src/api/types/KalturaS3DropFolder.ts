@@ -8,6 +8,7 @@ export interface KalturaS3DropFolderArgs  extends KalturaDropFolderArgs {
 	s3Region? : string;
 	s3UserId? : string;
 	s3Password? : string;
+	useS3Arn? : boolean;
 }
 
 
@@ -17,6 +18,8 @@ export class KalturaS3DropFolder extends KalturaDropFolder {
 	s3Region : string;
 	s3UserId : string;
 	s3Password : string;
+	useS3Arn : boolean;
+	readonly s3Arn : string;
 
     constructor(data? : KalturaS3DropFolderArgs)
     {
@@ -33,7 +36,9 @@ export class KalturaS3DropFolder extends KalturaDropFolder {
 				s3Host : { type : 's' },
 				s3Region : { type : 's' },
 				s3UserId : { type : 's' },
-				s3Password : { type : 's' }
+				s3Password : { type : 's' },
+				useS3Arn : { type : 'b' },
+				s3Arn : { type : 's', readOnly : true }
             }
         );
         return result;

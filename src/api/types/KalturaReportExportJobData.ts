@@ -7,6 +7,7 @@ import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaReportExportJobDataArgs  extends KalturaJobDataArgs {
     recipientEmail? : string;
+	recipientName? : string;
 	reportItems? : KalturaReportExportItem[];
 	filePaths? : string;
 	reportsGroup? : string;
@@ -18,6 +19,7 @@ export interface KalturaReportExportJobDataArgs  extends KalturaJobDataArgs {
 export class KalturaReportExportJobData extends KalturaJobData {
 
     recipientEmail : string;
+	recipientName : string;
 	reportItems : KalturaReportExportItem[];
 	filePaths : string;
 	reportsGroup : string;
@@ -39,6 +41,7 @@ export class KalturaReportExportJobData extends KalturaJobData {
             {
                 objectType : { type : 'c', default : 'KalturaReportExportJobData' },
 				recipientEmail : { type : 's' },
+				recipientName : { type : 's' },
 				reportItems : { type : 'a', subTypeConstructor : KalturaReportExportItem, subType : 'KalturaReportExportItem' },
 				filePaths : { type : 's' },
 				reportsGroup : { type : 's' },
