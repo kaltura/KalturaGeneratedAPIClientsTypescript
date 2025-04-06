@@ -4,6 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaGroupUserStatus } from './KalturaGroupUserStatus';
 import { KalturaGroupUserCreationMode } from './KalturaGroupUserCreationMode';
 import { KalturaGroupUserRole } from './KalturaGroupUserRole';
+import { KalturaGroupType } from './KalturaGroupType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaGroupUserArgs  extends KalturaObjectBaseArgs {
@@ -25,6 +26,7 @@ export class KalturaGroupUser extends KalturaObjectBase {
 	readonly updatedAt : Date;
 	creationMode : KalturaGroupUserCreationMode;
 	userRole : KalturaGroupUserRole;
+	readonly groupType : KalturaGroupType;
 
     constructor(data? : KalturaGroupUserArgs)
     {
@@ -46,7 +48,8 @@ export class KalturaGroupUser extends KalturaObjectBase {
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
 				creationMode : { type : 'en', subTypeConstructor : KalturaGroupUserCreationMode, subType : 'KalturaGroupUserCreationMode' },
-				userRole : { type : 'en', subTypeConstructor : KalturaGroupUserRole, subType : 'KalturaGroupUserRole' }
+				userRole : { type : 'en', subTypeConstructor : KalturaGroupUserRole, subType : 'KalturaGroupUserRole' },
+				groupType : { type : 'en', readOnly : true, subTypeConstructor : KalturaGroupType, subType : 'KalturaGroupType' }
             }
         );
         return result;

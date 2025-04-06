@@ -1,16 +1,17 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaGroupType } from './KalturaGroupType';
 import { KalturaGroupUserBaseFilter, KalturaGroupUserBaseFilterArgs } from './KalturaGroupUserBaseFilter';
 
 export interface KalturaGroupUserFilterArgs  extends KalturaGroupUserBaseFilterArgs {
-    
+    groupType? : KalturaGroupType;
 }
 
 
 export class KalturaGroupUserFilter extends KalturaGroupUserBaseFilter {
 
-    
+    groupType : KalturaGroupType;
 
     constructor(data? : KalturaGroupUserFilterArgs)
     {
@@ -23,7 +24,8 @@ export class KalturaGroupUserFilter extends KalturaGroupUserBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaGroupUserFilter' }
+                objectType : { type : 'c', default : 'KalturaGroupUserFilter' },
+				groupType : { type : 'en', subTypeConstructor : KalturaGroupType, subType : 'KalturaGroupType' }
             }
         );
         return result;

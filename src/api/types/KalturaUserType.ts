@@ -1,6 +1,7 @@
 
 
 export enum KalturaUserType {
-    group=1,
+    applicativeGroup=2,
+	group=1,
 	user=0
 }
