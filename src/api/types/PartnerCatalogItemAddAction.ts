@@ -6,6 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface PartnerCatalogItemAddActionArgs  extends KalturaRequestArgs {
     id : number;
+	defaultReachProfileId? : number;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface PartnerCatalogItemAddActionArgs  extends KalturaRequestArgs {
 export class PartnerCatalogItemAddAction extends KalturaRequest<KalturaVendorCatalogItem> {
 
     id : number;
+	defaultReachProfileId : number;
 
     constructor(data : PartnerCatalogItemAddActionArgs)
     {
@@ -35,7 +37,8 @@ export class PartnerCatalogItemAddAction extends KalturaRequest<KalturaVendorCat
             {
                 service : { type : 'c', default : 'reach_partnercatalogitem' },
 				action : { type : 'c', default : 'add' },
-				id : { type : 'n' }
+				id : { type : 'n' },
+				defaultReachProfileId : { type : 'n' }
             }
         );
         return result;

@@ -25,6 +25,7 @@ export enum KalturaConditionType {
 	metadataFieldCompare = 'metadata.FieldCompare',
 	metadataFieldMatch = 'metadata.FieldMatch',
 	orOperator = '11',
+	sessionType = '22',
 	site = '4',
 	urlAuthParams = '21',
 	userAgent = '5',

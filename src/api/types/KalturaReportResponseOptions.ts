@@ -6,6 +6,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaReportResponseOptionsArgs  extends KalturaObjectBaseArgs {
     delimiter? : string;
 	skipEmptyDates? : boolean;
+	useFriendlyHeadersNames? : boolean;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaReportResponseOptions extends KalturaObjectBase {
 
     delimiter : string;
 	skipEmptyDates : boolean;
+	useFriendlyHeadersNames : boolean;
 
     constructor(data? : KalturaReportResponseOptionsArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaReportResponseOptions extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaReportResponseOptions' },
 				delimiter : { type : 's' },
-				skipEmptyDates : { type : 'b' }
+				skipEmptyDates : { type : 'b' },
+				useFriendlyHeadersNames : { type : 'b' }
             }
         );
         return result;

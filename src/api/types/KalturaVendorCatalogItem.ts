@@ -28,6 +28,7 @@ export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
 	createdBy? : string;
 	notes? : string;
 	partnerId? : number;
+	defaultReachProfileId? : number;
 	adminTagsToExclude? : string;
 }
 
@@ -55,6 +56,7 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 	createdBy : string;
 	notes : string;
 	partnerId : number;
+	defaultReachProfileId : number;
 	adminTagsToExclude : string;
 
     constructor(data? : KalturaVendorCatalogItemArgs)
@@ -90,6 +92,7 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 				createdBy : { type : 's' },
 				notes : { type : 's' },
 				partnerId : { type : 'n' },
+				defaultReachProfileId : { type : 'n' },
 				adminTagsToExclude : { type : 's' }
             }
         );

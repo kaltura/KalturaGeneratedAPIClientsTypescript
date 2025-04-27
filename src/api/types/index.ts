@@ -734,6 +734,7 @@ export { KalturaServerNodeListResponse, KalturaServerNodeListResponseArgs } from
 export { KalturaSessionCuePoint, KalturaSessionCuePointArgs } from './KalturaSessionCuePoint'
 export { KalturaSessionResponse, KalturaSessionResponseArgs } from './KalturaSessionResponse'
 export { KalturaSessionRestriction, KalturaSessionRestrictionArgs } from './KalturaSessionRestriction'
+export { KalturaSessionTypeCondition, KalturaSessionTypeConditionArgs } from './KalturaSessionTypeCondition'
 export { KalturaShortLinkBaseFilter, KalturaShortLinkBaseFilterArgs } from './KalturaShortLinkBaseFilter'
 export { KalturaShortLinkListResponse, KalturaShortLinkListResponseArgs } from './KalturaShortLinkListResponse'
 export { KalturaSipEntryServerNode, KalturaSipEntryServerNodeArgs } from './KalturaSipEntryServerNode'
