@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEntryVendorTaskStatus } from './KalturaEntryVendorTaskStatus';
+import { KalturaEntryObjectType } from './KalturaEntryObjectType';
 import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelatedFilter';
 
 export interface KalturaEntryVendorTaskBaseFilterArgs  extends KalturaRelatedFilterArgs {
@@ -29,6 +30,9 @@ export interface KalturaEntryVendorTaskBaseFilterArgs  extends KalturaRelatedFil
 	contextEqual? : string;
 	expectedFinishTimeGreaterThanOrEqual? : Date;
 	expectedFinishTimeLessThanOrEqual? : Date;
+	entryObjectTypeEqual? : KalturaEntryObjectType;
+	entryObjectTypeIn? : string;
+	entryObjectTypeNotIn? : string;
 }
 
 
@@ -58,6 +62,9 @@ export class KalturaEntryVendorTaskBaseFilter extends KalturaRelatedFilter {
 	contextEqual : string;
 	expectedFinishTimeGreaterThanOrEqual : Date;
 	expectedFinishTimeLessThanOrEqual : Date;
+	entryObjectTypeEqual : KalturaEntryObjectType;
+	entryObjectTypeIn : string;
+	entryObjectTypeNotIn : string;
 
     constructor(data? : KalturaEntryVendorTaskBaseFilterArgs)
     {
@@ -94,7 +101,10 @@ export class KalturaEntryVendorTaskBaseFilter extends KalturaRelatedFilter {
 				userIdEqual : { type : 's' },
 				contextEqual : { type : 's' },
 				expectedFinishTimeGreaterThanOrEqual : { type : 'd' },
-				expectedFinishTimeLessThanOrEqual : { type : 'd' }
+				expectedFinishTimeLessThanOrEqual : { type : 'd' },
+				entryObjectTypeEqual : { type : 'en', subTypeConstructor : KalturaEntryObjectType, subType : 'KalturaEntryObjectType' },
+				entryObjectTypeIn : { type : 's' },
+				entryObjectTypeNotIn : { type : 's' }
             }
         );
         return result;

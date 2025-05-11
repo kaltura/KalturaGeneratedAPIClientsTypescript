@@ -8,6 +8,7 @@ export interface KalturaVendorCreditArgs  extends KalturaBaseVendorCreditArgs {
 	fromDate? : Date;
 	overageCredit? : number;
 	addOn? : number;
+	allowNegativeOverageCredit? : boolean;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaVendorCredit extends KalturaBaseVendorCredit {
 	fromDate : Date;
 	overageCredit : number;
 	addOn : number;
+	allowNegativeOverageCredit : boolean;
 
     constructor(data? : KalturaVendorCreditArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaVendorCredit extends KalturaBaseVendorCredit {
 				credit : { type : 'n' },
 				fromDate : { type : 'd' },
 				overageCredit : { type : 'n' },
-				addOn : { type : 'n' }
+				addOn : { type : 'n' },
+				allowNegativeOverageCredit : { type : 'b' }
             }
         );
         return result;

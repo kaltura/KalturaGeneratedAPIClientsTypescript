@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEntryVendorTaskStatus } from './KalturaEntryVendorTaskStatus';
+import { KalturaEntryObjectType } from './KalturaEntryObjectType';
 import { KalturaEntryVendorTaskCreationMode } from './KalturaEntryVendorTaskCreationMode';
 import { KalturaVendorTaskData } from './KalturaVendorTaskData';
 import { KalturaVendorServiceType } from './KalturaVendorServiceType';
@@ -14,6 +15,7 @@ export interface KalturaEntryVendorTaskArgs  extends KalturaObjectBaseArgs {
 	status? : KalturaEntryVendorTaskStatus;
 	reachProfileId? : number;
 	catalogItemId? : number;
+	entryObjectType? : KalturaEntryObjectType;
 	errDescription? : string;
 	notes? : string;
 	context? : string;
@@ -40,6 +42,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	catalogItemId : number;
 	readonly price : number;
 	readonly userId : string;
+	entryObjectType : KalturaEntryObjectType;
 	readonly moderatingUser : string;
 	errDescription : string;
 	readonly accessKey : string;
@@ -83,6 +86,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				catalogItemId : { type : 'n' },
 				price : { type : 'n', readOnly : true },
 				userId : { type : 's', readOnly : true },
+				entryObjectType : { type : 'en', subTypeConstructor : KalturaEntryObjectType, subType : 'KalturaEntryObjectType' },
 				moderatingUser : { type : 's', readOnly : true },
 				errDescription : { type : 's' },
 				accessKey : { type : 's', readOnly : true },

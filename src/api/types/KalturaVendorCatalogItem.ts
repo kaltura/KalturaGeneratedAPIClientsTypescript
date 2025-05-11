@@ -21,6 +21,7 @@ export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
 	engineType? : KalturaReachVendorEngineType;
 	sourceLanguage? : KalturaCatalogItemLanguage;
 	allowResubmission? : boolean;
+	requiresOverages? : boolean;
 	vendorData? : string;
 	stage? : KalturaVendorCatalogItemStage;
 	lastBulkUpdateId? : number;
@@ -49,6 +50,7 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 	engineType : KalturaReachVendorEngineType;
 	sourceLanguage : KalturaCatalogItemLanguage;
 	allowResubmission : boolean;
+	requiresOverages : boolean;
 	vendorData : string;
 	stage : KalturaVendorCatalogItemStage;
 	lastBulkUpdateId : number;
@@ -85,6 +87,7 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 				engineType : { type : 'es', subTypeConstructor : KalturaReachVendorEngineType, subType : 'KalturaReachVendorEngineType' },
 				sourceLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' },
 				allowResubmission : { type : 'b' },
+				requiresOverages : { type : 'b' },
 				vendorData : { type : 's' },
 				stage : { type : 'en', subTypeConstructor : KalturaVendorCatalogItemStage, subType : 'KalturaVendorCatalogItemStage' },
 				lastBulkUpdateId : { type : 'n' },
