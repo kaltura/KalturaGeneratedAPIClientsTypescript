@@ -16,6 +16,7 @@ export interface KalturaEntryVendorTaskArgs  extends KalturaObjectBaseArgs {
 	reachProfileId? : number;
 	catalogItemId? : number;
 	entryObjectType? : KalturaEntryObjectType;
+	unitsUsed? : number;
 	errDescription? : string;
 	notes? : string;
 	context? : string;
@@ -43,6 +44,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	readonly price : number;
 	readonly userId : string;
 	entryObjectType : KalturaEntryObjectType;
+	unitsUsed : number;
 	readonly moderatingUser : string;
 	errDescription : string;
 	readonly accessKey : string;
@@ -87,6 +89,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				price : { type : 'n', readOnly : true },
 				userId : { type : 's', readOnly : true },
 				entryObjectType : { type : 'en', subTypeConstructor : KalturaEntryObjectType, subType : 'KalturaEntryObjectType' },
+				unitsUsed : { type : 'n' },
 				moderatingUser : { type : 's', readOnly : true },
 				errDescription : { type : 's' },
 				accessKey : { type : 's', readOnly : true },

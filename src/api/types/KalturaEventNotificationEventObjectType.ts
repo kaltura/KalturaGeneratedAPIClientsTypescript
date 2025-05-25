@@ -27,6 +27,7 @@ export enum KalturaEventNotificationEventObjectType {
 	flavorparamsconversionprofile = '16',
 	flavorparamsoutput = '17',
 	genericsyndicationfeed = '18',
+	groupuser = '43',
 	kuser = '8',
 	kusertouserrole = '19',
 	liveStream = '38',

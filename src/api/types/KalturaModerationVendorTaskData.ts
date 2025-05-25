@@ -6,6 +6,7 @@ import { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendo
 export interface KalturaModerationVendorTaskDataArgs  extends KalturaVendorTaskDataArgs {
     ruleIds? : string;
 	policyIds? : string;
+	categoryIds? : string;
 	moderationOutputJson? : string;
 }
 
@@ -14,6 +15,7 @@ export class KalturaModerationVendorTaskData extends KalturaVendorTaskData {
 
     ruleIds : string;
 	policyIds : string;
+	categoryIds : string;
 	moderationOutputJson : string;
 
     constructor(data? : KalturaModerationVendorTaskDataArgs)
@@ -30,6 +32,7 @@ export class KalturaModerationVendorTaskData extends KalturaVendorTaskData {
                 objectType : { type : 'c', default : 'KalturaModerationVendorTaskData' },
 				ruleIds : { type : 's' },
 				policyIds : { type : 's' },
+				categoryIds : { type : 's' },
 				moderationOutputJson : { type : 's' }
             }
         );

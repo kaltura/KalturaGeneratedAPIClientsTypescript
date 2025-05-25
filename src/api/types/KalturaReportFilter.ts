@@ -1,16 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaReportBaseFilter, KalturaReportBaseFilterArgs } from './KalturaReportBaseFilter';
+import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
-export interface KalturaReportFilterArgs  extends KalturaReportBaseFilterArgs {
-    
+export interface KalturaReportFilterArgs  extends KalturaObjectBaseArgs {
+    dimension? : string;
+	values? : string;
 }
 
 
-export class KalturaReportFilter extends KalturaReportBaseFilter {
+export class KalturaReportFilter extends KalturaObjectBase {
 
-    
+    dimension : string;
+	values : string;
 
     constructor(data? : KalturaReportFilterArgs)
     {
@@ -23,7 +25,9 @@ export class KalturaReportFilter extends KalturaReportBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaReportFilter' }
+                objectType : { type : 'c', default : 'KalturaReportFilter' },
+				dimension : { type : 's' },
+				values : { type : 's' }
             }
         );
         return result;

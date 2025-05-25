@@ -73,6 +73,7 @@ export enum KalturaReportType {
 	operatingSystemVpaas = '20006',
 	partnerUsage = '201',
 	partnerUsageHighlights = '63',
+	partnerUsageSf = '68',
 	partnerUsageVpaas = '20021',
 	percentiles = '43',
 	platforms = '21',

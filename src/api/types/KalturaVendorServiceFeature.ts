@@ -14,6 +14,7 @@ export enum KalturaVendorServiceFeature {
 	metadataEnrichment=16,
 	moderation=15,
 	quiz=12,
+	sentimentAnalysis=17,
 	summary=13,
 	translation=2,
 	videoAnalysis=14

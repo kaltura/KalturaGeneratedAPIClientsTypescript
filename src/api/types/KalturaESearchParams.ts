@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaESearchOrderBy } from './KalturaESearchOrderBy';
+import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaESearchParamsArgs  extends KalturaObjectBaseArgs {
@@ -9,6 +10,8 @@ export interface KalturaESearchParamsArgs  extends KalturaObjectBaseArgs {
 	objectId? : string;
 	orderBy? : KalturaESearchOrderBy;
 	ignoreSynonym? : boolean;
+	objectIds? : string;
+	objectIdsNotIn? : KalturaNullableBoolean;
 }
 
 
@@ -18,6 +21,8 @@ export class KalturaESearchParams extends KalturaObjectBase {
 	objectId : string;
 	orderBy : KalturaESearchOrderBy;
 	ignoreSynonym : boolean;
+	objectIds : string;
+	objectIdsNotIn : KalturaNullableBoolean;
 
     constructor(data? : KalturaESearchParamsArgs)
     {
@@ -34,7 +39,9 @@ export class KalturaESearchParams extends KalturaObjectBase {
 				objectStatuses : { type : 's' },
 				objectId : { type : 's' },
 				orderBy : { type : 'o', subTypeConstructor : KalturaESearchOrderBy, subType : 'KalturaESearchOrderBy' },
-				ignoreSynonym : { type : 'b' }
+				ignoreSynonym : { type : 'b' },
+				objectIds : { type : 's' },
+				objectIdsNotIn : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;
