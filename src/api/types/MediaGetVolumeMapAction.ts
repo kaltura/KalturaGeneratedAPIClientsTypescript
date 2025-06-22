@@ -6,6 +6,7 @@ import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-requ
 
 export interface MediaGetVolumeMapActionArgs  extends KalturaFileRequestArgs {
     entryId : string;
+	desiredLines? : number;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface MediaGetVolumeMapActionArgs  extends KalturaFileRequestArgs {
 export class MediaGetVolumeMapAction extends KalturaFileRequest {
 
     entryId : string;
+	desiredLines : number;
 
     constructor(data : MediaGetVolumeMapActionArgs)
     {
@@ -35,7 +37,8 @@ export class MediaGetVolumeMapAction extends KalturaFileRequest {
             {
                 service : { type : 'c', default : 'media' },
 				action : { type : 'c', default : 'getVolumeMap' },
-				entryId : { type : 's' }
+				entryId : { type : 's' },
+				desiredLines : { type : 'n' }
             }
         );
         return result;

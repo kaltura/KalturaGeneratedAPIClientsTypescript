@@ -1,9 +1,9 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendorTaskData';
+import { KalturaLocalizedVendorTaskData, KalturaLocalizedVendorTaskDataArgs } from './KalturaLocalizedVendorTaskData';
 
-export interface KalturaQuizVendorTaskDataArgs  extends KalturaVendorTaskDataArgs {
+export interface KalturaQuizVendorTaskDataArgs  extends KalturaLocalizedVendorTaskDataArgs {
     numberOfQuestions? : number;
 	questionsType? : string;
 	context? : string;
@@ -13,7 +13,7 @@ export interface KalturaQuizVendorTaskDataArgs  extends KalturaVendorTaskDataArg
 }
 
 
-export class KalturaQuizVendorTaskData extends KalturaVendorTaskData {
+export class KalturaQuizVendorTaskData extends KalturaLocalizedVendorTaskData {
 
     numberOfQuestions : number;
 	questionsType : string;

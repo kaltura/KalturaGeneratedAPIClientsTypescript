@@ -6,6 +6,7 @@ export enum KalturaVendorServiceFeature {
 	captions=1,
 	chaptering=5,
 	clips=10,
+	documentEnrichment=18,
 	dubbing=7,
 	extendedAudioDescription=9,
 	intelligentTagging=6,
@@ -15,6 +16,7 @@ export enum KalturaVendorServiceFeature {
 	moderation=15,
 	quiz=12,
 	sentimentAnalysis=17,
+	signLanguage=19,
 	summary=13,
 	translation=2,
 	videoAnalysis=14

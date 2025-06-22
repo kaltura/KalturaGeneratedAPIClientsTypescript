@@ -1,9 +1,9 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendorTaskData';
+import { KalturaLocalizedVendorTaskData, KalturaLocalizedVendorTaskDataArgs } from './KalturaLocalizedVendorTaskData';
 
-export interface KalturaClipsVendorTaskDataArgs  extends KalturaVendorTaskDataArgs {
+export interface KalturaClipsVendorTaskDataArgs  extends KalturaLocalizedVendorTaskDataArgs {
     clipsDuration? : number;
 	eventSessionContextId? : string;
 	instruction? : string;
@@ -11,7 +11,7 @@ export interface KalturaClipsVendorTaskDataArgs  extends KalturaVendorTaskDataAr
 }
 
 
-export class KalturaClipsVendorTaskData extends KalturaVendorTaskData {
+export class KalturaClipsVendorTaskData extends KalturaLocalizedVendorTaskData {
 
     clipsDuration : number;
 	eventSessionContextId : string;

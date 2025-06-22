@@ -1,20 +1,18 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendorTaskData';
+import { KalturaLocalizedVendorTaskData, KalturaLocalizedVendorTaskDataArgs } from './KalturaLocalizedVendorTaskData';
 
-export interface KalturaMetadataEnrichmentVendorTaskDataArgs  extends KalturaVendorTaskDataArgs {
+export interface KalturaMetadataEnrichmentVendorTaskDataArgs  extends KalturaLocalizedVendorTaskDataArgs {
     detailLevel? : string;
 	instruction? : string;
-	outputJson? : string;
 }
 
 
-export class KalturaMetadataEnrichmentVendorTaskData extends KalturaVendorTaskData {
+export class KalturaMetadataEnrichmentVendorTaskData extends KalturaLocalizedVendorTaskData {
 
     detailLevel : string;
 	instruction : string;
-	outputJson : string;
 
     constructor(data? : KalturaMetadataEnrichmentVendorTaskDataArgs)
     {
@@ -29,8 +27,7 @@ export class KalturaMetadataEnrichmentVendorTaskData extends KalturaVendorTaskDa
             {
                 objectType : { type : 'c', default : 'KalturaMetadataEnrichmentVendorTaskData' },
 				detailLevel : { type : 's' },
-				instruction : { type : 's' },
-				outputJson : { type : 's' }
+				instruction : { type : 's' }
             }
         );
         return result;

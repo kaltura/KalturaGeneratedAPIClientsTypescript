@@ -3,22 +3,19 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTypeOfSummaryTaskData } from './KalturaTypeOfSummaryTaskData';
 import { KalturaSummaryWritingStyleTaskData } from './KalturaSummaryWritingStyleTaskData';
-import { KalturaLanguageCode } from './KalturaLanguageCode';
-import { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendorTaskData';
+import { KalturaLocalizedVendorTaskData, KalturaLocalizedVendorTaskDataArgs } from './KalturaLocalizedVendorTaskData';
 
-export interface KalturaSummaryVendorTaskDataArgs  extends KalturaVendorTaskDataArgs {
+export interface KalturaSummaryVendorTaskDataArgs  extends KalturaLocalizedVendorTaskDataArgs {
     typeOfSummary? : KalturaTypeOfSummaryTaskData;
 	writingStyle? : KalturaSummaryWritingStyleTaskData;
-	language? : KalturaLanguageCode;
 	summaryOutputJson? : string;
 }
 
 
-export class KalturaSummaryVendorTaskData extends KalturaVendorTaskData {
+export class KalturaSummaryVendorTaskData extends KalturaLocalizedVendorTaskData {
 
     typeOfSummary : KalturaTypeOfSummaryTaskData;
 	writingStyle : KalturaSummaryWritingStyleTaskData;
-	language : KalturaLanguageCode;
 	summaryOutputJson : string;
 
     constructor(data? : KalturaSummaryVendorTaskDataArgs)
@@ -35,7 +32,6 @@ export class KalturaSummaryVendorTaskData extends KalturaVendorTaskData {
                 objectType : { type : 'c', default : 'KalturaSummaryVendorTaskData' },
 				typeOfSummary : { type : 'es', subTypeConstructor : KalturaTypeOfSummaryTaskData, subType : 'KalturaTypeOfSummaryTaskData' },
 				writingStyle : { type : 'es', subTypeConstructor : KalturaSummaryWritingStyleTaskData, subType : 'KalturaSummaryWritingStyleTaskData' },
-				language : { type : 'es', subTypeConstructor : KalturaLanguageCode, subType : 'KalturaLanguageCode' },
 				summaryOutputJson : { type : 's' }
             }
         );
