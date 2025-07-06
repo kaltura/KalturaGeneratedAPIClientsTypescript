@@ -5,6 +5,7 @@ import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaZoomUsersMatching } from './KalturaZoomUsersMatching';
 import { KalturaZoomGroupParticipationType } from './KalturaZoomGroupParticipationType';
 import { KalturaHandleParticipantsMode } from './KalturaHandleParticipantsMode';
+import { KalturaZoomUsersSearchMethod } from './KalturaZoomUsersSearchMethod';
 import { KalturaIntegrationSetting, KalturaIntegrationSettingArgs } from './KalturaIntegrationSetting';
 
 export interface KalturaZoomIntegrationSettingArgs  extends KalturaIntegrationSettingArgs {
@@ -21,6 +22,7 @@ export interface KalturaZoomIntegrationSettingArgs  extends KalturaIntegrationSe
 	groupParticipationType? : KalturaZoomGroupParticipationType;
 	handleCohostsMode? : KalturaHandleParticipantsMode;
 	handleAlternativeHostsMode? : KalturaHandleParticipantsMode;
+	userSearchMethod? : KalturaZoomUsersSearchMethod;
 }
 
 
@@ -39,6 +41,7 @@ export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 	groupParticipationType : KalturaZoomGroupParticipationType;
 	handleCohostsMode : KalturaHandleParticipantsMode;
 	handleAlternativeHostsMode : KalturaHandleParticipantsMode;
+	userSearchMethod : KalturaZoomUsersSearchMethod;
 
     constructor(data? : KalturaZoomIntegrationSettingArgs)
     {
@@ -64,7 +67,8 @@ export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 				optInGroupNames : { type : 's' },
 				groupParticipationType : { type : 'en', subTypeConstructor : KalturaZoomGroupParticipationType, subType : 'KalturaZoomGroupParticipationType' },
 				handleCohostsMode : { type : 'en', subTypeConstructor : KalturaHandleParticipantsMode, subType : 'KalturaHandleParticipantsMode' },
-				handleAlternativeHostsMode : { type : 'en', subTypeConstructor : KalturaHandleParticipantsMode, subType : 'KalturaHandleParticipantsMode' }
+				handleAlternativeHostsMode : { type : 'en', subTypeConstructor : KalturaHandleParticipantsMode, subType : 'KalturaHandleParticipantsMode' },
+				userSearchMethod : { type : 'en', subTypeConstructor : KalturaZoomUsersSearchMethod, subType : 'KalturaZoomUsersSearchMethod' }
             }
         );
         return result;
