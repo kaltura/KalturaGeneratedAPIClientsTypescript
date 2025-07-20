@@ -1,5 +1,6 @@
 
 
 export enum KalturaEntryObjectType {
-    entry=1
+    asset=2,
+	entry=1
 }

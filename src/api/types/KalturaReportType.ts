@@ -27,6 +27,7 @@ export enum KalturaReportType {
 	entryLevelUsersStatusRealtime = '10009',
 	entryUsage = '27',
 	epAttendees = '60014',
+	epLatestDownloadedAttachments = '60019',
 	epTopMoments = '60016',
 	epTopSessions = '60017',
 	epViewtime = '60015',

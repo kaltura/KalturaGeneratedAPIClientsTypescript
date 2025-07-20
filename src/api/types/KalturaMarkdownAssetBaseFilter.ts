@@ -3,16 +3,16 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaTextualAttachmentAssetFilter, KalturaTextualAttachmentAssetFilterArgs } from './KalturaTextualAttachmentAssetFilter';
 
-export interface KalturaTranscriptAssetBaseFilterArgs  extends KalturaTextualAttachmentAssetFilterArgs {
+export interface KalturaMarkdownAssetBaseFilterArgs  extends KalturaTextualAttachmentAssetFilterArgs {
     
 }
 
 
-export class KalturaTranscriptAssetBaseFilter extends KalturaTextualAttachmentAssetFilter {
+export class KalturaMarkdownAssetBaseFilter extends KalturaTextualAttachmentAssetFilter {
 
     
 
-    constructor(data? : KalturaTranscriptAssetBaseFilterArgs)
+    constructor(data? : KalturaMarkdownAssetBaseFilterArgs)
     {
         super(data);
     }
@@ -23,11 +23,11 @@ export class KalturaTranscriptAssetBaseFilter extends KalturaTextualAttachmentAs
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaTranscriptAssetBaseFilter' }
+                objectType : { type : 'c', default : 'KalturaMarkdownAssetBaseFilter' }
             }
         );
         return result;
     }
 }
 
-KalturaTypesFactory.registerType('KalturaTranscriptAssetBaseFilter',KalturaTranscriptAssetBaseFilter);
+KalturaTypesFactory.registerType('KalturaMarkdownAssetBaseFilter',KalturaMarkdownAssetBaseFilter);
