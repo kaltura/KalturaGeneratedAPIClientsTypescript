@@ -10,6 +10,7 @@ export interface KalturaQuizVendorTaskDataArgs  extends KalturaLocalizedVendorTa
 	formalStyle? : string;
 	createQuiz? : boolean;
 	quizOutput? : string;
+	instruction? : string;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaQuizVendorTaskData extends KalturaLocalizedVendorTaskData {
 	formalStyle : string;
 	createQuiz : boolean;
 	quizOutput : string;
+	instruction : string;
 
     constructor(data? : KalturaQuizVendorTaskDataArgs)
     {
@@ -39,7 +41,8 @@ export class KalturaQuizVendorTaskData extends KalturaLocalizedVendorTaskData {
 				context : { type : 's' },
 				formalStyle : { type : 's' },
 				createQuiz : { type : 'b' },
-				quizOutput : { type : 's' }
+				quizOutput : { type : 's' },
+				instruction : { type : 's' }
             }
         );
         return result;

@@ -7,6 +7,7 @@ import { KalturaFlavorAsset } from './KalturaFlavorAsset';
 import { KalturaRuleAction } from './KalturaRuleAction';
 import { KalturaAccessControlMessage } from './KalturaAccessControlMessage';
 import { KalturaObject } from './KalturaObject';
+import { KalturaActiveLiveStreamTime } from './KalturaActiveLiveStreamTime';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPlaybackContextArgs  extends KalturaObjectBaseArgs {
@@ -16,6 +17,7 @@ export interface KalturaPlaybackContextArgs  extends KalturaObjectBaseArgs {
 	actions? : KalturaRuleAction[];
 	messages? : KalturaAccessControlMessage[];
 	bumperData? : KalturaObject[];
+	activeLiveStreamTime? : KalturaActiveLiveStreamTime;
 }
 
 
@@ -27,6 +29,7 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 	actions : KalturaRuleAction[];
 	messages : KalturaAccessControlMessage[];
 	bumperData : KalturaObject[];
+	activeLiveStreamTime : KalturaActiveLiveStreamTime;
 
     constructor(data? : KalturaPlaybackContextArgs)
     {
@@ -51,7 +54,8 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 				flavorAssets : { type : 'a', subTypeConstructor : KalturaFlavorAsset, subType : 'KalturaFlavorAsset' },
 				actions : { type : 'a', subTypeConstructor : KalturaRuleAction, subType : 'KalturaRuleAction' },
 				messages : { type : 'a', subTypeConstructor : KalturaAccessControlMessage, subType : 'KalturaAccessControlMessage' },
-				bumperData : { type : 'a', subTypeConstructor : KalturaObject, subType : 'KalturaObject' }
+				bumperData : { type : 'a', subTypeConstructor : KalturaObject, subType : 'KalturaObject' },
+				activeLiveStreamTime : { type : 'o', subTypeConstructor : KalturaActiveLiveStreamTime, subType : 'KalturaActiveLiveStreamTime' }
             }
         );
         return result;
