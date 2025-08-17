@@ -9,6 +9,7 @@ export interface KalturaSummaryVendorTaskDataArgs  extends KalturaLocalizedVendo
     typeOfSummary? : KalturaTypeOfSummaryTaskData;
 	writingStyle? : KalturaSummaryWritingStyleTaskData;
 	summaryOutputJson? : string;
+	instruction? : string;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaSummaryVendorTaskData extends KalturaLocalizedVendorTaskData
     typeOfSummary : KalturaTypeOfSummaryTaskData;
 	writingStyle : KalturaSummaryWritingStyleTaskData;
 	summaryOutputJson : string;
+	instruction : string;
 
     constructor(data? : KalturaSummaryVendorTaskDataArgs)
     {
@@ -32,7 +34,8 @@ export class KalturaSummaryVendorTaskData extends KalturaLocalizedVendorTaskData
                 objectType : { type : 'c', default : 'KalturaSummaryVendorTaskData' },
 				typeOfSummary : { type : 'es', subTypeConstructor : KalturaTypeOfSummaryTaskData, subType : 'KalturaTypeOfSummaryTaskData' },
 				writingStyle : { type : 'es', subTypeConstructor : KalturaSummaryWritingStyleTaskData, subType : 'KalturaSummaryWritingStyleTaskData' },
-				summaryOutputJson : { type : 's' }
+				summaryOutputJson : { type : 's' },
+				instruction : { type : 's' }
             }
         );
         return result;
