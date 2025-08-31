@@ -1,16 +1,19 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaEntryObjectType } from './KalturaEntryObjectType';
 import { KalturaRuleAction, KalturaRuleActionArgs } from './KalturaRuleAction';
 
 export interface KalturaAddEntryVendorTaskActionArgs  extends KalturaRuleActionArgs {
     catalogItemIds? : string;
+	entryObjectType? : KalturaEntryObjectType;
 }
 
 
 export class KalturaAddEntryVendorTaskAction extends KalturaRuleAction {
 
     catalogItemIds : string;
+	entryObjectType : KalturaEntryObjectType;
 
     constructor(data? : KalturaAddEntryVendorTaskActionArgs)
     {
@@ -24,7 +27,8 @@ export class KalturaAddEntryVendorTaskAction extends KalturaRuleAction {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaAddEntryVendorTaskAction' },
-				catalogItemIds : { type : 's' }
+				catalogItemIds : { type : 's' },
+				entryObjectType : { type : 'en', subTypeConstructor : KalturaEntryObjectType, subType : 'KalturaEntryObjectType' }
             }
         );
         return result;
