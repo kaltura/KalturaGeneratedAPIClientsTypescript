@@ -6,12 +6,14 @@ import { KalturaHttpNotificationData, KalturaHttpNotificationDataArgs } from './
 
 export interface KalturaHttpNotificationDataTextArgs  extends KalturaHttpNotificationDataArgs {
     content? : KalturaStringValue;
+	contentType? : string;
 }
 
 
 export class KalturaHttpNotificationDataText extends KalturaHttpNotificationData {
 
     content : KalturaStringValue;
+	contentType : string;
 
     constructor(data? : KalturaHttpNotificationDataTextArgs)
     {
@@ -25,7 +27,8 @@ export class KalturaHttpNotificationDataText extends KalturaHttpNotificationData
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaHttpNotificationDataText' },
-				content : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' }
+				content : { type : 'o', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
+				contentType : { type : 's' }
             }
         );
         return result;

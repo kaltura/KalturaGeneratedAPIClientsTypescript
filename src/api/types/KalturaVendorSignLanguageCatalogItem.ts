@@ -1,17 +1,17 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaCatalogItemSignLanguage } from './KalturaCatalogItemSignLanguage';
+import { KalturaCatalogItemLanguage } from './KalturaCatalogItemLanguage';
 import { KalturaVendorCatalogItem, KalturaVendorCatalogItemArgs } from './KalturaVendorCatalogItem';
 
 export interface KalturaVendorSignLanguageCatalogItemArgs  extends KalturaVendorCatalogItemArgs {
-    targetLanguage? : KalturaCatalogItemSignLanguage;
+    targetLanguage? : KalturaCatalogItemLanguage;
 }
 
 
 export class KalturaVendorSignLanguageCatalogItem extends KalturaVendorCatalogItem {
 
-    targetLanguage : KalturaCatalogItemSignLanguage;
+    targetLanguage : KalturaCatalogItemLanguage;
 
     constructor(data? : KalturaVendorSignLanguageCatalogItemArgs)
     {
@@ -25,7 +25,7 @@ export class KalturaVendorSignLanguageCatalogItem extends KalturaVendorCatalogIt
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaVendorSignLanguageCatalogItem' },
-				targetLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemSignLanguage, subType : 'KalturaCatalogItemSignLanguage' }
+				targetLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' }
             }
         );
         return result;

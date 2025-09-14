@@ -4,13 +4,13 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaHttpNotificationData, KalturaHttpNotificationDataArgs } from './KalturaHttpNotificationData';
 
 export interface KalturaHttpNotificationDataFieldsArgs  extends KalturaHttpNotificationDataArgs {
-    
+    contentType? : string;
 }
 
 
 export class KalturaHttpNotificationDataFields extends KalturaHttpNotificationData {
 
-    
+    contentType : string;
 
     constructor(data? : KalturaHttpNotificationDataFieldsArgs)
     {
@@ -23,7 +23,8 @@ export class KalturaHttpNotificationDataFields extends KalturaHttpNotificationDa
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaHttpNotificationDataFields' }
+                objectType : { type : 'c', default : 'KalturaHttpNotificationDataFields' },
+				contentType : { type : 's' }
             }
         );
         return result;
