@@ -11,6 +11,7 @@ export interface KalturaHttpNotificationObjectDataArgs  extends KalturaHttpNotif
 	ignoreNull? : boolean;
 	code? : string;
 	dataStringReplacements? : KalturaKeyValue[];
+	responseProfileId? : number;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaHttpNotificationObjectData extends KalturaHttpNotificationDa
 	ignoreNull : boolean;
 	code : string;
 	dataStringReplacements : KalturaKeyValue[];
+	responseProfileId : number;
 
     constructor(data? : KalturaHttpNotificationObjectDataArgs)
     {
@@ -39,7 +41,8 @@ export class KalturaHttpNotificationObjectData extends KalturaHttpNotificationDa
 				format : { type : 'en', subTypeConstructor : KalturaResponseType, subType : 'KalturaResponseType' },
 				ignoreNull : { type : 'b' },
 				code : { type : 's' },
-				dataStringReplacements : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				dataStringReplacements : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				responseProfileId : { type : 'n' }
             }
         );
         return result;
