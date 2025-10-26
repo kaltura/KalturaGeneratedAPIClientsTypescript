@@ -8,6 +8,7 @@ export interface KalturaRoomEntryArgs  extends KalturaBaseEntryArgs {
     roomType? : KalturaRoomType;
 	broadcastEntryId? : string;
 	templateRoomEntryId? : string;
+	recordedEntryId? : string;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaRoomEntry extends KalturaBaseEntry {
     roomType : KalturaRoomType;
 	broadcastEntryId : string;
 	templateRoomEntryId : string;
+	recordedEntryId : string;
 
     constructor(data? : KalturaRoomEntryArgs)
     {
@@ -31,7 +33,8 @@ export class KalturaRoomEntry extends KalturaBaseEntry {
                 objectType : { type : 'c', default : 'KalturaRoomEntry' },
 				roomType : { type : 'en', subTypeConstructor : KalturaRoomType, subType : 'KalturaRoomType' },
 				broadcastEntryId : { type : 's' },
-				templateRoomEntryId : { type : 's' }
+				templateRoomEntryId : { type : 's' },
+				recordedEntryId : { type : 's' }
             }
         );
         return result;
