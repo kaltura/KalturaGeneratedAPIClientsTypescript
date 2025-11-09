@@ -2,16 +2,19 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
+import { KalturaLanguage } from './KalturaLanguage';
 import { KalturaSearchItem, KalturaSearchItemArgs } from './KalturaSearchItem';
 
 export interface KalturaEntryCaptionAdvancedFilterArgs  extends KalturaSearchItemArgs {
     hasCaption? : KalturaNullableBoolean;
+	language? : KalturaLanguage;
 }
 
 
 export class KalturaEntryCaptionAdvancedFilter extends KalturaSearchItem {
 
     hasCaption : KalturaNullableBoolean;
+	language : KalturaLanguage;
 
     constructor(data? : KalturaEntryCaptionAdvancedFilterArgs)
     {
@@ -25,7 +28,8 @@ export class KalturaEntryCaptionAdvancedFilter extends KalturaSearchItem {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaEntryCaptionAdvancedFilter' },
-				hasCaption : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				hasCaption : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				language : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' }
             }
         );
         return result;

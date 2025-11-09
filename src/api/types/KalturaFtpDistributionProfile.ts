@@ -20,6 +20,7 @@ export interface KalturaFtpDistributionProfileArgs  extends KalturaConfigurableD
 	flavorAssetFilenameXslt? : string;
 	thumbnailAssetFilenameXslt? : string;
 	assetFilenameXslt? : string;
+	dataContentFilenameXslt? : string;
 	asperaPublicKey? : string;
 	asperaPrivateKey? : string;
 	sendMetadataAfterAssets? : boolean;
@@ -43,6 +44,7 @@ export class KalturaFtpDistributionProfile extends KalturaConfigurableDistributi
 	flavorAssetFilenameXslt : string;
 	thumbnailAssetFilenameXslt : string;
 	assetFilenameXslt : string;
+	dataContentFilenameXslt : string;
 	asperaPublicKey : string;
 	asperaPrivateKey : string;
 	sendMetadataAfterAssets : boolean;
@@ -74,6 +76,7 @@ export class KalturaFtpDistributionProfile extends KalturaConfigurableDistributi
 				flavorAssetFilenameXslt : { type : 's' },
 				thumbnailAssetFilenameXslt : { type : 's' },
 				assetFilenameXslt : { type : 's' },
+				dataContentFilenameXslt : { type : 's' },
 				asperaPublicKey : { type : 's' },
 				asperaPrivateKey : { type : 's' },
 				sendMetadataAfterAssets : { type : 'b' }
