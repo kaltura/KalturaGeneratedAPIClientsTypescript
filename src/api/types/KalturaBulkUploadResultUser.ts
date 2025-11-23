@@ -20,6 +20,7 @@ export interface KalturaBulkUploadResultUserArgs  extends KalturaBulkUploadResul
 	group? : string;
 	externalId? : string;
 	capabilities? : string;
+	groupUserCreationMode? : number;
 }
 
 
@@ -41,6 +42,7 @@ export class KalturaBulkUploadResultUser extends KalturaBulkUploadResult {
 	group : string;
 	externalId : string;
 	capabilities : string;
+	groupUserCreationMode : number;
 
     constructor(data? : KalturaBulkUploadResultUserArgs)
     {
@@ -69,7 +71,8 @@ export class KalturaBulkUploadResultUser extends KalturaBulkUploadResult {
 				lastName : { type : 's' },
 				group : { type : 's' },
 				externalId : { type : 's' },
-				capabilities : { type : 's' }
+				capabilities : { type : 's' },
+				groupUserCreationMode : { type : 'n' }
             }
         );
         return result;

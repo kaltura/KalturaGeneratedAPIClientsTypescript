@@ -2878,6 +2878,7 @@ export { EntryVendorTaskGetServeUrlAction, EntryVendorTaskGetServeUrlActionArgs 
 export { EntryVendorTaskListAction, EntryVendorTaskListActionArgs } from './EntryVendorTaskListAction'
 export { EntryVendorTaskRejectAction, EntryVendorTaskRejectActionArgs } from './EntryVendorTaskRejectAction'
 export { EntryVendorTaskReplaceOutputAction, EntryVendorTaskReplaceOutputActionArgs } from './EntryVendorTaskReplaceOutputAction'
+export { EntryVendorTaskResetAction, EntryVendorTaskResetActionArgs } from './EntryVendorTaskResetAction'
 export { EntryVendorTaskServeAction, EntryVendorTaskServeActionArgs } from './EntryVendorTaskServeAction'
 export { EntryVendorTaskServeCsvAction, EntryVendorTaskServeCsvActionArgs } from './EntryVendorTaskServeCsvAction'
 export { EntryVendorTaskUpdateAction, EntryVendorTaskUpdateActionArgs } from './EntryVendorTaskUpdateAction'
