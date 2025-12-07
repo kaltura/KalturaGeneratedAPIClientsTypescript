@@ -4,6 +4,7 @@ import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaVideoCodec } from './KalturaVideoCodec';
 import { KalturaAudioCodec } from './KalturaAudioCodec';
 import { KalturaContainerFormat } from './KalturaContainerFormat';
+import { KalturaString } from './KalturaString';
 import { KalturaAssetParams, KalturaAssetParamsArgs } from './KalturaAssetParams';
 
 export interface KalturaFlavorParamsArgs  extends KalturaAssetParamsArgs {
@@ -94,10 +95,12 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 	chunkedEncodeMode : number;
 	clipOffset : number;
 	clipDuration : number;
+	readonly audioLanguages : KalturaString[];
 
     constructor(data? : KalturaFlavorParamsArgs)
     {
         super(data);
+        if (typeof this.audioLanguages === 'undefined') this.audioLanguages = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -147,7 +150,8 @@ export class KalturaFlavorParams extends KalturaAssetParams {
 				contentAwareness : { type : 'n' },
 				chunkedEncodeMode : { type : 'n' },
 				clipOffset : { type : 'n' },
-				clipDuration : { type : 'n' }
+				clipDuration : { type : 'n' },
+				audioLanguages : { type : 'a', readOnly : true, subTypeConstructor : KalturaString, subType : 'KalturaString' }
             }
         );
         return result;

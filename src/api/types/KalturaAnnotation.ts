@@ -10,6 +10,7 @@ export interface KalturaAnnotationArgs  extends KalturaCuePointArgs {
 	endTime? : number;
 	isPublic? : KalturaNullableBoolean;
 	searchableOnEntry? : KalturaNullableBoolean;
+	originalCuePointCreateAt? : Date;
 }
 
 
@@ -24,6 +25,7 @@ export class KalturaAnnotation extends KalturaCuePoint {
 	readonly directChildrenCount : number;
 	isPublic : KalturaNullableBoolean;
 	searchableOnEntry : KalturaNullableBoolean;
+	originalCuePointCreateAt : Date;
 
     constructor(data? : KalturaAnnotationArgs)
     {
@@ -45,7 +47,8 @@ export class KalturaAnnotation extends KalturaCuePoint {
 				childrenCount : { type : 'n', readOnly : true },
 				directChildrenCount : { type : 'n', readOnly : true },
 				isPublic : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				searchableOnEntry : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				searchableOnEntry : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				originalCuePointCreateAt : { type : 'd' }
             }
         );
         return result;

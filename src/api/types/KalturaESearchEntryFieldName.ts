@@ -17,6 +17,7 @@ export enum KalturaESearchEntryFieldName {
 	entitledUserView = 'entitled_kusers_view',
 	entryType = 'entry_type',
 	externalSourceType = 'external_source_type',
+	flavorParamsIds = 'flavor_params_ids',
 	id = 'id',
 	isLive = 'is_live',
 	isQuiz = 'is_quiz',
