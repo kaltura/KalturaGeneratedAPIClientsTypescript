@@ -2,10 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
+import { KalturaVendorCatalogItemFilter } from './KalturaVendorCatalogItemFilter';
 import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-request';
 
 export interface VendorCatalogItemServeActionArgs  extends KalturaFileRequestArgs {
     vendorPartnerId? : number;
+	filter? : KalturaVendorCatalogItemFilter;
 }
 
 /**
@@ -21,6 +23,7 @@ export interface VendorCatalogItemServeActionArgs  extends KalturaFileRequestArg
 export class VendorCatalogItemServeAction extends KalturaFileRequest {
 
     vendorPartnerId : number;
+	filter : KalturaVendorCatalogItemFilter;
 
     constructor(data? : VendorCatalogItemServeActionArgs)
     {
@@ -35,7 +38,8 @@ export class VendorCatalogItemServeAction extends KalturaFileRequest {
             {
                 service : { type : 'c', default : 'reach_vendorcatalogitem' },
 				action : { type : 'c', default : 'serve' },
-				vendorPartnerId : { type : 'n' }
+				vendorPartnerId : { type : 'n' },
+				filter : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemFilter, subType : 'KalturaVendorCatalogItemFilter' }
             }
         );
         return result;

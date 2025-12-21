@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaESearchOrderBy } from './KalturaESearchOrderBy';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
+import { KalturaESearchScoreFunctionParams } from './KalturaESearchScoreFunctionParams';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaESearchParamsArgs  extends KalturaObjectBaseArgs {
@@ -12,6 +13,7 @@ export interface KalturaESearchParamsArgs  extends KalturaObjectBaseArgs {
 	ignoreSynonym? : boolean;
 	objectIds? : string;
 	objectIdsNotIn? : KalturaNullableBoolean;
+	scoreFunctionParams? : KalturaESearchScoreFunctionParams;
 }
 
 
@@ -23,6 +25,7 @@ export class KalturaESearchParams extends KalturaObjectBase {
 	ignoreSynonym : boolean;
 	objectIds : string;
 	objectIdsNotIn : KalturaNullableBoolean;
+	scoreFunctionParams : KalturaESearchScoreFunctionParams;
 
     constructor(data? : KalturaESearchParamsArgs)
     {
@@ -41,7 +44,8 @@ export class KalturaESearchParams extends KalturaObjectBase {
 				orderBy : { type : 'o', subTypeConstructor : KalturaESearchOrderBy, subType : 'KalturaESearchOrderBy' },
 				ignoreSynonym : { type : 'b' },
 				objectIds : { type : 's' },
-				objectIdsNotIn : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				objectIdsNotIn : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				scoreFunctionParams : { type : 'o', subTypeConstructor : KalturaESearchScoreFunctionParams, subType : 'KalturaESearchScoreFunctionParams' }
             }
         );
         return result;
