@@ -8,6 +8,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaUserEntryArgs  extends KalturaObjectBaseArgs {
     entryId? : string;
 	userId? : string;
+	status? : KalturaUserEntryStatus;
 }
 
 
@@ -17,7 +18,7 @@ export class KalturaUserEntry extends KalturaObjectBase {
 	entryId : string;
 	userId : string;
 	readonly partnerId : number;
-	readonly status : KalturaUserEntryStatus;
+	status : KalturaUserEntryStatus;
 	readonly createdAt : Date;
 	readonly updatedAt : Date;
 	readonly type : KalturaUserEntryType;
@@ -38,7 +39,7 @@ export class KalturaUserEntry extends KalturaObjectBase {
 				entryId : { type : 's' },
 				userId : { type : 's' },
 				partnerId : { type : 'n', readOnly : true },
-				status : { type : 'es', readOnly : true, subTypeConstructor : KalturaUserEntryStatus, subType : 'KalturaUserEntryStatus' },
+				status : { type : 'es', subTypeConstructor : KalturaUserEntryStatus, subType : 'KalturaUserEntryStatus' },
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
 				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaUserEntryType, subType : 'KalturaUserEntryType' }

@@ -74,6 +74,7 @@ export enum KalturaBatchJobType {
 	syncCategoryPrivacyContext = '39',
 	syncReachCreditTask = 'reach.SyncReachCreditTask',
 	tagResolve = 'tagSearch.TagResolve',
+	updateUserEntries = '58',
 	usersCsv = '46',
 	validateLiveMediaServers = '38',
 	virusScan = 'virusScan.VirusScan',

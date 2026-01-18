@@ -775,6 +775,7 @@ export { KalturaUiConfBaseFilter, KalturaUiConfBaseFilterArgs } from './KalturaU
 export { KalturaUiConfListResponse, KalturaUiConfListResponseArgs } from './KalturaUiConfListResponse'
 export { KalturaUnicornDistributionProvider, KalturaUnicornDistributionProviderArgs } from './KalturaUnicornDistributionProvider'
 export { KalturaUnlimitedVendorCredit, KalturaUnlimitedVendorCreditArgs } from './KalturaUnlimitedVendorCredit'
+export { KalturaUpdateUserEntriesData, KalturaUpdateUserEntriesDataArgs } from './KalturaUpdateUserEntriesData'
 export { KalturaUploadTokenBaseFilter, KalturaUploadTokenBaseFilterArgs } from './KalturaUploadTokenBaseFilter'
 export { KalturaUploadTokenListResponse, KalturaUploadTokenListResponseArgs } from './KalturaUploadTokenListResponse'
 export { KalturaUrlAuthenticationParamsCondition, KalturaUrlAuthenticationParamsConditionArgs } from './KalturaUrlAuthenticationParamsCondition'
