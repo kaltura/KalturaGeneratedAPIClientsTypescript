@@ -17,6 +17,7 @@ export enum KalturaVendorServiceFeature {
 	quiz=12,
 	sentimentAnalysis=17,
 	signLanguage=19,
+	speechToVideo=20,
 	summary=13,
 	translation=2,
 	videoAnalysis=14
