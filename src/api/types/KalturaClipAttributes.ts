@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEffect } from './KalturaEffect';
 import { KalturaCaptionAttributes } from './KalturaCaptionAttributes';
+import { KalturaMediaCompositionAttributes } from './KalturaMediaCompositionAttributes';
 import { KalturaOperationAttributes, KalturaOperationAttributesArgs } from './KalturaOperationAttributes';
 
 export interface KalturaClipAttributesArgs  extends KalturaOperationAttributesArgs {
@@ -12,6 +13,7 @@ export interface KalturaClipAttributesArgs  extends KalturaOperationAttributesAr
 	effectArray? : KalturaEffect[];
 	cropAlignment? : number;
 	captionAttributes? : KalturaCaptionAttributes[];
+	mediaCompositionAttributesArray? : KalturaMediaCompositionAttributes[];
 }
 
 
@@ -23,12 +25,14 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
 	effectArray : KalturaEffect[];
 	cropAlignment : number;
 	captionAttributes : KalturaCaptionAttributes[];
+	mediaCompositionAttributesArray : KalturaMediaCompositionAttributes[];
 
     constructor(data? : KalturaClipAttributesArgs)
     {
         super(data);
         if (typeof this.effectArray === 'undefined') this.effectArray = [];
 		if (typeof this.captionAttributes === 'undefined') this.captionAttributes = [];
+		if (typeof this.mediaCompositionAttributesArray === 'undefined') this.mediaCompositionAttributesArray = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -43,7 +47,8 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
 				globalOffsetInDestination : { type : 'n' },
 				effectArray : { type : 'a', subTypeConstructor : KalturaEffect, subType : 'KalturaEffect' },
 				cropAlignment : { type : 'n' },
-				captionAttributes : { type : 'a', subTypeConstructor : KalturaCaptionAttributes, subType : 'KalturaCaptionAttributes' }
+				captionAttributes : { type : 'a', subTypeConstructor : KalturaCaptionAttributes, subType : 'KalturaCaptionAttributes' },
+				mediaCompositionAttributesArray : { type : 'a', subTypeConstructor : KalturaMediaCompositionAttributes, subType : 'KalturaMediaCompositionAttributes' }
             }
         );
         return result;

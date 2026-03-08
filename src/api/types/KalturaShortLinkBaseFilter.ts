@@ -21,6 +21,7 @@ export interface KalturaShortLinkBaseFilterArgs  extends KalturaFilterArgs {
 	systemNameIn? : string;
 	statusEqual? : KalturaShortLinkStatus;
 	statusIn? : string;
+	uniqueIdEqual? : string;
 }
 
 
@@ -42,6 +43,7 @@ export class KalturaShortLinkBaseFilter extends KalturaFilter {
 	systemNameIn : string;
 	statusEqual : KalturaShortLinkStatus;
 	statusIn : string;
+	uniqueIdEqual : string;
 
     constructor(data? : KalturaShortLinkBaseFilterArgs)
     {
@@ -70,7 +72,8 @@ export class KalturaShortLinkBaseFilter extends KalturaFilter {
 				systemNameEqual : { type : 's' },
 				systemNameIn : { type : 's' },
 				statusEqual : { type : 'en', subTypeConstructor : KalturaShortLinkStatus, subType : 'KalturaShortLinkStatus' },
-				statusIn : { type : 's' }
+				statusIn : { type : 's' },
+				uniqueIdEqual : { type : 's' }
             }
         );
         return result;

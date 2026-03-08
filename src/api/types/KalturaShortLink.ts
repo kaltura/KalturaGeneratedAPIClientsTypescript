@@ -10,6 +10,7 @@ export interface KalturaShortLinkArgs  extends KalturaObjectBaseArgs {
 	name? : string;
 	systemName? : string;
 	fullUrl? : string;
+	uniqueId? : string;
 	status? : KalturaShortLinkStatus;
 }
 
@@ -25,6 +26,7 @@ export class KalturaShortLink extends KalturaObjectBase {
 	name : string;
 	systemName : string;
 	fullUrl : string;
+	uniqueId : string;
 	status : KalturaShortLinkStatus;
 
     constructor(data? : KalturaShortLinkArgs)
@@ -48,6 +50,7 @@ export class KalturaShortLink extends KalturaObjectBase {
 				name : { type : 's' },
 				systemName : { type : 's' },
 				fullUrl : { type : 's' },
+				uniqueId : { type : 's' },
 				status : { type : 'en', subTypeConstructor : KalturaShortLinkStatus, subType : 'KalturaShortLinkStatus' }
             }
         );

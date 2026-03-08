@@ -62,7 +62,6 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	readonly serviceFeature : KalturaVendorServiceFeature;
 	readonly turnAroundTime : KalturaVendorServiceTurnAroundTime;
 	externalTaskId : string;
-	readonly isPayPerUse : boolean;
 
     constructor(data? : KalturaEntryVendorTaskArgs)
     {
@@ -107,8 +106,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				serviceType : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceType, subType : 'KalturaVendorServiceType' },
 				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' },
 				turnAroundTime : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceTurnAroundTime, subType : 'KalturaVendorServiceTurnAroundTime' },
-				externalTaskId : { type : 's' },
-				isPayPerUse : { type : 'b', readOnly : true }
+				externalTaskId : { type : 's' }
             }
         );
         return result;

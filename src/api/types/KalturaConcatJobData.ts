@@ -2,10 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaString } from './KalturaString';
+import { KalturaStringArrayObject } from './KalturaStringArrayObject';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaConcatJobDataArgs  extends KalturaJobDataArgs {
     srcFiles? : KalturaString[];
+	inputFiles? : KalturaStringArrayObject[];
 	destFilePath? : string;
 	flavorAssetId? : string;
 	offset? : number;
@@ -20,6 +22,7 @@ export interface KalturaConcatJobDataArgs  extends KalturaJobDataArgs {
 export class KalturaConcatJobData extends KalturaJobData {
 
     srcFiles : KalturaString[];
+	inputFiles : KalturaStringArrayObject[];
 	destFilePath : string;
 	flavorAssetId : string;
 	offset : number;
@@ -33,6 +36,7 @@ export class KalturaConcatJobData extends KalturaJobData {
     {
         super(data);
         if (typeof this.srcFiles === 'undefined') this.srcFiles = [];
+		if (typeof this.inputFiles === 'undefined') this.inputFiles = [];
 		if (typeof this.conversionCommands === 'undefined') this.conversionCommands = [];
     }
 
@@ -44,6 +48,7 @@ export class KalturaConcatJobData extends KalturaJobData {
             {
                 objectType : { type : 'c', default : 'KalturaConcatJobData' },
 				srcFiles : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				inputFiles : { type : 'a', subTypeConstructor : KalturaStringArrayObject, subType : 'KalturaStringArrayObject' },
 				destFilePath : { type : 's' },
 				flavorAssetId : { type : 's' },
 				offset : { type : 'n' },
