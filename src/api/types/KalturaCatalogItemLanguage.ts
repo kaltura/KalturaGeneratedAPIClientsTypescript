@@ -3,6 +3,9 @@
 export enum KalturaCatalogItemLanguage {
     af = 'Afrikaans',
 	ar = 'Arabic',
+	arLb = 'Arabic (Lebanon)',
+	arQa = 'Arabic (Qatar)',
+	arSa = 'Arabic (Saudi Arabia)',
 	autoDetect = 'Auto Detect',
 	az = 'Azerbaijani',
 	ba = 'Bashkir',
