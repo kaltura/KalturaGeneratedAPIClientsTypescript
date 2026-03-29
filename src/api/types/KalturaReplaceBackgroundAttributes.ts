@@ -2,16 +2,23 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaContentResource } from './KalturaContentResource';
+import { KalturaPosition } from './KalturaPosition';
 import { KalturaMediaCompositionAttributes, KalturaMediaCompositionAttributesArgs } from './KalturaMediaCompositionAttributes';
 
 export interface KalturaReplaceBackgroundAttributesArgs  extends KalturaMediaCompositionAttributesArgs {
     resource? : KalturaContentResource;
+	backgroundColorCode? : string;
+	foregroundScalePercentage? : number;
+	foregroundPositionPercentage? : KalturaPosition;
 }
 
 
 export class KalturaReplaceBackgroundAttributes extends KalturaMediaCompositionAttributes {
 
     resource : KalturaContentResource;
+	backgroundColorCode : string;
+	foregroundScalePercentage : number;
+	foregroundPositionPercentage : KalturaPosition;
 
     constructor(data? : KalturaReplaceBackgroundAttributesArgs)
     {
@@ -25,7 +32,10 @@ export class KalturaReplaceBackgroundAttributes extends KalturaMediaCompositionA
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaReplaceBackgroundAttributes' },
-				resource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' }
+				resource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' },
+				backgroundColorCode : { type : 's' },
+				foregroundScalePercentage : { type : 'n' },
+				foregroundPositionPercentage : { type : 'o', subTypeConstructor : KalturaPosition, subType : 'KalturaPosition' }
             }
         );
         return result;

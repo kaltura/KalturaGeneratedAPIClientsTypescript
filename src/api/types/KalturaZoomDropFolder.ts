@@ -6,6 +6,7 @@ import { KalturaDropFolder, KalturaDropFolderArgs } from './KalturaDropFolder';
 
 export interface KalturaZoomDropFolderArgs  extends KalturaDropFolderArgs {
     lastHandledMeetingTime? : Date;
+	fileProcessingGracePeriod? : number;
 }
 
 
@@ -14,6 +15,7 @@ export class KalturaZoomDropFolder extends KalturaDropFolder {
     readonly zoomVendorIntegrationId : number;
 	readonly zoomVendorIntegration : KalturaZoomIntegrationSetting;
 	lastHandledMeetingTime : Date;
+	fileProcessingGracePeriod : number;
 
     constructor(data? : KalturaZoomDropFolderArgs)
     {
@@ -29,7 +31,8 @@ export class KalturaZoomDropFolder extends KalturaDropFolder {
                 objectType : { type : 'c', default : 'KalturaZoomDropFolder' },
 				zoomVendorIntegrationId : { type : 'n', readOnly : true },
 				zoomVendorIntegration : { type : 'o', readOnly : true, subTypeConstructor : KalturaZoomIntegrationSetting, subType : 'KalturaZoomIntegrationSetting' },
-				lastHandledMeetingTime : { type : 'd' }
+				lastHandledMeetingTime : { type : 'd' },
+				fileProcessingGracePeriod : { type : 'n' }
             }
         );
         return result;

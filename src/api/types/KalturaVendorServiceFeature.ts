@@ -9,6 +9,8 @@ export enum KalturaVendorServiceFeature {
 	documentEnrichment=18,
 	dubbing=7,
 	extendedAudioDescription=9,
+	immersiveAgentCall=21,
+	immersiveAgentChat=22,
 	intelligentTagging=6,
 	liveCaption=8,
 	liveTranslation=11,
