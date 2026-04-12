@@ -3,6 +3,7 @@
 export enum KalturaVendorServiceFeature {
     alignment=3,
 	audioDescription=4,
+	avatarVod=23,
 	captions=1,
 	chaptering=5,
 	clips=10,

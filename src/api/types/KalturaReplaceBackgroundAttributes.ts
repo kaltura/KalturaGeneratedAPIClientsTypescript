@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaContentResource } from './KalturaContentResource';
 import { KalturaPosition } from './KalturaPosition';
+import { KalturaAudioAttributes } from './KalturaAudioAttributes';
 import { KalturaMediaCompositionAttributes, KalturaMediaCompositionAttributesArgs } from './KalturaMediaCompositionAttributes';
 
 export interface KalturaReplaceBackgroundAttributesArgs  extends KalturaMediaCompositionAttributesArgs {
@@ -10,6 +11,7 @@ export interface KalturaReplaceBackgroundAttributesArgs  extends KalturaMediaCom
 	backgroundColorCode? : string;
 	foregroundScalePercentage? : number;
 	foregroundPositionPercentage? : KalturaPosition;
+	audioAttributes? : KalturaAudioAttributes;
 }
 
 
@@ -19,6 +21,7 @@ export class KalturaReplaceBackgroundAttributes extends KalturaMediaCompositionA
 	backgroundColorCode : string;
 	foregroundScalePercentage : number;
 	foregroundPositionPercentage : KalturaPosition;
+	audioAttributes : KalturaAudioAttributes;
 
     constructor(data? : KalturaReplaceBackgroundAttributesArgs)
     {
@@ -35,7 +38,8 @@ export class KalturaReplaceBackgroundAttributes extends KalturaMediaCompositionA
 				resource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' },
 				backgroundColorCode : { type : 's' },
 				foregroundScalePercentage : { type : 'n' },
-				foregroundPositionPercentage : { type : 'o', subTypeConstructor : KalturaPosition, subType : 'KalturaPosition' }
+				foregroundPositionPercentage : { type : 'o', subTypeConstructor : KalturaPosition, subType : 'KalturaPosition' },
+				audioAttributes : { type : 'o', subTypeConstructor : KalturaAudioAttributes, subType : 'KalturaAudioAttributes' }
             }
         );
         return result;
