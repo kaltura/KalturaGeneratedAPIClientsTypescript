@@ -59,6 +59,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	agentIdIn? : string;
 	genieIdIn? : string;
 	reachProfileIdIn? : string;
+	isPreview? : boolean;
 }
 
 
@@ -117,6 +118,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	agentIdIn : string;
 	genieIdIn : string;
 	reachProfileIdIn : string;
+	isPreview : boolean;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -182,7 +184,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				videoCodecIn : { type : 's' },
 				agentIdIn : { type : 's' },
 				genieIdIn : { type : 's' },
-				reachProfileIdIn : { type : 's' }
+				reachProfileIdIn : { type : 's' },
+				isPreview : { type : 'b' }
             }
         );
         return result;

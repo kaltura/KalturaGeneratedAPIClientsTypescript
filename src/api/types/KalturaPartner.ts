@@ -60,6 +60,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	eventPlatformAllowedTemplates? : string;
 	customAnalyticsDomain? : string;
 	allowedEmailDomainsForAdmins? : string;
+	externalIdentifier? : string;
 }
 
 
@@ -151,6 +152,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly recycleBinRetentionPeriod : number;
 	customAnalyticsDomain : string;
 	allowedEmailDomainsForAdmins : string;
+	externalIdentifier : string;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -254,7 +256,8 @@ export class KalturaPartner extends KalturaObjectBase {
 				verticalClassificationId : { type : 'n', readOnly : true },
 				recycleBinRetentionPeriod : { type : 'n', readOnly : true },
 				customAnalyticsDomain : { type : 's' },
-				allowedEmailDomainsForAdmins : { type : 's' }
+				allowedEmailDomainsForAdmins : { type : 's' },
+				externalIdentifier : { type : 's' }
             }
         );
         return result;

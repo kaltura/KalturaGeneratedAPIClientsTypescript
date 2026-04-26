@@ -30,6 +30,7 @@ export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
 	contentDeletionPolicy? : KalturaReachProfileContentDeletionPolicy;
 	rules? : KalturaRule[];
 	credit? : KalturaBaseVendorCredit;
+	usedCredit? : number;
 	dictionaries? : KalturaDictionary[];
 	flavorParamsIds? : string;
 	vendorTaskProcessingRegion? : KalturaVendorTaskProcessingRegion;
@@ -60,7 +61,7 @@ export class KalturaReachProfile extends KalturaObjectBase {
 	contentDeletionPolicy : KalturaReachProfileContentDeletionPolicy;
 	rules : KalturaRule[];
 	credit : KalturaBaseVendorCredit;
-	readonly usedCredit : number;
+	usedCredit : number;
 	dictionaries : KalturaDictionary[];
 	flavorParamsIds : string;
 	vendorTaskProcessingRegion : KalturaVendorTaskProcessingRegion;
@@ -101,7 +102,7 @@ export class KalturaReachProfile extends KalturaObjectBase {
 				contentDeletionPolicy : { type : 'en', subTypeConstructor : KalturaReachProfileContentDeletionPolicy, subType : 'KalturaReachProfileContentDeletionPolicy' },
 				rules : { type : 'a', subTypeConstructor : KalturaRule, subType : 'KalturaRule' },
 				credit : { type : 'o', subTypeConstructor : KalturaBaseVendorCredit, subType : 'KalturaBaseVendorCredit' },
-				usedCredit : { type : 'n', readOnly : true },
+				usedCredit : { type : 'n' },
 				dictionaries : { type : 'a', subTypeConstructor : KalturaDictionary, subType : 'KalturaDictionary' },
 				flavorParamsIds : { type : 's' },
 				vendorTaskProcessingRegion : { type : 'en', subTypeConstructor : KalturaVendorTaskProcessingRegion, subType : 'KalturaVendorTaskProcessingRegion' }
