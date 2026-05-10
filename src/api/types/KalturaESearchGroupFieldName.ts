@@ -19,6 +19,7 @@ export enum KalturaESearchGroupFieldName {
 	screenName = 'screen_name',
 	tags = 'tags',
 	title = 'title',
+	type = 'user_type',
 	updatedAt = 'updated_at',
 	userId = 'user_id'
 }

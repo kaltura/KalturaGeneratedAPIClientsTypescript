@@ -46,6 +46,7 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 	streamName : string;
 	streamUrl : string;
 	hlsStreamUrl : string;
+	readonly readyForDeletion : boolean;
 	urlManager : string;
 	encodingIP1 : string;
 	encodingIP2 : string;
@@ -85,6 +86,7 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 				streamName : { type : 's' },
 				streamUrl : { type : 's' },
 				hlsStreamUrl : { type : 's' },
+				readyForDeletion : { type : 'b', readOnly : true },
 				urlManager : { type : 's' },
 				encodingIP1 : { type : 's' },
 				encodingIP2 : { type : 's' },
