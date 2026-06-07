@@ -25,6 +25,7 @@ export enum KalturaReportType {
 	documentEntryMapOverlayCountry = '71',
 	documentEntryMapOverlayRegion = '72',
 	documentEntryPlatforms = '74',
+	documentEntryUserEngagement = '76',
 	engagementBreakdownWebcast = '40010',
 	engagementToolsWebcast = '40012',
 	engagementWebcast = '40002',

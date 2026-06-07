@@ -2,6 +2,8 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaContentResource } from './KalturaContentResource';
+import { KalturaDimensionsPercentage } from './KalturaDimensionsPercentage';
+import { KalturaOverlayScaleAttribute } from './KalturaOverlayScaleAttribute';
 import { KalturaMediaCompositionAlignment } from './KalturaMediaCompositionAlignment';
 import { KalturaOverlayShape } from './KalturaOverlayShape';
 import { KalturaAudioAttributes } from './KalturaAudioAttributes';
@@ -10,8 +12,8 @@ import { KalturaMediaCompositionAttributes, KalturaMediaCompositionAttributesArg
 export interface KalturaOverlayAttributesArgs  extends KalturaMediaCompositionAttributesArgs {
     resource? : KalturaContentResource;
 	resourceMediaCompositionAttributesArray? : KalturaMediaCompositionAttributes[];
-	marginsPercentage? : number;
-	overlayScalePercentage? : number;
+	marginsPercentage? : KalturaDimensionsPercentage;
+	overlayScaleAttribute? : KalturaOverlayScaleAttribute;
 	overlayPlacement? : KalturaMediaCompositionAlignment;
 	overlayShape? : KalturaOverlayShape;
 	audioAttributes? : KalturaAudioAttributes;
@@ -22,8 +24,8 @@ export class KalturaOverlayAttributes extends KalturaMediaCompositionAttributes 
 
     resource : KalturaContentResource;
 	resourceMediaCompositionAttributesArray : KalturaMediaCompositionAttributes[];
-	marginsPercentage : number;
-	overlayScalePercentage : number;
+	marginsPercentage : KalturaDimensionsPercentage;
+	overlayScaleAttribute : KalturaOverlayScaleAttribute;
 	overlayPlacement : KalturaMediaCompositionAlignment;
 	overlayShape : KalturaOverlayShape;
 	audioAttributes : KalturaAudioAttributes;
@@ -43,8 +45,8 @@ export class KalturaOverlayAttributes extends KalturaMediaCompositionAttributes 
                 objectType : { type : 'c', default : 'KalturaOverlayAttributes' },
 				resource : { type : 'o', subTypeConstructor : KalturaContentResource, subType : 'KalturaContentResource' },
 				resourceMediaCompositionAttributesArray : { type : 'a', subTypeConstructor : KalturaMediaCompositionAttributes, subType : 'KalturaMediaCompositionAttributes' },
-				marginsPercentage : { type : 'n' },
-				overlayScalePercentage : { type : 'n' },
+				marginsPercentage : { type : 'o', subTypeConstructor : KalturaDimensionsPercentage, subType : 'KalturaDimensionsPercentage' },
+				overlayScaleAttribute : { type : 'o', subTypeConstructor : KalturaOverlayScaleAttribute, subType : 'KalturaOverlayScaleAttribute' },
 				overlayPlacement : { type : 'en', subTypeConstructor : KalturaMediaCompositionAlignment, subType : 'KalturaMediaCompositionAlignment' },
 				overlayShape : { type : 'en', subTypeConstructor : KalturaOverlayShape, subType : 'KalturaOverlayShape' },
 				audioAttributes : { type : 'o', subTypeConstructor : KalturaAudioAttributes, subType : 'KalturaAudioAttributes' }
