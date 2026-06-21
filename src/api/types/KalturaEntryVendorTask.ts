@@ -3,6 +3,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaEntryVendorTaskStatus } from './KalturaEntryVendorTaskStatus';
 import { KalturaEntryObjectType } from './KalturaEntryObjectType';
+import { KalturaEntryVendorTaskUnit } from './KalturaEntryVendorTaskUnit';
 import { KalturaEntryVendorTaskCreationMode } from './KalturaEntryVendorTaskCreationMode';
 import { KalturaVendorTaskData } from './KalturaVendorTaskData';
 import { KalturaVendorServiceType } from './KalturaVendorServiceType';
@@ -17,6 +18,7 @@ export interface KalturaEntryVendorTaskArgs  extends KalturaObjectBaseArgs {
 	catalogItemId? : number;
 	entryObjectType? : KalturaEntryObjectType;
 	unitsUsed? : number;
+	unitsUsedArray? : KalturaEntryVendorTaskUnit[];
 	errDescription? : string;
 	notes? : string;
 	context? : string;
@@ -46,6 +48,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	readonly userId : string;
 	entryObjectType : KalturaEntryObjectType;
 	unitsUsed : number;
+	unitsUsedArray : KalturaEntryVendorTaskUnit[];
 	readonly moderatingUser : string;
 	errDescription : string;
 	readonly accessKey : string;
@@ -68,6 +71,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
     constructor(data? : KalturaEntryVendorTaskArgs)
     {
         super(data);
+        if (typeof this.unitsUsedArray === 'undefined') this.unitsUsedArray = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -92,6 +96,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				userId : { type : 's', readOnly : true },
 				entryObjectType : { type : 'en', subTypeConstructor : KalturaEntryObjectType, subType : 'KalturaEntryObjectType' },
 				unitsUsed : { type : 'n' },
+				unitsUsedArray : { type : 'a', subTypeConstructor : KalturaEntryVendorTaskUnit, subType : 'KalturaEntryVendorTaskUnit' },
 				moderatingUser : { type : 's', readOnly : true },
 				errDescription : { type : 's' },
 				accessKey : { type : 's', readOnly : true },
