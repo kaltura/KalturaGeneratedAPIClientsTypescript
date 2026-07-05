@@ -34,6 +34,7 @@ export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
 	dictionaries? : KalturaDictionary[];
 	flavorParamsIds? : string;
 	vendorTaskProcessingRegion? : KalturaVendorTaskProcessingRegion;
+	allowedCatalogItemIds? : string;
 }
 
 
@@ -65,6 +66,7 @@ export class KalturaReachProfile extends KalturaObjectBase {
 	dictionaries : KalturaDictionary[];
 	flavorParamsIds : string;
 	vendorTaskProcessingRegion : KalturaVendorTaskProcessingRegion;
+	allowedCatalogItemIds : string;
 
     constructor(data? : KalturaReachProfileArgs)
     {
@@ -105,7 +107,8 @@ export class KalturaReachProfile extends KalturaObjectBase {
 				usedCredit : { type : 'n' },
 				dictionaries : { type : 'a', subTypeConstructor : KalturaDictionary, subType : 'KalturaDictionary' },
 				flavorParamsIds : { type : 's' },
-				vendorTaskProcessingRegion : { type : 'en', subTypeConstructor : KalturaVendorTaskProcessingRegion, subType : 'KalturaVendorTaskProcessingRegion' }
+				vendorTaskProcessingRegion : { type : 'en', subTypeConstructor : KalturaVendorTaskProcessingRegion, subType : 'KalturaVendorTaskProcessingRegion' },
+				allowedCatalogItemIds : { type : 's' }
             }
         );
         return result;
