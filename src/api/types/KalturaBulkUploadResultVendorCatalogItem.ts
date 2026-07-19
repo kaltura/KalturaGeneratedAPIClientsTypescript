@@ -8,6 +8,7 @@ import { KalturaCatalogItemLanguage } from './KalturaCatalogItemLanguage';
 import { KalturaVendorCatalogItemOutputFormat } from './KalturaVendorCatalogItemOutputFormat';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaVendorCatalogItemPricing } from './KalturaVendorCatalogItemPricing';
+import { KalturaVendorCatalogItemUnitPricing } from './KalturaVendorCatalogItemUnitPricing';
 import { KalturaBulkUploadResult, KalturaBulkUploadResultArgs } from './KalturaBulkUploadResult';
 
 export interface KalturaBulkUploadResultVendorCatalogItemArgs  extends KalturaBulkUploadResultArgs {
@@ -24,6 +25,7 @@ export interface KalturaBulkUploadResultVendorCatalogItemArgs  extends KalturaBu
 	enableSpeakerId? : KalturaNullableBoolean;
 	fixedPriceAddons? : number;
 	pricing? : KalturaVendorCatalogItemPricing;
+	pricingArray? : KalturaVendorCatalogItemUnitPricing[];
 	flavorParamsId? : number;
 	clearAudioFlavorParamsId? : number;
 }
@@ -44,12 +46,14 @@ export class KalturaBulkUploadResultVendorCatalogItem extends KalturaBulkUploadR
 	enableSpeakerId : KalturaNullableBoolean;
 	fixedPriceAddons : number;
 	pricing : KalturaVendorCatalogItemPricing;
+	pricingArray : KalturaVendorCatalogItemUnitPricing[];
 	flavorParamsId : number;
 	clearAudioFlavorParamsId : number;
 
     constructor(data? : KalturaBulkUploadResultVendorCatalogItemArgs)
     {
         super(data);
+        if (typeof this.pricingArray === 'undefined') this.pricingArray = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -72,6 +76,7 @@ export class KalturaBulkUploadResultVendorCatalogItem extends KalturaBulkUploadR
 				enableSpeakerId : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				fixedPriceAddons : { type : 'n' },
 				pricing : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemPricing, subType : 'KalturaVendorCatalogItemPricing' },
+				pricingArray : { type : 'a', subTypeConstructor : KalturaVendorCatalogItemUnitPricing, subType : 'KalturaVendorCatalogItemUnitPricing' },
 				flavorParamsId : { type : 'n' },
 				clearAudioFlavorParamsId : { type : 'n' }
             }

@@ -12,6 +12,7 @@ import { KalturaESearchLanguageItem } from './KalturaESearchLanguageItem';
 import { KalturaPartnerAuthenticationType } from './KalturaPartnerAuthenticationType';
 import { KalturaRegexItem } from './KalturaRegexItem';
 import { KalturaTwoFactorAuthenticationMode } from './KalturaTwoFactorAuthenticationMode';
+import { KalturaHTMLPurifierBehaviourType } from './KalturaHTMLPurifierBehaviourType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
@@ -61,6 +62,10 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	customAnalyticsDomain? : string;
 	allowedEmailDomainsForAdmins? : string;
 	externalIdentifier? : string;
+	htmlPurifierBehaviour? : KalturaHTMLPurifierBehaviourType;
+	htmlPurifierBaseListUsage? : boolean;
+	purifyImageContent? : boolean;
+	fileTypeRestrictionEnabled? : boolean;
 }
 
 
@@ -153,6 +158,10 @@ export class KalturaPartner extends KalturaObjectBase {
 	customAnalyticsDomain : string;
 	allowedEmailDomainsForAdmins : string;
 	externalIdentifier : string;
+	htmlPurifierBehaviour : KalturaHTMLPurifierBehaviourType;
+	htmlPurifierBaseListUsage : boolean;
+	purifyImageContent : boolean;
+	fileTypeRestrictionEnabled : boolean;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -257,7 +266,11 @@ export class KalturaPartner extends KalturaObjectBase {
 				recycleBinRetentionPeriod : { type : 'n', readOnly : true },
 				customAnalyticsDomain : { type : 's' },
 				allowedEmailDomainsForAdmins : { type : 's' },
-				externalIdentifier : { type : 's' }
+				externalIdentifier : { type : 's' },
+				htmlPurifierBehaviour : { type : 'es', subTypeConstructor : KalturaHTMLPurifierBehaviourType, subType : 'KalturaHTMLPurifierBehaviourType' },
+				htmlPurifierBaseListUsage : { type : 'b' },
+				purifyImageContent : { type : 'b' },
+				fileTypeRestrictionEnabled : { type : 'b' }
             }
         );
         return result;
