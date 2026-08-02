@@ -1,7 +1,8 @@
 
 
 export enum KalturaESearchGroupFieldName {
-    capabilities = 'capabilities',
+    adminTags = 'admin_tags',
+	capabilities = 'capabilities',
 	company = 'company',
 	country = 'country',
 	createdAt = 'created_at',

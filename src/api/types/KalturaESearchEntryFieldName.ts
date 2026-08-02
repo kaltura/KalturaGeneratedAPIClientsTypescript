@@ -21,6 +21,7 @@ export enum KalturaESearchEntryFieldName {
 	id = 'id',
 	isLive = 'is_live',
 	isQuiz = 'is_quiz',
+	isScheduled = 'is_scheduled',
 	lastPlayedAt = 'last_played_at',
 	lengthInMsecs = 'length_in_msecs',
 	mediaType = 'media_type',
