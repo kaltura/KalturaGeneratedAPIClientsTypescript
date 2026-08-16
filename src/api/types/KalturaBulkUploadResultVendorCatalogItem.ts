@@ -28,6 +28,7 @@ export interface KalturaBulkUploadResultVendorCatalogItemArgs  extends KalturaBu
 	pricingArray? : KalturaVendorCatalogItemUnitPricing[];
 	flavorParamsId? : number;
 	clearAudioFlavorParamsId? : number;
+	vendorData? : string;
 }
 
 
@@ -49,6 +50,7 @@ export class KalturaBulkUploadResultVendorCatalogItem extends KalturaBulkUploadR
 	pricingArray : KalturaVendorCatalogItemUnitPricing[];
 	flavorParamsId : number;
 	clearAudioFlavorParamsId : number;
+	vendorData : string;
 
     constructor(data? : KalturaBulkUploadResultVendorCatalogItemArgs)
     {
@@ -78,7 +80,8 @@ export class KalturaBulkUploadResultVendorCatalogItem extends KalturaBulkUploadR
 				pricing : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemPricing, subType : 'KalturaVendorCatalogItemPricing' },
 				pricingArray : { type : 'a', subTypeConstructor : KalturaVendorCatalogItemUnitPricing, subType : 'KalturaVendorCatalogItemUnitPricing' },
 				flavorParamsId : { type : 'n' },
-				clearAudioFlavorParamsId : { type : 'n' }
+				clearAudioFlavorParamsId : { type : 'n' },
+				vendorData : { type : 's' }
             }
         );
         return result;

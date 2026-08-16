@@ -18,8 +18,10 @@ export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
 	defaultOutputFormat? : KalturaVendorCatalogItemOutputFormat;
 	enableMachineModeration? : KalturaNullableBoolean;
 	enableHumanModeration? : KalturaNullableBoolean;
+	enableHybridModeration? : KalturaNullableBoolean;
 	autoDisplayMachineCaptionsOnPlayer? : KalturaNullableBoolean;
 	autoDisplayHumanCaptionsOnPlayer? : KalturaNullableBoolean;
+	autoDisplayHybridCaptionsOnPlayer? : KalturaNullableBoolean;
 	enableMetadataExtraction? : KalturaNullableBoolean;
 	enableSpeakerChangeIndication? : KalturaNullableBoolean;
 	enableAudioTags? : KalturaNullableBoolean;
@@ -27,6 +29,7 @@ export interface KalturaReachProfileArgs  extends KalturaObjectBaseArgs {
 	maxCharactersPerCaptionLine? : number;
 	labelAdditionForMachineServiceType? : string;
 	labelAdditionForHumanServiceType? : string;
+	labelAdditionForHybridServiceType? : string;
 	contentDeletionPolicy? : KalturaReachProfileContentDeletionPolicy;
 	rules? : KalturaRule[];
 	credit? : KalturaBaseVendorCredit;
@@ -50,8 +53,10 @@ export class KalturaReachProfile extends KalturaObjectBase {
 	defaultOutputFormat : KalturaVendorCatalogItemOutputFormat;
 	enableMachineModeration : KalturaNullableBoolean;
 	enableHumanModeration : KalturaNullableBoolean;
+	enableHybridModeration : KalturaNullableBoolean;
 	autoDisplayMachineCaptionsOnPlayer : KalturaNullableBoolean;
 	autoDisplayHumanCaptionsOnPlayer : KalturaNullableBoolean;
+	autoDisplayHybridCaptionsOnPlayer : KalturaNullableBoolean;
 	enableMetadataExtraction : KalturaNullableBoolean;
 	enableSpeakerChangeIndication : KalturaNullableBoolean;
 	enableAudioTags : KalturaNullableBoolean;
@@ -59,6 +64,7 @@ export class KalturaReachProfile extends KalturaObjectBase {
 	maxCharactersPerCaptionLine : number;
 	labelAdditionForMachineServiceType : string;
 	labelAdditionForHumanServiceType : string;
+	labelAdditionForHybridServiceType : string;
 	contentDeletionPolicy : KalturaReachProfileContentDeletionPolicy;
 	rules : KalturaRule[];
 	credit : KalturaBaseVendorCredit;
@@ -92,8 +98,10 @@ export class KalturaReachProfile extends KalturaObjectBase {
 				defaultOutputFormat : { type : 'en', subTypeConstructor : KalturaVendorCatalogItemOutputFormat, subType : 'KalturaVendorCatalogItemOutputFormat' },
 				enableMachineModeration : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableHumanModeration : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				enableHybridModeration : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				autoDisplayMachineCaptionsOnPlayer : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				autoDisplayHumanCaptionsOnPlayer : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				autoDisplayHybridCaptionsOnPlayer : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableMetadataExtraction : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableSpeakerChangeIndication : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableAudioTags : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
@@ -101,6 +109,7 @@ export class KalturaReachProfile extends KalturaObjectBase {
 				maxCharactersPerCaptionLine : { type : 'n' },
 				labelAdditionForMachineServiceType : { type : 's' },
 				labelAdditionForHumanServiceType : { type : 's' },
+				labelAdditionForHybridServiceType : { type : 's' },
 				contentDeletionPolicy : { type : 'en', subTypeConstructor : KalturaReachProfileContentDeletionPolicy, subType : 'KalturaReachProfileContentDeletionPolicy' },
 				rules : { type : 'a', subTypeConstructor : KalturaRule, subType : 'KalturaRule' },
 				credit : { type : 'o', subTypeConstructor : KalturaBaseVendorCredit, subType : 'KalturaBaseVendorCredit' },

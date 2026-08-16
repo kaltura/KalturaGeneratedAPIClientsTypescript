@@ -13,6 +13,7 @@ export enum KalturaVendorServiceTurnAroundTime {
 	sevenBusinessDays=7,
 	sixBusinessDays=6,
 	sixHours=21600,
+	tenBusinessDays=10,
 	tenDays=864000,
 	thirtyMinutes=1800,
 	threeBusinessDays=3,
