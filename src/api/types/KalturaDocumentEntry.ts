@@ -13,6 +13,7 @@ export class KalturaDocumentEntry extends KalturaBaseEntry {
 
     documentType : KalturaDocumentType;
 	readonly assetParamsIds : string;
+	readonly views : number;
 
     constructor(data? : KalturaDocumentEntryArgs)
     {
@@ -27,7 +28,8 @@ export class KalturaDocumentEntry extends KalturaBaseEntry {
             {
                 objectType : { type : 'c', default : 'KalturaDocumentEntry' },
 				documentType : { type : 'en', subTypeConstructor : KalturaDocumentType, subType : 'KalturaDocumentType' },
-				assetParamsIds : { type : 's', readOnly : true }
+				assetParamsIds : { type : 's', readOnly : true },
+				views : { type : 'n', readOnly : true }
             }
         );
         return result;

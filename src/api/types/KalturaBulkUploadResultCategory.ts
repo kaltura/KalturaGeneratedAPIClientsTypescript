@@ -18,6 +18,7 @@ export interface KalturaBulkUploadResultCategoryArgs  extends KalturaBulkUploadR
 	contributionPolicy? : number;
 	partnerSortValue? : number;
 	moderation? : boolean;
+	adminTags? : string;
 }
 
 
@@ -37,6 +38,7 @@ export class KalturaBulkUploadResultCategory extends KalturaBulkUploadResult {
 	contributionPolicy : number;
 	partnerSortValue : number;
 	moderation : boolean;
+	adminTags : string;
 
     constructor(data? : KalturaBulkUploadResultCategoryArgs)
     {
@@ -63,7 +65,8 @@ export class KalturaBulkUploadResultCategory extends KalturaBulkUploadResult {
 				owner : { type : 's' },
 				contributionPolicy : { type : 'n' },
 				partnerSortValue : { type : 'n' },
-				moderation : { type : 'b' }
+				moderation : { type : 'b' },
+				adminTags : { type : 's' }
             }
         );
         return result;
