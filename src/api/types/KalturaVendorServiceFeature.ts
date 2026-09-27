@@ -26,5 +26,6 @@ export enum KalturaVendorServiceFeature {
 	speechToVideo=20,
 	summary=13,
 	translation=2,
-	videoAnalysis=14
+	videoAnalysis=14,
+	videoGeneration=27
 }

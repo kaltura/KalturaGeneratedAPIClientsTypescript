@@ -61,6 +61,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	reachProfileIdIn? : string;
 	isPreview? : boolean;
 	streamTypeIn? : string;
+	reachCatalogItemIdIn? : string;
 }
 
 
@@ -121,6 +122,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	reachProfileIdIn : string;
 	isPreview : boolean;
 	streamTypeIn : string;
+	reachCatalogItemIdIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -188,7 +190,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				genieIdIn : { type : 's' },
 				reachProfileIdIn : { type : 's' },
 				isPreview : { type : 'b' },
-				streamTypeIn : { type : 's' }
+				streamTypeIn : { type : 's' },
+				reachCatalogItemIdIn : { type : 's' }
             }
         );
         return result;

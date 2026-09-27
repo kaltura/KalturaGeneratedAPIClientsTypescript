@@ -65,6 +65,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	htmlPurifierBehaviour? : KalturaHTMLPurifierBehaviourType;
 	htmlPurifierBaseListUsage? : boolean;
 	purifyImageContent? : boolean;
+	htmlPurifierAllowedTags? : string;
 	fileTypeRestrictionEnabled? : boolean;
 }
 
@@ -161,6 +162,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	htmlPurifierBehaviour : KalturaHTMLPurifierBehaviourType;
 	htmlPurifierBaseListUsage : boolean;
 	purifyImageContent : boolean;
+	htmlPurifierAllowedTags : string;
 	fileTypeRestrictionEnabled : boolean;
 
     constructor(data? : KalturaPartnerArgs)
@@ -270,6 +272,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				htmlPurifierBehaviour : { type : 'es', subTypeConstructor : KalturaHTMLPurifierBehaviourType, subType : 'KalturaHTMLPurifierBehaviourType' },
 				htmlPurifierBaseListUsage : { type : 'b' },
 				purifyImageContent : { type : 'b' },
+				htmlPurifierAllowedTags : { type : 's' },
 				fileTypeRestrictionEnabled : { type : 'b' }
             }
         );

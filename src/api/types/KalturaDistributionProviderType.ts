@@ -22,6 +22,7 @@ export enum KalturaDistributionProviderType {
 	podcast = 'podcastDistribution.PODCAST',
 	pushToNews = 'pushToNewsDistribution.PUSH_TO_NEWS',
 	quickplay = 'quickPlayDistribution.QUICKPLAY',
+	rainFocus = 'rainFocusDistribution.RAIN_FOCUS',
 	synacorHbo = 'synacorHboDistribution.SYNACOR_HBO',
 	syndication = '2',
 	timeWarner = 'timeWarnerDistribution.TIME_WARNER',
